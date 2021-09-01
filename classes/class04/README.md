@@ -15,17 +15,27 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - Please bring your laptop and ensure you have reviewed the [Class 03](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class03) pre-recorded lecture
 - **You'll also want to download the .Rmd file for this in-class activity, as well as create an associated R Project**
 
-## Tweet of the Day
-
-![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class04/dahly-2021-04-22.png)
-
-See [here](https://twitter.com/statsepi/status/1385126000149807105) for his 7-steps.
-
 ## Other Announcements
 
 - A tip for Homework 1
 - You can do it! I was in your shoes just 3 short years ago.
   - Since then I've built a [website](https://wyattbensken.com/) and [R Package](https://cran.r-project.org/web/packages/multimorbidity/index.html) using the skills learned here in 431.
+
+## Asking Questions on Piazza
+ 
+ - Piazza is now live and heating up. As you move into your homework assignments this is a great avenue to ask questions.
+ - You are also welcome to reply to other students to help answer them.
+- If you are starting a new question you can do so using New Post and then file it in the correct folder.
+  - When replying / following up please using the Followup Discussions and not the "Student Answer" so we can reply/comment.
+- **Two General Tips to Expendite Help**
+  - **Always attach your RMarkdown file**
+  - **Always attach a screenshot of the specific error you are getting**
+
+## Tweet of the Day
+
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class04/dahly-2021-04-22.png)
+
+See [here](https://twitter.com/statsepi/status/1385126000149807105) for his 7-steps.
 
 ## What should I be working on between now and Class 05 on Tuesday 2021-09-07?
 
