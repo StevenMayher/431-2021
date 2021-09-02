@@ -20,6 +20,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - A tip for Homework 1
 - You can do it! I was in your shoes just 3 short years ago.
   - Since then I've built a [website](https://wyattbensken.com/) and [R Package](https://cran.r-project.org/web/packages/multimorbidity/index.html) using the skills learned here in 431.
+- [TA Office Hours](https://thomaselove.github.io/431/calendar.html#TA_Office_Hours) are up and running
 
 ## Asking Questions on Piazza
  
