@@ -28,7 +28,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
  - You are also welcome to reply to other students to help answer them.
 - If you are starting a new question you can do so using New Post and then file it in the correct folder.
   - When replying / following up please using the Followup Discussions and not the "Student Answer" so we can reply/comment.
-- **Two General Tips to Expendite Help**
+- **Two General Tips to Expedite Help**
   - **Always attach your RMarkdown file**
   - **Always attach a screenshot of the specific error you are getting**
 
