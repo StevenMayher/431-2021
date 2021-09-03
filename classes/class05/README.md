@@ -40,6 +40,11 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 2. The [Prevention Research Center for Healthy Neighborhoods](https://prchn.org/) is a force for good that you should know something about. 
     - The first in this year's seminar series, which is happening tomorrow (Wednesday 2021-09-08) from Noon to 1 PM. The session is entitled "Cuyahoga County Youth Work Institute – Re-envisioning the Work of Youth Professionals and Youth Programs amid COVID-19" by Dr. Kristina Knight, PhD, MPH, who is Associate Director of the MPH Program and an Assistant Professor in the Department of Population and Quantitative Health Sciences at CWRU.
     - [Register for the seminar here](https://prchn.org/seminar/) and you can [subscribe to the PRCHN newsletter](http://new.prchn.org/media-communications/), too. 
+3. A few specific things about R, to address some questions I've received...
+    - See https://www.r-project.org/about.html for more about R's origins, strengths and ethos.
+    - See https://rstudio.com/products/rstudio/ for more on RStudio and https://rstudio.com/about/ for its mission statement
+    - See https://www.tidyverse.org/ for more on the tidyverse
+    - As mentioned above, the [R for Data Science](https://r4ds.had.co.nz/) online book is a great way to learn more about the tidyverse, and is supported by the [R for Data Science learning community](https://www.rfordatasci.com/), which is also (on [Twitter at @R4DScommunity](https://twitter.com/R4DScommunity)).
 
 ## Project A
 
