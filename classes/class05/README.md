@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-> My biggest regret as a 1st year grad student was pretending to say I knew X when I didn't really. Learning to say "No, tell me about X" became a gateway for (1) learning stuff, (2) getting to know a person, and (3) learning how to say no in other areas of my life. - [Josephine Lutko](https://twitter.com/JosephineLukito/status/1303081582492889088)
+![]() [Link to tweet](https://twitter.com/JosephineLukito/status/1303081582492889088)
 
 
 ## Today's Slides
