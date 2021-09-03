@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-![]() [Link to tweet](https://twitter.com/JosephineLukito/status/1303081582492889088)
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class05/images/lukito_2020-09-07.PNG) [Link to tweet](https://twitter.com/JosephineLukito/status/1303081582492889088)
 
 
 ## Today's Slides
