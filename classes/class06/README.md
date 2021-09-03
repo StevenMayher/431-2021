@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-> Quote to come.
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/images/carr_2021-09-03.PNG) [Link to tweet](https://twitter.com/kareem_carr/status/1433819025784573960)
 
 ## Today's Slides
 
