@@ -14,7 +14,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Project A
 
-We'll be discussing the Project A instructions today, which have [a website of their own](https://thomaselove.github.io/431-2021-projectA/). 
+We'll be discussing the [Project A instructions](https://thomaselove.github.io/431-2021-projectA/) today, which have [a website of their own](https://thomaselove.github.io/431-2021-projectA/). 
 
 - Your immediate focus should be on the [Proposal](https://thomaselove.github.io/431-2021-projectA/proposal.html) (that you'll do in September) and you'll want to look closely at the [Data page](https://thomaselove.github.io/431-2021-projectA/data.html) which describes the data you will be using.
 - The Examples & Tips pages contain information on samples and tips we’ve prepared to help you find your way through Project A, including a [Project Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html) that you'll use as a model for your work in September.
