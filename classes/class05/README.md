@@ -44,7 +44,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - See https://www.r-project.org/about.html for more about R's origins, strengths and ethos.
     - See https://rstudio.com/products/rstudio/ for more on RStudio and https://rstudio.com/about/ for its mission statement
     - See https://www.tidyverse.org/ for more on the tidyverse
-    - As mentioned above, the [R for Data Science](https://r4ds.had.co.nz/) online book is a great way to learn more about the tidyverse, and is supported by the [R for Data Science learning community](https://www.rfordatasci.com/), which is also (on [Twitter at @R4DScommunity](https://twitter.com/R4DScommunity)).
+    - As mentioned above, the [R for Data Science](https://r4ds.had.co.nz/) online book is a great way to learn more about the tidyverse, and is supported by the [R for Data Science learning community](https://www.rfordatasci.com/), which [tweets at @R4DScommunity](https://twitter.com/R4DScommunity)).
 
 ## Project A
 
