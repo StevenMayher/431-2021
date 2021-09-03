@@ -25,7 +25,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
         - Chapter 2 of Spiegelhalter, entitled "Summarizing and Communicating Numbers. Lots of Numbers."
         - the [Project A instructions](https://thomaselove.github.io/431-2021-projectA/), especially the material on [The Data](https://thomaselove.github.io/431-2021-projectA/data.html), [The Proposal](https://thomaselove.github.io/431-2021-projectA/proposal.html), and [The Project Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html).
     - We hope you'll find the time to skim Chapters 1-4 and 15 of [R for Data Science](https://r4ds.had.co.nz/) and also that you'll look at Chapters 1-3 of [Introduction to Modern Statistics](https://openintro-ims.netlify.app/).
-4. The next major assignment is [Lab 02](https://github.com/THOMASELOVE/431-2021/tree/main/labs) which is due at 9 PM on 2021-09-20. I would hope that some of you could complete this Lab as soon as tomorrow, as we've covered many of the key ideas. Completion of Lab 02 does also require you to have read through Chapter 3 of Spiegelhalter's *The Art of Statistics*.
+4. The next major assignment is [Lab 02](https://github.com/THOMASELOVE/431-2021/tree/main/labs) which is due at 9 PM on 2021-09-20. I would hope that some of you could complete this Lab as soon as tomorrow, as we've covered many of the key ideas. 
+    - Completion of Lab 02 requires you to have read through Chapter 3 of Spiegelhalter's *The Art of Statistics*.
 5. If you are running R version 4.1.0 instead of R version 4.1.1, we recommend that you **upgrade to 4.1.1** if possible. 
     - To see what version of R you are running, open RStudio and look at the Console window, which should tell you.
     - Visit https://cran.case.edu/ to download and install R version 4.1.1. Re-installing R is something most of you are **unlikely to do** this semester.
