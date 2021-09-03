@@ -26,8 +26,10 @@ We'll be discussing the Project A instructions today, which have [a website of t
 
 1. There will be a Minute Paper after Class 05 due Wednesday 2021-09-08 at noon. Details to come.
 2. An answer sketch and grading rubric for Lab 01 will be made available soon. Details to come.
-3. **Reading** By now, we're expecting you to have read the entire [Syllabus](https://thomaselove.github.io/431-2021-syllabus/), in addition to the Introduction and Chapter 1 of Spiegelhalter's *The Art of Statistics*.
-    - Over the next week, you'll be reading Chapter 2 of Spiegelhalter, as well as the [Project A instructions](https://thomaselove.github.io/431-2021-projectA/).
+3. **Reading** By now, we're expecting you to have read the entire [Syllabus](https://thomaselove.github.io/431-2021-syllabus/), in addition to the Introduction and Chapter 1 of Spiegelhalter's *The Art of Statistics* about "Getting Things in Proportion: Categorical Data and Percentages."
+    - Over the next week, you'll be reading...
+        - Chapter 2 of Spiegelhalter, entitled "Summarizing and Communicating Numbers. Lots of Numbers."
+        - the [Project A instructions](https://thomaselove.github.io/431-2021-projectA/), especially the material on [The Data](https://thomaselove.github.io/431-2021-projectA/data.html), [The Proposal](https://thomaselove.github.io/431-2021-projectA/proposal.html), and [The Project Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html).
     - We hope you'll find the time to skim Chapters 1-4 and 15 of [R for Data Science](https://r4ds.had.co.nz/) and also that you'll look at Chapters 1-3 of [Introduction to Modern Statistics](https://openintro-ims.netlify.app/).
 
 ## Announcements not specific to 431
