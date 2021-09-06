@@ -57,7 +57,7 @@ We used R and the `tidyverse` (specifically the `ggplot2` part of the `tidyverse
 
 Use the Help window in R to learn about the `DNase` data set, and in particular, about the two variables displayed in the plots below, and their scientific context. 
 
-Then write a paragraph (100-150 words is the appropriate length) which explains what the Figure's two plots indicate about the relationship between the two variables, and (more generally) what you have learned about the data (or science) from the Figure. Be sure to discuss how the two plots work together specifically addressing the question of what you can learn things from Plot A that you can't learn from Plot B and vice versa.
+Then write a paragraph (100-150 words is the appropriate length) which explains what the Figure's two plots indicate about the relationship between the two variables, and (more generally) what you have learned about the data (or science) from the Figure. Be sure to discuss how the two plots work together specifically addressing the question of what you can learn from Plot A that you can't learn from Plot B and vice versa.
 
 Your response to this question should be written using clear and complete English sentences and minimizing jargon, as is the case with all "essays" you will write for this course. 
 

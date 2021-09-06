@@ -1,6 +1,6 @@
 431 Lab 01
 ================
-Due **2021-09-06** at 9 PM \| Last Edited 2021-08-12 12:53:16
+Due **2021-09-06** at 9 PM \| Last Edited 2021-09-06 11:59:11
 
 ## Deadline
 
@@ -93,8 +93,7 @@ explains what the Figure’s two plots indicate about the relationship
 between the two variables, and (more generally) what you have learned
 about the data (or science) from the Figure. Be sure to discuss how the
 two plots work together specifically addressing the question of what you
-can learn things from Plot A that you can’t learn from Plot B and vice
-versa.
+can learn from Plot A that you can’t learn from Plot B and vice versa.
 
 Your response to this question should be written using clear and
 complete English sentences and minimizing jargon, as is the case with
