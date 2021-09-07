@@ -18,9 +18,10 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements specific to 431
 
-1. There is a Minute Paper after Class 05 due Wednesday 2021-09-08 at noon. 
+1. There is a [Minute Paper after Class 05](https://bit.ly/431-2021-minute-05) due Wednesday 2021-09-08 at noon. 
     - Visit https://bit.ly/431-2021-minute-05 to complete the Minute Paper, or use the link on [the Minute Paper page](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers). 
-    - You'll need to be **logged into Google via CWRU** to complete the Minute Paper. When you complete the Minute Paper, you'll receive a copy of your responses back via your CWRU email.
+    - You'll need to be **logged into Google via CWRU** to complete the Minute Paper. 
+    - When you complete the Minute Paper, you'll receive a copy of your responses back via your CWRU email.
     - Completing Minute Papers is an important part of your Class Participation in 431. [See here (scroll below the table)](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers#upcoming-minute-papers) for more details. You should complete the [Minute Paper after Class 05](https://bit.ly/431-2021-minute-05) even if you missed Class 05.
     - There are two questions I ask in every minute paper. Please take the time to write a real response to these items, if you can.
         - What was the most important thing you've learned during 431 in the past week?
