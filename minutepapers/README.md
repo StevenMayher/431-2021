@@ -1,12 +1,5 @@
 # Minute Papers for 431
 
-## Welcome to 431 survey
-
-Please complete the [Welcome to 431 survey](https://bit.ly/431-2021-welcome-survey) as soon as possible, ideally well in advance of our first class session on 2021-08-24. 
-
-- You'll need to log into Google via your CWRU account in order to access the survey.
-- The survey should take 15-20 minutes.
-
 ## Upcoming Minute Papers
 
 - You'll need to be logged into Google via CWRU to complete the Minute Papers, or to review the feedback.
@@ -37,3 +30,8 @@ Details on how course participation is affected by Minute Papers are provided in
 1. completing "bonus" tasks Dr. Love offers during the semester, so keep your eyes open for these opportunities
 2. asking and answering useful questions on [Piazza](https://piazza.com/case/fall2021/pqhs431), and **in class sessions**, and 
 3. finding typos in the materials and helping Dr. Love to fix them
+
+## Welcome to 431 survey
+
+Everyone has completed the [Welcome to 431 survey](https://bit.ly/431-2021-welcome-survey). 
+
