@@ -18,10 +18,17 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements specific to 431
 
-1. There will be a Minute Paper after Class 05 due Wednesday 2021-09-08 at noon. 
-    - Visit **LINK TO COME** to complete the Minute Paper. You should complete the Minute Paper after Class 05 even if you missed Class 05.
-    - Completing Minute Papers is an important part of your Class Participation in 431. [See here (scroll below the table)](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers#upcoming-minute-papers) for more details.
-2. An answer sketch and grading rubric for Lab 01 will be made available [at this link](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/README.md#after-the-lab) by class time.
+1. There is a Minute Paper after Class 05 due Wednesday 2021-09-08 at noon. 
+    - Visit https://bit.ly/431-2021-minute-05 to complete the Minute Paper, or use the link on [the Minute Paper page](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers). 
+    - You'll need to be **logged into Google via CWRU** to complete the Minute Paper. When you complete the Minute Paper, you'll receive a copy of your responses back via your CWRU email.
+    - Completing Minute Papers is an important part of your Class Participation in 431. [See here (scroll below the table)](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers#upcoming-minute-papers) for more details. You should complete the [Minute Paper after Class 05](https://bit.ly/431-2021-minute-05) even if you missed Class 05.
+    - There are two questions I ask in every minute paper. Please take the time to write a real response to these items, if you can.
+        - What was the most important thing you've learned during 431 in the past week?
+        - What question (about 431 or R or statistics) would you most like Dr. Love to answer for you at present?
+    - I also always leave a spot at the end where you can leave me a comment, or ask me anything else. I review the Minute Papers on Wednesday afternoons.
+2. A draft of the answer sketch and grading rubric for Lab 01 will be available [at this link](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/README.md#after-the-lab) by class time. 
+    - If we make any changes to this document during grading, we'll repost when we post the grades.
+    - You will receive an email from Dr. Love in the next few days with information on the Course Grading Roster and your Lab Code.
 3. **Reading** By now, we're expecting you to have read the entire [Syllabus](https://thomaselove.github.io/431-2021-syllabus/), in addition to the Introduction and Chapter 1 of Spiegelhalter's *The Art of Statistics* about "Getting Things in Proportion: Categorical Data and Percentages."
     - Over the next week, you'll be reading...
         - Chapter 2 of Spiegelhalter, entitled "Summarizing and Communicating Numbers. Lots of Numbers."
