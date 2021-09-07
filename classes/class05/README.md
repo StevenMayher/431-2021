@@ -27,7 +27,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
         - What was the most important thing you've learned during 431 in the past week?
         - What question (about 431 or R or statistics) would you most like Dr. Love to answer for you at present?
     - I also always leave a spot at the end where you can leave me a comment, or ask me anything else. I review the Minute Papers on Wednesday afternoons.
-    - Only Dr. Love will be able to attach your name to your responses (so I know you've done it) but I don't identify individuals in my general feedback to the class (which you'll see Thursday.)
+    - I **will** be able to attach your name to your responses (so I know you've done it) but I don't identify individuals in my general feedback to the class (which you'll see Thursday.)
 2. A draft of the answer sketch and grading rubric for Lab 01 is now available [at this link](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/README.md#after-the-lab). This will typically happen by noon Tuesday after a Monday lab deadline. 
     - If we make any changes to this document during grading (which we usually do), we'll repost when we post the grades. If you find any errors or points of confusion, please let us know under the lab01 folder on [Piazza](https://piazza.com/case/fall2021/pqhs431).
     - You will receive an email from Dr. Love in the next few days with information on the Course Grading Roster and your Lab Code.
