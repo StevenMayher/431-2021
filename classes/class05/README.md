@@ -10,6 +10,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Today's Slides
 
 - Dr. Love's slides will be available by class time in [PDF format], as well as in [R Markdown].
+- The `dm_431.csv` data set we will use today is available as part of the 431-data repository, as well as in the `data` subfolder for this class page.
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 --------
@@ -31,6 +32,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - To see what version of R you are running, open RStudio and look at the Console window, which should tell you.
     - Visit https://cran.case.edu/ to download and install R version 4.1.1. Re-installing R is something most of you are **unlikely to do** this semester.
     - Be sure to **update your packages** in RStudio after the upgrade by opening RStudio, visiting the Packages window and then clicking Update. Updating packages is something I do about **once per week**, or when I get an error message that tells me I need to update packages.
+6. Today's slides use some material from [Allison Horst's Stats Illustrations](https://github.com/allisonhorst/stats-illustrations)
 
 ## Announcements not specific to 431
 
