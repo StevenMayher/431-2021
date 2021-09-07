@@ -21,7 +21,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 1. There will be a Minute Paper after Class 05 due Wednesday 2021-09-08 at noon. 
     - Visit **LINK TO COME** to complete the Minute Paper. You should complete the Minute Paper after Class 05 even if you missed Class 05.
     - Completing Minute Papers is an important part of your Class Participation in 431. [See here (scroll below the table)](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers#upcoming-minute-papers) for more details.
-2. An answer sketch and grading rubric for Lab 01 will be made available [at this link](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/README.md#after-the-lab) soon after the Lab deadline has passed.
+2. An answer sketch and grading rubric for Lab 01 will be made available [at this link](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/README.md#after-the-lab) by class time.
 3. **Reading** By now, we're expecting you to have read the entire [Syllabus](https://thomaselove.github.io/431-2021-syllabus/), in addition to the Introduction and Chapter 1 of Spiegelhalter's *The Art of Statistics* about "Getting Things in Proportion: Categorical Data and Percentages."
     - Over the next week, you'll be reading...
         - Chapter 2 of Spiegelhalter, entitled "Summarizing and Communicating Numbers. Lots of Numbers."
