@@ -9,7 +9,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Today's Slides
 
 - Dr. Love's slides will be available in [PDF format], as well as in [R Markdown].
-    - The deck for Class 06 will include some of the material originally presented at the end of [the Class 05 slides](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class05/431-class05-slides.pdf).
+    - The deck for Class 06 includes some material originally presented at the end of [the Class 05 slides](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class05/431-class05-slides.pdf).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Announcements
