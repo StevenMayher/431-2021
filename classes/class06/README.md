@@ -23,6 +23,6 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## One Last Thing
 
-During the year, I'll occasionally use this space to share an interesting graphic or interactive tool for understanding or exploring some data. Today, we'll take a momen to look at [Bitcoin Uses More Electricity Than Many Countries. How Is That Possible?](https://www.nytimes.com/interactive/2021/09/03/climate/bitcoin-carbon-footprint-electricity.html) from The New York Times, 2021-09-03. The article is by Jon Huang, Claire O’Neill and Hiroko Tabuchi with illustrations by Eliana Rodgers.
+During the year, I'll occasionally use this space to share an interesting graphic or interactive tool for understanding or exploring some data. Today, we'll take a moment to look at [Bitcoin Uses More Electricity Than Many Countries. How Is That Possible?](https://www.nytimes.com/interactive/2021/09/03/climate/bitcoin-carbon-footprint-electricity.html) from The New York Times, 2021-09-03. The article is by Jon Huang, Claire O’Neill and Hiroko Tabuchi with illustrations by Eliana Rodgers.
 
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/images/nyt_bitcoin.PNG)
