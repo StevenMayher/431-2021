@@ -25,9 +25,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Notes to Individual Students 
 
-- Sid Dugar, Anna Magoline, Drake McFaul and Tianze Wang, please **activate** your Piazza accounts today.
-- Ava Fan, Rock Lim, and Diya Yang: you have two Piazza accounts each. Please **merge** your two accounts today - see my email.
-- Gen Li, Anna Magoline, Sarah Nock and Tianze Wang: email me your Favorite Movie Poster ([Syllabus Section 18](https://thomaselove.github.io/431-2021-syllabus/movies.html))
+- **Sid Dugar, Anna Magoline, Drake McFaul and Tianze Wang**, please **activate** your Piazza accounts today.
+- **Ava Fan, Rock Lim, and Diya Yang**: you have two Piazza accounts each. Please **merge** your two accounts today - see my email.
+- **Gen Li, Anna Magoline, Sarah Nock and Tianze Wang**: email me your Favorite Movie Poster ([Syllabus Section 18](https://thomaselove.github.io/431-2021-syllabus/movies.html))
 
 ## One Last Thing
 
