@@ -8,8 +8,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Today's Slides
 
-- Dr. Love's slides will be available in [PDF format], as well as in [R Markdown].
-    - The deck for Class 06 includes some material originally presented at the end of [the Class 05 slides](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class05/431-class05-slides.pdf).
+- Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/431-class06-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/431-class06-slides.Rmd).
+    - The deck for Class 06 includes some material originally presented at the end of [the Class 05 slides](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class05/431-class05-slides.pdf). We stopped at around slide 27 of those slides, and everything else is included here.
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Announcements
