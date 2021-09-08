@@ -12,7 +12,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - Dr. Love's slides are available now in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class05/431-class05-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class05/431-class05-slides.Rmd).
 - The `dm_431.csv` data set we will use today is available as part of [the 431-data repository](https://github.com/THOMASELOVE/431-data), as well as in [the `data` subfolder](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class05/data/dm_431.csv) above.
     - Click the **Raw** button to see the plain-text version you can save onto your machine.
-- The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
+- The recording (which started just after we reviewed this README page and ended with slide 27) is now available through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu). We will institute a checklist to increase the chance that future recordings are more complete, and we will start Class 06 with slide 28 from the Class 05 slides.
 
 --------
 
