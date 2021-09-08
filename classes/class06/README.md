@@ -9,17 +9,25 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Today's Slides
 
 - Dr. Love's slides will be available in [PDF format], as well as in [R Markdown].
+    - The deck for Class 06 will include some of the material originally presented at the end of [the Class 05 slides](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class05/431-class05-slides.pdf).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Announcements
 
-1. [Noah Veltman](https://noahveltman.com/aimovies/) fed an artificial intelligence tool ([VQGAN+CLIP](https://alexasteinbruck.medium.com/vqgan-clip-how-does-it-work-210a5dca5e52)) movie descriptions and made it generate images. [Can you guess the films](https://noahveltman.com/aimovies/)?
+1. Those of you unable to attend Tuesday's class, I had problems getting the recording done properly. I apologize and will implement a checklist so this is less likely to happen in the future.
+2. Feedback on the [Minute Paper after Class 05](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) will be posted by class time.
+3. Reading for this weekend includes
+    - [Project A](https://thomaselove.github.io/431-2021-projectA/) instructions (be sure to read through the main page, the Data section and the Proposal section, and look at the Proposal Example.)
+    - Spiegelhalter *The Art of Statistics* through Chapter 2 (Summarizing and Communicating Numbers: Lots of Numbers)
+    - I'd also recommend you look at Chapters 1-3 of [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) for some additional relevant information.
+4. [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs) is your next substantial assignment, due 2021-09-20.
+5. [Noah Veltman](https://noahveltman.com/aimovies/) fed an artificial intelligence tool ([VQGAN+CLIP](https://alexasteinbruck.medium.com/vqgan-clip-how-does-it-work-210a5dca5e52)) movie descriptions and made it generate images. [Can you guess the films](https://noahveltman.com/aimovies/)?
 
-## Details for Individual Students 
+## Notes to Individual Students 
 
-- Sid Dugar, Anna Magoline, Drake McFaul and Tianze Wang, please activate your Piazza accounts today.
-- Ava Fan, Rock Lim, and Diya Yang: you have two Piazza accounts each. Please merge your two accounts today - see my email to you.
-- Poster of your favorite movie, as requested in Syllabus Section 18 still needed from Gen Li, Anna Magoline, Sarah Nock and Tianze Wang.
+- Sid Dugar, Anna Magoline, Drake McFaul and Tianze Wang, please **activate** your Piazza accounts today.
+- Ava Fan, Rock Lim, and Diya Yang: you have two Piazza accounts each. Please **merge** your two accounts today - see my email to you.
+- Gen Li, Anna Magoline, Sarah Nock and Tianze Wang: email me your Favorite Movie Poster ([Syllabus Section 18](https://thomaselove.github.io/431-2021-syllabus/movies.html))
 
 ## One Last Thing
 
