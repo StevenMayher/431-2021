@@ -14,7 +14,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. Those of you unable to attend Tuesday's class, I had problems getting the recording done properly. I apologize and will implement a checklist so this is less likely to happen in the future.
+1. Those of you unable to attend Tuesday's [Class 05](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class05), I had problems getting the recording done properly so it is incomplete. I apologize and will implement a checklist so this is less likely to happen in the future.
 2. Feedback on the [Minute Paper after Class 05](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) will be posted by class time.
 3. Reading for this weekend includes
     - [Project A](https://thomaselove.github.io/431-2021-projectA/) instructions (at minimum, work through [the main page](https://thomaselove.github.io/431-2021-projectA/), the [Data section](https://thomaselove.github.io/431-2021-projectA/data.html) and the [Proposal section](https://thomaselove.github.io/431-2021-projectA/proposal.html), and look at the [Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html).)
