@@ -16,12 +16,13 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. Those of you unable to attend Tuesday's [Class 05](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class05), I had problems getting the recording done properly so it is incomplete. I apologize and will implement a checklist so this is less likely to happen in the future.
 2. Feedback on the [Minute Paper after Class 05](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) will be posted by class time.
-3. Reading for this weekend includes
+3. Here's a [PDF containing many useful R colors and their associated names](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/Rcolor.pdf), which you'll also now find on [our Data and Code page](https://github.com/THOMASELOVE/431-data/blob/main/Rcolor.pdf).
+4. Reading for this weekend includes
     - [Project A](https://thomaselove.github.io/431-2021-projectA/) instructions (at minimum, work through [the main page](https://thomaselove.github.io/431-2021-projectA/), the [Data section](https://thomaselove.github.io/431-2021-projectA/data.html) and the [Proposal section](https://thomaselove.github.io/431-2021-projectA/proposal.html), and look at the [Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html).)
     - Spiegelhalter *The Art of Statistics* through Chapter 2 (Summarizing and Communicating Numbers: Lots of Numbers)
     - I'd also recommend you look at Chapters 1-3 of [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) for some additional relevant information.
-4. [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs) is your next substantial assignment, due 2021-09-20.
-5. [Noah Veltman](https://noahveltman.com/aimovies/) fed an artificial intelligence tool ([VQGAN+CLIP](https://alexasteinbruck.medium.com/vqgan-clip-how-does-it-work-210a5dca5e52)) movie descriptions and made it generate images. [Can you guess the films](https://noahveltman.com/aimovies/)?
+5. [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs) is your next substantial assignment, due 2021-09-20.
+6. [Noah Veltman](https://noahveltman.com/aimovies/) fed an artificial intelligence tool ([VQGAN+CLIP](https://alexasteinbruck.medium.com/vqgan-clip-how-does-it-work-210a5dca5e52)) movie descriptions and made it generate images. [Can you guess the films](https://noahveltman.com/aimovies/)?
 
 ## Notes to Individual Students 
 
