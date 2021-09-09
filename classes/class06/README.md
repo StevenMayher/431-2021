@@ -19,7 +19,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 3. What is Dr. Love's main source when he wants to remember how to do something in R? 
     - The [R Graphics Cookbook](https://r-graphics.org/) from Winston Chang, which is a practical guide that provides **more than 150 recipes** to help you generate high-quality graphs quickly, without having to comb through the details of R’s graphing systems. Each recipe tackles a specific problem with a solution you can apply to your own data, and includes a discussion of how and why the recipe works.
     - I recommend all of it, especially the chapters on [R Basics](https://r-graphics.org/chapter-r-basics), [Getting Your Data in Shape](https://r-graphics.org/chapter-dataprep), and [Summarized Data Distributions](https://r-graphics.org/chapter-distribution).
-4. A data set describing the "favorite movies" selected by students in 2020 and in 2021 will be available next week. For now, [here is a list of your favorite movies](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/movie_list_2021.md). 
+4. A data set describing the "favorite movies" selected by students in 2020 and in 2021 will be available next week.
+    - For now, [here is a list of your favorite movies](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/movie_list_2021.md). 
 5. Here's a [PDF containing many useful R colors and their associated names](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/Rcolor.pdf), which you'll also now find on [our Data and Code page](https://github.com/THOMASELOVE/431-data/blob/main/Rcolor.pdf).
 6. [Noah Veltman](https://noahveltman.com/aimovies/) fed an artificial intelligence tool ([VQGAN+CLIP](https://alexasteinbruck.medium.com/vqgan-clip-how-does-it-work-210a5dca5e52)) movie descriptions and made it generate images. [Can you guess the films](https://noahveltman.com/aimovies/)?
 
