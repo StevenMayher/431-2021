@@ -16,7 +16,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. Those of you unable to attend Tuesday's [Class 05](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class05), I had problems getting the recording done properly so it is incomplete. I apologize and will implement a checklist so this is less likely to happen in the future.
 2. [Feedback on the Minute Paper after Class 05](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) is now available. Please take a look.
-3. What is Dr. Love's main source when he wants to remember how to do something in R? 
+3. What is Dr. Love's main source when he wants to remember how to do something in R, other than Googling or re-using old code? 
     - The [R Graphics Cookbook](https://r-graphics.org/) from Winston Chang, which is a practical guide that provides **more than 150 recipes** to help you generate high-quality graphs quickly, without having to comb through the details of R’s graphing systems. Each recipe tackles a specific problem with a solution you can apply to your own data, and includes a discussion of how and why the recipe works.
     - I recommend all of it, especially the chapters on [R Basics](https://r-graphics.org/chapter-r-basics), [Getting Your Data in Shape](https://r-graphics.org/chapter-dataprep), and [Summarized Data Distributions](https://r-graphics.org/chapter-distribution).
 4. A data set describing the "favorite movies" selected by students in 2020 and in 2021 will be available next week.
