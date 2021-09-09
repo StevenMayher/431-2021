@@ -6,8 +6,8 @@ So far, 61 students have chosen a favorite movie and sent it to me.
 
 ### Two movies were selected by two students each:
 
-- Inception, which Dr. Love has seen
-- Spirited Away, which Dr. Love has not seen
+- [Inception](https://www.imdb.com/title/tt1375666/), a 2010 film which Dr. Love has seen
+- [Spirited Away](https://www.imdb.com/title/tt0245429/), a 2001 film which Dr. Love has not seen
 
 ### These 57 movies were each selected by a single student:
 
@@ -55,7 +55,7 @@ So far, 61 students have chosen a favorite movie and sent it to me.
 - Reservoir Dogs
 - Rise of the Guardians
 - The Royal Tenenbaums
-- The Secret Life of Walter Mitty
+- The Secret Life of Walter Mitty (2013)
 - The Shawshank Redemption
 - Skyfall
 - Sorry To Bother You
