@@ -1,6 +1,8 @@
 # Favorite Movies of the Fall 2021 431 Class
 
-61 students have chosen a favorite movie and sent it to me. 
+Last Update: 2021-09-09 10:25 AM
+
+So far, 61 students have chosen a favorite movie and sent it to me. 
 
 ### Two movies were selected by two students each:
 
