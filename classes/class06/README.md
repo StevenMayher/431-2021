@@ -22,7 +22,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - [Project A](https://thomaselove.github.io/431-2021-projectA/) instructions (at minimum, work through [the main page](https://thomaselove.github.io/431-2021-projectA/), the [Data section](https://thomaselove.github.io/431-2021-projectA/data.html) and the [Proposal section](https://thomaselove.github.io/431-2021-projectA/proposal.html), and look at the [Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html).)
     - Spiegelhalter *The Art of Statistics* through Chapter 2 (Summarizing and Communicating Numbers: Lots of Numbers)
     - I'd also recommend you look at Chapters 1-3 of [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) for some additional relevant information.
-6. [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs) is your next substantial assignment, due 2021-09-20.
+6. [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs) is your next substantial assignment, due 2021-09-20. This is followed closely by [Lab 3] due 2021-09-27 and the early deadline for your Project A proposal review is 2021-10-01, which is also when you'll get Quiz 1.
+    - I strongly recommend getting started on the Project A proposal as soon as possible.
+    - If you've read Chapter 3 of Spiegelhalter, you should be able to do all of Lab 2 this weekend.
 7. [Noah Veltman](https://noahveltman.com/aimovies/) fed an artificial intelligence tool ([VQGAN+CLIP](https://alexasteinbruck.medium.com/vqgan-clip-how-does-it-work-210a5dca5e52)) movie descriptions and made it generate images. [Can you guess the films](https://noahveltman.com/aimovies/)?
 
 ## Notes to Individual Students 
