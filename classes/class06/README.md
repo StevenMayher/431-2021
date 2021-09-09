@@ -16,16 +16,23 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. Those of you unable to attend Tuesday's [Class 05](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class05), I had problems getting the recording done properly so it is incomplete. I apologize and will implement a checklist so this is less likely to happen in the future.
 2. [Feedback on the Minute Paper after Class 05](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) is now available. Please take a look.
-3. A list of "favorite movies" selected by students in 2020 and in 2021 will be **available by class time**. 
-4. Here's a [PDF containing many useful R colors and their associated names](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/Rcolor.pdf), which you'll also now find on [our Data and Code page](https://github.com/THOMASELOVE/431-data/blob/main/Rcolor.pdf).
-5. Reading for this weekend includes
+3. What is Dr. Love's main source when he wants to remember how to do something in R? 
+    - The [R Graphics Cookbook](https://r-graphics.org/) from Winston Chang, which is a practical guide that provides **more than 150 recipes** to help you generate high-quality graphs quickly, without having to comb through the details of R’s graphing systems. Each recipe tackles a specific problem with a solution you can apply to your own data, and includes a discussion of how and why the recipe works.
+    - I recommend all of it, especially the chapters on [R Basics](https://r-graphics.org/chapter-r-basics), [Getting Your Data in Shape](https://r-graphics.org/chapter-dataprep), and [Summarized Data Distributions](https://r-graphics.org/chapter-distribution).
+4. A data set describing the "favorite movies" selected by students in 2020 and in 2021 will be available in Class 07. For now, [here is a list of your favorite movies](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/movie_list_2021.md). 
+5. Here's a [PDF containing many useful R colors and their associated names](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class06/Rcolor.pdf), which you'll also now find on [our Data and Code page](https://github.com/THOMASELOVE/431-data/blob/main/Rcolor.pdf).
+6. [Noah Veltman](https://noahveltman.com/aimovies/) fed an artificial intelligence tool ([VQGAN+CLIP](https://alexasteinbruck.medium.com/vqgan-clip-how-does-it-work-210a5dca5e52)) movie descriptions and made it generate images. [Can you guess the films](https://noahveltman.com/aimovies/)?
+
+## What Should I Be Working On?
+
+1. Reading for this weekend includes
     - [Project A](https://thomaselove.github.io/431-2021-projectA/) instructions (at minimum, work through [the main page](https://thomaselove.github.io/431-2021-projectA/), the [Data section](https://thomaselove.github.io/431-2021-projectA/data.html) and the [Proposal section](https://thomaselove.github.io/431-2021-projectA/proposal.html), and look at the [Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html).)
     - Spiegelhalter *The Art of Statistics* through Chapter 2 (Summarizing and Communicating Numbers: Lots of Numbers)
     - I'd also recommend you look at Chapters 1-3 of [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) for some additional relevant information.
-6. [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs) is your next substantial assignment, due 2021-09-20. This is followed closely by [Lab 3](https://github.com/THOMASELOVE/431-2021/tree/main/labs) due 2021-09-27 and the early deadline for your [Project A proposal](https://thomaselove.github.io/431-2021-projectA/) is 2021-10-01, which is also when you'll get Quiz 1. So there's lots of stuff coming.
+2. [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs) is your next substantial assignment, due 2021-09-20. This is followed closely by [Lab 3](https://github.com/THOMASELOVE/431-2021/tree/main/labs) due 2021-09-27 and the early deadline for your [Project A proposal](https://thomaselove.github.io/431-2021-projectA/) is 2021-10-01, which is also when you'll get Quiz 1. So there's lots of stuff coming.
     - I strongly recommend getting started on the Project A proposal as soon as possible. Most, if not all, of it can be done after today's class.
     - If you've read Chapter 3 of Spiegelhalter, you should be able to do just about all of Lab 2 this weekend, as well.
-7. [Noah Veltman](https://noahveltman.com/aimovies/) fed an artificial intelligence tool ([VQGAN+CLIP](https://alexasteinbruck.medium.com/vqgan-clip-how-does-it-work-210a5dca5e52)) movie descriptions and made it generate images. [Can you guess the films](https://noahveltman.com/aimovies/)?
+    - There will also be another Minute Paper next week, after Class 07.
 
 ## Notes to Individual Students 
 
