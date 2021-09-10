@@ -5,13 +5,13 @@ Details on the Labs appear at the links below. See the [Course Calendar](https:/
 Lab | Assignment | Answer Sketch/Grading Rubric | Feedback to [Grading Roster](https://bit.ly/431-2021-grades)
 :----: | :--------------: | :---------------------------: | :--------------:
 01 | [Lab 01 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.Rmd) | to be posted 2021-09-14 
-02 | [Lab 02 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab02) | To appear
-03 | [Lab 03 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) | To appear
-04 | [Lab 04 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab04) | To appear
-05 | [Lab 05 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) | To appear
-06 | [Lab 06 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab06) | To appear
-07 | [Lab 07 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab07) | To appear
-X | [Lab X Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) | To appear
+02 | [Lab 02 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab02) | To appear 2021-09-21 | to be posted 2021-09-28
+03 | [Lab 03 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) | To appear 2021-09-29 | to be posted 2021-10-05
+04 | [Lab 04 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab04) | To appear 2021-10-12 | to be posted 2021-10-19
+05 | [Lab 05 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) | To appear 2021-10-19 | to be posted 2021-10-26
+06 | [Lab 06 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab06) | To appear 2021-11-09 | to be posted 2021-11-16
+07 | [Lab 07 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab07) | To appear 2021-11-16 | to be posted 2021-11-23
+X | [Lab X Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) | 
 
 ## Grading
 
