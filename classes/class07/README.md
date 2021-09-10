@@ -23,4 +23,14 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - If you have a question about the **substance** of Lab 1 (or any Lab), please ask it on Piazza or in TA office hours.
     - If you have a concern about **your grade** on Lab 1 (or any later Lab), don't ask it in the normal ways, but instead [follow the instructions here](https://github.com/THOMASELOVE/431-2021/tree/main/labs#grading-errors-and-regrade-requests) regarding grading errors and regrade requests.
 
-## More to come.
+## Next Few Deliverables ([Calendar](https://thomaselove.github.io/431/calendar.html) has all deadlines/links)
+
+1. [Minute Paper after Class 07] due tomorrow 2021-09-15 at NOON.
+2. [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs) due 2021-09-20.
+3. [Lab 3](https://github.com/THOMASELOVE/431-2021/tree/main/labs) due 2021-09-27.
+4. Early deadline for [Project A proposal](https://thomaselove.github.io/431-2021-projectA/) is 2021-10-01.
+5. You'll receive Quiz 1 on 2021-10-01, as well.
+
+## One Last Thing
+
+to come.
