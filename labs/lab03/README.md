@@ -7,5 +7,5 @@ All deadlines for 431 work, including this Lab, are posted in the [Course Calend
 ## After the Lab
 
 - Answer Sketch and Grading Rubric will be posted the day after the Lab is due.
-- Grades on the Lab will be posted to the Course Grading Roster one week after the deadline for the Lab.
+- Grades and Feedback on the Lab will be posted to the [Course Grading Roster](https://bit.ly/431-2021-grades) by class time on 2021-10-05.
 - Additional materials will be posted as necessary.
