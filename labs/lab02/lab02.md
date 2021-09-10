@@ -1,6 +1,6 @@
 431 Lab 02
 ================
-Due **2021-09-20** at 9 PM \| Last Edited 2021-08-12 22:11:33
+Due **2021-09-20** at 9 PM \| Last Edited 2021-09-10 14:33:26
 
 ## Deadline
 
@@ -184,7 +184,7 @@ broadly, examined the relationship between county metropolitan status
 and the percent of residents who have completed some college. In our
 first step, we limited to just counties in 5 midwestern states.
 Reflecting on Chapter 3 of *The Art of Statistics*, please write a brief
-essay (100-150 words) that dicusses the process of inductive inference
+essay (100-150 words) that discusses the process of inductive inference
 and how that influences the conclusions we can draw from our work in
 this assignment. As always, use complete and clear English sentences in
 your essay.
@@ -199,7 +199,7 @@ this.
 sessionInfo()
 ```
 
-    R version 4.1.0 (2021-05-18)
+    R version 4.1.1 (2021-08-10)
     Platform: x86_64-w64-mingw32/x64 (64-bit)
     Running under: Windows 10 x64 (build 19043)
 
@@ -216,10 +216,10 @@ sessionInfo()
     [1] stats     graphics  grDevices utils     datasets  methods   base     
 
     loaded via a namespace (and not attached):
-     [1] compiler_4.1.0    magrittr_2.0.1    tools_4.1.0       htmltools_0.5.1.1
-     [5] yaml_2.2.1        stringi_1.7.3     rmarkdown_2.9     knitr_1.33       
-     [9] stringr_1.4.0     xfun_0.24         digest_0.6.27     rlang_0.4.11     
-    [13] evaluate_0.14    
+     [1] compiler_4.1.1  magrittr_2.0.1  fastmap_1.1.0   tools_4.1.1    
+     [5] htmltools_0.5.2 yaml_2.2.1      stringi_1.7.4   rmarkdown_2.10 
+     [9] knitr_1.33      stringr_1.4.0   xfun_0.25       digest_0.6.27  
+    [13] rlang_0.4.11    evaluate_0.14  
 
 Providing the session information helps with reproducibility. It lets us
 see what packages you have loaded on your machine, and some other
