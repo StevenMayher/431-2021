@@ -1,12 +1,17 @@
 # Minute Papers for 431
 
-## Upcoming Minute Papers
-
 - You'll need to be logged into Google via CWRU to complete the Minute Papers, or to review the feedback.
+
+## Completed Minute Papers
 
 After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
 ----------: | ------: | :--------: | :----------:
 5 (2021-09-07) | 2021-09-08 | https://bit.ly/431-2021-minute-05 | https://bit.ly/431-2021-min5-feedback
+
+## Upcoming Minute Papers
+
+After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
+----------: | ------: | :--------: | :----------:
 7 (2021-09-14) | 2021-09-15 | to appear | to appear
 9 (2021-09-21) | 2021-09-22 | to appear | to appear
 11 (2021-09-28) | 2021-09-29 | to appear | to appear
@@ -18,10 +23,10 @@ After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Fe
 24 (2021-11-16) | 2021-11-17 | to appear | to appear
 26 (2021-11-30) | 2021-12-01 | to appear | to appear
 
-**Dr. Love's records about submission of minute papers** will be found in the [Course Grading Roster](https://bit.ly/431-2021-grades) that will appear in September.
+**Dr. Love's records about submission of minute papers** will be found in the [Course Grading Roster](https://bit.ly/431-2021-grades).
 
 - You'll need to log into Google via CWRU to see your scores and the comments left there by the Teaching Assistants. 
-- Your **Lab Code** identifies you in the roster. You will receive your Lab Code via email from Dr. Love in September. (The email's subject will be **431 Lab Code**.) 
+- Your **Lab Code** identifies you in the roster. Dr. Love sent your Lab Code via email on 2021-09-10. (The email's subject is **431 Lab Code - please save**.) 
 
 ## Course Participation Grades
 
