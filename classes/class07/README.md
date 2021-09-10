@@ -15,7 +15,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. There will be a Minute Paper after Class 07 due Wednesday 2021-09-15 at noon. Details to come.
 2. I fixed small typos in the [Calendar](https://thomaselove.github.io/431/calendar.html) and [Syllabus](https://thomaselove.github.io/431-2021-syllabus/) this past weekend. If you find things, tell us about them via [Piazza](https://piazza.com/case/fall2021/pqhs431).
-3. By class time, you should have received your **Lab Code** in an email from Dr. Love (sent 2021-09-10, subject is **431 Lab Code - please save**.) 
+3. You should have received your **Lab Code** in an email from Dr. Love (sent 2021-09-10, subject is **431 Lab Code - please save**.) 
     - Use the Lab Code to review our reactions to your work in the [Course Grading Roster](https://bit.ly/431-2021-grades).
     - You'll need to log into Google via CWRU to see the [Grading Roster](https://bit.ly/431-2021-grades).
     - If you haven't received your 431 Lab Code, check your email again, and then contact Dr. Love directly for a replacement.
