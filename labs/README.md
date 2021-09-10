@@ -2,9 +2,9 @@
 
 Details on the Labs appear at the links below. See the [Course Calendar](https://thomaselove.github.io/431/calendar.html) for all deadlines. Additional details on Labs are available in the Course Syllabus.
 
-Lab | Assignment | Answer Sketch/Grading Rubric
-:----: | :--------------: | :---------------------------:
-01 | [Lab 01 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.Rmd).
+Lab | Assignment | Answer Sketch/Grading Rubric | Grades (see [Grading Roster](https://bit.ly/431-2021-grades)
+:----: | :--------------: | :---------------------------: | :--------------:
+01 | [Lab 01 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.Rmd) | to be posted 2021-09-14 
 02 | [Lab 02 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab02) | To appear
 03 | [Lab 03 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) | To appear
 04 | [Lab 04 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab04) | To appear
