@@ -8,7 +8,7 @@ All deadlines for 431 work, including this Lab, are posted in the [Course Calend
 
 - Our draft answer sketch and grading rubric is now available [in pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.pdf) and [in R Markdown format](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.Rmd).
   - If we make any changes to this document during grading (which we usually do), we'll repost when we post the grades. If you find any errors or points of confusion, please let us know under the lab01 folder on [Piazza](https://piazza.com/case/fall2021/pqhs431).
-- Grades on the Lab will be posted to the [Course Grading Roster](https://bit.ly/431-2021-grades) by class time on 2021-09-14.
+- Grades and Feedback on the Lab will be posted to the [Course Grading Roster](https://bit.ly/431-2021-grades) by class time on 2021-09-14.
 - Additional materials will be posted as necessary.
 
 ## Late Work
