@@ -19,16 +19,16 @@
 
 `film_id` | `film` | `year` | | `film_id` | `film` | `year`
 ------: | :-----: | ----- | --- | ------: | :-----: | -----
-**21** | The Dark Knight | 2008 | | **31** | A Fistful of Dollars | 1964
-**22** | The Dark Knight Rises | 2012 | | **32** | Flags of our Fathers | 2006
-**23** | The Departed | 2006 | | **33** | Gattaca | 1997
-**24** | Despicable Me | 2010 | | **34** | Get Out | 2017
-**25** | Doctor Zhivago | 1965 | | **35** | Get Smart | 2008
-**26** | Eternal Sunshine of the Spotless Mind | 2004 | | **36** | Ghost | 1990
-**27** | Eurovision Song Contest: The Story of Fire Saga | 2020 | | **37** | The Girl with the Dragon Tattoo | 2011
-**28** | Everybody Wants Some!! | 2016 | | **38** | The Godfather | 1972
-**29** | Face/Off | 1997 | | **39** | The Grand Budapest Hotel | 2014
-**30** | Farewell My Concubine: the Beijing Opera | 2014 | | **40** | The Great Muppet Caper | 1981
+**21** | [The Dark Knight](https://www.imdb.com/title/tt0468569/) | 2008 | | **31** | [A Fistful of Dollars](https://www.imdb.com/title/tt0058461/) | 1964
+**22** | [The Dark Knight Rises](https://www.imdb.com/title/tt1345836/) | 2012 | | **32** | [Flags of our Fathers](https://www.imdb.com/title/tt0418689/) | 2006
+**23** | [The Departed](https://www.imdb.com/title/tt0407887/) | 2006 | | **33** | [Gattaca](https://www.imdb.com/title/tt0119177/) | 1997
+**24** | [Despicable Me](https://www.imdb.com/title/tt1323594/) | 2010 | | **34** | [Get Out](https://www.imdb.com/title/tt5052448/) | 2017
+**25** | [Doctor Zhivago](https://www.imdb.com/title/tt0059113/) | 1965 | | **35** | [Get Smart](https://www.imdb.com/title/tt0425061/) | 2008
+**26** | [Eternal Sunshine of the Spotless Mind](https://www.imdb.com/title/tt0338013/) | 2004 | | **36** | [Ghost](https://www.imdb.com/title/tt0099653/) | 1990
+**27** | [Eurovision Song Contest: The Story of Fire Saga](https://www.imdb.com/title/tt8580274/) | 2020 | | **37** | [The Girl with the Dragon Tattoo](https://www.imdb.com/title/tt1568346/) | 2011
+**28** | [Everybody Wants Some!!](https://www.imdb.com/title/tt2937696/) | 2016 | | **38** | [The Godfather](https://www.imdb.com/title/tt0068646/) | 1972
+**29** | [Face/Off](https://www.imdb.com/title/tt0119094/) | 1997 | | **39** | [The Grand Budapest Hotel](https://www.imdb.com/title/tt2278388/) | 2014
+**30** | [Farewell My Concubine: the Beijing Opera](https://www.imdb.com/title/tt7435474/) | 2014 | | **40** | [The Great Muppet Caper](https://www.imdb.com/title/tt0082474/) | 1981
 
 
 41	The Greatest Showman	2017
