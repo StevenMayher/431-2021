@@ -16,17 +16,17 @@ After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Fe
 
 ## Upcoming Minute Papers
 
-After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
-----------: | ------: | :--------: | :----------:
-9 (2021-09-21) | 2021-09-22 | to appear | to appear
-11 (2021-09-28) | 2021-09-29 | to appear | to appear
-13 (2021-10-05) | 2021-10-06 | to appear | to appear
-15 (2021-10-12) | 2021-10-13 | to appear | to appear
-18 (2021-10-26) | 2021-10-27 | to appear | to appear
-20 (2021-11-02) | 2021-11-03 | to appear | to appear
-22 (2021-11-09) | 2021-11-10 | to appear | to appear
-24 (2021-11-16) | 2021-11-17 | to appear | to appear
-26 (2021-11-30) | 2021-12-01 | to appear | to appear
+After Class | due at NOON on 
+----------: | ------: 
+9 (2021-09-21) | 2021-09-22 
+11 (2021-09-28) | 2021-09-29 
+13 (2021-10-05) | 2021-10-06 
+15 (2021-10-12) | 2021-10-13 
+18 (2021-10-26) | 2021-10-27 
+20 (2021-11-02) | 2021-11-03 
+22 (2021-11-09) | 2021-11-10 
+24 (2021-11-16) | 2021-11-17
+26 (2021-11-30) | 2021-12-01
 
 **Dr. Love's records about submission of minute papers** will be found in the [Course Grading Roster](https://bit.ly/431-2021-grades).
 
