@@ -1,12 +1,12 @@
 # The `movies_2021` code book
 
-On our Shared Google Drive in the `favorite_movies` subfolder, you'll find a data set (a Google Sheet called `movies_2021`) containing the 114 films that people taking either the 2020 and 2021 versions of 431 identified as their "Favorite Movies" in response to [the Syllabus, Section 18](https://thomaselove.github.io/431-2021-syllabus/movies.html). For each movie, I gathered several additional characteristics from the [Internet Movie Data Base](https://www.imdb.com/) (IMDB).
+On our Shared Google Drive in the `favorite_movies` subfolder, you'll find a data set (a Google Sheet called `movies_2021`) containing the 115 films that people taking either the 2020 and 2021 versions of 431 identified as their "Favorite Movies" in response to [the Syllabus, Section 18](https://thomaselove.github.io/431-2021-syllabus/movies.html). For each movie, I gathered several additional characteristics from the [Internet Movie Data Base](https://www.imdb.com/) (IMDB).
 
 The data set is called `movies_2021` and here is a brief codebook describing the variables presented there:
 
 Variable | Sample Value | Explanation
 :--------: | :------------: | ------------------------------------------------------------------------
-`film_id` | 5 | code (1-114): arranges in alphabetical order by title, ignoring starting "The" or "A"
+`film_id` | 5 | code (1-115): arranges in alphabetical order by title, ignoring starting "The" or "A"
 `film` | Avengers: Endgame | film title according to IMDB
 `mentions` | 2 | (`list_2020` + `list_2021`) students who named this film across 2020 and 2021
 `list_2020` | 1 | # of students who chose this film as their favorite in Fall 2020
