@@ -8,7 +8,7 @@ Variable | Sample Value | Explanation
 -------- | ------------ | ------------------------------------------------------------------------
 `film_id` | 5 | code (1-114): arranges in alphabetical order by title, ignoring starting "The" or "A"
 `film` | Avengers: Endgame | film title according to IMDB
-`mentions` | 2 | list_2020 + list_2021
+`mentions` | 2 | (`list_2020` + `list_2021`) students who named this film across 2020 and 2021
 `list_2020` | 1 | number of students who chose this film as their favorite in the Fall 2020 version of 431
 `list_2021` | 1 | number of students who chose this film as their favorite in the Fall 2021 version of 431
 `year` | 2019 | year film was released
