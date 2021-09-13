@@ -14,7 +14,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Announcements
 
 1. There is a [Minute Paper after Class 07](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) due Wednesday 2021-09-15 at noon. 
-2. I fixed small typos in the [Calendar](https://thomaselove.github.io/431/calendar.html) and [Syllabus](https://thomaselove.github.io/431-2021-syllabus/) this past weekend. If you find things, tell us about them via [Piazza](https://piazza.com/case/fall2021/pqhs431).
+2. I fixed small typos in the [Calendar](https://thomaselove.github.io/431/calendar.html) and [Syllabus](https://thomaselove.github.io/431-2021-syllabus/) and [Course Notes](https://thomaselove.github.io/431-notes/) this past weekend. If you find things, tell us about them via [Piazza](https://piazza.com/case/fall2021/pqhs431), using the `typos` label.
 3. You should have received your **Lab Code** in an email from Dr. Love (sent 2021-09-10, subject is **431 Lab Code - please save**.) 
     - Use the Lab Code to review our reactions to your work in the [Course Grading Roster](https://bit.ly/431-2021-grades).
     - You'll need to log into Google via CWRU to see the [Grading Roster](https://bit.ly/431-2021-grades).
