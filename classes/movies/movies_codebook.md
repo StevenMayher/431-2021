@@ -19,6 +19,7 @@ Variable | Sample Value | Explanation
 `imdb_stars` | 8.4 | Weighted Average Rating (IMDB) as of 2021-09-10
 `imdb_pct10` | 36.1 | percentage of raters on IMDB that rated the film at the maximum level (10 stars) as of 2021-09-10
 `dr_love` | Yes | Whether or not Dr. Love has seen the film in its entirety (Yes or No)
+`imdb_link` | [Weblink](https://www.imdb.com/title/tt4154796/) | link to the IMDB page for the film
 
 - IMDB updates regularly, so the results may look a little different now.
 - The `imdb_stars` result is actually a proprietary weighted average. "IMDb publishes weighted vote averages rather than raw data averages. Various filters are applied to the raw data in order to eliminate and reduce attempts at vote stuffing by people more interested in changing the current rating of a movie than giving their true opinion of it. The exact methods we use will not be disclosed." 
