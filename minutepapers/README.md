@@ -2,6 +2,12 @@
 
 - You'll need to be logged into Google via CWRU to complete the Minute Papers, or to review the feedback.
 
+## Next Minute Paper
+
+After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
+----------: | ------: | :--------: | :----------:
+7 (2021-09-14) | 2021-09-15 | https://bit.ly/431-2021-minute-07 | to appear
+
 ## Completed Minute Papers
 
 After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
@@ -12,7 +18,6 @@ After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Fe
 
 After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
 ----------: | ------: | :--------: | :----------:
-7 (2021-09-14) | 2021-09-15 | to appear | to appear
 9 (2021-09-21) | 2021-09-22 | to appear | to appear
 11 (2021-09-28) | 2021-09-29 | to appear | to appear
 13 (2021-10-05) | 2021-10-06 | to appear | to appear
