@@ -9,8 +9,8 @@ Variable | Sample Value | Explanation
 `film_id` | 5 | code (1-114): arranges in alphabetical order by title, ignoring starting "The" or "A"
 `film` | Avengers: Endgame | film title according to IMDB
 `mentions` | 2 | (`list_2020` + `list_2021`) students who named this film across 2020 and 2021
-`list_2020` | 1 | number of students who chose this film as their favorite in the Fall 2020 version of 431
-`list_2021` | 1 | number of students who chose this film as their favorite in the Fall 2021 version of 431
+`list_2020` | 1 | # of students who chose this film as their favorite in Fall 2020
+`list_2021` | 1 | # of students who chose this film as their favorite in Fall 2021
 `year` | 2019 | year film was released
 `length` | 181 | length of film (in minutes)
 `mpaa` | PG-13 | Motion Picture Association of America's rating (G, PG, PG-13, R, NC17 or Not Rated)
