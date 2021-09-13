@@ -9,11 +9,11 @@
 **3** | [About Time](https://www.imdb.com/title/tt2194499/) | 2013 | | **13** | Black Panther	| 2018
 **4** | [Avatar](https://www.imdb.com/title/tt0499549/) | 2009 | | **14** | Black Swan |	2010
 **5** | [Avengers: Endgame](https://www.imdb.com/title/tt4154796/) | 2019 | | **15** | Blue Velvet |	1986
-**6** | Avengers: Infinity War | 2018 | | **16** | Capharnaum	| 2018
-**7** | Back to the Future | 1985 | | **17** | Casablanca | 1942
-**8** | Back to the Future Part II | 1989 | | **18** | Castle in the Sky | 1986
-**9** |	Beaches	| 1988 | | **19** | Cloud Atlas |	2012
-**10** | Beetlejuice | 1988 | | **20** | Coming To America | 1988
+**6** | [Avengers: Infinity War](https://www.imdb.com/title/tt4154756/) | 2018 | | **16** | Capharnaum	| 2018
+**7** | [Back to the Future](https://www.imdb.com/title/tt0088763/) | 1985 | | **17** | Casablanca | 1942
+**8** | [Back to the Future Part II](https://www.imdb.com/title/tt0096874/) | 1989 | | **18** | Castle in the Sky | 1986
+**9** |	[Beaches](https://www.imdb.com/title/tt0094715/)	| 1988 | | **19** | Cloud Atlas |	2012
+**10** | [Beetlejuice](https://www.imdb.com/title/tt0094721/) | 1988 | | **20** | Coming To America | 1988
 
 
 21	The Dark Knight	2008
