@@ -5,7 +5,7 @@ On our Shared Google Drive, you'll find a data set containing the 114 films that
 The data set is called `movies_2021` and here is a brief codebook describing the variables presented there:
 
 Variable | Sample Value | Explanation
--------- | ------------ | ------------------------------------------------------------------------
+:--------: | :------------: | ------------------------------------------------------------------------
 `film_id` | 5 | code (1-114): arranges in alphabetical order by title, ignoring starting "The" or "A"
 `film` | Avengers: Endgame | film title according to IMDB
 `mentions` | 2 | (`list_2020` + `list_2021`) students who named this film across 2020 and 2021
