@@ -65,26 +65,16 @@
 
 `film_id` | `film` | `year` | | `film_id` | `film` | `year`
 ------: | :-----: | ----- | --- | ------: | :-----: | -----
-**81** | Porco Rosso | 1992 | | 
-**82** | Pride & Prejudice | 2005 | | 
-**83** | The Princess Bride | 1987 | | 
-**84** | Pulp Fiction | 1994 | | 
-**85** | Remember the Titans | 2000 | | 
-**86** | Reservoir Dogs | 1992 | | 
-**87** | Resident Evil | 2002 | | 
-**88** | Rise of the Guardians | 2012 | | 
-**89** | The Royal Tenenbaums | 2001 | | 
-**90** | Scent of a Woman | 1992 | | 
-**91** | Scott Pilgrim vs. The World | 2010
-**92** | The Secret Life of Walter Mitty | 2013
-**93** | Seven Psychopaths | 2012
-**94** | The Shawshank Redemption | 1994
-**95** | The Silence of the Lambs | 1991
-**96** | Skyfall | 2012
-**97** | Sorry To Bother You | 2018
-**98** | Soul | 2020
-**99** | Spider Man: Into The Spider-Verse | 2018
-**100** | Spirited Away | 2001
+**81** | [Porco Rosso](https://www.imdb.com/title/tt0104652/) | 1992 | | **91** | [Scott Pilgrim vs. The World](https://www.imdb.com/title/tt0446029/) | 2010
+**82** | [Pride & Prejudice](https://www.imdb.com/title/tt0414387/) | 2005 | | **92** | [The Secret Life of Walter Mitty](https://www.imdb.com/title/tt0359950/) | 2013
+**83** | [The Princess Bride](https://www.imdb.com/title/tt0093779/) | 1987 | | **93** | [Seven Psychopaths](https://www.imdb.com/title/tt1931533/) | 2012
+**84** | [Pulp Fiction](https://www.imdb.com/title/tt0110912/) | 1994 | | **94** | [The Shawshank Redemption](https://www.imdb.com/title/tt0111161/) | 1994
+**85** | [Remember the Titans](https://www.imdb.com/title/tt0210945/) | 2000 | | **95** | [The Silence of the Lambs](https://www.imdb.com/title/tt0102926/) | 1991
+**86** | [Reservoir Dogs](https://www.imdb.com/title/tt0105236/) | 1992 | | **96** | [Skyfall](https://www.imdb.com/title/tt1074638/) | 2012
+**87** | [Resident Evil](https://www.imdb.com/title/tt0120804/) | 2002 | | **97** | [Sorry To Bother You](https://www.imdb.com/title/tt5688932/) | 2018
+**88** | [Rise of the Guardians](https://www.imdb.com/title/tt1446192/) | 2012 | | **98** | [Soul](https://www.imdb.com/title/tt2948372/) | 2020
+**89** | [The Royal Tenenbaums](https://www.imdb.com/title/tt0265666/) | 2001 | | **99** | [Spider Man: Into The Spider-Verse](https://www.imdb.com/title/tt4633694/) | 2018
+**90** | [Scent of a Woman](https://www.imdb.com/title/tt0105323/) | 1992 | | **100** | [Spirited Away](https://www.imdb.com/title/tt0245429/) | 2001
 
 ## Films 101-114, alphabetically
 
