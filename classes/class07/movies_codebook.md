@@ -1,6 +1,6 @@
-# The `movies_2021` data set
+# The `movies_2021` code book
 
-On our Shared Google Drive, you'll find a data set containing the 114 films that people in the 2020 and 2021 versions of 431 identified as their "Favorite Movies" in response to [the Syllabus, Section 18](https://thomaselove.github.io/431-2021-syllabus/movies.html), along with characteristics for each movie that Dr. Love gathered from the [Internet Movie Data Base](https://www.imdb.com/) (IMDB).
+On our Shared Google Drive in the `favorite_movies` subfolder, you'll find a data set (Google Sheet) containing the 114 films that people taking either the 2020 and 2021 versions of 431 identified as their "Favorite Movies" in response to [the Syllabus, Section 18](https://thomaselove.github.io/431-2021-syllabus/movies.html). For each movie, I gathered several additional characteristics from the [Internet Movie Data Base](https://www.imdb.com/) (IMDB).
 
 The data set is called `movies_2021` and here is a brief codebook describing the variables presented there:
 
