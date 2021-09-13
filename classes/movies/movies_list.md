@@ -34,34 +34,21 @@
 
 `film_id` | `film` | `year` | | `film_id` | `film` | `year`
 ------: | :-----: | ----- | --- | ------: | :-----: | -----
-**41** | The Greatest Showman | 2017 | | 
-**42** | The Green Mile | 1999 | | 
-**43** | The Grey | 2011 | | 
-**44** | Harold and Maude | 1971 | | 
-**45** | The Hateful Eight | 2015 | | 
-**46** | Hidden Figures | 2016 | | 
-**47** | Home Alone | 1990 | | 
-**48** | Hot Fuzz | 2007 | | 
-**49** | House Party 2 | 1991 | | 
-**50** | How the Grinch Stole Christmas | 2000 | | 
-
-
-**51** | The Hunger Games | 2012
-**52** | In The Heights | 2021
-**53** | Inception | 2010
-**54** | Interstellar | 2014
-**55** | Iron Man | 2008
-**56** | Jab We Met | 2007
-**57** | John Wick | 2014
-**58** | Kiki's Delivery Service | 1989
-**59** | The King's Speech | 2010
-**60** | La La Land | 2016
+**41** | [The Greatest Showman](https://www.imdb.com/title/tt1485796/) | 2017 | | **51** | [The Hunger Games](https://www.imdb.com/title/tt1392170/) | 2012
+**42** | [The Green Mile](https://www.imdb.com/title/tt0120689/) | 1999 | | **52** | [In The Heights](https://www.imdb.com/title/tt1321510/) | 2021
+**43** | [The Grey](https://www.imdb.com/title/tt1601913/) | 2011 | | **53** | [Inception](https://www.imdb.com/title/tt1375666/) | 2010
+**44** | [Harold and Maude](https://www.imdb.com/title/tt0067185/) | 1971 | | **54** | [Interstellar](https://www.imdb.com/title/tt0816692/) | 2014
+**45** | [The Hateful Eight](https://www.imdb.com/title/tt3460252/) | 2015 | | **55** | [Iron Man](https://www.imdb.com/title/tt0371746/) | 2008
+**46** | [Hidden Figures](https://www.imdb.com/title/tt4846340/) | 2016 | | **56** | [Jab We Met](https://www.imdb.com/title/tt1093370/) | 2007
+**47** | [Home Alone](https://www.imdb.com/title/tt0099785/) | 1990 | | **57** | [John Wick](https://www.imdb.com/title/tt2911666/) | 2014
+**48** | [Hot Fuzz](https://www.imdb.com/title/tt0425112/) | 2007 | | **58** | [Kiki's Delivery Service](https://www.imdb.com/title/tt0097814/) | 1989
+**49** | [House Party 2](https://www.imdb.com/title/tt0102065/) | 1991 | | **59** | [The King's Speech](https://www.imdb.com/title/tt1504320/) | 2010
+**50** | [How the Grinch Stole Christmas](https://www.imdb.com/title/tt0170016/) | 2000 | | **60** | [La La Land](https://www.imdb.com/title/tt3783958/) | 2016
 
 ## Films 61-80, alphabetically
 
 `film_id` | `film` | `year` | | `film_id` | `film` | `year`
 ------: | :-----: | ----- | --- | ------: | :-----: | -----
-
 **61** | Life As We Know It | 2010 | | 
 **62** | Little Women | 2019 | | 
 **63** | Lord of the Rings: The Fellowship of the Ring | 2001 | | 
@@ -87,7 +74,6 @@
 
 `film_id` | `film` | `year` | | `film_id` | `film` | `year`
 ------: | :-----: | ----- | --- | ------: | :-----: | -----
-
 **81** | Porco Rosso | 1992 | | 
 **82** | Pride & Prejudice | 2005 | | 
 **83** | The Princess Bride | 1987 | | 
