@@ -40,6 +40,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - The package provides some great tools for creating summary tables (including things like Table 1) for models and tibbles. See lots of examples at the [github repository for the package](https://vincentarelbundock.github.io/modelsummary/index.html).
     - Some `modelsummary` functions, especially functions used by the `datasummary` tools, fight with functions in the `Hmisc` package, so there can be some problems if you have `Hmisc` or `rms` (which loads `Hmisc`) loaded when you try to use `modelsummary` and vice versa. We'll usually avoid this by looking at either `modelsummary` or `rms` tools in a particular example. 
 
+-----------
+
 ## Next Few Deliverables ([Calendar](https://thomaselove.github.io/431/calendar.html) has all deadlines/links)
 
 As always, check the [Course Calendar](https://thomaselove.github.io/431/calendar.html) for links to and deadlines for all deliverables (labs, minute papers, quizzes and projects.)
