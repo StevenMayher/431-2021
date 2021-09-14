@@ -43,6 +43,13 @@ dm1000 <- read_csv("data/dm_1000.csv",
 - 1000 (simulated) patients with diabetes between the ages of 31 and 75 who live in Cuyahoga County and are in one of four race-ethnicity categories, as well as one of four insurance categories.
 - Same variables we saw in `dm431` last week, but 1000 new subjects, and one new variable (`residence`)
 
+## Listing of `dm1000` tibble
+
+```{r}
+dm1000
+```
+
+
 ## Code Book
 
 Variable | Description
@@ -79,6 +86,13 @@ gg_miss_var(dm1000)
 ```
 
 - For now, `gg_miss_var()` throws a warning, which I've suppressed.
+
+## Counts of missingness, by variable
+
+```{r}
+miss_var_summary(dm1000)
+```
+
 
 ## How should we summarize data with missing values?
 
@@ -342,11 +356,11 @@ dm1000 %$% Hmisc::smean.cl.boot(a1c, conf.int = 0.95)
 
 Approach | Estimate | 95% CI | Assume Normality?
 -------- | :--------: | :-------------: | :----------:
-Linear Model (t test) | 7.85 | (7.73, 7.98) | Yes
-Bootstrap | 7.85 | (7.73, 7.99)   | No
+Linear Model (t test) | 7.853 | (7.725, 7.981) | Yes
+Bootstrap | 7.853 | (7.726, 7.977)   | No
 
 - How does this match up with our understanding of the distribution of the A1c data?
-- Might the fairly large sample size (n = 984 non-missing) have something to do with these results?
+- Might the fairly large sample size (n = 985 non-missing) have something to do with these results?
 - More on using regression models (and the bootstrap) to compare summaries is coming in Classes 13-15. 
 
 # Comparing Two Distributions
@@ -520,8 +534,8 @@ dm1000 %$% bootdif(y = ldl,
 
 Approach | Estimate | 95% CI | Normality Assumption?
 --------: | -------: | -----: | --------
-linear model | 7.04 | (0.86, 13.21) | Yes
-bootstrap | 7.04 | (1.29, 12.89) | No
+linear model | 7.00 | (0.83, 13.17) | Yes
+bootstrap | 7.00 | (0.90, 12.96) | No
 
 Assumptions these intervals share:
 
