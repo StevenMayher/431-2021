@@ -12,3 +12,5 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## More to come.
+
+1. Here's a link to the [readxl package description](https://readxl.tidyverse.org/). While `readxl` is installed when you install the tidyverse, it's not part of the core tidyverse packages loaded with `library(tidyverse)` so you have to load it on its own with `library(readxl)`.
