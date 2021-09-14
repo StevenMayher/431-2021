@@ -2,7 +2,7 @@ SUBJECT,AGE,INSURANCE,N_INCOME,HT,WT,SBP,DBP,A1C,LDL,TOBACCO,STATIN,EYE_EXAM,RAC
 M-0001,55,Medicaid,29853,1.63,102.61,145,70,6.4,221,Current,1,1,Non-Hispanic Black,Female,Cuyahoga,Suburbs
 M-0002,52,Commercial,31248,1.75,111.89,151,77,8.5,116,Never,0,1,Non-Hispanic Black,Male,Cuyahoga,Cleveland
 M-0003,69,Medicare,23362,1.65,74.93,127,73,8.9,52,Former,1,0,Hispanic or Latinx,Female,Cuyahoga,Cleveland
-M-0004,57,Medicaid,26033,1.63,81.38,125,74,6.8,188,Never,1,1,Hispanic or Latinx,Female,Cuyahoga,Cleveland
+M-0004,57,Medicaid,26033,1.63,81.38,125,74,6.8,122,Never,1,1,Hispanic or Latinx,Female,Cuyahoga,Cleveland
 M-0005,68,Medicare,85374,1.69,92.62,120,73,10.3,94,Never,1,0,Non-Hispanic White,Female,Cuyahoga,Suburbs
 M-0006,56,Medicaid,31273,1.71,54.61,127,75,12.3,,Current,1,0,Hispanic or Latinx,Male,Cuyahoga,Cleveland
 M-0007,54,Commercial,25445,1.68,81.55,114,81,6.5,100,Current,0,0,Non-Hispanic Black,Male,Cuyahoga,Cleveland
