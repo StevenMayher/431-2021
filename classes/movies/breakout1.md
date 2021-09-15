@@ -4,7 +4,7 @@ To be completed on 2021-09-16 (Class 08).
 
 ## The Five Variables We're Focusing On Today
 
-The data set is called `movies_2021` and describes 115 films mentioned as "favorites" by students in 431 for Fall 2020 or Fall 2021. Here are the five variables (`year`, `length`, `imdb_categories`, `imdb_ratings`, and `imdb_stars`) that we will focus on today...
+Today's activity uses the 2021-09-10 version of `movies_2021` which describes 115 films mentioned as "favorites" by students in 431 for Fall 2020 or Fall 2021. Here are the five variables (`year`, `length`, `imdb_categories`, `imdb_ratings`, and `imdb_stars`) that we will focus on today...
 
 Variable | Sample Value | Explanation
 :--------: | :------------: | ------------------------------------------------------------------------
