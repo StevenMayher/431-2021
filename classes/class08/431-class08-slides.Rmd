@@ -1,0 +1,554 @@
+---
+title: "431 Class 08"
+author: "thomaselove.github.io/431"
+date: "2021-09-16"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    fonttheme: "structurebold"
+    colortheme: "whale"
+    fig_height: 5.5
+    fig_caption: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 55)
+```
+
+## Today's Agenda
+
+- Building Visualizations to Compare Two Distributions
+  - Confidence Intervals for a Difference between Means
+- Building Visualizations to Compare > 2 Distributions
+
+## Today's R Packages
+
+```{r, message = FALSE}
+library(broom) # for tidying up output
+library(janitor)
+library(knitr)
+library(magrittr)
+library(naniar)
+library(patchwork)
+library(readxl) # new today, read in .xls or .xlsx files
+library(tidyverse)
+
+theme_set(theme_bw())
+```
+
+## Today's Data
+
+Today, we'll use an Excel file (.xls, rather than .csv) to import the `dm1000` data.
+
+```{r}
+dm1000 <- read_excel("data/dm_1000.xls") %>%
+  clean_names() %>%
+  mutate(across(where(is.character), as_factor)) %>%
+  mutate(subject = as.character(subject))
+```
+
+- There are also functions called `read_xls()` and `read_xlsx()` available in the `readxl` package.
+
+## The `dm1000` tibble
+
+```{r, echo = FALSE}
+dm1000
+```
+
+# Comparing Two Distributions
+
+## LDL cholesterol and statin prescription?
+
+```{r, fig.height = 4}
+dm1000 %>% filter(complete.cases(ldl, statin)) %>%
+  ggplot(data = ., aes(x = ldl, fill = factor(statin))) +
+  geom_histogram(bins = 15, col = "white") +
+  facet_grid(statin ~ ., labeller = "label_both") +
+  guides(fill = "none")
+```
+
+## Faceting
+
+It's very useful to split data into groups and plot each group separately to make comparisons across the groups. We can then draw those subplots side by side.
+
+We have two main tools: `facet_wrap()` and `facet_grid()`
+
+- `facet_wrap(~ grp1)` to obtain plots within each `grp1` arranged into horizontal subpanels and wrapping around, like words on a page.
+- `facet_grid(grp1 ~ .)` to obtain plots within each `grp1` arranged vertically (vertical subpanels)
+- `facet_grid(grp1 ~ grp2)` to obtain plots within each combination of `grp1` and `grp2` with vertical and horizontal subpanels.
+
+## Using `facet_wrap()`
+
+```{r, fig.height = 3.5}
+dm1000 %>% filter(complete.cases(ldl, statin)) %>%
+  ggplot(data = ., aes(x = ldl, fill = factor(statin))) +
+  geom_histogram(binwidth = 10, col = "white") +
+  facet_wrap(~ statin, labeller = "label_both") +
+  guides(fill = "none")
+```
+
+## Using `facet_grid()`
+
+```{r, fig.height = 3.5}
+dm1000 %>% filter(complete.cases(ldl, statin)) %>%
+  ggplot(data = ., aes(x = ldl, fill = factor(statin))) +
+  geom_histogram(binwidth = 10, col = "white") +
+  facet_grid(statin ~ ., labeller = "label_both") +
+  guides(fill = "none")
+```
+
+## Using `facet_grid()` with two groupings
+
+```{r, fig.height = 3.5}
+dm1000 %>% filter(complete.cases(ldl, statin)) %>%
+  ggplot(data = ., aes(x = ldl, fill = factor(statin))) +
+  geom_histogram(binwidth = 10, col = "white") +
+  facet_grid(statin ~ residence, labeller = "label_both") +
+  guides(fill = "none")
+```
+
+## Comparison of densities (ignores relative frequency)
+
+```{r, fig.height = 4}
+dm1000 %>% filter(complete.cases(ldl, statin)) %>%
+  ggplot(data = ., aes(x = ldl, fill = factor(statin))) +
+  geom_density(alpha = 0.5) +
+  scale_fill_viridis_d() +
+  labs(fill = "Statin")
+```
+
+## Numerical Summaries comparing Two Groups
+
+```{r}
+dm1000 %>% filter(complete.cases(statin, ldl)) %>% 
+  group_by(statin) %>%
+  summarize(n = n(), min = min(ldl), med = median(ldl), 
+            max = max(ldl), mean = mean(ldl), 
+            sd = sd(ldl)) %>%
+  kable(digits = 2)
+```
+
+- What is the difference in mean(LDL) between the two samples?
+
+## Using `favstats` to compare LDL by Statin group
+
+```{r, message = FALSE}
+dm1000 %$% 
+  mosaic::favstats(ldl ~ statin)
+```
+
+We would have obtained the same result with:
+
+```{r, eval = FALSE}
+mosaic::favstats(ldl ~ statin, data = dm1000)
+```
+
+## Comparison Boxplot with Violins (LDL and statin)
+
+Here's a first attempt...
+
+```{r, fig.height = 3}
+dm1000 %>% filter(complete.cases(ldl, statin)) %>%
+  ggplot(data = ., aes(x = factor(statin), y = ldl)) +
+  geom_violin() +
+  geom_boxplot(aes(fill = factor(statin)), width = 0.3) + 
+  labs(x = "Statin prescription (0 = no, 1 = yes)", 
+       y = "LDL in mg/dl", fill = "Statin")
+```
+
+## Try 2: Boxplot with Violins for LDL and statin
+
+```{r, fig.height = 3}
+dm1000 %>% filter(complete.cases(ldl, statin)) %>%
+  ggplot(data = ., aes(x = factor(statin), y = ldl)) +
+  geom_violin(aes(fill = factor(statin))) +
+  geom_boxplot(width = 0.3, outlier.size = 3) + 
+  coord_flip() +
+  guides(fill = "none") +
+  labs(x = "Statin prescription (0 = no, 1 = yes)", 
+       y = "LDL in mg/dl")
+```
+
+## Setting Up Third Try
+
+```{r}
+dm_for_boxplot <- dm1000 %>%
+  filter(complete.cases(statin, ldl)) %>%
+  mutate(statin_f = fct_recode(factor(statin),
+                               "No Statin" = "0",
+                               "Statin" = "1")) %>%
+  select(subject, ldl, statin_f, statin)
+
+head(dm_for_boxplot, 3) # print first three rows
+```
+
+## Third Try on Boxplot for LDL by Statin Use
+
+```{r, fig.height = 3}
+ggplot(data = dm_for_boxplot, aes(x = statin_f, y = ldl)) +
+  geom_violin(aes(fill = statin_f)) +
+  geom_boxplot(width = 0.3, outlier.size = 3) + 
+  coord_flip() + guides(fill = "none") +
+  scale_fill_viridis_d(alpha = 0.6) +
+  labs(x = "Statin prescription", 
+       y = "LDL in mg/dl")
+```
+
+## 95% confidence interval for difference between population mean LDL WITH statin and population mean LDL WITHOUT statin
+
+**If** we are willing to assume that LDL follows a Normal distribution in each statin group, then we can use the following linear model with one predictor.
+
+```{r}
+m2 <- lm(ldl ~ statin, data = dm1000)
+tidy(m2, conf.int = TRUE, conf.level = 0.95) %>% 
+  select(term, estimate, conf.low, conf.high) %>%
+  kable(digits = 3)
+```
+
+## Alternative Approach to get same result
+
+```{r}
+tt <- t.test(ldl ~ statin, data = dm1000, 
+       var.equal = TRUE, conf.level = 0.95)
+tidy(tt) %>% select(estimate, conf.low, conf.high) %>%
+  kable(digits = 3)
+```
+
+
+## 95% confidence interval for difference between population mean LDL WITH statin and population mean LDL WITHOUT statin
+
+If we are not willing to assume a Normal distribution for LDL in either the statin or the "no statin" group, then we could use a bootstrap approach.
+
+```{r}
+source("data/Love-boost.R")
+set.seed(20210914)
+dm1000 %$% bootdif(y = ldl, 
+                   g = factor(statin), 
+                   conf.level = 0.95)
+```
+
+## The `bootdif` function (from `Love-boost.R`)
+
+```{r}
+`bootdif` <-
+  function(y, g, conf.level=0.95, B.reps = 2000) {
+    lowq = (1 - conf.level)/2
+    g <- as.factor(g)
+    a <- attr(Hmisc::smean.cl.boot(y[g==levels(g)[1]], 
+                          B=B.reps, reps=TRUE),'reps')
+    b <- attr(Hmisc::smean.cl.boot(y[g==levels(g)[2]], 
+                          B=B.reps, reps=TRUE),'reps')
+    meandif <- diff(tapply(y, g, mean, na.rm=TRUE))
+    a.b <- quantile(b-a, c(lowq,1-lowq))
+    res <- c(meandif, a.b)
+    names(res) <- c('Mean Difference',lowq, 1-lowq)
+    res
+  }
+```
+
+## 95% confidence intervals for $\mu_{No Statin} - \mu_{Statin}$
+
+Approach | Estimate | 95% CI | Normality Assumption?
+--------: | -------: | -----: | --------
+linear model | 7.00 | (0.83, 13.17) | Yes
+bootstrap | 7.00 | (0.90, 12.96) | No
+
+Assumptions these intervals share:
+
+- random samples from the populations of interest
+- independent samples (samples aren't paired or matched)
+
+Additional assumptions for linear model:
+
+- Normal distribution in each group (statin and "no statin")
+- variance in each group (statin and "no statin") is equal
+
+
+# Comparing Multiple (more than 2) Batches of Data
+
+## Stratify the subjects by primary `insurance`?
+
+```{r}
+dm1000 %>% count(insurance) %>%
+  mutate(pct = 100*n/sum(n)) %>%
+  kable(digits = 1)
+```
+
+
+## Let's look at `n_income`
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+p1 <- ggplot(dm1000, aes(sample = n_income)) +
+  geom_qq(col = "slateblue") + 
+  geom_qq_line(col = "magenta") + 
+  theme(aspect.ratio = 1) + 
+  labs(title = "Normal Q-Q plot: dm1000 n_income")
+
+p2 <- ggplot(dm1000, aes(x = n_income)) +
+  geom_histogram(aes(y = stat(density)), 
+                 bins = 20, fill = "slateblue", col = "cyan") +
+  stat_function(fun = dnorm, 
+                args = list(mean = mean(dm1000$n_income, na.rm = TRUE), 
+                            sd = sd(dm1000$n_income, na.rm = TRUE)),
+                col = "magenta", lwd = 1.5) +
+  labs(title = "Density Function: dm1000 n_income")
+
+p3 <- ggplot(dm1000, aes(x = n_income, y = "")) +
+  geom_boxplot(fill = "slateblue", outlier.color = "slateblue") + 
+  labs(title = "Boxplot: dm1000 n_income", y = "")
+
+p1 + (p2 / p3 + plot_layout(heights = c(4,1)))
+
+mosaic::favstats(~ n_income, data = dm1000) %>% kable(digits = 0)
+```
+
+## Compare `n_income` by insurance: Boxplot?
+
+```{r, fig.height = 4}
+ggplot(dm1000, aes(x = insurance, y = n_income)) +
+  geom_boxplot()
+```
+
+
+## Build a better boxplot?
+
+What am I doing in each line of this code?
+
+```{r, eval = FALSE}
+dm1000 %>% filter(complete.cases(insurance, n_income)) %>%
+  ggplot(data = ., aes(x = insurance, y = n_income/1000)) +
+  geom_violin(aes(fill = insurance)) +
+  geom_boxplot(width = 0.3, outlier.size = 2) +
+  guides(fill = "none") +
+  coord_flip() +
+  scale_fill_viridis_d(alpha = 0.5) +
+  labs(y = "Neighborhood Income (in $1000s)",
+       x = "Primary Insurance Category",
+       title = "dm1000 Income by Insurance Type")
+```
+
+- Result on next slide...
+
+## How does `n_income` vary by `insurance` in `dm1000`?
+
+```{r, echo = FALSE}
+dm1000 %>% filter(complete.cases(insurance, n_income)) %>%
+  ggplot(data = ., aes(x = insurance, y = n_income/1000)) +
+  geom_violin(aes(fill = insurance)) +
+  geom_boxplot(width = 0.3, outlier.size = 2) +
+  guides(fill = "none") +
+  coord_flip() +
+  scale_fill_viridis_d(alpha = 0.5) +
+  labs(y = "Neighborhood Income (in $1000s)",
+       x = "Primary Insurance Category",
+       title = "dm1000 Income by Insurance Type")
+```
+
+## Faceted Histograms of `n_income` by `insurance`
+
+```{r, fig.height = 4}
+ggplot(data = dm1000, aes(x = n_income)) +
+  geom_histogram(binwidth = 2500) +
+  facet_wrap(~ insurance)
+```
+
+## Improving the Histograms (result)
+
+```{r, echo = FALSE}
+dm1000 %>% filter(complete.cases(n_income, insurance)) %>%
+ggplot(data = ., aes(x = n_income, fill = insurance)) +
+  geom_histogram(binwidth = 2500, col = "navy") +
+  scale_x_continuous(
+    breaks = c(5000, 25000, 50000, 75000, 100000)) +
+  guides(fill = "none") +
+  facet_wrap(~ insurance) +
+  labs(title = "Neighborhood Income, in $")
+```
+
+## Improving the Histograms (code)
+
+```{r, eval = FALSE}
+dm1000 %>% filter(complete.cases(n_income, insurance)) %>%
+ggplot(data = ., aes(x = n_income, fill = insurance)) +
+  geom_histogram(binwidth = 2500, col = "navy") +
+  scale_x_continuous(
+    breaks = c(5000, 25000, 50000, 75000, 100000)) +
+  guides(fill = "none") +
+  facet_wrap(~ insurance) +
+  labs(title = "Neighborhood Income, in $")
+```
+
+## Comparing Densities of `n_income` by `insurance`
+
+```{r, fig.height = 3.5}
+dm1000 %>% filter(complete.cases(n_income, insurance)) %>%
+  ggplot(data = ., aes(x = n_income, fill = insurance)) +
+  geom_density() +
+  scale_fill_viridis_d(alpha = 0.3)
+```
+
+## Using a Ridgeline Plot to Compare Densities
+
+```{r, fig.height = 3.5}
+dm1000 %>% filter(complete.cases(n_income, insurance)) %>%
+  ggplot(data = ., aes(x = n_income, y = insurance, 
+                       fill = insurance)) +
+  geom_density_ridges(alpha = 0.5) +
+  labs(title = "Neighborhood Income, in $")
+```
+
+## Sample Summaries of `n_income`
+
+```{r}
+dm1000 %$% mosaic::favstats(n_income ~ insurance)
+```
+
+
+## Comparing the Means of `n_income`
+
+```{r}
+m1 <- lm(n_income ~ insurance, data = dm1000)
+
+tidy(m1) %>% select(term, estimate) %>% kable(digits = 2)
+```
+
+- What is m1's estimated `n_income` for each of the insurance groups?
+
+## `m1`: Estimated `n_income` for each insurance
+
+```
+n_income = 33150.74 + 7564.28 Commercial  
+                   + 732.76 Medicare + 4724.00 Uninsured
+```
+
+Insurance | Estimated `n_income` 
+--------: | --------: 
+Commercial | 33150.74 + 7564.28 = 40715.02 
+Medicare | 33150.74 + 732.76 = 33883.50
+Uninsured | 33150.74 + 4724.00 = 37874.74
+Medicaid | 33150.74
+
+## `m1`: Estimated `n_income` for each insurance
+
+```
+n_income = 33150.74 + 7564.28 Commercial  
+                   + 732.76 Medicare + 4724.00 Uninsured
+```
+
+Insurance | `m1` est. | Sample mean(`n_income`)
+--------: | :--------: | :--------:
+Commercial | 40715.0 | 40715.0
+Medicare | 33883.5 | 33883.5
+Uninsured | 37874.7 | 33874.7
+Medicaid | 33150.7 | 33150.7
+
+## Model `m1` coefficients
+
+```{r}
+tidy(m1, conf.int = TRUE, conf.level = 0.95) %>%
+  select(term, estimate, conf.low, conf.high) %>%
+  kable(digits = 2)
+```
+
+- 95% CI for pop. mean `n_income` among adults with Medicaid is (31097, 35205)
+
+## Model `m1` coefficients
+
+```{r}
+tidy(m1, conf.int = TRUE, conf.level = 0.95) %>%
+  select(term, estimate, conf.low, conf.high) %>%
+  kable(digits = 2)
+```
+
+- 95% CI for Commercial - Medicaid is (4237, 10891)
+- What about Medicare - Medicaid or Uninsured - Medicaid?
+
+## Comparing `n_income` across `insurance` groups
+
+```{r, message = FALSE}
+mosaic::favstats(n_income ~ insurance, data = dm1000)
+```
+
+- Does a comparison of means make sense here?
+- Would it give us the same conclusions as comparing medians?
+
+## Replot on logarithmic (base 10) scale?
+
+```{r, echo = FALSE}
+dm1000 %>% filter(complete.cases(insurance, n_income)) %>%
+  ggplot(data = ., aes(x = insurance, y = n_income)) +
+  geom_violin(aes(fill = insurance)) +
+  geom_boxplot(width = 0.3, outlier.size = 2) +
+  guides(fill = "none") +
+  coord_flip() +
+  scale_fill_viridis_d(alpha = 0.5) +
+  scale_y_continuous(trans = "log10") +
+  labs(y = "Neighborhood Income (in $, log10 scale)",
+       x = "Primary Insurance Category",
+       title = "dm1000 Income by Insurance Type")
+```
+
+## Code for plot on previous slide
+
+```{r, eval = FALSE}
+dm1000 %>% filter(complete.cases(insurance, n_income)) %>%
+  ggplot(data = ., aes(x = insurance, y = n_income)) +
+  geom_violin(aes(fill = insurance)) +
+  geom_boxplot(width = 0.3, outlier.size = 2) +
+  guides(fill = "none") +
+  coord_flip() +
+  scale_fill_viridis_d(alpha = 0.5) +
+  scale_y_continuous(trans = "log10") +
+  labs(y = "Neighborhood Income (in $, log10 scale)",
+       x = "Primary Insurance Category",
+       title = "dm1000 Income by Insurance Type")
+```
+
+- Could also use `scale_y_log10()`
+
+## Does which logarithmic scale you pick matter?
+
+```{r, echo = FALSE}
+p1 <- dm1000 %>% filter(complete.cases(insurance, n_income)) %>%
+  ggplot(data = ., aes(x = insurance, y = n_income)) +
+  geom_violin(aes(fill = insurance)) +
+  geom_boxplot(width = 0.3, outlier.size = 2) +
+  guides(fill = "none") +
+  coord_flip() +
+  scale_fill_viridis_d(alpha = 0.5) +
+  scale_y_continuous(trans = "log") +
+  labs(y = "Neighborhood Income (in $, log, base e scale)",
+       x = "Primary Insurance Category",
+       title = "Natural Log Scale")
+
+p2 <- dm1000 %>% filter(complete.cases(insurance, n_income)) %>%
+  ggplot(data = ., aes(x = insurance, y = n_income)) +
+  geom_violin(aes(fill = insurance)) +
+  geom_boxplot(width = 0.3, outlier.size = 2) +
+  guides(fill = "none") +
+  coord_flip() +
+  scale_fill_viridis_d(alpha = 0.5) +
+  scale_y_continuous(trans = "log10") +
+  labs(y = "Neighborhood Income (in $, log10 scale)",
+       x = "Primary Insurance Category",
+       title = "Log (base 10) Scale")
+
+p1 + p2
+```
+
+## Ridgeline Plot of Densities on Log Scale
+
+```{r, fig.height = 3.5, message = FALSE}
+dm1000 %>% filter(complete.cases(n_income, insurance)) %>%
+  ggplot(data = ., aes(x = n_income, y = insurance, 
+                       fill = insurance)) +
+  geom_density_ridges(alpha = 0.5) +
+  scale_x_continuous(trans = "log10") +
+  labs(title = "Neighborhood Income, log10 scale")
+```
+
+## Next Up
+
+- Favorite Movies activity
+- Correlation, Association and Scatterplots
