@@ -52,7 +52,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Favorite Movies Activity
 
-Details to come.
+- [Here's the link for today's activity](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout1.md).
+- [Main page for the Movies work is here](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies).
 
 ---------------
 
