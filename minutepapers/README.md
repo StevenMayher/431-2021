@@ -4,21 +4,21 @@
 
 ## Next Minute Paper
 
-After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
-----------: | ------: | :--------: | :----------:
-7 (2021-09-14) | 2021-09-15 | https://bit.ly/431-2021-minute-07 | to appear
+After Class | due at NOON on | Link to Minute Paper Form 
+----------: | ------: | :--------: 
+9 (2021-09-21) | 2021-09-22 | to appear
 
 ## Completed Minute Papers
 
 After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
 ----------: | ------: | :--------: | :----------:
 5 (2021-09-07) | 2021-09-08 | https://bit.ly/431-2021-minute-05 | https://bit.ly/431-2021-min5-feedback
+7 (2021-09-14) | 2021-09-15 | https://bit.ly/431-2021-minute-07 | https://bit.ly/431-2021-min7-feedback
 
 ## Upcoming Minute Papers
 
 After Class | due at NOON on 
 ----------: | ------: 
-9 (2021-09-21) | 2021-09-22 
 11 (2021-09-28) | 2021-09-29 
 13 (2021-10-05) | 2021-10-06 
 15 (2021-10-12) | 2021-10-13 
