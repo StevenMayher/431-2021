@@ -14,7 +14,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Announcements
 
 1. **Minute Paper Feedback** Feedback on the Minute Paper after Class 07 will be available by class time.
-    - A few students didn't complete the Minute Paper on time. Late minute papers (1-12 hours late) receive 60% of available credit.
+    - A few students didn't complete the Minute Paper on time. They are ALWAYS due on Wednesdays at noon. Late minute papers (1-12 hours late) receive 60% of available credit.
 2. **Finding a Project A Partner** Some people will want to work with a partner on Project A, but haven't identified someone yet. If that's you, visit [this Google Sheet "Looking for a partner to work on Project A?" on our Shared Google Drive](https://docs.google.com/spreadsheets/d/1-aKEffdoEvxZlH65lWLGiONwCkEG0Zn4OtUujp_OBq4/edit?usp=sharing) where you can list your name, email and some information about what kind of partner you're looking for, etc.
 3. **The `readxl` package** We'll introduce the `readxl` package today for reading in data from Excel spreadsheets saved into `.xls` or `xlsx` formats. Here's a link to the [readxl package description](https://readxl.tidyverse.org/). 
     - While `readxl` is installed when you install the tidyverse, it's not part of the core tidyverse packages loaded with `library(tidyverse)` so you have to load it on its own with `library(readxl)`.
