@@ -52,3 +52,9 @@ Check the [Course Calendar](https://thomaselove.github.io/431/calendar.html).
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class08/images/nyt2.PNG)
 
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class08/images/nyt3.PNG)
+
+Citations (all from *The New York Times*):
+
+1. [Teach About Inequality With These 28 New York Times Graphs](https://www.nytimes.com/2021/05/11/learning/lesson-plans/teach-about-inequality-with-these-28-new-york-times-graphs.html), posted 2021-05-11.
+2. [Disparity in Life Spans of the Rich and the Poor Is Growing](https://www.nytimes.com/2016/02/13/health/disparity-in-life-spans-of-the-rich-and-the-poor-is-growing.html) By Sabrina Tavernise, 2016-02-12.
+3. [America Will Struggle After Coronavirus. These Charts Show Why.](https://www.nytimes.com/interactive/2020/04/10/opinion/coronavirus-us-economy-inequality.html) By David Leonhardt and Yaryna Serkez, 2020-04-10.
