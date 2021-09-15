@@ -6,7 +6,7 @@ Form a group of 3-5 people. You'll be reporting the results of your work using t
 
 ## The Five Variables We're Focusing On Today
 
-The data set is called `movies_2021` and describes 115 films mentioned as "favorites" by students in 431 for Fall 2020 or Fall 2021.
+The data set is called `movies_2021` and describes 115 films mentioned as "favorites" by students in 431 for Fall 2020 or Fall 2021. Here are the five variables that we will focus on today...
 
 Variable | Sample Value | Explanation
 :--------: | :------------: | ------------------------------------------------------------------------
