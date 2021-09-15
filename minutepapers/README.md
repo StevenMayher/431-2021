@@ -32,6 +32,7 @@ After Class | due at NOON on
 
 - You'll need to log into Google via CWRU to see your scores and the comments left there by the Teaching Assistants. 
 - Your **Lab Code** identifies you in the roster. Dr. Love sent your Lab Code via email on 2021-09-10. (The email's subject is **431 Lab Code - please save**.) 
+- Minute Papers that are between 1 and 12 hours late will receive 60% credit. Minute Papers that are more than 12 hours late will receive no credit.
 
 ## Course Participation Grades
 
