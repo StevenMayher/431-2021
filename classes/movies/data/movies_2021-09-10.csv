@@ -1,0 +1,115 @@
+film_id,film,mentions,list_2020,list_2021,year,length,mpaa,imdb_categories,imdb_ratings,imdb_stars,imdb_pct10,dr_love
+1,2001: A Space Odyssey,1,0,1,1968,149,G,"Adventure, Sci-Fi",628220,8.3,30.4,Yes
+2,8 1/2,1,1,0,1963,138,NR,Drama,113258,8.0,27.6,No
+3,A Fistful of Dollars,1,0,1,1964,99,R,"Action, Drama, Western",206142,8.0,13.3,No
+4,About Time,2,2,0,2013,123,R,"Comedy, Drama, Fantasy",321525,7.8,16.9,No
+5,Avatar,1,1,0,2009,162,PG-13,"Action, Adventure, Fantasy",1154273,7.8,21.4,No
+6,Avengers: Endgame,2,1,1,2019,181,PG-13,"Action, Adventure, Drama",933367,8.4,36.1,Yes
+7,Avengers: Infinity War,1,1,0,2018,149,PG-13,"Action, Adventure, Sci-Fi",919813,8.4,33.9,Yes
+8,Back to the Future,1,1,0,1985,116,PG,"Adventure, Comedy, Sci-Fi",1110099,8.5,25.7,Yes
+9,Back to the Future Part II,1,0,1,1989,108,PG,"Adventure, Comedy, Sci-Fi",500471,7.8,15,Yes
+10,Beaches,1,1,0,1988,123,PG-13,"Comedy, Drama, Music",24694,7.0,17.6,No
+11,Beetlejuice,1,1,0,1988,92,PG,"Comedy, Fantasy",274473,7.5,12.2,Yes
+12,Being John Malkovich,1,1,0,1999,113,R,"Comedy, Drama, Fantasy",322833,7.7,12.5,No
+13,The Big Lebowski,1,1,0,1998,117,R,"Comedy, Crime, Sport",764336,8.1,22.1,Yes
+14,Black Panther,1,1,0,2018,134,PG-13,"Action, Adventure, Sci-Fi",673885,7.3,14.6,Yes
+15,Black Swan,1,1,0,2010,108,R,"Drama, Thriller",722654,8.0,15.5,No
+16,Blue Velvet,1,0,1,1986,120,R,"Drama, Mystery, Thriller",188756,7.7,16,Yes
+17,Capharnaum,1,0,1,2018,126,R,Drama,74475,8.4,25.4,No
+18,Casablanca,1,0,1,1942,102,PG,"Drama, Romance, War",541788,8.5,29.9,Yes
+19,Castle in the Sky,1,1,0,1986,125,PG,"Animation, Adventure, Drama",157056,8.0,17.4,No
+20,Cloud Atlas,1,0,1,2012,172,R,"Action, Drama, Mystery",351370,7.4,15.9,No
+21,Coming To America,1,1,0,1988,116,R,"Comedy, Romance",198454,7.1,10.1,Yes
+22,The Dark Knight,2,1,1,2008,152,PG-13,"Action, Crime, Drama",2412730,9.0,45,Yes
+23,The Dark Knight Rises,2,1,1,2012,164,PG-13,"Action, Adventure",1574645,8.4,28.1,Yes
+24,The Departed,1,0,1,2006,151,R,"Crime, Drama, Thriller",1237811,8.5,22.8,Yes
+25,Despicable Me,1,0,1,2010,95,PG,"Animation, Adventure, Comedy",516295,7.6,12.4,Yes
+26,Doctor Zhivago,1,0,1,1965,197,PG-13,"Drama, Romance, War",72627,8.0,20.9,No
+27,Eternal Sunshine of the Spotless Mind,1,1,0,2004,108,R,"Drama, Romance, Sci-Fi",946429,8.3,23.6,No
+28,Eurovision Song Contest: The Story of Fire Saga,2,1,1,2020,123,PG-13,"Comedy, Music",85459,6.5,9.3,Yes
+29,Everybody Wants Some!!,1,1,0,2016,117,R,Comedy,53608,6.9,6.5,No
+30,Face/Off,1,1,0,1997,138,R,"Action, Crime, Sci-Fi",359821,7.2,8.8,Yes
+31,Farewell My Concubine: the Beijing Opera,1,1,0,2014,97,NR,Musical,8,6.1,12.5,No
+32,Flags of our Fathers,1,0,1,2006,135,R,"Action, Adventure, Drama",120304,7.1,6.2,No
+33,Gattaca,1,0,1,1997,106,PG-13,"Drama, Sci-Fi, Thriller",289313,7.8,12.9,No
+34,Get Out,1,0,1,2017,104,R,"Horror, Mystery, Thriller",527977,7.7,11.4,No
+35,Get Smart,1,1,0,2008,110,PG-13,"Action, Adventure, Comedy",209977,6.5,5.9,Yes
+36,Ghost,1,0,1,1990,127,PG-13,"Drama, Fantasy, Romance",205071,7.1,9.8,No
+37,The Girl with the Dragon Tattoo,1,1,0,2011,158,R,"Crime, Drama, Mystery",439159,7.8,11.2,No
+38,The Godfather,1,1,0,1972,175,R,"Crime, Drama",1700227,9.2,51.6,Yes
+39,The Grand Budapest Hotel,2,1,1,2014,99,R,"Adventure, Comedy, Crime",743330,8.1,15.9,No
+40,The Great Muppet Caper,1,0,1,1981,97,G,"Adventure, Comedy, Crime",14712,7.2,12.6,Yes
+41,The Greatest Showman,1,1,0,2017,105,PG,"Biography, Drama, Musical",254937,7.6,23,No
+42,The Green Mile,1,0,1,1999,189,R,"Crime, Drama, Fantasy",1200419,8.6,26.4,Yes
+43,The Grey,1,1,0,2011,117,R,"Action, Adventure, Drama",245875,6.8,6.9,No
+44,Harold and Maude,1,1,0,1971,91,PG,"Comedy, Drama, Romance",74651,7.9,24.2,No
+45,The Hateful Eight,1,1,0,2015,168,R,"Crime, Drama, Mystery",548815,7.8,11.8,No
+46,Hidden Figures,1,1,0,2016,127,PG,"Biography, Drama, History",211534,7.8,14.3,No
+47,Home Alone,1,1,0,1990,103,PG,"Comedy, Family",506763,7.6,15.4,Yes
+48,Hot Fuzz,1,1,0,2007,121,R,"Action, Comedy, Mystery",481068,7.8,16.6,Yes
+49,House Party 2,1,1,0,1991,94,R,"Comedy, Drama, Music",6309,5.3,9.2,No
+50,How the Grinch Stole Christmas,1,1,0,2000,104,PG,"Comedy, Family, Fantasy",221908,6.2,9.3,No
+51,The Hunger Games,1,0,1,2012,142,PG-13,"Action, Adventure, Sci-Fi",870030,7.2,13,No
+52,In The Heights,1,0,1,2021,143,PG-13,"Drama, Music, Musical",33571,7.4,19.5,Yes
+53,Inception,4,2,2,2010,148,PG-13,"Action, Adventure, Sci-Fi",2164457,8.8,34.9,Yes
+54,Interstellar,2,1,1,2014,169,PG-13,"Adventure, Drama, Sci-Fi",1609264,8.6,35.9,No
+55,Iron Man,1,0,1,2008,126,PG-13,"Action, Adventure, Sci-Fi",981356,7.9,14.1,Yes
+56,Jab We Met,1,0,1,2007,138,NR,"Comedy, Drama, Romance",50085,7.9,18.5,No
+57,John Wick,1,0,1,2014,101,R,"Action, Crime, Thriller",574316,7.4,12,Yes
+58,Kiki's Delivery Service,1,0,1,1989,103,G,"Animation, Adventure, Drama",132628,7.9,14.7,No
+59,The King's Speech,1,1,0,2010,118,R,"Biography, Drama, History",655711,8.0,12.3,Yes
+60,La La Land,2,2,0,2016,128,PG-13,"Comedy, Drama, Music",535587,8.0,21.4,Yes
+61,Life As We Know It,1,1,0,2010,114,PG-13,"Comedy, Drama, Romance",126831,6.5,8.9,No
+62,Little Women,1,0,1,2019,135,PG,"Drama, Romance",164211,7.8,13.8,No
+63,Lord of the Rings: The Fellowship of the Ring,1,1,0,2001,178,PG-13,"Action, Adventure, Drama",1727362,8.8,37.9,Yes
+64,Lord of the Rings: The Two Towers,1,0,1,2002,179,PG-13,"Action, Adventure, Drama",1542309,8.7,34.8,Yes
+65,The Machinist,1,0,1,2004,101,R,"Drama, Thriller",370121,7.7,9.2,No
+66,Madea Goes To Jail,1,0,1,2009,103,PG-13,"Comedy, Crime, Drama",11780,4.5,15,No
+67,Mamma Mia: Here We Go Again,1,0,1,2018,114,PG-13,"Comedy, Musical, Romance",86391,6.6,12.1,No
+68,Matilda,1,1,0,1996,102,PG,"Comedy, Family, Fantasy",137769,6.9,11.5,No
+69,The Matrix,1,1,0,1999,136,R,"Action, Sci-Fi",1749370,8.7,30.3,Yes
+70,Me Before You,1,0,1,2016,106,PG-13,"Drama, Romance",225762,7.4,15.1,No
+71,Memento,1,1,0,2000,113,R,"Mystery, Thriller",1166969,8.4,22.2,Yes
+72,Mission Impossible II,1,1,0,2000,123,PG-13,"Action, Adventure, Thriller",324955,6.1,3.7,Yes
+73,Monte Carlo,1,1,0,2011,109,PG,"Adventure, Comedy, Family",42676,5.8,13.4,No
+74,Moonlight,1,0,1,2016,111,R,Drama,287970,7.4,11.3,No
+75,My Big Fat Greek Wedding,1,1,0,2002,95,PG,"Comedy, Drama, Romance",124279,6.6,9,No
+76,Mystery Men,1,0,1,1999,121,PG-13,"Action, Comedy, Fantasy",64765,6.1,6.4,Yes
+77,Notting Hill,1,1,0,1999,124,PG-13,"Comedy, Drama, Romance",289594,7.1,9.6,Yes
+78,Pather Panchali,1,1,0,1955,125,NR,Drama,28215,8.5,39.6,No
+79,The Parent Trap,1,1,0,1998,128,PG,"Adventure, Comedy, Drama",127301,6.6,12.1,No
+80,The Platform,1,0,1,2019,94,NR,"Horror, Sci-Fi, Thriller",187757,7.0,5.7,No
+81,Porco Rosso,1,0,1,1992,94,PG,"Animation, Adventure, Comedy",82897,7.7,12.2,No
+82,Pride & Prejudice,1,1,0,2005,129,PG,"Drama, Romance",272448,7.8,22.4,No
+83,The Princess Bride,1,0,1,1987,98,PG,"Adventure, Family, Fantasy",407280,8.1,25.6,Yes
+84,Pulp Fiction,1,0,1,1994,154,R,"Crime, Drama",1903850,8.9,36.7,Yes
+85,Remember the Titans,1,0,1,2000,113,PG,"Biography, Drama, Sport",204383,7.8,15.8,No
+86,Reservoir Dogs,1,0,1,1992,99,R,"Crime, Drama, Thriller",955827,8.3,17.7,Yes
+87,Resident Evil,1,1,0,2002,100,R,"Action, Horror, Sci-Fi",256725,6.7,8.9,No
+88,Rise of the Guardians,1,0,1,2012,97,PG,"Animation, Adventure, Comedy",163429,7.3,14.7,No
+89,The Royal Tenenbaums,1,0,1,2001,110,R,"Comedy, Drama",276077,7.6,16.1,No
+90,Scent of a Woman,1,1,0,1992,156,R,Drama,277837,8.0,18.9,No
+91,Scott Pilgrim vs. The World,1,1,0,2010,112,PG-13,"Action, Comedy, Fantasy",400322,7.5,15.3,No
+92,The Secret Life of Walter Mitty,2,1,1,2013,114,PG,"Comedy, Drama, Fantasy",302996,7.3,11.4,No
+93,Seven Psychopaths,1,1,0,2012,110,R,"Comedy, Crime",248280,7.2,6.9,No
+94,The Shawshank Redemption,2,1,1,1994,142,R,Drama,2457003,9.3,55.2,Yes
+95,The Silence of the Lambs,1,1,0,1991,118,R,"Crime, Drama, Thriller",1328577,8.6,23.4,Yes
+96,Skyfall,1,0,1,2012,143,PG-13,"Action, Adventure, Thriller",646976,7.7,12.1,Yes
+97,Sorry To Bother You,1,0,1,2018,112,R,"Comedy, Drama, Fantasy",70065,6.9,6,No
+98,Soul,1,0,1,2020,100,PG,"Animation, Adventure, Comedy",275850,8.1,18.9,No
+99,Spider Man: Into The Spider-Verse,1,0,1,2018,117,PG,"Animation, Action, Adventure",424275,8.4,24.7,Yes
+100,Spirited Away,3,1,2,2001,125,PG,"Animation, Adventure, Family",691237,8.6,31.1,No
+101,Still Walking,1,1,0,2008,115,NR,Drama,15006,8.0,12.9,No
+102,Takers,1,1,0,2010,107,PG-13,"Action, Crime, Thriller",60446,6.2,7.8,No
+103,Tangled,1,1,0,2010,100,PG,"Animation, Adventure, Comedy",422163,7.7,16.4,Yes
+104,Titanic,2,1,1,1997,134,PG-13,"Drama, Romance",1090439,7.8,22.9,Yes
+105,Top Gun,1,1,0,1986,110,PG,"Action, Drama",310150,6.9,9.7,Yes
+106,Trolls,1,0,1,2016,92,PG,"Animation, Adventure, Comedy",76011,6.5,9.3,No
+107,Twister,1,0,1,1996,113,PG-13,"Action, Adventure, Thriller",186399,6.4,6.3,Yes
+108,V for Vendetta,1,0,1,2005,132,R,"Action, Drama, Sci-Fi",1064446,8.1,22.2,No
+109,Waking Life,1,1,0,2001,99,R,"Animation, Drama, Fantasy",62351,7.8,23.1,No
+110,War of the Worlds,1,0,1,2015,116,PG-13,"Action, Adventure, Sci-Fi",428273,6.5,5.6,No
+111,What About Bob?,1,0,1,1991,99,PG,Comedy,65592,7.0,10,No
+112,When Harry Met Sally,1,1,0,1989,95,R,"Comedy, Drama, Romance",205136,7.6,13,Yes
+113,Whiplash,1,0,1,2014,106,R,"Drama, Music",760727,8.5,21.8,No
+114,Yeh Jawaani hai Deewani,1,1,0,2013,160,NR,"Drama, Musical, Romance",41100,7.2,18.9,No
