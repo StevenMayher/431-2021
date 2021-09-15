@@ -8,4 +8,8 @@ The current version of the data set is called `movies_2021`.
     - One thing I'll be doing over the next few class sessions is trying to identify how many of you have seen each of these films. My first attempt at that (covering movies 1-20 on the list) is part of the [Minute Paper after Class 7 due on Wednesday 2021-09-15 at noon](https://bit.ly/431-2021-minute-07).
 - [Here is a brief codebook](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/movies_codebook.md) describing the variables presented in the currently available version of the `movies_2021` file.
 
-We'll discuss this further in Class 08.
+## Activities involving the Movies Data
+
+1. Here's the link for our [first breakout activity](breakout1.md), which we'll do in Class 08 (2021-09-16).
+
+
