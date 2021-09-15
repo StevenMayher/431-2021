@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-> Quote to come.
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class08/images/wilkinson_2021-07-22.PNG)  [Link](https://twitter.com/jd_wilko/status/1418245728795860996?s=11)
 
 ## Today's Slides
 
