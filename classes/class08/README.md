@@ -61,7 +61,7 @@ Check the [Course Calendar](https://thomaselove.github.io/431/calendar.html).
 1. Reading this weekend includes Spiegelhalter through Chapter 3 (Why are we looking at data anyway? Populations and Measurement), and we also recommend [R for Data Science](https://r4ds.had.co.nz/) sections 5-8 (on Data Transformation, Exploratory Data Analysis and using scripts and projects in R)
 2. [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab02) is due Monday 2021-09-20 at 9 PM. 
 3. [Project A](https://thomaselove.github.io/431-2021-projectA/) - the early deadline for the proposal is noon on Friday 2021-10-01. We encourage you to start building your proposal now, using the suggestions provided above. And if you're looking for a partner, add your information to [the list on our Shared Google Drive](https://docs.google.com/spreadsheets/d/1-aKEffdoEvxZlH65lWLGiONwCkEG0Zn4OtUujp_OBq4/edit?usp=sharing).
-4. If you've accomplished those things, you could work on [Lab 3](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) due Monday 2021-09-27 at 9 PM.
+4. If you've accomplished those things, you could get started on [Lab 3](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) due Monday 2021-09-27 at 9 PM.
 
 ## One Last Thing
 
