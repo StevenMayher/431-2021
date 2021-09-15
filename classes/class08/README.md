@@ -11,7 +11,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - Dr. Love's slides will be available in [PDF format], as well as in [R Markdown].
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
-## More to come.
+## Announcements
 
 1. **Minute Paper Feedback** Feedback on the Minute Paper after Class 07 will be available by class time.
 2. **The `readxl` package** We'll introduce the `readxl` package today for reading in data from Excel spreadsheets saved into `.xls` or `xlsx` formats. Here's a link to the [readxl package description](https://readxl.tidyverse.org/). 
@@ -28,3 +28,27 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - the [Course Notes](https://thomaselove.github.io/431-notes/) and 
     - in [R for Data Science](https://r4ds.had.co.nz/) and many also appear 
     - in the [R Graphics Cookbook](https://r-graphics.org/). I encourage you to use those resources. It's what I do.
+
+--------------
+
+## Favorite Movies Activity
+
+Details to come.
+
+---------------
+
+## What Should I Be Working On?
+
+Check the [Course Calendar](https://thomaselove.github.io/431/calendar.html).
+
+1. Reading this weekend includes Spiegelhalter through Chapter 3 (Why are we looking at data anyway? Populations and Measurement), and we also recommend [R for Data Science](https://r4ds.had.co.nz/) sections 5-8 (on Data Transformation, Exploratory Data Analysis and using scripts and projects in R)
+2. [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab02) is due Monday 2021-09-20 at 9 PM. If you've finished that, you might want to work on [Lab 3](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) due Monday 2021-09-27 at 9 PM.
+3. [Project A](https://thomaselove.github.io/431-2021-projectA/) - the early deadline for the proposal is noon on Friday 2021-10-01. We encourage you to start building our proposal now.
+
+## One Last Thing
+
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class08/images/nyt1.PNG)
+
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class08/images/nyt2.PNG)
+
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class08/images/nyt3.PNG)
