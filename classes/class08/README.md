@@ -38,13 +38,16 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - If you work with a partner, you can split up the tasks but each of you will need to understand everything that is submitted, and you should each be doing approximately one-half of the work. There are advantages and disadvantages to working on this project with a partner.
 2. The first step after reading the Project A instructions is to create a new project directory on your computer where you'll put all of your materials for Project A.
     - We then suggest you put all of the relevant information into that directory, specifically, the [CHR CSV file](https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2021.csv) (into a data subdirectory) along with the [data documentation](https://www.countyhealthrankings.org/sites/default/files/media/document/2021%20Analytic%20Documentation.pdf) and [data dictionary](https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2021.pdf) PDF files. It won't hurt to have these files available to you in an easy-to-find place on your machine.
-3. Ingest the county health rankings data into R, and here we suggest you follow the [instructions on the Project A data page in the Data Development Task List - Task A](https://thomaselove.github.io/431-2021-projectA/data.html) which is also the approach used in [the Project A Proposal example we've provided](https://thomaselove.github.io/431-2021-projectA/exampleA.html).
-4. Work your way through the remaining Tasks (B - G) described in the [Data Development Task List on the Project A Data Page](https://thomaselove.github.io/431-2021-projectA/data.html). 
+3. Create an R Markdown file in which you will do your work. We suggest you use [the R Markdown file for the Project A Proposal example](https://thomaselove.github.io/431-2021-projectA/exampleA.html) as a template. 
+    - Be sure to fill in your name, etc. in the YAML code at the top of the document. Do this first so you don't forget.
+    - Remember also to delete the instructions from Dr. Love before submitting anything to Canvas.
+4. Ingest the county health rankings data into R, and here we suggest you follow the [instructions on the Project A data page in the Data Development Task List - Task A](https://thomaselove.github.io/431-2021-projectA/data.html) which is also the approach used in [the Project A Proposal example we've provided](https://thomaselove.github.io/431-2021-projectA/exampleA.html).
+5. Work your way through the remaining Tasks (B - G) described in the [Data Development Task List on the Project A Data Page](https://thomaselove.github.io/431-2021-projectA/data.html). 
     - This will leave you with a complete and tidy tibble which you will have saved (into an .Rds file) and summarized, along with a codebook in an R Markdown document. 
     - Use the [Project A proposal example to help see what you need to do](https://thomaselove.github.io/431-2021-projectA/exampleA.html).
-5. Now move on to the [Project A Proposal page](https://thomaselove.github.io/431-2021-projectA/proposal.html) and complete the requirements described there. 
+6. Now move on to the [Project A Proposal page](https://thomaselove.github.io/431-2021-projectA/proposal.html) and complete the requirements described there. 
     - Again, use the [Project A Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html) as a template for your work.
-6. If you have questions, [visit TA office hours](https://thomaselove.github.io/431/contact.html) (ideally) or, if that's not possible, use the [projectA folder on Piazza](https://piazza.com/case/fall2021/pqhs431).
+7. If you have questions, [visit TA office hours](https://thomaselove.github.io/431/contact.html) (ideally) or, if that's not possible, use the [projectA folder on Piazza](https://piazza.com/case/fall2021/pqhs431).
 
 --------------
 
