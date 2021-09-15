@@ -71,5 +71,5 @@ The Cleveland R Users Group has over 800 members, an active [YouTube channel](ht
 
 > This group is designed for novice to expert R users to share tips, ideas, and experiences. Meetings will be designed to learn and challenge. A typical meetup will consist of brief socializing and a presentation. Added entertainment may consist of members discussing uncommon (but effective) uses for R, fun applications they've created, various competitions, etc.
 
-- Their next (virtual) meeting is 2021-09-22 at 6 PM, when Ryan Honomichl, a former student in this class, will be speaking on [Linking patient-reported outcomes measures with PROsetta](https://www.meetup.com/Cleveland-UseR-Group/events/280072374/). 
+- Their next (virtual) meeting is Wednesday 2021-09-22 at 6 PM, when Ryan Honomichl, a former student in this class, will be speaking on [Linking patient-reported outcomes measures with PROsetta](https://www.meetup.com/Cleveland-UseR-Group/events/280072374/). 
 - The most recent YouTube video is "[Take a sad chart and make it better](https://www.youtube.com/watch?v=DXuW_cUNPaI)" by Trang Le from 2021-08-25.
