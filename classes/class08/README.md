@@ -44,6 +44,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - Use the [Project A proposal example to help see what you need to do](https://thomaselove.github.io/431-2021-projectA/exampleA.html).
 5. Now move on to the [Project A Proposal page](https://thomaselove.github.io/431-2021-projectA/proposal.html) and complete the requirements described there. 
     - Again, use the [Project A Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html) as a template for your work.
+6. If you have questions, [visit TA office hours](https://thomaselove.github.io/431/contact.html) (ideally) or, if that's not possible, use the [projectA folder on Piazza](https://piazza.com/case/fall2021/pqhs431).
 
 --------------
 
