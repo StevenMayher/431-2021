@@ -67,14 +67,9 @@ Check the [Course Calendar](https://thomaselove.github.io/431/calendar.html).
 
 ## One Last Thing
 
-![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class08/images/nyt1.PNG)
+The Cleveland R Users Group has over 800 members, an active [YouTube channel](https://www.youtube.com/channel/UC7C4YZ-9itQW7Nl4RVKDflg) and meets regularly. You can join the group at [Meetup](https://www.meetup.com/Cleveland-UseR-Group/) if you're interested. 
 
-![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class08/images/nyt2.PNG)
+> This group is designed for novice to expert R users to share tips, ideas, and experiences. Meetings will be designed to learn and challenge. A typical meetup will consist of brief socializing and a presentation. Added entertainment may consist of members discussing uncommon (but effective) uses for R, fun applications they've created, various competitions, etc.
 
-![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class08/images/nyt3.PNG)
-
-Citations (all from *The New York Times*):
-
-1. [Teach About Inequality With These 28 New York Times Graphs](https://www.nytimes.com/2021/05/11/learning/lesson-plans/teach-about-inequality-with-these-28-new-york-times-graphs.html), posted 2021-05-11.
-2. [Disparity in Life Spans of the Rich and the Poor Is Growing](https://www.nytimes.com/2016/02/13/health/disparity-in-life-spans-of-the-rich-and-the-poor-is-growing.html) By Sabrina Tavernise, 2016-02-12.
-3. [America Will Struggle After Coronavirus. These Charts Show Why.](https://www.nytimes.com/interactive/2020/04/10/opinion/coronavirus-us-economy-inequality.html) By David Leonhardt and Yaryna Serkez, 2020-04-10.
+- Their next (virtual) meeting is 2021-09-22 at 6 PM, when Ryan Honomichl, a former student in this class, will be speaking on [Linking patient-reported outcomes measures with PROsetta](https://www.meetup.com/Cleveland-UseR-Group/events/280072374/)
+- The most recent YouTube video is "[Take a sad chart and make it better](https://www.youtube.com/watch?v=DXuW_cUNPaI)" by Trang Le from 2021-08-25.
