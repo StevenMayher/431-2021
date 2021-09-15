@@ -30,16 +30,15 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - in [R for Data Science](https://r4ds.had.co.nz/) and many also appear 
     - in the [R Graphics Cookbook](https://r-graphics.org/). I encourage you to use those resources. It's what I do.
 
---------------
-
 ## Project A: Getting Started
 
 1. Remember that it is possible (but not in any way mandatory) to work with a partner on Project A. [This Google Sheet on our Shared Google Drive](https://docs.google.com/spreadsheets/d/1-aKEffdoEvxZlH65lWLGiONwCkEG0Zn4OtUujp_OBq4/edit?usp=sharing) should help you identify a partner if you'd like to find one. 
     - If you work with a partner, you can split up the tasks but each of you will need to understand everything that is submitted, and you should each be doing approximately one-half of the work. There are advantages and disadvantages to working on this project with a partner.
-2. The first step after reading the Project A instructions is to create a new project directory on your computer where you'll put all of your materials for Project A.
+2. The first step after reading the Project A instructions is to create a **new project directory** on your computer where you'll put all of your materials for Project A.
     - We then suggest you put all of the relevant information into that directory, specifically, the [CHR CSV file](https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2021.csv) (into a data subdirectory) along with the [data documentation](https://www.countyhealthrankings.org/sites/default/files/media/document/2021%20Analytic%20Documentation.pdf) and [data dictionary](https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2021.pdf) PDF files. It won't hurt to have these files available to you in an easy-to-find place on your machine.
-3. Create an R Markdown file in which you will do your work. We suggest you use [the R Markdown file for the Project A Proposal example](https://thomaselove.github.io/431-2021-projectA/exampleA.html) as a template. 
-    - Be sure to fill in your name, etc. in the YAML code at the top of the document. Do this first so you don't forget.
+    - You'll also want to put the [R Markdown file for the Project A Proposal example](https://thomaselove.github.io/431-2021-projectA/exampleA.html) in that directory, and you'll wind up adjusting this to create your own R Markdown file.
+3. Start building the R Markdown file in which you will do your work. We suggest you make a copy of [the R Markdown file for the Project A Proposal example](https://thomaselove.github.io/431-2021-projectA/exampleA.html) and use that as your template. 
+    - Be sure to change the name of the R Markdown file to suit your situation, and also to fill in your name, etc. in the YAML code at the top of the R Markdown document. Do this first so you don't forget.
     - Remember also to delete the instructions from Dr. Love before submitting anything to Canvas.
 4. Ingest the county health rankings data into R, and here we suggest you follow the [instructions on the Project A data page in the Data Development Task List - Task A](https://thomaselove.github.io/431-2021-projectA/data.html) which is also the approach used in [the Project A Proposal example we've provided](https://thomaselove.github.io/431-2021-projectA/exampleA.html).
 5. Work your way through the remaining Tasks (B - G) described in the [Data Development Task List on the Project A Data Page](https://thomaselove.github.io/431-2021-projectA/data.html). 
