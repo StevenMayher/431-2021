@@ -12,8 +12,8 @@ After Class | due at NOON on | Link to Minute Paper Form
 
 After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
 ----------: | ------: | :--------: | :----------:
-5 (2021-09-07) | 2021-09-08 | https://bit.ly/431-2021-minute-05 | https://bit.ly/431-2021-min5-feedback
 7 (2021-09-14) | 2021-09-15 | https://bit.ly/431-2021-minute-07 | https://bit.ly/431-2021-min7-feedback
+5 (2021-09-07) | 2021-09-08 | https://bit.ly/431-2021-minute-05 | https://bit.ly/431-2021-min5-feedback
 
 ## Upcoming Minute Papers
 
