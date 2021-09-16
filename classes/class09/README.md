@@ -8,10 +8,26 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Today's Slides
 
-- Dr. Love's slides will be available in [PDF format], as well as in [R Markdown].
+- Dr. Love's slides **will be available** in [PDF format], as well as in [R Markdown].
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
-## More to come.
+## Announcements
+
+1. An Answer Sketch and Grading Rubric for Lab 2 **will be posted** by class time.
+2. As announced via Piazza, some Sample Essays from [Lab 1](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) (questions 2, 3 and 4) that we liked are available to you on our Shared Google Drive in the **431 Lab 1 Essay Examples** document.
+
+----------
+
+## Upcoming Deliverables
+
+1. [Minute Paper after Class 09](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) is due tomorrow (Wednesday 2021-09-22) at noon. The link **will be available** by class time.
+2. [Lab 3](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) is due next Monday 2021-09-27 at 9 PM.
+3. **Project A proposal** As the [Calendar](https://thomaselove.github.io/431/calendar.html) indicates, the main deadline for the Project A Proposal is not until Monday 2021-10-11, but we strongly encourage submissions prior to noon on Friday 2021-10-01, via the appropriate Assignment on Canvas.
+    - Use the [Project A Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html) as a template for your work.
+    - Visit the [Class 08 README](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class08#project-a-getting-started) for some tips on [Getting Started with Project A](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class08#project-a-getting-started).
+    - The TAs and I will review all early proposals quickly (by 2021-10-06) and either accept them as is, or provide guidance as to what needs to be repaired by 2021-10-11 so as to receive full credit.
+4. **Quiz 1 sample questions** I [prepared a document](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/README.md#sample-quiz-five-old-quiz-questions) containing five old quiz questions, as well as an answer sketch for those five questions, and some information on results. 
+    - As the [Calendar](https://thomaselove.github.io/431/calendar.html) indicates, you'll receive Quiz 1 on 2021-10-01, and it is due at 9 PM on 2021-10-04.
 
 ## One Last Thing
 
