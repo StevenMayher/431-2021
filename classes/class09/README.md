@@ -22,7 +22,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
         - The "7 people" group (which actually had 6 people) went down to #21. The Dark Knight.
         - "The Outliers" had to go even further, down to #47. Home Alone.
         - But this paled in comparison to "Group 1" (with 6 people) that had to go all the way down to #105. Titanic.
-    - Now, what do you think is the percentage chance that all of the people in the room will have seen any particular one of these 115 films?
+    - Can we estimate the probability that **any** of [the 115 films](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/movies_list.md) will have been seen by everyone in the room?
 
 ----------
 
