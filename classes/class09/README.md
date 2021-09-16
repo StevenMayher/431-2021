@@ -15,6 +15,14 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. An Answer Sketch and Grading Rubric for Lab 2 **will be posted** by class time.
 2. As announced via Piazza, some Sample Essays from [Lab 1](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) (questions 2, 3 and 4) that we liked are available to you on our Shared Google Drive in the **431 Lab 1 Essay Examples** document.
+3. One of the things we did in the Movies breakout last time was ask you to poll your group, and see what film was the first one (alphabetically) that you'd all seen. 
+    - I wound up with reports from eleven groups, containing 2 to 6 students.
+        - Seven of those 11 groups wound up at film #4: Avatar.
+        - Another group (6 people: The Locker) had to move down to #5. Avengers: Endgame.
+        - The "7 people" group (which actually had 6 people) went down to #21. The Dark Knight.
+        - "The Outliers" had to go even further, down to #47. Home Alone.
+        - But this paled in comparison to "Group 1" (with 6 people) that had to go all the way down to #105. Titanic.
+    - Now, what do you think is the percentage chance that all of the people in the room will have seen any particular one of these 115 films?
 
 ----------
 
