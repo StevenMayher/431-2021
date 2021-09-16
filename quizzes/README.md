@@ -26,7 +26,7 @@ Additional information on Quizzes is provided in [this section of the Course Syl
 
 ## Getting Help during a Quiz
 
-All quizzes in 431 are open book, open notes. You are welcome to consult the materials provided on the course website and that we've been reading in the class, but you are not allowed to discuss the questions on this quiz with anyone other than Professor Love and the teaching assistants. You will be required to complete a short affirmation that you have obeyed these rules as part of submitting the Quiz.
+All quizzes in 431 are **open book, open notes**. You are welcome to consult the materials provided on the course website and that we've been reading in the class, but you are not allowed to discuss the questions on this quiz with anyone other than Professor Love and the teaching assistants. You will be required to complete a short affirmation that you have obeyed these rules as part of submitting the Quiz.
 
 If you need clarification on a Quiz question, you will have exactly two ways of getting help:
 
