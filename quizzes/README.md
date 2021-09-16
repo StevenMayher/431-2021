@@ -1,6 +1,6 @@
 # Quizzes
 
-Details on the Quizzes will appear at the links below. See the [Course Calendar](https://thomaselove.github.io/431/calendar.html) for all course deadlines.
+Details on the Quizzes will appear at the links below. See the [Course Calendar](https://thomaselove.github.io/431/calendar.html) for all course deadlines. All quizzes in 431 are **open book, open notes**, and please see below for additional details.
 
 Quiz | Instructions | Deadline
 :---: | :---: | :---:
@@ -11,7 +11,7 @@ Quiz 3 | to appear on 2021-11-19 | see [Course Calendar](https://thomaselove.git
 The "Instructions" for each Quiz will include:
 
 - links to relevant data sets
-- a PDF of the Quiz itself (which will also be posted to our shared google drive)
+- a PDF of the Quiz itself (which will also be posted to our shared google drive) containing 20-25 questions
 - a link to the Answer Sheet for the Quiz (which is a Google Form, like the ones we use for the Minute Papers)
 
 You must log into Google via CWRU to access the Answer Sheet and you must complete your submission of this Form no later than the posted deadline on the [Course Calendar](https://thomaselove.github.io/431/calendar.html). 
@@ -31,11 +31,11 @@ Dr. Love prepared a document containing five old quiz questions, as well as an a
 - Here is [the PDF document containing the old questions, answer sketch and results](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz_sample/five-old-quiz-questions.pdf).
 - Here is [the mitral.csv data set](https://raw.githubusercontent.com/THOMASELOVE/431-2021/main/quizzes/quiz_sample/data/mitral.csv) referred to in Questions 2-4. It's also available on [our 431-data site](https://github.com/THOMASELOVE/431-data).
 
-I built this document for the benefit of students worried about Quiz 1 who wanted to understand what it might look like. This is just a convenient sample of old questions, and is **not** meant to be completely representative of what I might ask you this year. We're not collecting responses on this set of questions, nor is it required that you even look at this document. If you have questions about this after reading the answer sketch at the end of the document, feel free to ask us.
+I built this document for the benefit of students worried about Quiz 1 who wanted to understand what it might look like. This is just a convenient sample of five old questions, and is **not** meant to be completely representative of what I might ask you this year. We're not collecting responses on this set of questions, nor is it required that you even look at this document. If you have questions about this after reading the answer sketch at the end of the document, feel free to ask us.
 
 ## Getting Help during a Quiz
 
-All quizzes in 431 are **open book, open notes**. You are welcome to consult the materials provided on the course website and that we've been reading in the class, but you are not allowed to discuss the questions on this quiz with anyone other than Professor Love and the teaching assistants. You will be required to complete a short affirmation that you have obeyed these rules as part of submitting the Quiz.
+Again, all quizzes in 431 are **open book, open notes**. You are welcome to consult the materials provided on the course website and that we've been reading in the class, but you are not allowed to discuss the questions on this quiz with anyone other than Professor Love and the teaching assistants. You will be required to complete a short affirmation that you have obeyed these rules as part of submitting the Quiz.
 
 If you need clarification on a Quiz question, you will have exactly two ways of getting help:
 
