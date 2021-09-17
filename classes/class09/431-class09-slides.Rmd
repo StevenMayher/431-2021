@@ -1,0 +1,671 @@
+---
+title: "431 Class 09"
+author: "thomaselove.github.io/431"
+date: "2021-09-21"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    fonttheme: "structurebold"
+    colortheme: "whale"
+    fig_height: 5.5
+    fig_caption: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 55)
+```
+
+## Today's R Packages
+
+```{r, message = FALSE}
+library(broom) # for tidying up output
+library(haven) # new today, importing files from SPSS
+library(janitor)
+library(knitr)
+library(magrittr)
+library(naniar)
+library(patchwork)
+library(readxl) 
+library(tidyverse)
+
+theme_set(theme_bw())
+```
+
+## Today's Data
+
+Today, we'll use an SPSS file (.sav) to import the `dm1000` data.
+
+```{r}
+dm1000 <- read_sav("data/dm_1000.sav") %>%
+  clean_names() %>%
+  mutate(across(where(is.character), as_factor)) %>%
+  mutate(across(where(is.labelled), as_factor)) %>%
+  mutate(subject = as.character(subject))
+```
+
+- Note the next-to-last line in the code above, which is used to turn "labelled" variables (from SPSS) into factors in R.
+- There are also functions called `read_sas()` and `read_xpt()` to read in SAS files, and `read_dta()` to read in Stata `.dta` files, available in the `haven` package.
+
+## The `dm1000` tibble
+
+```{r, echo = FALSE}
+dm1000
+```
+
+# Describing the association of `sbp` and `dbp`
+
+## Numerical Summaries of `sbp` and `dbp`
+
+```{r, message = FALSE}
+mosaic::favstats(~ sbp, data = dm1000)
+dm1000 %$% mosaic::favstats(~ dbp)
+```
+
+## Are the same people missing `sbp` and `dbp`?
+
+```{r}
+dm1000 %>% select(sbp, dbp) %>%
+  miss_case_summary()
+```
+
+## Distributions of `sbp` and `dbp`
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+p1 <- ggplot(dm1000, aes(x = sbp)) +
+  geom_histogram(fill = "slateblue", col = "white",
+                 bins = 20) + 
+  labs(title = "Systolic BP in `dm1000`",
+       x = "Systolic BP (mm Hg)")
+
+p2 <- ggplot(dm1000, aes(x = dbp)) +
+  geom_histogram(fill = "orange", col = "white",
+                 bins = 20) + 
+  labs(title = "Diastolic BP in `dm1000`",
+       x = "Diastolic BP (mm Hg)")
+
+p3 <- ggplot(dm1000, aes(x = "", y = sbp)) +
+  geom_boxplot(fill = "slateblue", outlier.size = 2,
+               outlier.color = "slateblue") +
+  coord_flip() + 
+  labs(y = "Systolic BP (`sbp`)")
+
+p4 <- ggplot(dm1000, aes(x = "", y = dbp)) +
+  geom_boxplot(fill = "orange", outlier.size = 2,
+               outlier.color = "orange") +
+  coord_flip() + 
+  labs(y = "Diastolic BP (`dbp`)")
+
+
+p1 + p2 + p3 + p4 + 
+  plot_layout(heights = c(3,1))
+```
+
+## Normal model for `sbp` and `dbp`?
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+p1 <- ggplot(dm1000, aes(sample = sbp)) +
+  geom_qq(col = "slateblue") + 
+  geom_qq_line(col = "magenta") + 
+  theme(aspect.ratio = 1) + 
+  labs(title = "Normal Q-Q: dm1000 sbp")
+
+p2 <- ggplot(dm1000, aes(sample = dbp)) +
+  geom_qq(col = "orange") + 
+  geom_qq_line(col = "black") + 
+  theme(aspect.ratio = 1) + 
+  labs(title = "Normal Q-Q: dm1000 dbp")
+
+p1 + p2
+```
+
+## How closely associated are `sbp` and `dbp`?
+
+```{r, fig.height = 4}
+ggplot(data = dm1000, aes(x = dbp, y = sbp)) +
+  geom_point()
+```
+
+## Improving the scatterplot (code)
+
+```{r, eval = FALSE}
+dm1000 %>% filter(complete.cases(sbp, dbp)) %>%
+ggplot(data = ., aes(x = dbp, y = sbp)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", col = "red",
+              formula = y ~ x, se = TRUE) +
+  theme(aspect.ratio = 1) +
+  labs(x = "Diastolic BP (mm Hg)",
+       y = "Systolic BP (mm Hg)",
+       title = "Strong Direct Association of `sbp` and dbp`",
+       subtitle = "dm1000 data (6 subjects had missing data)")
+```
+
+- What am I doing in these lines of code?
+
+## Higher DBP is associated with Higher SBP
+
+```{r, echo = FALSE}
+dm1000 %>% filter(complete.cases(sbp, dbp)) %>%
+ggplot(data = ., aes(x = dbp, y = sbp)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", col = "red",
+              formula = y ~ x, se = TRUE) +
+  theme(aspect.ratio = 1) +
+  labs(x = "Diastolic BP (mm Hg)",
+       y = "Systolic BP (mm Hg)",
+       title = "Strong Direct Association of `sbp` and dbp`",
+       subtitle = "dm1000 data (6 subjects had missing data)")
+```
+
+- One point for each of the 994 subjects with known SBP and DBP...
+
+## What are we looking for in this plot?
+
+```{r, echo = FALSE, fig.height = 3}
+dm1000 %>% filter(complete.cases(sbp, dbp)) %>%
+ggplot(data = ., aes(x = dbp, y = sbp)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", col = "red",
+              formula = y ~ x, se = TRUE) +
+  theme(aspect.ratio = 1)
+```
+
+Is the association...
+
+1. **Linear or Non-Linear?** (is there a curve here?)
+2. **Direction?** (as X increases, what happens to Y?)
+3. **Outliers?** (far away on X, or Y, or the combination?)
+4. **Strength?** (points closely clustered together around a line?)
+
+## What might we conclude here?
+
+```{r, echo = FALSE, fig.height = 4}
+dm1000 %>% filter(complete.cases(sbp, dbp)) %>%
+ggplot(data = ., aes(x = dbp, y = sbp)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", col = "red",
+              formula = y ~ x, se = TRUE) +
+  theme(aspect.ratio = 1)
+```
+
+1. **Linear?**: The points roughly follow the straight line's path. 
+  - Do you see any clear signs of a curve? 
+  - Would adding a loess smooth help us?
+
+## What might we conclude here?
+
+```{r, echo = FALSE, fig.height = 4}
+dm1000 %>% filter(complete.cases(sbp, dbp)) %>%
+ggplot(data = ., aes(x = dbp, y = sbp)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", col = "red",
+              formula = y ~ x, se = TRUE) +
+  geom_smooth(method = "loess", col = "blue",
+              formula = y ~ x, se = FALSE) +
+  theme(aspect.ratio = 1)
+```
+
+1. **Linear?** 
+  - The loess smooth (in blue) suggests a potential curve
+  - Is it overreacting to the highly leveraged point (`dbp` = 140)?
+
+## What might we conclude here?
+
+```{r, echo = FALSE, fig.height = 4}
+dm1000 %>% filter(complete.cases(sbp, dbp)) %>%
+ggplot(data = ., aes(x = dbp, y = sbp)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", col = "red",
+              formula = y ~ x, se = TRUE) +
+  theme(aspect.ratio = 1)
+````
+
+2. **Direction?** 
+  - As `dbp` increases, so does `sbp`, generally.
+  - Slope of the regression line is positive.
+
+## What might we conclude here?
+
+```{r, echo = FALSE, fig.height = 4}
+dm1000 %>% filter(complete.cases(sbp, dbp)) %>%
+ggplot(data = ., aes(x = dbp, y = sbp)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", col = "red",
+              formula = y ~ x, se = TRUE) +
+  theme(aspect.ratio = 1)
+```
+
+1. **Linear?**: No strong evidence of a meaningful curve.
+2. **Direction?**: As `dbp` increases, so does `sbp`, generally.
+3. **Outliers?**: A few (out of 1000) worth another look, probably.
+
+## What might we conclude here?
+
+```{r, echo = FALSE, fig.height = 4}
+dm1000 %>% filter(complete.cases(sbp, dbp)) %>%
+ggplot(data = ., aes(x = dbp, y = sbp)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", col = "red",
+              formula = y ~ x, se = TRUE) +
+  theme(aspect.ratio = 1)
+```
+
+4. **Strength?**: Does this association seem very strong?
+
+- `sbp` values associated with any particular `dbp` value range widely. 
+- If we know the `dbp`, that should help us make better predictions of `sbp`, but how much better than if we didn't know `dbp`?
+- What might the **correlation** of `sbp` and `dbp` might be?
+
+
+## Summarizing Strength with the Pearson Correlation
+
+The Pearson correlation (abbreviated *r*) ranges from -1 to +1.
+
+- The closer the absolute value of the correlation is to 1, the stronger a linear fit will be to the data, (in a limited sense).
+- A strong positive correlation (near +1) will indicate a strong model with a positive slope.
+- A strong negative correlation (near -1) will indicate a strong linear model with a negative slope.
+- A weak correlation (near 0) will indicate a poor fit for a linear model, although a non-linear model may still fit the data quite well.
+
+## Gaining Some Insight into Correlation
+
+```{r, echo = FALSE}
+set.seed(4312020)
+
+correxs <- tibble(x = seq(10.5,110, by = 0.5),
+                  y1 = -0.01*x + rpois(200, lambda = 14),
+                  y2 = 0.023*x + rpois(200, lambda = 16),
+                  y3 = -0.049*x + rpois(200, lambda = 20),
+                  y4 = 0.0504*x + rpois(200, lambda = 20),
+                  y5 = -0.085*x + rpois(200, lambda = 18),
+                  y6 = -0.095*x + rpois(200, lambda = 19),
+                  y7 = 0.15*x + rpois(200, lambda = 20),
+                  y8 = -0.185*x + rpois(200, lambda = 20),
+                  y0 = rpois(200, lambda = 16),
+                  y9 = 0.315*x + rpois(200, lambda = 19),
+                  y10 = -0.435*x + rpois(200, lambda = 16),
+                  y11 = 1.01*x + rpois(200, lambda = 17))
+```
+
+```{r, echo = FALSE, eval = FALSE}
+correxs %$% cor(x, y0)
+correxs %$% cor(x, y1)
+correxs %$% cor(x, y2)
+correxs %$% cor(x, y3)
+correxs %$% cor(x, y4)
+correxs %$% cor(x, y5)
+correxs %$% cor(x, y6)
+correxs %$% cor(x, y7)
+correxs %$% cor(x, y8)
+correxs %$% cor(x, y9)
+correxs %$% cor(x, y10)
+correxs %$% cor(x, y11)
+
+```
+
+```{r, echo = FALSE, eval = FALSE}
+correxs %$% cor(x, y0)^2
+correxs %$% cor(x, y1)^2
+correxs %$% cor(x, y2)^2
+correxs %$% cor(x, y3)^2
+correxs %$% cor(x, y4)^2
+correxs %$% cor(x, y5)^2
+correxs %$% cor(x, y6)^2
+correxs %$% cor(x, y7)^2
+correxs %$% cor(x, y8)^2
+correxs %$% cor(x, y9)^2
+correxs %$% cor(x, y10)^2
+correxs %$% cor(x, y11)^2
+
+```
+
+```{r, echo = FALSE}
+p0 <- ggplot(correxs, aes(x = x, y = y0)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = -0.004", y = "", x = "")
+
+p1 <- ggplot(correxs, aes(x = x, y = y1)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = -0.101", y = "", x = "")
+
+p2 <- ggplot(correxs, aes(x = x, y = y2)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = +0.199", y = "", x = "")
+
+p3 <- ggplot(correxs, aes(x = x, y = y3)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = -0.301", y = "", x = "")
+
+p4 <- ggplot(correxs, aes(x = x, y = y4)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = +0.400", y = "", x = "")
+
+p5 <- ggplot(correxs, aes(x = x, y = y5)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = -0.498", y = "", x = "")
+
+p6 <- ggplot(correxs, aes(x = x, y = y6)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = -0.601", y = "", x = "")
+
+p7 <- ggplot(correxs, aes(x = x, y = y7)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = +0.700", y = "", x = "")
+
+p8 <- ggplot(correxs, aes(x = x, y = y8)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = -0.801", y = "", x = "")
+
+p9 <- ggplot(correxs, aes(x = x, y = y9)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = +0.900", y = "", x = "")
+
+p10 <- ggplot(correxs, aes(x = x, y = y10)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = -0.951", y = "", x = "")
+
+p11 <- ggplot(correxs, aes(x = x, y = y11)) + 
+  geom_point(col = "blue", pch = 1) + 
+  geom_smooth(method = "lm", col = "red", formula = "y ~ x", se = FALSE) + 
+  theme(aspect.ratio = 1) +
+  labs(title = "r = 0.990", y = "", x = "")
+
+```
+
+```{r, echo = FALSE}
+(p0 + p1 + p2) / (p3 + p4 + p5)
+```
+
+## Some Stronger Correlations
+
+```{r, echo = FALSE}
+(p6 + p7 + p8) / (p9 + p10 + p11)
+```
+
+## (Pearson) Correlation Coefficients for `sbp` and `dbp`
+
+```{r}
+dm1000 %$% cor(sbp, dbp)
+```
+
+```{r}
+dm1000 %>% 
+  filter(complete.cases(sbp, dbp)) %$% 
+  cor(sbp, dbp)
+```
+
+```{r}
+dm1000 %$% cor(sbp, dbp, use = "complete.obs")
+```
+
+- What does this correlation imply about a linear fit to the data?
+
+## What line is being fit in our model `m1`?
+
+Least Squares Regression Line (a linear model) to predict `sbp` using `dbp`
+
+```{r}
+m1 <- lm(sbp ~ dbp, data = dm1000)
+m1
+```
+
+Model m1 is **sbp = 84.11 + 0.65 dbp**. 
+
+## What does the slope mean?
+
+![](images/dragons_continuous.png)
+
+## Linear Model `m1`: sbp = 84.11 + 0.65 dbp
+
+```{r, echo = FALSE, fig.height = 3}
+dm1000 %>% filter(complete.cases(sbp, dbp)) %>%
+ggplot(data = ., aes(x = dbp, y = sbp)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", col = "red",
+              formula = y ~ x, se = TRUE) +
+  theme(aspect.ratio = 1)
+```
+
+84.11 is the intercept = predicted value of `sbp` when `dbp` = 0.
+
+0.65 is the slope = predicted change in `sbp` per 1 unit change in `dbp`
+
+- What does the model predict for `sbp` for a subject with `dbp` = 100?
+- What if the subject had `dbp` = 99? 101? 110?
+
+## Linear Model `m1`: sbp = 84.11 + 0.65 dbp
+
+```{r, echo = FALSE, fig.height = 3}
+dm1000 %>% filter(complete.cases(sbp, dbp)) %>%
+ggplot(data = ., aes(x = dbp, y = sbp)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", col = "red",
+              formula = y ~ x, se = TRUE) +
+  theme(aspect.ratio = 1)
+```
+
+84.11 is the intercept = predicted value of `sbp` when `dbp` = 0.
+
+0.65 is the slope = predicted change in `sbp` per 1 unit change in `dbp`
+
+- What are the units here?
+- What does the fact that this estimated slope is positive mean?
+- What would the line look like if the slope was negative? 
+- What would the line look like if the slope was zero?
+
+## Confidence Intervals for Regression Coefficients
+
+We'll use the `tidy()` function from the `broom` package.
+
+```{r}
+tidy(m1, conf.int = TRUE, conf.level = 0.90) %>%
+  select(term, estimate, std.error, conf.low, conf.high) %>%
+  kable(digits = 4)
+```
+
+- How might we interpret the confidence interval for the slope of `dbp`?
+  - Remember that the slope is the change in `sbp` per 1 unit change in `dbp` according to our model `m1`.
+- How might we interpret the intercept term in model `m1`?
+
+## Obtaining $R^2$ and some Regression Fit Summaries
+
+We'll use the `glance()` function, also from the `broom` package.
+
+```{r}
+glance(m1) %>%
+  select(nobs, r.squared, adj.r.squared, AIC, BIC) %>%
+  kable(digits = c(0, 4, 4, 1, 1))
+```
+
+- `nobs` = # of observations actually used to fit the model
+- $R^2$ = "r-squared" is the square of the Pearson correlation $r$.
+  - Recall we had $r$ = `r dm1000 %$% cor(sbp, dbp, use = "complete.obs") %>% round_half_up(., 4)` for the association of `sbp` and `dbp`.
+  - Squaring $r$, we get `r glance(m1) %>% select(r.squared) %>% round_half_up(., 4)`.
+- $R^2$ can be interpreted as the percentage of variation in `sbp` that `m1` accounts for with `dbp`
+
+## Interpreting $R^2$ and other Regression Summaries
+
+```{r}
+glance(m1) %>%
+  select(nobs, r.squared, adj.r.squared, AIC, BIC) %>%
+  kable(digits = c(0, 4, 4, 1, 1))
+```
+
+- $R^2$ is also the proportionate reduction in error (as measured by sum of squared errors) in our predictions made using `m1` as compared to an "intercept only" regression model where we simply predict the mean of `sbp` for any subject, regardless of their `dbp`.
+- Adjusted $R^2$, AIC and BIC will become relevant as we compare multiple models for the same outcome.
+
+## `sbp-dbp` association in insurance subgroups?
+
+- Different linear model for `sbp` using `dbp` in each `insurance` category.
+
+```{r, fig.height = 5, echo = FALSE}
+dm1000 %>% filter(complete.cases(sbp, dbp, insurance)) %>%
+  ggplot(data = ., aes(x = dbp, y = sbp, col = insurance)) +
+  geom_point() + 
+  geom_smooth(method = "lm", col = "black",
+              formula = y ~ x, se = FALSE) +
+  guides(col = "none") +
+  facet_wrap(~ insurance, nrow = 1)
+```
+
+## Code for previous slide
+
+```{r, eval = FALSE}
+dm1000 %>% filter(complete.cases(sbp, dbp, insurance)) %>%
+  ggplot(data = ., aes(x = dbp, y = sbp, col = insurance)) +
+  geom_point() + 
+  geom_smooth(method = "lm", col = "black",
+              formula = y ~ x, se = FALSE) +
+  guides(col = "none") +
+  facet_wrap(~ insurance, nrow = 1)
+```
+
+## Does `sbp-dbp` correlation vary by insurance?
+
+```{r}
+dm1000 %>%
+  filter(complete.cases(insurance, sbp, dbp)) %>%
+  group_by(insurance) %>%
+  summarize(n = n(), pearson_r = cor(sbp, dbp), r.squared = pearson_r^2) %>%
+  kable(digits = 3)
+```
+
+- How might we fit a linear model within each `insurance` type?
+- Which of those models would have the largest $R^2$?
+
+## Model for subjects with Medicare insurance?
+
+```{r}
+m2_medicare <- dm1000 %>%
+  filter(insurance == "Medicare") %>%
+  filter(complete.cases(sbp, dbp)) %$%
+  lm(sbp ~ dbp)
+
+tidy(m2_medicare, conf.int = TRUE, conf.level = 0.90) %>%
+  select(term, estimate, conf.low, conf.high) %>% 
+  kable(digits = 3)
+```
+
+## Glancing at the Medicare-Only Model
+
+```{r}
+glance(m2_medicare) %>%
+  select(r.squared, nobs)
+```
+
+## Model including both `dbp` and `insurance`?
+
+```{r}
+m3 <- 
+  dm1000 %>% 
+  filter(complete.cases(sbp, dbp, insurance)) %$%
+  lm(sbp ~ dbp * insurance)
+
+glance(m3) %>% select(nobs, r.squared, adj.r.squared) %>%
+  kable(digits = c(0, 3, 3))
+```
+
+## Coefficients of Model `m3`
+
+```{r}
+tidy(m3) %>% select(term, estimate, std.error) %>% 
+  kable(digits = 3)
+```
+
+- What does this model imply for Medicare subjects?
+
+## Understanding the `m3` model
+
+Model `m3` predicts `sbp` using
+
+```
+            64.948          + 0.884 `dbp` 
+          + 31.641 Medicare - 0.389 `dbp` * Medicare
+          + 15.337 Commer.  - 0.188 `dbp` * Commer.
+          + 22.247 Medicaid - 0.267 `dbp` * Medicaid
+```
+
+1. What is the resulting equation for a Medicare subject?
+
+
+## Understanding the `m3` model
+
+Model `m3` predicts `sbp` using
+
+```
+            64.948          + 0.884 `dbp` 
+          + 31.641 Medicare - 0.389 `dbp` * Medicare
+          + 15.337 Commer.  - 0.188 `dbp` * Commer.
+          + 22.247 Medicaid - 0.267 `dbp` * Medicaid
+```
+
+What is the resulting equation for a Medicare subject?
+
+```
+sbp = (64.948 + 31.641) + (0.884 - 0.389) * dbp
+          sbp = 96.589 + 0.495 dbp
+```
+
+- This matches the result we obtained running the `sbp` on `dbp` regression for the Medicare subjects alone in model `m2_medicare`.
+
+## Understanding the `m3` model
+
+Again, model `m3` predicts `sbp` using
+
+```
+            64.948          + 0.884 `dbp` 
+          + 31.641 Medicare - 0.389 `dbp` * Medicare
+          + 15.337 Commer.  - 0.188 `dbp` * Commer.
+          + 22.247 Medicaid - 0.267 `dbp` * Medicaid
+```
+
+Insurance | Predicted `sbp`
+--------: | :--------------------------------:
+Medicare | 96.589 + 0.495 `dbp`
+Commercial | (64.948 + 15.337) + (0.884 - 0.188) `dbp`
+Commercial | or, 80.285 + 0.696 `dbp`
+Medicaid | 87.195 + 0.617 `dbp`
+Uninsured | 64.948 + 0.884 `dbp`
+
+## Which model shows better fit to the data?
+
+```{r}
+g1 <- glance(m1) %>% 
+  mutate(m_name = "m1 (dbp only)")
+g3 <- glance(m3) %>% 
+  mutate(m_name = "m3 (dbp * insurance)")
+
+bind_rows(g1, g3) %>%
+  select(m_name, nobs, r.squared, adj.r.squared, AIC, BIC) %>%
+  kable(digits = c(0, 0, 3, 3, 0, 0))
+```
+
+- Model `m3` has better $R^2$, and adjusted $R^2$; better AIC, but worse BIC.
+- IGNORING: regression assumptions, and predictions in new data...
+
+## Coming Up
+
+- More with your favorite movies
+- Associations between categorical variables
