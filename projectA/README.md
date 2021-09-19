@@ -1,6 +1,6 @@
 # Project A
 
-The main website with information on Project A will be found at **URL TO COME**.
+The main website with information on Project A will be found at https://thomaselove.github.io/431-2021-projectA/.
 
 ## Project A Proposal Example 
 
