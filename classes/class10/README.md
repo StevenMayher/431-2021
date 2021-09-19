@@ -12,3 +12,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## More to come.
+
+## One Last Thing
+
+[12 Resolutions for Grad Students](https://matt.might.net/articles/grad-student-resolutions/) from Matt Might at the University of Alabama at Birmingham.
