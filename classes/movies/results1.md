@@ -8,7 +8,7 @@ We asked each group to identify two exploratory questions about films in this sa
 - S = imdb_stars = Weighted Average Rating (IMDB) as of 2021-09-10 (measures how highly film was rated)
 - Y = year = year film was released
 
-Here are the results, as submitted via Google Form:
+Here are the unedited results, as submitted via Google Form, arranged by the variables selected:
 
 Group | Q# | Question | Vars.
 :----: | :---: | :----------------- | ----
