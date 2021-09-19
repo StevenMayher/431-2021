@@ -30,8 +30,10 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Improving Your Visualizations
 
 There's some great advice and a lot of examples of nice R code in Cedric Scherer's [A ggplot2 tutorial for beautiful plotting in R](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/). 
-    - This is an excellent companion to the [R Graphics Cookbook](https://r-graphics.org/) if you're looking for ways to improve the appearance of your visualizations.
-    - In addition, Cedric just gave (2021-09-16) a talk entitled [Beyond Bar and Box Plots](https://github.com/z3tt/beyond-bar-and-box-plots/blob/main/README.md) which presents some very effective alternatives and explains how to design them with `ggplot2`. This might be of particular interest to those of you thinking about building useful visualizations in Project A to compare a quantitative variable within subgroups identified by a categorical variable. [Here's a Twitter thread](https://twitter.com/CedScherer/status/1438836874630545412) where Cedric shares the [slides](https://t.co/BKd0AqwEUK?amp=1), the [notebook and source code](https://t.co/bGm37wp5Hl?amp=1) for all of the charts, and even a [recording of the presentation on YouTube](https://youtu.be/WBA04fjTVU0).
+
+- This is an excellent companion to the [R Graphics Cookbook](https://r-graphics.org/) if you're looking for ways to improve the appearance of your visualizations.
+- In addition, Cedric just gave (2021-09-16) a talk entitled [Beyond Bar and Box Plots](https://github.com/z3tt/beyond-bar-and-box-plots/blob/main/README.md) which presents some very effective alternatives and explains how to design them with `ggplot2`. This might be of particular interest to those of you thinking about building useful visualizations in Project A to compare a quantitative variable within subgroups identified by a categorical variable. 
+    - [Here's a Twitter thread](https://twitter.com/CedScherer/status/1438836874630545412) where Cedric shares the [slides](https://t.co/BKd0AqwEUK?amp=1), the [notebook and source code](https://t.co/bGm37wp5Hl?amp=1) for all of the charts, and even a [recording of the presentation on YouTube](https://youtu.be/WBA04fjTVU0).
 
 ----------
 
