@@ -4,11 +4,11 @@
 
 We asked each group to identify two exploratory questions about films in this sample that could be addressed using the five key variables we identified for you.
 
-- C = imdb_categories = Film Categories specified by IMDB (up to 3)
-- L = length = length of film (in minutes)
-- R = imdb_ratings = Number of Star Ratings (IMDB) as of 2021-09-10 (measures how often film was rated)
-- S = imdb_stars = Weighted Average Rating (IMDB) as of 2021-09-10 (measures how highly film was rated)
-- Y = year = year film was released
+- C = `imdb_categories` = Film Categories specified by IMDB (up to 3)
+- L = `length` = length of film (in minutes)
+- R = `imdb_ratings` = Number of Star Ratings (IMDB) as of 2021-09-10 (measures how often film was rated)
+- S = `imdb_stars` = Weighted Average Rating (IMDB) as of 2021-09-10 (measures how highly film was rated)
+- Y = `year` = year film was released
 
 Here are the unedited results, as submitted via Google Form, arranged by the variables selected:
 
