@@ -26,6 +26,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
         - "The Outliers" had to go even further, down to **#47. Home Alone**.
         - But this paled in comparison to "Group 1" (with 6 people) that had to go all the way down to **#105. Titanic**.
     - Can we estimate the probability that **any** of [the 115 films](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/movies_list.md) will have been seen by everyone in the room?
+5. There's some great advice and a lot of examples of nice R code in Cedric Scherer's [A ggplot2 tutorial for beautiful plotting in R](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/). This is an excellent companion to the [R Graphics Cookbook](https://r-graphics.org/) if you're looking for ways to improve the appearance of your visualizations.
+
 
 ----------
 
