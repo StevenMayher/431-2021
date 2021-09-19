@@ -13,12 +13,13 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. An Answer Sketch and Grading Rubric for Lab 2 **will be posted** by class time.
-2. Until Sunday morning 2021-09-19, on [the Data page in the Project A instructions](https://thomaselove.github.io/431-2021-projectA/data.html), we had an image that described the number of counties (with county_ranked values of 1) in each "state" which was based on 2020 data from County Health Rankings. There are several changes in county counts in the 2021 data, and the revised image now captures those changes.
+1. There is a [Minute Paper after Class 09](https://bit.ly/431-2021-minute-09), due tomorrow (Wednesday 2021-09-22) at noon.
+2. An Answer Sketch and Grading Rubric for Lab 2 **will be posted** by class time.
+3. Until Sunday morning 2021-09-19, on [the Data page in the Project A instructions](https://thomaselove.github.io/431-2021-projectA/data.html), we had an image that described the number of counties (with county_ranked values of 1) in each "state" which was based on 2020 data from County Health Rankings. There are several changes in county counts in the 2021 data, and the revised image now captures those changes.
     - As mentioned on Piazza, there were changes to the counts for Idaho, North Dakota, Nebraska, Nevada, Oregon and Texas.
     - The image and instructions on [the Project A Data page](https://thomaselove.github.io/431-2021-projectA/data.html) were revised Sunday morning and should now match what you get using 2021 CHR data.
-3. As announced via Piazza, some Sample Essays from [Lab 1](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) (questions 2, 3 and 4) that we liked are available to you on our Shared Google Drive in the **431 Lab 1 Essay Examples** document.
-4. One of the things we did in the [Movies breakout for Class 8](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout1.md) was ask you to poll your group, and see what film was the first one (alphabetically) that you'd all seen. 
+4. As announced via Piazza, some Sample Essays from [Lab 1](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) (questions 2, 3 and 4) that we liked are available to you on our Shared Google Drive in the **431 Lab 1 Essay Examples** document.
+5. One of the things we did in the [Movies breakout for Class 8](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout1.md) was ask you to poll your group, and see what film was the first one (alphabetically) that you'd all seen. 
     - I wound up with reports from eleven groups, containing 2 to 6 students.
         - Seven of those 11 groups wound up at film **#4: Avatar**.
         - Another group (6 people: The Locker) had to move down to **#5. Avengers: Endgame**.
@@ -39,7 +40,7 @@ There's some great advice and a lot of examples of nice R code in Cedric Scherer
 
 ## Upcoming Deliverables
 
-1. [Minute Paper after Class 09](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) is due tomorrow (Wednesday 2021-09-22) at noon. The link **will be available** by class time.
+1. [Minute Paper after Class 09](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) is due tomorrow (Wednesday 2021-09-22) at noon. The link is available now.
 2. [Lab 3](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) is due next Monday 2021-09-27 at 9 PM.
 3. **Project A proposal** As the [Calendar](https://thomaselove.github.io/431/calendar.html) indicates, the main deadline for the Project A Proposal is not until Monday 2021-10-11, but we strongly encourage submissions prior to noon on Friday 2021-10-01, via the appropriate Assignment on Canvas.
     - Use the [Project A Proposal Example](https://thomaselove.github.io/431-2021-projectA/exampleA.html) as a template for your work.
