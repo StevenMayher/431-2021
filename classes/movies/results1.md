@@ -1,5 +1,19 @@
 # Results from Breakout Activity 1
 
+## Which film is the first (alphabetically) that you've all seen?
+
+Here's [the list of 115 films](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/movies_list.md) again. 
+
+I wound up with reports from eleven groups, containing 2 to 6 students.
+
+- Seven of those 11 groups wound up at film **#4: Avatar**.
+- Another group (6 people: The Locker) had to move down to **#5. Avengers: Endgame**.
+- The "7 people" group (which actually had 6 people) went down to **#21. The Dark Knight**.
+- "The Outliers" had to go even further, down to **#47. Home Alone**.
+- But this paled in comparison to "Group 1" (with 6 people) that had to go all the way down to **#105. Titanic**.
+
+Can we estimate the probability that **any** of [the 115 films](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/movies_list.md) will have been seen by everyone associated with 431 this term?
+
 ## Exploratory Questions
 
 We asked each group to identify two exploratory questions about films in this sample that could be addressed using the five key variables we identified for you.
@@ -37,14 +51,3 @@ The Locker | 2 | How does the age of the movie impact the number of start rating
 Unobtainium_005 | 2 | Between 1942 to 2021 did movie ratings increase over time? Does this apply to the action genre as well? | CSY
 The 1850s | 2 | Do people rate older movies higher than newer movies? | RSY
 
-## Which film is the first (alphabetically) that you've all seen?
-
-I wound up with reports from eleven groups, containing 2 to 6 students.
-
-- Seven of those 11 groups wound up at film **#4: Avatar**.
-- Another group (6 people: The Locker) had to move down to **#5. Avengers: Endgame**.
-- The "7 people" group (which actually had 6 people) went down to **#21. The Dark Knight**.
-- "The Outliers" had to go even further, down to **#47. Home Alone**.
-- But this paled in comparison to "Group 1" (with 6 people) that had to go all the way down to **#105. Titanic**.
-
-Can we estimate the probability that **any** of [the 115 films](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/movies_list.md) will have been seen by everyone associated with 431 this term?
