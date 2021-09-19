@@ -19,14 +19,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - As mentioned on Piazza, there were changes to the counts for Idaho, North Dakota, Nebraska, Nevada, Oregon and Texas.
     - The image and instructions on [the Project A Data page](https://thomaselove.github.io/431-2021-projectA/data.html) were revised Sunday morning and should now match what you get using 2021 CHR data.
 4. As announced via Piazza, some Sample Essays from [Lab 1](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) (questions 2, 3 and 4) that we liked are available to you on our Shared Google Drive in the **431 Lab 1 Essay Examples** document.
-5. One of the things we did in the [Movies breakout for Class 8](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout1.md) was ask you to poll your group, and see what film was the first one (alphabetically) that you'd all seen. 
-    - I wound up with reports from eleven groups, containing 2 to 6 students.
-        - Seven of those 11 groups wound up at film **#4: Avatar**.
-        - Another group (6 people: The Locker) had to move down to **#5. Avengers: Endgame**.
-        - The "7 people" group (which actually had 6 people) went down to **#21. The Dark Knight**.
-        - "The Outliers" had to go even further, down to **#47. Home Alone**.
-        - But this paled in comparison to "Group 1" (with 6 people) that had to go all the way down to **#105. Titanic**.
-    - Can we estimate the probability that **any** of [the 115 films](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/movies_list.md) will have been seen by everyone in the room?
+5. [Results](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/results1.md) from the [Movies breakout for Class 8](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout1.md) and we'll spend some time on [those results](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/results1.md).
 
 ## Improving Your Visualizations
 
