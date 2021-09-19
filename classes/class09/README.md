@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-> Starter to come.
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class09/images/data_fact_2021-09-06.PNG)
 
 ## Today's Slides
 
