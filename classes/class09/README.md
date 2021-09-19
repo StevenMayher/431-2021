@@ -15,7 +15,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. An Answer Sketch and Grading Rubric for Lab 2 **will be posted** by class time.
 2. Until Sunday morning 2021-09-19, on [the Data page in the Project A instructions](https://thomaselove.github.io/431-2021-projectA/data.html), we had an image that described the number of counties (with county_ranked values of 1) in each "state" which was based on 2020 data from County Health Rankings. There are several changes in county counts in the 2021 data, and the revised image now captures those changes.
-    - In particular, as mentioned on Piazza, there were changes to the counts for Idaho, North Dakota, Nebraska, Nevada, Oregon and Texas.
+    - As mentioned on Piazza, there were changes to the counts for Idaho, North Dakota, Nebraska, Nevada, Oregon and Texas.
     - The image and instructions on [the Project A Data page](https://thomaselove.github.io/431-2021-projectA/data.html) were revised Sunday morning and should now match what you get using 2021 CHR data.
 3. As announced via Piazza, some Sample Essays from [Lab 1](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) (questions 2, 3 and 4) that we liked are available to you on our Shared Google Drive in the **431 Lab 1 Essay Examples** document.
 4. One of the things we did in the [Movies breakout for Class 8](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout1.md) was ask you to poll your group, and see what film was the first one (alphabetically) that you'd all seen. 
