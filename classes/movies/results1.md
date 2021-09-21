@@ -26,6 +26,8 @@ We asked each group to identify two exploratory questions about films in this sa
 
 Here are the unedited results, as submitted via Google Form, arranged by the variables selected:
 
+#### Questions involving `imdb_stars` and `year`
+
 Group | Q# | Question | Vars.
 :----: | :---: | :----------------- | ----
 "7 People" | 1 | Are newer movies more highly rated? | SY
@@ -37,12 +39,16 @@ The Outliers | 1 | Is there a statistical correlation between year of release an
 The 1850s | 2 | Do people rate older movies higher than newer movies? | RSY (SY)
 Unobtainium_005 | 2 | Between 1942 to 2021 did movie ratings increase over time? Does this apply to the action genre as well? | CSY
 
+#### Questions involving `length` and `year`
+
 Group | Q# | Question | Vars.
 :----: | :---: | :----------------- | ----
 Group 1 | 1 | Are films which were released within the last 10 years longer than films what were released prior to this time? | LY
 LRI Statisticians | 2 | Are older films longer than more recent films? (Is there a correlation between year of release and film length?) | LY
 "7 People" | 2 | Are newer movies longer? | LY
 Fantastic Six | 1 | Has the length of movies decreased over time over the year? | LY
+
+#### Questions involving other combinations of variables
 
 Group | Q# | Question | Vars.
 :----: | :---: | :----------------- | ----
