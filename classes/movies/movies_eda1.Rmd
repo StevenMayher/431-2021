@@ -1,0 +1,262 @@
+---
+title: "Exploring your favorite movies"
+author: "Thomas E. Love"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::html_clean:
+    self_contained: true
+    df_print: paged
+---
+
+# Setup
+
+```{r setup}
+## Normally, I would not include this chunk of code
+## in a final report
+
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(comment=NA)
+opts_knit$set(width=75)
+```
+
+```{r, message = FALSE}
+library(googlesheets4) # loading in data from Google Sheet
+library(glue)  # combining text and R results
+library(ggrepel) # for geom_text_repel and geom_label_repel
+library(janitor)
+library(knitr)
+library(magrittr)
+library(naniar)
+library(tidyverse)
+
+theme_set(theme_bw())
+```
+
+```{r, message = FALSE}
+mov21 <- read_sheet("https://docs.google.com/spreadsheets/d/1GHdGOZ7k20S--v6xewnyLx5vNJLDTtsok-R4AU1hvYY/edit#gid=1563354494")
+```
+
+
+```{r}
+mov21 <- mov21 %>% 
+    select(film_id, film, year, length, imdb_categories, 
+           imdb_ratings, imdb_stars)
+
+mov21
+```
+
+```{r}
+miss_var_summary(mov21)
+```
+
+# Are more recent movies more highly rated?
+
+```{r}
+temp_cor <- mov21 %$% 
+  cor(year, imdb_stars) %>% 
+  round_half_up(., digits = 3)
+
+ggplot(mov21, aes(x = year, y = imdb_stars, label = film)) +
+    geom_point() + 
+    geom_smooth(method = "loess", col = "blue",
+                formula = y ~ x, se = FALSE) +
+    geom_smooth(method = "lm", col = "red",
+                formula = y ~ x, se = FALSE) +
+    geom_text_repel(data = mov21 %>% slice_max(imdb_stars, n = 2)) +
+    geom_text_repel(data = mov21 %>% slice_min(imdb_stars, n = 2)) +
+    labs(x = "Year of Release",
+         y = "Weighted Average IMDB Star Rating",
+         title = "Are newer films more highly rated?",
+         subtitle = glue("Pearson correlation of `imdb_stars` and `year` is {temp_cor}."),
+         caption = "115 films mentioned as favorites by 431 students in 2020 and in 2021")
+```
+
+## What if we restrict to films since 1980?
+
+```{r}
+mov21_recent <- mov21 %>%
+  filter(year > 1979)
+
+temp_cor2 <- mov21_recent %$% 
+  cor(year, imdb_stars) %>% 
+  round_half_up(., digits = 3)
+
+ggplot(mov21_recent, 
+       aes(x = year, y = imdb_stars, label = film)) +
+    geom_point() + 
+    geom_smooth(method = "loess", col = "blue",
+                formula = y ~ x, se = FALSE) +
+    geom_smooth(method = "lm", col = "red",
+                formula = y ~ x, se = FALSE) +
+    geom_label_repel(data = mov21_recent %>% 
+                       slice_max(imdb_stars)) +
+    geom_label_repel(data = mov21_recent %>% 
+                       slice_min(imdb_stars)) +
+    labs(x = "Year of Release",
+         y = "Weighted Average IMDB Star Rating",
+         title = "Among films since 1980, are newer films more highly rated?",
+         subtitle = glue('Correlation is {temp_cor2} in films since 1980.'),
+         caption = glue("{nrow(mov21_recent)} favorite films released since 1980"))
+```
+
+
+# Are more recent movies longer?
+
+```{r}
+temp_cor3 <- mov21 %$% 
+  cor(year, length) %>% 
+  round_half_up(., digits = 3)
+
+ggplot(mov21, aes(x = year, y = length, label = film)) +
+    geom_point() + 
+    geom_smooth(method = "loess", col = "blue",
+                formula = y ~ x, se = FALSE) +
+    geom_smooth(method = "lm", col = "red",
+                formula = y ~ x, se = FALSE) +
+    geom_label_repel(data = mov21 %>% slice_min(year)) +
+    labs(x = "Year of Release",
+         y = "Length of Movie (in minutes)",
+         title = "Are more recent movies longer?",
+         subtitle = glue("Pearson correlation of `year` and `length` is {temp_cor3}."),
+         caption = "115 films mentioned as favorites by 431 students in 2020 and in 2021")
+```
+
+# Do longer films have higher ratings?
+
+```{r}
+temp_cor4 <- mov21 %$% 
+  cor(length, imdb_stars) %>% 
+  round_half_up(., digits = 3)
+
+ggplot(mov21, 
+       aes(x = length, y = imdb_stars, label = film)) +
+    geom_point() + 
+    geom_smooth(method = "loess", col = "blue",
+                formula = y ~ x, se = FALSE) +
+    geom_smooth(method = "lm", col = "red",
+                formula = y ~ x, se = FALSE) +
+    geom_label_repel(
+      data = mov21 %>% slice_max(length, n = 2)) +
+    labs(x = "Length of Movie (in minutes)",
+         y = "Weighted Average IMDB Star Rating",
+         title = "Do longer films have higher ratings?",
+         subtitle = glue("Pearson correlation of `imdb_stars` and `length` is {temp_cor4}."),
+         caption = "115 films mentioned as favorites by 431 students in 2020 and in 2021")
+```
+
+```{r}
+temp_cor4 <- mov21 %$% 
+  cor(length, imdb_stars) %>% 
+  round_half_up(., digits = 3)
+
+ggplot(mov21, aes(x = length, y = imdb_stars, label = film)) +
+    geom_point() + 
+    geom_smooth(method = "loess", col = "blue",
+                formula = y ~ x, se = FALSE) +
+    geom_smooth(method = "lm", col = "red",
+                formula = y ~ x, se = FALSE) +
+    geom_text_repel(data = subset(mov21, imdb_stars < 6)) +
+    labs(x = "Length of Movie (in minutes)",
+         y = "Weighted Average IMDB Star Rating",
+         title = "Do longer films have higher ratings?",
+         subtitle = glue("Pearson correlation of `imdb_stars` and `length` is {temp_cor4}."),
+         caption = "115 films mentioned as favorites by 431 students in 2020 and in 2021")
+```
+
+# Which combinations of categories were most common?
+
+```{r, fig.height = 10}
+ggplot(mov21, aes(x = factor(imdb_categories))) +
+  geom_bar() +
+  coord_flip()
+```
+
+```{r}
+mov21 %>% count(imdb_categories) %>% arrange(desc(n))
+```
+
+```{r}
+temp <- str_split_fixed(mov21$imdb_categories, ", ", 3)
+colnames(temp) <- c("cat1", "cat2", "cat3")
+
+temp_dat <- as_tibble(temp) 
+
+temp_dat
+```
+
+```{r}
+temp_dat %>% tabyl(cat1)
+```
+
+```{r}
+temp_dat %>% tabyl(cat2)
+```
+
+```{r}
+temp_dat %>% tabyl(cat3)
+```
+
+
+```{r}
+mov21 <- mov21 %>%
+  mutate(
+    cat_Action = str_count(imdb_categories, "Action"),
+    cat_Adventure = str_count(imdb_categories, "Adventure"),
+    cat_Animation = str_count(imdb_categories, "Animation"),
+    cat_Biography = str_count(imdb_categories, "Biography"),
+    cat_Comedy = str_count(imdb_categories, "Comedy"),
+    cat_Crime = str_count(imdb_categories, "Crime"),
+    cat_Drama = str_count(imdb_categories, "Drama"),
+    cat_Family = str_count(imdb_categories, "Family"),
+    cat_Fantasy = str_count(imdb_categories, "Fantasy"),
+    cat_History = str_count(imdb_categories, "History"),
+    cat_Horror = str_count(imdb_categories, "Horror"),
+    cat_Music = str_count(imdb_categories, "Music"),
+    cat_Musical = str_count(imdb_categories, "Musical"),
+    cat_Mystery = str_count(imdb_categories, "Mystery"),
+    cat_Romance = str_count(imdb_categories, "Romance"),
+    cat_Sci_Fi = str_count(imdb_categories, "Sci-Fi"),
+    cat_Sport = str_count(imdb_categories, "Sport"),
+    cat_Thriller = str_count(imdb_categories, "Thriller"),
+    cat_War = str_count(imdb_categories, "War"),
+    cat_Western = str_count(imdb_categories, "Western")
+)
+```
+
+```{r}
+mov21 %>%
+  summarize(across(.cols = starts_with("cat_"), ~ sum(.x)))
+```
+```{r}
+mov21 %>%
+  summarize(across(.cols = starts_with("cat_"), 
+                   ~ sum(.x))) %>%
+  pivot_longer(cols = everything(), 
+               names_to = "category", 
+               values_to = "count") %>%
+  arrange(desc(count))
+
+```
+
+```{r}
+ggplot(mov21, aes(x = factor(cat_Drama), y = imdb_stars)) +
+  geom_violin(aes(fill = factor(cat_Drama))) +
+  geom_boxplot(width = 0.3, notch = TRUE) +
+  guides(fill = "none") +
+  labs(title = "Drama favorites had slightly higher IMDB star ratings than non-Dramas")
+```
+
+```{r}
+ggplot(mov21, aes(x = factor(cat_Comedy), y = imdb_stars)) +
+  geom_violin(aes(fill = factor(cat_Comedy))) +
+  geom_boxplot(width = 0.3, notch = TRUE) +
+  guides(fill = "none") +
+  labs(title = "Comedy favorites had lower IMDB star ratings")
+```
+
+
+
