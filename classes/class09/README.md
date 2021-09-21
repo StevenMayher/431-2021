@@ -20,7 +20,6 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - The image and instructions on [the Project A Data page](https://thomaselove.github.io/431-2021-projectA/data.html) were revised Sunday morning and should now match what you get using 2021 CHR data.
 4. As announced via Piazza, some Sample Essays from [Lab 1](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) (questions 2, 3 and 4) that we liked are available to you on our Shared Google Drive in the **431 Lab 1 Essay Examples** document.
 5. We've added the `ggridges` package to the [list of R packages you should install](https://thomaselove.github.io/431/r_packages.html). Today would also be a good day to update your R packages.
-6. [Results](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/results1.md) from the [Movies breakout for Class 8](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout1.md) and we'll spend some time on [those results](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/results1.md).
 
 ## Improving Your Visualizations
 
@@ -29,6 +28,17 @@ There's some great advice and a lot of examples of nice R code in Cedric Scherer
 - This is an excellent companion to the [R Graphics Cookbook](https://r-graphics.org/) if you're looking for ways to improve the appearance of your visualizations.
 - In addition, Cedric just gave (2021-09-16) a talk entitled [Beyond Bar and Box Plots](https://github.com/z3tt/beyond-bar-and-box-plots/blob/main/README.md) which presents some very effective alternatives and explains how to design them with `ggplot2`. This might be of particular interest to those of you thinking about building useful visualizations in Project A to compare a quantitative variable within subgroups identified by a categorical variable. 
     - [Here's a Twitter thread](https://twitter.com/CedScherer/status/1438836874630545412) where Cedric shares the [slides](https://t.co/BKd0AqwEUK?amp=1), the [notebook and source code](https://t.co/bGm37wp5Hl?amp=1) for all of the charts, and even a [recording of the presentation on YouTube](https://youtu.be/WBA04fjTVU0).
+
+---------
+
+## Favorite Movies
+
+In Class 08, we included [a breakout session with a couple of tasks](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout1.md). Specifically, we asked you to:
+
+- identify which film (alphabetically) was the first all members of your small group had seen, and
+- identify two exploratory questions that could be asked of the data (specifically, five variables.)
+
+Today, we'll report and discuss [some results from those tasks](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/results1.md).
 
 ----------
 
