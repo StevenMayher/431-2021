@@ -19,7 +19,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - As mentioned on Piazza, there were changes to the counts for Idaho, North Dakota, Nebraska, Nevada, Oregon and Texas.
     - The image and instructions on [the Project A Data page](https://thomaselove.github.io/431-2021-projectA/data.html) were revised Sunday morning and should now match what you get using 2021 CHR data.
 4. As announced via Piazza, some Sample Essays from [Lab 1](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) (questions 2, 3 and 4) that we liked are available to you on our Shared Google Drive in the **431 Lab 1 Essay Examples** document.
-5. [Results](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/results1.md) from the [Movies breakout for Class 8](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout1.md) and we'll spend some time on [those results](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/results1.md).
+5. We've added the `ggridges` package to the [list of R packages you should install](https://thomaselove.github.io/431/r_packages.html). Today would also be a good day to update your R packages.
+6. [Results](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/results1.md) from the [Movies breakout for Class 8](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout1.md) and we'll spend some time on [those results](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/results1.md).
 
 ## Improving Your Visualizations
 
