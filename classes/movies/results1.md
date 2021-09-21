@@ -16,7 +16,7 @@ Can we estimate the probability that **any** of [the 115 films](https://github.c
 
 ## Exploring Your Favorite Movies
 
-Visit https://rpubs.com/TELOVE/movies-eda-1 for the HTML result from running the R Markdown file I have provided at this link.
+Visit https://rpubs.com/TELOVE/movies-eda-1 for the HTML result from running [the R Markdown file found here](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/movies_eda1.Rmd).
 
 ## Exploratory Questions
 
