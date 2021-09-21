@@ -14,6 +14,10 @@ I wound up with reports from eleven groups, containing 2 to 6 students.
 
 Can we estimate the probability that **any** of [the 115 films](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/movies_list.md) will have been seen by everyone associated with 431 this term?
 
+## Exploring Your Favorite Movies
+
+Visit https://rpubs.com/TELOVE/movies-eda-1 for the HTML result from running the R Markdown file I have provided at this link.
+
 ## Exploratory Questions
 
 We asked each group to identify two exploratory questions about films in this sample that could be addressed using the five key variables we identified for you.
@@ -67,3 +71,6 @@ The 1850s | 1 | Have IMDB categories for movies changed by year? | CY
 Love Boosters | 1 | Is there a positive correlation between the number of star ratings, imdb_ratings ,and the weighted average IMDB rating, imdb_stars,  a certain movie has? | RS
 Fantastic Six | 2 | Is there a correlation between IMDB rating and the imdb stars? | RS
 The Locker | 2 | How does the age of the movie impact the number of start ratings submitted on IMDB? | RY
+
+
+
