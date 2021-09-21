@@ -8,6 +8,8 @@ output:
     df_print: paged
 ---
 
+Note: This document is published to https://rpubs.com/TELOVE/movies-eda-1
+
 # Setup
 
 ```{r setup}
@@ -167,6 +169,31 @@ ggplot(mov21, aes(x = length, y = imdb_stars, label = film)) +
          caption = "115 films mentioned as favorites by 431 students in 2020 and in 2021")
 ```
 
+# Are the "stars" and number of ratings strongly associated?
+
+```{r}
+temp_cor5 <- mov21 %$% 
+  cor(imdb_ratings, imdb_stars) %>% 
+  round_half_up(., digits = 3)
+
+ggplot(mov21, aes(x = imdb_ratings, y = imdb_stars, label = film)) +
+    geom_point() + 
+    geom_smooth(method = "loess", col = "blue",
+                formula = y ~ x, se = FALSE) +
+    geom_smooth(method = "lm", col = "red",
+                formula = y ~ x, se = FALSE) +
+    geom_text_repel(data = subset(mov21, imdb_stars < 6)) +
+    geom_label_repel(data = mov21 %>% 
+                        slice_max(imdb_ratings, n = 5)) +
+    labs(x = "Number of IMDB Ratings",
+         y = "Weighted Average IMDB Star Rating",
+         title = "Do films rated more often have higher ratings?",
+         subtitle = glue("Pearson correlation of `imdb_stars` and `imdb_ratings` is {temp_cor5}."),
+         caption = "115 films mentioned as favorites by 431 students in 2020 and in 2021")
+```
+
+
+
 # Which combinations of categories were most common?
 
 ```{r, fig.height = 10}
@@ -257,6 +284,5 @@ ggplot(mov21, aes(x = factor(cat_Comedy), y = imdb_stars)) +
   guides(fill = "none") +
   labs(title = "Comedy favorites had lower IMDB star ratings")
 ```
-
 
 
