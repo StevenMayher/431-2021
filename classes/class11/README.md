@@ -12,3 +12,5 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## More to come.
+
+1. The characteristics I would be thinking about in describing the distribution of a single batch of data  are (1) the center, (2) the spread or variability, (3) the shape (in terms of both skew and tail behavior.) In terms of tail behavior - are there many outliers, are there really distant outliers, are the data light-tailed with less data in the tails than we would expect from a Normal distribution.
