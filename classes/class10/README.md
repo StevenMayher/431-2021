@@ -8,13 +8,15 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Today's Slides
 
-- Dr. Love's slides will be available in [PDF format], as well as in [R Markdown].
+- Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class10/431-class10-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class10/431-class10-slides.Rmd).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Announcements
 
 1. Feedback on the Minute Paper after Class 09 [is available now](https://bit.ly/431-2021-min9-feedback).
-2. More to come.
+2. We will return to the [movies example](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies) on Tuesday, in Class 11.
+    - I posed a Favorite Movies little poll on [Piazza](https://piazza.com/case/fall2021/pqhs431), which I hope you'll consider responding to for a little class participation credit, especially those of you who haven't previously engaged with Piazza. The poll closes Saturday at 10 AM, I believe.
+3. Also in Class 11, we'll spend some time thinking about visualizing categorical data and assessing associations between categorical variables. I've adjusted the [Calendar](https://thomaselove.github.io/431/calendar.html) to reflect this adjustment.
 
 ## What Should I Be Working On?
 
