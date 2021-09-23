@@ -34,14 +34,13 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 [12 Resolutions for Grad Students](https://matt.might.net/articles/grad-student-resolutions/) from Matt Might at the University of Alabama at Birmingham.
 
-The whole list is potentially helpful, and Matt has more to say about each of them, but I'll emphasize the following...
+The whole list is potentially helpful, and [Matt has more to say about each of them](https://matt.might.net/articles/grad-student-resolutions/), but I'll emphasize these seven...
 
 - Practice writing
     - Effective public communication is critical to success as an academic.
     - There are never enough opportunities to write.
 - Embrace the uncomfortable
     - The "Rule of 3" - when a third person recommends you try something, you must try it.
-    - The "15 Minute Rule" - give something (like a TV show) the benefit of the doubt for 15 minutes. If you don't want to continue after that, drop it.
 - Upgrade your tools
     - Are there shortcut keys you can learn in RStudio? Yep - look at Tools ... Keyboard Shortcuts Help
     - Are you familiar with the [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)?
