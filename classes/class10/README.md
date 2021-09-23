@@ -21,13 +21,25 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## What Should I Be Working On?
 
-1. [Lab 3](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab03/lab03.md) is due Monday 2021-09-27 at 9 PM.
+1. [Lab 3](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab03/lab03.md) is due Monday 2021-09-27 at 9 PM. 
+    - A hint is to think about missing data, even if we haven't explicitly asked you to do so.
 2. If you want us to do an early review on your [Project A](https://thomaselove.github.io/431-2021-projectA/) Proposal, you must submit it to Canvas by noon on Friday 2021-10-01.
     - The actual Proposal is due 2021-10-11, but if you submit by the deadline above, we'll review it and return it by 2021-10-06 so you can maximize your chances of getting through it in just one pass.
     - Part of the reason to do this is that it provides an excellent set of examples to be familiar with when you take Quiz 1.
-3. Reading: Spiegelhalter Chapter 4 (What Causes What?) and perhaps also [IMS](https://openintro-ims.netlify.app/) Chapters 4-7 on Exploratory Data Analysis. And if you haven't read all of the [Project A instructions](https://thomaselove.github.io/431-2021-projectA/), now is the time to do so.
-4. [Quiz 1](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes) arrives on Friday 2021-10-01, and is due at 9 PM on Monday 2021-10-04.
+    - If you haven't read all of the [Project A instructions](https://thomaselove.github.io/431-2021-projectA/), now is the time to do so.
+4. Additional Reading: Spiegelhalter Chapter 4 (What Causes What?) and perhaps also [IMS](https://openintro-ims.netlify.app/) Chapters 4-7 on Exploratory Data Analysis.
+5. [Quiz 1](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes) arrives on Friday 2021-10-01, and is due at 9 PM on Monday 2021-10-04.
 
 ## One Last Thing
 
 [12 Resolutions for Grad Students](https://matt.might.net/articles/grad-student-resolutions/) from Matt Might at the University of Alabama at Birmingham.
+
+These include:
+
+- Embrace the uncomfortable
+- Upgrade your tools
+- Stay healthy
+- Update your CV and web site ([Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX), when posted, will give you some motivation.)
+- Network
+- Say thanks
+- Practice writing
