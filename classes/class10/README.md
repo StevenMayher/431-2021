@@ -17,6 +17,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 2. We will return to the [movies example](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies) on Tuesday, in Class 11.
     - I posed a Favorite Movies little poll on [Piazza](https://piazza.com/case/fall2021/pqhs431), which I hope you'll consider responding to for a little class participation credit, especially those of you who haven't previously engaged with Piazza. The poll closes Saturday at 10 AM, I believe.
 3. Also in Class 11, we'll spend some time thinking about visualizing categorical data and assessing associations between categorical variables. I've adjusted the [Calendar](https://thomaselove.github.io/431/calendar.html) to reflect this adjustment.
+4. You're always welcome to ask anything, so long as you're willing to accept the potential answer "I'm sorry - I cannot help with this."
 
 ## What Should I Be Working On?
 
