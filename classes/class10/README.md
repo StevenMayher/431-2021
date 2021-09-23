@@ -46,13 +46,13 @@ The whole list is potentially helpful, and [Matt has more to say about each of t
     - Are you familiar with the [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)?
 - Update your CV and web site 
     - If you cannot be googled, you don't exist.
-    - Anything that is on your computer but not in the world is inherently less than the things you have sent into the world.   
+    - Anything that is on your computer but not in the world is inherently less valuable than what you send into the world.   
     - [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX), when posted, will give you some additional motivation.
 - Network
     - What opportunities can you make to make connections with people who can help you, or who you can help?
 - Say thanks
     - Unprompted civility goes a long way in academia and elsewhere. 
 - Stay healthy
-    - Constant pressure from high-stress milestones like qualifiers, proposals, defenses and paper submission deadlines don't promote healthy habits.
+    - Constant pressure from high-stress milestones like qualifiers, proposals, deadlines don't promote healthy habits.
     - It's OK to get depressed. It's not OK to do nothing about it.
 
