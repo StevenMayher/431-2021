@@ -10,6 +10,6 @@ The current version of the data set is called `movies_2021`.
 
 ## Activities involving the Movies Data
 
-1. Here's the link for our [first breakout activity](breakout1.md), which we'll do in Class 08 (2021-09-16).
+1. Here's the link for our [first breakout activity](breakout1.md), which we'll do in Class 08 (2021-09-16). And here are the [results from that activity](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/results1.md).
 
-
+2. Our next breakout activity will be in Class 11.
