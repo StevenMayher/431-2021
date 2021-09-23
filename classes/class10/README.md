@@ -48,7 +48,7 @@ The whole list is potentially helpful, and Matt has more to say about each of th
 - Update your CV and web site 
     - If you cannot be googled, you don't exist.
     - Anything that is on your computer but not in the world is inherently less than the things you have sent into the world.   
-    - ([Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX), when posted, will give you some motivation.)
+    - [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX), when posted, will give you some additional motivation.
 - Network
     - What opportunities can you make to make connections with people who can help you, or who you can help?
 - Say thanks
