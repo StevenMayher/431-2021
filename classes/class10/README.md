@@ -34,12 +34,26 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 [12 Resolutions for Grad Students](https://matt.might.net/articles/grad-student-resolutions/) from Matt Might at the University of Alabama at Birmingham.
 
-These include:
+The whole list is potentially helpful, and Matt has more to say about each of them, but I'll emphasize the following...
 
-- Embrace the uncomfortable
-- Upgrade your tools
-- Stay healthy
-- Update your CV and web site ([Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX), when posted, will give you some motivation.)
-- Network
-- Say thanks
 - Practice writing
+    - Effective public communication is critical to success as an academic.
+    - There are never enough opportunities to write.
+- Embrace the uncomfortable
+    - The "Rule of 3" - when a third person recommends you try something, you must try it.
+    - The "15 Minute Rule" - give something (like a TV show) the benefit of the doubt for 15 minutes. If you don't want to continue after that, drop it.
+- Upgrade your tools
+    - Are there shortcut keys you can learn in RStudio? Yep - look at Tools ... Keyboard Shortcuts Help
+    - Are you familiar with the [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)?
+- Update your CV and web site 
+    - If you cannot be googled, you don't exist.
+    - Anything that is on your computer but not in the world is inherently less than the things you have sent into the world.   
+    - ([Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX), when posted, will give you some motivation.)
+- Network
+    - What opportunities can you make to make connections with people who can help you, or who you can help?
+- Say thanks
+    - Unprompted civility goes a long way in academia and elsewhere. 
+- Stay healthy
+    - Constant pressure from high-stress milestones like qualifiers, proposals, defenses and paper submission deadlines don't promote healthy habits.
+    - It's OK to get depressed. It's not OK to do nothing about it.
+
