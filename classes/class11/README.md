@@ -4,7 +4,9 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-![](images/mcnamara_tw.png)
+![](images/mcnamara_tw.png) [Link](https://twitter.com/AmeliaMN/status/1441414448846094339)
+
+- More details as to why I cannot support the use of Datacamp at [this article](https://www.buzzfeednews.com/article/daveyalba/datacamp-sexual-harassment-metoo-tech-startup) and [this one, too](https://dnlmc.medium.com/dont-use-datacamp-ef04adcf1b7f).
 
 ## Today's Slides
 
