@@ -18,7 +18,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 2. Thanks to the 41 of you who voted in my little poll on Piazza. I asked which of the ten movies I listed would be the one seen by more of you than the others. Nine of the ten films (the exception was *Memento*) received votes, as listed below. We'll see who was right in the [Minute Paper after Class 11](https://bit.ly/431-2021-minute-11), which is due Wednesday 2021-09-29 at Noon.
 
 - *The Matrix*, 17 votes
-- *Lord of the Rings: The Fellowship of the Ring*, 8
+- *Lord of the Rings: The Fellowship of the Ring*, 8 votes
 - *The Shawshank Redemption*, *The Princess Bride* and *Pulp Fiction* each had 4
 - 1 vote each for *Spirited Away*, *The Silence of the Lambs*, *Soul*, and *Moonlight*
 
