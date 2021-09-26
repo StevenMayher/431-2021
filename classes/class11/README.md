@@ -24,7 +24,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Upcoming Deliverables
 
-1. [Minute Paper after Class 11](https://bit.ly/431-2021-minute-11) is due Wednesday 2021-09-29 at noon: https://bit.ly/431-2021-minute-11
+1. [Minute Paper after Class 11](https://bit.ly/431-2021-minute-11) is due Wednesday 2021-09-29 at noon.
 2. Early Review deadline for the [Project A](https://thomaselove.github.io/431-2021-projectA/) Proposal is noon on Friday 2021-10-01.
     - The actual Proposal is due 2021-10-11, but if you submit by the deadline above, we'll review it and return it by 2021-10-06 so you can maximize your chances of getting through it in just one pass.
 3. [Quiz 1](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes) will be yours by Friday 2021-10-01, and is due at 9 PM Monday 2021-10-04.
