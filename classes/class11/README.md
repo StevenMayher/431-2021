@@ -15,7 +15,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. The characteristics I would be thinking about in describing the distribution of a single batch of data  are (1) the center, (2) the spread or variability, (3) the shape (in terms of both skew and tail behavior.) In terms of tail behavior - are there many outliers, are there really distant outliers, are the data light-tailed with less data in the tails than we would expect from a Normal distribution.
 
-2. Thanks to the 41 of you who voted in my little poll on Piazza. I asked which of the ten movies I listed would be the one seen by more of you than the others. Nine of the ten films (the exception was *Memento*) received votes, as listed below. We'll see who was right in the [Minute Paper after Class 11](https://bit.ly/431-2021-minute-11), which is due Wednesday 2021-09-29 at Noon.
+2. Thanks to the 40 of you who voted in my little poll on Piazza. I asked which of the ten movies I listed would be the one seen by more of you than the others. Nine of the ten films (the exception was *Memento*) received votes, as listed below. We'll see who was right in the [Minute Paper after Class 11](https://bit.ly/431-2021-minute-11), which is due Wednesday 2021-09-29 at Noon.
 
 - *The Matrix*, 17 votes
 - *Lord of the Rings: The Fellowship of the Ring*, 8 votes
