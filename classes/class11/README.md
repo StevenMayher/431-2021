@@ -4,6 +4,15 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
+Here's a graph from *The New York Times* showing the political divide over COVID-19 vaccinations. The relevant piece is called [Red Covid](https://www.nytimes.com/2021/09/27/briefing/covid-red-states-vaccinations.html) by David Leonhardt, posted 2021-09-27, and includes a couple of additional interesting visualizations. 
+
+![](images/nyt_2021-09-27.png)
+
+David's [twitter thread](https://twitter.com/DLeonhardt/status/1442454472144293898) makes the following points...
+
+- "The political divide over vaccinations is so large that almost every reliably blue state now has a higher vaccination rate than almost every reliably red state."
+- "It's worth remembering that Covid followed a different pattern for more than a year after its arrival in the U.S. It was somewhat worse in blue areas (which are home to most of the country's international travel hubs) than red areas."
+- "In counties where Donald Trump received at least 70 percent of the vote, the virus has killed about 47 out of every 100,000 people since the end of June, per @charles_gaba. In counties where Trump won less than 32 percent of the vote, the number is about 10 out of 100,000."
 
 ## Today's Slides
 
@@ -17,7 +26,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 3. You will receive Quiz 1 no later than 9 AM on Friday 2021-10-01. I will be away from Friday 2021-10-01 through Sunday 2021-10-03, but will respond to any Quiz 1-related (and other) questions as soon as possible on my return. Remember that Quiz 1 is due Monday 2021-10-04 at 9 PM.
 4. I have modified [Section 12 of the Syllabus](https://thomaselove.github.io/431-2021-syllabus/general-course-policies.html) slightly to modify the attendance policy. I now expect you to email me if you will miss **more than** two classes in a row. I also encourage you to review the [In Case of Emergency policies in Section 3](https://thomaselove.github.io/431-2021-syllabus/in-case-of-emergency.html). If you have any questions, please let me know.
 5. Apparently, there is a class (not 431 but a class which some 431 students are taking) which is going remote for 10 days. Certainly, if you have been identified as a close contact of someone who has tested positive for COVID-19, you are not supposed to attend any class, including 431, until you have met the University's requirements for returning to in-person instruction. At present, I have no plans for our class to be given in any way other than the usual in-person at 1 PM Tuesdays and Thursdays, with a recording made available the next day. If things change, I'll let you know.
-6. The Population Health Research Institute at MetroHealth is holding a major Zoom seminar on Friday 2021-10-01 from 9:00 to 10:30 AM. It is entitled **Population Health: Major Opportunities for an Evolving Field**, and it will be given by Marc N. Gourevitch, MD, MPH, who is the Muriel and George Singer Professor of Population Health and Chair of the Department of Population Health at NYU Grossman School of Medicine. Dr. Gourevitch leads the [City Health Dashboard project](https://www.cityhealthdashboard.com/). The [Zoom link and further details can be found here](https://www.metrohealth.org/population-health-research-institute/seminar-series) should you wish to attend all or part of the session.
+6. The Population Health Research Institute at MetroHealth is holding a major Zoom seminar on Friday 2021-10-01 from 9:00 to 10:30 AM. It is entitled **Population Health: Major Opportunities for an Evolving Field**, and it will be given by Marc N. Gourevitch, MD, MPH, who is the Muriel and George Singer Professor of Population Health and Chair of the Department of Population Health at NYU Grossman School of Medicine. 
+    - Dr. Gourevitch leads the [City Health Dashboard project](https://www.cityhealthdashboard.com/). 
+    - The [Zoom link and further details can be found here](https://www.metrohealth.org/population-health-research-institute/seminar-series) should you wish to attend all or part of the session.
 
 ## Upcoming Deliverables
 
