@@ -40,7 +40,7 @@ David's [twitter thread](https://twitter.com/DLeonhardt/status/14424544721442938
 
 ## Favorite Movies
 
-We'll return to the favorite movies data for a small activity later in today's class.
+We'll return to the favorite movies data for our [second breakout activity](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout2.md) later in today's class.
 
 Thanks to the 40 of you who voted in my little poll on Piazza at the end of last week. I asked which of the ten movies I listed would be the one seen by more of you than the others. Nine of the ten films (the exception was *Memento*) received votes, as listed below. We'll see who was right in the [Minute Paper after Class 11](https://bit.ly/431-2021-minute-11), which is due Wednesday 2021-09-29 at Noon.
 
