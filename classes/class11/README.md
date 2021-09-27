@@ -13,6 +13,10 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class11/431-class11-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class11/431-class11-slides.Rmd).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
+## Announcements
+
+1. I have modified [Section 12 of the Syllabus](https://thomaselove.github.io/431-2021-syllabus/general-course-policies.html) slightly to modify the attendance policy. I now expect you to email me if you will miss **more than** two classes in a row. I also encourage you to review the [In Case of Emergency policies in Section 3](https://thomaselove.github.io/431-2021-syllabus/in-case-of-emergency.html). If you have any questions, please let me know.
+
 ## Upcoming Deliverables
 
 1. [Minute Paper after Class 11](https://bit.ly/431-2021-minute-11) is due Wednesday 2021-09-29 at noon.
