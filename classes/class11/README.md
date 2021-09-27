@@ -21,7 +21,7 @@ David's [twitter thread](https://twitter.com/DLeonhardt/status/14424544721442938
 
 ## Announcements
 
-1. We'll post the Answer Sketch for Lab 3 by class time.
+1. We'll post the **Answer Sketch for Lab 3** by class time.
 2. Grades on Lab 2 and feedback from Dr. Love and the TAs are available on the [Course Grading Roster](https://bit.ly/431-2021-grades). 
     - We gathered a few strong essays written in response to Question 8 into the 431 Lab 2 Essay Examples document on our Shared Google Drive.
 3. You will receive Quiz 1 no later than 9 AM on Friday 2021-10-01. I will be away from Friday 2021-10-01 through Sunday 2021-10-03, but will respond to any Quiz 1-related (and other) questions as soon as possible on my return. Remember that Quiz 1 is due Monday 2021-10-04 at 9 PM.
