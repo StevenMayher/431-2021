@@ -7,9 +7,8 @@ All deadlines for 431 work, including this Lab, are posted in the [Course Calend
 ## After the Lab
 
 - Our draft answer sketch and grading rubric is now available [in pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab02/sketch/lab02_sketch.pdf) and [in R Markdown format](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab02/sketch/lab02_sketch.Rmd).
-  - If we make any changes to this document during grading (which we usually do), we'll repost when we post the grades. If you find any errors or points of confusion, please let us know under the lab02 folder on [Piazza](https://piazza.com/case/fall2021/pqhs431).
-- Grades and Feedback on the Lab will be posted to the [Course Grading Roster](https://bit.ly/431-2021-grades) by class time on 2021-09-28.
-- Additional materials will be posted as necessary.
+- Grades and Feedback on the Lab are availble on the [Course Grading Roster](https://bit.ly/431-2021-grades).
+- Some Sample Essays from Lab 2 (question 8) that we liked are available to you on our Shared Google Drive in the **431 Lab 2 Essay Examples** document.
 
 ## Late Work
 
