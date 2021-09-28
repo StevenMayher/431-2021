@@ -8,7 +8,7 @@ The files you will need to complete Quiz 1 are:
 
 ## Instructions
 
-A draft of the instructions for Quiz 1 is now available here. 
+A draft of the instructions for Quiz 1 is [now available](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz1/quiz1_instructions_draft.pdf) in case you'd like to read it in advance. 
 
 - This draft will be superceded by the instructions on the final PDF file when it becomes available.
 
