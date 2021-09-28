@@ -21,7 +21,7 @@ David's [twitter thread](https://twitter.com/DLeonhardt/status/14424544721442938
 
 ## Announcements
 
-1. We'll post the **Answer Sketch for Lab 3** by class time.
+1. Our [Answer Sketch for Lab 3](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) is now posted.
 2. Grades on [Lab 2](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab02) and feedback from Dr. Love and the TAs are available on the [Course Grading Roster](https://bit.ly/431-2021-grades). 
     - We gathered a few strong essays written in response to Question 8 into the 431 Lab 2 Essay Examples document on our Shared Google Drive.
 3. Some early [Quiz 1 materials are now available](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1). 
