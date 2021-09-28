@@ -12,6 +12,7 @@ All materials will be posted above by 9 AM on 2021-10-01. The Quiz is due when [
 - No late work will be accepted, so do not wait until the last minute to enter your work in the Google Form and press Submit. 
 - You can edit your work on the Answer Sheet after you submit, up until the deadline. 
 - No responses outside of the Google Form Answer Sheet will be accepted.
+- Dr. Love will be away from Friday morning 2021-10-01 until late afternoon on Sunday 2021-10-03, but you will still be able to ask questions about the Quiz using the two allowable methods described in the instructions. The TAs and Dr. Love will respond as soon as possible. 
 
 ## Read the Instructions in Advance
 
