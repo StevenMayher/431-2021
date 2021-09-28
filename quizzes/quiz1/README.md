@@ -13,7 +13,7 @@ All materials will be posted above by 9 AM on 2021-10-01. The Quiz is due when [
 - You can edit your work on the Answer Sheet after you submit, up until the deadline. 
 - No responses outside of the Google Form Answer Sheet will be accepted.
 
-## Instructions
+## Read the Instructions in Advance
 
 A draft of the instructions for Quiz 1 is [now available](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz1/quiz1_instructions_draft.pdf) in case you'd like to read them in advance. 
 
