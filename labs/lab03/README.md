@@ -6,6 +6,6 @@ All deadlines for 431 work, including this Lab, are posted in the [Course Calend
 
 ## After the Lab
 
-- Answer Sketch and Grading Rubric will be posted the day after the Lab is due.
+- Our draft answer sketch and grading rubric is now available [in pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab03/sketch/lab03_sketch.pdf) and [in R Markdown format](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab03/sketch/lab03_sketch.Rmd).
 - Grades and Feedback on the Lab will be posted to the [Course Grading Roster](https://bit.ly/431-2021-grades) by class time on 2021-10-05.
 - Additional materials will be posted as necessary.
