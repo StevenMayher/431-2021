@@ -13,5 +13,5 @@ All deadlines for 431 work, including this Lab, are posted in the [Course Calend
 ## Late Work
 
 - Labs received after the deadline but before the answer sketch is published can receive up to 90% of available points.
-- Lab submissions received after the answer sketch is published (noon on Tuesday 2021-09-07) but still within one week of the original deadline can receive up to 75% of available points.
+- Lab submissions received after the answer sketch is published (noon on Tuesday 2021-09-21) but still within one week of the original deadline can receive up to 75% of available points.
 - Lab submissions received more than one week after the deadline will not be graded.
