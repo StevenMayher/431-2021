@@ -7,7 +7,9 @@ The files you will need to complete Quiz 1 are:
 3. three data files, which are available **now** in our Shared Google Drive in the Quiz 1 folder
     - the three files are called `fastfood.csv`, `oscar.csv` and `zips.csv`.
 
-All materials will be posted above by 9 AM on 2021-10-01. The Quiz is due when [the Calendar](https://thomaselove.github.io/431/calendar.html) says it is, at 9 PM on Monday 2021-10-04. 
+All materials will be posted above by 9 AM on 2021-10-01. 
+
+The Quiz is due when [the Calendar](https://thomaselove.github.io/431/calendar.html) says it is, at 9 PM on Monday 2021-10-04. 
 
 - No late work will be accepted, so do not wait until the last minute to enter your work in the Google Form and press Submit. 
 - You can edit your work on the Answer Sheet after you submit, up until the deadline. 
