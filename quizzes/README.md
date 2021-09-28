@@ -17,7 +17,7 @@ The "Instructions" for each Quiz will include:
 You must log into Google via CWRU to access the Answer Sheet and you must complete your submission of this Form no later than the posted deadline on the [Course Calendar](https://thomaselove.github.io/431/calendar.html). 
 
 - No late work on Quizzes will be accepted. 
-- All work will be graded based solely on your submitted Answer Sheet, which must be received by noon on the deadline day.
+- All work will be graded based solely on your submitted Answer Sheet, which must be received by the deadline on the [Course Calendar](https://thomaselove.github.io/431/calendar.html).
 - When you submit the Answer Sheet, your responses will be emailed to your CWRU email address, along with a link to allow you to edit your work before the deadline.
 - Dr. Love grades all Quizzes. 
 - You will usually receive your Quiz grade along with a detailed Answer Sketch for all Quiz questions 48 hours after the submission deadline.
