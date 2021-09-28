@@ -12,3 +12,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## More to come.
+
+## One Last Thing
+
+![](images/phd_2021-09-24.png)
