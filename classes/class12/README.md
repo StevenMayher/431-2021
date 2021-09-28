@@ -15,4 +15,4 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## One Last Thing
 
-![](images/phd_2021-09-24.png)
+![](images/phd_2021-09-24.png) ["Said No Academic Ever" link](http://phdcomics.com/comics/archive_print.php?comicid=2048)
