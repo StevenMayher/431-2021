@@ -26,7 +26,7 @@ David's [twitter thread](https://twitter.com/DLeonhardt/status/14424544721442938
     - We gathered a few strong essays written in response to Question 8 into the 431 Lab 2 Essay Examples document on our Shared Google Drive.
 3. Some early [Quiz 1 materials are now available](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1). 
     - You will receive all of the Quiz 1 materials no later than 9 AM on Friday 2021-10-01. 
-    - Dr. Love will be away from Friday morning 2021-10-01 until late afternoon on Sunday 2021-10-03, but you will still be able to ask questions about the Quiz in the two allowable methods (as described in the instructions) and the TAs and I will respond as soon as possible. 
+    - Dr. Love will be away from Friday morning 2021-10-01 until late afternoon on Sunday 2021-10-03, but you will still be able to ask questions about the Quiz using the two allowable methods described in the instructions and the TAs and I will respond as soon as possible. 
     - Dr. Love will personally ensure that all questions received by 5 PM on Monday 2021-10-04 are answered by that time.
     - Remember that Quiz 1 is due Monday 2021-10-04 at 9 PM, as the [Calendar](https://thomaselove.github.io/431/calendar.html) indicates.
 4. I have modified [Section 12 of the Syllabus](https://thomaselove.github.io/431-2021-syllabus/general-course-policies.html) slightly to modify the attendance policy. I now expect you to email me if you will miss **more than** two classes in a row. I also encourage you to review the [In Case of Emergency policies in Section 3](https://thomaselove.github.io/431-2021-syllabus/in-case-of-emergency.html). If you have any questions, please let me know.
