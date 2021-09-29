@@ -15,6 +15,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. Feedback on the Minute Paper after Class 11 will be available by class time.
 2. Instructions for [Lab 4](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/lab04.md) are now available. It's due 2021-10-11 at 9 PM, which is the same time as the Project A Proposal. Note that in order to do Lab 4, you'll need to read [Finally, A Formula for Decoding Health News](https://fivethirtyeight.com/features/a-formula-for-decoding-health-news/) by Jeff Leek at FiveThirtyEight.
+3. Instructions for [Lab 5](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) are also now available. It's due 2021-10-18 at 9 PM. Note that doing Lab 5 will require you to have read Chapter 6 of Spiegelhalter. Unlike Lab 4, Lab 5 includes some issues we haven't yet touched on in class.
 
 ## On Project A Proposals
 
