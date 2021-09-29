@@ -1,6 +1,6 @@
 # Favorite Movies: Breakout Activity 2
 
-To be completed on 2021-09-27 (Class 11).
+To be completed on 2021-09-29 (Class 12).
 
 ## Your Task(s) for Today
 
