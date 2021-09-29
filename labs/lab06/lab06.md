@@ -1,6 +1,6 @@
 431 Lab 06
 ================
-Due: 2021-11-08 \| Last Edit: 2021-09-29 14:06:03
+Due: 2021-11-08 \| Last Edit: 2021-09-29 14:40:59
 
 Lab 06 is divided into 6 questions. Be sure to respond to each of them
 by the deadline posted on the [Course
@@ -124,7 +124,12 @@ Which model performs best in which settings?
 
 Write a brief essay (150 words would be sufficient, but you can write
 more if you like) which relates what you’ve done in this assignment to
-what you learned in your reading of Spiegehalter.
+what you learned in your reading of Spiegelhalter.
+
+## Session Information
+
+Be sure to include the session information using one of the methods we
+have demonstrated.
 
 # Submitting your Response
 
