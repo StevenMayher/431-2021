@@ -1,6 +1,6 @@
 # Lab 05 Materials
 
-Instructions for Lab 05 will appear here when available.
+Instructions for Lab 05 are [available here](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab05/lab05.md).
 
 All deadlines for 431 work, including this Lab, are posted in the [Course Calendar](https://thomaselove.github.io/431/calendar.html).
 
