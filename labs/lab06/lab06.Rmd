@@ -72,7 +72,7 @@ By now you should have created 4 models. Fit these models to the test data we ha
 
 # Question 6 (20 points)
 
-Write a brief essay (100 words would be sufficient) which relates what you've done in this assignment to what you learned in your reading of Spiegehalter.
+Write a brief essay (150 words would be sufficient, but you can write more if you like) which relates what you've done in this assignment to what you learned in your reading of Spiegehalter.
 
 # Submitting your Response
 
