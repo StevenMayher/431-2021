@@ -1,6 +1,6 @@
 431 Lab 04
 ================
-Due **2021-10-11** at 9 PM \| Last Edited 2021-09-29 11:32:00
+Due **2021-10-11** at 9 PM \| Last Edited 2021-09-29 12:14:38
 
 ## Deadline
 
@@ -38,13 +38,8 @@ We encourage you to use a similar approach to Lab 04 that you used in
 Labs 02 and 03. We have not provided a template for Lab 04, but you can
 adapt one of the ones we’ve provided previously, if you like. Or you can
 use an approach that you think works well. Be sure to use a new section
-for each question on the Lab.
-
-Build your entire response as an R Markdown file. Then knit the file to
-create an HTML document. Submit both your R Markdown file and the HTML
-output file to [Canvas in the Lab 04 section of the Assignments
-folder](https://canvas.case.edu) by the deadline specified in [the
-Course Calendar](https://thomaselove.github.io/431/calendar.html).
+for each question on the Lab, and do not hide your code. (If you want to
+use code-folding, set it to show.)
 
 ## The Data for Lab 04
 
@@ -191,12 +186,13 @@ from Lab 2 or Lab 3.
 
 ## Submitting the Lab
 
-As mentioned, you should build your entire response as an R Markdown
-file. Then use the Knit button in RStudio to create the resulting HTML
-document. Be sure to review the HTML result to ensure that it looks
-clean and clear, that the labels on your plots and other output are easy
-to read, and that it doesn’t retain any unnecessary warning messages or
-other material that distracts from your work.
+You should build your entire response as an R Markdown file. Then use
+the Knit button in RStudio to create the resulting HTML document. Be
+sure to review the HTML result to ensure that it looks clean and clear,
+that the labels on your plots and other output are easy to read, and
+that it doesn’t retain any unnecessary warning messages or other
+material that distracts from your work. Be sure to spell-check your work
+before submission.
 
 Submit **both** your revised R Markdown file **and** the HTML output
 file to the Lab 04 section in the [Assignments folder in
