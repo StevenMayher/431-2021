@@ -47,7 +47,7 @@ Memento | 10th (0 votes) | 20
     - If your score on Canvas for this version of your proposal is 25/25, then your proposal is accepted. 
     - Otherwise, your score posted to Canvas will be the count (out of the 13 things we are evaluating in the proposals) that you have successfully completed, and you will need to REDO the proposal. 
     - You'll need to submit that revised proposal to the main link (not the Early Review one) that will appear for Project A proposals on 2021-10-02 (called *Project A Proposal Submiission for 2020-10-11 Deadline*). That revised proposal will count as your first attempt for grading purposes.
-3. The list of 13 things we're looking at is provided to you on our Shared Google Drive, in a Google Doc called **Project A Proposal Checklist**.
+3. The [list of 13 things we're looking at](https://docs.google.com/document/d/1OiHj1XotFeUxkobhtN6JB-UF3JRHOE07FWkYr7Dgf3A/edit?usp=sharing) is provided to you on our Shared Google Drive, in a Google Doc called **[Project A Proposal Checklist](https://docs.google.com/document/d/1OiHj1XotFeUxkobhtN6JB-UF3JRHOE07FWkYr7Dgf3A/edit?usp=sharing)**.
     - The most common problems people have so far are (1) not carefully identifying the *outcome* variable within the codebook and (2) removing missing values from the data.
 4. Again, the main deadline for Project A proposals will be 2021-10-11 at 9 PM (the same time as Lab 4 is due), and the link for those proposal submissions will appear on Canvas on 2021-10-02.
 
