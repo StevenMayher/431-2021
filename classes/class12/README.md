@@ -41,6 +41,21 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 We'll return to the favorite movies data for our [second breakout activity](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout2.md) in today's class.
 
+In my little poll on Piazza last week. I asked which of the ten movies I listed would be the one seen by more of you than the others. 
+
+Film | Rank on Piazza | Actual "Yes"
+---- | :--------------: | :--------------:
+The Matrix | 1st (17 votes) | 39
+Lord of the Rings: The Fellowship of the Ring | 2nd (8 votes) | **45**
+The Shawshank Redemption | Tied 3rd (4 votes) | 33
+The Princess Bride | Tied 3rd (4 votes) | 25
+Pulp Fiction | Tied 3rd (4 votes) | 26
+The Silence of the Lambs | Tied 6th (1 vote) | 36
+Spirited Away | Tied 6th (1 vote) | 27
+Soul | Tied 6th (1 vote) | 11
+Moonlight | Tied 6th (1 vote) | 7
+Memento | 10th (0 votes) | 20
+
 ## One Last Thing
 
 ![](images/phd_2021-09-24.png) ["Said No Academic Ever" link](http://phdcomics.com/comics/archive_print.php?comicid=2048)
