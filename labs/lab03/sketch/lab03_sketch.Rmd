@@ -417,7 +417,9 @@ ggplot(data = chr_sample, aes(sample = adult_obesity)) +
 - If any of the following occur the student should lose 2 points for each:
     - No title, or a title which does not convey what the figure represents
     - Axes remain unlabeled or with the default labels
+- Students will lose 1 point if the axis label is another version of the variable name and not descriptive.
 - If the figure provided does not allow one to interpret the center, shape, and spread the student should lose up to 5 points.
+- If the student incorrectly concludes that this does not follow a Normal distribution, they should lose 3 points.
 
 \newpage
 
@@ -531,9 +533,3 @@ A 20-point answer will include a discussion of how these analyses alone are not 
 - If a student does not relate their response to Spiegelhalter, does not discuss any of these concepts, but does have an essay, they should score 8 to 10.
 
 - If no essay is provided a student should receive 0 points and "No Essay" should be noted on the grading sheet.
-
-# Session Information
-
-```{r}
-sessioninfo::session_info()
-```
