@@ -4,6 +4,26 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
+![](images/dems.png)
+
+- from Nathaniel Rakich at FiveThirtyEight "[Why House Democrats May Be More United Than They Seem](https://fivethirtyeight.com/features/why-house-democrats-may-be-more-united-than-they-seem/)" published 2021-09-29.
+
+## Today's Slides
+
+- Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class12/431-class12-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class12/431-class12-slides.Rmd).
+- The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
+
+## Announcements
+
+1. Feedback on the [Minute Paper after Class 11](https://bit.ly/431-2021-min11-feedback) is now available.
+2. Instructions for [Lab 4](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/lab04.md) are now available. It's due 2021-10-11 at 9 PM, which is the same time as the Project A Proposal. Note that in order to do Lab 4, you'll need to read [Finally, A Formula for Decoding Health News](https://fivethirtyeight.com/features/a-formula-for-decoding-health-news/) by Jeff Leek at FiveThirtyEight, but otherwise, you can do it now.
+3. Instructions for [Lab 5](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05), [Lab 6](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab06) and [Lab 7](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab07) are also now available. Labs 5 and 6 include issues we haven't yet touched on in class and reading additional Chapters in Spiegelhalter.
+4. Instructions for [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) are also available, and you can do this lab now, or at any time before the December deadline posted in the [Course Calendar](https://thomaselove.github.io/431/calendar.html) for substantial extra credit.
+
+## Favorite Movies
+
+We'll return to the favorite movies data for our [second breakout activity](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout2.md) in today's class.
+
 **Piazza Poll**: I asked which of ten movies would be the one seen by more of you than the others, and received 41 responses. The Minute Paper after Class 11 asked about these 10 films (and 30 others) receiving 60 responses. 
 
 Film | Piazza Poll Rank | # Who Saw The Movie
@@ -18,18 +38,6 @@ Spirited Away | Tied 6th (1 vote) | 27
 Soul | Tied 6th (1 vote) | 11
 Moonlight | Tied 6th (1 vote) | 7
 Memento | 10th (0 votes) | 20
-
-## Today's Slides
-
-- Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class12/431-class12-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class12/431-class12-slides.Rmd).
-- The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
-
-## Announcements
-
-1. Feedback on the [Minute Paper after Class 11](https://bit.ly/431-2021-min11-feedback) is now available.
-2. Instructions for [Lab 4](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/lab04.md) are now available. It's due 2021-10-11 at 9 PM, which is the same time as the Project A Proposal. Note that in order to do Lab 4, you'll need to read [Finally, A Formula for Decoding Health News](https://fivethirtyeight.com/features/a-formula-for-decoding-health-news/) by Jeff Leek at FiveThirtyEight, but otherwise, you can do it now.
-3. Instructions for [Lab 5](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05), [Lab 6](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab06) and [Lab 7](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab07) are also now available. Labs 5 and 6 include issues we haven't yet touched on in class and reading additional Chapters in Spiegelhalter.
-4. Instructions for [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) are also available, and you can do this lab now, or at any time before the December deadline posted in the [Course Calendar](https://thomaselove.github.io/431/calendar.html) for substantial extra credit.
 
 ## On Project A Proposals
 
@@ -49,10 +57,6 @@ Memento | 10th (0 votes) | 20
 3. There are only two ways to get answers to questions about Quiz 1
   - Submit a private question on [Piazza](https://piazza.com/case/fall2021/pqhs431). Public posts will be closed as of class time today until Tuesday morning.
   - Submit an email to `431-help at case dot edu`.
-
-## Favorite Movies
-
-We'll return to the favorite movies data for our [second breakout activity](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/breakout2.md) in today's class.
 
 ## One Last Thing
 
