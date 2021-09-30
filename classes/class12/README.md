@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-**Piazza Poll**: I asked which of ten movies would be the one seen by more of you than the others. The Minute Paper after Class 11 asked about these 10 films (and 30 others) receiving 60 responses. 
+**Piazza Poll**: I asked which of ten movies would be the one seen by more of you than the others, and received 41 responses. The Minute Paper after Class 11 asked about these 10 films (and 30 others) receiving 60 responses. 
 
 Film | Piazza Poll Rank | # Who Saw The Movie
 ----: | :--------------: | :--------------:
