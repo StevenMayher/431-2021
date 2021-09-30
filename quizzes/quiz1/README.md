@@ -2,7 +2,7 @@
 
 The files you will need to complete Quiz 1 are:
 
-1. the [PDF file that we will post here](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz1/quiz1.pdf) containing all 25 questions and complete instructions
+1. the [PDF file posted here](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz1/quiz1.pdf) containing all 25 questions and complete instructions
 2. the [Google Form Answer Sheet for Quiz 1](https://bit.ly/431-2021-quiz1-answer-sheet) (where you will submit your responses by the deadline)
 3. three data files, which are available **now** in our Shared Google Drive in the Quiz 1 folder
     - the three files are called `fastfood.csv`, `oscar.csv` and `zips.csv`.
