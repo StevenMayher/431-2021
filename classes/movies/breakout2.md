@@ -4,7 +4,7 @@ To be completed on 2021-09-29 (Class 12).
 
 ## Your Task(s) for Today
 
-You'll have about 15 minutes to accomplish the following tasks.
+You'll have about 20 minutes to accomplish the following tasks.
 
 1. Form a group of 4-6 people. Come up with a memorable name for your group that each of you will be able to remember on Thursday. If your group has fewer than 4 or more than 6 people, raise your hand, and we'll change the groups around.
 2. One person in your group will report the results of your work using the google form found at https://bit.ly/431-2021-movies-2. 
