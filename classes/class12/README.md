@@ -55,7 +55,7 @@ Memento | 10th (0 votes) | 20
 1. All materials for [Quiz 1](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1) will be [available at this link](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1).
 2. Quiz 1 answers must be submitted via the Quiz 1 Answer Sheet Google Form by Monday 2021-10-04 at 9 PM. No late submissions will be accepted.
 3. There are only two ways to get answers to questions about Quiz 1
-  - Submit a private question on [Piazza](https://piazza.com/case/fall2021/pqhs431). Public posts will be closed as of class time today until Tuesday morning.
+  - Submit a private question on [Piazza](https://piazza.com/case/fall2021/pqhs431). Public posts will automatically close as of 5 PM today until Tuesday morning.
   - Submit an email to `431-help at case dot edu`.
 
 ## One Last Thing
