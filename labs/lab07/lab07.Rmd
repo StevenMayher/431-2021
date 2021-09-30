@@ -33,7 +33,7 @@ The data has been made available to you in an Excel file called `lab07_trial.xls
 
 ## Question 1  (10 points)
 
-Ingest the data, and then make sure that (a) group is a meaningfully leveled factor, (b) sex is a factor, and (c) age and the two blood pressure results are properly numeric variables, and to look for missing data. Once you've done this, run some simple and attractive, well-annotated summaries to report the number of subjects per group, as well as the sex, age and baseline blood pressure levels of the subjects in each group. Do the groups look comparable on these three baseline variables?
+Ingest the data, and then make sure that (a) group is a meaningfully leveled factor, (b) partnership status is a factor, and (c) age and the two blood pressure results are properly numeric variables, and to look for missing data. Once you've done this, run some simple and attractive, well-annotated summaries to report the number of subjects per group, as well as the partnership status, age and baseline blood pressure levels of the subjects in each group. Do the groups look comparable on these three baseline variables?
 
 ## Question 2 (10 points)
 
@@ -53,11 +53,11 @@ Augment your results in Question 4 by incorporating baseline SBP levels into the
 
 ## Question 6 (10 points)
 
-Now, create `model6` by augmenting the model you fit in Question 5 to see if `sex` may also play a meaningful predictive role in a model for our outcome. Interpret whether the model's quality of fit has improved, and and discuss what the addition of `sex` did to your estimates about the impact of the treatment groups on the outcome.
+Now, create `model6` by augmenting the model you fit in Question 5 to see if `partner` may also play a meaningful predictive role in a model for our outcome. Interpret whether the model's quality of fit has improved, and and discuss what the addition of `partner` did to your estimates about the impact of the treatment groups on the outcome.
 
 ## Question 7 (15 points)
 
-Now, to create your final model (`model7`), instead of adjusting for `sex`, take into account the subject's `age` as well as the baseline systolic blood pressure. 
+Now, to create your final model (`model7`), instead of adjusting for `partner`, take into account the subject's `age` as well as the baseline systolic blood pressure. 
 
 Then build a comparison of the four models you've fit (in models `model4` through `model7`) in terms of the quality of fit (as measured by R-square, adjusted R-square, sigma, AIC and BIC) in the available data. What conclusions can you draw about fit quality for in comparing these four models? Does one model stand out as better or worse than the others? Why or why not?
 

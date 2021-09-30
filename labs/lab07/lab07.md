@@ -1,6 +1,6 @@
 431 Lab 07
 ================
-Due: 2021-11-15 \| Last Edit: 2021-09-29 14:41:18
+Due: 2021-11-15 \| Last Edit: 2021-09-30 11:39:24
 
 Lab 07 is divided into 8 questions. Be sure to respond to each of them
 by the deadline posted on the [Course
@@ -50,13 +50,13 @@ page](https://github.com/THOMASELOVE/431-data).
 ## Question 1 (10 points)
 
 Ingest the data, and then make sure that (a) group is a meaningfully
-leveled factor, (b) sex is a factor, and (c) age and the two blood
-pressure results are properly numeric variables, and to look for missing
-data. Once you’ve done this, run some simple and attractive,
+leveled factor, (b) partnership status is a factor, and (c) age and the
+two blood pressure results are properly numeric variables, and to look
+for missing data. Once you’ve done this, run some simple and attractive,
 well-annotated summaries to report the number of subjects per group, as
-well as the sex, age and baseline blood pressure levels of the subjects
-in each group. Do the groups look comparable on these three baseline
-variables?
+well as the partnership status, age and baseline blood pressure levels
+of the subjects in each group. Do the groups look comparable on these
+three baseline variables?
 
 ## Question 2 (10 points)
 
@@ -93,15 +93,15 @@ Again, use a 90% confidence level.
 ## Question 6 (10 points)
 
 Now, create `model6` by augmenting the model you fit in Question 5 to
-see if `sex` may also play a meaningful predictive role in a model for
-our outcome. Interpret whether the model’s quality of fit has improved,
-and and discuss what the addition of `sex` did to your estimates about
-the impact of the treatment groups on the outcome.
+see if `partner` may also play a meaningful predictive role in a model
+for our outcome. Interpret whether the model’s quality of fit has
+improved, and and discuss what the addition of `partner` did to your
+estimates about the impact of the treatment groups on the outcome.
 
 ## Question 7 (15 points)
 
 Now, to create your final model (`model7`), instead of adjusting for
-`sex`, take into account the subject’s `age` as well as the baseline
+`partner`, take into account the subject’s `age` as well as the baseline
 systolic blood pressure.
 
 Then build a comparison of the four models you’ve fit (in models
