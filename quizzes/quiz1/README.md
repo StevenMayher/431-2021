@@ -2,8 +2,8 @@
 
 The files you will need to complete Quiz 1 are:
 
-1. a PDF file containing all 25 questions and complete instructions
-2. a link to the Google Form Answer Sheet for Quiz 1 (where you will submit all of your responses by the deadline)
+1. the PDF file we will post here containing all 25 questions and complete instructions
+2. the [Google Form Answer Sheet for Quiz 1](https://bit.ly/431-2021-quiz1-answer-sheet) (where you will submit your responses by the deadline)
 3. three data files, which are available **now** in our Shared Google Drive in the Quiz 1 folder
     - the three files are called `fastfood.csv`, `oscar.csv` and `zips.csv`.
 
