@@ -7,7 +7,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 **Piazza Poll**: I asked which of ten movies would be the one seen by more of you than the others. 
 
 Film | Rank in Piazza Poll | Minute Paper Respondents Who Saw The Movie
----- | :--------------: | :--------------:
+----: | :--------------: | :--------------:
 The Matrix | 1st (17 votes) | 39
 Lord of the Rings: The Fellowship of the Ring | 2nd (8 votes) | **45**
 The Shawshank Redemption | Tied 3rd (4 votes) | 33
