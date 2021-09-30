@@ -17,11 +17,8 @@ The Quiz is due when [the Calendar](https://thomaselove.github.io/431/calendar.h
 - Dr. Love will be away from Friday morning 2021-10-01 until Sunday afternoon 2021-10-03, but you will still be able to ask questions about the Quiz using the two methods described in the instructions. The TAs and Dr. Love will respond as soon as possible. 
 - All questions received by 5 PM on Monday 2021-10-04 will be answered by that time.
 
-## Read the Instructions in Advance
+## Read the Instructions in the Actual Quiz PDF, now.
 
-A draft of the instructions for Quiz 1 is [now available](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz1/quiz1_instructions_draft.pdf) in case you'd like to read them in advance. 
-
-- This draft will be superceded by the instructions on the final PDF file when it becomes available.
 - These instructions include information on:
     - The Google Form Answer Sheet
     - How You Can Get Help During the Quiz (there are only two ways: a private post to Piazza or via email to 431-help)
