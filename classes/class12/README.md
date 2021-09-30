@@ -4,9 +4,9 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-In my little poll on Piazza last week. I asked which of the ten movies I listed would be the one seen by more of you than the others. 
+**Piazza Poll**: I asked which of ten movies would be the one seen by more of you than the others. 
 
-Film | Rank on Piazza | Actual "Yes"
+Film | Rank in Piazza Poll | Minute Paper Respondents Who Saw The Movie
 ---- | :--------------: | :--------------:
 The Matrix | 1st (17 votes) | 39
 Lord of the Rings: The Fellowship of the Ring | 2nd (8 votes) | **45**
@@ -21,7 +21,7 @@ Memento | 10th (0 votes) | 20
 
 ## Today's Slides
 
-- Dr. Love's slides will be available in [PDF format], as well as in [R Markdown].
+- Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class12/431-class12-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class12/431-class12-slides.Rmd).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Announcements
