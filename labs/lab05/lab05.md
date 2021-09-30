@@ -1,6 +1,6 @@
 431 Lab 05
 ================
-Due **2021-10-18** at 9 PM \| Last Edited 2021-09-29 13:25:31
+Due **2021-10-18** at 9 PM \| Last Edited 2021-09-30 11:46:07
 
 ## Deadline
 
@@ -135,14 +135,14 @@ receiving abciximab compared to those receiving usual care. Be sure to
 provide your code, and interpret your results in context in one or two
 English sentences. Use a 90% confidence level.
 
-A couple of hints:
+A couple of hints for Question 7:
 
 1.  You should be changing the variable type and labels to make the
     results more interpetable (perhaps with `fct_recode()`), as well as
     change the levels so we are obtaining the probability or odds of a
-    myocardial infarction for those *with* diabetes compared to those
-    *without* diabetes in a contingency table with abciximab status in
-    the rows and acute MI status in the columns.
+    myocardial infarction for those who received abciximab compared to
+    those who received usual care in a contingency table with abciximab
+    status in the rows and acute MI status in the columns.
 2.  An appropriate contingency table will have the value for subjects
     who have an acute MI and who are receiving abciximab in the top
     left, and that cell should contain between 100 and 150 subjects.
@@ -154,6 +154,11 @@ of an acute MI for those who have diabetes as compared to those who do
 not have diabetes. Again, use a 90% confidence level for this Question,
 provide all necessary code, and interpret your result in context using
 one or two English sentences.
+
+Hint for Question 8: Make sure the top left cell of your contingency
+table includes subjects who have an acute MI and also have diabetes,
+with diabetes status in the rows of your table, thus following standard
+epidemiological format.
 
 ## Question 9 (20 points)
 
