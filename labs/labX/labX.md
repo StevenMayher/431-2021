@@ -2,7 +2,7 @@
 ================
 Last Edit: 2021-09-29 14:56:15
 
-Lab 08 is a bonus lab, which consists of building a professional
+Lab X is a bonus lab, which consists of building a professional
 website.
 
 # Background
