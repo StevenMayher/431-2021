@@ -377,7 +377,7 @@ mean(chr_sample$adult_obesity)
 
 > We are interested in looking at `adult_obesity` as an outcome. Build a visualization and describe the center, spread, and shape of the distribution of this variable. Does a Normal model for this distribution seem appropriate? Why or why not?
 
-In the visualization below we have built a histogram, with the Normal distribution overlaid. We can see from this figure that our outcome of interest here, follows a Normal distribution quite closely. We observe a center right around 4.5 days (per month), and perhaps some minor right skew in this distribution.
+In the visualization below we have built a histogram, with the Normal distribution overlaid. We can see from this figure that our outcome of interest here, follows a Normal distribution quite closely. We observe a center right around 4.5 days (per month).
 
 ```{r}
 ggplot(data = chr_sample, aes(x = adult_obesity)) +
