@@ -1,6 +1,12 @@
 ## Project A Early Proposals and Some Thoughts on Titles
 
-We received early proposals from the following 12 groups. A "real" title would not contain 431, or Project A or Proposal in it, at least, and it should also make sense to the reader. A good title for this project is also no more than 120 characters long (ideally less than 80), including spaces and/or punctuation.
+### What is a Real Title for Project A?
+
+A "real" title would not contain 431, or Project A or Proposal in it, at least, and it should also make sense to the reader. A good title for this project is also no more than 120 characters long (ideally less than 80), including spaces and/or punctuation.
+
+### Groups of Two People
+
+We received early proposals from the following 12 groups. 
 
 - Grace Armstrong and Kiran Desai "Environmental Factors and their Impact on Life Expectancy"
 - Abigail Basson and Alise Carlson "The relationship between unemployment, violent crime, excessive alcohol consumption, food environment, and life expectancy in four neighboring states" which is way too long.
@@ -15,7 +21,9 @@ We received early proposals from the following 12 groups. A "real" title would n
 - Ying Xiong and Audrey Zhu "Investigating Median Household Income and Potential Influencing Factors in Six States from the 2021 County Health Rankings Dataset" which is also longer than it should be.
 - Modong Yang and Ziyin Zhao "The influence of unemployment, some college, food insecurity and income inequality on violent crime in counties in Midwest states" which is also too long, and needs some focus.
 
-and from the following 23 individuals:
+### Individual Proposals
+
+We received early proposals from the following 23 individuals:
 
 - Allison Bode "Effect of smoking, food insecurity, sleep, and diabetes on adult obesity rate in Ohio, California, Florida, and North Carolina"
 - Michael Douglass "Does Educating our Youth Have Anything to Do with Our Happiness?"
@@ -39,7 +47,9 @@ and from the following 23 individuals:
 - Jay Wei "How is number of mental health providers in the population, unemployment rate, number of poor mental health days, and percentage of the population that frequently feels mentally distressed related to suicide rate?" which is way too long.
 - Olivia Wilcox "Health Factors Associated with Teen Births"
 - Sneha Yamsani "How is Life Expectancy Effected Working in a Biotech Hub?" where I'm not happy with the use of the word "effected"
-- Jiayue Yang, who needs a real title
+- Jiayue Yang, who needs a real title.
+
+### No "Early Submission"
 
 We did not receive an early project proposal from these 16 people:
 
