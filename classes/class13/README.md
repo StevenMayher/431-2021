@@ -14,7 +14,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Announcements
 
 1. There is a Minute Paper after Class 13. Details to come.
-2. Lab 3 results and feedback will be posted by class time.
+2. Lab 3 results and feedback are available now on the [Course Grading Roster](https://bit.ly/431-2021-grades).
+    - Some Sample Plots, Code and Essays from Questions 4, 6 and 10 on Lab 3 that we liked are available to you on our Shared Google Drive in the **431 Lab 3 Examples** document.
 3. Project A Early Proposals are under review, and that will be complete by Wednesday.
 4. Quiz 1 results and feedback will be posted by Thursday's class time.
 
