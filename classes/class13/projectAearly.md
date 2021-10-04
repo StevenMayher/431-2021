@@ -62,7 +62,7 @@ OH CA FL NC | 313 | Allison Bode | "Effect of smoking, food insecurity, sleep, a
 OH AR CA IL | 323 | Michael Douglass | "Does Educating our Youth Have Anything to Do with Our Happiness?" | `v145`
 OH AK MA TX | 370 | Megan Foradori | "Comparing Care and Characteristics of Pregnant Mothers and Newborns in Selected US Counties" | `v037`
 OH NJ NY PA VT | 252 | Katie Heinzinger | "Predictors of Violent Crime from the 2021 County Health Rankings" which could use some focus. | `v043`
-OH AK CA MD SC | 241 | Kyaw Oo Hla | This proposal needs a real title.
+OH AK CA MD SC | 241 | Kyaw Oo Hla | This proposal needs a real title. | `v055`
 OH CA MA MD PA | 251 | Zahin Islam | "INVESTIGATING FACTORS THAT INFLUENCE MOTOR VEHICLE CRASH DEATHS" which should be presented in Title Case. Otherwise, you're shouting. Also it needs to be more specific, I think, about the types of "factors". | `v039`
 OH AK CO GA NJ WY | 376 | Chris Jones | This proposal needs a real title. | `v161`
 OH CA IL NY PA | 377 | Owen LaFramboise | "Effects of Numbers of Physicians on Health Behaviors in Democratic-Voting States" which is fine except I'd drop the "Effects of Numbers of" in favor of a tighter construction. | `v004`
@@ -80,5 +80,5 @@ OH CA MA MD MN | 271 | Ria Tilve | "Health and Socioeconomic Factors in Counties
 OH CA FL OR WA | 286 | Jay Wei | "How is number of mental health providers in the population, unemployment rate, number of poor mental health days, and percentage of the population that frequently feels mentally distressed related to suicide rate?" which is way too long. | `v161`
 OH MA NY VA WI | 369 | Olivia Wilcox | "Health Factors Associated with Teen Births" | `v014`
 OH CA IA MA NC WA | 398 | Sneha Yamsani | "How is Life Expectancy Effected Working in a Biotech Hub?" where I'm not happy with the use of the word "effected" | `v147`
-OH CA FL GA WA | *411* | Jiayue Yang | This proposal needs a real title, and it also needs a new selection of states.
+OH CA FL GA WA | *411* | Jiayue Yang | This proposal needs a real title, and it also needs a new selection of states. | `v147`
 
