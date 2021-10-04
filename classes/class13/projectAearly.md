@@ -24,6 +24,29 @@ And your R Markdown code has to run, and produce your HTML file.
 
 # Summarizing the Proposals
 
+## Outcomes Selected
+
+Code | Projects | Description
+:---: | :----: | ---------------------------------------------------------
+`v001` | 1 | Premature death
+`v002` | 1 | Poor or fair health
+`v004` | 1 | Primary care physicians
+`v011` | 2 | Adult obesity
+`v014` | 1 | Teen births
+`v023` | 2 | Unemployment
+`v036` | 1 | Poor physical health days
+`v037` | 3 | Low birthweight
+`v039` | 1 | Motor vehicle crash deaths (warning: 12.7% of values are missing nationally)
+`v042` | 1 | Poor mental health days (if this is your outcome, do not use `v145` as a predictor)
+`v043` | 3 | Violent crime
+`v061` | 1 | HIV prevalence (warning: 22.5% of values are missing nationally)
+`v063` | 1 | Median household income
+`v145` | 2 | Frequent mental distress (if this is your outcome, do not use `v042` as a predictor)
+`v147` | 7 | Life expectancy (this may be less interesting than you'd hope)
+`v155` | 1 | Flu vaccinations
+`v160` | 1 | Math scores (warning: 12.8% of values are missing nationally)
+`v161` | 3 | Suicides (warning: 22.2% of values are missing nationally)
+
 ## No "Early Submission"
 
 We did not receive an early project proposal from these 16 people:
@@ -62,7 +85,7 @@ OH CA FL NC | 313 | Allison Bode | "Effect of smoking, food insecurity, sleep, a
 OH AR CA IL | 323 | Michael Douglass | "Does Educating our Youth Have Anything to Do with Our Happiness?" | `v145`
 OH AK MA TX | 370 | Megan Foradori | "Comparing Care and Characteristics of Pregnant Mothers and Newborns in Selected US Counties" | `v037`
 OH NJ NY PA VT | 252 | Katie Heinzinger | "Predictors of Violent Crime from the 2021 County Health Rankings" which could use some focus. | `v043`
-OH AK CA MD SC | 241 | Kyaw Oo Hla | This proposal needs a real title. | `v055`
+OH AK CA MD SC | 241 | Kyaw Oo Hla | This proposal needs a real title, and a new outcome. | Needs a new outcome.
 OH CA MA MD PA | 251 | Zahin Islam | "INVESTIGATING FACTORS THAT INFLUENCE MOTOR VEHICLE CRASH DEATHS" which should be presented in Title Case. Otherwise, you're shouting. Also it needs to be more specific, I think, about the types of "factors". | `v039`
 OH AK CO GA NJ WY | 376 | Chris Jones | This proposal needs a real title. | `v161`
 OH CA IL NY PA | 377 | Owen LaFramboise | "Effects of Numbers of Physicians on Health Behaviors in Democratic-Voting States" which is fine except I'd drop the "Effects of Numbers of" in favor of a tighter construction. | `v004`
