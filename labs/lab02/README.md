@@ -6,7 +6,7 @@ All deadlines for 431 work, including this Lab, are posted in the [Course Calend
 
 ## After the Lab
 
-- Our draft answer sketch and grading rubric is now available [in pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab02/sketch/lab02_sketch.pdf) and [in R Markdown format](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab02/sketch/lab02_sketch.Rmd).
+- Our final answer sketch and grading rubric is now available [in pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab02/sketch/lab02_sketch.pdf) and [in R Markdown format](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab02/sketch/lab02_sketch.Rmd).
 - Grades and Feedback on the Lab are availble on the [Course Grading Roster](https://bit.ly/431-2021-grades).
 - Some Sample Essays from Lab 2 (question 8) that we liked are available to you on our Shared Google Drive in the **431 Lab 2 Essay Examples** document.
 
