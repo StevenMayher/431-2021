@@ -24,29 +24,6 @@ And your R Markdown code has to run, and produce your HTML file.
 
 # Summarizing the Proposals
 
-## Outcomes Selected
-
-Code | Projects | Description
-:---: | :----: | ---------------------------------------------------------
-`v001` | 1 | Premature death
-`v002` | 1 | Poor or fair health
-`v004` | 1 | Primary care physicians
-`v011` | 2 | Adult obesity
-`v014` | 1 | Teen births
-`v023` | 2 | Unemployment
-`v036` | 1 | Poor physical health days
-`v037` | 3 | Low birthweight
-`v039` | 1 | Motor vehicle crash deaths (warning: 12.7% of values are missing nationally)
-`v042` | 1 | Poor mental health days (if this is your outcome, do not use `v145` as a predictor)
-`v043` | 3 | Violent crime
-`v061` | 1 | HIV prevalence (warning: 22.5% of values are missing nationally)
-`v063` | 1 | Median household income
-`v145` | 2 | Frequent mental distress (if this is your outcome, do not use `v042` as a predictor)
-`v147` | 7 | Life expectancy (this may be less interesting than you'd hope)
-`v155` | 1 | Flu vaccinations
-`v160` | 1 | Math scores (warning: 12.8% of values are missing nationally)
-`v161` | 3 | Suicides (warning: 22.2% of values are missing nationally)
-
 ## No "Early Submission"
 
 We did not receive an early project proposal from these 16 people:
@@ -105,3 +82,25 @@ OH MA NY VA WI | 369 | Olivia Wilcox | "Health Factors Associated with Teen Birt
 OH CA IA MA NC WA | 398 | Sneha Yamsani | "How is Life Expectancy Effected Working in a Biotech Hub?" where I'm not happy with the use of the word "effected" | `v147`
 OH CA FL GA WA | *411* | Jiayue Yang | This proposal needs a real title, and it also needs a new selection of states. | `v147`
 
+## Outcomes Selected
+
+Code | Projects | Description
+:---: | :----: | :---------------------------------------------------------
+`v001` | 1 | Premature death
+`v002` | 1 | Poor or fair health
+`v004` | 1 | Primary care physicians
+`v011` | 2 | Adult obesity
+`v014` | 1 | Teen births
+`v023` | 2 | Unemployment
+`v036` | 1 | Poor physical health days
+`v037` | 3 | Low birthweight
+`v039` | 1 | Motor vehicle crash deaths (warning: 12.7% of values are missing nationally)
+`v042` | 1 | Poor mental health days (if this is your outcome, do not use `v145` as a predictor)
+`v043` | 3 | Violent crime
+`v061` | 1 | HIV prevalence (warning: 22.5% of values are missing nationally)
+`v063` | 1 | Median household income
+`v145` | 2 | Frequent mental distress (if this is your outcome, do not use `v042` as a predictor)
+`v147` | 7 | Life expectancy (this may be less interesting than you'd hope)
+`v155` | 1 | Flu vaccinations
+`v160` | 1 | Math scores (warning: 12.8% of values are missing nationally)
+`v161` | 3 | Suicides (warning: 22.2% of values are missing nationally)
