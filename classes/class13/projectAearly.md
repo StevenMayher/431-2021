@@ -35,27 +35,27 @@ States | Counties | Partners | Title (with comments from TEL)
 ----: | :----: | :----------------: | :----------------------
 OH CA FL NC | 313 | Allison Bode | "Effect of smoking, food insecurity, sleep, and diabetes on adult obesity rate in Ohio, California, Florida, and North Carolina"
 OH AR CA IL | 323 | Michael Douglass | "Does Educating our Youth Have Anything to Do with Our Happiness?"
-OH AK MA TX | 370 | 3. Megan Foradori | "Comparing Care and Characteristics of Pregnant Mothers and Newborns in Selected US Counties"
-OH NJ NY PA VT | 252 | 4. Katie Heinzinger | "Predictors of Violent Crime from the 2021 County Health Rankings" which could use some focus.
+OH AK MA TX | 370 | Megan Foradori | "Comparing Care and Characteristics of Pregnant Mothers and Newborns in Selected US Counties"
+OH NJ NY PA VT | 252 | Katie Heinzinger | "Predictors of Violent Crime from the 2021 County Health Rankings" which could use some focus.
 OH AK CA MD SC | 241 | Kyaw Oo Hla | This proposal needs a real title.
 OH CA MA MD PA | 251 | Zahin Islam | "INVESTIGATING FACTORS THAT INFLUENCE MOTOR VEHICLE CRASH DEATHS" which should be presented in Title Case. Otherwise, you're shouting. Also it needs to be more specific, I think, about the types of "factors".
 OH AK CO GA NJ WY | 376 | Chris Jones | This proposal needs a real title.
 OH CA IL NY PA | 377 | Owen LaFramboise | "Effects of Numbers of Physicians on Health Behaviors in Democratic-Voting States" which is fine except I'd drop the "Effects of Numbers of" in favor of a tighter construction
 OH CA CO IL NJ | 329 | Gen Li | This proposal needs a real title.
-OH AZ NM NV TX | 394 | 10. Rock Lim | This proposal needs a real title.
-OH IL NY PA | 319 | 11. Ryan McMaster | "How Exposure to Binge Drinking Effects At-Risk Children" which is ambitious, but that can be OK if you avoid making causal statements based on cross-sectional aggregated data.
-OH AL FL MA NJ | 257 | 12. Luis Mesias Flores | "The Relationship between Educational Predictors and Unemployment" which probably needs to be amplified a bit.
--- | -- | 13. Cerag Oguztuzun | This proposal needs a real title.
--- | -- | 14. Alex Olejko | "Predicting Math Scores Using Environmental Variables" which could use a little focus on the predictors.
--- | -- | 15. Thomas Raffay | This proposal needs a real title.
--- | -- | 16. Himani Sancheti | "Frequent Mental Health Distress Across Six Selected States in the US" which could be shortened a bit to bring in a predictor group, perhaps.
--- | -- | 17. Maryssa Shanteau-Jackson | "Analysis of Factors Contributing to Premature Deaths across the East Coast in comparison to OH", which needs a little adjustment.
--- | -- | 18. Neeti Shirke | "Investigating Contributing Factors to HIV Prevalence" which is also a bit ambitious, but that can be OK if you avoid making causal statements based on cross-sectional aggregated data.
--- | -- | 19. Ria Tilve | "Health and Socioeconomic Factors in Counties in States with the Best Hospitals"
+OH AZ NM NV TX | 394 | Rock Lim | This proposal needs a real title.
+OH IL NY PA | 319 | Ryan McMaster | "How Exposure to Binge Drinking Effects At-Risk Children" which is ambitious, but that can be OK if you avoid making causal statements based on cross-sectional aggregated data.
+OH AL FL MA NJ | 257 | Luis Mesias Flores | "The Relationship between Educational Predictors and Unemployment" which probably needs to be amplified a bit.
+OH CA FL MI OR SC | 376 | Cerag Oguztuzun | This proposal needs a real title.
+OH GA MI PA | 397 | Alex Olejko | "Predicting Math Scores Using Environmental Variables" which could use a little focus on the predictors.
+OH CA MA MS | 242 | Thomas Raffay | This proposal needs a real title.
+OH CA MA NC NY TN | *417* | Himani Sancheti | "Frequent Mental Health Distress Across Six Selected States in the US" which could be shortened a bit to bring in a predictor group, perhaps. This proposal also needs a new selection of states.
+OH GA MD NC | 371 | Maryssa Shanteau-Jackson | "Analysis of Factors Contributing to Premature Deaths across the East Coast in comparison to OH", which needs a little adjustment.
+OH GA NC TN VA | *575* | Neeti Shirke | "Investigating Contributing Factors to HIV Prevalence" which is also a bit ambitious, but that can be OK if you avoid making causal statements based on cross-sectional aggregated data. This proposal also needs a new selection of states.
+OH CA MA MD MN | 271 | Ria Tilve | "Health and Socioeconomic Factors in Counties in States with the Best Hospitals"
 OH CA FL OR WA | 286 | Jay Wei | "How is number of mental health providers in the population, unemployment rate, number of poor mental health days, and percentage of the population that frequently feels mentally distressed related to suicide rate?" which is way too long.
 OH MA NY VA WI | 369 | Olivia Wilcox | "Health Factors Associated with Teen Births"
--- | -- | 22. Sneha Yamsani | "How is Life Expectancy Effected Working in a Biotech Hub?" where I'm not happy with the use of the word "effected"
--- | -- | 23. Jiayue Yang | This proposal needs a real title.
+OH CA IA MA NC WA | 398 | Sneha Yamsani | "How is Life Expectancy Effected Working in a Biotech Hub?" where I'm not happy with the use of the word "effected"
+OH CA FL GA WA | *411* | Jiayue Yang | This proposal needs a real title, and it also needs a new selection of states.
 
 ## No "Early Submission"
 
