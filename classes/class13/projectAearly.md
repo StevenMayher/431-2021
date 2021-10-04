@@ -1,27 +1,33 @@
-## Project A Early Proposals and Some Thoughts on Titles
+# Project A Early Proposals and Some Thoughts on Titles
 
-### What is a Real Title for Project A?
+## What is a "Real Title" for Project A?
 
 A "real" title would not contain 431, or Project A or Proposal in it, at least, and it should also make sense to the reader. A good title for this project is also no more than 120 characters long (ideally less than 80), including spaces and/or punctuation.
 
-### Groups of Two People
+## How many counties should be in the tibble I create and describe in my codebook?
 
-We received early proposals from the following 12 groups. 
+**All** of the ranked counties from your selected states. This means, in particular, that you are **NOT** allowed to filter away missing values in any way. This number must fall between 200 and 400 counties. 199 are too few, and 401 are too many.
 
-1. Grace Armstrong and Kiran Desai "Environmental Factors and their Impact on Life Expectancy"
-2. Abigail Basson and Alise Carlson "The relationship between unemployment, violent crime, excessive alcohol consumption, food environment, and life expectancy in four neighboring states" which is way too long.
-3. Avantika Bhaduri and Anushree Iyengar "Factors Affecting Poor Physical Health Days in the United States" which is far too broad and needs focus.
-4. Erika Hutt Centeno and Alan Kiang "Predictors of Influenza Vaccination Rates" which could have a little more detail, although I like the focus on an outcome.
-5. Jeeda Ismail and Makaela Mews "Assessment of factors potentially influencing Poor Mental Health Days across geographical regions within the United States" which is too long, and needs some focus.
-6. Ben Kramer and Jacqueline Shaia "Social determinents of health association with life expectancy" which doesn't really work grammatically.
-7. Nick Latina and Kristi Lin-Rahardja, who need a real title.
-8. Harrison Lindley and Sarah Nock "EXPLORING POTENTIAL CORRELATES OF SUICIDE AND POOR MENTAL HEALTH AT THE COUNTY LEVEL ACROSS FIVE STATES" which should be presented in Title Case. Otherwise, you're shouting. I would also avoid "potential correlates" as a phrase.
-9. Norman Luc and Shruti Raghunathan, who need a real title.
-10. Carly Rose and Diya Yang, who also need a real title.
-11. Ying Xiong and Audrey Zhu "Investigating Median Household Income and Potential Influencing Factors in Six States from the 2021 County Health Rankings Dataset" which is also longer than it should be.
-12. Modong Yang and Ziyin Zhao "The influence of unemployment, some college, food insecurity and income inequality on violent crime in counties in Midwest states" which is also too long, and needs some focus.
+## Groups of Two People
 
-### Individual Proposals
+We received early proposals from the following 12 groups. Please check the information below to be sure it matches your understanding of the data. If your list of states or count of ranked counties doesn't match ours, there's an issue you need to resolve.
+
+States | Counties | Partners | Title (with comments from TEL)
+----: | :----: | :----------------: | :----------------------
+OH AZ CA FL LA ME | 308  | Grace Armstrong and Kiran Desai | "Environmental Factors and their Impact on Life Expectancy" |  
+OH KY PA WV | 330 | Abigail Basson and Alise Carlson | "The relationship between unemployment, violent crime, excessive alcohol consumption, food environment, and life expectancy in four neighboring states" which is way too long. 
+OH CA MS NY WY | 313 | Avantika Bhaduri and Anushree Iyengar | "Factors Affecting Poor Physical Health Days in the United States" which is far too broad and needs focus.  
+OH CA GA WV | 360 | Erika Hutt Centeno and Alan Kiang | "Predictors of Influenza Vaccination Rates" which could have a little more detail, although I like the focus on an outcome.
+OH CA FL KS NY | 379 | Jeeda Ismail and Makaela Mews | "Assessment of factors potentially influencing Poor Mental Health Days across geographical regions within the United States" which is too long, and needs some focus.
+OH NY PA VA | 350 | Ben Kramer and Jacqueline Shaia | "Social determinents of health association with life expectancy" which doesn't really work grammatically.
+OH CA FL IA KS MA | *430* | Nick Latina and Kristi Lin-Rahardja | This group needs a real title, and a new set of states.
+OH AL MD NM OR | 245 | Harrison Lindley and Sarah Nock | "EXPLORING POTENTIAL CORRELATES OF SUICIDE AND POOR MENTAL HEALTH AT THE COUNTY LEVEL ACROSS FIVE STATES" which should be presented in Title Case. Otherwise, you're shouting. I would also avoid "potential correlates" as a phrase.
+OH ME NM OR TN | 265 | Norman Luc and Shruti Raghunathan | This group needs a real title.
+OH AK AZ CO MA MS | 284 | Carly Rose and Diya Yang | This group also needs a real title.
+OH CA MN MS MT WA | *402* | Ying Xiong and Audrey Zhu | "Investigating Median Household Income and Potential Influencing Factors in Six States from the 2021 County Health Rankings Dataset" which is also longer than it should be. This group also needs a new selection of states.
+OH IL IN MI | 365 | Modong Yang and Ziyin Zhao | "The influence of unemployment, some college, food insecurity and income inequality on violent crime in counties in Midwest states" which is also too long, and needs some focus. This group also needs a new selection of states, since, as noted in the instructions: "your final selection of states (besides Ohio) must include at least one state **other than** Indiana, Illinois, Michigan and Wisconsin." 
+
+## Individual Proposals
 
 We received early proposals from the following 23 individuals:
 
@@ -49,7 +55,7 @@ We received early proposals from the following 23 individuals:
 22. Sneha Yamsani "How is Life Expectancy Effected Working in a Biotech Hub?" where I'm not happy with the use of the word "effected"
 23. Jiayue Yang, who needs a real title.
 
-### No "Early Submission"
+## No "Early Submission"
 
 We did not receive an early project proposal from these 16 people:
 
