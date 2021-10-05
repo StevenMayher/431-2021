@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-> Starter to come.
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/images/harrell_2021-10-04.png) [Link is here](https://twitter.com/f2harrell/status/1445005342535036935?s=11)
 
 ## Today's Slides
 
@@ -28,28 +28,34 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - Using the Box-Cox ladder (family) of power transformations and the `boxCox()` and `powerTransform()` functions provided by the `car` package.
     - Developing a Cleveland dot plot to visualize the results of a situation where we might otherwise use a bar chart.
 
-## Announcements Specific to 431
+## Announcements
 
 1. There is a [Minute Paper after Class 13](https://bit.ly/431-2021-minute-13) due tomorrow (Wednesday 2021-10-06) at noon.
-2. Lab 3 results and feedback are available now on the [Course Grading Roster](https://bit.ly/431-2021-grades).
+2. The [Informatics Technology for Cancer Research (ITCR)](https://www.itcrtraining.org/) is producing free courses, events and software for anyone working in cancer informatics, statistics, data science, or computational biology. The goals are to increase awareness, usability and access for cancer informatics tools, improve practices and strategies for informatics work, and enhance awareness and access for informatics resources.
+3. Lab 3 results and feedback are available now on the [Course Grading Roster](https://bit.ly/431-2021-grades).
     - Some Sample Plots, Code and Essays from Questions 4, 6 and 10 on Lab 3 that we liked are available to you on our Shared Google Drive in the **431 Lab 3 Examples** document.
     - We tweaked the response to Question 6 on the Sketch last night to include the `state`.
-3. Project A Early Proposals are under review, and are almost complete now. Look for results on [Canvas](https://canvas.case.edu). Here are [some thoughts on a few elements of the submissions](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md).
+4. Project A Early Proposals have all been reviewed. Look for results on [Canvas](https://canvas.case.edu). Here are [some thoughts on a few elements of the submissions](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md), which includes some advice for each of you on maximizing your chances of completing this task successfully on the first try.
+    - Remember that our Shared Google Drive and the [Project A proposal instructions](https://thomaselove.github.io/431-2021-projectA/proposal.html) provide a list of the 13 things we're looking most closely at in evaluating these proposals.
+5. We've updated the [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) instructions a little to provide some additional guidance, and will continue to do so as the semester continues. If you come across something useful, please let us know.
 
-### Next Steps after Quiz 1. 
+## Quiz 1 and Next Steps. 
 
 - Here is the [PDF of Quiz 1 Results](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1). This includes complete answers to all items, along with results for the class by item and overall. Please review this document closely.
 - You should have heard from me at least twice last night (or this morning) via email, first with the rough contours of your performance on the Quiz in an email with subject heading either **431 Quiz 1 scores coming soon** or just **431 Quiz 1**, and then a separate email with an individual report of points scored on each item, which has the subject heading **431: Your Quiz 1 Results**. Contact me by email if you're missing any of this information.
 
 Regardless of your score, my suggestion at this point is that the most useful things to do will be to:
 
-1. review the [Quiz 1 answer sketch and results document](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1) and ensure that you understand (through discussion with TAs or myself as needed) what the right thing to do was for each item you missed and confirm your reasoning on the items you got right. I would prefer that you start this process with the TAs when possible, and otherwise email me.
-2. then forget about Quiz 1 and move forward to demonstrate solid performance (perhaps even a little improvement) on Quiz 2 (in three weeks time) and on Project A, in particular, while not ignoring our other assignments.
+1. Review the [Quiz 1 answer sketch and results document](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1) and ensure that you understand (through discussion with TAs or myself as needed) what the right thing to do was for each item you missed and confirm your reasoning on the items you got right. *I would prefer that you start this process with the TAs when possible, and otherwise email me.*
+2. If you think I've misgraded your Quiz, let me know via email as soon as possible.
+3. Then forget about Quiz 1 and move forward to demonstrate solid performance (perhaps even a little improvement) on Quiz 2 (in three weeks time) and on Project A, in particular, while not ignoring our other assignments.
 
-## Other Announcements
-
-- The [Informatics Technology for Cancer Research (ITCR)](https://www.itcrtraining.org/) is producing free courses, events and software for anyone working in cancer informatics, statistics, data science, or computational biology. The goals are to increase awareness, usability and access for cancer informatics tools, improve practices and strategies for informatics work, and enhance awareness and access for informatics resources.
 
 ## One Last Thing
 
+[Undergraduate Statistics Degrees Up 474% Since 2010](https://magazine.amstat.org/blog/2021/10/01/undergrad-stats-degrees-up/)
+
+2020 degree data released this summer is summarized in Amstat News for statistics and biostatistics in its October issue. Here's a plot I found particularly interesting.
+
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/images/women_degrees.png)
 
