@@ -35,7 +35,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 3. Lab 3 results and feedback are available now on the [Course Grading Roster](https://bit.ly/431-2021-grades).
     - Some Sample Plots, Code and Essays from Questions 4, 6 and 10 on Lab 3 that we liked are available to you on our Shared Google Drive in the **431 Lab 3 Examples** document.
     - We tweaked the response to Question 6 on the Sketch last night to include the `state`.
-4. Beginning with Lab 4, we will **change our policy** on Labs that arrive to Canvas more than 1 hour late. Going forward, we will only accept late Lab work for Labs 4-7 if:
+4. Beginning with [Lab 4](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/lab04.md), which is due Monday 2021-10-11 at 9 PM, we will **change our policy** on Labs that arrive to Canvas more than 1 hour late. Going forward, we will only accept late Lab work for Labs 4-7 if:
     - the Lab is submitted to Canvas successfully between 1 and 12 hours after the deadline (i.e. by Tuesday at 9 AM), in which case you will be eligible for 90% of the available points
     - you contact Dr. Love by 12 hours after the original deadline (by Tuesday at 9 AM) to request extra time, in which case your lab will still be graded (and you will be eligible for up to 75% of available points) if your lab is completely submitted to Canvas 12-72 hours (so by Thursday at 9 PM) after the original deadline.
     - I will formalize this into the Syllabus and Lab instructions as soon as I can - I hope by class time on Thursday.
