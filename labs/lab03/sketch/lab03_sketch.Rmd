@@ -350,7 +350,7 @@ set.seed(20212022)
 chr_sample <- slice_sample(lab03_chr, n = 750)
 
 chr_sample <- chr_sample %>%
-  select(county_name, adult_obesity, food_insecurity)
+  select(state, county_name, adult_obesity, food_insecurity)
 ```
 
 Now we want to verify 2 things. First that Cuyahoga County does, in fact, appear in our sample.
