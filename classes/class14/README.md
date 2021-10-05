@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-> Starter to come.
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class14/images/kruskal.png) [Link](https://twitter.com/datascifact/status/1445090102837972996?s=11)
 
 ## Today's Slides
 
