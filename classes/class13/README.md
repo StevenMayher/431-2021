@@ -35,11 +35,11 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - Some Sample Plots, Code and Essays from Questions 4, 6 and 10 on Lab 3 that we liked are available to you on our Shared Google Drive in the **431 Lab 3 Examples** document.
     - We tweaked the response to Question 6 on the Sketch last night to include the `state`.
 3. Project A Early Proposals are under review, and are almost complete now. Look for results on [Canvas](https://canvas.case.edu). Here are [some thoughts on a few elements of the submissions](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md).
-4. Quiz 1 results and feedback.
-    - Here is the [PDF of Quiz 1 Results](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1). This includes complete answers to all items, along with results for the class by item and overall. Please review this document closely.
-    - You should have heard from me twice last night via email, first with the rough contours of your performance on the Quiz in an email with subject heading either **431 Quiz 1 scores coming soon** or just **431 Quiz 1**, and then a separate email with an individual report of points scored on each item, which has the subject heading **431: Your Quiz 1 Results**. Contact me by email if you're missing any of this information.
 
 ### Next Steps after Quiz 1. 
+
+- Here is the [PDF of Quiz 1 Results](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1). This includes complete answers to all items, along with results for the class by item and overall. Please review this document closely.
+- You should have heard from me at least twice last night (or this morning) via email, first with the rough contours of your performance on the Quiz in an email with subject heading either **431 Quiz 1 scores coming soon** or just **431 Quiz 1**, and then a separate email with an individual report of points scored on each item, which has the subject heading **431: Your Quiz 1 Results**. Contact me by email if you're missing any of this information.
 
 Regardless of your score, my suggestion at this point is that the most useful things to do will be to:
 
