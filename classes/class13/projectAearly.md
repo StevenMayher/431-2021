@@ -56,7 +56,7 @@ OH IL IN MI | 365 | Modong Yang and Ziyin Zhao | "The influence of unemployment,
 
 We received early proposals from the following 23 individuals. Please check the information below to be sure it matches your understanding of the data. If your list of states or count of ranked counties doesn't match ours or if our listed outcome doesn't match yours, there's an issue you need to resolve in your revision.
 
-States | Counties | Partners | Title (with comments from TEL) | Outcome
+States | Counties | Investigator | Title (with comments from TEL) | Outcome
 ----: | :----: | :----------------: | :---------------------- | :---:
 OH CA FL NC | 313 | Allison Bode | "Effect of smoking, food insecurity, sleep, and diabetes on adult obesity rate in Ohio, California, Florida, and North Carolina" | `v011`
 OH AR CA IL | 323 | Michael Douglass | "Does Educating our Youth Have Anything to Do with Our Happiness?" | `v145`
