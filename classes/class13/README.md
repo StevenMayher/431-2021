@@ -51,7 +51,8 @@ Regardless of your score, my suggestion at this point is that the most useful th
 
 1. Review the [Quiz 1 answer sketch and results document (pdf)](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz1/quiz1_and_sketch.pdf) and ensure that you understand (through discussion with TAs or myself as needed) what the right thing to do was for each item you missed and confirm your reasoning on the items you got right. *I would prefer that you start this process with the TAs when possible, and otherwise email me.*
 2. If you think I've misgraded your Quiz, let me know via email as soon as possible.
-3. Then forget about Quiz 1 and move forward to demonstrate solid performance (perhaps even a little improvement) on Lab 4 (due Monday), on Project A (proposal also due Monday), and on Quiz 2 (in three weeks time) while not ignoring our other assignments. Give yourself a break.
+3. Then forget about Quiz 1 and move forward to demonstrate solid performance (perhaps even a little improvement) on Lab 4 (due Monday), on Project A (proposal also due Monday), and on Quiz 2 (in three weeks time) while not ignoring our other assignments. 
+4. If you're upset about your score, give yourself a break. Lots of people do better in the course as a whole than on Quiz 1. You can be one of those people.
 
 ## Project A Early Proposals
 
