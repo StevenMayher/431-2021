@@ -8,8 +8,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Today's Slides
 
-- There are no slides for today's class. 
-- Instead, we'll discuss an Example about States and Counties, for which we have [this R Markdown file](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/statesandcounties.Rmd) and [this HTML result](https://rpubs.com/TELOVE/states-counties-431-example).
+- There are no slides for today's class. Instead, we'll discuss (among other things) an Example about States and Counties, for which we have [this R Markdown file](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/statesandcounties.Rmd) and [this HTML result](https://rpubs.com/TELOVE/states-counties-431-example).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Today's Agenda
