@@ -35,9 +35,13 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 3. Lab 3 results and feedback are available now on the [Course Grading Roster](https://bit.ly/431-2021-grades).
     - Some Sample Plots, Code and Essays from Questions 4, 6 and 10 on Lab 3 that we liked are available to you on our Shared Google Drive in the **431 Lab 3 Examples** document.
     - We tweaked the response to Question 6 on the Sketch last night to include the `state`.
-4. Project A Early Proposals have all been reviewed. Look for results on [Canvas](https://canvas.case.edu). Here are [some thoughts on a few elements of the submissions](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md), which includes some advice for each of you on maximizing your chances of completing this task successfully on the first try.
+4. Beginning with Lab 4, we will change our policy on Labs that arrive to Canvas more than 1 hour late. Going forward, we will only accept late Lab work for Labs 4-7 if:
+    - the Lab is submitted to Canvas successfully between 1 and 12 hours after the deadline (i.e. by Tuesday at 9 AM), in which case you will be eligible for 90% of the available points
+    - you contact Dr. Love by 12 hours after the original deadline (by Tuesday at 9 AM) to request extra time, in which case your lab will still be graded (and you will be eligible for up to 75% of available points) if your lab is completely submitted to Canvas 12-72 hours (so by Thursday at 9 PM) after the original deadline.
+    - I will formalize this into the Syllabus and Lab instructions as soon as I can - I hope by class time on Thursday.
+5. Project A Early Proposals have all been reviewed. Look for results on [Canvas](https://canvas.case.edu). Here are [some thoughts on a few elements of the submissions](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md), which includes some advice for each of you on maximizing your chances of completing this task successfully on the first try.
     - Remember that our Shared Google Drive and the [Project A proposal instructions](https://thomaselove.github.io/431-2021-projectA/proposal.html) provide a list of the 13 things we're looking most closely at in evaluating these proposals.
-5. We've updated the [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) instructions a little to provide some additional guidance, and will continue to do so as the semester continues. If you come across something useful, please let us know.
+6. We've updated the [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) instructions a little to provide some additional guidance, and will continue to do so as the semester continues. If you come across something useful, please let us know.
 
 ## Quiz 1 and Next Steps. 
 
