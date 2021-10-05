@@ -26,9 +26,9 @@ All labs are graded by the TAs and then reviewed by Dr. Love. Your grades will b
 
 All Labs should be turned in by the deadline specified on the [Course Calendar](https://thomaselove.github.io/431/calendar.html). We don't actually give extensions on Labs. Instead, we use the following grading policy.
 
-- Labs that are turned in after the deadline but before the Answer Sketch for the Lab is posted (usually noon the next day) can receive up to 90% of available points.
-- Labs turned in after the Answer Sketch is posted, but within one week of the deadline can receive up to 75% of available points.
-- Labs turned in one week or later after the deadline will receive no credit.
+- Labs that are turned in up to 12 hours after the deadline can receive up to 90% of available points.
+- Labs turned in 12-72 hours after the deadline can receive up to 75% of available points **only if** the student has contacted Dr. Love via email to request this opportunity by 12 hours after the deadline.
+- Labs turned in more than 72 hours after the deadline will receive no credit.
 - Your single lowest Lab grade (out of the first seven Labs) will be dropped before we calculate your Lab grade for the course. 
 
 ## Grading Errors and Regrade Requests
