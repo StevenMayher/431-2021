@@ -6,7 +6,7 @@
 
 After Class | due at NOON on | Link to Minute Paper Form 
 ----------: | ------: | :--------: 
-13 (2021-10-05) | 2021-10-06 | to come
+13 (2021-10-05) | 2021-10-06 | https://bit.ly/431-2021-minute-13
 
 ## Completed Minute Papers
 
