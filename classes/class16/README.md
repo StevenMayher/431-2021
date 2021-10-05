@@ -17,4 +17,4 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## One Last Thing
 
-To come.
+It's still a couple of weeks away, but you may be interested in [The Ultimate Halloween Candy Power Ranking](https://fivethirtyeight.com/videos/the-ultimate-halloween-candy-power-ranking/) from Walt Hickey and the good folks at FiveThirtyEight. The original post is now five years old, but it's still a really enjoyable piece, accompanied by a video describing the methods and conclusions.
