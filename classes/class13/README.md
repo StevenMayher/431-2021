@@ -39,9 +39,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - the Lab is submitted to Canvas successfully between 1 and 12 hours after the deadline (i.e. by Tuesday at 9 AM), in which case you will be eligible for 90% of the available points
     - you contact Dr. Love by 12 hours after the original deadline (by Tuesday at 9 AM) to request extra time, in which case your lab will still be graded (and you will be eligible for up to 75% of available points) if your lab is completely submitted to Canvas 12-72 hours (so by Thursday at 9 PM) after the original deadline.
     - I will formalize this into the Syllabus and Lab instructions as soon as I can - I hope by class time on Thursday.
-5. Project A Early Proposals have all been reviewed. Look for results on [Canvas](https://canvas.case.edu). Here are [some thoughts on a few elements of the submissions](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md), which includes some advice for each of you on maximizing your chances of completing this task successfully on the first try.
-    - Remember that our Shared Google Drive and the [Project A proposal instructions](https://thomaselove.github.io/431-2021-projectA/proposal.html) provide a list of the 13 things we're looking most closely at in evaluating these proposals.
-6. We've updated the [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) instructions a little to provide some additional guidance, and will continue to do so as the semester continues. If you come across something useful, please let us know.
+5. We've updated the [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) instructions a little to provide some additional guidance, and will continue to do so as the semester continues. If you come across something useful, please let us know.
 
 ## Quiz 1 and Next Steps. 
 
@@ -54,6 +52,13 @@ Regardless of your score, my suggestion at this point is that the most useful th
 2. If you think I've misgraded your Quiz, let me know via email as soon as possible.
 3. Then forget about Quiz 1 and move forward to demonstrate solid performance (perhaps even a little improvement) on Quiz 2 (in three weeks time) and on Project A, in particular, while not ignoring our other assignments.
 
+## Project A Early Proposals
+
+Project A Early Proposals have all been reviewed by the TAs and (most of them) by me, too. 
+
+- Look for results on [Canvas](https://canvas.case.edu). 
+- We'll spend some time going over these [thoughts on a few elements of the submissions](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md), which includes some advice for each of you on maximizing your chances of completing this task successfully on the first try.
+    - Remember that our Shared Google Drive and the [Project A proposal instructions](https://thomaselove.github.io/431-2021-projectA/proposal.html) provide a list of the 13 things we're looking most closely at in evaluating these proposals.
 
 ## One Last Thing
 
