@@ -14,6 +14,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Today's Agenda
 
 1. Announcements, including ...
+    - A change in late Lab policy, effective with Lab 4
     - Discussion of Early Project A Proposals
     - Quiz 1 results and feedback
 2. The [States, Counties and Population Example](https://rpubs.com/TELOVE/states-counties-431-example)
