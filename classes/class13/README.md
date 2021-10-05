@@ -17,7 +17,10 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 2. Lab 3 results and feedback are available now on the [Course Grading Roster](https://bit.ly/431-2021-grades).
     - Some Sample Plots, Code and Essays from Questions 4, 6 and 10 on Lab 3 that we liked are available to you on our Shared Google Drive in the **431 Lab 3 Examples** document.
 3. Project A Early Proposals are under review, and that will be complete by Wednesday. Look for results on [Canvas](https://canvas.case.edu). Here are [some thoughts on a few elements of the submissions](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md).
-4. Quiz 1 results and feedback will be posted by Thursday's class time.
+4. Quiz 1 results and feedback.
+    - Here is the [PDF of Quiz 1 Results](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1). This includes complete answers to all items, along with results for the class by item and overall. Please review this document closely.
+    - Most of you heard from me last night with the rough contours of your performance on the Quiz. 
+    - I am still working on getting individual reports (with points scored on each item) to each of you. They'll come via email.
 
 ## One Last Thing
 
