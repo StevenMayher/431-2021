@@ -28,13 +28,22 @@ worth considering using this opportunity to craft your online presence.
 
 There is a tutorial, which follows Wyatt’s approach, written by Dan
 Quintana [here](https://www.dsquintana.blog/free-website-in-r-easy/).
-However, in 2020 Dan updated his tutorial to use Visual Studio Code
+
+**However**, in 2020 Dan updated his tutorial to use Visual Studio Code
 instead, which can be found
 [here](https://www.dsquintana.blog/create-an-academic-website-free-easy-2020/).
+
+Then in the [latest update to `blogdown`](https://bookdown.org/yihui/blogdown/), even more things have changed. 
+Here are some newer links that may help get this done using R:
+
+- https://bookdown.org/yihui/blogdown/ and the many links within
+- https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/ which may actually be a good option for some of you to start with.
+
 Follow whichever approach is best for you and you feel most comfortable
 with, or use the web to find some other options for how to best do this
-sort of thing using R or another tool that is available to you. The key
-thing is to commit to making this a part of your life going forward,
+sort of thing using R **or** any other tool that is available to you. 
+
+The key thing is to commit to making this a part of your life going forward,
 however you most effectively do that.
 
 # Submitting your Website
