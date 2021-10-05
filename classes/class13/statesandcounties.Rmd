@@ -1,0 +1,551 @@
+---
+title: "States, Counties and Population"
+author: "Thomas E. Love"
+date: "An Example for 431 Class 13: 2021-10-05"
+output: 
+    html_document:
+        code_folding: show
+        toc: TRUE
+        toc_float: TRUE
+        number_sections: TRUE
+        df_print: paged
+---
+
+# Goals and Objectives
+
+## Three Research Questions
+
+1. Among counties ranked in the 2021 County Health Rankings data, what is the nature of the association between the number of counties in a state, and the state's population?
+2. Which states have *larger* populations than we'd expect, based on their number of counties? 
+3. Which states have *smaller* populations than we'd expect, based on their county count?
+
+## What is new here?
+
+1. Using `group_by` and `summarize` to aggregate hierarchical data to a new level of analysis (from counties to "states.")
+2. Labeling all of the points within a scatterplot.
+3. Switching from scientific notation to "comma" notation in a `ggplot`.
+4. The complete set of `glance()` results for a linear model.
+5. Answering a scientific question about the efficacy of a model in terms of poorly-fit points.
+6. Assessing the largest outlier in a regression model with standardized residuals, studentized residuals, and an outlier test provided by outlierTest() from the `car` package.
+7. Using the Box-Cox ladder (family) of power transformations and the boxCox() and powerTransform() functions provided by the `car` package.
+8. Developing a Cleveland dot plot to visualize the results of a situation where we might otherwise use a bar chart.
+
+# Setup
+
+## The YAML code used here
+
+The YAML code used in this example is listed below...
+
+```
+title: "States, Counties and Population"
+author: "Thomas E. Love"
+date: "An Example for 431 Class 13: 2021-10-05"
+output: 
+    html_document:
+        code_folding: show
+        toc: TRUE
+        toc_float: TRUE
+        number_sections: TRUE
+        df_print: paged
+```
+
+## Packages and Settings
+
+```{r, message = FALSE}
+knitr::opts_chunk$set(comment=NA)
+
+library(broom)
+library(car) # note: new today
+library(glue)
+library(janitor)
+library(tidyverse)
+
+theme_set(theme_light())
+```
+
+# Data Ingest and Key Variables
+
+We're looking at the 2021 County Health Rankings data you're using for Project A.
+
+- Data are available at the county level.
+- Variable `v051_rawvalue` describes the county's population.
+- `county_ranked` indicates if the county is ranked by County Health Rankings.
+
+```{r, message = FALSE}
+data_url <- "https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2021.csv"
+chr_2021_raw <- read_csv(data_url, skip = 1)
+
+chr_2021_today <- chr_2021_raw %>% 
+    select(fipscode, state, county, 
+           county_ranked, v051_rawvalue) %>%
+    filter(county_ranked == 1)
+```
+
+## State-Specific Counts
+
+For each of the "states" we are counting:
+
+- the number of ranked counties in 2021 CHR data
+- the population across those counties
+
+Here, we use `group_by()` and `summarize()` to help us change the unit of analysis from the county to the "state" (I use "state" since DC is included.)
+
+```{r}
+table1 <- chr_2021_today %>% 
+    group_by(state) %>%
+    summarize(ranked_counties = n(), 
+              state_popn = sum(v051_rawvalue))
+
+table1
+```
+
+- `table1` will be our data set for the remaining work in this Example.
+- The ranked counties identified here, in total, account for `r sum(table1$ranked_counties)` counties and `r format(sum(table1$state_popn), scientific = FALSE)` people.
+
+# Modeling: Approach A
+
+## A labeled scatterplot
+
+Model state population as a function of its number of ranked counties.
+
+```{r}
+ggplot(table1, aes(x = ranked_counties, 
+                   y = state_popn, label = state)) +
+    geom_label(size = 3) +
+    geom_smooth(method = "lm", col = "red",
+                formula = y ~ x, se = TRUE) +
+    geom_smooth(method = "loess", col = "blue",
+                formula = y ~ x, se = FALSE) + 
+    labs(title = "Approach A: No Transformation",
+         subtitle = glue('Pearson correlation of state_popn and ranked_counties is {round_half_up(cor(table1$state_popn, table1$ranked_counties),2)}'),
+         caption = "Note that, for example, 1e+07 = 10 million residents")
+```
+
+## Eliminating Scientific Notation
+
+Note the use of `scales::comma` here.
+
+```{r}
+ggplot(table1, aes(x = ranked_counties, 
+                   y = state_popn, label = state)) +
+    geom_label(size = 3) +
+    geom_smooth(method = "lm", col = "red",
+                formula = y ~ x, se = TRUE) +
+    geom_smooth(method = "loess", col = "blue",
+                formula = y ~ x, se = FALSE) + 
+    scale_y_continuous(labels = scales::comma) +
+    labs(title = "Approach A: No Transformation",
+         subtitle = glue('Pearson correlation of state_popn and ranked_counties is {round_half_up(cor(table1$state_popn, table1$ranked_counties),2)}'))
+```
+
+## Model A
+
+```{r}
+modelA <- lm(state_popn ~ ranked_counties, data = table1)
+tidy(modelA, conf.int = TRUE, conf.level = 0.95)
+```
+
+# What is in the `glance()` function for a linear model?
+
+```{r}
+glance(modelA)
+```
+
+
+- $R^2$ or `r.squared` is the proportion of variation in our outcome (here, `state_popn`) accounted for by the model using `ranked_counties` as a predictor. As you might expect, this is the square of the Pearson correlation coefficient.
+
+- Adjusted $R^2$, or `adj.r.squared` is not a proportion of anything, but rather an index that penalizes the $R^2$ value for the number of predictors in the model. This helps combat against a certain form of overfitting, where the greediness of $R^2$ (it never decreases even if you add predictors with no association with the outcome) causes model-builders to overstate the quality of fit. 
+- If $n$ is the number of observations used to fit the model, and $p$ is the number of predictors (not counting the intercept term) used in the model, then:
+
+$$
+R^2_{adj} = 1 - \left[ \frac{(1 - R^2)(n - 1)}{n - p - 1} \right]
+$$
+
+- The estimated standard error of the residuals, `.sigma` or $\hat{\sigma}$.
+- The test statistic (F test), called `statistic`, which helps generate the ...
+- *p* value for the ANOVA F test, called `p.value`.
+- `df` = degrees of freedom from the numerator of the ANOVA F test statistic, which is essentially a count of the non-intercept coefficients estimated by the model. This was $p$ in our discussion of adjusted $R^2$.
+- `logLik` = the log-likelihood of the model, which will help us estimate ...
+- `AIC` = the Akaike Information Criterion for the model (lower values indicate better fits)
+- `BIC` = the Bayesian Information Criterion for the model (lower values indicate better fits)
+- `deviance` = the model deviance, which we'll skip for now...
+- `df.residual` = degrees of freedom from the residual (denominator) of the ANOVA F test. This is $n - p - 1$ from our adjusted $R^2$ discussion.
+- `nobs` = number of observations used to fit the model. This is $n$.
+
+
+# Assessing Residuals (Model A)
+
+## Basic Two Residual Plots
+
+```{r}
+par(mfrow = c(1,2))
+plot(modelA, which = c(1:2))
+```
+
+- Consider what these plots have to say about the assumptions of **linearity**, **constant variance** and **Normality**.
+- Is it reasonable to assume that the data and model A support the assumptions of linear regression?
+
+Which states have the largest residuals? Looks like row numbers 5, 10 and 35
+
+```{r}
+modA_aug <- augment(modelA, data = table1)
+
+slice(modA_aug, c(5, 10, 35))
+```
+
+## Addressing Question 2
+
+Which states have more population than we'd expect, based on their number of counties? 
+
+Here are the six states with the largest positive residual from Model A. 
+
+```{r}
+modA_aug %>% arrange(desc(.resid)) %>% head()
+```
+
+- For example, California (CA) has 58 counties, which creates a prediction of 6.255 million people instead of the 39.5 million in population it actually has, so  the residual is 33.256 million people.
+- What are the characteristics of these states? Note that the list below shows the top six states in terms of population.
+
+```{r}
+modA_aug %>% arrange(desc(state_popn)) %>% head()
+```
+
+## Addressing Question 3
+
+Which states have smaller populations than we'd expect, based on their county count?
+
+Here are the six states with the largest negative residual from Model A. 
+
+```{r}
+modA_aug %>% arrange(.resid) %>% head()
+```
+
+- For example, Kansas (KS) has 104 counties, which creates a prediction of 9.669 million people instead of the 2.912 million in population Kansas' counties have, so the residual is 6.756 million people.
+
+## Standardized Residuals
+
+- What does a standardized residual of 5.1 (for California) mean in a sample of 51?
+- The standardized residual is compared to a Normal distribution with mean 0 and standard deviation 1.
+
+```{r}
+pnorm(q = 5.1, mean = 0, sd = 1, lower.tail = FALSE)
+```
+
+- So, 1.7e-07 or 0.00000017 is the probability that a Normal distribution with mean 0 and standard deviation 1 would give us a result of 5.1 or higher. 
+- 5 standard deviations above the mean should happen less often than 1.7 times in 10,000,000 attempts.
+- Can we give some level of understanding/context to that scale?
+    - US population average deaths due to lightning per year is usually around 30, so the population yearly average is about 1 in 10 million.
+- Sometimes it's helpful to think of a [microlife](https://en.wikipedia.org/wiki/Microlife) - a unit of risk representing half an hour change of life expectancy, 1,000,000 half-hours is about 57 years and that roughly corresponds to a lifetime of adult exposure.
+    - For instance, taking a statin is generally gaining you about 1 microlife per day of exposure, based on estimated life expectancy effects for men and women aged 35 years.
+    - More examples are available on the [microlife Wikipedia page](https://en.wikipedia.org/wiki/Microlife) and similar information is available on a [micromort] which is a unit of risk defined as a 1 in a million chance of death.
+    - 1.7 ten-millionths of an average adult lifetime is about a 1/6 of a microlife, or about a 5 minute change in adult life expectancy.
+    - The risk here is roughly equivalent to the additional risk expectancy associated with traveling 1 mile by motorcycle.
+
+
+## Standardized vs. Studentized Residuals
+
+- The **residual** for the $i$th observation is $e_i$ = observed - predicted value for the $i$th observation
+- We have at least two different types of standardized residuals, in each case obtained by dividing the residuals by an estimate of its standard deviation.
+    - Standardized residuals (also called internally studentized residuals) are calculated by taking into account the data point's leverage on the model.
+    - Studentized residuals (also called externally studentized residuals) are calculated from a model fit to every data point except the one you're evaluating.
+
+Technically, a standardized residual $r_i$ (symbolized as `.std.resid` in `augment()` output from the `broom` package is calculated as:
+
+$$
+r_i = \frac{e_i}{MSE \sqrt(1-h_i)}
+$$
+where $h_i$ is the leverage of the $i$th observation. 
+
+- The `leverage` is symbolized by `.hat` in our `augment()` output from the `broom` package. It measures the degree to which the observation is an outlier along the predictor.
+- You can also obtain standardized residuals with `rstandard()` and studentized residuals with `rstudent()` applied to your model. 
+- As we'll see, the `outlierTest()` function uses a slightly different approaches to calculate the studentized results.
+- We usually use studentized residuals in testing outliers.
+
+```{r}
+rstandard(modelA)[5]; rstudent(modelA)[5]
+```
+
+## The `outlierTest()` function from `car`
+
+Another approach is to use the `outlierTest()` function (available in the `car` package) to see if the most unusual value (in absolute value) is a surprise given the sample size. This uses the studentized residual rather than the standardized residual, which is just another way of measuring the outlier's distance, but now *not* including that point in the calculation of the overall variation in the residuals.
+
+```{r}
+outlierTest(modelA)
+```
+
+Our conclusion from the Bonferroni p value here (which is very, very small) is that there's evidence to support the belief that we could have a serious problem with Normality, in that a studentized residual of 7.36 is out of the range we might reasonably expect to see given a Normal distribution of errors and 51 observations.
+
+
+At any rate, California looks like a real outlier. Can we do better than our Model A?
+
+# Considering Potential Transformations
+
+## The Box-Cox ladder (family) of Power Transformations
+
+$\lambda$ | Transformation | Easy to Interpret
+:---------: | :-----------------: | :------:
+-2 | $1/y^2$, the inverse square | Not typically
+-1 | $1/y$, **the inverse** | OK
+-0.5 | $1/\sqrt{y}$, the inverse square root | Not typically
+0 | $log(y)$, **the logarithm** | OK
+0.5 | $\sqrt{y}$, **the square root** | OK
+1 | y, the original (raw) outcome | OK
+2 | $y^2$, **the square** | OK
+3 | $y^3$, the cube | Not typically
+
+- The easiest to interpret of these transformations are the inverse, logarithm, square root, and square. Use the others only in dire circumstances.
+
+## Using the `boxCox()` function from the `car` package
+
+We'll use the `boxCox()` function from the `car` package today, and also the `powerTransform()` function from the same package to help us identify a potential choice of power transformation.
+
+```{r}
+boxCox(modelA)
+
+powerTransform(modelA)
+```
+
+So what transformation is this plot suggesting we try?
+
+# Approach B
+
+Model the logarithm of state population as a function of its number of ranked counties.
+
+```{r}
+ggplot(table1, aes(x = ranked_counties, y = log(state_popn), 
+                   label = state)) +
+    geom_label(size = 3) +
+    geom_smooth(method = "lm", col = "red",
+                formula = y ~ x, se = TRUE) +
+    geom_smooth(method = "loess", col = "blue",
+                formula = y ~ x, se = FALSE) + 
+    labs(title = "Approach B",
+         subtitle = glue('Pearson correlation of log(state_popn) and ranked_counties is {round_half_up(cor(log(table1$state_popn), table1$ranked_counties),2)}'))
+```
+
+```{r}
+modelB <- lm(log(state_popn) ~ ranked_counties, 
+             data = table1)
+tidy(modelB, conf.int = TRUE, conf.level = 0.95)
+glance(modelB)
+```
+
+## Assessing Residuals (Model B)
+
+```{r}
+par(mfrow = c(1,2))
+plot(modelB, which = c(1:2))
+```
+
+- Consider what these plots have to say about the assumptions of **linearity**, **constant variance** and **Normality**.
+- Is it reasonable to assume that the data and model B support the assumptions of linear regression?
+
+
+Now, which states have the largest residuals? Still looks like row numbers 5, 10 and 35
+
+```{r}
+modB_aug <- augment(modelB, data = table1)
+
+slice(modB_aug, c(5, 10, 35))
+```
+
+## Studentized Residuals?
+
+The largest standardized residual is still California, but now it is 2.69. Is that a plausible value for the maximum of 51 values if the (standardized) residuals actually follow a Normal distribution?
+
+```{r}
+pnorm(2.69, mean = 0, sd = 1, lower.tail = FALSE)
+```
+
+Or we could look at the studentized residual instead.
+
+```{r}
+outlierTest(modelB)
+```
+
+Our conclusion from the Bonferroni p value here (which is larger than 0.05) is that there's no evidence in the California value to suggest a serious problem with Normality. A maximum studentized residual of 2.89 is out of the range we might reasonably expect to see given a Normal distribution of errors and 51 observations.
+
+This seems more reasonable. Could we do better still by taking the log of the predictor, as well?
+
+# Approach C
+
+Model the logarithm of state population as a function of the logarithm of its number of ranked counties.
+
+```{r}
+ggplot(table1, aes(x = log(ranked_counties), 
+                   y = log(state_popn), label = state)) +
+    geom_label(size = 3) +
+    geom_smooth(method = "lm", col = "red",
+                formula = y ~ x, se = TRUE) +
+    geom_smooth(method = "loess", col = "blue",
+                formula = y ~ x, se = FALSE) + 
+    labs(title = "Approach C",
+         subtitle = glue('Pearson correlation of log(state_popn) and log(ranked_counties) is {round_half_up(cor(log(table1$state_popn), log(table1$ranked_counties)),2)}'))
+```
+
+```{r}
+modelC <- lm(log(state_popn) ~ log(ranked_counties), 
+             data = table1)
+tidy(modelC, conf.int = TRUE, conf.level = 0.95)
+glance(modelC)
+```
+
+## Assessing Residuals (Model C)
+
+```{r}
+par(mfrow = c(1,2))
+plot(modelC, which = c(1:2))
+```
+
+- Again, consider what these plots have to say about the assumptions of **linearity**, **constant variance** and **Normality**.
+- Is it reasonable to assume that the data and model C support the assumptions of linear regression?
+
+
+Now, which states have the largest residuals in absolute value? Row numbers 5, 29 and 42
+
+```{r}
+modC_aug <- augment(modelC, data = table1)
+
+slice(modC_aug, c(5, 29, 42))
+```
+
+## Studentized Residuals?
+
+The largest standardized residual is still California, but now it is 2.13. Is that a plausible value for the maximum of 51 values if the (standardized) residuals actually follow a Normal distribution?
+
+```{r}
+pnorm(2.46, mean = 0, sd = 1, lower.tail = FALSE)
+```
+
+Or we could look at the studentized residual instead.
+
+```{r}
+outlierTest(modelC)
+```
+
+# Comparing B to C
+
+Since Models B and C predict the same outcome (log(state_popn)) we can compare them directly on in-sample performance using `glance`.
+
+```{r}
+bind_rows(glance(modelB), glance(modelC)) %>%
+    mutate(model = c("B", "C"))
+```
+
+Model C looks like the stronger performer on all five summaries we've discussed.
+
+Summary | Stronger Model
+:-------: | :---------:
+$R^2$ | C (0.313 vs. 0.303)
+Adjusted $R^2$ | C (0.299 vs. 0.288)
+$\sigma$ | C (0.875 vs. 0.882)
+AIC | C (135.1 vs. 135.8)
+BIC | C (140.9 vs. 141.6)
+
+## Addressing Question 2 again
+
+Using model C, which states have larger population than we'd expect, based on their number of counties? 
+
+Here are the six states with the largest positive residual from Model C. 
+
+```{r}
+modC_aug %>% mutate(logpop = log(state_popn)) %>%
+    select(state, ranked_counties, state_popn, logpop, 
+           .fitted, .resid, everything()) %>%
+    arrange(desc(.resid)) %>% head()
+```
+
+## Addressing Question 3 again
+
+Using model C, which states have smaller population than we'd expect, based on their number of counties? 
+
+Here are the six states with the largest negative residual from Model C. 
+
+```{r}
+modC_aug %>% mutate(logpop = log(state_popn)) %>%
+    select(state, ranked_counties, state_popn, logpop, 
+           .fitted, .resid, everything()) %>%
+    arrange(.resid) %>% head()
+```
+
+Which states are the smallest by population?
+
+```{r}
+modC_aug %>% arrange(state_popn) %>% head()
+```
+
+# Approach D
+
+Calculate population per county in each state and use a bar chart and then a [Cleveland dot plot](https://r-graphics.org/recipe-bar-graph-dot-plot) to visualize the result. 
+
+```{r}
+table1 <- table1 %>%
+    mutate(county_size = state_popn / ranked_counties)
+```
+
+## Population per County by State: A Bar Chart
+
+Let's use `geom_col()` to make a bar chart to show our continuous variable (`county_size`) broken down by a categorical variable (`state`).
+
+```{r}
+ggplot(table1, aes(x = state, y = county_size)) +
+    geom_col() 
+```
+
+How could we improve this plot?
+
+```{r}
+ggplot(table1, aes(x = reorder(state, desc(county_size)), 
+                   y = county_size)) +
+    geom_col(fill = "dodgerblue", 
+             col = "black") +
+    scale_y_continuous(labels = scales::comma) +
+    theme(axis.text.x = element_text(size = 5)) +
+    labs(y = "Population per Ranked County",
+         x = "U.S. State or District")
+```
+
+Still tough to work with, I think.
+
+## A Cleveland Dot Plot
+
+Cleveland dot plots are an excellent alternative to a simple bar chart, especially when you are comparing more than a few items.
+
+```{r, fig.height = 9}
+ggplot(table1, aes(x = county_size, 
+                   y = reorder(state, county_size))) +
+    geom_point() +
+    theme_bw() +
+    scale_x_continuous(labels = scales::comma, 
+                       sec.axis = dup_axis()) +
+    labs(y = "State", x = "Population per County")
+```
+
+
+```{r}
+table1 %>% arrange(county_size)
+```
+
+# Summarizing
+
+## Questions 1-3
+
+We'll leave it to you to craft a reasonable set of conclusions on the issues of interest, in light of the output provided here.
+
+## What Was New Here?
+
+1. Using `group_by` and `summarize` to aggregate hierarchical data to a new level of analysis (from counties to "states.")
+2. Labeling all of the points within a scatterplot.
+3. Switching from scientific notation to "comma" notation in a `ggplot`.
+4. The complete set of `glance()` results for a linear model.
+5. Answering a scientific question about the efficacy of a model in terms of poorly-fit points.
+6. Assessing the largest outlier in a regression model with standardized residuals, studentized residuals, and an outlier test provided by outlierTest() from the `car` package.
+7. Using the Box-Cox ladder (family) of power transformations and the boxCox() and powerTransform() functions provided by the `car` package.
+8. Developing a Cleveland dot plot to visualize the results of a situation where we might otherwise use a bar chart.
+
+## Session Information
+
+```{r}
+sessioninfo::session_info()
+```
+
