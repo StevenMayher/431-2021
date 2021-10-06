@@ -15,6 +15,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. Feedback on the **Minute Paper after Class 13** will be available by class time.
 2. Today's data sets come from the [Cleveland Clinic Statistical Education Dataset Repository](https://www.lerner.ccf.org/qhs/datasets/) and you can [register there](https://www.lerner.ccf.org/qhs/datasets/) to download the [two data sets we'll use](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class14/data) if you like. Registration is fast and free.
+    - Just a note for November: In Project B, you cannot use that repository as a source of project data.
 3. We fixed a typo in [Lab 4 question 3](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/lab04.md), where we had an incorrect formula for converting to odds from probabilities. This was fixed 2021-10-06 at 11:15 AM.
 4. We have recently updated the [Calendar](https://thomaselove.github.io/431/calendar.html) to reflect some changes in what we're covering in some sessions, and the [Syllabus](https://thomaselove.github.io/431-2021-syllabus/) to reflect changes in the policy regarding late Labs. 
     - Also, the new late Lab policy is also described on [the Labs page](https://github.com/THOMASELOVE/431-2021/blob/main/labs/README.md) and on [Canvas](https://canvas.case.edu). 
