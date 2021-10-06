@@ -23,8 +23,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - The Project A proposal is also due at the same time: Monday 2021-10-11 at 9 PM.
 - Reading for this weekend includes 
     - Spiegelhalter through Chapter 6 (Chapter 5 is on Modelling Relationships Using Regression, while Chapter 6 is on Algorithms, Analytics and Prediction) and we also recommend
-    - [Introduction to Modern Statistics] Chapters 12 (Confidence Intervals with Bootstrapping) and 24 (Inference for linear regression with a single predictor) and 
-    - [R for Data Science] Chapters 26-28 on Communication and using R Markdown effectively.
+    - [Introduction to Modern Statistics](https://openintro-ims.netlify.app/index.html) Chapters 12 (Confidence Intervals with Bootstrapping) and 24 (Inference for linear regression with a single predictor) and 
+    - [R for Data Science](https://r4ds.had.co.nz/) Chapters 26-28 on Communication and using R Markdown effectively.
 
 ## One Last Thing
 
