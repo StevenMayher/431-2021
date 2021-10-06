@@ -2,7 +2,7 @@
 
 ## Post-Quiz
 
-- Here is the [PDF of Quiz 1 Results](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1). This includes complete answers to all items, along with results for the class by item and overall. Please review this document closely.
+- Here is the [PDF of Quiz 1 Results](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz1/quiz1_and_sketch.pdf). This includes complete answers to all items, along with results for the class by item and overall. Please review this document closely.
 
 ## Instructions
 
