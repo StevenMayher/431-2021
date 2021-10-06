@@ -32,7 +32,12 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## One Last Thing
 
-Bob Agnew has [developed some tools](https://github.com/raagnew/IdealCongressionalDistricting) that are pretty convincing to me that 
+[FiveThirtyEight](https://fivethirtyeight.com/) has been closely following the Congressional redistricting story. 
+
+- At the beginning of every decade, states redraw their maps to reflect changes in population. You can learn more at [How To Spot Gerrymandering In Your State](https://fivethirtyeight.com/videos/how-to-spot-gerrymandering-in-your-state/) and check out 538's maps and other visualizations at [What Redistricting Looks Like In Every State](https://projects.fivethirtyeight.com/redistricting-2022-maps/).
+- There's very little question that this political process leads to gerrymandering, or unfair maps.
+
+Bob Agnew has [developed some tools for ideal Congressional districting](https://github.com/raagnew/IdealCongressionalDistricting) that are pretty convincing to me that 
 
 > ... sensible congressional districts can be formed by algorithm, with no touch by human hands. Until we remove humans, and particularly politicians, from the districting process, we will never end up with fair representation in the US House of Representatives.
 
@@ -43,4 +48,3 @@ For example,
 - here is a [PDF of the Ohio clusters he proposes](https://github.com/raagnew/IdealCongressionalDistricting/blob/main/OH_Census_Block_Group_Clusters.pdf) (by Census Block Group)
 - and these are motivated by this [PDF of the Ohio centroids he obtains mapped with population sizes](https://github.com/raagnew/IdealCongressionalDistricting/blob/main/OH_Census_Block_Group_Centroids.pdf)
 
-[FiveThirtyEight](https://fivethirtyeight.com/) has also been closely following the redistricting story. Check out some of their great maps at [What Redistricting Looks Like In Every State](https://projects.fivethirtyeight.com/redistricting-2022-maps/).
