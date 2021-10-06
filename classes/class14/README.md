@@ -13,8 +13,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. Feedback on the Minute Paper after Class 13 will be available by class time.
-2. We have recently updated the Calendar to reflect some changes in what we're covering in some sessions, and the Syllabus to reflect changes in the policy regarding late Labs. 
+1. Feedback on the **Minute Paper after Class 13** will be available by class time.
+2. We have recently updated the [Calendar](https://thomaselove.github.io/431/calendar.html) to reflect some changes in what we're covering in some sessions, and the [Syllabus](https://thomaselove.github.io/431-2021-syllabus/) to reflect changes in the policy regarding late Labs. 
     - Also, the new late Lab policy is also described on [the Labs page](https://github.com/THOMASELOVE/431-2021/blob/main/labs/README.md) and on [Canvas](https://canvas.case.edu). 
     - Labs more than 12 hours late will no longer be accepted unless you've sent Dr. Love an email requesting the opportunity to submit later. 
     - Sending such an email will then automatically give you the opportunity to submit the lab between 12 and 72 hours after the deadline, so all work must be in by Thursday at 8:59 PM, when Canvas will close.
@@ -24,6 +24,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 - [Lab 4](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab04) is due Monday 2021-10-11 at 9 PM.
 - The [Project A proposal](https://thomaselove.github.io/431-2021-projectA/) is also due at the same time: Monday 2021-10-11 at 9 PM. Here's a link to the [tips on titles and other things that we discussed Tuesday](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md).
+    - If you have questions about our feedback on your early proposal (found on Canvas), send those questions to us via [Piazza](https://piazza.com/case/fall2021/pqhs431) or ask in [TA office hours](https://thomaselove.github.io/431/contact.html), please.
 - Reading for this weekend includes 
     - Spiegelhalter through Chapter 6 (Chapter 5 is on Modelling Relationships Using Regression, while Chapter 6 is on Algorithms, Analytics and Prediction) and we also recommend
     - [Introduction to Modern Statistics](https://openintro-ims.netlify.app/index.html) Chapters 12 (Confidence Intervals with Bootstrapping) and 24 (Inference for linear regression with a single predictor) and 
