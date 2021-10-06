@@ -23,7 +23,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## What Should I Be Working On?
 
 - [Lab 4](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab04) is due Monday 2021-10-11 at 9 PM.
-- The [Project A proposal](https://thomaselove.github.io/431-2021-projectA/) is also due at the same time: Monday 2021-10-11 at 9 PM.
+- The [Project A proposal](https://thomaselove.github.io/431-2021-projectA/) is also due at the same time: Monday 2021-10-11 at 9 PM. Here's a link to the [tips on titles and other things that we discussed Tuesday](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md).
 - Reading for this weekend includes 
     - Spiegelhalter through Chapter 6 (Chapter 5 is on Modelling Relationships Using Regression, while Chapter 6 is on Algorithms, Analytics and Prediction) and we also recommend
     - [Introduction to Modern Statistics](https://openintro-ims.netlify.app/index.html) Chapters 12 (Confidence Intervals with Bootstrapping) and 24 (Inference for linear regression with a single predictor) and 
