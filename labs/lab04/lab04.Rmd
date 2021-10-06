@@ -59,7 +59,7 @@ Remember, if X is an event, and `Pr(X)` is the probability that X occurs, and `o
 
 and
 
-`odds(X) = (Pr(X))(1 - Pr(X))`.
+`odds(X) = Pr(X) / (1 - Pr(X))`.
 
 ## Question 4 (30 points)
 

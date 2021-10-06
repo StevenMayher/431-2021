@@ -1,6 +1,6 @@
 431 Lab 04
 ================
-Due **2021-10-11** at 9 PM \| Last Edited 2021-09-29 12:14:38
+Due **2021-10-11** at 9 PM \| Last Edited 2021-10-06 11:14:02
 
 ## Deadline
 
@@ -106,7 +106,7 @@ occurs, and `odds(X)` are the odds that X occurs, then
 
 and
 
-`odds(X) = (Pr(X))(1 - Pr(X))`.
+`odds(X) = Pr(X) / (1 - Pr(X))`.
 
 ## Question 4 (30 points)
 
