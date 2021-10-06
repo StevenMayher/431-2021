@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-![](https://twitter.com/PhDemetri/status/1445389517075193859)
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class15/images/demetri.png) [Link](https://twitter.com/PhDemetri/status/1445389517075193859)
 
 ## Today's Slides
 
