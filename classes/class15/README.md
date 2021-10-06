@@ -17,4 +17,15 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## One Last Thing
 
-To come.
+Ellie Murray has an [interesting thread here on how pandemics end](https://twitter.com/epiellie/status/1444088804961304581?s=11). She starts with ...
+
+> Everyone keeps talking about covid becoming endemic, but as I listen to the conversation, it’s becoming more & more clear to me that very few of you know what "endemic" means. 
+
+She goes on to discuss, in the context of COVID-19, the four options that we as a society are faced with at the beginning of any pandemic.
+
+1. continually occurring disease, with small or large surges
+2. local elimination of disease
+3. global eradication of disease
+4. complete extinction of the pathogen
+
+I found the thread helpful to boosting my understanding.
