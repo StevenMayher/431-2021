@@ -35,7 +35,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 [FiveThirtyEight](https://fivethirtyeight.com/) has been closely following the Congressional redistricting story. 
 
 - At the beginning of every decade, states redraw their maps to reflect changes in population. You can learn more at [How To Spot Gerrymandering In Your State](https://fivethirtyeight.com/videos/how-to-spot-gerrymandering-in-your-state/) and check out 538's maps and other visualizations at [What Redistricting Looks Like In Every State](https://projects.fivethirtyeight.com/redistricting-2022-maps/).
-- There's very little question that this political process leads to gerrymandering, or unfair maps.
+- There's very little question that this political process leads to [gerrymandering](https://en.wikipedia.org/wiki/Gerrymandering), and at least arguably "unfair" maps.
 
 Bob Agnew has [developed some tools for ideal Congressional districting](https://github.com/raagnew/IdealCongressionalDistricting) that are pretty convincing to me that 
 
