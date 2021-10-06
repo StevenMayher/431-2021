@@ -43,4 +43,4 @@ For example,
 - here is a [PDF of the Ohio clusters he proposes](https://github.com/raagnew/IdealCongressionalDistricting/blob/main/OH_Census_Block_Group_Clusters.pdf) (by Census Block Group)
 - and these are motivated by this [PDF of the Ohio centroids he obtains mapped with population sizes](https://github.com/raagnew/IdealCongressionalDistricting/blob/main/OH_Census_Block_Group_Centroids.pdf)
 
-FiveThirtyEight has also been closely following the redistricting story. Check out some of their great maps at [What Redistricting Looks Like In Every State](https://projects.fivethirtyeight.com/redistricting-2022-maps/).
+[FiveThirtyEight](https://fivethirtyeight.com/) has also been closely following the redistricting story. Check out some of their great maps at [What Redistricting Looks Like In Every State](https://projects.fivethirtyeight.com/redistricting-2022-maps/).
