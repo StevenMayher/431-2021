@@ -14,11 +14,12 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Announcements
 
 1. Feedback on the **Minute Paper after Class 13** will be available by class time.
-2. We have recently updated the [Calendar](https://thomaselove.github.io/431/calendar.html) to reflect some changes in what we're covering in some sessions, and the [Syllabus](https://thomaselove.github.io/431-2021-syllabus/) to reflect changes in the policy regarding late Labs. 
+2. We fixed a typo in [Lab 4 question 3](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/lab04.md), where we had an incorrect formula for converting to odds from probabilities. This was fixed 2021-10-06 at 11:15 AM.
+3. We have recently updated the [Calendar](https://thomaselove.github.io/431/calendar.html) to reflect some changes in what we're covering in some sessions, and the [Syllabus](https://thomaselove.github.io/431-2021-syllabus/) to reflect changes in the policy regarding late Labs. 
     - Also, the new late Lab policy is also described on [the Labs page](https://github.com/THOMASELOVE/431-2021/blob/main/labs/README.md) and on [Canvas](https://canvas.case.edu). 
     - Labs more than 12 hours late will no longer be accepted unless you've sent Dr. Love an email requesting the opportunity to submit later. 
     - Sending such an email will then automatically give you the opportunity to submit the lab between 12 and 72 hours after the deadline, so all work must be in by Thursday at 8:59 PM, when Canvas will close.
-3. I updated my R packages earlier this week, and I encourage you to do so, too. This would be especially useful before submitting your Project A proposal (due Monday at 9 PM.) Just select Update Packages from the Packages tab in RStudio.
+4. I updated my R packages earlier this week, and I encourage you to do so, too. This would be especially useful before submitting your Project A proposal (due Monday at 9 PM.) Just select Update Packages from the Packages tab in RStudio.
 
 ## What Should I Be Working On?
 
