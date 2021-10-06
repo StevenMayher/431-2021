@@ -4,7 +4,7 @@ Details on the Quizzes will appear at the links below. See the [Course Calendar]
 
 Quiz | Instructions | Deadline | Results
 :---: | :---: | :---: | :----:
-Quiz 1 | [materials are here](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1) | see [Course Calendar](https://thomaselove.github.io/431/calendar.html) | [PDF of Quiz 1 Results](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1)
+Quiz 1 | [materials are here](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1) | see [Course Calendar](https://thomaselove.github.io/431/calendar.html) | [PDF of Quiz 1 Results](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz1/quiz1_and_sketch.pdf)
 Quiz 2 | to appear on 2021-10-22 | see [Course Calendar](https://thomaselove.github.io/431/calendar.html) | --
 Quiz 3 | to appear on 2021-11-19 | see [Course Calendar](https://thomaselove.github.io/431/calendar.html) | --
 
