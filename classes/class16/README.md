@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-![]() [from Michael Boswell](https://twitter.com/VreemdeSiekteDr/status/1443981818735247361)
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class16/images/boswell.jpg) [Link from Michael Boswell](https://twitter.com/VreemdeSiekteDr/status/1443981818735247361)
 
 ## Today's Slides
 
