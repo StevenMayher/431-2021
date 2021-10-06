@@ -28,4 +28,13 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## One Last Thing
 
-To come.
+Bob Agnew has [developed some tools](https://github.com/raagnew/IdealCongressionalDistricting) that are pretty convincing to me that 
+
+> ... sensible congressional districts can be formed by algorithm, with no touch by human hands. Until we remove humans, and particularly politicians, from the districting process, we will never end up with fair representation in the US House of Representatives.
+
+> For each state, cluster populations are approximately equal and total population-weighted squared geodistance (per longitude and latitude) from block groups to population-weighted cluster centroids is minimized. Results are demonstrated for the ten most populous states in the US.
+
+For example, 
+
+- here is a [PDF of the Ohio clusters he proposes](https://github.com/raagnew/IdealCongressionalDistricting/blob/main/OH_Census_Block_Group_Clusters.pdf) (by Census Block Group)
+- and these are motivated by this [PDF of the Ohio centroids he obtains mapped with population sizes](https://github.com/raagnew/IdealCongressionalDistricting/blob/main/OH_Census_Block_Group_Centroids.pdf)
