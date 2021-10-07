@@ -13,7 +13,10 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. To come.
+1. I am hoping to get the following things done by class time, but I will make no promises.
+    - Several new variables added to the favorite movies data set, and a plan for our next breakout activity.
+    - Class Notes for the next several chapters available.
+    - 30-second videos you sent posted so that you can see them for each student in the class.
 
 ## One Last Thing
 
