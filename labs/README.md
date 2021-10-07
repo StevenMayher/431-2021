@@ -4,9 +4,9 @@ Details on the Labs appear at the links below. See the [Course Calendar](https:/
 
 Lab | Assignment | Answer Sketch/Grading Rubric | Feedback to [Grading Roster](https://bit.ly/431-2021-grades)
 :----: | :--------------: | :---------------------------: | :--------------:
-01 | [Lab 01 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.Rmd) | to be posted 2021-09-14 
-02 | [Lab 02 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab02) | To appear 2021-09-21 | to be posted 2021-09-28
-03 | [Lab 03 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) | To appear 2021-09-29 | to be posted 2021-10-05
+01 | [Lab 01 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab01) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab01/sketch/lab01_sketch.Rmd) | posted 2021-09-14 
+02 | [Lab 02 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab02) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab02/sketch/lab02_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab02/sketch/lab02_sketch.Rmd) | posted 2021-09-28
+03 | [Lab 03 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab03/sketch/lab03_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab03/sketch/lab03_sketch.Rmd) | posted 2021-10-05
 04 | [Lab 04 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab04) | To appear 2021-10-12 | to be posted 2021-10-19
 05 | [Lab 05 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) | To appear 2021-10-19 | to be posted 2021-10-26
 06 | [Lab 06 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab06) | To appear 2021-11-09 | to be posted 2021-11-16
