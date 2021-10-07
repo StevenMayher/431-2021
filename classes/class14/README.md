@@ -18,7 +18,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - I plan to add 3-4 new variables to the movies data set before we return to it in earnest, probably next Thursday.
 3. Today's data sets come from the [Cleveland Clinic Statistical Education Dataset Repository](https://www.lerner.ccf.org/qhs/datasets/) and you can [register there](https://www.lerner.ccf.org/qhs/datasets/) to download the [two data sets we'll use](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class14/data) if you like. Registration is fast and free.
     - Just a note for November: In Project B, you cannot use that repository as a source of project data.
-4. We fixed a typo in [Lab 4 question 3](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/lab04.md), where we had an incorrect formula for converting to odds from probabilities. This was fixed 2021-10-06 at 11:15 AM.
+4. We fixed a typo in [Lab 4 question 3](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/lab04.md#question-3-15-points), where we had an incorrect formula for converting to odds from probabilities. This was fixed 2021-10-06 at 11:15 AM.
 5. We have recently updated the [Calendar](https://thomaselove.github.io/431/calendar.html) to reflect some changes in what we're covering in some sessions, and the [Syllabus](https://thomaselove.github.io/431-2021-syllabus/) to reflect changes in the policy regarding late Labs. 
     - Also, the new late Lab policy is also described on [the Labs page](https://github.com/THOMASELOVE/431-2021/blob/main/labs/README.md) and on [Canvas](https://canvas.case.edu). 
     - Labs more than 12 hours late will no longer be accepted unless you've sent Dr. Love an email requesting the opportunity to submit later. 
@@ -28,6 +28,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## What Should I Be Working On?
 
 - [Lab 4](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab04) is due Monday 2021-10-11 at 9 PM.
+    - Again, note our correction [to Question 3](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/lab04.md#question-3-15-points).
 - The [Project A proposal](https://thomaselove.github.io/431-2021-projectA/) is also due at the same time: Monday 2021-10-11 at 9 PM. Here's a link to the [tips on titles and other things that we discussed Tuesday](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class13/projectAearly.md).
     - If you have questions about our feedback on your early proposal (found on Canvas), send those questions to us via [Piazza](https://piazza.com/case/fall2021/pqhs431) or ask in [TA office hours](https://thomaselove.github.io/431/contact.html), please.
     - The score on the early proposal is the count out of 13 of the things that you completed successfully. The same approach will be taken on all subsequent versions. Once you have successfully completed all 13 parts, your points will revert to the appropriate score (out of 25 points) rather than just a count of things done successfully. 
