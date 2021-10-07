@@ -13,10 +13,12 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. I am hoping to get the following things done by class time, but I will make no promises.
+1. I am hoping to get the following things done by class time, but I will make no promises. This is mostly to remind myself.
     - Several new variables added to the favorite movies data set, and a plan for our next breakout activity.
     - Class Notes for the next several chapters available.
     - 30-second videos you sent posted so that you can see them for each student in the class.
+2. There will be a **Minute Paper after Class 15**. Details to come.
+3. I will also provide details on **what to do if you need to redo your Project A proposal**.
 
 ## One Last Thing
 
