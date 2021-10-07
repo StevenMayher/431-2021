@@ -13,7 +13,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. Feedback on the **Minute Paper after Class 13** will be available by class time.
+1. [Feedback on the Minute Paper after Class 13](https://bit.ly/431-2021-min13-feedback) is now available.
 2. Today's data sets come from the [Cleveland Clinic Statistical Education Dataset Repository](https://www.lerner.ccf.org/qhs/datasets/) and you can [register there](https://www.lerner.ccf.org/qhs/datasets/) to download the [two data sets we'll use](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class14/data) if you like. Registration is fast and free.
     - Just a note for November: In Project B, you cannot use that repository as a source of project data.
 3. We fixed a typo in [Lab 4 question 3](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/lab04.md), where we had an incorrect formula for converting to odds from probabilities. This was fixed 2021-10-06 at 11:15 AM.
