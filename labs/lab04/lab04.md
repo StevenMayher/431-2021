@@ -1,6 +1,6 @@
 431 Lab 04
 ================
-Due **2021-10-11** at 9 PM \| Last Edited 2021-10-06 11:14:02
+Due **2021-10-11** at 9 PM \| Last Edited 2021-10-08 14:51:03
 
 ## Deadline
 
@@ -165,6 +165,23 @@ the horizontal x axis) and body mass (on the vertical y axis) for the
 -   Also please add the actual regression equation (including the
     coefficients, rounded to two decimal places) to the plot in a clear
     way.
+    -   Note that it’s 100% OK to place a label on the graph where you
+        type in the coefficients you want, rather than having this done
+        automatically.
+    -   For example, if you wanted a line like body mass = 23.13 - 3.86
+        bill length to be placed on your plot, centered at the value x =
+        4 and y = 5, you could use…
+
+<!-- -->
+
+    annotate("text", x = 4, y = 5, label = "body mass = 23.13 - 3.86 bill length")
+
+or
+
+    geom_label(x = 4, y = 5. size = 3, color = "red",
+               label = glue("body mass = 23.13 - 3.86 bill length"))
+
+for example.
 
 Then write a couple of sentences interpreting what this figure tells you
 about the relationship between `bill_length_mm` and `body_mass_g`.
