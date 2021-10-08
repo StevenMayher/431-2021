@@ -152,7 +152,7 @@ supra %>% group_by(trt) %>%
 
 - We selected 103 subjects from the population of all people:
   - ages 18-70 years
-  - scheduled to undergo an upper extremity procedure suitable for supravicular anesthesia
+  - scheduled to undergo an upper extremity procedure suitable for supraclavicular anesthesia
   - who would have been eligible to participate in the study (details are fuzzy)
 - We have randomly allocated subjects to one of two treatments (sequential or mixture.)
 - For each subject, we have an outcome (onset time) associated with the treatment they received.
@@ -326,7 +326,7 @@ All of these results are in minutes (recall 0.08 minutes = 4.8 seconds) so are t
 - What population(s) do these data represent?
 - What can we say about the *p* values associated with these approaches?
 
-# A Study Involving Two Matched (Paired) Samples
+# A Study Involving Two Matched (Paired) Samples (to be discussed in Class 15)
 
 ## The Hypoxia MAP Data
 
