@@ -13,14 +13,23 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. I am hoping to get the following things done by class time, but I will make no promises. This is mostly to remind myself.
+1. I have posted [Chapters 16-25 of the Course Notes](https://thomaselove.github.io/431-notes/), which demonstrate fundamental ideas in comparing summaries (mostly means and proportions) across samples from populations or processes. 
+    - [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes) will cover Course Notes Chapters 1-25, and the slides from Classes 1-17, as well as Spiegelhalter through Chapter 8.
+2. I am hoping to get the following things done by class time, but I will make no promises. This is mostly to remind myself.
     - Several new variables added to the favorite movies data set, and a plan for our next breakout activity.
-    - Class Notes for the next several chapters available.
     - 30-second videos you sent posted so that you can see them for each student in the class.
     - There will be a **Minute Paper after Class 15**. Details to come.
     - I will also provide details on **what to do if you need to redo your Project A proposal**.
 
-## One Last Thing
+## Two Last Things
+
+### [The Covid Fable](https://www.nytimes.com/2021/10/08/briefing/covid-restrictions-delta-caseload.html) 
+
+This is a [brief article by David Leonhardt](https://www.nytimes.com/2021/10/08/briefing/covid-restrictions-delta-caseload.html) in the New York Times, posted 2021-10-08. The key point is made by the subtitle, which is "When we treat Covid as a simple morality play, we can end up making bad predictions." Here is the key image...
+
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class15/images/covid_nyt.png)
+
+### On how pandemics end, and what "endemic" really means...
 
 Ellie Murray has an [interesting thread here on how pandemics end](https://twitter.com/epiellie/status/1444088804961304581?s=11). She starts with ...
 
