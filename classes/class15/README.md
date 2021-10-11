@@ -13,13 +13,17 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. I have posted [Chapters 16-25 of the Course Notes](https://thomaselove.github.io/431-notes/), which demonstrate fundamental ideas in comparing summaries (mostly means and proportions) across samples from populations or processes. 
+1. There is a [Minute Paper after Class 15](https://bit.ly/431-2021-minute-15), due tomorrow (Wednesday 2021-10-13) at noon.
+2. I have posted [Chapters 16-25 of the Course Notes](https://thomaselove.github.io/431-notes/), which demonstrate fundamental ideas in comparing summaries (mostly means and proportions) across samples from populations or processes. 
     - [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes) will cover Course Notes Chapters 1-25, and the slides from Classes 1-17, as well as Spiegelhalter through Chapter 8.
-2. I am hoping to get the following things done by class time, but I will make no promises. This is mostly to remind myself.
+3. I am hoping to get the following things done by class time, but I will make no promises. This is mostly to remind myself.
     - Several new variables added to the favorite movies data set, and a plan for our next breakout activity.
     - 30-second videos you sent posted so that you can see them for each student in the class.
-    - There will be a **Minute Paper after Class 15**. Details to come.
-    - I will also provide details on **what to do if you need to redo your Project A proposal**.
+    - Details on **what to do if you need to redo your Project A proposal**.
+4. The Columbus Chapter of the American Statistical Association will hold its (virtual) Fall Speaker Event on Friday 2021-11-12 at 3:30 PM. 
+    - Dr. David Kline, Assistant Professor in the Department of Biostatistics and Data Science in the Division of Public Health Sciences at Wake Forest School of Medicine will deliver "Operating under Uncertainty:  Disease Surveillance of COVID-19."  
+    - During his talk, Dr. Kline will discuss several areas where he contributed to the response to COVID-19, including general surveillance, a seroprevalence study, and more recently, deployment of mobile rapid testing.  He will highlight important contributions of statistical and epidemiological methods and thinking. 
+    - To register, visit https://osu.zoom.us/meeting/register/tJElceirrjsuH9OF5PjMAOHnWFRk7Siw3G3r
 
 ## Two Last Things
 
