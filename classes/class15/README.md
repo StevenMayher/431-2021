@@ -25,9 +25,27 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ### [The Covid Fable](https://www.nytimes.com/2021/10/08/briefing/covid-restrictions-delta-caseload.html) 
 
-This is a [brief article by David Leonhardt](https://www.nytimes.com/2021/10/08/briefing/covid-restrictions-delta-caseload.html) in the New York Times, posted 2021-10-08. The key point is made by the subtitle, which is "When we treat Covid as a simple morality play, we can end up making bad predictions." Here is the key image...
+This is a [brief article by David Leonhardt](https://www.nytimes.com/2021/10/08/briefing/covid-restrictions-delta-caseload.html) in the New York Times, posted 2021-10-08. The key point is made by the subtitle, which is "When we treat Covid as a simple morality play, we can end up making bad predictions." 
+
+A few quotes from the piece:
+
+> The best measure of U.S. cases (a seven-day average, adjusted for holiday anomalies) peaked around 166,000 on Sept. 1 — the very day that seemed to augur a new surge. The number of new daily cases has since fallen almost 40 percent. Hospitalizations are down about 30 percent. Deaths, which typically change direction a few weeks after cases, have declined 13 percent since Sept. 20.
+
+Here is the key image...
 
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class15/images/covid_nyt.png)
+
+> To be fair, forecasting a pandemic is inherently difficult. Virtually all of us, expert and not, have at times been surprised by Covid and incorrect about what was likely to happen next. It’s unavoidable.
+
+> Let’s start by recalling a near-universal human trait: People are attracted to stories with heroes and villains. In these stories, the character flaws of the villains bring them down, allowing the decency of the heroes to triumph. The stories create a clear relationship between cause and effect. They make sense. ... The real world does not lend itself to moralistic fables.
+
+> In the case of Covid, the fable we tell ourselves is that our day-to-day behavior dictates the course of the pandemic. When we are good — by staying socially distant and wearing our masks — cases are supposed to fall. When we are bad — by eating in restaurants, hanging out with friends and going to a theater or football game — cases are supposed to rise.
+
+> The main determinants of Covid’s spread (other than vaccines, which are extremely effective) remain mysterious. Some activities that seem dangerous, like in-person school or crowded outdoor gatherings, may not always be. As unsatisfying as it is, we do not know why cases have recently plunged. The decline is consistent with the fact that Covid surges often last for about two months before receding, but that’s merely a description of the data, not a causal explanation.
+
+> In coming weeks and months, it is possible that the virus will surge again, maybe because of a new variant or because vaccine immunity will wane. It is also possible that the population has built up enough immunity — from both vaccines and previous infections — that Delta will have been the last major wave.
+
+> We don’t know, and we do not have to pretend otherwise. We do not have to treat Covid as a facile referendum on virtue.
 
 ### On how pandemics end, and what "endemic" really means...
 
