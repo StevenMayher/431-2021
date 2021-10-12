@@ -2,7 +2,9 @@
 
 ## No submission yet
 
-Drake McFaul, Cyrus Nosrati, and Tianze Wang: please answer my email.
+- Drake McFaul: please answer my email.
+- Cyrus Nosrati: thanks, I look forward to it.
+- Tianze Wang: please answer my email.
 
 ## Individual Investigators
 
