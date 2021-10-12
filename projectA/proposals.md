@@ -21,7 +21,7 @@ Zahin Islam			|	Investigating Physical and Mental Health Factors That Influence 
 Chris Jones	    |	(**fix date**) Analysis of Educational and Social Factors on Suicide Rates
 Fumi Kong			|	Predicting adult obesity rate from lifestyle habits and social infactors
 Owen LaFramboise	|	Effect of Physicians on Health Behaviors in Democratic-Voting States
-Rock Lim			|	(**fix date**) Low Self-Rated Health in Rural Southwestern Hispanics
+Rock Lim			|	Low Self-Rated Health in Rural Southwestern Hispanics
 Ryan McMaster		|	Child Exposure to Binge Drinking (with subtitle)
 Luis Mesias			|	The Relationship between Educational Predictors and Unemployment
 Cerag Oguztuzun		|	Health and Educational Factors Contributing to Violent Crime Rate across the East Coast, Midwest, and West Coast States
