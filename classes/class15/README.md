@@ -18,17 +18,18 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes) will cover Course Notes Chapters 1-25, and the slides from Classes 1-17, as well as Spiegelhalter through Chapter 8.
     - I have also updated [the 431-data repository](https://github.com/THOMASELOVE/431-data) to include the data sets used in the new chapters in the [Course Notes](https://thomaselove.github.io/431-notes/).
 3. The short videos I asked you to build for Lab 01 are posted to the [431 Introductory 30-second Videos](https://drive.google.com/drive/folders/17BnyvRfayulJq8nzr684OfVdmOkhd_bQ?usp=sharing) folder on our Shared Google Drive. I apologize for the delay.
-4. The Columbus Chapter of the American Statistical Association will hold its (virtual) Fall Speaker Event on Friday 2021-11-12 at 3:30 PM. 
+4. The Lab 4 answer sketch and grading rubric is available now in [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/sketch/lab04_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/sketch/lab04_sketch.Rmd).
+5. The Columbus Chapter of the American Statistical Association will hold its (virtual) Fall Speaker Event on Friday 2021-11-12 at 3:30 PM. 
     - Dr. David Kline, Assistant Professor in the Department of Biostatistics and Data Science in the Division of Public Health Sciences at Wake Forest School of Medicine will deliver "Operating under Uncertainty:  Disease Surveillance of COVID-19."  
     - During his talk, Dr. Kline will discuss several areas where he contributed to the response to COVID-19, including general surveillance, a seroprevalence study, and more recently, deployment of mobile rapid testing.  He will highlight important contributions of statistical and epidemiological methods and thinking. 
     - To register, visit https://osu.zoom.us/meeting/register/tJElceirrjsuH9OF5PjMAOHnWFRk7Siw3G3r
-5. I am hoping to get the following additional things done by class time. This is mostly to remind myself.
-    - Several new variables added to the favorite movies data set, and a plan for our next breakout activity.
-    - Details on **what to do if you need to redo your Project A proposal**.
 
 ## Project A proposal review
 
 Some early [details are here](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md).
+
+- Frustrated with your title? You can use a subtitle in your YAML, right under the `title` with `subtitle: "Subtitle goes here"`
+- We will explain what to do if your proposal needs revision as soon as we have the grading completed.
 
 ## Two Last Things
 
