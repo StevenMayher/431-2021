@@ -4,9 +4,9 @@
 
 Student | Title
 :---: | :-----------
-Graham Akeson			|	(fix) Project A
+Graham Akeson			|	(fix title) Project A
 Abhishek Bhardwaj |	Factors associated with life expectancy in different states
-Allison Bode    | Effect of smoking, food insecurity, sleep, and diabetes on adult obesity rate in Ohio, California, Florida, and North Carolina
+Allison Bode    | (shorten title) Effect of smoking, food insecurity, sleep, and diabetes on adult obesity rate in Ohio, California, Florida, and North Carolina
 Michael Douglass	|	Does Educating our Youth Have Anything to Do with Our Happiness?
 Ava Fan		    |	The Impact of Education and Income On Rates of Adult Obesity
 Aaron Fletcher		|	Can You Expect to Live Longer if You Live in a Vacation Location?
