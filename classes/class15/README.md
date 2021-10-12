@@ -26,6 +26,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - Several new variables added to the favorite movies data set, and a plan for our next breakout activity.
     - Details on **what to do if you need to redo your Project A proposal**.
 
+## Project A proposal review
+
+Some early [details are here](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md).
 
 ## Two Last Things
 
