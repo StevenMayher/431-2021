@@ -29,7 +29,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 Some early [details are here](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md).
 
 - Frustrated with your title? You can use a subtitle in your YAML, right under the `title` with `subtitle: "Subtitle goes here"`
-- We will explain what to do if your proposal needs revision as soon as we have the grading completed.
+- We will explain **what to do if your proposal needs revision** as soon as we have the grading completed in an email to all students.
 
 ## Two Last Things
 
