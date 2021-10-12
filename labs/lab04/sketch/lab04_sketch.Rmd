@@ -169,6 +169,9 @@ Next, up to 9 points are awarded for the reaction.
 
 # Part B: Palmer Penguins (Questions 6-8, 30 points)
 
+## A Note on `sample_n()` versus `slice_sample()` (Added 2021-10-12)
+
+It was brought to our attention that while the slides and notes have used `slice_sample()`, the answer sketch used a slightly outdated approach of `sample_n()`. These two functions, as best as we can tell, produce two identical datasets. Either of these should be appropriate to use, although `slice_sample()` is preferred.
 
 ## Question 6 (5 points)
 
@@ -193,7 +196,6 @@ Next, we'll split our data into a training and test sample.
 set.seed(4312021)
 
 pen_train <- sample_n(penguins, 200)
-
 pen_test <- anti_join(penguins, pen_train, by = "id")
 
 ```
@@ -204,6 +206,7 @@ Finally, we run some quick summaries on our samples to demonstrate how many peng
 nrow(pen_train)
 nrow(pen_test)
 ```
+
 Alternatively, we could create a nice `tabyl()`, say of species, which includes the totals.
 
 ```{r}
@@ -223,8 +226,6 @@ pen_test %>%
     adorn_pct_formatting() %>%
     knitr::kable(align = 'lrr', caption = "Test Sample")
 ```
-
-
 
 ### Grading Rubric
 
@@ -287,7 +288,7 @@ ggplot(data = pen_train, aes(x = bill_length_mm, y = body_mass_g)) +
   geom_smooth(method = "lm", se = FALSE, formula = y ~ x) +
   geom_smooth(method = "loess", se = FALSE, formula = y ~ x, col = "red") +
   geom_label(x = 39, y = 5500, size = 3, alpha = 0.2, 
-             label = "Body Mass (g) = 458.8 + 85.3*Bill Length (mm)") +
+             label = "Body Mass (g) = 458.76 + 85.33*Bill Length (mm)") +
   labs(y = "Body Mass (in grams)",
        x = "Bill Length (in mm)",
        title = "Positive relationship between bill length and body mass for 200 penguins",
