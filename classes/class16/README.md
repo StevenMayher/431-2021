@@ -13,7 +13,12 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. To come.
+1. Feedback on the Minute Paper after Class 15 should be available by class time.
+2. On Tuesday, we updated [Lab 5 (Question 4)](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) to fix a typo.
+3. On Tuesday, we updated the [slides from Class 15](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class15) to fix an error in slide 32, where I originally implied option f indicated smaller $\alpha$ when in fact it doesn't.
+4. 
+
+## Discussion of Project A proposals and revised instructions
 
 ## One Last Thing
 
