@@ -1,18 +1,12 @@
 # Project A Proposals
 
-## No submission yet
-
-- Drake McFaul: please answer my email.
-- Cyrus Nosrati: thanks, I look forward to it.
-- Tianze Wang: please answer my email.
-
 ## Individual Investigators
 
 Student | Title
 :---: | :-----------
 Graham Akeson			|	(**fix title**) Project A
 Abhishek Bhardwaj |	Factors associated with life expectancy in different states
-Allison Bode    | (**shorten title**) Effect of smoking, food insecurity, sleep, and diabetes on adult obesity rate in Ohio, California, Florida, and North Carolina
+Allison Bode    | Effect of smoking, food insecurity, sleep, and diabetes on adult obesity rate in Ohio, California, Florida, and North Carolina
 Michael Douglass	|	Does Educating our Youth Have Anything to Do with Our Happiness?
 Ava Fan		    |	The Impact of Education and Income On Rates of Adult Obesity
 Aaron Fletcher		|	Can You Expect to Live Longer if You Live in a Vacation Location?
@@ -20,7 +14,7 @@ Megan Foradori		|	Exploring County Population Characteristics of Low Birthweight
 Katie Heinzinger	|	Impact of Mental Health, Alcohol, Unemployment, and Income on Violent Crime in Select US Counties
 Kyaw Oo Hla			|	Social Problems associated with Insufficient Sleep
 Zahin Islam			|	Investigating Physical and Mental Health Factors That Influence Motor Vehicle Crash Deaths
-Chris Jones	    |	(**fix date**) Analysis of Educational and Social Factors on Suicide Rates
+Chris Jones	    |	Analysis of Educational and Social Factors on Suicide Rates
 Fumi Kong			|	Predicting adult obesity rate from lifestyle habits and social infactors
 Owen LaFramboise	|	Effect of Physicians on Health Behaviors in Democratic-Voting States
 Rock Lim			|	Low Self-Rated Health in Rural Southwestern Hispanics
@@ -43,16 +37,17 @@ Submitter | Partner | Title
 :---: | :---: | :-----------
 Tyler Petrie	|	Paula Ambrose	|	An Examination of Environmental Rascism Factors and their Relationship to Racial Demographics
 Grace Armstrong	|	Kiran Desai	|	Environmental Factors and their Impact on Life Expectancy
-Alise Carlson	|	Abigail Basson (**email**)	|	Health Behaviors and Socioeconomic Factors Associated with Unemployment in Four Neighboring States
+Alise Carlson	|	Abigail Basson  |	Health Behaviors and Socioeconomic Factors Associated with Unemployment in Four Neighboring States
 Anushree Iyengar	|	Avantika Bhaduri	|	Individual Behaviors and Systemic Factors as Predictors of Poor Physical Health Days
 Raunak Nair	|	Sid Dugar	|	Predictors of Violent Crime in 4 states in the US
-Scarlett He	|	Jiayue Yang	| (**fix YAML**)	Analysis of four risk factors that contribute to the rate of life expectancy in five states in the US
-Alan Kiang	|	Erika Hutt |	(**shorten title**) Effect of Education Level and Income on Influenza Vaccination Rates within the Counties of Ohio, California, Georgia and West Virginia
+Scarlett He	|	Jiayue Yang	| Analysis of four risk factors that contribute to the rate of life expectancy in five states in the US
+Alan Kiang	|	Erika Hutt |	Effect of Education Level and Income on Influenza Vaccination Rates 
 Makaela Mews	|	Jeeda Ismail	|	The Impact of Income and Health Behaviors on Poor Mental Health Days
 Ben Kramer	|	Jacqueline Shaia |	Social determinents of health impact on life expectancy
 Kristi Lin-Rahardja	|	Nick Latina	|	Effect of Mental and Physical Health on Premature Death
 Gen Li	|	Jay Wei	|	Analysis of four risk factors that contribute to the rate of adult obesity in five states in the US
 Harrison Lindley	|	Sarah Nock	|	Exploring Associations between Rates of Suicide and Mental Health Indicators
+Cyrus Nosrati | Drake McFaul | (**fix title**) On Life Expectancy
 Shruti Raghunathan	|	Norman Luc	|	Assessing Environmental and Lifestyle Predictors of Low Birth Weight
 Steven Mayher	|	Anna Magoline	|	The Effects of College Education and Environmental Factors on Income Inequality
 Diya Yang	|	Carly Rose	|	Socioeconomic, Educational, Health, Environmental Factors and Their Influence on Life Expectancy
