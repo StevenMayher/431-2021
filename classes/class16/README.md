@@ -16,7 +16,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 1. Feedback on the **Minute Paper after Class 15** should be available by class time.
 2. On Tuesday, we updated [Lab 5 (Question 4)](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) to fix a typo.
 3. On Tuesday, we updated the [slides from Class 15](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class15) to fix an error in slide 32, in the discussion of what option f implied.
-4. More to come.
+4. We'll have an **updated movies data set** for you, too.
 
 ## Discussion of Project A proposals and revised instructions
 
