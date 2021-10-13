@@ -1,5 +1,6 @@
 ---
 title: "431 Class 15"
+subtitle: "This is a subtitle."
 author: "thomaselove.github.io/431"
 date: "2021-10-11"
 output:
@@ -358,14 +359,14 @@ Original Setup yielded power = 0.802
 
 Change | Resulting power
 -------: | :----------:
-$\delta$ from 0.25 to 0.5 | 0.9996
-$\delta$ from 0.25 to 0.1 | 0.259
-`sd` from 1 to 2 | 0.345
-`sd` from 1 to 0.5 | 0.9996
-$\alpha$ from 0.1 to 0.05 | 0.703
-$\alpha$ from 0.1 to 0.2 | 0.888
+a. $\delta$ from 0.25 to 0.5 | 0.9996
+b. $\delta$ from 0.25 to 0.1 | 0.259
+c. `sd` from 1 to 2 | 0.345
+d. `sd` from 1 to 0.5 | 0.9996
+e. $\alpha$ from 0.1 to 0.05 | 0.703
+f. $\alpha$ from 0.1 to 0.2 | 0.888
 
-- Setups **a** (larger $\delta$), **d** (smaller `sd`) and **f** (smaller $\alpha$) led to larger power estimates than the original setup.
+- Setups **a** (larger $\delta$), **d** (smaller `sd`) and **f** (larger $\alpha$, i.e. smaller confidence level) led to larger power estimates than the original setup.
 
 ## What if you have an unbalanced design?
 
