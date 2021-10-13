@@ -44,11 +44,11 @@ Are the data you developed in Question 1 matched / paired samples or independent
 
 ## Question 4 (15 points)
 
-Answer either part a or b of this question, based on your response to Question 3.
+Answer *either* part a or b of this question, based on your response to Question 3.
  
-a. If we have paired samples, what does the distribution of sample paired differences tell us about which inferential procedure to use? Display an appropriate visualization that motivates your conclusions, and then describe those conclusions in complete English sentences. 
+- (a) If we have paired samples, what does the distribution of sample paired differences tell us about which inferential procedure to use? Display an appropriate visualization that motivates your conclusions, and then describe those conclusions in complete English sentences. 
 
-b. If we have independent samples, what does the distribution of each individual sample tell us about which inferential procedure to use? Display an appropriate visualization that motivates your conclusions, and then describe those conclusions in complete English sentences.
+- (b) If we have independent samples, what does the distribution of each individual sample tell us about which inferential procedure to use? Display an appropriate visualization that motivates your conclusions, and then describe those conclusions in complete English sentences.
 
 ## Question 5 (10 points)
 

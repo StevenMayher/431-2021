@@ -1,6 +1,6 @@
 431 Lab 05
 ================
-Due **2021-10-18** at 9 PM \| Last Edited 2021-09-30 11:46:07
+Due **2021-10-18** at 9 PM \| Last Edited 2021-10-12 22:21:01
 
 ## Deadline
 
@@ -73,20 +73,20 @@ independent samples? How do you know?
 
 ## Question 4 (15 points)
 
-Answer either part a or b of this question, based on your response to
+Answer *either* part a or b of this question, based on your response to
 Question 3.
 
-1.  If we have paired samples, what does the distribution of sample
-    paired differences tell us about which inferential procedure to use?
-    Display an appropriate visualization that motivates your
-    conclusions, and then describe those conclusions in complete English
-    sentences.
+-   1.  If we have paired samples, what does the distribution of sample
+        paired differences tell us about which inferential procedure to
+        use? Display an appropriate visualization that motivates your
+        conclusions, and then describe those conclusions in complete
+        English sentences.
 
-2.  If we have independent samples, what does the distribution of each
-    individual sample tell us about which inferential procedure to use?
-    Display an appropriate visualization that motivates your
-    conclusions, and then describe those conclusions in complete English
-    sentences.
+-   2.  If we have independent samples, what does the distribution of
+        each individual sample tell us about which inferential procedure
+        to use? Display an appropriate visualization that motivates your
+        conclusions, and then describe those conclusions in complete
+        English sentences.
 
 ## Question 5 (10 points)
 
