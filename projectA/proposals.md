@@ -1,5 +1,7 @@
 # Project A Proposals
 
+There are 44 projects, including 26 by individual investigators, and 18 teams of 2.
+
 ## Individual Investigators
 
 Student | Title
