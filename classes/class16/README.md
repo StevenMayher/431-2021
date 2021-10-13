@@ -16,7 +16,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 1. Remember that we do not have class on Tuesday 2021-10-19, because of CWRU Fall Break. 
 2. Class 17 will be one week from today, on 2021-10-21.
 3. Feedback on the **Minute Paper after Class 15** should be available by class time. The next Minute Paper will be after Class 18.
-4. On Tuesday, we updated [Lab 5 (Question 4)](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) to fix a typo.
+4. On Tuesday, we updated [Lab 5 (Question 4)](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) to fix a typo. I'm also pushing the deadline back from Monday 2021-10-18 at 9 PM to Thursday 2021-10-21 at 9 PM.
 5. On Tuesday, we updated the [slides from Class 15](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class15) to fix an error in slide 32, in the discussion of what option f implied.
 6. The (simulated) data set we'll use in today's class, called `nicu_seq.xls` is available in [the data folder for this class](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class16/data), as well as in the [431-data repository](https://github.com/THOMASELOVE/431-data). The motivating study is [Effect of Whole-Genome Sequencing on the Clinical Management of Acutely Ill Infants With Suspected Genetic Disease: A Randomized Clinical Trial](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class16/NICUseq_Study_JAMA_Peds_2021-09-27.pdf) from The NICUSEq Study Group, *JAMA Pediatrics* [published online 2021-09-22](https://jamanetwork.com/journals/jamapediatrics/fullarticle/2784261).
 
