@@ -26,7 +26,7 @@ We're aiming to get feedback to you before 6 PM on Sunday 2021-10-17, with the e
 
 ## What Should I Be Working On?
 
-1. [Lab 5](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) is due on Monday 2021-10-18 at 9 PM.
+1. [Lab 5](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) is now due on Thursday 2021-10-21 at 9 PM. We won't accept work that's more than an hour late, in light of this change.
 2. You'll want to have read Spiegelhalter through Chapter 8 by the time you take [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes), which will be available on Friday 2021-10-22.
 3. Your [Project A](https://thomaselove.github.io/431-2021-projectA/) (Proposal, if revision is required, and then Analyses.) Remember Project A is due 2021-11-01.
 
