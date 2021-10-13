@@ -22,7 +22,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Project A proposals 
 
-We're aiming to get feedback to you before 6 PM on Sunday 2021-10-17, with the expectation being that you would submit a revision (if required) by Noon on Wednesday 2021-10-20. 
+We're aiming to get feedback to you before 6 PM on Sunday 2021-10-17, with the expectation being that you would submit a revision (if required) by Noon on Wednesday 2021-10-20. The [list of proposals](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md) is posted.
 
 ## What Should I Be Working On?
 
