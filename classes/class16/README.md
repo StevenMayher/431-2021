@@ -8,7 +8,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Today's Slides
 
-- Dr. Love's slides will be posted in [PDF format], as well as in [R Markdown].
+- Dr. Love's slides are now available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class16/431-class16-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class16/431-class16-slides.Rmd).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Announcements
@@ -16,7 +16,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 1. Feedback on the **Minute Paper after Class 15** should be available by class time.
 2. On Tuesday, we updated [Lab 5 (Question 4)](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) to fix a typo.
 3. On Tuesday, we updated the [slides from Class 15](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class15) to fix an error in slide 32, in the discussion of what option f implied.
-4. We'll have an **updated movies data set** for you, too.
+4. The (simulated) data set we'll use in today's class, called `nicu_seq.xls` is available in the data folder here, as well as in the 431-data repository. 
+  - The relevant study is [Effect of Whole-Genome Sequencing on the Clinical Management of Acutely Ill Infants With Suspected Genetic Disease: A Randomized Clinical Trial](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class16/NICUseq_Study_JAMA_Peds_2021-09-27.pdf) from The NICUSEq Study Group, *JAMA Pediatrics* published online 2021-09-22. [Link](https://jamanetwork.com/journals/jamapediatrics/fullarticle/2784261)
 
 ## Discussion of Project A proposals and revised instructions
 
