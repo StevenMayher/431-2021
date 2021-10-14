@@ -35,7 +35,7 @@ The [list of proposals](https://github.com/THOMASELOVE/431-2021/blob/main/projec
 1. [Lab 5](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) is now due on Thursday 2021-10-21 at 9 PM. We won't accept work that's more than an hour late, in light of this change.
 2. You'll want to have read Spiegelhalter through Chapter 8 by the time you take [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes), which will be available on Friday 2021-10-22.
 3. Your [Project A](https://thomaselove.github.io/431-2021-projectA/) (Proposal, if revision is required, and then Analyses.) Remember Project A is due 2021-11-01. 
-  - There are lots of opportunities to *supplement* the suggested analyses in the Project A proposal. You are welcome to do that, but (1) don't neglect doing the things we've specifically asked you to do, and (2) don't put things in that don't add meaningful value. Too much is not a good thing.
+  - There are lots of opportunities to *supplement* the suggested analyses in Project A. You are welcome to do that, but (1) don't neglect doing the things we've specifically asked you to do, and (2) don't put things in that don't add meaningful value. Too much is not a good thing.
   - Running the R code effectively is just the start of what we care about - it's a minimum standard. A major part of what separates an outstanding project from a good one is someone making clear, well-reasoned choices about what analytic material (and interpretations of that material) to include. Including useless stuff will lead to a lower grade. Including clearly useful stuff will not, and might help. We are looking to you to see whether you can do this or not. 
 
 Remember that we do not have class next Tuesday.
