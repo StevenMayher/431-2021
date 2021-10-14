@@ -1,12 +1,32 @@
 # Project A Proposals
 
-There are 44 projects, including 26 by individual investigators, and 18 teams of 2.
+There are 44 projects, including 26 by individual investigators, and 18 teams of 2. 
+
+## Proposals That Need To Be Revised by the Investigators
 
 ## Individual Investigators
 
 Student | Title
 :---: | :-----------
-Graham Akeson			|	(**fix title**) Project A
+Graham Akeson	|	new title needed
+Kyaw Oo Hla			|	Social Problems associated with Insufficient Sleep
+Ryan McMaster		|	Child Exposure to Binge Drinking (with subtitle)
+
+## Teams of Two
+
+Submitter | Partner | Title
+:---: | :---: | :-----------
+Raunak Nair	|	Sid Dugar	|	Predictors of Violent Crime in 4 states in the US
+Cyrus Nosrati | Drake McFaul | new title needed
+Ziyin Zhao	|	Modong Yang	|	new title needed
+
+
+## Proposals That Have Been Accepted by Dr. Love
+
+## Individual Investigators
+
+Student | Title
+:---: | :-----------
 Abhishek Bhardwaj |	Factors associated with life expectancy in different states
 Allison Bode    | Effect of smoking, food insecurity, sleep, and diabetes on adult obesity rate in Ohio, California, Florida, and North Carolina
 Michael Douglass	|	Does Educating our Youth Have Anything to Do with Our Happiness?
@@ -14,13 +34,11 @@ Ava Fan		    |	The Impact of Education and Income On Rates of Adult Obesity
 Aaron Fletcher		|	Can You Expect to Live Longer if You Live in a Vacation Location?
 Megan Foradori		|	Exploring County Population Characteristics of Low Birthweight Infants
 Katie Heinzinger	|	Impact of Mental Health, Alcohol, Unemployment, and Income on Violent Crime in Select US Counties
-Kyaw Oo Hla			|	Social Problems associated with Insufficient Sleep
 Zahin Islam			|	Investigating Physical and Mental Health Factors That Influence Motor Vehicle Crash Deaths
 Chris Jones	    |	Analysis of Educational and Social Factors on Suicide Rates
 Fumi Kong			|	Predicting adult obesity rate from lifestyle habits and social infactors
 Owen LaFramboise	|	Effect of Physicians on Health Behaviors in Democratic-Voting States
 Rock Lim			|	Low Self-Rated Health in Rural Southwestern Hispanics
-Ryan McMaster		|	Child Exposure to Binge Drinking (with subtitle)
 Luis Mesias			|	The Relationship between Educational Predictors and Unemployment
 Cerag Oguztuzun		|	Health and Educational Factors Contributing to Violent Crime Rate across the East Coast, Midwest, and West Coast States
 Alex Olejko	    |	Investigating How Macro-Environments May Affect Children’s Math Scores
@@ -41,7 +59,6 @@ Tyler Petrie	|	Paula Ambrose	|	An Examination of Environmental Rascism Factors a
 Grace Armstrong	|	Kiran Desai	|	Environmental Factors and their Impact on Life Expectancy
 Alise Carlson	|	Abigail Basson  |	Health Behaviors and Socioeconomic Factors Associated with Unemployment in Four Neighboring States
 Anushree Iyengar	|	Avantika Bhaduri	|	Individual Behaviors and Systemic Factors as Predictors of Poor Physical Health Days
-Raunak Nair	|	Sid Dugar	|	Predictors of Violent Crime in 4 states in the US
 Scarlett He	|	Jiayue Yang	| Analysis of four risk factors that contribute to the rate of life expectancy in five states in the US
 Alan Kiang	|	Erika Hutt |	Effect of Education Level and Income on Influenza Vaccination Rates 
 Makaela Mews	|	Jeeda Ismail	|	The Impact of Income and Health Behaviors on Poor Mental Health Days
@@ -49,10 +66,8 @@ Ben Kramer	|	Jacqueline Shaia |	Social determinents of health impact on life exp
 Kristi Lin-Rahardja	|	Nick Latina	|	Effect of Mental and Physical Health on Premature Death
 Gen Li	|	Jay Wei	|	Analysis of four risk factors that contribute to the rate of adult obesity in five states in the US
 Harrison Lindley	|	Sarah Nock	|	Exploring Associations between Rates of Suicide and Mental Health Indicators
-Cyrus Nosrati | Drake McFaul | (**fix title**) On Life Expectancy
 Shruti Raghunathan	|	Norman Luc	|	Assessing Environmental and Lifestyle Predictors of Low Birth Weight
 Steven Mayher	|	Anna Magoline	|	The Effects of College Education and Environmental Factors on Income Inequality
 Diya Yang	|	Carly Rose	|	Socioeconomic, Educational, Health, Environmental Factors and Their Influence on Life Expectancy
 Ying Xiong	|	Audrey Zhu	|	Investigating Median Household Income and Potential Influencing Factors in Six States
-Ziyin Zhao	|	Modong Yang	(**email**) |	(**fix title**) Predicting violent crime with income inequaility and the other factors in counties in the New England states
 
