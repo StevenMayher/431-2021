@@ -20,6 +20,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 5. Another [Piazza highlight](https://piazza.com/class/kseogqdhsbk1cr?cid=116) was Question 116, where I discussed how I might generate a random ID for participant de-identification in a simple setting.
 6. On Tuesday, we updated the [slides from Class 15](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class15) to fix an error in slide 32, in the discussion of what option f implied.
 7. The (simulated) data set we'll use in today's class, called `nicu_seq.xls` is available in [the data folder for this class](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class16/data), as well as in the [431-data repository](https://github.com/THOMASELOVE/431-data). The motivating study is [Effect of Whole-Genome Sequencing on the Clinical Management of Acutely Ill Infants With Suspected Genetic Disease: A Randomized Clinical Trial](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class16/NICUseq_Study_JAMA_Peds_2021-09-27.pdf) from The NICUSEq Study Group, *JAMA Pediatrics* [published online 2021-09-22](https://jamanetwork.com/journals/jamapediatrics/fullarticle/2784261).
+8. New data on favorite movies will be posted over Fall Break, and we'll return to them in Class 17 (2021-10-21) if possible.
 
 ## Project A proposals 
 
