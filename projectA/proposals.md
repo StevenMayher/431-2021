@@ -2,6 +2,8 @@
 
 There are 44 projects, including 26 by individual investigators, and 18 teams of 2. 
 
+All initial reviews are now complete, and comments for all 44 projects are available now on Canvas. Please review your comments.
+
 ## Proposals That Need To Be Revised by the Investigators
 
 ## Individual Investigators
