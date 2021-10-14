@@ -4,9 +4,7 @@ Instructions for Lab 05 are [available here](https://github.com/THOMASELOVE/431-
 
 All deadlines for 431 work, including this Lab, are posted in the [Course Calendar](https://thomaselove.github.io/431/calendar.html).
 
-- Labs that are turned in up to 12 hours after the deadline can receive up to 90% of available points.
-- Labs turned in 12-72 hours after the deadline can receive up to 75% of available points **only if** the student has contacted Dr. Love via email to request this opportunity by 12 hours after the deadline. 
-- Otherwise, we will not grade or give credit for late Labs.
+- For LAB 5 only, since we have extended the deadline 3 days, we will not accept any Lab 5 work that is more than 1 hour late (that is, that is submitted to Canvas after 9:59 PM on Thursday 2021-10-21.)
 
 ## After the Lab
 
