@@ -527,15 +527,15 @@ Delayed (60) | 17 | 148 | *165*
 *Total*         | *51* | *275* | *326*
 
 - Odds = Probability / (1 - Probability)
-- Sample Odds of A1c < 8 now if Never smoked = $\frac{34/161}{1 - (34/161)}$ = `r round_half_up((34/161)/(1-(34/161)), 3)`
-- Sample Odds of A1c < 8 now if Current smoker = $\frac{17/165}{1 - (17/165)}$ = `r round_half_up((17/165)/(1-(17/165)), 3)`
+- Sample Odds of COI if Early = $\frac{34/161}{1 - (34/161)}$ = `r round_half_up((34/161)/(1-(34/161)), 3)`
+- Sample Odds of COI if Delayed = $\frac{17/165}{1 - (17/165)}$ = `r round_half_up((17/165)/(1-(17/165)), 3)`
 - Ratio of these two Odds are `r round_half_up(((34/161)/(1-(34/161))) / ((17/165)/(1-(17/165))),3)`.
 
 In a 2x2 table, odds ratio = cross-product ratio.
 
 - Here, the cross-product estimate = $\frac{34*148}{17*127}$ = `r round_half_up(34*148/(17*127),3)`.
 
-Can we build a confidence interval for the population odds ratio for of COM given "early" as compared to "delayed" testing?
+Can we build a confidence interval for the population odds ratio for COM given "early" as compared to "delayed" testing?
 
 ## Using `twoby2` from the `Epi` package
 
