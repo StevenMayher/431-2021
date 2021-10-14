@@ -23,7 +23,11 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Project A proposals 
 
-We're aiming to get feedback to you before 6 PM on Sunday 2021-10-17, with the expectation being that you would submit a revision (if required) by Noon on Wednesday 2021-10-20. The [list of proposals](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md) is posted.
+The [list of proposals](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md) now includes information about whether or not your proposal was accepted. 
+
+- All 44 projects are now fully reviewed, and comments have been provided to all project proposals on [Canvas](https://canvas.case.edu).
+- Several of the Teaching Assistants did an immense amount of work on an extremely tight deadline to get this done. THANK YOU!
+- Those of you who still need to revise should find details on that process in [Canvas](https://canvas.case.edu).
 
 ## What Should I Be Working On?
 
