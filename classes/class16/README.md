@@ -36,3 +36,5 @@ We're aiming to get feedback to you before 6 PM on Sunday 2021-10-17, with the e
 ## One Last Thing
 
 The holiday is still a couple of weeks away, but you may be interested in [The Ultimate Halloween Candy Power Ranking](https://fivethirtyeight.com/videos/the-ultimate-halloween-candy-power-ranking/) from Walt Hickey and the good folks at FiveThirtyEight. The original post is now five years old, but it's still a really enjoyable piece, accompanied by a video describing the methods and conclusions.
+
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class16/images/candy.png)
