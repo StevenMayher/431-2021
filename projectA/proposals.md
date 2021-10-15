@@ -12,7 +12,6 @@ Student | Title
 :---: | :-----------
 Graham Akeson	|	new title needed
 Kyaw Oo Hla			|	Social Problems associated with Insufficient Sleep
-Ryan McMaster		|	Child Exposure to Binge Drinking (with subtitle)
 
 ## Teams of Two
 
@@ -41,6 +40,7 @@ Chris Jones	    |	Analysis of Educational and Social Factors on Suicide Rates
 Fumi Kong			|	Predicting adult obesity rate from lifestyle habits and social infactors
 Owen LaFramboise	|	Effect of Physicians on Health Behaviors in Democratic-Voting States
 Rock Lim			|	Low Self-Rated Health in Rural Southwestern Hispanics
+Ryan McMaster		|	Child Exposure to Binge Drinking (with subtitle)
 Luis Mesias			|	The Relationship between Educational Predictors and Unemployment
 Cerag Oguztuzun		|	Health and Educational Factors Contributing to Violent Crime Rate across the East Coast, Midwest, and West Coast States
 Alex Olejko	    |	Investigating How Macro-Environments May Affect Children’s Math Scores
