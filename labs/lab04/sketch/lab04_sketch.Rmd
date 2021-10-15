@@ -344,5 +344,7 @@ We can see from these results that we have an RMSPE of 631.63 grams. Importantly
 
 - If the student has successfully fit the model to the test data, and calculated the MAPE, maxAPE, and RMSPE, with an appropriate interpretation they should receive all 10 points.
 
+- If the results are not presented in an attractive and clear, the student should lose 1 point.
+
 - If there are issues in fitting the model or calculating the MAPE, maxAPE, or RMSPE, the student should lose up to 7 points.
 - If the student incorrectly interprets the units of measure for the RMSPE, they should lose 3 points.
