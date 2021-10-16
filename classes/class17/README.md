@@ -20,8 +20,10 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - TA Office Hours (for support on the projects, in particular) will be held, as usual, throughout the Quiz window.
 3. Project A is due on 2021-11-01.
     - A major goal of mine is to ensure that all of you have what you need to complete Project A when this class session concludes.
-4. I added the `pwr` package to the [list of packages we recommend you install in R](https://thomaselove.github.io/431/r_packages.html). Now would be an excellent time to update your packages, and if you're not already using R version 4.1.1., we encourage you to upgrade.
-5. Our next Minute Paper will be after Class 18. If you wish to share anything with Dr. Love, specifically, email is always open.
+4. I posted to our Shared Google Drive a newly edited and substantially augmented [data set about favorite movies](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/README.md#new-and-amplified-data-set) for students in 431 this year and last.
+    - The previous version of the data (from 2021-09-13) included 14 variables. This new version corrects some errors, and now contains 69 variables on each of the 115 movies.
+5. I added the `pwr` package to the [list of packages we recommend you install in R](https://thomaselove.github.io/431/r_packages.html). Now would be an excellent time to update your packages, and if you're not already using R version 4.1.1., we encourage you to upgrade.
+6. Our next Minute Paper will be after Class 18. If you wish to share anything with Dr. Love, specifically, email is always open.
 
 ## One Last Thing
 
