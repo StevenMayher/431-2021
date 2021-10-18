@@ -19,6 +19,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - During the Quiz, you can only get answers to questions about the Quiz via Piazza private posts, or emails to 431-help.
     - TA Office Hours (for support on the projects, in particular) will be held, as usual, throughout the Quiz window.
 3. [Project A](https://thomaselove.github.io/431-2021-projectA/) is due on 2021-11-01.
+    - The [list of proposals is here](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md) and this now includes some trivia on the states and variables that were most commonly selected.
     - We will use today's class to ensure that all of you have what you need to complete Project A by the end of the session.
 4. I posted to our Shared Google Drive a newly edited and substantially augmented [data set about favorite movies](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/README.md#new-and-amplified-data-set) for students in 431 this year and last.
     - The previous version of the data (from 2021-09-13) included 14 variables. 
