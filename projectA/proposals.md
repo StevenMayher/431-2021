@@ -83,24 +83,28 @@ We have two projects who each selected Ohio, Kentucky, Pennsylvania and West Vir
 ### Number of Counties
 
 ```
-24 | 1257
-25 | 1127
-26 | 5
-27 | 19
-28 | 049
-29 |
-30 | 8
-31 | 339
-32 | 39
-33 | 005
-34 |
-35 | 02
-36 | 039
-37 | 15566679
-38 | 68
-39 | 147778
+24 | 1257 1127
+26 | 5    19
+28 | 049  
+30 | 8    339
+32 | 39   005
+34 |      02
+36 | 039  15566679
+38 | 68   147778
 ```
-
 
 ## Outcome Variable Selections
 
+Code | Projects | Description
+----: | ---: | :--------------------------------------------
+v147 | 10 | 
+v011 | 4 |
+v043 | 4 |
+v037 | 3 |
+v001 | 2 |
+v014 | 2 |
+v023 | 2 |
+v145 | 2 |
+v161 | 2 |
+
+Selected by a single project: `v002, v004, v009, v036, v039, v042, v044, v061, v063, v126, v143, v155, v160`
