@@ -6,21 +6,10 @@ All initial reviews are now complete, and comments for all 44 projects are avail
 
 ## Proposals That Need To Be Revised by the Investigators
 
-## Individual Investigators
-
-Student | Title
-:---: | :-----------
-Graham Akeson	|	new title needed
-Kyaw Oo Hla			|	Social Problems associated with Insufficient Sleep
-
-## Teams of Two
-
 Submitter | Partner | Title
 :---: | :---: | :-----------
 Raunak Nair	|	Sid Dugar	|	Predictors of Violent Crime in 4 states in the US
 Cyrus Nosrati | Drake McFaul | new title needed
-Ziyin Zhao	|	Modong Yang	|	new title needed
-
 
 ## Proposals That Have Been Accepted by Dr. Love
 
@@ -28,6 +17,7 @@ Ziyin Zhao	|	Modong Yang	|	new title needed
 
 Student | Title
 :---: | :-----------
+Graham Akeson	|	Family Structure and Primary Care Medical Coverage: Social and Systemic Factors Influencing Teen Pregnancy
 Abhishek Bhardwaj |	Factors associated with life expectancy in different states
 Allison Bode    | Effect of smoking, food insecurity, sleep, and diabetes on adult obesity rate in Ohio, California, Florida, and North Carolina
 Michael Douglass	|	Does Educating our Youth Have Anything to Do with Our Happiness?
@@ -35,6 +25,7 @@ Ava Fan		    |	The Impact of Education and Income On Rates of Adult Obesity
 Aaron Fletcher		|	Can You Expect to Live Longer if You Live in a Vacation Location?
 Megan Foradori		|	Exploring County Population Characteristics of Low Birthweight Infants
 Katie Heinzinger	|	Impact of Mental Health, Alcohol, Unemployment, and Income on Violent Crime in Select US Counties
+Kyaw Oo Hla			|	Social Problems associated with Insufficient Sleep
 Zahin Islam			|	Investigating Physical and Mental Health Factors That Influence Motor Vehicle Crash Deaths
 Chris Jones	    |	Analysis of Educational and Social Factors on Suicide Rates
 Fumi Kong			|	Predicting adult obesity rate from lifestyle habits and social infactors
@@ -72,4 +63,6 @@ Shruti Raghunathan	|	Norman Luc	|	Assessing Environmental and Lifestyle Predicto
 Steven Mayher	|	Anna Magoline	|	The Effects of College Education and Environmental Factors on Income Inequality
 Diya Yang	|	Carly Rose	|	Socioeconomic, Educational, Health, Environmental Factors and Their Influence on Life Expectancy
 Ying Xiong	|	Audrey Zhu	|	Investigating Median Household Income and Potential Influencing Factors in Six States
+Ziyin Zhao	|	Modong Yang	|	Predicting violent crime in Ohio and four Northeastern states
+
 
