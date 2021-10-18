@@ -95,6 +95,8 @@ We have two projects who each selected Ohio, Kentucky, Pennsylvania and West Vir
 
 ## Outcome Variable Selections
 
+- No two projects selected the same set of five variables into the same roles.
+
 Code | Projects | Description
 ----: | ---: | :--------------------------------------------
 v147 | 10 | Life expectancy
