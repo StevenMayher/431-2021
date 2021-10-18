@@ -97,14 +97,74 @@ We have two projects who each selected Ohio, Kentucky, Pennsylvania and West Vir
 
 Code | Projects | Description
 ----: | ---: | :--------------------------------------------
-v147 | 10 | 
-v011 | 4 |
-v043 | 4 |
-v037 | 3 |
-v001 | 2 |
-v014 | 2 |
-v023 | 2 |
-v145 | 2 |
-v161 | 2 |
+v147 | 10 | Life expectancy
+v011 | 4 | Adult obesity
+v043 | 4 | Violent crime
+v037 | 3 | Low birthweight
+v001 | 2 | Premature death
+v014 | 2 | Teen births
+v023 | 2 | Unemployment
+v145 | 2 | Frequent mental distress
+v161 | 2 | Suicides
 
 Selected by a single project: `v002, v004, v009, v036, v039, v042, v044, v061, v063, v126, v143, v155, v160`
+
+## Quantitative Predictors Selected (each project selects two)
+
+Code | Projects | Description
+----: | ---: | :--------------------------------------------
+v069 | 7 | Some college
+v009 | 5 | Adult smoking
+v023 | 5 | Unemployment
+v049 | 5 | Excessive drinking
+v139 | 5 | Food insecurity
+v011 | 4 | Adult obesity
+v042 | 4 | Poor mental health days
+v136 | 4 | Severe housing problems
+v143 | 4 | Insufficient sleep
+v004 | 3 | Primary care physicians
+v063 | 3 | Median household income
+v159 | 3 | Reading scores
+v160 | 3 | Math scores
+v168 | 3 | High school completion
+v014 | 2 | Teen births
+v043 | 2 | Violent crime
+v044 | 2 | Income inequality
+v045 | 2 | Sexually transmitted infections
+v062 | 2 | Mental health providers
+v070 | 2 | Physical inactivity
+v082 | 2 | Children in single-parent households
+v133 | 2 | Food environment index
+
+## Binary Categorical Predictors Selected/Created
+
+Code | Projects | Description
+----: | ---: | :--------------------------------------------
+v023 | 6 | Unemployment
+v124 | 4 | Drinking Water Violations
+v082 | 3 | Children in single-parent households
+v143 | 3 | Insufficient sleep
+v009 | 2 | Adult smoking
+v024 | 2 | Children in poverty
+v058 | 2 | Proportion Rural
+v062 | 2 | Mental health providers
+v069 | 2 | Some college
+v159 | 2 | Reading scores
+v166 | 2 | Broadband access
+v168 | 2 | High school completion
+
+## Multi-Categorical Predictors Selected/Created
+
+Code | Projects | Description
+----: | ---: | :--------------------------------------------
+v063 | 8 | Median household income
+v049 | 3 | Excessive drinking
+v143 | 3 | Insufficient sleep
+v166 | 3 | Broadband access
+v011 | 2 | Adult obesity
+v070 | 2 | Physical inactivity
+v139 | 2 | Food insecurity
+v145 | 2 | Frequent mental distress
+v147 | 2 | Life expectancy
+v168 | 2 | High school completion
+
