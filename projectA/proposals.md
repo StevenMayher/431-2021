@@ -82,6 +82,7 @@ We have two projects who each selected Ohio, Kentucky, Pennsylvania and West Vir
 
 ### Number of Counties
 
+```
 24 | 1257
 25 | 1127
 26 | 5
@@ -98,6 +99,7 @@ We have two projects who each selected Ohio, Kentucky, Pennsylvania and West Vir
 37 | 15566679
 38 | 68
 39 | 147778
+```
 
 
 ## Outcome Variable Selections
