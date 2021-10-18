@@ -5,7 +5,6 @@
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class17/images/laderas_2021-10-15a.PNG)
-![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class17/images/laderas_2021-10-15b.PNG)
 
 [Link to this stream](https://twitter.com/tladeras/status/1449171307770253314?s=21)
 
@@ -32,4 +31,5 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## One Last Thing
 
-To come.
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class17/images/laderas_2021-10-15b.PNG)
+
