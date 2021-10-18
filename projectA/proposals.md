@@ -113,6 +113,8 @@ Selected by a single project: `v002, v004, v009, v036, v039, v042, v044, v061, v
 
 ## Quantitative Predictors Selected (each project selects two)
 
+For the tables of predictors (by type) that follow, we exclude predictors selected by only one project.
+
 Code | Projects | Description
 ----: | ---: | :--------------------------------------------
 v069 | 7 | Some college
