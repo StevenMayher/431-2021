@@ -67,17 +67,16 @@ Ziyin Zhao	|	Modong Yang	|	Predicting violent crime in Ohio and four Northeaster
 
 ## State Selections
 
-State | **OH** | CA | PA | NY | FL and MA | MD | NC | GA, IL, WA |
-------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-Proposals | 44 | 22 | 16 | 15 | 11 | 8 | 7 | 5 |
+State | **OH** | CA | PA | NY | FL and MA | MD | NC | GA, IL, WA | CO, MI, NJ, WI, WV
+------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+Proposals | 44 | 22 | 16 | 15 | 11 | 8 | 7 | 5 | 4 |
 
-- Selected 4 times: CO, MI, NJ, WI, WV
-- Selected 3 times: AK, AL, AZ, ME, MN, MS, NM, OR, SC, VA
-- Selected twice: KY, OK, TN, WY
-- Selected once: AR, IA, KS, LA, MT, NV, TX, VT
-- Never selected: ID (43), IN (92), MO (115), ND (46), NE (79), SD (61), UT (28)
+- 10 states were selected 3 times: AK, AL, AZ, ME, MN, MS, NM, OR, SC, VA
+- 4 states were selected twice: KY, OK, TN, WY
+- 8 states were selected once: AR, IA, KS, LA, MT, NV, TX, VT
+- Never selected were ID (43), IN (92), MO (115), ND (46), NE (79), SD (61) and UT (28)
 
-We have two projects who selected Ohio, Kentucky, Pennsylvania and West Virginia, but that is the only match.
+We have two projects who each selected Ohio, Kentucky, Pennsylvania and West Virginia, but that is the only match.
 
 ### Number of Counties
 
