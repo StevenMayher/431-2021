@@ -23,9 +23,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 3. [Project A](https://thomaselove.github.io/431-2021-projectA/) is due on 2021-11-01.
     - The [list of proposals is here](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md) and this now includes some trivia on the states and variables that were most commonly selected.
     - We will use today's class to ensure that all of you have what you need to complete Project A by the end of the session.
-4. I posted to our Shared Google Drive a newly edited and substantially augmented [data set about favorite movies](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/README.md#new-and-amplified-data-set) for students in 431 this year and last.
+4. I posted to our Shared Google Drive a newly edited and substantially augmented [data set about favorite movies](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/README.md#new-and-amplified-data-set).
     - The previous version of the data (from 2021-09-13) included 14 variables. 
-    - The new version (called 431_favorite_movies_2021-10-16) corrects some errors, and now contains 69 variables on each of the 115 movies.
+    - The new version (called 431_favorite_movies_2021-10-16) corrects some errors, and now contains 69 variables on each of the 115 movies identified by students in 431 this year and last.
 5. I added the `pwr` package to the [list of packages we recommend you install in R](https://thomaselove.github.io/431/r_packages.html). Now would be an excellent time to update your packages, and if you're not already using R version 4.1.1., we encourage you to upgrade.
 6. Our next [Minute Paper](https://github.com/THOMASELOVE/431-2021/blob/main/minutepapers) will be after Class 18. If you wish to share anything with Dr. Love, specifically, email is always open.
 
