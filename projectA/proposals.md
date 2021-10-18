@@ -65,6 +65,8 @@ Diya Yang	|	Carly Rose	|	Socioeconomic, Educational, Health, Environmental Facto
 Ying Xiong	|	Audrey Zhu	|	Investigating Median Household Income and Potential Influencing Factors in Six States
 Ziyin Zhao	|	Modong Yang	|	Predicting violent crime in Ohio and four Northeastern states
 
+# Trivia
+
 ## State Selections
 
 State | **OH** | CA | PA | NY | FL and MA | MD | NC | GA, IL, WA | CO, MI, NJ, WI, WV
