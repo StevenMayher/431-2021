@@ -2,7 +2,7 @@
 
 There are 44 projects, including 26 by individual investigators, and 18 teams of 2. 
 
-All initial reviews are now complete, and comments for all 44 projects are available now on Canvas. Please review your comments.
+Comments for all projects are available now on Canvas. Please review your comments.
 
 ## Proposals That Need To Be Revised by the Investigators
 
@@ -65,4 +65,39 @@ Diya Yang	|	Carly Rose	|	Socioeconomic, Educational, Health, Environmental Facto
 Ying Xiong	|	Audrey Zhu	|	Investigating Median Household Income and Potential Influencing Factors in Six States
 Ziyin Zhao	|	Modong Yang	|	Predicting violent crime in Ohio and four Northeastern states
 
+## State Selections
+
+State | **OH** | CA | PA | NY | FL and MA | MD | NC | GA, IL, WA |
+------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+Proposals | 44 | 22 | 16 | 15 | 11 | 8 | 7 | 5 |
+
+- Selected 4 times: CO, MI, NJ, WI, WV
+- Selected 3 times: AK, AL, AZ, ME, MN, MS, NM, OR, SC, VA
+- Selected twice: KY, OK, TN, WY
+- Selected once: AR, IA, KS, LA, MT, NV, TX, VT
+- Never selected: ID (43), IN (92), MO (115), ND (46), NE (79), SD (61), UT (28)
+
+We have two projects who selected Ohio, Kentucky, Pennsylvania and West Virginia, but that is the only match.
+
+### Number of Counties
+
+24 | 1257
+25 | 1127
+26 | 5
+27 | 19
+28 | 049
+29 |
+30 | 8
+31 | 339
+32 | 39
+33 | 005
+34 |
+35 | 02
+36 | 039
+37 | 15566679
+38 | 68
+39 | 147778
+
+
+## Outcome Variable Selections
 
