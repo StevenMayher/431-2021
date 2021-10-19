@@ -20,7 +20,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - We fixed a couple of typos in the lab over the break. None should affect your conclusions.
     - The choice of `acutemi` as an outcome in Part B (questions 7-8) of Lab 5 was an odd choice on our part. We wrote about it in response to [Question 124 on Piazza](https://piazza.com/class/kseogqdhsbk1cr?cid=124).
 3. Grades and Feedback on Labs 1-4 and Minute Papers through Class 15 are available on the [Course Grading Roster](https://bit.ly/431-2021-grades).
-4. Three Sample Responses to Questions 1-5 on Lab 4 are available on our Shared Google Drive in the **431 Lab 4 Examples** document.
+4. Sample Responses to Questions 1-5 on Lab 4 are available on our Shared Google Drive in the **431 Lab 4 Examples** document.
 5. [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) will be available to you [at this link](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) by noon Friday 2021-10-22.  
     - The Google Form for submitting your responses is due **note revised deadline** at **11 PM** on Monday 2021-10-25.
     - Piazza will switch to private posts only at noon Friday and remain in that mode until Tuesday morning 2021-10-26.
