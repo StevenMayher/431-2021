@@ -1,4 +1,4 @@
-# 431 Class 17: 2021-10-26
+# 431 Class 18: 2021-10-26
 
 [Main Website](https://thomaselove.github.io/431/) | [Course Calendar](https://thomaselove.github.io/431/calendar.html) | [Syllabus](https://thomaselove.github.io/431-2021-syllabus/) | [Course Notes](https://thomaselove.github.io/431-notes/) | [Piazza & TA Office Hours](https://thomaselove.github.io/431/contact.html) | [Canvas](https://canvas.case.edu) | [Data and Code](https://github.com/THOMASELOVE/431-data)
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
