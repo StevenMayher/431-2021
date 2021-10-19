@@ -10,7 +10,7 @@ The files you will need to complete Quiz 2 will include:
 
 All materials will be posted for the Quiz before noon on Friday 2021-10-22. 
 
-The Quiz is due when [the Calendar](https://thomaselove.github.io/431/calendar.html) says it is, at 9 PM on Monday 2021-10-25. 
+The Quiz is due when [the Calendar](https://thomaselove.github.io/431/calendar.html) says it is, at **11 PM (note new time)** on Monday 2021-10-25. 
 
 - No late work will be accepted, so do not wait until the last minute to enter your work in the Google Form and press Submit. 
 - You can edit your work on the Answer Sheet after you submit, up until the deadline. 
