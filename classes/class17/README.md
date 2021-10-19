@@ -22,7 +22,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 3. Grades and Feedback on Labs 1-4 and Minute Papers through Class 15 are available on the [Course Grading Roster](https://bit.ly/431-2021-grades).
 4. Sample Responses to Questions 1-5 on Lab 4 are available on our Shared Google Drive in the **431 Lab 4 Examples** document.
 5. [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) will be available to you [at this link](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) by noon Friday 2021-10-22.  
-    - The Google Form for submitting your responses is due **note revised deadline** at **11 PM** on Monday 2021-10-25.
+    - **Note revised deadline**: The Google Form for submitting your Quiz 2 responses is now due at **11 PM** on Monday 2021-10-25.
     - Piazza will switch to private posts only at noon Friday and remain in that mode until Tuesday morning 2021-10-26.
     - During the Quiz, you can only get answers to questions about the Quiz via Piazza private posts, or emails to 431-help.
     - TA Office Hours (for support on the projects, in particular) will be held, as usual, throughout the Quiz window.
