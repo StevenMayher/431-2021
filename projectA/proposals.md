@@ -4,16 +4,13 @@ There are 44 projects, including 26 by individual investigators, and 18 teams of
 
 Comments for all projects are available now on Canvas. Please review your comments.
 
-## Proposals That Need To Be Revised by the Investigators
+## Proposal That Still Needs Revision by the Investigators
 
 Submitter | Partner | Title
 :---: | :---: | :-----------
-Raunak Nair	|	Sid Dugar	|	Predictors of Violent Crime in 4 states in the US
 Cyrus Nosrati | Drake McFaul | new title needed
 
-## Proposals That Have Been Accepted by Dr. Love
-
-## Individual Investigators
+## Accepted Proposals from Individual Investigators
 
 Student | Title
 :---: | :-----------
@@ -44,7 +41,7 @@ Ria Tilve			|	County-level Health and Socioeconomic Factors on Life Expectancy i
 Olivia Wilcox			|	Health Factors Associated with Teen Births
 Sneha Yamsani			|	Is Working at a Biotech Hub Associated with Shorter Life Expectancy?
 
-## Teams of Two
+## Accepted Proposals from Teams of Two
 
 Submitter | Partner | Title
 :---: | :---: | :-----------
@@ -52,6 +49,7 @@ Tyler Petrie	|	Paula Ambrose	|	An Examination of Environmental Rascism Factors a
 Grace Armstrong	|	Kiran Desai	|	Environmental Factors and their Impact on Life Expectancy
 Alise Carlson	|	Abigail Basson  |	Health Behaviors and Socioeconomic Factors Associated with Unemployment in Four Neighboring States
 Anushree Iyengar	|	Avantika Bhaduri	|	Individual Behaviors and Systemic Factors as Predictors of Poor Physical Health Days
+Raunak Nair	|	Sid Dugar	|	Predictors of Violent Crime in 4 states in the US
 Scarlett He	|	Jiayue Yang	| Analysis of four risk factors that contribute to the rate of life expectancy in five states in the US
 Alan Kiang	|	Erika Hutt |	Effect of Education Level and Income on Influenza Vaccination Rates 
 Makaela Mews	|	Jeeda Ismail	|	The Impact of Income and Health Behaviors on Poor Mental Health Days
