@@ -23,8 +23,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 4. Sample Responses to Questions 1-5 on Lab 4 are available on our Shared Google Drive in the **431 Lab 4 Examples** document.
 5. [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) will be available to you [at this link](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) by noon Friday 2021-10-22.  
     - **Note revised deadline**: The Google Form for submitting your Quiz 2 responses is now due at **11 PM** on Monday 2021-10-25.
-    - Piazza will switch to private posts only at noon Friday and remain in that mode until Tuesday morning 2021-10-26.
     - During the Quiz, you can only get answers to questions about the Quiz via Piazza private posts, or emails to 431-help.
+    - Piazza will switch to private posts only at noon Friday and remain in that mode until Tuesday morning 2021-10-26.
     - TA Office Hours (for support on the projects, in particular) will be held, as usual, throughout the Quiz window.
 6. [Project A](https://thomaselove.github.io/431-2021-projectA/) is due on 2021-11-01.
     - The [list of proposals is here](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md) and this now includes some trivia on the states and variables that were most commonly selected.
