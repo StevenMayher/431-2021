@@ -5,7 +5,7 @@
 The files you will need to complete Quiz 2 will include:
 
 1. a [PDF file that will be posted here] containing all questions and complete instructions
-2. a [Google Form Answer Sheet for Quiz 1] (where you will submit your responses by the deadline)
+2. a [Google Form Answer Sheet for Quiz 2] (where you will submit your responses by the deadline)
 3. some data files, which will appear in our Shared Google Drive in the Quiz 2 folder
 
 All materials will be posted for the Quiz before noon on Friday 2021-10-22. 
