@@ -24,7 +24,7 @@ You may or may not need to use a random seed in this assignment. If you need to 
 
 # Part A. County Health Rankings (Questions 1-6)
 
-We're going to revisit our County Health Rankings data, specifically using the same midwest counties we worked with in Lab 02, but starting from an expanded `lab05_counties.csv` data set.
+We're going to revisit our County Health Rankings data, specifically using the same Midwest counties we worked with in Lab 02, but starting from an expanded `lab05_counties.csv` data set.
 
 First, you'll want to read in the `lab05_counties` data and filter to the states of Ohio (OH), Indiana (IN), Illinois (IL), Michigan (MI), and Wisconsin (WI). The main variables we'll be looking at in this Lab are `metro` and `access_to_exercise_opportunities`, but you'll go ahead and still want to keep `state` and `county_name` as well. Determine whether there are any missing values in that set of variables. We'll call the resulting tibble `midwest05`.
 
@@ -74,7 +74,7 @@ Ingest the `lab05_lind.Rds` data into R, and use them to develop an appropriate 
 
 A couple of hints for Question 7:
 
-1. You should be changing the variable type and labels to make the results more interpetable (perhaps with `fct_recode()`), as well as change the levels so we are obtaining the probability or odds of a myocardial infarction for those who received abciximab compared to those who received usual care in a contingency table with abciximab status in the rows and acute MI status in the columns.
+1. You should be changing the variable type and labels to make the results more interpretable (perhaps with `fct_recode()`), as well as change the levels so we are obtaining the probability or odds of a myocardial infarction for those who received abciximab compared to those who received usual care in a contingency table with abciximab status in the rows and acute MI status in the columns.
 2. An appropriate contingency table will have the value for subjects who have an acute MI and who are receiving abciximab in the top left, and that cell should contain between 100 and 150 subjects.
 
 ## Question 8 (10 points)

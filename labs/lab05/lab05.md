@@ -1,6 +1,6 @@
 431 Lab 05
 ================
-Due **2021-10-18** at 9 PM \| Last Edited 2021-10-12 22:24:32
+Due **2021-10-18** at 9 PM \| Last Edited 2021-10-19 14:07:47
 
 ## Deadline
 
@@ -29,7 +29,7 @@ need to use a random seed, please use `4312021`.
 # Part A. County Health Rankings (Questions 1-6)
 
 We’re going to revisit our County Health Rankings data, specifically
-using the same midwest counties we worked with in Lab 02, but starting
+using the same Midwest counties we worked with in Lab 02, but starting
 from an expanded `lab05_counties.csv` data set.
 
 First, you’ll want to read in the `lab05_counties` data and filter to
@@ -138,7 +138,7 @@ English sentences. Use a 90% confidence level.
 A couple of hints for Question 7:
 
 1.  You should be changing the variable type and labels to make the
-    results more interpetable (perhaps with `fct_recode()`), as well as
+    results more interpretable (perhaps with `fct_recode()`), as well as
     change the levels so we are obtaining the probability or odds of a
     myocardial infarction for those who received abciximab compared to
     those who received usual care in a contingency table with abciximab
