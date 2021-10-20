@@ -8,6 +8,8 @@ The files you will need to complete Quiz 2 will include:
 2. a [Google Form Answer Sheet for Quiz 2] (where you will submit your responses by the deadline)
 3. some data files, which will appear in our Shared Google Drive in the Quiz 2 folder
 
+As of 2021-10-20 at 12:30 AM, the plan is to include 22 questions, and to make four data sets plus Love-boost.R available in the "data" materials, but those plans may change slightly before the final materials are posted.
+
 All materials will be posted for the Quiz before noon on Friday 2021-10-22. 
 
 The Quiz is due when [the Calendar](https://thomaselove.github.io/431/calendar.html) says it is, at **11 PM (note new time)** on Monday 2021-10-25. 
@@ -18,3 +20,28 @@ The Quiz is due when [the Calendar](https://thomaselove.github.io/431/calendar.h
 - You can ask questions about the Quiz using the two methods described in the instructions (private posts to Piazza or email to 431-help). The TAs and Dr. Love will respond as soon as possible. Regular TA office hours will be held during this time, but Piazza will be closed to all but private posts.
 - All questions received via Piazza or 431-help by 5 PM on Monday 2021-10-25 will be answered by that time.
 
+## Packages Used in Developing Quiz 2
+
+Dr. Love's current setup for Quiz 2 is provided below. Note that the final instructions (part of the main PDF for the Quiz) will show the final setup, and Dr. Love will also post his session information as part of the final PDF.
+
+```
+library(broom)
+library(car)
+library(Epi)
+library(equatiomatic)
+library(glue)
+library(ggrepel)
+library(Hmisc)
+library(janitor)
+library(knitr)
+library(magrittr)
+library(mosaic)
+library(naniar)
+library(patchwork)
+library(pwr)
+library(tidyverse)
+
+source("data/Love-boost.R")
+
+theme_set(theme_bw())
+```
