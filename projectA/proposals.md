@@ -1,14 +1,8 @@
 # Project A Proposals
 
-There are 44 projects, including 26 by individual investigators, and 18 teams of 2. 
+There are 44 projects, including 26 by individual investigators, and 18 teams of 2.
 
-Comments for all projects are available now on Canvas. Please review your comments.
-
-## Proposal That Still Needs Revision by the Investigators
-
-Submitter | Partner | Title
-:---: | :---: | :-----------
-Cyrus Nosrati | Drake McFaul | new title needed
+All projects have been accepted, and comments (and grades) are available now on Canvas. Please review your comments.
 
 ## Accepted Proposals from Individual Investigators
 
@@ -59,6 +53,7 @@ Gen Li	|	Jay Wei	|	Analysis of four risk factors that contribute to the rate of 
 Harrison Lindley	|	Sarah Nock	|	Exploring Associations between Rates of Suicide and Mental Health Indicators
 Shruti Raghunathan	|	Norman Luc	|	Assessing Environmental and Lifestyle Predictors of Low Birth Weight
 Steven Mayher	|	Anna Magoline	|	The Effects of College Education and Environmental Factors on Income Inequality
+Cyrus Nosrati | Drake McFaul | Understanding the Connections of Selected Variables with Life Expectancy for Large States near Ohio
 Diya Yang	|	Carly Rose	|	Socioeconomic, Educational, Health, Environmental Factors and Their Influence on Life Expectancy
 Ying Xiong	|	Audrey Zhu	|	Investigating Median Household Income and Potential Influencing Factors in Six States
 Ziyin Zhao	|	Modong Yang	|	Predicting violent crime in Ohio and four Northeastern states
