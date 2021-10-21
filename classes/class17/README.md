@@ -28,7 +28,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - Piazza will switch to private posts only at noon Friday and remain in that mode until Tuesday morning 2021-10-26.
     - TA Office Hours (for support on the projects, in particular) will be held, as usual, throughout the Quiz window.
 6. [Project A](https://thomaselove.github.io/431-2021-projectA/) is due on 2021-11-01.
-    - The [list of proposals is here](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md) and this now includes some trivia on the states and variables that were most commonly selected.
+    - The [list of all 44 accepted proposals is here](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/proposals.md) and this now includes some trivia on the states and variables that were most commonly selected.
     - We will use some of today's class time to ensure that you have what you need to complete Project A.
     - I updated the [Project A instructions](https://thomaselove.github.io/431-2021-projectA/) lightly on 2021-10-18. The main change is to announce that the Project A Self-Evaluation Google Form is now available at https://bit.ly/431-2021-projA-self-evaluation.
 7. I posted to our Shared Google Drive a newly edited and substantially augmented [data set about favorite movies](https://github.com/THOMASELOVE/431-2021/blob/main/classes/movies/README.md#new-and-amplified-data-set).
