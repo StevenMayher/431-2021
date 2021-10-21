@@ -6,9 +6,9 @@ The files you will need to complete Quiz 2 will include:
 
 1. a [PDF file that will be posted here] containing all questions and complete instructions
 2. a [Google Form Answer Sheet for Quiz 2] (where you will submit your responses by the deadline)
-3. some data files, which will appear in our Shared Google Drive in the Quiz 2 folder
+3. the five files (`Love-boost.R` and four data files) which appear now in our Shared Google Drive in the data subfolder within the Quiz 2 folder.
 
-As of 2021-10-20 at 12:30 AM, the plan is to include 22 questions, and to make four data sets plus Love-boost.R available in the "data" materials, but those plans may change slightly before the final materials are posted.
+As of class time, the plan is to include 22 questions, but those plans may change slightly before the final materials are posted.
 
 All materials will be posted for the Quiz before noon on Friday 2021-10-22. 
 
@@ -22,7 +22,7 @@ The Quiz is due when [the Calendar](https://thomaselove.github.io/431/calendar.h
 
 ## Packages Used in Developing Quiz 2
 
-Dr. Love's current setup for Quiz 2 is provided below. Note that the final instructions (part of the main PDF for the Quiz) will show the final setup, and Dr. Love will also post his session information as part of the final PDF.
+Dr. Love's setup for Quiz 2 is provided below. Note that the final instructions (part of the main PDF for the Quiz) will show the final setup (in case there are any last-minute changes) and Dr. Love will also post his session information as part of the final PDF.
 
 ```
 library(broom)
