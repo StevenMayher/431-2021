@@ -5,7 +5,7 @@
 The files you will need to complete Quiz 2 will include:
 
 1. a [PDF file that will be posted here] containing all questions and complete instructions
-2. a [Google Form Answer Sheet for Quiz 2](https://bit.ly/431-2021-quiz2-answer-sheet) where you will submit your responses by the deadline.
+2. [this Google Form Answer Sheet for Quiz 2](https://bit.ly/431-2021-quiz2-answer-sheet) where you will submit your responses by the deadline.
 3. the five files (`Love-boost.R` and four data files) which appear now in our Shared Google Drive in the data subfolder within the Quiz 2 folder.
 
 The Quiz has 22 questions. All materials will be posted for the Quiz between 9 AM and Noon on Friday 2021-10-22. 
