@@ -40,4 +40,4 @@ Want beautiful color schemes for your work? Want to read about some great tips f
 
 ## A Gentleman's Guide to Love and Murder
 
-- The musical I am performing in opens this Friday evening, 2021-10-29 and continues on the weekends through 2021-11-20. A message like this will appear on the bottom of the next few READMEs until the show is over. If you are interested, visit https://github.com/THOMASELOVE/theater for more details. If you are not interested, then I thank you for your patience.
+- The musical I am performing in opens this Friday evening, 2021-10-29 and continues on the weekends through 2021-11-20. A message like this will appear on the bottom of the next few READMEs until the show is over. If you are interested, visit https://github.com/THOMASELOVE/theater for more details. If you are not interested, then I thank you for your patience. Let me just emphasize again that coming or not coming to the show will have no impact on your grade in this course, at all.
