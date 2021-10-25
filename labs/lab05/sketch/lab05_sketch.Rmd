@@ -257,6 +257,17 @@ set.seed(4312021)
 bootdif(midwest05$ex_access, midwest05$metro_f, conf.level = 0.95)
 ```
 
+### What if we had calculated `Non Metro - Metro` instead?
+
+The mean difference will just be the inverse and the 95% CI will be nearly identical (again, inverse) as well.
+
+```{r}
+set.seed(4312021)
+
+bootdif(midwest05$ex_access, fct_relevel(midwest05$metro_f, "Metro", "Non Metro"), 
+        conf.level = 0.95)
+```
+
 ### What if I used a different `B.rep`?
 
 The default number of bootstrap samples in the `bootdif()` function is 2,000. However, it's possible that some of you may have set the number to something else. Generally, we don't want to do less than 1,000 without some compelling reason.
