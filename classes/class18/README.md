@@ -21,7 +21,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - The Final Portfolio submission link is now on [Canvas](https://canvas.case.edu).
     - Although there are no Tuesday TA office hours, Piazza is open for any last-minute questions, and we will also have class that day.
 4. [Course Notes](https://thomaselove.github.io/431-notes/) Chapters 26 - 32 (on Regression) are now posted, and these are likely to be the final chapters for this semester, although I expect you'll find typos and other things for me to fix as time goes by.
-5. The [431-data site](https://github.com/THOMASELOVE/431-data) now has new data files (`emp_bmi.csv`, `gala.csv` and `pollution.csv`) discussed in the new chapters in the Course Notes, as well as the `dm500.Rds` data file we will use today and in Classes 19 and 20.
+5. The [431-data site](https://github.com/THOMASELOVE/431-data) now has new data files (`emp_bmi.csv`, `gala.csv` and `pollution.csv`) discussed in the new chapters in the Course Notes, as well as the `dm1.Rds` data file we will use today and in Classes 19 and 20.
 6. We added the `mice` package to the [list of R packages](https://thomaselove.github.io/431/r_packages.html) you should install.
     - Once you install an R package, you shouldn't need to do it again until you upgrade your version of R.
 8. Instructions for [Project B](https://thomaselove.github.io/431/projects.html) will be posted as soon as possible.
