@@ -20,9 +20,11 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - We did this just to ensure that everyone gets their portfolio in on time. 
     - The Final Portfolio submission link is now on [Canvas](https://canvas.case.edu).
     - Although there are no Tuesday TA office hours, Piazza is open for any last-minute questions.
-4. Instructions for [Project B](https://thomaselove.github.io/431/projects.html) will be posted as soon as possible.
-5. [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) was due at 11 PM Monday. 
-6. Congratulations to [Kristi Lin-Rahardja](https://kristilinr.netlify.app/) for her new website! This is motivated (at least in part) by [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX).
+4. Course Notes Chapters 26 - 32 (on Regression) are now posted, and these are likely to be the final chapters for this semester.
+    - The [431-data site](https://github.com/THOMASELOVE/431-data) now has new data files (`emp_bmi.csv`, `gala.csv` and `pollution.csv`) discussed in the new chapters.
+5. Instructions for [Project B](https://thomaselove.github.io/431/projects.html) will be posted as soon as possible.
+6. [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) was due at 11 PM Monday. 
+7. Congratulations to [Kristi Lin-Rahardja](https://kristilinr.netlify.app/) for her new website! This is motivated (at least in part) by [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX).
 
 ## One Last Thing
 
