@@ -10,5 +10,5 @@ All deadlines for 431 work, including this Lab, are posted in the [Course Calend
 ## After the Lab
 
 - Answer Sketch and Grading Rubric for Lab 5 are now posted in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab05/sketch/lab05_sketch.Rmd) and [also PDF](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab05/sketch/lab05_sketch.pdf).
-- Grades on the Lab will be posted to the Course Grading Roster one week after the deadline for the Lab.
-- Additional materials will be posted as necessary.
+  - We updated the response to Question 5 on 2021-10-25 to show what would happen in Question 5 if you set up your factor to compare non-metro minus metro, rather than the metro minus non-metro approach we used.
+- Grades and Feedback on the Lab are available now on the [Course Grading Roster](https://bit.ly/431-2021-grades).
