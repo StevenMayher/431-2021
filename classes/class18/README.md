@@ -23,6 +23,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - The Final Portfolio submission link is now on [Canvas](https://canvas.case.edu).
     - Although there are no Tuesday TA office hours, Piazza is open for any last-minute questions.
 5. Instructions for Project B will be posted as soon as possible.
+6. Congratulations to [Kristi Lin-Rahardja](https://kristilinr.netlify.app/) for her new website! This is motivated (at least in part) by [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX).
 
 ## One Last Thing
 
