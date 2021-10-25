@@ -15,8 +15,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. There is a Minute Paper after Class 18 due Wednesday 2021-10-27 at Noon. Please complete it on time.
 2. The [Lab 5 Answer Sketch](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05/sketch) was lightly revised on Monday to show what would happen in Question 5 if you set up your factor to compare non-metro minus metro, instead of the metro minus non-metro approach we anticipated you using. A similar issue crops up in Quiz 2, and we'll give full marks either way when completing that grading. 
-  - Grades and feedback on Lab 5 are now available on the Course Grading Roster.
-  - Remember that your lowest single Lab grade (of Labs 1-7) will be dropped at the end of the semester when we calculate your Lab grade.
+    - Grades and feedback on Lab 5 are now available on the Course Grading Roster.
+    - Remember that your lowest single Lab grade (of Labs 1-7) will be dropped at the end of the semester when we calculate your Lab grade.
 3. Quiz 2 was due at 11 PM Monday. Details to come.
 4. Dr. Love has pushed back the deadline for the [Project A Portfolio](https://thomaselove.github.io/431-2021-projectA/) 24 hours, so it is now due on Tuesday 2021-11-02 at 9 PM. 
   - This is just to help ensure that everyone gets their portfolio in on time. The link for the Final Portfolio is now available on [Canvas](https://canvas.case.edu).
