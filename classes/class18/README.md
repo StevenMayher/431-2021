@@ -19,7 +19,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
   - Remember that your lowest single Lab grade (of Labs 1-7) will be dropped at the end of the semester when we calculate your Lab grade.
 3. Quiz 2 was due at 11 PM Monday. Details to come.
 4. Dr. Love has pushed back the deadline for the [Project A Portfolio](https://thomaselove.github.io/431-2021-projectA/) 24 hours, so it is now due on Tuesday 2021-11-02 at 9 PM. 
-  - This is just to help ensure that everyone gets their portfolio in on time.
+  - This is just to help ensure that everyone gets their portfolio in on time. The link for the Final Portfolio is now available on [Canvas](https://canvas.case.edu).
   - We remind you that while there are no TA office hours on Tuesdays, Piazza will be open all day on 2021-11-02 for any last-minute questions.
 5. Instructions for Project B will be posted as soon as possible.
 
