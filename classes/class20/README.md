@@ -14,7 +14,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. To come.
+1. There is a Minute Paper after Class 20 (due tomorrow at Noon). Details to come.
+2. There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). I suggest upgrading **after** you turn in Project A.
+3. More to come.
 
 ## Project A 
 
