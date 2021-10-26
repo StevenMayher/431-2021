@@ -24,3 +24,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## One Last Thing
 
 To come.
+
+## A Gentleman's Guide to Love and Murder
+
+- The musical I am performing in continues at Aurora Community Theatre, in Aurora, OH on the weekends through 2021-11-20. A message like this will appear on the bottom of the next few READMEs until the show is over. If you are interested, visit https://github.com/THOMASELOVE/theater for more details. If you are not interested, then I thank you for your patience. Let me just emphasize again that coming or not coming to the show will have no impact on your grade in this course, at all.
