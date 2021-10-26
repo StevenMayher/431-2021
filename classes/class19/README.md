@@ -15,7 +15,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Announcements
 
 1. Results from the Minute Paper after Class 18 are to come.
-2. Other announcements to come.
+2. There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). I suggest upgrading **after** you turn in Project A.
+3. Other announcements to come.
 
 ## Project A Final Weekend: Reminders
 
