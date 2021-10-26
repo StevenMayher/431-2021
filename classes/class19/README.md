@@ -17,7 +17,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 1. Results from the Minute Paper after Class 18 are to come.
 2. Other announcements to come.
 
-## Project A Final Reminders
+## Project A Final Weekend: Reminders
 
 1. Deadline: Tuesday 2021-11-02 at 9 PM.
 2. More to come.
