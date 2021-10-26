@@ -24,13 +24,19 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 5. The [431-data site](https://github.com/THOMASELOVE/431-data) now has new data files (`emp_bmi.csv`, `gala.csv` and `pollution.csv`) discussed in the new chapters in the Course Notes, as well as the `dm1.Rds` data file we will [use today](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class18/data) and also in Classes 19 and 20.
 6. We added the `mice` package to the [list of R packages](https://thomaselove.github.io/431/r_packages.html) you should install.
     - Once you install an R package, you shouldn't need to do it again until you upgrade your version of R. 
-    - We are running R version 4.1.1. (2021-08-10) -- "Kick Things" now. Your version number is at the top of the R console when you open RStudio.
+    - The current R version is 4.1.1. (2021-08-10) -- "Kick Things". Your version number is at the top of the R console when you open RStudio.
     - There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). I suggest upgrading **after** you turn in Project A.
 7. Instructions for [Project B](https://thomaselove.github.io/431/projects.html) will be posted as soon as possible.
 8. [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) was due at 11 PM Monday. 
-9. Want to build a footnote in R Markdown? Try `^[Footnotegoeshere]`.
-10. Congratulations to [Kristi Lin-Rahardja](https://kristilinr.netlify.app/) for her new website! This is motivated (at least in part) by [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX).
-11. Thank you very much to Graham Akeson, who shared with me [this folklore about the Alice Mural in our classroom](alice_folklore.md).
+    - I have graded all questions except Questions 8 (the little essay about paired samples and weight loss - the correct result was Result 2 thanks to the outliers, rather than a paired t test) and 22 (the sentence about a confidence interval for the Commercial - Medicare difference in high school graduation rates.)
+    - The questions I intended to be tricky were Questions 5 (most of you avoided the trap and successfully calculated a positive predictive value) and 17 (most of you didn't avoid the trap that an asymmetric confidence interval around the point estimate could not possibly emerge from a t test approach, which adds and subtracts the same "margin of error" around a point estimate, as opposed to, for instance, a bootstrap.)
+    - Questions 9, 11 and 16 were definitely serious trouble spots, and I'll have to review some of this material with you in another context. I will, once the grades are in, and the answer sketch is published.
+    - Questions 13-14, 15 and 19 also went less well than I'd hoped they would. The other questions went fairly well for most people, though.
+    - On the whole, I didn't have enough of the "easy" questions, I think, but we'll see how things shake out.
+    - You should have your score and the answer sketch before class on Thursday.
+10. Want to build a footnote in R Markdown? Try `^[Footnotegoeshere]`.
+11. Congratulations to [Kristi Lin-Rahardja](https://kristilinr.netlify.app/) for her new website! This is motivated (at least in part) by [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX).
+12. Thank you very much to Graham Akeson, who shared with me [this folklore about the Alice Mural in our classroom](alice_folklore.md).
 
 # Two Last Things
 
