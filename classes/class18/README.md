@@ -28,7 +28,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 8. [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) was due at 11 PM Monday. 
 9. Want to build a footnote in R Markdown? Try `^[Footnotegoeshere]`.
 10. Congratulations to [Kristi Lin-Rahardja](https://kristilinr.netlify.app/) for her new website! This is motivated (at least in part) by [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX).
-11. Thank you very much to Graham Akerson, who shared with me [this folklore about the Alice Mural in our classroom](alice_folklore.md).
+11. Thank you very much to Graham Akeson, who shared with me [this folklore about the Alice Mural in our classroom](alice_folklore.md).
 
 # Two Last Things
 
