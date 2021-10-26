@@ -25,7 +25,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 6. We added the `mice` package to the [list of R packages](https://thomaselove.github.io/431/r_packages.html) you should install.
     - Once you install an R package, you shouldn't need to do it again until you upgrade your version of R. 
     - We are running R version 4.1.1. (2021-08-10) -- "Kick Things" now. Your version number is at the top of the R console when you open RStudio.
-    - There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). I suggest upgrading after you turn in Project A.
+    - There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). I suggest upgrading **after** you turn in Project A.
 7. Instructions for [Project B](https://thomaselove.github.io/431/projects.html) will be posted as soon as possible.
 8. [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) was due at 11 PM Monday. 
 9. Want to build a footnote in R Markdown? Try `^[Footnotegoeshere]`.
