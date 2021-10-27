@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-![](https://imgs.xkcd.com/comics/slope_hypothesis_testing.png) [Link at XKCD](https://xkcd.com/2533)
+> Starter to come.
 
 ## Today's Slides
 
