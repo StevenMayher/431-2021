@@ -24,10 +24,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - I suggest upgrading **after** you turn in Project A. One change is that RStudio has changed to calendar versioning, so the new version number is something like `2021.09.0+351` for RStudio. The version of R we're using is `R 4.1.1`.
 5. Some Project B information **to come**.
 
-## Project A Final Weekend: Reminders
-
-1. Deadline: Tuesday 2021-11-02 at 9 PM.
-2. More to come.
+## Project A Final Weekend: Everything is due Tuesday 2021-11-02 at 9 PM.
 
 ## One Last Thing
 
