@@ -16,13 +16,13 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 1. Results from the Minute Paper after Class 18 are **to come**.
 2. The [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) Answer Sketch and Results document [is now available in PDF](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz2/quiz2_sketch_with_results.pdf).
     - Dr. Love will email you details on your performance on Quiz 2 **before class time Thursday**.
-    - If you have complaints or questions about Quiz 2, please submit them via email to Dr. Love **after** Thursday's class.
-4. We made a mistake in grading Question 9 in Lab 5 (not allowing students to prepare a 2x2 table in either appropriate way) and have now fixed it. [Details here](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05).
+    - If you have complaints or questions about Quiz 2 grading, please submit them via email to Dr. Love **after** Thursday's class.
+3. We made a mistake in grading Question 9 in Lab 5 (not allowing students to prepare a 2x2 table in either appropriate way) and have now fixed it. [Details here](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05).
     - The affected students received an email from Dr. Love about this on 2021-10-27. We have updated the feedback and scores on the [Course Grading Roster](https://bit.ly/431-2021-grades) for Lab 5.
     - The [Lab 5 Answer Sketch and Grading Rubric](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) is now updated, too.
-5. Again, there's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). 
+4. Again, there's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). 
     - I suggest upgrading **after** you turn in Project A. One change is that RStudio has changed to calendar versioning, so the new version number is something like `2021.09.0+351` for RStudio. The version of R we're using is `R 4.1.1`.
-6. Some Project B information **to come**.
+5. Some Project B information **to come**.
 
 ## Project A Final Weekend: Reminders
 
