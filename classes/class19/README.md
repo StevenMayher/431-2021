@@ -8,15 +8,18 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Today's Slides
 
-- We will continue with the slides originally presented in Class 18.
-- Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class19/431-class18-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class19/431-class18-slides.Rmd). 
+- We will continue with the slides originally presented in Class 18. Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class19/431-class18-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class19/431-class18-slides.Rmd). 
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Announcements
 
 1. Results from the Minute Paper after Class 18 are to come.
 2. There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). I suggest upgrading **after** you turn in Project A.
-3. Other announcements to come.
+3. We made a mistake in grading Question 9 in Lab 5, and have now fixed it. [Details here](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05).
+  - The affected students should have received an email from Dr. Love about this on 2021-10-27.
+  - We have updated the feedback and scores on the [Course Grading Roster](https://bit.ly/431-2021-grades) for Lab 5.
+  - We are in the process of updating the Answer Sketch and Grading Rubric will be updated by class time.
+4. Other announcements to come.
 
 ## Project A Final Weekend: Reminders
 
