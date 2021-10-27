@@ -6,12 +6,13 @@
 
 After Class | due at NOON on | Link to Minute Paper Form 
 ----------: | ------: | :--------: 
-18 (2021-10-26) | 2021-10-27 | https://bit.ly/431-2021-minute-18
+20 (2021-11-02) | 2021-11-03 | to come.
 
 ## Completed Minute Papers
 
 After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
 ----------: | ------: | :--------: | :----------:
+18 (2021-10-26) | 2021-10-27 | https://bit.ly/431-2021-minute-18 | https://bit.ly/431-2021-min18-feedback
 15 (2021-10-12) | 2021-10-13 | https://bit.ly/431-2021-minute-15 | https://bit.ly/431-2021-min15-feedback
 13 (2021-10-05) | 2021-10-06 | https://bit.ly/431-2021-minute-13 | https://bit.ly/431-2021-min13-feedback
 11 (2021-09-28) | 2021-09-29 | https://bit.ly/431-2021-minute-11 | https://bit.ly/431-2021-min11-feedback
@@ -23,7 +24,6 @@ After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Fe
 
 After Class | due at NOON on 
 ----------: | ------: 
-20 (2021-11-02) | 2021-11-03 
 22 (2021-11-09) | 2021-11-10 
 24 (2021-11-16) | 2021-11-17
 26 (2021-11-30) | 2021-12-01
