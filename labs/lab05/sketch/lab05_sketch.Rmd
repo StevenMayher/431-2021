@@ -564,4 +564,16 @@ addmargins(q9_aug)
   
 - 9 points will be awarded for a correct accuracy, sensitivity, and specificity.
   - Each of these is worth 3 points, with 1 being for the calculation and 2 being for a correct interpretation.
+  
+### Update as of 2021-10-27
+
+In our grading, we deducted points where the contingency table was not set up correctly. However, some students who lost points had instead followed the Spiegelhalter setup which reverses the rows and columns from what we show above. This is still correct. As such we re-reviewed the assignments and awarded points back to a number of students where this was the case. The Spiegelhalter way would look something like this:
+
+```{r}
+q9_alt <- matrix(c(9, 7, 74, 405), byrow = TRUE, nrow = 2)
+rownames(q9_alt) <- c("Did not survive", "Survived")
+colnames(q9_alt) <- c("Predicted not to survive", "Predicted to survive")
+addmargins(q9_alt)
+```
+
 
