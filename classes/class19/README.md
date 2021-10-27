@@ -20,7 +20,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - The [Lab 5 Answer Sketch and Grading Rubric](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) **will be updated by class time**.
 4. Again, there's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). 
     - I suggest upgrading **after** you turn in Project A. One change is that RStudio has changed to calendar versioning, so the new version number is something like `2021.09.0+351` for RStudio. The version of R we're using is `R 4.1.1`.
-5. Other announcements **to come**.
+5. Some Project B information **to come**.
 
 ## Project A Final Weekend: Reminders
 
