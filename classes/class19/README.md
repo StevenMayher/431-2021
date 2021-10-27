@@ -13,7 +13,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. Results from the Minute Paper after Class 18 are **to come**.
+1. Results from the Minute Paper after Class 18 [are now available](https://bit.ly/431-2021-min18-feedback).
 2. The [Quiz 2](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) Answer Sketch and Results document [is now available in PDF](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz2/quiz2_sketch_with_results.pdf).
     - Dr. Love will email you details on your performance on Quiz 2 **before class time Thursday**.
     - If you have complaints or questions about Quiz 2 grading, please submit them via email to Dr. Love **after** Thursday's class.
