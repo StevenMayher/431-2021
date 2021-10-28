@@ -1,0 +1,199 @@
+---
+title: "Sample Project A Analyses with dm1 data"
+author: "Thomas E. Love"
+date: "10/28/2021"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+        number_sections: TRUE
+        code_folding: show
+---
+
+## Important Note {-}
+
+This is a very quick example. I'm showing the minimum standard, not what we're hoping you will be able to do. But I want to increase the chances that you'll meet the minimum standard for a B on this part of the project.
+
+# Setup {-}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+```{r}
+library(broom)
+library(tidyverse)
+
+theme_set(theme_bw())
+```
+
+## Ingesting the Data
+
+```{r}
+dm1 <- read_rds("data/dm1.Rds")
+```
+
+## Summarizing the Data
+
+```{r}
+summary(dm1)
+```
+# A Model for a Quantitative Outcome using a Quantitative Predictor
+
+## Initial Visualization
+
+```{r}
+ggplot(data = dm1, aes(x = age, y = a1c)) +
+    geom_point()
+    geom_smooth(method = "lm", formula = y ~ x, 
+                se = TRUE, col = "red")
+```
+
+## Fitting a Model
+
+```{r}
+mod_age <- lm(a1c ~ age, data = dm1)
+```
+
+```{r}
+tidy(mod_age, conf.int = TRUE, conf.level = 0.90)
+```
+
+```{r}
+glance(mod_age)
+```
+
+```{r}
+summary(mod_age)
+```
+
+## Residual Plots
+
+```{r}
+plot(mod_age, which = c(1:2))
+```
+
+
+# A Model for a Quantitative Outcome using a Multi-Categorical Predictor
+
+## Initial Visualization
+
+```{r}
+ggplot(dm1, aes(x = income, y = a1c)) +
+    geom_violin() +
+    geom_boxplot(width = 0.3)
+```
+
+## Fitting a Model
+
+```{r}
+mod_inc <- lm(a1c ~ income, data = dm1)
+```
+
+```{r}
+summary(mod_inc)
+```
+
+## ANOVA comparisons
+
+```{r}
+anova(mod_inc)
+```
+
+## Tukey HSD pairwise comparisons
+
+```{r}
+tuk_inc <- TukeyHSD(aov(a1c ~ income, data = dm1), 
+                    ordered = TRUE, conf.level = 0.90)
+
+tuk_inc
+```
+
+```{r}
+plot(tuk_inc)
+```
+
+```{r}
+dm1 <- dm1 %>%
+    mutate(inc2 = fct_recode(income,
+                             Low = "Below_30K",
+                             Mid = "Between_30-50K",
+                             High = "Higher_than_50K"))
+
+dm1 %>% count(income, inc2)
+```
+
+```{r}
+tuk_inc2 <- TukeyHSD(aov(a1c ~ inc2, data = dm1), 
+                    ordered = TRUE, conf.level = 0.90)
+
+plot(tuk_inc2)
+```
+
+## Residual Plots
+
+```{r}
+par(mfrow = c(1,2))
+plot(mod_inc, which = c(1:2))
+par(mfrow = c(1,1))
+```
+
+# A Model for A1c, using Age, and adjusting for Income
+
+## Initial Visualization
+
+```{r}
+ggplot(data = dm1, aes(x = age, y = a1c, col = income, group = income)) +
+    geom_point() +
+    geom_smooth(method = "lm", formula = y ~ x, se = FALSE) + 
+    facet_wrap(~ income)
+```
+
+## Fitting a Model
+
+```{r}
+mod_2 <- lm(a1c ~ age * income, data = dm1)
+```
+
+```{r}
+summary(mod_2)
+```
+
+```{r}
+tidy(mod_2, conf.int = TRUE, conf.level = 0.90) %>%
+    select(estimate, conf.low, conf.high)
+```
+
+```{r}
+glance(mod_2)
+```
+
+```{r}
+anova(mod_2)
+```
+
+## Making Predictions at the median age, for each income group
+
+```{r}
+new_dat <- tibble(age = c(56, 56, 56),
+                  income = c("Higher_than_50K", 
+                             "Between_30-50K", 
+                             "Below_30K"))
+
+new_dat
+```
+
+```{r}
+augment(mod_2, newdata = new_dat)
+```
+
+
+## Residual Plots
+
+```{r}
+par(mfrow = c(1,2))
+plot(mod_2, which = c(1:2))
+par(mfrow = c(1,1))
+```
+
+
