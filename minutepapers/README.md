@@ -23,7 +23,7 @@ After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Fe
 ## Upcoming Minute Papers
 
 After Class | due at NOON on 
-----------: | ------: 
+----------: | :------ 
 22 (2021-11-09) | 2021-11-10 
 24 (2021-11-16) | 2021-11-17 (this will actually be the Project B data plan)
 26 (2021-11-30) | 2021-12-01
