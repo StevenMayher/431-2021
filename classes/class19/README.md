@@ -28,6 +28,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Project A Final Weekend: Everything is due Tuesday 2021-11-02 at 9 PM. Good luck!
 
+- [Here is an R Markdown file of the Sample Project A Analyses](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class19/dm1_sample_projA_analyses.Rmd) that I will discuss today, using the `dm1` data. The purpose of this example is to assure people that they've done the minimum things required. Most projects should do a better job than this small example does.
+- https://rpubs.com/TELOVE/dm1_projA contains the HTML result obtained using that HTML file.
+
 ## One Last Thing
 
 **On Asking Questions**: We know it can be difficult to ask for help, and while we try to be helpful in responding on Piazza, over Zoom office hours, via email or through the Minute Papers, if we don't understand your question (or don't understand the purpose of it) we can often confuse matters. Moreover, if we think you already know something when you don't, that can also get in the way of giving you a useful response. 
