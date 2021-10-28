@@ -67,7 +67,7 @@ You will fill out a short form (should take less than 15 minutes to complete) to
 8. What are the other variables you plan to use in your study? (Specify each of the other variables, and for each, describe the variable’s meaning if it’s not clear, and tell me whether it is categorical or quantitative. If it’s categorical, tell me what the categories are.)
 9. How many subjects in your data have complete information on all variables you plan to study? (must be between 250 and 10,000)
 
-That’s it. Dr. Love will review your results and get back to you to tell you whether your proposed approach is approved or not. If not, you’ll have to edit your submission and resubmit the form.
+That’s it. Dr. Love will review your results and get back to you to tell you whether your proposed approach is approved or not. If not, you’ll have to edit your submission and resubmit the form. The form will be available by 2021-11-04 and will be due on 2021-11-17 (it will serve as the Minute Paper for that week, as well) so we can resolve everything prior to the Thanksgiving Break.
 
 ## Will there be a template?
 
