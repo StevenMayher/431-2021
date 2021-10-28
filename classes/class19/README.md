@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-> Did you know that the [Course Notes](https://thomaselove.github.io/431-notes/) have a search function?
+Did you know that the [Course Notes](https://thomaselove.github.io/431-notes/) have a search function?
 
 ## Today's Slides
 
