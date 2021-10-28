@@ -20,6 +20,8 @@ Study 1 is about making descriptive and exploratory comparisons and summaries of
 - Create and analyze a 2×2 table
 - Create and analyze a J×K table, where J is between 2 and 6 and K is between 3 and 6. 
 
+We'll fill in some details on these sorts of analyses again between now and the Thanksgiving Break.
+
 ## Study 2
 
 Study 2 is about building a series of two regression models and using them to make predictions. You will complete all elements of a data science project designed to create a statistical model for a quantitative outcome, then use it for prediction, and assess the quality of those predictions both in a training sample and in a test sample. Study 2 involves the prediction of a quantitative outcome using a key predictor and some additional predictors in two linear regression models, and then comparing those two models using tools we’ve already seen, plus some tools we will develop in the remaining classes prior to Thanksgiving.
