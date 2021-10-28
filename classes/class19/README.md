@@ -8,7 +8,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Today's Slides
 
-- We will continue with the slides introduced in Class 18. Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class19/431-class18-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class19/431-class18-slides.Rmd). 
+- We will continue with the slides introduced in Class 18, starting today on slide 31. Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class19/431-class18-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class19/431-class18-slides.Rmd). 
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Announcements
@@ -24,11 +24,11 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - I suggest upgrading **after** you turn in Project A. One change is that RStudio has changed to calendar versioning, so the new version number is something like `2021.09.0+351` for RStudio. The version of R we're using is `R 4.1.1`.
 5. Some Project B information **to come**.
 
-## Project A Final Weekend: Everything is due Tuesday 2021-11-02 at 9 PM.
+## Project A Final Weekend: Everything is due Tuesday 2021-11-02 at 9 PM. Good luck!
 
 ## One Last Thing
 
-To come.
+Did you know that the [Course Notes](https://thomaselove.github.io/431-notes/) have a search function?
 
 ## A Gentleman's Guide to Love and Murder
 
