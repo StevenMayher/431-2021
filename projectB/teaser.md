@@ -14,11 +14,11 @@ Some people will be permitted to work with a partner, and some will not. For exa
 
 Study 1 is about making descriptive and exploratory comparisons and summaries of data. It’s not (really) about building sophisticated statistical models, but rather about doing things we've already studied to compare the means and/or proportions across groups defined by a binary predictor or by a multi-categorical predictor. You will ingest, merge and clean the data in R, then select variables to complete four out of a possible five analyses, which include the following:
 
-A. Compare two means using paired samples
-B. Compare two means using independent samples
-C. Compare 3-6 means using independent samples via analysis of variance
-D. Create and analyze a 2×2 table
-E. Create and analyze a J×K table, where J is between 2 and 6 and K is between 3 and 6. 
+- Compare two means using paired samples
+- Compare two means using independent samples
+- Compare 3-6 means using independent samples via analysis of variance
+- Create and analyze a 2×2 table
+- Create and analyze a J×K table, where J is between 2 and 6 and K is between 3 and 6. 
 
 ## Study 2
 
