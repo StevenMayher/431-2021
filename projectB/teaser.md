@@ -1,4 +1,4 @@
-# Project B Details So Far
+# Project B Teaser
 
 These details **will be superceded** by the final instructions for Project B, which will be made available in time for class on 2021-11-04.
 
