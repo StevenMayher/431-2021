@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-> Starter to come.
+**On Asking Questions**: We realize it can be difficult to ask for help, and while we try to be helpful in responding on Piazza, over Zoom office hours, via email or through the Minute Papers, if we don't understand your question (or don't understand the purpose of it) we can often confuse matters. Moreover, if we think you already know something when you don't, that can also get in the way of giving you a useful response. Our goal is to understand what you're asking and help you, however we can. Sometimes, though, that requires that you ask the question more than once, so that we can understand the heart of what it is that you're really struggling with. Giving us more of the context of why you're having trouble can also help. Please help us help you.
 
 ## Today's Slides
 
@@ -22,7 +22,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - The [Lab 5 Answer Sketch and Grading Rubric](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) is now updated, too.
 4. Again, there's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). 
     - I suggest upgrading **after** you turn in Project A. One change is that RStudio has changed to calendar versioning, so the new version number is something like `2021.09.0+351` for RStudio. The version of R we're using is `R 4.1.1`.
-5. Some Project B information **to come**.
+5. [Here's all of the Project B information](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/teaser.md) I have at the moment.
+    - You will have complete instructions for Project B by class time on Thursday 2021-11-04.
 
 ## Project A Final Weekend: Everything is due Tuesday 2021-11-02 at 9 PM. Good luck!
 
