@@ -1,0 +1,11 @@
+"0","set.seed(4312021); q22 %$% Hmisc::smean.cl.boot(hsgrads, insurance, conf.int = 0.90)"
+"2","Warning in seq_len(B) :"
+"2"," first element used of 'length.out' argument
+"
+"2","Warning in lapply(seq_len(B), function(i, x, N) sum(x[sample.int(N, N, TRUE,  :"
+"2","
+ "
+"2"," NAs introduced by coercion
+"
+"2","Error in seq_len(B) : argument must be coercible to non-negative integer
+"

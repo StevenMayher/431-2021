@@ -1,0 +1,2 @@
+"0","mydata = read.csv(""data/mydata.csv"")"
+"0","badbp <- mydata %>% filter(sbp >= 120)"

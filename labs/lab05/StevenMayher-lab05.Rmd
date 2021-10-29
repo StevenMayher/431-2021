@@ -1,0 +1,189 @@
+---
+title: "Steven Mayher: Lab 05 for 431"
+author: "Steven Mayher"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+# Part A. County Health Rankings (Questions 1-6)
+
+```{r}
+library(tidyverse)
+library(naniar)
+library(broom)
+library(knitr)
+library(patchwork)
+library(magrittr)
+library(Epi)
+library(dplyr)
+library(janitor)
+library(Epi)
+
+source("C:/Users/smmay/OneDrive/Education/College/Coursework/CWRU/PQHS 431 - Statistical Methods I/431-data/Love-boost.R")
+```
+
+
+```{r}
+lab05_data = read.csv("data/lab05_counties.csv")
+
+midwest05 <- lab05_data %>% 
+  filter(state == "OH" | state == "IN" | state == "IL" | state == "MI" | state == "WI") %>%
+  select(c(metro, access_to_exercise_opportunities, state, county_name))
+
+midwest05 %>%
+  miss_var_summary()
+```
+
+
+## Question 1 (10 points)
+
+```{r}
+midwest05 = midwest05 %>%
+  mutate(metro_status = case_when(
+    metro == 0 ~ "Rural",
+    metro == 1 ~ "Metropolitan"))
+
+midwest05 = midwest05 %>%
+  rename(exercise_opportunity_access = access_to_exercise_opportunities) %>%
+  mutate(exercise_opportunity_access = 100*exercise_opportunity_access)
+
+midwest05 %>% head(., 10) # head() function used to demonstrate the first 10 rows of my midwest05 tibble
+```
+
+
+```{r}
+midwest05 %>% ggplot(data = ., aes(x = exercise_opportunity_access, fill = factor(metro_status))) +
+  geom_histogram(bins = nclass.scott(na.omit(midwest05$exercise_opportunity_access)), col = "white") +
+  facet_grid(metro_status ~ ., labeller = "label_both") +
+  guides(fill = "none") +
+  theme_bw() +
+  labs(title = "The Distribution of Counties by Exercise Opportunity Access", x = "Percent of County Population with Access to Exercise Opportunities", y = "Number of Midwest Counties")
+```
+
+Based on the histograms shown above, I would conclude that people living in metropolitan counties have on average greater access to exercise opportunities than people living in rural counties.
+
+## Question 2 (10 points)
+
+If we are to assume that the population of interest is the United States as a whole, then no, our sampling would not represent a true random sampling, as the states that were selected were chosen because they were a part of the Midwest. If we assume that the the population of interest is the Midwest, it still wouldn't qualify as a random sample, as all of the counties were selected by state, and not at random from within the region itself. There really isn't a reasonable argument for generalizing the results to the population of all counties in the US either, as again since the counties are all from five specific Midwest states, factors that affect this region of the country could impact the results in a way not found in other regions of the country (weather, for example), however it's impossible to know this for certain without clarifying what "access to exercise opportunities" actually accounts for.
+
+## Question 3 (5 points)
+
+The data examined in Question 1 are independent samples. We know this because there is no pairing or matching of individual observations across exposure groups, which is indicative of an independent samples study. For further clarification, each county sample only has one measurement for `metro_status`, and the data has been broken up into two separate groups for analysis based off of this, meaning no county is ever sampled twice, which again indicates that this is an independent sample data set.
+
+## Question 4 (15 points)
+
+The distribution of each, as seen the plot created for Question 1 and reproduced below, tells us that we can't assume normality for both population groups, as the Metropolitan population group clearly appears to have some right skew, as confirmed with the Normal Q-Q plot for this group. Additionally, while not as severe as the metropolitan population distribution, the Q-Q plot for the Rural population group also displays some right skew, but given that at least one group is skewed we could consider using a bootstrap approach to generate a confidence interval as our inferential procedure, as this approach doesn't assume normality between population groups.
+
+```{r}
+midwest05_metro = midwest05 %>%
+  filter(metro == "1")
+
+midwest05_rural = midwest05 %>%
+  filter(metro == "0")
+
+midwest05 %>% ggplot(data = ., aes(x = exercise_opportunity_access, fill = factor(metro_status))) +
+  geom_histogram(bins = nclass.scott(na.omit(midwest05$exercise_opportunity_access)), col = "white") +
+  facet_grid(metro_status ~ ., labeller = "label_both") +
+  guides(fill = "none") +
+  theme_bw() +
+  labs(title = "The Distribution of Counties by Exercise Opportunity Access", x = "Percent of County Population with Access to Exercise Opportunities", y = "Number of Midwest Counties")
+
+ggplot(midwest05_metro, aes(sample = exercise_opportunity_access)) +
+  geom_qq() +
+  geom_qq_line(col = "red") +
+  theme(aspect.ratio = 1) +
+  labs(title = "Normal Q-Q plot: Metro Counties", subtitle = "Exercise Opportunity Access for Metropolitan Counties")
+
+ggplot(midwest05_rural, aes(sample = exercise_opportunity_access)) +
+  geom_qq() +
+  geom_qq_line(col = "red") +
+  theme(aspect.ratio = 1) +
+  labs(title = "Normal Q-Q plot: Rural Counties", subtitle = "Exercise Opportunity Access for Rural Counties")
+```
+
+## Question 5 (10 points)
+
+Below is a 95% confidence interval as calculated using the `Love-boost.R` script provided by Dr. Love in class, and was loaded in along with the other libraries for this lab. As mentioned in the answer to Question 4, a bootstrap approach would make the most sense given that the two groups don't follow a normal distribution (both have differing degrees of right skew, as shown in the answer to the previous question).
+
+```{r}
+midwest05 %$% bootdif(y = exercise_opportunity_access, g = metro, conf.level = 0.95, B.reps = 100000)
+```
+
+
+## Question 6 (10 points)
+
+According to the results produced for the answer to Question 5 above, there are differences in the mean percentage of adults with access to exercise opportunities between metropolitan and non-metropolitan (rural) counties, or at least there are in the midwest subset of counties that were examined. The difference between the metropolitan and non-metropolitan (rural) means was calculated to be approximately 11.7 %, with the 95 % confidence interval between approximately 8.5 % and 14.7 %.
+
+# Part B. An Observational Study (Questions 7-9)
+
+## Question 7 (10 points)
+
+```{r}
+lab05_lind = read_rds("data/lab05_lind.Rds")
+
+lab05_lind_acutemi = lab05_lind %>%
+  mutate(Treatment = case_when(
+    abcix == 0 ~ "Usual",
+    abcix == 1 ~ "abciximab")) %>%
+  rename(treatment_type = abcix) %>%
+  mutate(myocardial_infraction_past_week = case_when(
+    acutemi == 0 ~ "No",
+    acutemi == 1 ~ "Yes")) %>%
+  rename(myocardial_infraction = acutemi) %>%
+  select(c(Treatment, treatment_type, myocardial_infraction, myocardial_infraction_past_week))
+
+lab05_lind_acutemi %>% tabyl(Treatment, myocardial_infraction_past_week) %>%
+  adorn_totals(where = c("row", "col"))
+```
+
+```{r}
+twobytwo(125, 573, 18, 280, "Abciximab", "Usual", "acute MI", "No MI", conf.level = 0.9)
+```
+
+The two by two table analysis produced by the last code chunk above using the `twobytwo` function from the `Love-boost.R` script illustrates that subjects that underwent `abciximab` treatment had a relative risk of 2.96 % of having a myocardial infraction within the last 7 days before the treatment.
+
+## Question 8 (10 points)
+
+```{r}
+lab05_lind_diabetes = lab05_lind %>%
+  mutate(Diabetes = case_when(
+    diabetic == 0 ~ "Healthy",
+    diabetic == 1 ~ "Diabetic")) %>%
+  mutate(myocardial_infraction_past_week = case_when(
+    acutemi == 0 ~ "No",
+    acutemi == 1 ~ "Yes")) %>%
+  rename(myocardial_infraction = acutemi) %>%
+  select(c(Diabetes, myocardial_infraction_past_week))
+
+lab05_lind_diabetes %>% tabyl(Diabetes, myocardial_infraction_past_week) %>%
+  adorn_totals(where = c("row", "col"))
+```
+
+```{r}
+twobytwo(29, 194, 114, 659, "Diabetic", "Healthy", "acute MI", "No MI", conf.level = 0.9)
+```
+
+As with the answer to Question 7, the two by two table analysis produced by the last code chunk above using the `twobytwo` function from the `Love-boost.R` script illustrates that diabetics were slightly less likely to have experienced an acute MI in the past week than healthy subjects. The specific probability difference was approximately 0.0174, or in other words diabetics were approximately 1.74 % less likely to have experienced an acute MI.
+
+## Question 9 (20 points)
+
+The appropriate cross-tabulation to use here (as specified in Chapter 6 of "The Art of Statistics") would be what is known as an error matrix.
+
+Accuracy of the model is the percentage of all survivors and non-survivors that were correctly classified, so in this case the model's accuracy = (405 + 9)/(405 + 74 + 9) = 414/488, which is approximately 84.8 %. This means that this model will correctly predict whether or not someone survives about 84.8 % of the time.
+
+The sensitivity of the model is the percentage of the survivors that were correctly predicted by the model, so in this case the sensitivity = 405/(405 + 74) = 405/479, which is approximately 84.6 %. This means that this model correctly predicted a survivor about 84.6 % of the time.
+
+The specificity of the model is the percentage of true non-survivors that were correctly predicted by the model, so in this case the specificity = 9/(9 + 74) = 9/83, which is approximately 10.8 %. This means that this model correctly predicted a non-survivor only about 10.8 % of the time.
+
+## Include the session information
+
+```{r}
+sessioninfo::session_info()
+```

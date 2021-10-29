@@ -1,0 +1,2 @@
+"0","quiz_beds1 = read.csv(""data/quiz_beds1.csv"")"
+"0","quiz_beds2 = read.csv(""data/quiz_beds2.csv"")"

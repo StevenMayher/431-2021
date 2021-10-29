@@ -1,0 +1,28 @@
+---
+title: "Lab 01 - Answers"
+author: "Steven Mayher"
+date: "9/6/2021"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(patchwork); library(tidyverse)
+```
+
+## Lab 01 - Answers
+
+### Question 2
+
+After reviewing the DNase dataset help section, it can be concluded that the two plots in Figure 2 illustrate the observed optical density levels of the recombinant protein DNase found in rat serum at eight specific concentrations as found during the development of an ELISA assay. While both plots visualize the same data, they emphasize different aspects of it – the scatterplot in Plot A emphasizes how the density increases at a decreasing rate as concentration increases, whereas the boxplot of Plot B emphasizes how much the density increased as a factor of the concentration. This illustrates how the same data set can be analyzed and visualized through different approaches to emphasize different aspects of the data.
+
+### Question 3
+
+One problem I could use the PPDAC method for would be the design of my Master’s thesis. The problem specifically is what area of Systems Biology and Bioinformatics would I like to develop my career into, as the answer will determine the focus for my thesis project. To determine this, I plan on collecting data on the fields of data science that interest me the most, as well as examine the available courses and networking opportunities within my current program. I’d also want to collect data on the associated employment prospects, and factor these into my decision. I could then visualize this data where necessary and draw my conclusion. It’s worth noting I’ve already done this at a general level to determine my graduate program, so this would be a restarting of this method with a more specific scope, building on what I learned when researching potential graduate programs.
+
+### Question 4
+
+One problem I see with the data from Question 2 is that the density data was only collected at eight different points during the development of this ELISA assay. While Plot B in Question 2 illustrates that the concentrations were likely selected to examine how much density changed every time concentration was doubled, collecting density data at more concentrations would potentially yield a more accurate data. As such, I’d plan on collecting density readings twice as many times as the original study and would analyze the data by creating a scatterplot and boxplot with the new data. This would building on the results of the original study, as it would allow us to compare the results to the original study and both confirm the accuracy of the original study and examine if doubling the data collection points significantly altered the accuracy of the results.

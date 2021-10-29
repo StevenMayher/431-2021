@@ -1,0 +1,4 @@
+"0","pwr.2p2n.test(n1 = 100, n2 = 125, sig.level = 0.05, alternative = ""two.sided"", delta = 2.5, sd = 5)"
+"2","Error in pwr.2p2n.test(n1 = 100, n2 = 125, sig.level = 0.05, alternative = ""two.sided"",  : 
+  unused arguments (delta = 2.5, sd = 5)
+"

@@ -1,0 +1,105 @@
+---
+title: "Steven Mayher: Lab 02 for 431"
+author: "Steven Mayher"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    code_folding: show
+---
+
+```{r setup, include=FALSE, message = FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 70)
+```
+
+## Setup
+
+```{r load_packages, message = FALSE, warning = FALSE}
+
+library(tidyverse)
+
+## always need tidyverse, can include other packages too
+## which should always be inserted above the tidyverse
+```
+
+## Import the `lab02_counties.csv` data
+
+```{r, message = FALSE, warning = FALSE}
+lab02_data <- read_csv("data/lab02_counties.csv")
+```
+
+# Question 1
+
+In regards to this question, my code creates a new dataset called midwest_data by piping in the original dataset for all the counties in the US and filtering out all of the counties except those in the 5 specified states.
+
+```{r}
+midwest_data <- lab02_data %>% 
+  filter(state == "OH" | state == "IN" | state == "IL" | state == "MI" | state == "WI")
+```
+
+# Question 2
+
+For this question, as requested I have written a piece of R code that pipes in the new dataset created in the answer for Question 1 into the count function to count the number of rows present in the dataset by state. Seeing as each entry in the midwest_data dataset represents one county, the result displaces the number of counties present in each state, as requested for this question.
+
+```{r}
+midwest_data %>% count(state)
+```
+
+# Question 3
+
+The code below is a series of pipes that performs several sequential operations on the midwest_data dataset. The midwest_data dataset is first piped into a filter command that filters the dataset for counties by state (in this case, Ohio).This result is piped into another filter command to filter by county name (in this case, Cuyahoga County), and this result is piped to a select command to return the state, county_name, some_college, and metro status of the requested county.
+
+```{r}
+midwest_data %>%
+    filter(state == "OH") %>%
+    filter(county_name == "Cuyahoga County") %>%
+    select(state, county_name, some_college, metro)
+```
+
+It's worth noting that technically the first step (filtering by state) could be skipped in this particular example, as there appears to be only one county named Cuyahoga County in the midwest_data dataset. However, some county names are used by multiple states, so it is wise to still include this step in the code. Doing so creates a check for the state parameter, ensuring that the correct county for the correct state is always returned using this code, provided the correct state and county name are entered.
+
+# Question 4
+
+```{r}
+ggplot(midwest_data, aes(some_college)) +
+    geom_histogram(bins = 15, col = "white", fill = "chartreuse3") +
+    geom_vline(aes(xintercept=69.38, col = "red"), show.legend = FALSE) +
+    theme_bw() +
+    labs(title = "Midwestern Counties Distribution by College Education Population Percentage", y = "Number of Midwest Counties", x = "Percentage of County Population with Some College Education", )
+```
+
+Although hopefully the axis labels and graph title make this clear, the histogram shows the distribution of midwest counties based on the percentage of their population that possess some college education. The red line represents Cuyahoga County at 69.38 % - I wanted to include a label for the line, but I honestly couldn't figure it out in the time allotted, and didn't have a chance to stop by office hours to ask.
+
+# Question 5
+
+The percent population with some college education in Cuyahoga County, according to this dataset, is 69.38 %, as shown above by my answer to question 3. According to the histogram created above for question 4, this population percentage is higher than the average for most midwest counties, placing Cuyahoga County approximately in the third quartile regarding percent population with some college education.
+
+# Question 6
+
+```{r q3_popdensity_histogram}
+midwest_data %>% filter(complete.cases(some_college, metro)) %>%
+  ggplot(data = ., aes(x = some_college, fill = factor(metro))) +
+    geom_histogram(bins = 15, col = "white", fill = "chartreuse3") +
+    geom_vline(aes(xintercept=69.38, col = "red"), show.legend = FALSE) +
+    facet_grid(metro ~ ., labeller = "label_both") +
+    theme_bw() +
+    labs(title = "Midwestern Counties Distribution by College Education Population Percentage", y = "Number of Midwest Counties", x = "Percentage of County Population with Some College Education")
+```
+
+I took the approach outlined by Dr. Love in class when creating this histogram. In particular, I decided to go with facet_grid over facet_wrap, as we are more interested in the spread of the distribution for this analysis, and felt that this was better displayed with a longer x-axis than a longer y-axis. Again, the red line represents Cuyahoga County at 69.38 % - I wanted to include a label for the line, but I honestly couldn't figure it out in the time allotted, and didn't have a chance to stop by office hours to ask.
+
+# Question 7
+
+If we refer again to the results obtained from solution to question 3, we know that the percentage of population with some college education in Cuyahoga County is 69.38 %. This places Cuyahoga County closer to the center of the distribution for metro counties. In other words, while Cuyahoga County percent population may be above average when compared to the rest of the midwest counties as a whole, as shown in the histogram from question 4, it appears to be much closer to average when compared only to the rest of the other metro counties in the midwest, based off of this data set.
+
+# Question 8
+
+Inductive inference is the concept of analyzing a portion of study data to draw conclusions about a representative sample of the study’s population, the study’s population as a whole and a particular target population. Problems can arise at each step though, so careful consideration must be taken when using this process. The selected sample data for this lab - all counties in five mid-western states – creates one such problem - sample bias. The sample may represent 5 randomly selected states in the Midwest, but the Midwest is comprised of 12 states, so for it to be used as a representative Midwest sample, either the whole Midwest dataset or a representative sample of counties not bound by state lines should be analyzed. This sample bias increases if this analysis is applied to the US, limiting the best application of any conclusions regarding counties to the 5 Midwest states that were selected.
+
+# Session Information
+
+```{r}
+sessionInfo()
+```
+

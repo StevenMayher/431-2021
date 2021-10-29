@@ -1,0 +1,3 @@
+"0","quiz_beds2 <- quiz_beds2 %>%"
+"0","  select(state, beds_2010, beds_2014) %>%"
+"0","  mutate(beds_diff = beds_2010 - beds_2014)"

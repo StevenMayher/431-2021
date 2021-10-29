@@ -1,0 +1,7 @@
+"0","method4 <- binom.test(x = 45, n = 96, conf.level = 0.90, ci.method = ""agresti-coull"")"
+"0",""
+"0","tidy4 <- tidy(method4)"
+"0",""
+"0","tidy4 %>%"
+"0","  select(estimate, conf.low, conf.high, statistic, parameter) %>%"
+"0","  kable(dig = 4)"

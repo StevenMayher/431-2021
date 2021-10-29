@@ -1,0 +1,5 @@
+"0","q22 = quiz_hosp %>% "
+"0","  filter(insurance != ""MEDICAID"") %>%"
+"0","  filter(insurance != ""UNINSURED"")"
+"0",""
+"0","q22 %>% count(insurance)"

@@ -1,0 +1,172 @@
+---
+title: "Steven Mayher: Lab 03 for 431"
+author: "Steven Mayher"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    code_folding: show
+---
+
+```{r setup, include=FALSE, message = FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 70)
+```
+
+## Setup
+
+```{r load_packages, message = FALSE, warning = FALSE}
+
+library(palmerpenguins)
+library(tidyverse)
+library(knitr)
+library(magrittr)
+library(broom) # for tidying up output
+library(janitor)
+library(naniar)
+library(patchwork)
+library(readxl)
+library(mosaic)
+
+## always need tidyverse 
+## need palmerpenguins for Questions 1-5
+```
+
+## Read in `lab03_counties.csv` for Questions 6-10
+
+```{r}
+lab03_chr <- read_csv("https://raw.githubusercontent.com/THOMASELOVE/431-data/main/lab03_counties.csv")
+```
+
+# Question 1
+
+As a histogram is ideal for assessing the center, shape, and spread of a distribution, it was selected as the visualization for this question. Most notably, the number of bins for the histogram was determined using the Freedman-Diaconis rule, as the data appeared to be skewed. 
+
+
+```{r}
+ggplot(penguins, aes(x = body_mass_g)) +
+  geom_histogram(bins = nclass.FD(na.omit(penguins$body_mass_g)), col = "white", fill = "cornflowerblue") +
+  theme_bw() +
+  labs(title = "The Distribution of the Penguins by Weight", x = "Penguin Body Mass (Grams)", y = "Number of Penguins")
+```
+
+
+# Question 2
+
+Below is an approach that produces the mean (4201.75 g), median (4050 g), standard deviation (801.95 g), interquartile range (1200 g), sample size (342), and the values at the 25th (3550 g) and 75th (4750 g) percentiles. Although data was trimmed away in the example for this problem to make it more accurate, this was not done for these values, so that they'd accurately represent the values as illustrated in the histogram for question 1.
+
+```{r}
+penguins %>% filter(complete.cases(body_mass_g)) %>%
+  summarize(Penguins = favstats(body_mass_g, na.rm = TRUE)[c("n")], Q1 = unname(quantile(body_mass_g, na.rm = TRUE, 0.25)), Mean = mean(body_mass_g, na.rm = TRUE), Median = median(body_mass_g, na.rm = TRUE), Q3 = unname(quantile(body_mass_g, na.rm = TRUE, 0.75)), IQR = IQR(penguins$body_mass_g, na.rm = TRUE), SD = sd(body_mass_g, na.rm = TRUE)) %>%
+kable(digits = 2)
+```
+
+
+# Question 3
+
+As illustrated by the histogram from question 1, and the output values from question 2, this penguin body mass data appears to be normal distribution that is skewed to the right. This can be seen visually in the histogram due to its shape, as it trails off to the right, as well as through the values calculated for question 2, as the center(median) penguin mass is 4050 grams, but the mean is approximately 4201.75 grams. It would be more appropriate to examine the median, as the mean is more right-skewed due to the skew of the distribution.
+
+# Question 4
+
+## Visualization
+```{r}
+penguins %>% filter(complete.cases(body_mass_g, species)) %>% 
+  ggplot(data = ., aes(x = body_mass_g, fill = factor(species))) +
+  geom_histogram(bins = nclass.FD(na.omit(penguins$body_mass_g)), col = "white", show.legend = FALSE) +
+  facet_wrap(~ species) +
+  theme_bw() +
+  labs(title = "The Distribution of the Penguins by Weight", x = "Penguin Body Mass (Grams)", y = "Number of Penguins")
+```
+
+## Numeric Summary
+
+```{r}
+penguins %>% filter(complete.cases(body_mass_g, species)) %>% group_by(species) %>%
+  summarize(Penguins = favstats(body_mass_g, na.rm = TRUE)[c("n")], Q1 = unname(quantile(body_mass_g, na.rm = TRUE, 0.25)), Mean = mean(body_mass_g, na.rm = TRUE), Median = median(body_mass_g, na.rm = TRUE), Q3 = unname(quantile(body_mass_g, na.rm = TRUE, 0.75)), IQR = IQR(body_mass_g, na.rm = TRUE), SD = sd(body_mass_g, na.rm = TRUE)) %>%
+kable(digits = 2)
+```
+
+
+# Question 5
+
+Given my findings from question 4, the skew seen in the data as a whole is contributed to the different species that were sampled in this data set, or more specifically by the inclusion of the Gentoo species in the data set. The numeric values illustrate this through their median and means, as the mean for each species is nearly identical to their respective median, which is indicative of little to no skew. Additionally, the histograms for all three species illustrate normal distributions, and both the numeric values and histograms illustrate that the Gentoo species measurements resulted in a much higher mean and median body mass in grams than the Adelie and Chinstrap species.
+
+# Question 6
+
+```{r}
+set.seed(20212022) # following the instructions
+
+chr_sample <- slice_sample(lab03_chr, n = 750)
+```
+
+
+```{r}
+chr_sample %>%
+  filter(state == "OH") %>%
+  select(state, county_name, adult_obesity, food_insecurity)
+```
+
+
+```{r}
+chr_sample %>%
+  filter(county_name == "Cuyahoga County") %>%
+  select(county_name, adult_obesity, food_insecurity)
+```
+
+```{r}
+chr_sample %>%
+  filter(complete.cases(adult_obesity)) %>%
+  summarize(Mean = mean(adult_obesity, na.rm = TRUE), Median = median(adult_obesity, na.rm = TRUE)) %>%
+  kable(digits = 4)
+```
+
+
+
+# Question 7
+
+The histogram created below for the percentage of adult population with obesity by county appears to follow a normal distribution, as it appears to have a bell-shaped curve with little skew. The low skew is also illustrated by how close the mean and median are as shown in the answer to question 6, and which have been marked on the histogram with a red and black line respectively.
+
+```{r}
+ggplot(chr_sample, aes(x = adult_obesity)) +
+  geom_histogram(bins = nclass.scott(na.omit(chr_sample$adult_obesity)), col = "white", fill = "cornflowerblue") +
+  geom_vline(aes(xintercept=mean(adult_obesity, na.rm = TRUE), col = "red"), show.legend = FALSE) +
+  geom_vline(aes(xintercept=median(adult_obesity, na.rm = TRUE)), show.legend = FALSE) +
+  theme_bw() +
+  labs(title = "The Distribution of Adult Obesity Percentage by County", x = "Percentage of Adult Population Considered Obese", y = "Number of Counties")
+```
+
+
+# Question 8
+
+As visualized in the scatterplot below, there does appear to be a positive correlation, albeit a weak one, between adult obesity and food insecurity. A linear model does not seem appropriate for this data, as a strong correlation is not present, as shown in the graph below.
+
+```{r}
+ggplot(chr_sample, aes(x = food_insecurity, y = adult_obesity)) +
+  geom_point() +
+  theme_bw() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(title = "Adult Obesity vs Food Insecurity", x = "Population Percentage with Food Insecurity", y = "Population Percentage with Adult Obesity")
+```
+
+# Question 9
+
+Cuyahoga County's position, as indicated by the red point on the graph below, appears to have lower percent population with adult obesity than would be expected from the linear model correlation based on its food insecurity percentage.That said, relative to many of the other counties in the sample, Cuyahoga County is relatively close to matching the linear model for this data set.
+
+```{r}
+ggplot(chr_sample, aes(x = food_insecurity, y = adult_obesity)) +
+  geom_point() +
+  geom_point(x = 0.159, y = 0.318, col = "red") +
+  theme_bw() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(title = "Adult Obesity vs Food Insecurity", x = "Population Percentage with Food Insecurity", y = "Population Percentage with Adult Obesity")
+```
+
+# Question 10
+
+While the scatterplots produced for questions 8 and 9 seem to indicate a positive, albeit weak, correlation between adult obesity and food insecurity, it is worth noting that correlation does not necessarily indicate causation, so it would be erroneous to assume that a conclusion can necessarily be drawn from this analysis. The fact that the 750 observations used have been selected at random from the available data should help strengthen any conclusions drawn from them, however it’s still possible that, for example, some background factors could be affecting the underlying dataset, which would in turn impact these conclusions as well.
+
+# Session Information
+
+```{r}
+sessioninfo::session_info()
+```

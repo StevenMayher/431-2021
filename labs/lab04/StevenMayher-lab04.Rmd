@@ -1,0 +1,235 @@
+---
+title: "Steven Mayher: Lab 04 for 431"
+author: "Steven Mayher"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    code_folding: show
+---
+
+## Setup
+
+```{r load_packages, message = FALSE, warning = FALSE}
+
+library(palmerpenguins)
+library(tidyverse)
+library(knitr)
+library(magrittr)
+library(broom) # for tidying up output
+library(janitor)
+library(naniar)
+library(patchwork)
+library(readxl)
+library(mosaic)
+library(glue)
+library(equatiomatic)
+library(ggpubr)
+
+
+theme_set(theme_bw())
+## always need tidyverse 
+## need palmerpenguins for Questions 6-8
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+# Part A: News Story and Research Article (Questions 1-5)
+
+## Question 1 (5 points)
+
+#### News Story Headline
+People with migraines get less REM sleep, study finds
+
+#### Author(s)
+Kristen Rogers
+
+#### Source
+https://cnn.it/3iTln5j
+
+
+## Question 2 (5 points)
+
+#### Full Study Title
+Subjective Sleep Quality and Sleep Architecture in Patients With Migraine: A Meta-analysis
+
+#### Journal
+Neurology
+
+#### PUBMED Study Abstract Link
+https://bit.ly/3FuH19I
+
+#### Full Study
+
+##### Website Link
+https://bit.ly/3atzFoM
+
+##### PDF Download Link
+https://bit.ly/3DvtI75
+
+#### Authors/Collaborators
+
+A list of all of the authors as disclosed on the PUBMED page have been listed below:
+
+Emily Charlotte Stanyer, Hannah Creeney, Alexander David Nesbitt, Philip Robert Robert Holland, and Jan Hoffmann
+
+## Question 3 (15 points)
+
+After reading and reviewing the news article and its headline, my initial gut feeling is that the headline and article conclusions have an accuracy probability of 0.8 (or 80%). In other words, my gut tells me that that the odds that this article's headline and conclusions are correct are 4 to 1 (4:1), meaning that for every 1 time that it's wrong it is right 4 other times. While I am generally skeptical of all media articles, no matter the source, the article is well written, clearly states its sources, and isn't shy in stating the studies short-comings, all of which give me more faith in its accuracy. Additionally I long linked headaches to lack of sleep, and I also know it's difficult to fall asleep when I have a headache, both of which incline me to believe in the validity of the article.
+
+## Question 4 (30 points)
+
+The six specifications that should be considered when evaluating study support (as detailed in the article by Jeff Leek) have been listed below, and my conclusions regarding each one in relation to the news article I selected have been included below each:
+
+### 1. Was the study a clinical study in humans?
+
+Yes, this study did indeed examine humans, as it is clearly stated in the study abstract that "this meta-analysis aims to determine whether there are differences in subjective sleep quality measured using the Pittsburgh Sleep Quality Index (PSQI), and objective sleep architecture measured using polysomnography between adult and pediatric patients, and healthy controls". Additionally, I would assert that it would also be classified as a clinical study, as the quote above clearly indicates the inclusion of a test group (the "adult patients") and a healthy control group.
+
+### 2. Was the outcome of the study something directly related to human health like longer life or less disease? Was the outcome something you care about, such as living longer or feeling better?
+
+Yes, the outcome of the study is something related to human health, specifically that "...people with migraine have significantly poorer subjective sleep quality and altered sleep architecture compared to healthy individuals". Yes, as a graduate student that also works full-time, I occasionally get migraines from the stress and insufficient sleep, and while this study didn't test any solutions, I still found it interesting. 
+
+### 3. Was the study a randomized, controlled trial (RCT)?
+
+Seeing as this study was performed by analyzing pre-collected data from five databases, and wasn't about administering a particular treatment, but examining the results of individuals with and without migraines, the samples weren't exaclty selected at random. However, the inviduals for both groups were selected at random from the five databases, provided that they fit the necessary criteria for the relevent group, as specified in the Methods section of the study quoted below:
+
+"Methods: This review was pre-registered on PROSPERO (CRD42020209325). A systematic search of five databases (Embase, MEDLINE®, Global Health, APA PsycINFO, APA PsycArticles, last searched: 12/17/2020) was conducted to find case-controlled studies which measured polysomnography and/or PSQI in patients with migraine. Pregnant participants and those with other headache disorders were excluded. Effect sizes (Hedges' g) were entered into a random effects model meta-analysis. Study quality was evaluated with the Newcastle Ottawa Scale, and publication bias with Egger's regression test."
+
+### 4. Was it a large study — at least hundreds of patients?
+
+Yes, this was a large study, including several hundred patients aggregated together from a number of methodically selected studies, the results of which can be seen in Tables 1 - 3 of the publication itself (you may refer to the pdf linked above for reference if desired).
+
+### 5. Did the treatment have a major impact on the outcome?
+
+While I hesitate to call the presence and/or absence of a migraine as a treatment, individuals with migraines did have "significantly poorer subjective sleep quality and altered sleep architecture compared to healthy individuals", so if the presence of migraines is considered a treatment, then yes, this treatment had a major impact on the outcome.
+
+### 6. Did predictions hold up in at least two separate groups of people?
+
+Yes, the predictions held up for both the adult and children groups, albeit to different extents, as discussed in the excerpt from the conclusion section of the paper provided below:
+
+"Conclusions
+
+People with migraine, particularly those with chronic migraine, report worse subjective sleep quality than healthy individuals. Adults exhibit significantly less REM sleep, whereas children also show significantly reduced sleep time, shorter sleep onset and more wake than controls."
+
+
+## Question 5 (15 points)
+
+The formula for Bayes' Rule for determining the final odds I should be willing to give this article is as follows:
+
+
+Final opinion on headline = (initial gut feeling) * (study support for headline)
+
+
+The "initial gut feeling" ratio/probability was determined in question 3 to be 4, and the "study support for headline" can be determined by aggregating the study support results together from question 4, where a "Yes" means multiply by 2 and a "No" means multiply by 1/2:
+
+Number of "Yes" answers = 6
+Number of "No" answers = 0
+
+study support for headline = 2^6 = 64
+
+Thus, entering both values into the Bayes' Rule calculation produces the following result:
+
+Final opinion on headline = (initial gut feeling) * (study support for headline) = 4 * 64 = 256
+
+So in other words, my final opinion on the headline is that there is a 256 to 1 odds, or a 0.9961 (99.61%) probability that the headline is true. My final opinion on the headline, resulting from examining the study itself, has alleviated some of my concerns that limited my initial gut feeling about the article to a probability of 0.8 (80%). As I mentioned earlier, I'm natuarlly skeptical of all media articles for the most part, but didnt' see anything too alarming about this one in particular, which was reflected in my initial gut feeling probability/odds ratio. These concerns were alleviated after reviewing the source study, as I was able to verify the articles claims, and as such I do think that the formulaic approach has yielded an appropriate conclusion for this case.
+
+# Part B: Palmer Penguins (Questions 6-8)
+
+## Question 6 (5 points)
+
+To create the requested variables `pen_train` and `pen_test` from the penguins tibble, the variables with missing data in the penguins tibble were identified so that they could be removed. This was accomplished by using the `miss_var_summary()` function on the `penguins` tibble, as shown below:
+
+```{r}
+miss_var_summary(penguins)
+```
+
+As shown above, the variables `sex`, `bill_length_mm`, `bill_depth_mm`, `flipper_length_mm`, and `body_mass_g` all have entries with missing data. So to create a complete set of data from this data set, the `filter()` function and `complete.cases()` function were utilized as shown below:
+
+```{r}
+penguins_complete_cases = penguins %>%
+  filter(complete.cases(sex,
+                        bill_length_mm,
+                        bill_depth_mm,
+                        flipper_length_mm,
+                        body_mass_g))
+```
+
+To illustrate/confirm that the missing data has been removed and the resulting data set has 333 penguins, the `miss_var_summary()` and `nrow()` functions were used on the new data set, `penguins_complete_cases`:
+
+```{r}
+miss_var_summary(penguins_complete_cases)
+nrow(penguins_complete_cases)
+```
+
+The results show that the new data set `penguins_complete_cases` contains only complete cases, and has 333 entries, as expected.
+
+For the final step, the following code was used to set the random seed and creates the tibbles `pen_train` and `pen_test` respectively:
+
+```{r,  }
+set.seed(4312021) # sets the random seed to the requested number for later replication of results
+pen_train = penguins_complete_cases %>%
+  slice_sample(n = 200) # creates the pen_train tibble from 200 random samples of the penguins_complete_cases tibble
+pen_test = anti_join(x = penguins_complete_cases, y = pen_train, by = c("species", "island", "bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g", "sex", "year")) # creates the pen_test tibble by comparing the penguins_complete_cases and pen_train tibbles and only returning the rows from penguins_complete_cases tibble that don't appear in the pen_train tibble
+
+nrow(pen_train); nrow(pen_test) # confirms that the number of rows in both new tibbles are 200 and 133 respectively
+```
+
+
+## Question 7 (15 points)
+
+```{r}
+model1 = lm(body_mass_g ~ bill_length_mm, data = pen_train)
+model1
+```
+
+```{r, results = 'asis'}
+ggplot(data = pen_train, aes(x = bill_length_mm, y = body_mass_g)) +
+  geom_point() +
+  geom_smooth(method = "loess", col = "blue",
+              se = FALSE, formula = y ~ x) +
+  geom_smooth(method = "lm", col = "red",
+              se = FALSE, formula = y ~ x) +
+  stat_regline_equation(label.x = 55, label.y = 3000) +
+  labs(title = "Positive Association of Penguin Body Mass (g) and Penguin Bill Length (mm)",
+       x = "Bill Length (mm)",
+       y = "Body Mass (g)",
+       subtitle = "loess smooth in blue, OLS model in red")
+```
+
+The Figure above illustrates a positive correlation - in other words, as a penguin's bill length increases, it's body mass increases. That said, the loess smooth (in blue) suggests a potential curve fit to the data, however this could potentially be caused by the inclusion of several different species of penguin.
+
+## Question 8 (10 points)
+
+```{r}
+model1_test_aug = augment(model1, newdata = pen_test)
+model1_test_aug %>% nrow()
+```
+
+```{r}
+mosaic::favstats(~ abs(.resid), data = model1_test_aug) %>%
+select(n, min, median, max, mean, sd) %>%
+kable(digits = 3)
+```
+
+
+```{r}
+sqrt(mean(model1_test_aug$.resid^2))
+```
+
+Test Set Error Summary | OLS model `model1`
+----: | ----:
+Mean Absolute Prediction Error | `r round_half_up(mean(abs(model1_test_aug$.resid)),3)`
+Maximum Absolute Prediction Error | `r round_half_up(max(abs(model1_test_aug$.resid)),3)`
+Root Mean Squared Prediction Error | `r round_half_up(sqrt(mean(model1_test_aug$.resid^2)),3)`
+
+The root mean squared prediction error is the square root of the mean of the square of all of the error, and is a good measure of accuracy when comparing prediction errors of different models or model configurations for specific variables.
+
+
+## Include the session information
+
+```{r}
+sessioninfo::session_info()
+```

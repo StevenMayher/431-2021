@@ -1,0 +1,285 @@
+---
+title: "Quiz 2 Code"
+author: "Steven Mayher"
+date: "10/23/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Loading Libraries & Scripts
+
+```{r cars}
+library(broom)
+library(car)
+library(Epi)
+library(equatiomatic)
+library(glue)
+library(ggrepel)
+library(Hmisc)
+library(janitor)
+library(knitr)
+library(magrittr)
+library(mosaic)
+library(naniar)
+library(patchwork)
+library(pwr)
+library(tidyverse)
+
+source("data/Love-boost.R")
+
+theme_set(theme_bw())
+```
+
+## Quiz Code
+
+```{r}
+df = tibble(level = factor(c("High", "Low", "Medium")), outcome = 1:3)
+
+df = df %>%
+  mutate(level = fct_relevel(level, "High", after = 2))
+
+ggplot(df, aes(x = outcome)) +
+  geom_histogram(col = "white", fill = "cornflowerblue") +
+  facet_wrap(~ level) +
+  theme_bw()
+```
+
+```{r}
+twobytwo(95, 160, 60, 185, "Students Accepted", "Students Not Accepted", "Private", "Public", conf.level = 0.95)
+```
+
+```{r}
+twobytwo(95, 60, 160, 185, "Private", "Public", "Students Accepted", "Students Not Accepted", conf.level = 0.95)
+```
+
+```{r}
+saifs.ci(x = 33, n = 41, conf.level = 0.9)
+```
+
+
+
+
+
+
+
+
+
+
+```{r}
+quiz_beds1 = read.csv("data/quiz_beds1.csv")
+quiz_beds2 = read.csv("data/quiz_beds2.csv")
+```
+
+
+
+```{r}
+quiz_beds2 <- quiz_beds2 %>%
+  select(state, beds_2010, beds_2014) %>%
+  mutate(beds_diff = beds_2010 - beds_2014)
+```
+
+
+
+
+```{r}
+quiz_beds1 %$% t.test(beds_index ~ year, var.equal = TRUE, conf.level = 0.90)
+
+t.test
+```
+
+
+```{r}
+quiz_beds1 %$% t.test(beds_index ~ year, var.equal = TRUE, alpha = 0.10)
+```
+
+```{r}
+set.seed(4312021); quiz_beds1 %$% bootdif(beds_index, year, conf.level = 0.90)
+```
+
+
+
+```{r}
+quiz_beds2 %$% t.test(beds_2010 - beds_2014, conf.level = 0.90)
+```
+
+
+```{r}
+quiz_beds2 %$% t.test(beds_diff, conf.level = 0.90)
+```
+
+
+```{r}
+quiz_beds2 %$% t.test(beds_2010 - beds_2014, sig.level = 0.10)
+```
+
+
+
+```{r}
+set.seed(4312021); quiz_beds2 %$% smean.cl.boot(beds_2010 - beds_2014, conf = 0.90)
+```
+
+
+
+```{r}
+set.seed(4312021); quiz_beds2 %$% smean.cl.boot(beds_2010 - beds_2014)
+```
+
+```{r}
+q11 = starwars %>%
+  filter(complete.cases(height, mass)) %>%
+  filter(species == "Human") %>%
+  mutate(bmi = (10000*mass)/(height^2))
+
+q11 %$% t.test(bmi ~ sex, conf.level = 0.90)
+```
+
+
+```{r}
+set.seed(4312021); q11 %$% bootdif(bmi, sex, conf.level = 0.90)
+```
+
+
+
+```{r}
+method2 <- binom.test(x = 45, n = 96, conf.level = 0.90, ci.method = "Clopper-Pearson")
+
+tidy2 <- tidy(method2)
+tidy2 %>%
+  select(estimate, conf.low, conf.high, statistic, parameter) %>%
+  kable(dig = 4)
+```
+
+
+```{r}
+method3 <- binom.test(x = 45, n = 96, conf.level = 0.90, ci.method = "Score")
+
+tidy3 <- tidy(method3)
+
+tidy3 %>%
+  select(estimate, conf.low, conf.high, statistic, parameter) %>%
+  kable(dig = 4)
+```
+
+
+```{r}
+method4 <- binom.test(x = 45, n = 96, conf.level = 0.90, ci.method = "agresti-coull")
+
+tidy4 <- tidy(method4)
+
+tidy4 %>%
+  select(estimate, conf.low, conf.high, statistic, parameter) %>%
+  kable(dig = 4)
+```
+
+
+
+```{r}
+method5 <- binom.test(x = 45, n = 96, conf.level = 0.90, ci.method = "plus4")
+
+tidy5 <- tidy(method5)
+
+tidy5 %>%
+  select(estimate, conf.low, conf.high, statistic, parameter) %>%
+  kable(dig = 4)
+```
+
+
+
+```{r}
+res2 <- tidy2 %>% select(estimate, conf.low, conf.high)
+res3 <- tidy3 %>% select(estimate, conf.low, conf.high)
+res4 <- tidy4 %>% select(estimate, conf.low, conf.high)
+res5 <- tidy5 %>% select(estimate, conf.low, conf.high)
+res <- bind_rows(res2, res3, res4, res5)
+res <- res %>% mutate(approach = c("Clopper-Pearson", "Score",
+"Agresti-Coull", "Plus4"))
+
+res = res %>%
+  mutate(conf.interval = conf.high - conf.low)
+
+
+```
+
+
+
+```{r}
+power.t.test(delta = 30, sd = 50, alternative = "two.sided", sig.level = 0.05, power = 0.90)
+```
+
+```{r}
+mydata = read.csv("data/mydata.csv")
+badbp <- mydata %>% filter(sbp >= 120)
+```
+
+
+
+```{r}
+pwr.2p2n.test(n1 = 100, n2 = 125, sig.level = 0.05, alternative = "two.sided", delta = 2.5, sd = 5)
+```
+
+```{r}
+quiz_hosp = read.csv("data/quiz_hosp.csv")
+
+#quiz_hosp = quiz_hosp %$% fct_relevel(statin, "YES", "NO")
+
+twoby2(quiz_hosp %$% table(sex, statin)[2:1,2:1])
+```
+
+```{r}
+twoby2(quiz_hosp %$% table(sex, statin))
+```
+
+```{r}
+quiz_hosp %>% count(insurance)
+```
+
+```{r}
+q22 = quiz_hosp %>% 
+  filter(insurance != "MEDICAID") %>%
+  filter(insurance != "UNINSURED")
+
+q22 %>% count(insurance)
+```
+
+```{r}
+set.seed(4312021); q22 %$% bootdif(hsgrads, insurance, conf.level = 0.90)
+```
+
+```{r}
+q22_1 = q22 %>%
+  mutate(insurance = as.factor(insurance)) %>%
+  mutate(insurance = fct_relevel(insurance, "MEDICARE", after = "COMMERCIAL"))
+  
+  
+  #fct_reorder(insurance, "COMMERICAL", "MEDICARE")
+```
+
+
+
+```{r}
+write.csv(q22, "data/q22.csv")
+```
+
+
+
+```{r}
+q22_2 = read.csv("data/q22_2.csv")
+```
+
+
+
+
+```{r}
+q22 %$% t.test(hsgrads ~ insurance, var.equal = TRUE, conf.level = 0.90)
+```
+
+
+
+```{r}
+set.seed(4312021); q22 %$% Hmisc::smean.cl.boot(hsgrads, insurance, conf.int = 0.90)
+```
+
+

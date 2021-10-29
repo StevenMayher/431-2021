@@ -1,0 +1,7 @@
+"0","method3 <- binom.test(x = 45, n = 96, conf.level = 0.90, ci.method = ""Score"")"
+"0",""
+"0","tidy3 <- tidy(method3)"
+"0",""
+"0","tidy3 %>%"
+"0","  select(estimate, conf.low, conf.high, statistic, parameter) %>%"
+"0","  kable(dig = 4)"

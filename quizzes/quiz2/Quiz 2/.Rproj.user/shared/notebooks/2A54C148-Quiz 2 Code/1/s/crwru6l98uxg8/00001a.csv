@@ -1,0 +1,8 @@
+"0","q22_1 = q22 %>%"
+"0","  mutate(insurance = as.factor(insurance)) %>%"
+"0","  mutate(insurance = fct_relevel(insurance, ""MEDICARE"", after = ""COMMERCIAL""))"
+"2","Error: Problem with `mutate()` column `insurance`.
+[34mi[39m `insurance = fct_relevel(insurance, ""MEDICARE"", after = ""COMMERCIAL"")`.
+[31mx[39m invalid argument type
+[90mRun `rlang::last_error()` to see where the error occurred.[39m
+"
