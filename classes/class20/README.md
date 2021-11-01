@@ -22,10 +22,11 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class20/images/craig_2021-10-28.png)
 
-2. There is also a [Minute Paper after Class 20](https://bit.ly/431-2021-minute-20) due Wednesday 2021-11-03 at Noon.
-3. Further information on Project B will be available in time for class on Thursday.
-4. There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download) now and a [new version of R (version 4.1.2)](https://cran.case.edu/) coming out this week, I believe. I suggest upgrading both **after** you turn in Project A.
-5. I will deal with course permissions for Spring 2022 right after Thanksgiving. Everyone currently in 431 who completes the course will get into 432. If you're interested in taking 500 as well, I'll talk more about that later in the term, but if you have immediate questions, feel free to ask them of me via email or via the Minute Papers.
+2. There is a [Minute Paper after Class 20](https://bit.ly/431-2021-minute-20) due Wednesday 2021-11-03 at Noon.
+3. [Lab 6](https://github.com/THOMASELOVE/431-2021/tree/main/labs) is due Monday 2021-11-08 at 9 PM.
+4. Further information on Project B will be available in time for class on Thursday.
+5. There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download) now and a [new version of R (version 4.1.2)](https://cran.case.edu/) coming out this week, I believe. I suggest upgrading both **after** you turn in Project A.
+6. I will deal with course permissions for Spring 2022 right after Thanksgiving. Everyone currently in 431 who completes the course will get into 432. If you're interested in taking 500 as well, I'll talk more about that later in the term, but if you have immediate questions, feel free to ask them of me via email or via the Minute Papers.
  
 ## One Last Thing
 
