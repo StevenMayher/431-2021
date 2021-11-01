@@ -8,7 +8,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Today's Slides
 
-- Today, we will conclude our examination of the slides originally presented in Class 18.
+- Today, we will continue our examination of the slides originally presented in Class 18, beginning with Slide 66.
 - Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class20/431-class18-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class20/431-class18-slides.Rmd). 
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
