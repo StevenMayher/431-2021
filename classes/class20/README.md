@@ -14,18 +14,20 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. There is a Minute Paper after Class 20 (due tomorrow at Noon). Details to come.
-2. There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download). I suggest upgrading **after** you turn in Project A.
-3. More to come.
+1. The Project A deadline is tonight (Tuesday 2021-11-02) at 9 PM. Please submit everything on time - that means...
+    - your **R Markdown file**, your **HTML result** of running that file, and your **video** (mp4 is strongly preferred) all to Canvas
+    - if you have a partner, one of you submits the item above to Canvas and the other submits a *brief text document* indicating who you're working with and stating that your partner will submit the material
+    - once everything is in on Canvas, everyone (you and your partner, separately) need to complete the self-evaluation form at https://bit.ly/431-2021-projA-self-evaluation.
 
-## Project A 
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class20/images/craig_2021-10-28.png)
 
-1. Deadline: Tonight at 9 PM.
-2. More to come.
-
+2. There is also a Minute Paper after Class 20 (due Wednesday 2021-11-03 at Noon). Details to come.
+3. Further information on Project B will be available in time for class on Thursday.
+4. There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download) now and a new version of R (version 4.1.2) coming out in the next few hours. I suggest upgrading both **after** you turn in Project A.
+ 
 ## One Last Thing
 
-To come.
+David Spiegelhalter had a short comment (with Anthony Masters) in *The Guardian* on Sunday 2021-10-31 about "[What proportion of pregnant women have been fully vaccinated?](https://www.theguardian.com/theobserver/commentisfree/2021/oct/31/what-proportion-of-pregnant-women-have-been-fully-vaccinated)" which I thought you might be interested in.
 
 ## A Gentleman's Guide to Love and Murder
 
