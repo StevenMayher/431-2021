@@ -22,7 +22,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class20/images/craig_2021-10-28.png)
 
-2. There is a [Minute Paper after Class 20](https://bit.ly/431-2021-minute-20) due Wednesday 2021-11-03 at Noon. You can complete it before or after you submit Project A.
+2. The [Minute Paper after Class 20](https://bit.ly/431-2021-minute-20) is due Wednesday 2021-11-03 at Noon. You can do it before or after  Project A is in.
 3. [Lab 6](https://github.com/THOMASELOVE/431-2021/tree/main/labs) is due Monday 2021-11-08 at 9 PM.
     - Hint: In question 3, we're looking for you to assess the potential impact of collinearity on your model. This involves obtaining the `vif` values for each coefficient in `model3` and we recommend using the `vif` function within the `car` package to do so. Values above 5 are cause for concern, generally, in this context. See [Section 29.5 in the Course Notes](https://thomaselove.github.io/431-notes/species-found-on-the-galapagos-islands.html?q=VIF#measuring-collinearity---the-variance-inflation-factor) for more details.
 4. Further information on Project B will be available in time for class on Thursday.
