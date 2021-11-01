@@ -25,6 +25,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 2. There is also a Minute Paper after Class 20 (due Wednesday 2021-11-03 at Noon). Details to come.
 3. Further information on Project B will be available in time for class on Thursday.
 4. There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download) now and a new version of R (version 4.1.2) coming out in the next few hours. I suggest upgrading both **after** you turn in Project A.
+5. I will deal with course permissions for Spring 2022 right after Thanksgiving. Everyone currently in 431 who completes the course will get into 432. If you're interested in taking 500 as well, I'll talk more about that later in the term, but if you have immediate questions, feel free to ask them of me via email or via the Minute Papers.
  
 ## One Last Thing
 
