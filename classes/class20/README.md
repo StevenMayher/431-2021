@@ -14,7 +14,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. The Project A deadline is tonight (Tuesday 2021-11-02) at 9 PM. Please submit everything on time - that means...
+1. The **Project A** deadline is tonight (Tuesday 2021-11-02) at 9 PM. Please submit everything on time - that means...
     - your **R Markdown file**, your **HTML result** of running that file, and your **video** (mp4 is strongly preferred) all to Canvas
     - if you have a partner, one of you submits the item above to Canvas and the other submits a *brief text document* indicating who you're working with and stating that your partner will submit the material
     - once everything is in on Canvas, everyone (you and your partner, separately) need to complete the **self-evaluation form** at https://bit.ly/431-2021-projA-self-evaluation.
@@ -22,8 +22,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class20/images/craig_2021-10-28.png)
 
-2. There is a [Minute Paper after Class 20](https://bit.ly/431-2021-minute-20) due Wednesday 2021-11-03 at Noon.
+2. There is a [Minute Paper after Class 20](https://bit.ly/431-2021-minute-20) due Wednesday 2021-11-03 at Noon. You can complete it before or after you submit Project A.
 3. [Lab 6](https://github.com/THOMASELOVE/431-2021/tree/main/labs) is due Monday 2021-11-08 at 9 PM.
+    - Hint: In question 3, we're looking for you to assess the potential impact of collinearity on your model. This involves obtaining the `vif` values for each coefficient in `model3` and we recommend using the `vif` function within the `car` package to do so. Values above 5 are cause for concern, generally, in this context. See [Section 29.5 in the Course Notes](https://thomaselove.github.io/431-notes/species-found-on-the-galapagos-islands.html?q=VIF#measuring-collinearity---the-variance-inflation-factor) for more details.
 4. Further information on Project B will be available in time for class on Thursday.
 5. There's a [new version of RStudio available](https://www.rstudio.com/products/rstudio/download/#download) now and a [new version of R (version 4.1.2)](https://cran.case.edu/) coming out this week, I believe. I suggest upgrading both **after** you turn in Project A.
 6. I will deal with course permissions for Spring 2022 right after Thanksgiving. Everyone currently in 431 who completes the course will get into 432. If you're interested in taking 500 as well, I'll talk more about that later in the term, but if you have immediate questions, feel free to ask them of me via email or via the Minute Papers.
