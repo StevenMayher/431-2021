@@ -17,7 +17,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 1. The Project A deadline is tonight (Tuesday 2021-11-02) at 9 PM. Please submit everything on time - that means...
     - your **R Markdown file**, your **HTML result** of running that file, and your **video** (mp4 is strongly preferred) all to Canvas
     - if you have a partner, one of you submits the item above to Canvas and the other submits a *brief text document* indicating who you're working with and stating that your partner will submit the material
-    - once everything is in on Canvas, everyone (you and your partner, separately) need to complete the self-evaluation form at https://bit.ly/431-2021-projA-self-evaluation.
+    - once everything is in on Canvas, everyone (you and your partner, separately) need to complete the **self-evaluation form** at https://bit.ly/431-2021-projA-self-evaluation.
     - What's the most important part of your project A? The research questions, and your answers to them.
 
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class20/images/craig_2021-10-28.png)
