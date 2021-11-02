@@ -17,7 +17,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 1. The **Project A** deadline is tonight (Tuesday 2021-11-02) at 9 PM. Please submit everything on time - that means...
     - your **R Markdown file**, your **HTML result** of running that file, and your **video** (mp4 is strongly preferred) all to Canvas
     - if you have a partner, one of you submits the item above to Canvas and the other submits a *brief text document* indicating who you're working with and stating that your partner will submit the material
-    - once everything is in on Canvas, everyone (you and your partner, separately) need to complete the **self-evaluation form** at https://bit.ly/431-2021-projA-self-evaluation.
+    - once everything is in on Canvas, each student (you and your partner, separately) needs to complete the **self-evaluation form** at https://bit.ly/431-2021-projA-self-evaluation.
     - If you have some immense disaster, the Canvas link for Project A will remain open until 7:30 AM Wednesday 2021-11-03, which is when I will actually begin grading. Anything received after 9:30 PM Tuesday will lose 3 points for lateness assuming it is in by 7:30 AM Wednesday, after which time it will lose at least 15 points (and rising) for lateness. Please **do not** be late.
     - What's the most important part of your project A? The research questions, and your answers to them.
 
