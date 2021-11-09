@@ -1,5 +1,7 @@
 # Project A Final Submissions Received by Dr. Love
 
+See [trivia below](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/submissions.md#some-trivia).
+
 Code | Investigator(s) | Title
 --: | :---------------: | :-------------------------
 101 | Graham Akeson	|	Family Structure and Primary Care Medical Coverage: Social and Systemic Factors Influencing Teen Pregnancy
