@@ -105,5 +105,15 @@ Other packages loaded:
 - Epi, Hmisc, readxl, rstanarm (2x each)
 - datasets, epitools, fBasics, Formula, ggbeeswarm, here, hrbrthemes, kableExtra, lindia, lsmeans, MASS, NHANES, palmerpenguins, psych, qqplotr, RColorBrewer, reactable, reshape, rms, rqPen, survival, table1, viridis
 
+Stem and Leaf (Lines of R Markdown Code)
 
-
+```
+ 4 | 49
+ 5 | 37 63 68 69 72 91 93
+ 6 | 03 10 41 61 64 68 92 93
+ 7 | 00 12 17 18 42 47 49 64 74 77 91 
+ 8 | 14 18 28 30 43 55 77 89
+ 9 | 03 08 35 49 78
+10 | 07 61
+11 | 36
+```
