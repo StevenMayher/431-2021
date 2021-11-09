@@ -1,0 +1,737 @@
+---
+title: "431 Class 21"
+author: "thomaselove.github.io/431"
+date: "2021-11-09"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    fonttheme: "structurebold"
+    colortheme: "whale"
+    fig_height: 5.5
+    fig_caption: false
+---
+
+## Today's R Setup
+
+```{r setup, message = FALSE}
+library(janitor); library(knitr)
+library(magrittr); library(naniar)
+library(simputation) # to permit imputation work
+library(broom); library(car)
+library(equatiomatic); library(patchwork)
+library(GGally) # to build scatterplot matrices
+library(tidyverse) # always load tidyverse last
+
+theme_set(theme_bw())
+
+opts_chunk$set(comment=NA) # already loaded knitr
+options(width = 55) # for the slides
+options(dplyr.summarise.inform = FALSE)
+```
+
+## Today's Agenda
+
+- Regression Analysis: Today we focus on...
+    - Data Management
+    - Single Imputation
+    - How well will retain our $R^2$ in new data?
+    - Interpreting our Coefficients
+    - Comparisons In-Sample via ANOVA, AIC, BIC, $\sigma$
+    - "Uncertainty" Intervals around a model's coefficients
+- A closer look at assumptions, and at collinearity
+    - Calibrating yourself
+
+# Today's Main Example: 192 adults with diabetes in NE Ohio
+
+## Load the `dm192.csv` Data
+
+```{r, message = FALSE}
+dm192_raw <- read_csv("data/dm192.csv") %>%
+  clean_names() %>%
+  mutate(across(where(is.character), ~ as.factor(.))) %>%
+  mutate(pt_id = as.character(pt_id)) %>%
+  select(-practice)
+```
+
+## Anything wrong here?
+
+```{r}
+glimpse(dm192_raw)
+```
+
+## Why is `a1c_old` a factor variable?
+
+```{r}
+dm192_raw %>% count(a1c_old)
+```
+
+## Let's try importing that again...
+
+```{r, message = FALSE}
+dm192_raw <- read_csv("data/dm192.csv") %>%
+  clean_names() %>%
+  mutate(a1c_old = 
+           ifelse(a1c_old == "#VALUE!", NA, a1c_old)) %>%
+  mutate(a1c_old = as.numeric(a1c_old)) %>%
+  mutate(across(where(is.character), ~ as.factor(.))) %>%
+  mutate(pt_id = as.character(pt_id)) %>%
+  select(-practice)
+```
+
+## Now, how do things look?
+
+```{r}
+head(dm192_raw)
+```
+
+---
+
+```{r}
+miss_var_summary(dm192_raw)
+```
+
+## Single Imputation into `dm192`
+
+```{r}
+dm192 <- dm192_raw %>%
+  impute_cart(hisp ~ race) %>%
+  impute_rlm(ldl ~ age + statin) %>%
+  impute_pmm(a1c ~ ldl + age) %>%
+  impute_rlm(a1c_old ~ a1c)
+```
+
+- Why do I not need to set a seed here?
+
+## Systolic BP values in `dm192` (our outcome)
+
+```{r, echo = FALSE}
+p1 <- ggplot(dm192, aes(x = sbp)) +
+    geom_histogram(bins = 12, col = "white", fill = "coral")
+
+p2 <- ggplot(dm192, aes(x = sbp, y = "")) +
+    geom_violin() + 
+    geom_boxplot(fill = "coral", width = 0.3) +
+    labs(y = "")
+
+p3 <- ggplot(dm192, aes(sample = sbp)) +
+    geom_qq(col = "coral") + geom_qq_line() + 
+    labs(y = "Observed sbp", x = "Normal (0,1) expectation")
+
+(p1 / p2 + plot_layout(heights = c(2,1))) | p3 
+```
+
+## Scatterplot Matrix?
+
+Too many predictors to fit on one slide, so I'll split them...
+
+```{r, eval = FALSE}
+dm192 %>% select(sbp_old, age, a1c_old, statin, sbp) %>%
+  ggpairs(., 
+          lower=list(combo=wrap("facethist", binwidth=0.8)))
+```
+
+```{r, eval = FALSE}
+dm192 %>% select(sex, race, hisp, insurance, sbp) %>%
+  ggpairs(., 
+          lower=list(combo=wrap("facethist", binwidth=0.8)))
+```
+
+- Adding the `lower = ...` stuff eliminates the binwidth message.
+- Note that I list my outcome `sbp` last in each plot. Why?
+
+
+
+## Scatterplot Matrix 1 (numerical predictors)
+
+```{r, echo = FALSE}
+dm192 %>% select(sbp_old, age, a1c_old, statin, sbp) %>%
+  ggpairs(., 
+          lower=list(combo=wrap("facethist", binwidth=0.8)))
+```
+
+## Scatterplot Matrix 2 (categorical predictors)
+
+```{r, echo = FALSE}
+dm192 %>% select(sex, race, hisp, insurance, sbp) %>%
+  ggpairs(., 
+          lower=list(combo=wrap("facethist", binwidth=0.8)))
+```
+
+
+
+## Consider a transformation of our outcome `sbp`?
+
+- What are the predictors we'll consider?
+    - `sbp_old`
+    - `age`
+    - `sex`
+    - `race`
+    - `hisp`
+    - `insurance`
+    - `statin`
+    - `a1c_old`
+
+So we could fit that model and look at the Box-Cox results...
+
+```{r}
+m0 <- lm(sbp ~ sbp_old + age + sex + race + hisp + 
+           insurance + statin + a1c_old, data = dm192)
+```
+
+## Box-Cox results (requires `car` package)
+
+```{r}
+boxCox(m0)
+```
+
+## Power Transformation results (for `m0`)
+
+```{r, warning = FALSE}
+summary(powerTransform(m0))
+```
+
+**Note**: I suppressed a warning here. What to do?
+
+## Systolic BP values in `dm192` (untransformed)
+
+```{r, echo = FALSE}
+p1 <- ggplot(dm192, aes(x = sbp)) +
+    geom_histogram(bins = 12, col = "white", fill = "coral")
+
+p2 <- ggplot(dm192, aes(x = sbp, y = "")) +
+    geom_violin() + 
+    geom_boxplot(fill = "coral", width = 0.3) +
+    labs(y = "")
+
+p3 <- ggplot(dm192, aes(sample = sbp)) +
+    geom_qq(col = "coral") + geom_qq_line() + 
+    labs(y = "Observed sbp", x = "Normal (0,1) expectation")
+
+(p1 / p2 + plot_layout(heights = c(2,1))) | p3 
+```
+
+## Square Root of Systolic BP values in `dm192`
+
+```{r, echo = FALSE}
+p4 <- ggplot(dm192, aes(x = sqrt(sbp))) +
+    geom_histogram(bins = 12, col = "white", fill = "slateblue")
+
+p5 <- ggplot(dm192, aes(x = sqrt(sbp), y = "")) +
+    geom_violin() + 
+    geom_boxplot(fill = "slateblue", width = 0.3) +
+    labs(y = "")
+
+p6 <- ggplot(dm192, aes(sample = sqrt(sbp))) +
+    geom_qq(col = "slateblue") + geom_qq_line() + 
+    labs(y = "Observed sqrt(sbp)", 
+         x = "Normal (0,1) expectation")
+
+(p4 / p5 + plot_layout(heights = c(2,1))) | p6 
+```
+
+## What if I was going to fit a model to $\sqrt{sbp}$?
+
+Before anything else, I'd create a new variable containing the transformed outcome.
+
+```{r}
+dm192 <- dm192 %>%
+    mutate(sbp_sqrt = sqrt(sbp))
+```
+
+and I'd split the data after this, build a scatterplot matrix, run models, all based on this, I think.
+
+So, for instance, if the choice is to run:
+
+```{r, eval = FALSE}
+modelX <- lm(sqrt(sbp) ~ statin + sbp_old, data = dm192)
+```
+
+or
+
+```{r, eval = FALSE}
+modelX <- lm(sbp_sqrt ~ statin + sbp_old, data = dm192)
+```
+
+it doesn't matter, actually, but for anything else (like a scatterplot matrix, for instance), I'd use `sbp_sqrt`.
+
+## Two models for `sbp` in the `dm192` data
+
+For now, let's hold off on a square root transformation - we'll return to this later.
+
+```{r}
+m1 <- lm(sbp ~ sbp_old + statin, data = dm192)
+m2 <- lm(sbp ~ sbp_old + age + sex + race + hisp + 
+           insurance + statin + a1c_old, data = dm192)
+```
+
+### Stepwise Variable Selection?
+
+I'll just note here that if you start with `m2`, and run
+
+```{r, eval = FALSE}
+step(m2)
+```
+
+you wind up with `m1`. That's how I came up with them as candidate models.
+
+## Model Equations with `equatiomatic`
+
+Remember to include `results = 'asis`` in the code chunk.
+
+```{r, results = 'asis'}
+extract_eq(m1, use_coefs = TRUE, coef_digits = 3)
+```
+
+```{r, results = 'asis'}
+extract_eq(m2, use_coefs = TRUE, 
+           wrap = TRUE, terms_per_line = 3)
+```
+
+## Which model looks better, by $R^2$ and Adjusted $R^2$?
+
+```{r}
+g1 <- glance(m1) %>% mutate(model = "m1")  
+g2 <- glance(m2) %>% mutate(model = "m2") 
+comp <- bind_rows(g1, g2) 
+
+comp %>% select(model, r.squared, adj.r.squared)
+```
+
+- Which of these two models is more likely to **retain its nominal $R^2$ value** in new data?
+
+## Which model looks better, by $\sigma$, AIC or BIC?
+
+```{r}
+comp %>% select(model, sigma, AIC, BIC)
+```
+
+## Is one model detectably better that the other in-sample?
+
+```{r}
+anova(m1, m2)
+```
+
+## Interpreting the slopes and their CIs
+
+```{r}
+tidy(m1, conf.int = TRUE, conf.level = 0.90) %>%
+  select(term, estimate, std.error, conf.low, conf.high) %>%
+  knitr::kable(digits = 2)
+```
+
+- Averaging over repeated samples, we can be 90% confident that the true slope of `sbp_old` lies between 0.90 and 0.98, assuming that `statin` is unchanged.
+
+## Model `m1`, and 90% uncertainty intervals
+
+Let's describe these as *uncertainty intervals*, since they are meant to help you understand how much uncertainty you have.
+
+```{r}
+tidy(m1, conf.int = TRUE, conf.level = 0.90) %>%
+  select(term, estimate, std.error, conf.low, conf.high) %>%
+  knitr::kable(digits = 2)
+```
+
+"Uncertainty Interval" is kind of nice because it fights the ambiguity between confidence intervals and predictive intervals. Also notice that confidence intervals are smaller when you have more confidence, which can confuse people. (references in a few slides)
+
+## Model `m2`, and 50% uncertainty intervals (Code)
+
+```{r, eval = FALSE}
+tidy(m2, conf.int = TRUE, conf.level = 0.50) %>%
+  select(term, estimate, std.error, conf.low, conf.high) %>%
+  knitr::kable(digits = 2)
+```
+
+50% intervals have some potential advantages over 95% intervals...
+
+- Computational Stability
+- More intuitive (half the 50% intervals should contain the true value)
+- Sometimes it's best to get a sense of where the parameters will be, not to attempt an unrealistic near-certainty.
+
+## Model `m2`, and 50% uncertainty intervals (Results)
+
+```{r, echo = FALSE}
+tidy(m2, conf.int = TRUE, conf.level = 0.50) %>%
+  select(term, estimate, std.error, conf.low, conf.high) %>%
+  knitr::kable(digits = 2)
+```
+
+## Model `m1`, and 50% uncertainty intervals
+
+```{r}
+tidy(m1, conf.int = TRUE, conf.level = 0.50) %>%
+  select(term, estimate, std.error, conf.low, conf.high) %>%
+  knitr::kable(digits = 2)
+```
+
+Under repeated sampling, the true slope of `sbp_old` will be inside (0.92, 0.96) half of the time, assuming `statin` is held constant.
+
+## Andrew Gelman Blog Posts Worth a Little Time
+
+- Instead of "confidence interval," let's say "uncertainty interval" at https://andrewgelman.com/2010/12/21/lets_say_uncert/
+
+- "Why I prefer 50% rather than 95% intervals" at https://andrewgelman.com/2016/11/05/why-i-prefer-50-to-95-intervals/
+
+- "Abraham Lincoln and confidence intervals" at https://andrewgelman.com/2016/11/23/abraham-lincoln-confidence-intervals/
+
+## Plotting Model `m1` (Code)
+
+```{r, eval = FALSE}
+m1_aug <- augment(m1, data = dm192, se_fit = TRUE)
+
+ggplot(m1_aug, aes(x = sbp_old, y = sbp, 
+                  col = factor(statin))) +
+  geom_point(pch = 1, size = 2) +
+  geom_line(aes(y = .fitted), size = 1) +
+  geom_ribbon(aes(ymin = .fitted - .se.fit*2, 
+                  ymax = .fitted + .se.fit*2), 
+              alpha = 0.2) +
+  facet_wrap(~ statin, labeller = "label_both") +
+  guides(col = "none") +
+  labs(title = "Model m1",
+       subtitle = "with approximate 95% uncertainty intervals") 
+```
+
+## Plotting Model `m1` (Result)
+
+```{r, echo = FALSE}
+m1_aug <- augment(m1, data = dm192, se_fit = TRUE)
+
+ggplot(m1_aug, aes(x = sbp_old, y = sbp, 
+                  col = factor(statin))) +
+  geom_point(pch = 1, size = 2) +
+  geom_line(aes(y = .fitted), size = 1) +
+  geom_ribbon(aes(ymin = .fitted - .se.fit*2, 
+                  ymax = .fitted + .se.fit*2), 
+              alpha = 0.2) +
+  facet_wrap(~ statin, labeller = "label_both") +
+  guides(col = "none") +
+  labs(title = "Model m1",
+       subtitle = "with approximate 95% uncertainty intervals") 
+```
+
+# Residual Plots and Regression Assumptions
+
+## Multivariate Regression: Checking Assumptions
+
+Assumptions (see Course Notes, Section 27)
+
+- Linearity
+- Normality
+- Homoscedasticity
+- Independence
+
+Available Residual Plots 
+
+`plot(model, which = c(1:3,5))`
+
+1. Residuals vs. Fitted Values
+2. Normal Q-Q Plot of Standardized Residuals
+3. Scale-Location Plot
+4. Index Plot of Cook's Distance
+5. Residuals, Leverage and Influence
+
+## An Idealized Model (by Simulation)
+
+```{r sim0}
+set.seed(431122)
+
+x1 <- rnorm(200, 20, 5)
+x2 <- rnorm(200, 20, 12)
+x3 <- rnorm(200, 20, 10)
+er <- rnorm(200, 0, 1)
+y <- .3*x1 - .2*x2 + .4*x3 + er
+
+sim0 <- tibble(y, x1, x2, x3)
+
+mod0 <- lm(y ~ x1 + x2 + x3, data = sim0)
+
+summary(mod0) # appears on next slide
+```
+
+## An Idealized Model (by Simulation)
+
+```
+Call: lm(formula = y ~ x1 + x2 + x3, data = sim0)
+
+Residuals:     Min       1Q   Median       3Q      Max 
+          -3.14553 -0.68079  0.08096  0.69216  2.65265 
+
+Coefficients: Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   0.122852   0.348584   0.352    0.725    
+x1            0.285539   0.014211  20.093   <2e-16 ***
+x2           -0.204908   0.005828 -35.159   <2e-16 ***
+x3            0.413308   0.007172  57.631   <2e-16 ***
+---
+Signif codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.007 on 196 degrees of freedom
+Multiple R-squared:  0.9589,	Adjusted R-squared:  0.9583 
+F-statistic:  1524 on 3 and 196 DF,  p-value: < 2.2e-16
+```
+
+## Building Residual Plots for Idealized Model
+
+```{r, eval = FALSE}
+par(mfrow=c(2,2))
+plot(mod0)
+par(mfrow=c(1,1))
+```
+
+- Residuals vs. Fitted values (Top Left)
+- Normal Q-Q plot of Standardized Residuals (Top Right)
+- Scale-Location plot (Bottom Left)
+- Residuals vs. Leverage, Cook's Distance contours (Bottom Right)
+
+## Residual Analysis (Idealized Model: n = 200)
+
+```{r, echo = FALSE, fig.height = 7}
+par(mfrow=c(2,2))
+plot(mod0)
+par(mfrow=c(1,1))
+```
+
+## Is one of the regression assumptions violated?
+
+- Non-linearity problems
+  - show up as a curve in the Top Left plot (Residuals vs. Fitted)
+- Heteroscedasticity problems
+  - show up as a fan in the Top Left plot
+  - show up as a trend (up or down) in the Scale-Location plot
+- Non-Normality problems
+  - shows up as individual outliers in all plots
+  - Normal Q-Q plot describes skew / many outliers / a few big outliers
+  - Bottom Right plot shows each point's residual, leverage and influence
+
+## What to Do?
+
+Importance of Assumptions:
+
+1. Linearity (critical, but amenable to transformations, often)
+2. Independence (critical, not relevant if data are a cross-section with no meaningful ordering in space or time, but vitally important if space/time play a meaningful role - longitudinal data analysis required)
+3. Homoscedasticity (constant variance: important, sometimes amenable to transformation)
+4. Normality due to skew (usually amenable to transformation)
+5. Normality due to many more outliers than we would expect (heavy-tailed - inference is problematic unless you account for this, sometimes a transformation can help)
+6. Normality due to a severe outlier (or a small number of severely poorly fitted points - can consider setting those points away from modeling, but requires a meaningful external explanation)
+
+## Residual Plots for Model `m1` for our `dm192` data?
+
+```{r, echo = FALSE, fig.height = 7}
+par(mfrow=c(2,2))
+plot(m1)
+```
+
+## Recall the Box-Cox plot's suggestion, earlier...
+
+```{r}
+boxCox(m1)
+```
+
+## Adjusted model `m1` predicting $\sqrt{sbp}$
+
+```{r}
+m1_adj <- lm(sqrt(sbp) ~ sbp_old + statin, data = dm192)
+summary(m1_adj)
+```
+
+## Residuals for `m1` predicting square root of `sbp`
+
+```{r, echo = FALSE, fig.height = 7}
+par(mfrow=c(2,2)) 
+plot(m1_adj)
+par(mfrow = c(1,1))
+```
+
+## Resolving Assumption Violations
+
+Options include:
+
+- transform the Y variable, likely with one of our key power transformations (use Box-Cox to help)
+- transform one or more of the X variables if it seems particularly problematic, or perhaps combine them (rather than height and weight, perhaps look at BMI, or BMI and height to help reduce collinearity)
+- remove a point only if you have a good explanation for the point that can be provided outside of the modeling, and this is especially important if the point is influential
+- consider other methods for establishing a non-linear model (432: splines, loess smoothers, non-linear modeling)
+- consider other methods for longitudinal data with substantial dependence (432)
+
+# Six Simulations To Help You Calibrate Yourself
+
+## For each simulation, decide on the following:
+
+Is one of the regression assumptions violated?
+
+- Linearity, Homoscedasticity, Normality, or multiple problems?
+  - All of these simulations describe cross-sectional data, with no importance to the order of the observations, so the assumption of independence isn't a concern.
+- In which of the four plot(s) shown do you see the problem?
+  - Top Left: Residuals vs. Fitted values (in R: plot 1)
+  - Top Right: Normal Q-Q plot of Standardized Residuals (plot 2)
+  - Bottom Left: Scale-Location plot (plot 3)
+  - Bottom Right: Residuals vs. Leverage, Cook's Distance contours (plot 5)
+- If you see a point that is problematic, then:
+  - is it poorly fit?
+  - is it highly leveraged?
+  - is it influential?
+- What might you try to do about the assumption problem you see (if you see one), to resolve it?
+
+This **isn't** easy. We'll do three, and then regroup.
+
+## Simulation 1 (n = 200 subjects)
+
+```{r sim1, echo=FALSE, fig.height = 7}
+set.seed(431)
+x1 <- runif(200, 50, 100)
+x2 <- runif(200, 25, 125)
+x3 <- rnorm(200, 50, 15)
+er <- rt(200, 3)
+y <- 45 + .3*x1 + .2*x2 - 3*x3 + er
+sim1 <- tibble(y, x1, x2, x3)
+mod1 <- lm(y ~ x1 + x2 + x3, data = sim1)
+par(mfrow=c(2,2))
+plot(mod1)
+par(mfrow=c(1,1))
+```
+
+## Simulation 2 (n = 150)
+
+```{r sim2, echo=FALSE, fig.height = 7}
+set.seed(439)
+x1 <- runif(150, 50, 100)
+x2 <- runif(150, 25, 125)
+x3 <- rnorm(150, 50, 15)
+er <- rnorm(150, 0, 1)
+y0 <- 15 + sqrt(x1) + .6*x1 - sqrt(x2) + er
+y <- y0^3/10000
+sim2 <- tibble(y, x1, x2, x3)
+mod2 <- lm(y ~ x1 + x2, data = sim2)
+par(mfrow=c(2,2))
+plot(mod2)
+par(mfrow=c(1,1))
+```
+
+## Simulation 3 (n = 150)
+
+```{r sim3, echo=FALSE, fig.height = 7}
+set.seed(437)
+x1 <- runif(150, 50, 100)
+x2 <- runif(150, 25, 125)
+x3 <- rnorm(150, 50, 15)
+er <- rnorm(150, 0, 1)
+y <- 45 + .3*x1 + .2*x2 - 3*x3 + er
+sim3 <- tibble(y, x1, x2, x3)
+mod3 <- lm(y ~ x1 + x2 + x3, data = sim3)
+par(mfrow=c(2,2))
+plot(mod3)
+par(mfrow=c(1,1))
+```
+
+# OK. How are we doing so far?
+
+## The First Three Simulations
+
+For those of you playing along at home...
+
+1. Observation 1 has an impossibly large standardized residual (Z score is close to 12), of substantial influence (Cook's distance around 0.7).
+  - Probably need to remove the point, and explain it separately.
+2. Curve in residuals vs. fitted values plot suggests potential non-linearity.
+  - Natural choice would be a transformation of the outcome.
+3. No substantial problems, although there's a little bit of heteroscedasticity.
+  - I'd probably just go with the model as is.
+
+Let's try three more...
+
+## Simulation 4 (n = 1000)
+
+```{r sim4, echo=FALSE, fig.height = 7}
+set.seed(4323)
+x1 <- runif(1000, 50, 100)
+x2 <- runif(1000, 25, 125)
+x3 <- rnorm(1000, 50, 15)
+er <- rt(1000, 2)
+y <- 45 + .3*x1 + .3*x2 - 4*x3 + er
+sim4 <- tibble(y, x1, x2, x3)
+mod4 <- lm(y ~ x1 + x2 + x3, data = sim4)
+par(mfrow=c(2,2))
+plot(mod4)
+par(mfrow=c(1,1))
+```
+
+
+## Simulation 5 (n = 100)
+
+```{r sim5, echo=FALSE, fig.height = 7}
+set.seed(4191)
+x1 <- runif(100, 50, 100)
+x2 <- runif(100, 25, 125)
+x3 <- rnorm(100, 50, 15)
+e0 <- ifelse(x3 > 50, 0.125, 2.2)
+e1 <- rnorm(100,0,1)
+er <- e0*e1
+y <- 45 + .3*x1 + - 4*x3 + er
+sim5 <- tibble(y, x1, x2, x3)
+mod5 <- lm(y ~ x1 + x2 + x3, data = sim5)
+par(mfrow=c(2,2))
+plot(mod5)
+par(mfrow=c(1,1))
+```
+
+## Simulation 6 (n = 1000)
+
+```{r sim6, echo=FALSE, fig.height = 7}
+set.seed(4317)
+x1 <- runif(1000, 50, 100)
+x2 <- runif(1000, 25, 125)
+x3 <- rnorm(1000, 50, 15)
+er <- rnorm(1000, 0, 1)
+y <- 45 + .3*x1 + .2*x2 - 3*x3 + er
+sim6 <- tibble(y, x1, x2, x3)
+sim6[496,"x3"] <- -24
+sim6[496,"y"] <- 148
+mod6 <- lm(y ~ x1 + x2 + x3, data = sim6)
+par(mfrow=c(2,2))
+plot(mod6)
+par(mfrow=c(1,1))
+```
+
+# OK. How did this go?
+
+## The Last Three Simulations
+
+For those of you playing along at home...
+
+4. Normality issues - outlier-prone even with 1000 observations.
+  - Transform Y? Consider transforming the Xs?
+5. Serious heteroscedasticity - residuals much more varied for larger fitted values.
+  - Look at Residuals vs. each individual X to see if this is connected to a specific predictor, which might be skewed or something?
+6. No serious violations - point 496 has very substantial leverage, though.
+  - I'd probably just go with the model as is, after making sure that point 496's X values aren't incorrect.
+
+# What about Collinearity?
+
+## Do we have collinearity in our `dm192` models?
+
+```{r}
+# requires library(car)
+vif(m1)
+```
+
+```{r}
+car::vif(m2)
+```
+
+## What about collinearity?
+
+"No collinearity" is not a regression assumption, but if we see substantial collinearity, we are inclined to consider dropping some of the variables, or combining them (height and weight may be highly correlated, height and BMI may be less so). 
+
+The variance inflation factor (or VIF), if it exceeds 5, is a clear indication of collinearity. We'd like to see the variances inflated only slightly (that is, VIF not much larger than 1) by correlation between the predictors, to facilitate interpretation.
+
+The best way to tell if you've improved the situation by fitting an alternative model is to actually compare and fit the two models, looking in particular at:
+
+- the standard errors of their coefficients, and 
+- their VIFs.
+
+## What's the Goal Here?
+
+Develop an effective model. (?) (!)
+
+- Models can do many different things. What you're using the model for matters, a lot.
+- Don't fall into the trap of making binary decisions (this model isn't perfect, no matter what you do, and so your assessment of residuals will also have shades of gray).
+- The tools we have provided (scatterplots, mostly) are well designed for rather modest sample sizes. When you have truly large samples, they don't scale very well.
+- Just because R chooses four plots for you to study doesn't mean they provide the only relevant information.
+- Embrace the uncertainty. Look at it as an opportunity to study your data more effectively.
