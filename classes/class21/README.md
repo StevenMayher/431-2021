@@ -16,8 +16,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 1. Since our last class, one week ago, I have updated ...
     - the [Course Calendar](https://thomaselove.github.io/431/calendar.html) to reflect our missed class session last Thursday, make some other necessary changes, and move Octover down to the bottom of the page with September.
     - the [R Packages](https://thomaselove.github.io/431/r_packages.html) list to include the GGally package, which you'll need to install.
-    - the [Software Installation](https://thomaselove.github.io/431/software_install.html) instructions to suggest installing [R version 4.1.2](http://cran.case.edu/) (although 4.1.1 is still OK through the end of the 431 class) as well as [RStudio](https://www.rstudio.com/products/rstudio/download/#download) version 2021.09 or later.
+    - the [Software Installation](https://thomaselove.github.io/431/software_install.html) instructions to suggest installing [R version 4.1.2](http://cran.case.edu/) (although 4.1.1 is still OK through the end of the 431 class) as well as [RStudio](https://www.rstudio.com/products/rstudio/download/#download) version 2021.09 or later. Be sure to update your packages after installation.
     - the [Minute Paper](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) assignments to cancel the one originally scheduled for this Wednesday. 
+    - the [431-data page](https://github.com/THOMASELOVE/431-data) to include the `dm192.csv` file we'll use in today's class (also available in the `data` folder above.
 2. Feedback on the Minute Paper after Class 20 - details to come.
 3. Project A grading - details to come.
 4. Project B instructions - details to come.
