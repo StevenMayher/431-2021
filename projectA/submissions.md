@@ -58,6 +58,22 @@ R Version | Projects
 **4.1.1. (2021-08-10)** | **36**
 4.1.2. (2021-11-01) | 1
 
+Code-folding used? | Projects
+----: | ----:
+No | 21
+Yes | 22
+
+R Markdown Formatting | Projects
+-------: | ------:
+html_doc | 5
+readthedown | 38
+
+Graphical Theme | Projects
+--------: | -----:
+`bw` | 8
+`classic` | 1
+Default | 34
+
 macOS Operating System | Projects | Windows Operating System | Projects
 ----------: | -----: | ----------: | -----:
 macOS | 14 | Windows 10 | 29
