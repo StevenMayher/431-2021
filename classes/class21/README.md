@@ -19,9 +19,16 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - the [Software Installation](https://thomaselove.github.io/431/software_install.html) instructions to suggest installing [R version 4.1.2](http://cran.case.edu/) (although 4.1.1 is still OK through the end of the 431 class) as well as [RStudio](https://www.rstudio.com/products/rstudio/download/#download) version 2021.09 or later. Be sure to update your packages after installation.
     - the [Minute Paper](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) assignments to cancel the one originally scheduled for this Wednesday. 
     - the [431-data page](https://github.com/THOMASELOVE/431-data) to include the `dm192.csv` file we'll use in today's class (also available in the [`data` folder above](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class21/data).
-2. Feedback on the Minute Paper after Class 20 - details to come.
+2. Feedback on the Minute Paper after Class 20 is [now available](https://bit.ly/431-2021-min20-feedback).
 3. Project A grading - [here are the projects](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/submissions.md) we received, along with some trivia about those submissions.
-4. Project B instructions - details to come.
+4. Project B instructions
+    - I am in the process of simplifying the instructions, and focusing the tasks.
+    - If you want to work with a partner, I'm likely to be OK with that, regardless of what program you are in. (I've changed my mind.)
+    - You're going to use a data set to perform (1) a series of comparisons and (2) a model-building activity using regression to predict a quantity. You'll work either with NHANES data or with a data set you find and tell me about next week.
+    - You’ll present your work (with your partner, if you have one) on a date (see [the calendar](https://thomaselove.github.io/431/calendar.html)) in December. 
+        - You will be required to be in my office to present your work for no more than 30 minutes on that day. 
+        - We’ll schedule those dates and times before Thanksgiving, and you'll tell me which times work for you (and your partner, if any) next week.
+
 5. Lab 6 answer sketch to come.
  
 ## One Last Thing
