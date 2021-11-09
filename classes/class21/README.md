@@ -26,7 +26,11 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
  
 ## One Last Thing
 
-To come.
+From [Andrew Gelman's blog](https://statmodeling.stat.columbia.edu/): [A quick fix in science communication: Switch from the present to the past tense](https://statmodeling.stat.columbia.edu/2021/11/04/a-quick-fix-in-science-communication-switch-from-the-present-to-the-past-tense-heres-an-example-from-new-zealand/) from 2021-11-04.
+
+> My quick solution to the science communication problem here is to change from the present tense to the past tense. So, instead of "Māori and Pacific people in New Zealand have a higher risk of hospitalisation," the title of the article could be, "Māori and Pacific people in New Zealand had a higher risk of hospitalisation."
+
+> There’s a common pattern in science writing to use the present tense to imply that you’ve discovered a universal truth. [For example](https://statmodeling.stat.columbia.edu/2006/08/30/more_on_girl_an/), "Beautiful parents have more daughters" [or](https://slate.com/technology/2013/07/statistics-and-psychology-multiple-comparisons-give-spurious-results.html) "Women are more likely to wear red or pink at peak fertility." OK, those particular papers had other problems, but my point here is that at best these represented findings about some point in time and some place in the past. Using the past tense in the titles of scientific reports won’t solve all our problems or even most of our problems or even many of our problems, but maybe it will be a useful start, in reminding authors as well as readers of the scope of their findings.
 
 ## A Gentleman's Guide to Love and Murder
 
