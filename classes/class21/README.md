@@ -20,7 +20,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - the [Minute Paper](https://github.com/THOMASELOVE/431-2021/tree/main/minutepapers) assignments to cancel the one originally scheduled for this Wednesday. 
     - the [431-data page](https://github.com/THOMASELOVE/431-data) to include the `dm192.csv` file we'll use in today's class (also available in the [`data` folder above](https://github.com/THOMASELOVE/431-2021/tree/main/classes/class21/data).
 2. Feedback on the Minute Paper after Class 20 - details to come.
-3. Project A grading - details to come.
+3. Project A grading - [here are the projects](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/submissions.md) we received, along with some trivia about those submissions.
 4. Project B instructions - details to come.
 5. Lab 6 answer sketch to come.
  
