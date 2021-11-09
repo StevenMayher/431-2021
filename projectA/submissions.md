@@ -50,6 +50,24 @@ Code | Investigator(s) | Title
 
 ## Some Trivia
 
+### 43 Projects, 32,496 Lines of R Markdown Code
+
+Mean = 755.7, SD = 152, Median = 747
+
+*Stem and Leaf*
+```
+ 4 | 49
+ 5 | 37 63 68 69 72 91 93
+ 6 | 03 10 41 61 64 68 92 93
+ 7 | 00 12 17 18 42 47 49 64 74 77 91 
+ 8 | 14 18 28 30 43 55 77 89
+ 9 | 03 08 35 49 78
+10 | 07 61
+11 | 36
+```
+
+### Which version of R and what operating system did you use?
+
 R Version | Projects
 --------: | -----:
 4.0.2. (2020-06-22) | 1
@@ -57,22 +75,6 @@ R Version | Projects
 4.1.0. (2021-05-18) | 4
 **4.1.1. (2021-08-10)** | **36**
 4.1.2. (2021-11-01) | 1
-
-Code-folding used? | Projects
-----: | ----:
-No | 21
-Yes | 22
-
-R Markdown Formatting | Projects
--------: | ------:
-html_doc | 5
-readthedown | 38
-
-Graphical Theme | Projects
---------: | -----:
-`bw` | 8
-`classic` | 1
-Default | 34
 
 macOS Operating System | Projects | Windows Operating System | Projects
 ----------: | -----: | ----------: | -----:
@@ -85,6 +87,37 @@ macOS | 14 | Windows 10 | 29
  macOS Big Sur 11.4 | 1 | Windows 10 x64 (build 19043) | 10
  macOS Big Sur 11.6 | 1 | Windows 10 x64 (build 21385) | 1
  macOS 12.0.1 | 1 | Windows 10 x64 (build 22000) | 1
+ 
+### Designing Your Project
+
+Code-folding used? | Projects
+----: | ----:
+No | 21
+Yes | 22
+
+R Markdown Formatting | Projects
+-------: | ------:
+html_doc | 5
+**readthedown** | **38**
+
+Graphical Theme | Projects
+--------: | -----:
+`bw` | 8
+`classic` | 1
+**Default** | **34**
+
+How Many Sections? | Projects
+----------: | -----:
+4 | 6
+5 | 7
+6 | 6
+**7** | **17**
+8 | 5
+11 | 1
+13 | 1
+
+
+### Which Packages did you Load?
 
 Loaded R Packages | Projects (out of 43)
 :---------: | :---:
@@ -105,19 +138,5 @@ Other packages loaded:
 - Epi, Hmisc, readxl, rstanarm (2x each)
 - datasets, epitools, fBasics, Formula, ggbeeswarm, here, hrbrthemes, kableExtra, lindia, lsmeans, MASS, NHANES, palmerpenguins, psych, qqplotr, RColorBrewer, reactable, reshape, rms, rqPen, survival, table1, viridis
 
-### Lines of R Markdown Code
 
-Mean = 755.7, SD = 152, Median = 747
-
-*Stem and Leaf*
-```
- 4 | 49
- 5 | 37 63 68 69 72 91 93
- 6 | 03 10 41 61 64 68 92 93
- 7 | 00 12 17 18 42 47 49 64 74 77 91 
- 8 | 14 18 28 30 43 55 77 89
- 9 | 03 08 35 49 78
-10 | 07 61
-11 | 36
-```
 
