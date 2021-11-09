@@ -72,8 +72,8 @@ macOS | 14 | Windows 10 | 29
 
 Loaded R Packages | Projects (out of 43)
 :---------: | :---:
-broom, janitor, knitr | 43
-magrittr, naniar, tidyverse | 43
+**broom, janitor, knitr** | **43**
+**magrittr, naniar, tidyverse** | **43**
 rmdformats | 38
 car | 35
 patchwork | 34
