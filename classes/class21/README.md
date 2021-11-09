@@ -31,6 +31,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - You’ll present your work (with your partner, if you have one) on a date (see [the calendar](https://thomaselove.github.io/431/calendar.html)) in December. 
         - You will be required to be in my office to present your work for no more than 30 minutes on that day. 
         - We’ll schedule those dates and times before Thanksgiving, and you'll tell me which times work for you (and your partner, if any) next week.
+6. Congratulations to [Abigail Basson](https://www.abigailbasson.me/) on her new website!
  
 ## One Last Thing
 
