@@ -1,14 +1,14 @@
 # Project B Teaser
 
-These details **will be superceded** by the final instructions for Project B, which will be made available in time for class on 2021-11-04.
+These details **will be superceded** by the final instructions for Project B, which will be made available very soon.
 
 Project B will involve you working on the same data set for each of two studies. The data set you use is up to you. One option is to use NHANES data and Dr. Love will provide instructions on how to do that. The other option is to use a different data set that interests you, and that meets the requirements for the project (some of which are specified below.)
 
-The plan is to have covered all analyses we want you to consider in Project B before the Thanksgiving Break.
+We will have covered all analyses we want you to consider in Project B before the Thanksgiving Break.
 
 ## Working with a Partner
 
-Some people will be permitted to work with a partner, and some will not. For example, students in the MS and PhD programs in Epidemiology & Biostatistics will be required to work alone on Project B. For other students, a final decision on who will be permitted to work with a partner and who will be required to work alone will be made by Dr. Love as soon as the Project A grading is complete.
+All students can work alone or with a partner.
 
 ## Study 1
 
@@ -20,7 +20,7 @@ Study 1 is about making descriptive and exploratory comparisons and summaries of
 - Create and analyze a 2×2 table
 - Create and analyze a J×K table, where J is between 2 and 6 and K is between 3 and 6. 
 
-We'll fill in some details on these sorts of analyses again between now and the Thanksgiving Break.
+We'll fill in some details on these sorts of analyses (especially the third and fifth) again between now and the Thanksgiving Break.
 
 ## Study 2
 
@@ -67,10 +67,14 @@ You will fill out a short form (should take less than 15 minutes to complete) to
 8. What are the other variables you plan to use in your study? (Specify each of the other variables, and for each, describe the variable’s meaning if it’s not clear, and tell me whether it is categorical or quantitative. If it’s categorical, tell me what the categories are.)
 9. How many subjects in your data have complete information on all variables you plan to study? (must be between 250 and 10,000)
 
-That’s it. Dr. Love will review your results and get back to you to tell you whether your proposed approach is approved or not. If not, you’ll have to edit your submission and resubmit the form. The form will be available by 2021-11-04 and will be due at noon on 2021-11-17 (it will replace the Minute Paper for that week) so we can resolve everything prior to the Thanksgiving Break.
+That’s it. Dr. Love will review your results and get back to you to tell you whether your proposed approach is approved or not. If not, you’ll have to edit your submission and resubmit the form. The form will be available soon and will be due at noon on 2021-11-17 (it will replace the Minute Paper for that week) so we can resolve everything prior to the Thanksgiving Break.
+
+## Scheduling Your Presentation
+
+The form will also give you an opportunity to identify times that work for you to give your project presentation in December.
 
 ## Will there be a template?
 
 There will be a complete example for each Study, and an outline to follow of headings for your R Markdown / HTML work.
 
-Again, full instructions for Project B will be provided by class time on Thursday 2021-11-04.
+Again, full instructions for Project B will be provided as soon as possible.

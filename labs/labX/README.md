@@ -10,3 +10,5 @@ We will post a list of student websites here as we receive them.
 
 - [Wyatt Bensken](https://wyattbensken.com/)
 - [Kristi Lin-Rahardja](https://kristilinr.netlify.app/)
+- [Abigail Basson](https://www.abigailbasson.me/)
+
