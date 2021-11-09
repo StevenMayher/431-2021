@@ -70,3 +70,24 @@ macOS | 14 | Windows 10 | 29
  macOS Big Sur 11.6 | 1 | Windows 10 x64 (build 21385) | 1
  macOS 12.0.1 | 1 | Windows 10 x64 (build 22000) | 1
 
+Loaded R Packages | Projects (out of 43)
+:---------: | :---:
+broom, janitor, knitr | 43
+magrittr, naniar, tidyverse | 43
+rmdformats | 38
+car | 35
+patchwork | 34
+ggrepel | 26
+equatiomatic | 24
+glue | 23
+ggpubr | 10
+
+Other packages loaded:
+
+- some of the core tidyverse packages (shouldn't have been loaded since you loaded tidyverse): dplyr (10x), forcats (1x), ggplot2 (3x), readr (2x), tidyr (3x)
+- modelsummary and mosaic (3x each)
+- Epi, Hmisc, readxl, rstanarm (2x each)
+- datasets, epitools, fBasics, Formula, ggbeeswarm, here, hrbrthemes, kableExtra, lindia, lsmeans, MASS, NHANES, palmerpenguins, psych, qqplotr, RColorBrewer, reactable, reshape, rms, rqPen, survival, table1, viridis
+
+
+
