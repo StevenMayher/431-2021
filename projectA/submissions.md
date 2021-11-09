@@ -56,21 +56,15 @@ R Version | Projects
 **4.1.1. (2021-08-10)** | **36**
 4.1.2. (2021-11-01) | 1
 
-Operating System | Projects
-:---------- | -----:
-macOS | 14
- macOS High Sierra 10.13.6 | 1
- macOS Mojave 10.14.6 | 1
- macOS Catalina 10.15.6 | 1
- macOS Catalina 10.15.7 | 2
- macOS Big Sur 10.16 | 6
- macOS Big Sur 11.4 | 1
- macOS Big Sur 11.6 | 1
- macOS 12.0.1 | 1
-Windows 10 | 29
- Windows 10 x64 (build 18363) | 2
- Windows 10 x64 (build 19041) | 3
- **Windows 10 x64 (build 19042)** | **12**
- Windows 10 x64 (build 19043) | 10
- Windows 10 x64 (build 21385) | 1
- Windows 10 x64 (build 22000) | 1
+macOS Operating System | Projects | Windows Operating System | Projects
+----------: | -----: | ----------: | -----:
+macOS | 14 | Windows 10 | 29
+ macOS High Sierra 10.13.6 | 1 | Windows 10 x64 (build 18363) | 2
+ macOS Mojave 10.14.6 | 1 | Windows 10 x64 (build 18363) | 2
+ macOS Catalina 10.15.6 | 1 | Windows 10 x64 (build 19041) | 3
+ macOS Catalina 10.15.7 | 2 | Windows 10 x64 (build 19041) | 3
+ macOS Big Sur 10.16 | 6 | **Windows 10 x64 (build 19042)** | **12**
+ macOS Big Sur 11.4 | 1 | Windows 10 x64 (build 19043) | 10
+ macOS Big Sur 11.6 | 1 | Windows 10 x64 (build 21385) | 1
+ macOS 12.0.1 | 1 | Windows 10 x64 (build 22000) | 1
+
