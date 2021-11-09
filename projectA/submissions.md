@@ -105,8 +105,11 @@ Other packages loaded:
 - Epi, Hmisc, readxl, rstanarm (2x each)
 - datasets, epitools, fBasics, Formula, ggbeeswarm, here, hrbrthemes, kableExtra, lindia, lsmeans, MASS, NHANES, palmerpenguins, psych, qqplotr, RColorBrewer, reactable, reshape, rms, rqPen, survival, table1, viridis
 
-Stem and Leaf (Lines of R Markdown Code)
+### Lines of R Markdown Code
 
+Mean = 755.7, SD = 152, Median = 747
+
+*Stem and Leaf*
 ```
  4 | 49
  5 | 37 63 68 69 72 91 93
@@ -117,3 +120,4 @@ Stem and Leaf (Lines of R Markdown Code)
 10 | 07 61
 11 | 36
 ```
+
