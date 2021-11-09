@@ -24,8 +24,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 4. Project A grading - [here are the projects](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/submissions.md) we received, along with some trivia about those submissions.
 5. Project B instructions
     - I am in the process of simplifying the instructions, and focusing the tasks. I'm not done yet. 
-    - As you will see, you will have both more and less guidance on what you need to do for Project B than you did for Project A.
-    - Fundamentally, you're going to use a data set to perform (1) a series of comparisons and (2) a model-building activity using regression to predict a quantity. You'll work either with NHANES data or with a data set you find and tell me about next week.
+        - As you will see, you will have both more and less guidance on specific elements of Project B than you did for Project A.
+        - Fundamentally, you're going to use a data set to perform (1) a series of comparisons and (2) a model-building activity using regression to predict a quantity. You'll work either with NHANES data or with a data set you find and tell me about next week.
     - Everything written in the [Project B teaser](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/teaser.md) is accurate, and I've updated a few minor points.
         - If you want to work with a partner, I'm OK with that, regardless of what program you are in. 
     - You’ll present your work (with your partner, if you have one) on a date (see [the calendar](https://thomaselove.github.io/431/calendar.html)) in December. 
