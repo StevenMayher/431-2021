@@ -393,7 +393,7 @@ In our sample of respondents, we have:
 
 So we'll have to keep that missingness in mind when we do work with `bmi` or `grades_r` in the analyses that follow.
 
-# Codebook for Analytic Data
+# Codebook and Data Description
 
 ## Codebook
 
