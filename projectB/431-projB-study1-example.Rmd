@@ -10,6 +10,12 @@ output:
     code_folding: show
 ---
 
+# Important Reminders from Dr. Love {-}
+
+1. Remember that each subsection should include at least one complete sentence explaining what you are doing, specifying the variables you are using and how you are using them, and then conclude with at least one complete sentence of discussion of the key conclusions you draw from the current step, and a discussion of any limitations you can describe that apply to the results.
+
+2. For heaven's sake, DO NOT use my words included in this example report in your project. Rewrite everything to make it relevant to your situation. Do not repeat my instructions back to me. 
+
 # Setup and Data Ingest
 
 ## Initial Setup and Package Loads 
@@ -29,9 +35,10 @@ library(tidyverse)
 source("data/Love-boost.R")
 
 ## Global options
-
 opts_chunk$set(comment=NA)
 opts_knit$set(width=75)
+
+theme_set(theme_bw())
 ```
 
 ## Loading the Raw Data into R 
