@@ -1,6 +1,6 @@
 431 Lab 06
 ================
-Due: 2021-11-08 \| Last Edit: 2021-09-29 14:40:59
+Due: 2021-11-08 \| Last Edit: 2021-11-08 18:02:56
 
 Lab 06 is divided into 6 questions. Be sure to respond to each of them
 by the deadline posted on the [Course

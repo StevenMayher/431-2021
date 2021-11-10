@@ -1,7 +1,12 @@
 ---
 title: "431 Lab 06"
 date: "Due: 2021-11-08 | Last Edit: `r Sys.time()`"
-output: github_document
+output:
+    html_document:
+    toc: yes
+    toc_float: yes
+    code_folding: show
+    number_sections: TRUE
 ---
 
 ```{r setup, include=FALSE}
