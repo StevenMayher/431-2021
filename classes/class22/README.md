@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-![](https://imgs.xkcd.com/comics/slope_hypothesis_testing.png) [Link at XKCD](https://xkcd.com/2533) 
+> Starter to come.
 
 ## Today's Slides
 
@@ -22,6 +22,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 3. Project A grading update - [here are the projects](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/submissions.md) we received, along with some trivia about those submissions.
  
 ## One Last Thing
+
+To come.
 
 
 ## A Gentleman's Guide to Love and Murder
