@@ -6,7 +6,7 @@
 
 After Class | due at NOON on | Link to Minute Paper Form 
 ----------: | ------: | :--------: 
-23 (2021-11-16) | 2021-11-17 (this will actually be the Project B data plan) | coming soon.
+23 (2021-11-16) | 2021-11-17 | coming 2021-11-15.
 
 ## Completed Minute Papers
 
