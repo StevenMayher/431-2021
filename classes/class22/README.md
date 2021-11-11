@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-> Starter to come.
+> ...the first act of the mind is always to simplify.   Reality is overwhelmingly complex.  We instinctively reduce the flood on information coming toward us to small bits of information.  We do that by throwing away 90% to 99% of the information and filing the event/person/ entity under a label based on the remaining portions.  (Bill James, 2020-11-24)
 
 ## Today's Slides
 
@@ -23,7 +23,13 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
  
 ## One Last Thing
 
-To come.
+- From [Walt Hickey at Numlock News](https://numlock.substack.com/), writing about [this interesting data analysis](https://pudding.cool/2020/11/crossword/) by Michelle McGhee with Russell Goldenberg and Jan Diehm at The Pudding from back in November 2020.
+
+> An analysis of a sample of tens of thousands of crossword clues, assigning the answers to the actual human people who were the solutions, found that in 2020, 64 percent of the proper noun clues in the New York Times crossword were linked to men, and just 28 percent to a person in a minoritized racial group. Similar disparities were seen in the L.A. Times crossword (68 percent male, 25 percent non-white), Wall Street Journal crossword (69 percent male, 24 percent non-white) and Universal syndicate (54 percent men, 29 percent non-white). Interestingly, in 2020, the USA Today crossword flips that, with 72 percent of the proper noun answers being women and 48 percent of them being from a minoritized racial group, which is actually a serious effort enacted by Erik Agard, the new 27-year-old editor in charge of the USA Today puzzle since the end of 2019.
+
+We settled into a routine back in June 2020 in my house, where I do the NY Times crossword puzzles on Monday-Wednesday, and we do Thursday-Sunday together (at least almost all the time.) Here are some of our statistics through 2021-11-11, as an example of where "expert knowledge" of the data would lead you to a very different set of conclusions about the relative difficulty of the puzzles each week than an analysis unsullied by such "subjective" understanding of the underlying process.
+
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class22/images/nyt_xw_2021-11-11.png)
 
 
 ## A Gentleman's Guide to Love and Murder
