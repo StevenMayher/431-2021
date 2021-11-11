@@ -28,4 +28,4 @@ To come.
 
 ## A Gentleman's Guide to Love and Murder
 
-- The musical I am performing in continues at Aurora Community Theatre, in Aurora, OH on the weekends through 2021-11-20. A message like this will appear on the bottom of the next few READMEs until the show is over. If you are interested, visit https://github.com/THOMASELOVE/theater for more details. If you are not interested, then I thank you for your patience. 
+- The musical I am performing in continues at Aurora Community Theatre, in Aurora, OH for three performances (Friday at 8, Saturday at 8 and Sunday at 2) this weekend and then two last performances next weekend on Friday and Saturday evenings. A message like this will appear on the bottom of the next few READMEs until the show is over. If you are interested, visit https://github.com/THOMASELOVE/theater for more details. If you are not interested, then I thank you for your patience. 
