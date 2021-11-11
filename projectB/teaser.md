@@ -1,6 +1,6 @@
 # Project B Teaser
 
-These details **will be superceded** by the final instructions for Project B, which will be made available very soon.
+These details **are now superceded** by the final instructions for Project B.
 
 Project B will involve you working on the same data set for each of two studies. The data set you use is up to you. One option is to use NHANES data and Dr. Love will provide instructions on how to do that. The other option is to use a different data set that interests you, and that meets the requirements for the project (some of which are specified below.)
 
