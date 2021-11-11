@@ -1,0 +1,429 @@
+---
+title: "431 Class 22"
+author: "thomaselove.github.io/431"
+date: "2021-11-11"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    fonttheme: "structurebold"
+    colortheme: "whale"
+    fig_height: 5.5
+    fig_caption: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 55)
+```
+
+## Today's Agenda: Some Loose Ends
+
+- Working with the Favorite Movies data
+- When is a complete-case analysis reasonable? MCAR!
+- ANOVA
+    - Assessing Assumptions with Data Visualizations
+    - Dealing with Multiple Comparisons via the Holm approach 
+    - Kruskal-Wallis rank-based alternative
+- Wilcoxon rank-based procedures for comparing pseudo-medians
+    - in paired samples (Wilcoxon signed rank)
+    - in independent samples (Wilcoxon rank sum)
+
+## Today's R Setup, Part 1
+
+```{r, message = FALSE}
+library(knitr); library(magrittr); library(naniar)
+library(broom); library(patchwork)
+
+library(googlesheets4)
+source("data/Love-boost.R")
+```
+
+```{r}
+library(janitor)
+```
+
+## Today's R Setup, Part 2
+
+```{r}
+library(tidyverse)
+```
+
+- The 8 core tidyverse packages are listed every time you load the tidyverse (unless you tell R not to show messages.)
+
+```{r}
+theme_set(theme_bw())
+```
+
+
+## Favorite Movies
+
+```{r, message = FALSE, cache = TRUE}
+url_raw <- "https://docs.google.com/spreadsheets/d/1t4668vGN-97284uWbH154LQHmj8p90hkIlafPOjnIcQ/edit"
+
+movie_raw <- read_sheet(url_raw, na = c("", "NA")) %>%
+    arrange(film_id) %>%
+    clean_names()
+
+dim(movie_raw)
+
+write_rds(movie_raw, "data/movie_raw.Rds")
+```
+
+## Or, more simply, since we have the `.Rds` file
+
+```{r}
+movie_raw <- read_rds("data/movie_raw.Rds")
+
+dim(movie_raw)
+```
+
+## Missing Data?
+
+```{r}
+miss_var_summary(movie_raw)
+```
+
+## Picking Out A Few Variables
+
+```{r}
+movie1 <- movie_raw %>%
+    select(film_id, film, imdb_stars, mpa)
+
+head(movie1) %>% kable()
+```
+
+## How many films in each `mpa` category?
+
+```{r}
+movie1 %>% tabyl(mpa)
+```
+
+Let's look at the three categories with at least 30 films.
+
+```{r}
+movie1 <- movie1 %>%
+    filter(mpa %in% c("PG", "PG-13", "R"))
+
+nrow(movie1)
+```
+
+## ANOVA assumptions
+
+1. Approximately Normal distribution of outcome within each group
+    - Can use a rank-based alternative (Kruskal-Wallis) if there is a serious concern, or consider a transformation of the outcome
+2. Equal population variance of outcome within each group (extension of pooled t)
+3. Independently drawn samples of the outcome within each group
+
+## Plot IMDB Stars by MPA Rating
+
+```{r, fig.height = 3.5}
+ggplot(movie1, aes(x = mpa, y = imdb_stars)) +
+    geom_violin(aes(fill = mpa)) +
+    geom_boxplot(width = 0.3, outlier.size = 3) +
+    stat_summary(aes(fill = mpa), fun = mean, 
+                 geom="point", pch = 21, size = 4) + 
+    guides(fill = "none") + coord_flip()
+```
+
+## Numerical Summary of IMDB Stars by MPA Rating
+
+```{r, message = FALSE}
+mosaic::favstats(imdb_stars ~ mpa, data = movie1) %>%
+    kable(digits = 2)
+```
+
+## Analysis of Variance of IMDB Stars by MPA
+
+```{r}
+mod1 <- lm(imdb_stars ~ mpa, data = movie1)
+anova(mod1) %>% kable(digits = 3)
+tidy(mod1, conf.int = TRUE, conf.level = 0.90) %>%
+    select(term, estimate, std.error, conf.low, conf.high) %>%
+    kable(digits = 3)
+```
+
+## Bonferroni pairwise comparisons for mpa groups
+
+```{r}
+movie1 %$%
+    pairwise.t.test(imdb_stars, mpa, 
+                    p.adjust.method = "bonferroni")
+```
+
+## Holm pairwise comparisons across mpa groups
+
+- Works well even with an unbalanced design so long as ANOVA assumptions hold.
+- Not as conservative as Bonferroni, but uniformly more powerful.
+
+```{r}
+movie1 %$%
+    pairwise.t.test(imdb_stars, mpa, 
+                    p.adjust.method = "holm")
+```
+
+## Tukey HSD set of Pairwise Comparisons
+
+```{r}
+tukey1 <- movie1 %$% 
+    TukeyHSD(aov(imdb_stars ~ mpa), 
+             ordered = TRUE, conf.level = 0.90)
+
+tidy(tukey1) %>% kable(digits = 3)
+```
+
+## Tukey HSD set of Pairwise Comparisons
+
+```{r, height = 5}
+plot(tukey1)
+```
+
+## Residual Analysis for our ANOVA model
+
+```{r}
+par(mfrow = c(2,2)); plot(mod1); par(mfrow = c(1,1))
+```
+
+## Kruskal-Wallis Rank-Based ANOVA Approach
+
+```{r}
+kruskal.test(imdb_stars ~ mpa, data = movie1)
+```
+
+- No longer comparing means, and no confidence intervals here.
+- No straightforward decision about what to do about pairwise comparisons, other than Holm-based comparisons based on Wilcoxon rank sum tests.
+- Speaking of Wilcoxon rank-based tests...
+
+## A New Question...
+
+Are students in 431 more likely to have seen movies that were nominated for Academy Awards?
+
+- How many of the 115 movies received Oscar nominations?
+
+```{r}
+movie2 <- movie_raw %>%
+    select(film_id, film, x431_pct, oscar_noms) %>%
+    mutate(oscar_n = factor(
+        ifelse(oscar_noms > 0, "Yes", "No")))
+```
+
+```{r}
+movie2 %>% tabyl(oscar_n)
+```
+
+## % of students who've seen film, by Oscar Status?
+
+```{r, fig.height = 3.5}
+ggplot(movie2, aes(x = oscar_n, y = x431_pct)) +
+    geom_violin(aes(fill = oscar_n)) +
+    geom_boxplot(width = 0.2, outlier.size = 3) +
+    stat_summary(aes(fill = oscar_n), fun = mean, 
+                 geom="point", pch = 21, size = 4) + 
+    guides(fill = "none") + coord_flip() +
+    scale_fill_viridis_d(alpha = 0.5)
+```
+
+## Comparing Two Population Means
+
+Does this design involve paired samples, or independent samples? Why?
+
+```{r}
+mosaic::favstats(x431_pct ~ oscar_n, data = movie2) %>%
+    kable(digits = 2)
+```
+
+## Comparing 431 % by Oscar Nomination Status
+
+We have four different approaches. Two are based on the t distribution.
+
+```{r}
+# pooled t 
+compA <- t.test(x431_pct ~ oscar_n, data = movie2,
+                var.equal = TRUE, conf.level = 0.90)
+
+tidy(compA) %>% 
+    select(estimate1, estimate2, estimate, 
+           conf.low, conf.high) %>% kable(dig = 2)
+```
+
+## Comparing 431 % by Oscar Nomination Status
+
+Here's the second one based on the t distribution.
+
+```{r}
+# Welch's t
+compB <- t.test(x431_pct ~ oscar_n, data = movie2,
+                conf.level = 0.90)
+
+tidy(compB) %>% 
+    select(estimate1, estimate2, estimate, 
+           conf.low, conf.high) %>% kable(dig = 2)
+```
+
+## Comparing 431 % by Oscar Nomination Status
+
+This strategy doesn't use the t distribution.
+
+```{r}
+# bootstrap
+set.seed(431)
+compC <- movie2 %$% bootdif(x431_pct, oscar_n, 
+                            conf.level = 0.90)
+
+compC
+```
+
+## Comparing 431 % by Oscar Nomination Status
+
+What if we rank the observations from low to high in each group, then compare the results?
+
+```{r}
+# Wilcoxon-Mann-Whitney rank sum with continuity correction
+compD <- wilcox.test(x431_pct ~ oscar_n, data = movie2,
+                     conf.int = TRUE, conf.level = 0.90)
+
+tidy(compD) %>% select(estimate, conf.low, conf.high) %>%
+    kable(digits = 2)
+```
+
+## Interpreting the Rank Sum Test
+
+The Wilcoxon-Mann-Whitney rank sum test (also called the Mann-Whitney U test and lots of other things) tests the null hypothesis that if we randomly select X and Y from the two populations of interest, the probability of X being greater than Y is the same as the probability of Y being greater than X.
+
+- The "Pseudomedian" is sometimes referred to as the Hodges-Lehmann estimate. It is the median of all possible differences between an observation in the first sample and an observation in the second sample.
+
+To write up a Wilcoxon rank sum result, we usually suggest specifying the two medians directly, and then describing the *p* value or (less commonly) a confidence interval.
+
+The Wilcoxon-Mann-Whitney test requires only that the data be ordinal, and this reduces the influence of outliers. It doesn't test the same thing as the t test (or bootstrap) however.
+
+## Comparing 431 % by Oscar Nomination Status
+
+**Four Comparisons for these Independent Samples**
+
+Method | Yes - No Est. | 90% CI | Statistic
+:------: | :---------: | :-------: | :--------:
+Pooled t | 16.73 | (9.58, 23.88) | Mean
+Welch's t | 16.73 | (9.79, 23.66) | Mean
+Bootstrap | 16.73 | (9.97, 23.42) | Mean
+Rank Sum | 17 | (10, 24) | "Pseudo-median"
+
+### Numerical Summaries from the Data
+
+```{r, echo = FALSE}
+movie2 %>% group_by(oscar_n) %>% 
+    summarize(n = n(), mean = mean(x431_pct), 
+              median = median(x431_pct), sd = sd(x431_pct)) %>%
+    kable(digits = 3)
+```
+
+## Comparing A New Outcome under 2 Conditions
+
+Suppose we want to compare the percentage of **critics** who recommend a film to the percentage of **the general audience** who recommend the film. Each film has:
+
+- `rt_critics` = from Rotten Tomatoes: percentage of critics who recommend the film (sample mean across 113 films was `r round_half_up(mean(movie_raw$rt_critics, na.rm = TRUE),1)`)
+- `rt_audience` = from Rotten Tomatoes: percentage of audience who recommend the film (sample mean across 114 films was `r round_half_up(mean(movie_raw$rt_audience, na.rm = TRUE),1)`)
+
+Can we compare the difference between the means (at least for the 113 films with data on each variable) appropriately?
+
+What's the design we have here?
+
+## Creating our Third Data Set
+
+```{r}
+movie3 <- movie_raw %>% 
+    filter(complete.cases(rt_critics, rt_audience)) %>%
+    select(film_id, film, rt_critics, rt_audience) 
+
+dim(movie3)
+```
+
+We lost two films (Farewell My Concubine and Jab We Met) which didn't have information on each of our variables.
+
+## The `movie3` data
+
+```{r}
+movie3 <- movie3 %>%
+    mutate(diff = rt_critics - rt_audience)
+
+head(movie3)
+```
+
+We can develop paired differences in this paired samples setting. What do those differences look like?
+
+---
+
+```{r, echo = FALSE}
+p1 <- ggplot(movie3, aes(sample = diff)) +
+  geom_qq(col = "magenta2") + geom_qq_line(col = "navy") + 
+  theme(aspect.ratio = 1) + 
+  labs(title = "Normal Q-Q: Critics - Audience")
+
+p2 <- ggplot(movie3, aes(x = diff)) +
+  geom_histogram(aes(y = stat(density)), 
+                 bins = 15, fill = "magenta2", col = "white") +
+  stat_function(fun = dnorm, 
+                args = list(mean = mean(movie3$diff), 
+                            sd = sd(movie3$diff)),
+                col = "navy", lwd = 1.5) +
+  labs(title = "Density + Normal: Critics - Audience")
+
+p3 <- ggplot(movie3, aes(x = diff, y = "")) +
+  geom_boxplot(fill = "magenta2", outlier.color = "magenta2") + 
+  labs(title = "Boxplot: Critics - Audience", y = "")
+
+p1 + (p2 / p3 + plot_layout(heights = c(4,1)))
+
+mosaic::favstats(~ diff, data = movie3) %>% kable(digits = 1)
+```
+
+## Paired T approach
+
+```{r}
+compX <- movie3 %$% t.test(diff, conf.level = 0.90)
+
+tidy(compX) %>% 
+    select(estimate, conf.low, conf.high, p.value) %>% 
+    kable(dig = 2)
+```
+
+## Bootstrap approach
+
+```{r}
+set.seed(431431)
+compY <- movie3 %$% 
+    Hmisc::smean.cl.boot(diff, conf.int = 0.90)
+
+compY
+```
+
+## Wilcoxon Signed Rank approach
+
+```{r}
+compZ <- movie3 %$% 
+    wilcox.test(diff, conf.int = 0.90)
+
+tidy(compZ) %>%
+    select(estimate, conf.low, conf.high, p.value) %>% 
+    kable(dig = 2)
+```
+## Comparing % Recommend by Critics vs. Audiences
+
+**Three Comparisons for these Paired Samples**
+
+Method | Crit - Aud Est. | 90% CI | Statistic
+:------: | :---------: | :-------: | :--------:
+t | -1.95 | (-4.17, 0.28) | Mean difference
+Bootstrap | -1.95 | (-4.25, 0.17) | Mean difference
+Signed Rank | -0.5 | (-3, 1.5) | "Pseudo-median" difference
+
+### Summarizing the Data
+
+```{r, echo = FALSE}
+summ1 <- mosaic::favstats(~ rt_critics, data = movie3) %>% 
+    mutate(group = "critics")
+summ2 <- mosaic::favstats(~ rt_audience, data = movie3) %>% 
+    mutate(group = "audience")
+summ3 <- mosaic::favstats(~ diff, data = movie3) %>% 
+    mutate(group = "c-a diffs")
+bind_rows(summ1, summ2, summ3) %>%
+    select(group, mean, sd, median, n, min, max) %>% kable(dig = 2)
+```
