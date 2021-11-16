@@ -1,0 +1,382 @@
+---
+title: "431 Lab 07 Sketch and Grading Rubric"
+author: 
+    - "Instructor: Dr. Thomas E. Love"
+    - "Lab Author: Mr. Wyatt P. Bensken"
+date: 
+    - "Due: 2021-11-15 | Last Edit: `r Sys.time()`"
+output: 
+    pdf_document:
+      toc: true
+      toc_depth: 2
+      number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+\newpage
+
+# Loading Packages
+
+```{r load_packages, message = FALSE, warning = FALSE}
+library(patchwork); library(janitor); library(mosaic); library(tidyverse)
+```
+
+# Learning Objectives
+
+1. Appropriately prepare data, check assumptions, execute appropriate modeling strategies, and interpret results
+
+**PLEASE NOTE**: Your response to **every** question, whether we explicitly ask for it or not, should include a complete English sentence responding to the question. Code alone is not a sufficient response, even if the code is correct. Some responses might not need any code, but every response needs at least one complete sentence.
+
+# Packages and Functions
+
+In Lab 07 we were hoping you would become more familiar with the following packages and functions:
+
+Packages:
+
+- `tidyverse`
+- `patchwork`
+- `janitor`
+- `mosaic`
+
+Functions:
+
+- `%>%`
+- `ggplot()`
+- `summary()`
+- `lm()`
+- `AIC()`
+- `BIC()`
+- `sigma()`
+
+\newpage
+
+# The Data for Lab 07
+
+> Lab 07 uses some data which we have simulated to reflect a clinical trial. In this trial, the investigators are testing out a new drug to see its effect on a subject's systolic blood pressure (SBP). For our purposes, if a subject's SBP is over 130 mm Hg they are considered to have hypertension. In this trial, the goal was to reduce the SBP from a baseline level by using a new drug (Treatment C), and comparing that to the current top-of-the-line drug (Treatment B), and the oldest drug (Treatment A). The trial focused specifically on non-Hispanic African-American women who were in long-term relationships and between the ages of 55 and 65 years old, with a minimal comorbidity profile. The outcome of interest is the post-treatment systolic blood pressure (`sbp_follow`), and we are also given the subject's age, their pre-treatment systolic blood pressure (`sbp_baseline`) and whether or not the subject's partner has hypertension.
+
+| Variable | Description |
+| :------- | :---------- |
+| `subjectid` | unique subject identifier |
+| `group` | treatment group where, 1 = Group A, 2 = Group B, 3 = Group C |
+| `partner` | whether or not the subject's partner also has hypertension |
+| `age` | subject age in years at baseline |
+| `sbp_baseline` | subject's baseline systolic blood pressure (mm Hg) |
+| `sbp_follow` | subject's follow-up systolic blood pressure (mm Hg) |
+
+> The data has been made available to you in an Excel file called `lab07_trial.xls` available on [our 431-data page](https://github.com/THOMASELOVE/431-data).
+
+\newpage
+
+# Question 1 (10 points)
+
+> Ingest the data, and then make sure that (a) group is a meaningfully leveled factor, (b) partnership status is a factor, and (c) age and the two blood pressure results are properly numeric variables, and to look for missing data. Once you've done this, run some simple and attractive, well-annotated summaries to report the number of subjects per group, as well as the partnership status, age and baseline blood pressure levels of the subjects in each group. Do the groups look comparable on these three baseline variables?
+
+This step is fairly straightforward, as age is already a numeric variable, so we just need to convert group and partner. First, we'll modify group to make it a factor and change the levels from 1, 2, and 3 to something more meaningful. Next, we'll just convert partner (in its current form) to a factor.
+
+```{r}
+lab07_data <- readxl::read_xls("data/lab07_trial.xls")
+
+lab07_data <- lab07_data %>%
+  mutate(group_f = fct_recode(factor(group),
+                              "Treatment A" = "1",
+                              "Treatment B" = "2",
+                              "Treatment C" = "3"),
+         partner_f = factor(partner))
+```
+
+Now that we've done that we can go ahead and run some quick frequencies and numeric summaries. As we can see we have 100 patients in each of our treatment groups, as well as 227 patient's whose partner has hypertension and 73 who do not. The median age in our study was 60 years old with an interquartile range of 57 to 63. The mean was 60.2, with a standard deviation of 3.25. 
+
+```{r}
+
+lab07_data %>%
+  skimr::skim_without_charts()
+
+```
+
+We can also look at the distribution of partner hypertension status across our three treatments. Notably, there seem to perhaps be a great proportion of patients in treatment C and A whose partners have hypertension.
+
+```{r}
+
+lab07_data %>%
+  tabyl(group_f, partner_f) %>%
+    adorn_totals("row") %>%
+    adorn_percentages("row") %>%
+    adorn_pct_formatting() %>%
+    adorn_ns() %>%
+    knitr::kable()
+
+```
+
+We can also report the distribution of age and baseline blood pressure levels between our two groups.
+
+```{r}
+favstats(age ~ group_f, data = lab07_data)
+favstats(sbp_baseline ~ group_f, data = lab07_data)
+```
+
+In totality, it appears there are potentially important differences in the distribution of partner hypertension status between the two groups, while it seems that age is nearly identical, while baseline blood pressure seems to be lowest in Treatment C and highest in Treatment B, although Treatment A and Treatment B are very close.
+
+## Grading Rubric
+
+I'd expect most students to receive all 10 points here.
+
+- If there are issues in making treatment group into a comprehensible factor they should lose up to 3 points.
+- If they do not present or discuss any summary statistics they should lose up to 5 points.
+- If they do not note at least some differences in partner hypertension status and baseline systolic blood pressure they should lose 3 points.
+
+\newpage
+
+# Question 2 (10 points)
+
+> Next, we'd like to know if our outcome, `sbp_follow`, seems appropriately modeled with a Normal distribution. Create a figure containing at least two nicely annotated panels (presented together using tools from the patchwork package) to assess whether a Normal model might be appropriate for this outcome. One of your panels should include a well-labeled Normal Q-Q plot. Then write a sentence of two to describe what you've done and your conclusions. 
+
+First, we'll start with our a histogram to show the distribution of SBP. We had to work with the binwidth a bit here to get something that was reasonably interpretable. Next, we'll make our Normal Q-Q plot. It should be immediately evident from these figures that Normal distribution model seems appropriate.
+
+```{r}
+p1 <- ggplot(data = lab07_data, aes(x = sbp_follow)) +
+  geom_histogram(binwidth = 1, fill = "orange", colour = "black") +
+  labs(x = "Follow-up SBP",
+       y = "Frequency",
+       title = "Distribution of the follow-up SBP \n in our trial") +
+  theme_bw()
+```
+
+```{r}
+p2 <- ggplot(data = lab07_data, aes(sample = sbp_follow)) +
+  geom_qq() +
+  geom_qq_line() +
+  labs(x = "Theoretical follow-up SBP",
+       y = "Actual follow-up SBP",
+       title = "Normal Q-Q Plot of follow-up SBP") +
+  theme_bw()
+```
+
+Now, we'll put these together in one figure. We can see, from both our histogram as well as our Normal Q-Q plot that our follow-up SBP is quite normally distributed. There may be some skew or outliers, but noting of grave concern.
+
+```{r}
+p1 + p2
+```
+
+
+## Grading Rubric
+
+- If the student has produced a visually pleasing figure, with a reasonable title and axes labels, which are not just the variable names, they should receive 10 points.
+- If any of the following occur the student should lose 3 points for each:
+    - No title, or a title which does not convey what the figure represents
+    - Axes remain unlabeled or with the default labels
+- If the figure provided does not allow one to interpret the center, shape, and spread the student should lose up to 5 points.
+
+- If the student produces a Normal Q-Q plot, they should receive an additional 5 points. 
+    - If there is no Normal Q-Q plot they should lose all 5 points.
+    
+- If there are incorrect conclusions regarding the distribution of `sbp_follow()` the student should lose up to 5 points.
+
+- If they do not use `patchwork`, they should lose 3 points.
+
+\newpage
+
+# Question 3 (15 points)
+
+> Produce a figure to compare the three groups that allows you to assess the Normality and Equal Variances assumptions of an ANOVA to compare the SBP at follow-up means across the three treatment groups, ignoring all other information available in the data. What conclusions can you draw about ANOVA assumptions in this setting?
+
+First, we'll go ahead and stratify the histogram by our treatment group. It seems, broadly, that Treatment C had a higher follow-up SBP, and it seems that A and B are quite close. Of course, we could also use something like a violin plot. Finally, we could add some Normal Q-Q plots to our facetted histogram as a third option.
+
+Our main conclusions is that SBP at follow-up does follow a Normal distribution, and there do not seem to be major issues with our Equal Variances assumption. That being said, an ANOVA is likely an appropriate approach to analyze these data.
+
+```{r}
+ggplot(data = lab07_data, aes(x = sbp_follow, fill = group_f)) +
+  geom_histogram(binwidth = 3, colour = "black") +
+  facet_grid(group_f ~ .) +
+  labs(x = "Change in SBP",
+       y = "Frequency",
+       title = "Distribution of the follow-up SBP, stratified by treatment group") +
+  theme_bw() +
+  theme(legend.title = element_blank())
+
+```
+
+```{r}
+ggplot(lab07_data, aes(x = group_f, y = sbp_follow, fill = group_f)) +
+  geom_violin(aes(color = group_f), alpha = 0.5) +
+  geom_boxplot(width = 0.3, notch = TRUE,  alpha = 0.75) +
+  theme_bw() +
+  coord_flip() +
+  guides(fill = "none", col = "none") +
+  labs(title = "Comparing follow-up SBP by Treatment",
+       y = "SBP Change",
+       x = "")
+```
+
+
+```{r}
+p1 <- ggplot(lab07_data, aes(x = sbp_follow, fill = group_f)) +
+  geom_histogram(binwidth = 3, col = "white") +
+  guides(fill = "none") +
+  theme_bw() +
+  facet_grid(group_f ~ .) +
+  labs(x = "Observed Follow-up SBP", 
+       y = "# of subjects")
+
+p2 <- ggplot(lab07_data, aes(sample = sbp_follow, color = group_f)) +
+  geom_qq() + 
+  geom_qq_line(col = "black") +
+  guides(color = "none") +
+  theme_bw() +
+  facet_grid(group_f ~ .) +
+  labs(y = "Observed SBP change")
+
+p1 + p2 +
+  plot_layout(widths = c(7, 3)) +
+  plot_annotation(title = "Histograms and Normal Q-Q plots comparing Follow-up SBP by Group")
+
+```
+
+## Grading Rubric
+
+- If the student has produced a visually pleasing figure, with a reasonable title and axes labels, which are not just the variable names, they should receive 10 points.
+- If any of the following occur the student should lose 3 points for each:
+    - No title, or a title which does not convey what the figure represents
+    - Axes remain unlabeled or with the default labels
+- If the figure provided does not allow one to interpret the center, shape, and spread stratified by treatment group the student should lose up to 8 points.
+
+- If the student correctly interprets the relationship between treatment group and follow-up SBP, they should receive an additional 5 points.
+
+\newpage
+
+# Question 4 (10 points)
+
+> Now complete the comparison of the SBP at follow-up means of the three treatment groups (A, B and C) using an analysis of variance. What conclusions do you draw, using a **90%** confidence level? Call this `model4`.
+
+First, we can look at the numeric means across the three groups, confirming that Treatment C has the highest mean follow up SBP with 144.95, followed by Treatment A with 132.45 and Treatment B with 129.24.
+
+```{r}
+mosaic::favstats(sbp_follow ~ group_f, data = lab07_data)
+```
+
+
+We can use `lm()` to build our model and then `anova()` to obtain our ANOVA F test results. The result, an F value of 80.184 suggests that the mean follow-up SBPs do, in fact, meaningfully differ between groups.
+
+```{r}
+
+model4 <- lm(sbp_follow ~ group_f, data = lab07_data)
+anova(model4)
+
+```
+
+We can run summary on this and see that treatment group only accounts for 35.1% of the variation we observe.
+
+```{r}
+summary(model4)
+```
+
+We can also calculate our eta^2 from the ANOVA output as: 
+
+$$
+\eta^2 = \frac{SS(category)}{SS(Total)} = \frac{13779}{13779 + 25518} = 0.3506
+$$
+
+## Comments
+
+We certainly could have run `aov()` on this too, and have the exact same results.
+
+```{r}
+summary(aov(sbp_follow ~ group_f, data = lab07_data))
+```
+
+
+## Grading Rubric
+
+- If the student 10 successfully run the ANOVA and stated that the mean follow-up SBP is different across the 3 treatment groups they should receive all 15 points.
+  - If there are substantial issues with the analysis or interpretation, the student should lose up to 6
+  - If there is a reliance on the p-value in their interpretation and conclusion, the student should lose 3 points
+
+\newpage
+
+# Question 5 (10 points)
+
+> Augment your results in Question 4 by incorporating baseline SBP levels into the comparison. Call this `model5`. How do your conclusions change about the effects of the various treatment groups in this revised model? Again, use a 90% confidence level.
+
+We will now build our new model, incorporating baseline SBP. As we can, even after accounting for the baseline SBP for the subjects there appears to be meaningful differences in the follow-up SBP between our three treatment groups at a 90% confidence level.
+
+```{r}
+model5 <- lm(sbp_follow ~ group_f + sbp_baseline, data = lab07_data)
+anova(model5)
+summary(model5)
+```
+
+## Grading Rubric
+
+- If the student 10 successfully builds the new model and interprets that differences across treatment groups still exists, they should be given the full 10 points.
+  - If there are substantial issues with the analysis or interpretation, the student should lose up to 4
+
+\newpage
+
+# Question 6 (10 points)
+
+> Now, create `model6` by augmenting the model you fit in Question 5 to see if `partner` may also play a meaningful predictive role in a model for our outcome. Interpret whether the model's quality of fit has improved, and and discuss what the addition of `partner` did to your estimates about the impact of the treatment groups on the outcome.
+
+We can now build our next model, which incorporates the effect of the partner's hypertension status. As we can see from the below results, it does not change the relationship we observe between treatment group and follow-up SBP. Our model seems to explain the same amount of variation in our follow-up SBP.
+
+```{r}
+model6 <- lm(sbp_follow ~ group_f + sbp_baseline + partner, data = lab07_data)
+anova(model6)
+summary(model6)
+
+```
+
+## Grading Rubric
+
+- If a student has successfully built the new model and interpreted that the amount of variation remains the same, as does the effect of treatment they should receive all 10 points.
+  - If there are any issues in building the model they should lose 5 points
+  - If there are misinterpretations of the results, they should lose between 3 and 5 points.
+  
+\newpage
+
+# Question 7 (15 points)
+
+> Now, to create your final model (`model7`), instead of adjusting for `partner`, take into account the subject's `age` as well as the baseline systolic blood pressure. 
+
+> Then build a comparison of the four models you've fit (in models `model4` through `model7`) in terms of the quality of fit (as measured by R-square, adjusted R-square, sigma, AIC and BIC) in the available data. What conclusions can you draw about fit quality for in comparing these four models? Does one model stand out as better or worse than the others? Why or why not?
+
+First, we will build our final model. As we similarly saw with the partner variable, there is little added to this model by the inclusion of age and the effect of treatment remains.
+
+```{r}
+model7 <- lm(sbp_follow ~ group_f + sbp_baseline + age, data = lab07_data)
+anova(model7)
+summary(model7)
+```
+
+Next, we'll go ahead and summarize our models. We can obtain the R^2^ and adjusted R^2^ from the `summary()` we ran, while we'll need to run additional code to obtain the sigma (residual standard deviation), AIC, and BIC. We did this using the `sigma()`, `AIC()`, and `BIC()` functions directly in the table.
+
+| R^2^ | Adjusted R^2^ | sigma | AIC | BIC |
+| :------- | :---------- | :---------- | :---------- | :---------- |
+| model4 | 0.3506 | 0.3463 | `r round(sigma(model4),2)` | `r round(AIC(model4),2)` | `r round(BIC(model4),2)` |
+| model5 | 0.3513 | 0.3448 | `r round(sigma(model5),2)` | `r round(AIC(model5),2)` | `r round(BIC(model5),2)` |
+| model6 | 0.3514 | 0.3426 | `r round(sigma(model6),2)` | `r round(AIC(model6),2)` | `r round(BIC(model6),2)` |
+| model7 | 0.3559 | 0.3472 | `r round(sigma(model7),2)` | `r round(AIC(model7),2)` | `r round(BIC(model7),2)` |
+
+
+Given all of this, it seems our R^2^ and adjusted R^2^ are quite close, and our original model, `model4` has the smallest AIC and BIC, although they are all close. With this we can conclude that our first model, and our simplest, is the best. This is likely due to profound impact that treatment has on follow-up SBP.
+
+## Grading Rubric
+
+- If a student successfully builds a table comparing the 4 models of interest, they should be awarded 5 points.
+- If they conclude that `model4` is the best model, given this comparison they should be awarded an additional 5 points.
+  - If they conclude that it is too close to determine one model over the others, they should be awarded 3 of 5 points.
+  - If they conclude the wrong model they should be awarded 1 of 5 points.
+
+\newpage
+
+# Question 8 (20 points)
+
+> Throughout the above questions, we've been presented with a number of *p* values. In Chapter 10 of Spiegelhalter's *The Art of Statistics*, there is a robust discussion of *p* values. Write a short essay (150 words would be sufficient), which applies what you've learned from Spiegelhalter's Chapter 10 to the analyses you completed in Questions 1-7. 
+
+We don't write answer sketches for essays.
+
+## Grading Rubric
+
+Most student should receive between 15 and 20 points here, if they have thoughtfully answered the question.
+
