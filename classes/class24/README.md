@@ -61,3 +61,7 @@ We'll spend a bit of time talking about:
 ## One Last Thing
 
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class24/figures/harrell_2021-10-01.png)
+
+## A Gentleman's Guide to Love and Murder
+
+- The musical I am performing in concludes with two final performances at Aurora Community Theatre, in Aurora, OH on Friday and Saturday evening at 8 PM. If you are interested, visit https://github.com/THOMASELOVE/theater for more details. If you are not interested, then I thank you for your patience. 
