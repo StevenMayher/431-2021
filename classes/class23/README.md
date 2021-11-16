@@ -13,12 +13,12 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. There is a Minute Paper after Class 23, due tomorrow (Wednesday) at Noon. The link will be posted by class time.
+1. There is a [Minute Paper after Class 23](https://bit.ly/431-2021-minute-23), due tomorrow (Wednesday) at Noon. Please complete it on time.
 2. The Lab 7 Answer Sheet and Grading Rubric are now available [in PDF](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab07/sketch/lab07_sketch.pdf) and [in R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab07/sketch/lab07_sketch.Rmd).
 3. Grades and Feedback from the TAs on Lab 6 are posted to the [Course Grading Roster](https://bit.ly/431-2021-grades).
     - Since we only included 90 points worth of questions on Lab 6, we gave an extra 10 points for getting the lab in on time.
     - We posted three nice essays written in response to Question 6 on our Shared Drive in the 431 Lab 6 Examples document.
-4. Grades on Project A are coming to you as soon as possible.
+4. Grades on Project A are coming to you as soon as possible. I can't apologize enough for the delay.
 5. [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) materials will appear by Friday 2021-11-19 at noon.
 6. Complete [instructions for Project B](https://thomaselove.github.io/431-2021-projectB/) remain available. I've changed nothing since our last class. 
     - The first task is to [Register your Project B](https://thomaselove.github.io/431-2021-projectB/register.html), which you need to do no later than Monday 2021-11-22 at NOON.
