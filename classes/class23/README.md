@@ -15,7 +15,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. There is a Minute Paper after Class 23, due tomorrow (Wednesday) at Noon. The link will be posted by class time.
 2. The Lab 7 Answer Sheet and Grading Rubric will be posted by class time.
-3. Grades and Feedback from the TAs on Lab 6 will be posted by class time.
+3. Grades and Feedback from the TAs on Lab 6 will be posted to the [Course Grading Roster](https://bit.ly/431-2021-grades) by class time.
+    - Since we only included 90 points worth of questions on Lab 6, we gave an extra 10 points for getting the lab in on time.
 4. Grades on Project A are coming to you as soon as possible.
 5. [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) materials will appear by Friday 2021-11-19 at noon.
 6. Complete [instructions for Project B](https://thomaselove.github.io/431-2021-projectB/) remain available. I've changed nothing since our last class. 
