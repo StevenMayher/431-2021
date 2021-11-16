@@ -76,3 +76,6 @@ Jenny Bryan is the main person I listen to on these and many other issues. Consi
     - or try [A Project-Oriented Workflow](https://whattheyforgot.org/project-oriented-workflow.html) from [What They Forgot to Teach You About R](https://whattheyforgot.org/) by Jenny Bryan and Jim Hester.
 - [STAT 545](https://stat545.com/r-basics.html) includes an outstanding set of resources to help you work better in R, and do more effective data analysis.
 
+## A Gentleman's Guide to Love and Murder
+
+- The musical I am performing in concludes with two final performances at Aurora Community Theatre, in Aurora, OH on Friday and Saturday evening at 8 PM. If you are interested, visit https://github.com/THOMASELOVE/theater for more details. If you are not interested, then I thank you for your patience. 
