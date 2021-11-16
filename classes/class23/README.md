@@ -17,15 +17,6 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 2. Congratulations to [Jacqueline Shaia](https://www.jacquelensphd.com/) and [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd) on their new websites, built in response to Lab X!
 3. I've updated [our Packages list](https://thomaselove.github.io/431/r_packages.html) to include the `vcd` package, which we'll use in today's session.
 
-## Managing an R Project
-
-Jenny Bryan is the main person I listen to on these and many other issues. Consider:
-
-- [How To Name Files](https://speakerdeck.com/jennybc/how-to-name-files)
-- [Project-oriented workflow](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) at tidyverse.org from Jenny Bryan.
-    - or try [A Project-Oriented Workflow](https://whattheyforgot.org/project-oriented-workflow.html) from [What They Forgot to Teach You About R](https://whattheyforgot.org/) by Jenny Bryan and Jim Hester.
-- [STAT 545](https://stat545.com/r-basics.html) includes an outstanding set of resources to help you work better in R, and do more effective data analysis.
-
 ## References Associated with This Week's Material
 
 The second part of today's class will be centered around replicable research, statistical significance and *p* values. We'll continue this discussion and highlight additional issues in Class 24 on Thursday.
@@ -73,6 +64,12 @@ We'll spend a bit of time talking about:
 - [Why p values are like puppies](https://www.youtube.com/watch?v=9jW9G8MO4PQ) is a 3:29 YouTube Video by Cassie Kozyrkov, MS, Chief Decision Scientist, Google Inc. It explains how to understand and interpret *p* values in an intuitive way using an example based on puppies.
 
 
-## One Last Thing
+## One Last Thing: On Managing an R Project
 
-To come.
+Jenny Bryan is the main person I listen to on these and many other issues. Consider:
+
+- [How To Name Files](https://speakerdeck.com/jennybc/how-to-name-files)
+- [Project-oriented workflow](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) at tidyverse.org from Jenny Bryan.
+    - or try [A Project-Oriented Workflow](https://whattheyforgot.org/project-oriented-workflow.html) from [What They Forgot to Teach You About R](https://whattheyforgot.org/) by Jenny Bryan and Jim Hester.
+- [STAT 545](https://stat545.com/r-basics.html) includes an outstanding set of resources to help you work better in R, and do more effective data analysis.
+
