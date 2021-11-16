@@ -13,7 +13,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. Complete [instructions for Project B](https://thomaselove.github.io/431-2021-projectB/) remain available.
+1. Complete [instructions for Project B](https://thomaselove.github.io/431-2021-projectB/) remain available. I've changed nothing.
 2. Congratulations to [Jacqueline Shaia](https://www.jacquelensphd.com/) and [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd) on their new websites, built in response to Lab X!
 3. I've updated [our Packages list](https://thomaselove.github.io/431/r_packages.html) to include the `vcd` package, which we'll use in today's session.
 
