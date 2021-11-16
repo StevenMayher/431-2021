@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-![]()
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class24/figures/shruggies.png)
 
 ## Today's Slides
 
@@ -13,6 +13,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
+To come.
+
 ## One Last Thing
 
-
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class24/figures/harrell_2021-10-01.png)
