@@ -9,6 +9,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Today's Slides
 
 - Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class24/431-class24-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class24/431-class24-slides.Rmd).
+- The "[What is a P value?](https://fivethirtyeight.abcnews.go.com/video/embed/56150342)" video from 538 we'll start class with today is [at this link](https://fivethirtyeight.abcnews.go.com/video/embed/56150342). The related article is "[Not Even Scientists Can Easily Explain P-Values](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/)". 
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Announcements
