@@ -274,7 +274,7 @@ Lastly, unlike the first two models, the Residuals vs Fitted and Scale-Location 
 The necessary code for creating a new model based off of `model3` that uses an interaction term between `height` and `female` has been provided below:
 
 ```{r}
-model4 = lm(ln_cardbill ~ ejecfrac + stent + height * female + diabetic + acutemi + ves1proc, data = lindner_alive_train)
+model4 = lm(ln_cardbill ~ abcix + ejecfrac + stent + height * female + diabetic + acutemi + ves1proc, data = lindner_alive_train)
 ```
 
 The exact equation for this model with the model's coefficients is as follows:

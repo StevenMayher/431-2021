@@ -1,0 +1,246 @@
+---
+title: "Steven Mayher: Lab 06 for PQHS 431"
+date: "Due: 2021-11-15 | Last Edit: `r Sys.time()`"
+output:
+    html_document:
+    toc: yes
+    toc_float: yes
+    code_folding: show
+    number_sections: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+```{r}
+library(readxl)
+
+library(janitor)
+library(knitr)
+library(magrittr)
+library(naniar)
+library(broom)
+library(car)
+library(patchwork)
+library(tidyverse)
+
+theme_set(theme_bw())
+```
+
+
+## Question 1  (10 points)
+
+The code below imports the data from the `lab07_trials` data file:
+
+```{r}
+lab07_trials = read_xls("C:/Users/smmay/OneDrive/Education/College/Coursework/CWRU/PQHS 431 - Statistical Methods I/431-2021/labs/lab07/data/lab07_trial.xls")
+
+glimpse(lab07_trials)
+```
+
+Using the glimpse of the data above, steps (a), (b), and (c) of this question have been assessed with the code below:
+
+```{r}
+lab07_trials = lab07_trials %>%
+  clean_names() %>%
+  mutate(group = case_when(
+    group == 1 ~ "A",
+    group == 2 ~ "B",
+    group == 3 ~ "C")) %>%
+  mutate(group = as.factor(group)) %>%
+  mutate(partner = case_when(
+    partner == "partner with htn" ~ "Yes",
+    partner == "partner no htn" ~ "No")) %>%
+  rename(partner_hypertension = partner) %>%
+  mutate(partner_hypertension = as.factor(partner_hypertension)) %>%
+  mutate(age = as.numeric(age)) %>%
+  mutate(sbp_baseline = as.numeric(sbp_baseline)) %>%
+  mutate(sbp_follow = as.numeric(sbp_follow))
+
+glimpse(lab07_trials)
+```
+
+The following summary illustrates that this dataset has no missing variables:
+
+```{r}
+miss_var_summary(lab07_trials) %>% kable()
+```
+
+There are 100 subjects per group, as shown with the table below:
+
+```{r}
+lab07_trials %>% count(group) %>% kable()
+```
+
+The table below shows the breakdown of subjects in each group by partnership status (i.e. the number of partners that do and don't have hypertension):
+
+```{r}
+lab07_trials %>% tabyl(partner_hypertension, group) %>% adorn_totals("row")
+```
+
+The following table shows the breakdown of subjects in each group by age:
+
+```{r}
+lab07_trials %>% tabyl(age, group) %>% adorn_totals("row")
+```
+
+The following table shows the breakdown of subjects in each group by baseline systolic blood pressure:
+
+```{r}
+lab07_trials %>% tabyl(sbp_baseline, group) %>% adorn_totals("row")
+```
+
+While these groups do appear comparable on the `partner_hypertension` variable, and to some extent on the `age` variable, there's so many different variables for the baseline systolic blood pressure variable `sbp_baseline` that it's difficult to determine whether or not these groups are comparable on this last variable variable.
+
+
+## Question 2 (10 points)
+
+```{r}
+p1 = ggplot(data = lab07_trials, aes(x = sbp_follow)) +
+  geom_histogram(colour = "white", fill = "black", bins = nclass.scott(na.omit(lab07_trials$sbp_follow))) +
+  labs(x = "Follow-Up SBP", y = "Count", title = "Distribution of Follow-Up SBP")
+
+p2 = ggplot(data = lab07_trials, aes(sample = sbp_follow)) +
+  geom_point(stat = "qq") +
+  geom_qq_line() +
+  labs(x = "Theoretical Quantites", y = "Follow-Up SBP", title = "Normal Q-Q Plot")
+
+p3 = ggplot(lab07_trials, aes(x = "", y = sbp_follow)) +
+  geom_violin(fill = "lemonchiffon") +
+  geom_boxplot(width = 0.3, fill = "royalblue", outlier.size = 3, outlier.color = "royalblue") +
+  coord_flip() +
+  labs(x = "Subjects", y = "Follow-Up SBP")
+
+p1 + p2 - p3 +
+  plot_layout(nrow = 2) +
+  plot_annotation(title = "Distribution of the Outcome", subtitle = "Follow-Up Systolic Blood Pressure", caption = "SBP = Systolic Blood Pressure")
+```
+
+Above I have created a histogram, Normal Q-Q plot, and a box plot with an overlaying violin plot to examine the distribution of the outcome `sbp_follow`. As all three of the plots demonstrate, this outcome does appear to follow a normal distribution.
+
+
+## Question 3 (15 points)
+
+```{r fig.height=10, fig.width=10}
+p4 = ggplot(lab07_trials, aes(x = sbp_follow,)) +
+  geom_histogram(aes(fill = group), colour = "white", bins = nclass.scott(na.omit(lab07_trials$sbp_follow))) +
+  labs(x = "Follow-Up SBP", y = "Number of Patients", title = "Distribution of Follow-Up SBP")
+
+p5 = ggplot(data = lab07_trials, aes(sample = sbp_follow)) +
+  geom_point(stat = "qq", aes(fill = group, colour = group)) +
+  geom_qq_line(aes(colour = group)) +
+  labs(x = "Theoretical Quantites", y = "Follow-Up SBP", title = "Normal Q-Q Plot")
+
+p6 = ggplot(lab07_trials, aes(x = group, y = sbp_follow)) +
+  geom_violin(aes(fill = group)) +
+  geom_boxplot(width = 0.3, outlier.size = 3) +
+  stat_summary(aes(fill = group), fun = mean, geom = "point", pch = 21, size = 4) +
+  guides(fill = "none") +
+  coord_flip() +
+  labs(y = "Follow-Up SBP", x = "Treatment Groups", title = "Follow-Up SBP by Treatment Groups")
+
+p4 + p5 - p6 +
+  plot_layout(nrow = 2, ncol = 1) +
+  plot_annotation(title = "Distribution and Normality of the Outcome by Treatment Group", subtitle = "Follow-Up Systolic Blood Pressure", caption = "SBP = Systolic Blood Pressure")
+```
+
+The first figure above shows the distribution of the outcome `sbp_follow` by treatment groups via the overlaying histogram plots and via box plots with overlaying violin plots, and the normality of each treatment group in the Normal Q-Q plot. The overlaying histograms and the box plots with overlaying violin plots indicate some skew in treatment group B, however groups A and C appear relatively normally distributed and varied. The Normal Q-Q plots for each group indicates a normal distribution for group A, higher uniformity than expected for group C, and right skew for group B, all of which is corroborated by the  The second figure, shown below, shows the Residuals vs Fitted, Normal Q-Q, Scale-Location, and Constant Leverage for a linear model created using this data. The Normal Q-Q plot for this model indicates decent normality, however the Scale-Location plot isn't particularly useful for evaluating constant variance, as the treatment groups variable `group` is a non-continuous variable (i.e. a factor variable).
+
+```{r fig.height=7, fig.width=8}
+par(mfrow = c(2,2)); plot(lm(sbp_follow ~ group, data = lab07_trials)); par(mfrow = c(1,1))
+```
+
+
+## Question 4 (10 points)
+
+The analysis of variance using the three treatment groups (A, B, and C), along with a **90%** confidence interval are both shown below, along with a plot and a numerical summary of a Tukey HSD for this model:
+
+```{r}
+model4 = lm(sbp_follow ~ group, data = lab07_trials)
+
+anova(model4) %>% kable(digits = 3)
+
+tidy(model4, conf.int = TRUE, conf.level = 0.90) %>%
+  select(term, estimate, std.error, conf.low, conf.high, p.value) %>%
+  kable(digits = 3)
+
+lab07_trials %$%
+  pairwise.t.test(sbp_follow, group, p.adjust.method = "holm")
+
+tukey1 <- lab07_trials %$%
+  TukeyHSD(aov(model4), ordered = TRUE, conf.level = 0.90)
+
+tidy(tukey1) %>% kable(digits = 3)
+
+plot(tukey1)
+```
+
+From the results of this TukeyHSD, we can see that the mean differences between the 90% confidence intervals of the treatment groups do not include zero, so we can conclude that the mean differences between all three groups are statistically significant. In other words, the differences in the means of the follow-up systolic blood pressures appear to be different for all three treatment groups.
+
+
+## Question 5 (10 points)
+
+Augment your results in Question 4 by incorporating baseline SBP levels into the comparison. Call this The code below was used to create a new model, `model5`, that incorporates the baseline systolic blood pressure levels `sbp_baseline` into the comparison:
+
+```{r}
+model5 = lm(sbp_follow ~ group + sbp_baseline, data = lab07_trials)
+
+tidy(model5, conf.int = TRUE, conf.level = 0.90) %>%
+  select(term, estimate, std.error, conf.low, conf.high, p.value) %>%
+  kable(digits = 3)
+```
+
+By adding `sbp_baseline` as a predictor, the confidence intervals for the treatment groups do change, however only a statistically trivial amount from that of the original model. Thus adding this variable does not significantly change the results as seen in the first model.
+
+
+## Question 6 (10 points)
+
+The code below was used to create `model6`, which was accomplished by augmenting the model that was fit in Question 5 to see if `partner_hypertension` also plays a meaningful predictive role in a model for the outcome `sbp_follow`:
+
+```{r}
+model6 = lm(sbp_follow ~ group + sbp_baseline + partner_hypertension, data = lab07_trials)
+
+tidy(model6, conf.int = TRUE, conf.level = 0.90) %>%
+  select(term, estimate, std.error, conf.low, conf.high, p.value) %>%
+  kable(digits = 3)
+```
+
+As with the results for `model5` in question 5, by adding `sbp_baseline` and `partner_hypertension` as predictors, the confidence intervals for the treatment groups do change, however only a statistically trivial amount from that of the original model. Thus adding these variables did not significantly change the results as seen in the first model.
+
+
+## Question 7 (15 points)
+
+The code below was used to create the final model, `model7`, where this time instead of adjusting for `partner_hypertension`, the subject's age (`age`) and baseline systolic blood pressure `sbp_baseline` were taken into account:
+
+```{r}
+model7 = lm(sbp_follow ~ group + sbp_baseline + age, data = lab07_trials)
+
+tidy(model7, conf.int = TRUE, conf.level = 0.90) %>%
+  select(term, estimate, std.error, conf.low, conf.high, p.value) %>%
+  kable(digits = 3)
+```
+
+
+The code below was used to build a comparison of `model4`, `model5`, `model6`, and `model7` in terms of the quality of fit, measured by R-square, adjusted R-square, sigma, AIC and BIC:
+
+```{r}
+bind_rows(glance(model4), glance(model5), glance(model6), glance(model7)) %>%
+  mutate(Names = c("model4", "model5", "model6", "model7")) %>%
+  select(Names, r2 = r.squared, adj_r2 = adj.r.squared, sigma, AIC, BIC, df, df_res = df.residual) %>%
+  kable(digits = c(0, 4, 3, 3, 1, 0, 0, 0))
+```
+
+Of the four models, `model7` had the best R-Squared, adjusted R-Squared, and sigma values, the second best AIC value, and the third best BIC value. Conversely, `model4` had the best AIC and BIC values, and had the second best sigma value, but had the worst R-Squared and adjusted R-Squared values. In short, no one model stands out as the best, as the differences between the models isn't particularly large, and no one model stands out as the worst for the same reasons. The model that performed the worst overall was `model6`, but again with the debatable exception of its sigma value, the rest of its values weren't comparatively that different from those of `model5`, which was technically the second worst model.
+
+
+## Question 8 (20 points)
+
+According to Chapter 10 of Spiegelhalter's *The Art of Statistics*, a p-value is a measure of the incompatibility between the observed data and a null hypothesis. Formally speaking, it is the probability of observing such an extreme result, were the null hypothesis true, however the p-value thresholds of 0.05 and 0.01 have generally been used to determine ‘statistical significance’. Additionally, these thresholds need to be adjusted if multiple tests are conducted, for example on different subsets of the data or multiple outcome measures. The smaller the p-value, the stronger the evidence we should reject the null hypothesis, so when reviewing the p-value results from questions 4 – 7, the data suggests that we should reject the null hypothesis for our models for fitting the data by treatment group.
+
+
+## Session Information
+
+```{r}
+sessionInfo()
+```

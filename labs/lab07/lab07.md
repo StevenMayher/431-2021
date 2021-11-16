@@ -1,6 +1,6 @@
 431 Lab 07
 ================
-Due: 2021-11-15 \| Last Edit: 2021-09-30 11:39:24
+Due: 2021-11-15 \| Last Edit: 2021-11-14 20:30:12
 
 Lab 07 is divided into 8 questions. Be sure to respond to each of them
 by the deadline posted on the [Course
