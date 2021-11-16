@@ -17,9 +17,11 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 2. The Lab 7 Answer Sheet and Grading Rubric will be posted by class time.
 3. Grades and Feedback from the TAs on Lab 6 will be posted by class time.
 4. Grades on Project A are coming to you as soon as possible.
-5. Complete [instructions for Project B](https://thomaselove.github.io/431-2021-projectB/) remain available. I've changed nothing since our last class.
-6. Congratulations to [Jacqueline Shaia](https://www.jacquelensphd.com/) and [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd) on their new websites, built in response to Lab X!
-7. I've updated [our Packages list](https://thomaselove.github.io/431/r_packages.html) to include the `vcd` package, which we'll use in today's session.
+5. [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) materials will appear by Friday 2021-11-19 at noon.
+6. Complete [instructions for Project B](https://thomaselove.github.io/431-2021-projectB/) remain available. I've changed nothing since our last class. 
+    - The first task is to [Register your Project B](https://thomaselove.github.io/431-2021-projectB/register.html), which you need to do no later than Monday 2021-11-22 at NOON.
+7. Congratulations to [Jacqueline Shaia](https://www.jacquelensphd.com/) and [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd) on their new websites, built in response to Lab X!
+8. I've updated [our Packages list](https://thomaselove.github.io/431/r_packages.html) to include the `vcd` package, which we'll use in today's session.
 
 ## References Associated with This Week's Material
 
