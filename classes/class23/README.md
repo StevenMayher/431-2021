@@ -13,9 +13,13 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-1. Complete [instructions for Project B](https://thomaselove.github.io/431-2021-projectB/) remain available. I've changed nothing.
-2. Congratulations to [Jacqueline Shaia](https://www.jacquelensphd.com/) and [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd) on their new websites, built in response to Lab X!
-3. I've updated [our Packages list](https://thomaselove.github.io/431/r_packages.html) to include the `vcd` package, which we'll use in today's session.
+1. There is a Minute Paper after Class 23, due tomorrow (Wednesday) at Noon. The link will be posted by class time.
+2. The Lab 7 Answer Sheet and Grading Rubric will be posted by class time.
+3. Grades and Feedback from the TAs on Lab 6 will be posted by class time.
+4. Grades on Project A are coming to you as soon as possible.
+5. Complete [instructions for Project B](https://thomaselove.github.io/431-2021-projectB/) remain available. I've changed nothing since our last class.
+6. Congratulations to [Jacqueline Shaia](https://www.jacquelensphd.com/) and [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd) on their new websites, built in response to Lab X!
+7. I've updated [our Packages list](https://thomaselove.github.io/431/r_packages.html) to include the `vcd` package, which we'll use in today's session.
 
 ## References Associated with This Week's Material
 
@@ -62,7 +66,6 @@ We'll spend a bit of time talking about:
 - You may also be interested in this piece at pbs.org about a NOVA program entitled "[Rethinking Science's Magic Number](https://www.pbs.org/wgbh/nova/article/rethinking-sciences-magic-number/)".
 - I have given several talks on "Rethinking Statistical Significance" in recent years. The Github repository for one (90 minutes at MetroHealth Medical Center and the Center for Health Care Research and Policy, with an audio recording) is at https://github.com/THOMASELOVE/rethink, if you're a glutton for punishment.
 - [Why p values are like puppies](https://www.youtube.com/watch?v=9jW9G8MO4PQ) is a 3:29 YouTube Video by Cassie Kozyrkov, MS, Chief Decision Scientist, Google Inc. It explains how to understand and interpret *p* values in an intuitive way using an example based on puppies.
-
 
 ## One Last Thing: On Managing an R Project
 
