@@ -12,5 +12,6 @@ All deadlines for 431 work, including this Lab, are posted in the [Course Calend
 
 - Answer Sketch and Grading Rubric for Lab 6 are now posted in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab06/sketch/lab06_sketch.Rmd) and in [PDF](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab06/sketch/lab06_sketch.pdf).
 - Grades on the Lab are posted to the [Course Grading Roster](https://bit.ly/431-2021-grades). 
-- Since we only included 90 points worth of questions on Lab 6, we gave an extra 10 points for getting the lab in on time.
+  - We posted three nice essays written in response to Question 6 on our Shared Drive in the 431 Lab 6 Examples document.
+  - Since we only included 90 points worth of questions on Lab 6, we gave an extra 10 points for getting the lab in on time.
 - Additional materials will be posted as necessary.
