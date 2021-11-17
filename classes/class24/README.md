@@ -9,30 +9,33 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Today's Slides
 
 - Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class24/431-class24-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class24/431-class24-slides.Rmd).
-- The "[What is a P value?](https://fivethirtyeight.abcnews.go.com/video/embed/56150342)" video from 538 we'll start class with today is [at this link](https://fivethirtyeight.abcnews.go.com/video/embed/56150342). The related article is "[Not Even Scientists Can Easily Explain P-Values](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/)". 
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## Announcements
 
-1. It has come to my attention recently that some of you are fans of ...
+1. The "[What is a P value?](https://fivethirtyeight.abcnews.go.com/video/embed/56150342)" video from 538 we'll start class with today is [at this link](https://fivethirtyeight.abcnews.go.com/video/embed/56150342). Thank you, Rock Lim, for finding this for us. The related article is "[Not Even Scientists Can Easily Explain P-Values](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/)". 
+2. It has come to my attention recently that some of you are fans of ...
     - Taylor Swift, in which case the [tayloRswift package](https://github.com/asteves/tayloRswift) (a ggplot color palette based on Taylor Swift Album Covers) may be of some interest.
     - Wes Anderson, in which case these [Wes Anderson Palettes](https://github.com/karthik/wesanderson) may be of some interest. 
     - producing color-blind accessible plots, in which case the [viridis color palettes](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) might be of special interest.
     - If you want a (fairly) comprehensive list of R color palettes, this [page by Emil Hvitfeldt](https://github.com/EmilHvitfeldt/r-color-palettes) has never steered me wrong.
-2. Feedback on the Minute Paper after Class 23 will be **posted by class time**.
-3. Grades on Project A - details to come.
-4. On **Pivoting** - see Section 18.4 of the Course Notes for an example of using `pivot_longer()`, and the [Tidy Data Chapter's section on Pivoting](https://r4ds.had.co.nz/tidy-data.html?q=pivot#pivoting) in R for Data Science for additional examples and motivation. 
+3. Feedback on the Minute Paper after Class 23 will be **posted by class time**.
+4. Grades on Project A - details to come.
+5. On **Pivoting** - see Section 18.4 of the Course Notes for an example of using `pivot_longer()`, and the [Tidy Data Chapter's section on Pivoting](https://r4ds.had.co.nz/tidy-data.html?q=pivot#pivoting) in R for Data Science for additional examples and motivation. 
     - Remember that, when comparing means, with paired samples, we typically use wide data, and with independent samples (and regression models), we use long data. You should be able to go from one type of data presentation (wide or long) to the other. You are likely to do some pivoting of data, either in Project B or Quiz 3, or both.
 
 ## What Should I Be Working On Over the Break?
 
-1. Our next class is Tuesday 2021-11-30. 
-    - While Piazza will be open for private messages over the next week, TA office hours pause after Friday 2021-11-19 and then resume on Saturday 2021-11-27. If you have questions about the Quiz, we will catch up on all of those questions (submitted via Piazza or 431-help) by mid-morning Saturday 2021-11-27.
-3. Your [Project B Registration form](https://thomaselove.github.io/431-2021-projectB/register.html) is due at Noon on Monday 2021-11-22. 
-    - Please check your email / Canvas on Tuesday late afternoon (2021-11-23) for my response to your registration form and whether you need to make any changes to your study plan. 
+1. Our next class (Class 25) will be **Tuesday 2021-11-30**. 431 will not meet on 2021-11-23 or 2021-11-25.
+    - Piazza will be open for **private messages only** from 9 AM this Friday 2021-11-19 through to 9 PM on Monday 2021-11-29.
+    - 431-help will receive your emails about Quiz 3 starting now through to 9 PM on Monday 2021-11-29.
+    - TA office hours pause starting Saturday 2021-11-20 and then resume on Saturday 2021-11-27. 
+    - We will catch up on all Quiz 3 questions (submitted via Piazza or 431-help) by noon on Saturday 2021-11-27.
+2. Your [Project B Registration form](https://thomaselove.github.io/431-2021-projectB/register.html) is due at Noon on Monday 2021-11-22. 
+    - Please check your email / Canvas on Tuesday 2021-11-23 by 5 PM for my response to your registration form and whether you need to make any changes to your study plan over the Thanksgiving Break. 
     - Everything you need to do for all of Project B (not just the registration form) is part of the material covered (as of the end of Class 24)
-4. [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) is due Monday 2021-11-29 at 9 PM. It will be [available to you here](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) by noon Friday 2021-11-19.
-5. We anticipate you'll finish reading all of Spiegelhalter's *The Art of Statistics* before you turn in Quiz 3.
+3. [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) is due Monday 2021-11-29 at 9 PM. It will be [available to you here](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) by noon Friday 2021-11-19.
+4. We anticipate you'll finish reading all of Spiegelhalter's *The Art of Statistics* before you turn in Quiz 3.
 
 ## References Associated with This Week's Material
 
@@ -75,7 +78,6 @@ We'll spend a bit of time talking about:
 - You may also be interested in this piece at pbs.org about a NOVA program entitled "[Rethinking Science's Magic Number](https://www.pbs.org/wgbh/nova/article/rethinking-sciences-magic-number/)".
 - I have given several talks on "Rethinking Statistical Significance" in recent years. The Github repository for one (90 minutes at MetroHealth Medical Center and the Center for Health Care Research and Policy, with an audio recording) is at https://github.com/THOMASELOVE/rethink, if you're a glutton for punishment.
 - [Why p values are like puppies](https://www.youtube.com/watch?v=9jW9G8MO4PQ) is a 3:29 YouTube Video by Cassie Kozyrkov, MS, Chief Decision Scientist, Google Inc. It explains how to understand and interpret *p* values in an intuitive way using an example based on puppies.
-
 
 ## One Last Thing
 
