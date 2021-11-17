@@ -35,8 +35,9 @@ Assignments.
 
 Your submitted R Markdown document should import the raw data from the
 Google Sheet, make any necessary manipulations to the data set and then
-present your tables, with appropriate titles/labels and a caption, as
-you desire, followed by your paragraph discussing the table.
+present your table (created using the `gt` package), with appropriate 
+titles/labels and a caption, as you desire, followed by your paragraph 
+discussing the table.
 
 The HTML result must come directly from your R Markdown code.
 
