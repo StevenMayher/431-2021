@@ -2,16 +2,17 @@
 
 - You'll need to be logged into Google via CWRU to complete the Minute Papers, or to review the feedback.
 
-## Next Minute Paper
+## Upcoming Minute Papers
 
 After Class | due at NOON on | Link to Minute Paper Form 
-----------: | ------: | :--------: 
-23 (2021-11-16) | 2021-11-17 | https://bit.ly/431-2021-minute-23
+----------: | ------: | :---------:
+25 (2021-11-30) | 2021-12-01 | will appear on 2021-11-29
 
 ## Completed Minute Papers
 
 After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
 ----------: | ------: | :--------: | :----------:
+23 (2021-11-16) | 2021-11-17 | https://bit.ly/431-2021-minute-23 | https://bit.ly/431-2021-min23-feedback
 20 (2021-11-02) | 2021-11-03 | https://bit.ly/431-2021-minute-20 | https://bit.ly/431-2021-min20-feedback
 18 (2021-10-26) | 2021-10-27 | https://bit.ly/431-2021-minute-18 | https://bit.ly/431-2021-min18-feedback
 15 (2021-10-12) | 2021-10-13 | https://bit.ly/431-2021-minute-15 | https://bit.ly/431-2021-min15-feedback
@@ -21,11 +22,6 @@ After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Fe
 7 (2021-09-14) | 2021-09-15 | https://bit.ly/431-2021-minute-07 | https://bit.ly/431-2021-min7-feedback
 5 (2021-09-07) | 2021-09-08 | https://bit.ly/431-2021-minute-05 | https://bit.ly/431-2021-min5-feedback
 
-## Upcoming Minute Papers
-
-After Class | due at NOON on 
-----------: | ------: 
-25 (2021-11-30) | 2021-12-01
 
 **Dr. Love's records about submission of minute papers** will be found in the [Course Grading Roster](https://bit.ly/431-2021-grades).
 
