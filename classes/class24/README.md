@@ -14,7 +14,25 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements
 
-To come.
+1. It has come to my attention recently that some of you are fans of ...
+    - Taylor Swift, in which case the [tayloRswift package](https://github.com/asteves/tayloRswift) (a ggplot color palette based on Taylor Swift Album Covers) may be of some interest.
+    - Wes Anderson, in which case these [Wes Anderson Palettes](https://github.com/karthik/wesanderson) may be of some interest. 
+    - producing color-blind accessible plots, in which case the [viridis color palettes](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) might be of special interest.
+    - If you want a (fairly) comprehensive list of R color palettes, this [page by Emil Hvitfeldt](https://github.com/EmilHvitfeldt/r-color-palettes) has never steered me wrong.
+2. Feedback on the Minute Paper after Class 23 will be **posted by class time**.
+3. Grades on Project A - details to come.
+4. On **Pivoting** - see Section 18.4 of the Course Notes for an example of using `pivot_longer()`, and the [Tidy Data Chapter's section on Pivoting](https://r4ds.had.co.nz/tidy-data.html?q=pivot#pivoting) in R for Data Science for additional examples and motivation. 
+    - Remember that, when comparing means, with paired samples, we typically use wide data, and with independent samples (and regression models), we use long data. You should be able to go from one type of data presentation (wide or long) to the other. You are likely to do some pivoting of data, either in Project B or Quiz 3, or both.
+
+## What Should I Be Working On Over the Break?
+
+1. Our next class is Tuesday 2021-11-30. 
+    - While Piazza will be open for private messages over the next week, TA office hours pause after Friday 2021-11-19 and then resume on Saturday 2021-11-27. If you have questions about the Quiz, we will catch up on all of those questions (submitted via Piazza or 431-help) by mid-morning Saturday 2021-11-27.
+3. Your [Project B Registration form](https://thomaselove.github.io/431-2021-projectB/register.html) is due at Noon on Monday 2021-11-22. 
+    - Please check your email / Canvas on Tuesday late afternoon (2021-11-23) for my response to your registration form and whether you need to make any changes to your study plan. 
+    - Everything you need to do for all of Project B (not just the registration form) is part of the material covered (as of the end of Class 24)
+4. [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) is due Monday 2021-11-29 at 9 PM. It will be [available to you here](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) by noon Friday 2021-11-19.
+5. We anticipate you'll finish reading all of Spiegelhalter's *The Art of Statistics* before you turn in Quiz 3.
 
 ## References Associated with This Week's Material
 
