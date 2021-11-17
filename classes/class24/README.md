@@ -11,7 +11,15 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class24/431-class24-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class24/431-class24-slides.Rmd).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
-## Announcements
+## Announcements specific to 431
+
+1. Feedback on the Minute Paper after Class 23 will be **posted by class time**.
+2. Grades on Project A - **details to come.**
+3. [Lab Y instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) are now available. This **optional bonus** assignment, like Lab X and Lab Z, is due to Canvas on 2021-12-10 at noon.
+4. [Lab Z instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) are now available. This **optional bonus** assignment, like Lab X and Lab Y, is due to Canvas on 2021-12-10 at noon.
+5. The [Course Calendar](https://thomaselove.github.io/431/calendar.html) has changed to reflect the addition of Labs Y and Z (Lab X was already due at noon on 2021-12-10.)
+
+## More General Announcements
 
 1. The "[What is a P value?](https://fivethirtyeight.abcnews.go.com/video/embed/56150342)" video from 538 we'll start class with today is [at this link](https://fivethirtyeight.abcnews.go.com/video/embed/56150342). Thank you, Rock Lim, for finding this for us. The related article is "[Not Even Scientists Can Easily Explain P-Values](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/)". 
 2. It has come to my attention recently that some of you are fans of ...
@@ -21,10 +29,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - If you want a (fairly) comprehensive list of R color palettes, this [page by Emil Hvitfeldt](https://github.com/EmilHvitfeldt/r-color-palettes) has never steered me wrong.
 3. On **Pivoting** - see Section 18.4 of the Course Notes for an example of using `pivot_longer()`, and the [Tidy Data Chapter's section on Pivoting](https://r4ds.had.co.nz/tidy-data.html?q=pivot#pivoting) in R for Data Science for additional examples and motivation. 
     - Remember that, when comparing means, with paired samples, we typically use wide data, and with independent samples (and regression models), we use long data. You should be able to go from one type of data presentation (wide or long) to the other. You are likely to do some pivoting of data, either in Project B or Quiz 3, or both.
-4. Feedback on the Minute Paper after Class 23 will be **posted by class time**.
-5. Grades on Project A - **details to come.**
-6. [Lab Y instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) are now available. This optional bonus assignment, like Lab X and Lab Z, is due 2021-12-10 at noon.
-7. [Lab Z instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) are now available. This optional bonus assignment, like Lab X and Lab Y, is due 2021-12-10 at noon.
+
 
 ## What Should I Be Working On Over the Break?
 
