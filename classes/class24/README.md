@@ -19,10 +19,12 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - Wes Anderson, in which case these [Wes Anderson Palettes](https://github.com/karthik/wesanderson) may be of some interest. 
     - producing color-blind accessible plots, in which case the [viridis color palettes](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) might be of special interest.
     - If you want a (fairly) comprehensive list of R color palettes, this [page by Emil Hvitfeldt](https://github.com/EmilHvitfeldt/r-color-palettes) has never steered me wrong.
-3. Feedback on the Minute Paper after Class 23 will be **posted by class time**.
-4. Grades on Project A - details to come.
-5. On **Pivoting** - see Section 18.4 of the Course Notes for an example of using `pivot_longer()`, and the [Tidy Data Chapter's section on Pivoting](https://r4ds.had.co.nz/tidy-data.html?q=pivot#pivoting) in R for Data Science for additional examples and motivation. 
+3. On **Pivoting** - see Section 18.4 of the Course Notes for an example of using `pivot_longer()`, and the [Tidy Data Chapter's section on Pivoting](https://r4ds.had.co.nz/tidy-data.html?q=pivot#pivoting) in R for Data Science for additional examples and motivation. 
     - Remember that, when comparing means, with paired samples, we typically use wide data, and with independent samples (and regression models), we use long data. You should be able to go from one type of data presentation (wide or long) to the other. You are likely to do some pivoting of data, either in Project B or Quiz 3, or both.
+4. Feedback on the Minute Paper after Class 23 will be **posted by class time**.
+5. Grades on Project A - **details to come.**
+6. [Lab Y instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) are now available. This optional bonus assignment, like Lab X and Lab Z, is due 2021-12-10 at noon.
+7. [Lab Z instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) are now available. This optional bonus assignment, like Lab X and Lab Y, is due 2021-12-10 at noon.
 
 ## What Should I Be Working On Over the Break?
 
