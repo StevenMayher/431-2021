@@ -36,9 +36,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. Our next class (Class 25) will be **Tuesday 2021-11-30**. 431 will not meet on 2021-11-23 or 2021-11-25.
     - Piazza will be open for **private messages only** from 9 AM this Friday 2021-11-19 through to 9 PM on Monday 2021-11-29.
-    - 431-help will receive your emails about Quiz 3 starting when the Quiz is posted through to 5 PM on Monday 2021-11-29.
+    - `431-help` at `case dot edu` will receive your emails about Quiz 3 starting when the Quiz is posted through to 5 PM on Monday 2021-11-29.
     - TA office hours pause starting Saturday 2021-11-20 and then resume on Saturday 2021-11-27. 
-    - We will catch up on all Quiz 3 questions (submitted via Piazza or 431-help) by noon on Saturday 2021-11-27.
+    - We will catch up on all Quiz 3 questions (submitted via Piazza or 431-help) on Monday afternoon and then again by noon on Saturday 2021-11-27.
 2. Your [Project B Registration form](https://thomaselove.github.io/431-2021-projectB/register.html) is due at Noon on Monday 2021-11-22. 
     - Please check your email / Canvas on Tuesday 2021-11-23 by 5 PM for my response to your registration form and whether you need to make any changes to your study plan over the Thanksgiving Break. 
     - Everything you need to do for all of Project B (not just the registration form) is part of the material covered (as of the end of Class 24)
