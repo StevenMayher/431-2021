@@ -4,6 +4,7 @@ If you're not sure why this is here, you might want to look at the [Project B in
 
 Student | Favorite Song
 -------: | :---------------------------------------
-Anushree Iyengar | Knee Deep by Zac Brown Band
 Katie Heinzinger | Golden Age by TV on the Radio
+Anushree Iyengar | Knee Deep by Zac Brown Band
 Tyler Petrie | The Moment I Knew by Taylor Swift
+Carly Rose | Long Live by Taylor Swift
