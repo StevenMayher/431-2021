@@ -13,11 +13,12 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Announcements specific to 431
 
-1. Feedback on the Minute Paper after Class 23 [is now available](https://bit.ly/431-2021-min23-feedback). The [Course Grading Roster](https://bit.ly/431-2021-grades) is up to date through all Minute Papers and through Lab 6.
+1. Feedback on the Minute Paper after Class 23 [is now available](https://bit.ly/431-2021-min23-feedback). 
+    - The [Course Grading Roster](https://bit.ly/431-2021-grades) is up to date through all Minute Papers and through Lab 6.
 2. Grades on Project A - [update is here](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/submissions.md).
 3. [Lab Y instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) and [Lab Z instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) are now available. 
-    - These **optional bonus** assignments, like [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX), are due on 2021-12-10 at noon.
-    - You can do none, any or all of these optional assignments. Lab Y and Lab Z are each worth half as much as Lab X is.
+    - These **optional bonus** assignments, like [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX), are due on 2021-12-10 at noon. 
+    - You can do none, any or all of these optional assignments. Lab Y and Lab Z are each worth up to half as much as Lab X is.
 4. The [Course Calendar](https://thomaselove.github.io/431/calendar.html) has changed to reflect the addition of Labs Y and Z (Lab X was already due at noon on 2021-12-10.)
 
 ## More General Announcements
