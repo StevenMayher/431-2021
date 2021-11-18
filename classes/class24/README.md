@@ -14,7 +14,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Announcements specific to 431
 
 1. Feedback on the Minute Paper after Class 23 [is now available](https://bit.ly/431-2021-min23-feedback). The [Course Grading Roster](https://bit.ly/431-2021-grades) is up to date through all Minute Papers and through Lab 6.
-2. Grades on Project A - **details to come.**
+2. Grades on Project A - [update is here].
 3. [Lab Y instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) are now available. This **optional bonus** assignment, like Lab X and Lab Z, is due to Canvas on 2021-12-10 at noon.
 4. [Lab Z instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) are now available. This **optional bonus** assignment, like Lab X and Lab Y, is due to Canvas on 2021-12-10 at noon.
 5. The [Course Calendar](https://thomaselove.github.io/431/calendar.html) has changed to reflect the addition of Labs Y and Z (Lab X was already due at noon on 2021-12-10.)
