@@ -18,6 +18,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 2. Grades on Project A - [update is here](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/submissions.md).
 3. [Lab Y instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) and [Lab Z instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) are now available. 
     - These **optional bonus** assignments, like [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX), are due on 2021-12-10 at noon. 
+    - Congratulations to Olivia Wilcox on [her new web site](https://www.olivia-wilcox.com/) built in response to Lab X!
     - You can do none, any or all of these optional assignments. Lab Y and Lab Z are each worth up to half as much as Lab X is.
 4. The [Course Calendar](https://thomaselove.github.io/431/calendar.html) has changed to reflect the addition of Labs Y and Z (Lab X was already due at noon on 2021-12-10.)
 
