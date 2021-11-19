@@ -16,15 +16,19 @@ Code | Investigator(s) | Title
 204 | Alise Carlson &	Abigail Basson |	Health Behaviors and Socioeconomic Factors Associated with Unemployment in Four Neighboring States
 205 | Anushree Iyengar &	Avantika Bhaduri |	Individual Behaviors and Systemic Factors as Predictors of Poor Physical Health Days
 106 | Abhishek Bhardwaj	|	Factors associated with life expectancy in different states
+107 | Allison Bode	|	Effect of Smoking, Food Insecurity, and Sleep Insufficiency on Adult Obesity
 110 | Michael Douglass	|	Does Educating our Youth Predict How Stressed Adults Are?
 211 | Raunak Nair	& Sid Dugar |	Predictors of Violent Crime in 4 States in the US
 112 | (Ava) Cong Fan	|	The Impact of Education and Income On Rates of Adult Obesity
 113 | Aaron Fletcher	|	Can You Expect to Live Longer if You Live in a Vacation Location?
+114 | Megan Foradori	|	Exploring Low Birth Weight Rates using County Health Metrics
 215 | Scarlett He &	Jiayue Yang |	Analysis of four risk factors that contribute to the rate of life expectancy in five states in the US
+116 | Katie Heinzinger	|	Impact of Mental Health and Unemployment on Violent Crime in Select US Counties
 117 | Kyaw Oo Hla | 		Social Problems associated with Insufficient Sleep
 218 | Alan Kiang &	Erika Hutt |	Effect of Education Level on Influenza Vaccination
 119 | Zahin Islam |		Investigating Physical and Mental Health Factors That Influence Motor Vehicle Crash Deaths
 220 | Makaela Mews &	Jeeda Ismail |	The Impact of Health Behaviors on Poor Mental Health Days
+122 | Christopher Jones |		Analysis of Educational and Social Factors on Suicide Rates
 124 | Fumi Kong |		Predicting adult obesity rate from lifestyle habits and social infactors
 225 | Benjamin Kramer & Jacqueline Shaia	| Social determinants of health impact on life expectancy
 227 | Kristi Lin-Rahardja	& Nick Latina |	Effect of Mental and Physical Health on Premature Death
@@ -35,6 +39,7 @@ Code | Investigator(s) | Title
 233 | Steven Mayher &	Anna Magoline |	The Effects of College Education and Environmental Factors on Income Inequality
 235 | Cyrus Nosrati &	Drake McFaul |	Understanding the Connections of Selected Variables towards Life Expectancy for Large States near Ohio
 136 | Ryan McMaster	|	Assessing Substance Use Risk-Factors for Youth
+137 | Luis Mesias	Flores |	The Relationship between Educational Predictors and Unemployment
 142 | Cerag Oguztuzun	|	Health and Educational Factors Contributing to Violent Crime Rate
 147 | Jacob Rich |		Predictors for Adult Smoking in Great Lakes States
 248 | Diya Yang & Carly Rose |	Socioeconomic, Educational, Health, Environmental Factors and Their Influence on Life Expectancy
@@ -48,11 +53,6 @@ Code | Investigator(s) | Title
 
 Code | Investigator(s) | Title
 --: | :---------------: | :-------------------------
-107 | Allison Bode	|	Effect of Smoking, Food Insecurity, and Sleep Insufficiency on Adult Obesity
-114 | Megan Foradori	|	Exploring Low Birth Weight Rates using County Health Metrics
-116 | Katie Heinzinger	|	Impact of Mental Health and Unemployment on Violent Crime in Select US Counties
-122 | Christopher Jones |		Analysis of Educational and Social Factors on Suicide Rates
-137 | Luis Mesias	Flores |	The Relationship between Educational Predictors and Unemployment
 143 | Alex Olejko	|	Investigating How Macro-Environments May Affect Children’s Math Scores
 145 | Thomas Raffay |		Low birthweight and associations with other variables of health
 151 | Maryssa Shanteau-Jackson |		Investigating Premature Death as an Outcome in Three East Coast States Compared to OH
