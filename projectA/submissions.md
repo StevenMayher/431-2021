@@ -1,4 +1,4 @@
-# Project A Final Submissions Received by Dr. Love
+# Project A Final Submissions
 
 - See [trivia below](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/submissions.md#some-trivia).
 
@@ -6,7 +6,7 @@
 
 [See this pdf](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/projA-grade-sheet-example.pdf) and Dr. Love's explanation on the Class 24 video.
 
-## Grading is complete for the following submissions (and you should have an email from me in your preferred inbox dated 2021-11-19)
+## Grading is complete for the following submissions (and you should have an email from Dr. Love with your linked Google Sheet dated 2021-11-19)
 
 Code | Investigator(s) | Title
 --: | :---------------: | :-------------------------
@@ -44,7 +44,7 @@ Code | Investigator(s) | Title
 158 | Sneha Yamsani	|	Is Working at a Biotech Hub Associated with Shorter Life Expectancy?
 162 | Ziyin Zhao |		Predicting violent crime in Ohio and four Northeastern states
 
-## Dr. Love needs to review the video again, but all other elements are graded for these submissions
+## Dr. Love will send out emails today (2021-11-19) with our feedback to the following people...
 
 Code | Investigator(s) | Title
 --: | :---------------: | :-------------------------
