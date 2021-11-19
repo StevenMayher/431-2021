@@ -6,7 +6,7 @@
 
 [See this pdf](https://github.com/THOMASELOVE/431-2021/blob/main/projectA/projA-grade-sheet-example.pdf) and Dr. Love's explanation on the Class 24 video.
 
-## Grading is complete for the following submissions (and you should have an email from Dr. Love with your linked Google Sheet dated 2021-11-19)
+## Grading is complete for all submissions (and you should have an email from Dr. Love with your linked Google Sheet dated 2021-11-19)
 
 Code | Investigator(s) | Title
 --: | :---------------: | :-------------------------
@@ -41,23 +41,18 @@ Code | Investigator(s) | Title
 136 | Ryan McMaster	|	Assessing Substance Use Risk-Factors for Youth
 137 | Luis Mesias	Flores |	The Relationship between Educational Predictors and Unemployment
 142 | Cerag Oguztuzun	|	Health and Educational Factors Contributing to Violent Crime Rate
+143 | Alex Olejko	|	Investigating How Macro-Environments May Affect Children’s Math Scores
+145 | Thomas Raffay |		Low birthweight and associations with other variables of health
 147 | Jacob Rich |		Predictors for Adult Smoking in Great Lakes States
 248 | Diya Yang & Carly Rose |	Socioeconomic, Educational, Health, Environmental Factors and Their Influence on Life Expectancy
 149 | Himani Sancheti |		Effect of Health Behavior, Clinical Care, and Economic factors on Frequent Mental Distress
+151 | Maryssa Shanteau-Jackson |		Investigating Premature Death as an Outcome in Three East Coast States Compared to OH
+152 | Neeti Shirke |		Investigating Contributing Factors to HIV Prevalence
 153 | Ria Tilve	|	County-level Health and Socioeconomic Factors on Life Expectancy in States with the Best Hospitals
+156 | Olivia Wilcox |		Health Factors Associated with Teen Births
 257 | Audrey Zhu &	Ying Xiong |	Investigating Median Household Income and Potential Influencing Factors in Six States
 158 | Sneha Yamsani	|	Is Working at a Biotech Hub Associated with Shorter Life Expectancy?
 162 | Ziyin Zhao |		Predicting violent crime in Ohio and four Northeastern states
-
-## Dr. Love will send out emails today (2021-11-19) with our feedback to the following people...
-
-Code | Investigator(s) | Title
---: | :---------------: | :-------------------------
-143 | Alex Olejko	|	Investigating How Macro-Environments May Affect Children’s Math Scores
-145 | Thomas Raffay |		Low birthweight and associations with other variables of health
-151 | Maryssa Shanteau-Jackson |		Investigating Premature Death as an Outcome in Three East Coast States Compared to OH
-152 | Neeti Shirke |		Investigating Contributing Factors to HIV Prevalence
-156 | Olivia Wilcox |		Health Factors Associated with Teen Births
 
 ## Some Trivia
 
