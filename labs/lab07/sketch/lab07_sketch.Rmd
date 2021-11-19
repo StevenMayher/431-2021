@@ -351,8 +351,8 @@ summary(model7)
 
 Next, we'll go ahead and summarize our models. We can obtain the R^2^ and adjusted R^2^ from the `summary()` we ran, while we'll need to run additional code to obtain the sigma (residual standard deviation), AIC, and BIC. We did this using the `sigma()`, `AIC()`, and `BIC()` functions directly in the table.
 
-| R^2^ | Adjusted R^2^ | sigma | AIC | BIC |
-| :------- | :---------- | :---------- | :---------- | :---------- |
+| Model | R^2^ | Adjusted R^2^ | sigma | AIC | BIC |
+| :------- | :---------- | :---------- | :---------- | :---------- | :---------- |
 | model4 | 0.3506 | 0.3463 | `r round(sigma(model4),2)` | `r round(AIC(model4),2)` | `r round(BIC(model4),2)` |
 | model5 | 0.3513 | 0.3448 | `r round(sigma(model5),2)` | `r round(AIC(model5),2)` | `r round(BIC(model5),2)` |
 | model6 | 0.3514 | 0.3426 | `r round(sigma(model6),2)` | `r round(AIC(model6),2)` | `r round(BIC(model6),2)` |
