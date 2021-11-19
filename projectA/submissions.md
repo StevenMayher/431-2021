@@ -18,6 +18,7 @@ Code | Investigator(s) | Title
 106 | Abhishek Bhardwaj	|	Factors associated with life expectancy in different states
 211 | Raunak Nair	& Sid Dugar |	Predictors of Violent Crime in 4 States in the US
 112 | (Ava) Cong Fan	|	The Impact of Education and Income On Rates of Adult Obesity
+113 | Aaron Fletcher	|	Can You Expect to Live Longer if You Live in a Vacation Location?
 215 | Scarlett He &	Jiayue Yang |	Analysis of four risk factors that contribute to the rate of life expectancy in five states in the US
 117 | Kyaw Oo Hla | 		Social Problems associated with Insufficient Sleep
 218 | Alan Kiang &	Erika Hutt |	Effect of Education Level on Influenza Vaccination
@@ -32,11 +33,14 @@ Code | Investigator(s) | Title
 232 | Shruti Raghunathan &	Norman Luc |	Assessing Environmental and Lifestyle Predictors of Low Birth Weight
 233 | Steven Mayher &	Anna Magoline |	The Effects of College Education and Environmental Factors on Income Inequality
 235 | Cyrus Nosrati &	Drake McFaul |	Understanding the Connections of Selected Variables towards Life Expectancy for Large States near Ohio
+136 | Ryan McMaster	|	Assessing Substance Use Risk-Factors for Youth
 147 | Jacob Rich |		Predictors for Adult Smoking in Great Lakes States
 248 | Diya Yang & Carly Rose |	Socioeconomic, Educational, Health, Environmental Factors and Their Influence on Life Expectancy
-162 | Ziyin Zhao |		Predicting violent crime in Ohio and four Northeastern states
+149 | Himani Sancheti |		Effect of Health Behavior, Clinical Care, and Economic factors on Frequent Mental Distress
 153 | Ria Tilve	|	County-level Health and Socioeconomic Factors on Life Expectancy in States with the Best Hospitals
 257 | Audrey Zhu &	Ying Xiong |	Investigating Median Household Income and Potential Influencing Factors in Six States
+158 | Sneha Yamsani	|	Is Working at a Biotech Hub Associated with Shorter Life Expectancy?
+162 | Ziyin Zhao |		Predicting violent crime in Ohio and four Northeastern states
 
 ## Dr. Love needs to review the video again, but all other elements are graded for these submissions
 
@@ -44,20 +48,16 @@ Code | Investigator(s) | Title
 --: | :---------------: | :-------------------------
 107 | Allison Bode	|	Effect of Smoking, Food Insecurity, and Sleep Insufficiency on Adult Obesity
 110 | Michael Douglass	|	Does Educating our Youth Predict How Stressed Adults Are?
-113 | Aaron Fletcher	|	Can You Expect to Live Longer if You Live in a Vacation Location?
 114 | Megan Foradori	|	Exploring Low Birth Weight Rates using County Health Metrics
 116 | Katie Heinzinger	|	Impact of Mental Health and Unemployment on Violent Crime in Select US Counties
 122 | Christopher Jones |		Analysis of Educational and Social Factors on Suicide Rates
-136 | Ryan McMaster	|	Assessing Substance Use Risk-Factors for Youth
 137 | Luis Mesias	Flores |	The Relationship between Educational Predictors and Unemployment
 142 | Cerag Oguztuzun	|	Health and Educational Factors Contributing to Violent Crime Rate
 143 | Alex Olejko	|	Investigating How Macro-Environments May Affect Children’s Math Scores
 145 | Thomas Raffay |		Low birthweight and associations with other variables of health
-149 | Himani Sancheti |		Effect of Health Behavior, Clinical Care, and Economic factors on Frequent Mental Distress
 151 | Maryssa Shanteau-Jackson |		Investigating Premature Death as an Outcome in Three East Coast States Compared to OH
 152 | Neeti Shirke |		Investigating Contributing Factors to HIV Prevalence
 156 | Olivia Wilcox |		Health Factors Associated with Teen Births
-158 | Sneha Yamsani	|	Is Working at a Biotech Hub Associated with Shorter Life Expectancy?
 
 ## Some Trivia
 
