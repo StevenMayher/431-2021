@@ -13,3 +13,4 @@ Thomas Raffay | Black Dog by Led Zeppelin
 Carly Rose | Long Live by Taylor Swift
 Jacqueline Shaia | Iris by Goo Goo Dolls
 Diya Yang | Viva la Vida by Coldplay
+Sneha Yamsani | Life Goes On by BTS
