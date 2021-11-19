@@ -4,7 +4,12 @@ If you're not sure why this is here, you might want to look at the [Project B in
 
 Student | Favorite Song
 -------: | :---------------------------------------
+Megan Foradori | Fields of Gold by Sting
 Katie Heinzinger | Golden Age by TV on the Radio
 Anushree Iyengar | Knee Deep by Zac Brown Band
+Ben Kramer | The Fisherman Song (We All Need Love) by Mae
 Tyler Petrie | The Moment I Knew by Taylor Swift
+Thomas Raffay | Black Dog by Led Zeppelin
 Carly Rose | Long Live by Taylor Swift
+Jacqueline Shaia | Iris by Goo Goo Dolls
+Diya Yang | Viva la Vida by Coldplay
