@@ -4,15 +4,15 @@
 
 The files you will need to complete Quiz 3 include:
 
-1. [a PDF file] containing all questions and complete instructions - the PDF file is 21 pages long. Be sure you have all 21 pages.
+1. [This PDF file](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz3/quiz3.pdf) containing all questions and complete instructions - the [PDF file](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz3/quiz3.pdf) is 21 pages long. Be sure you have all 21 pages.
 2. [the Google Form Answer Sheet for Quiz 3](https://bit.ly/431-2021-quiz3-answer-sheet) where you will submit your responses by the deadline.
-3. the files (`Love-boost.R`, a script called `wc_code.R` and six data files) which are in our Shared Google Drive in the data subfolder within the Quiz 3 folder.
+3. the files (`Love-boost.R`, a script called `wc_code.R` and six data files) which are in our Shared Google Drive in the **data** subfolder within the **Quiz 3** folder.
 
-The Quiz contains 30 questions. All materials will be posted for the Quiz by Noon on Friday 2021-11-19. 
+The Quiz contains 30 questions. All materials for the Quiz are now posted. 
 
 ## Deadline
 
-The Quiz is due on Monday 2021-11-29 (the Monday after Thanksgiving) at 9 PM. No exceptions.
+The Quiz is due on Monday 2021-11-29 (the Monday after Thanksgiving) at 9 PM. All responses must come through [the Google Form](https://bit.ly/431-2021-quiz3-answer-sheet). No exceptions, and no late work, please.
 
 ## Getting Help
 
