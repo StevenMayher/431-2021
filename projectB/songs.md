@@ -6,6 +6,7 @@
 Student | Favorite Song with YouTube link | Year of Release
 :-------: | :---------------------------------------: | :-----:
 Megan Foradori | [Fields of Gold](https://www.youtube.com/watch?v=KLVq0IAzh1A) by Sting | 1993 per [Wikipedia](https://en.wikipedia.org/wiki/Fields_of_Gold)
+Scarlett He | [Mood](https://www.youtube.com/watch?v=GrAchTdepsU) by 24KGoldn | 2020 per [Wikipedia](https://en.wikipedia.org/wiki/Mood_(song))
 Katie Heinzinger | [Golden Age](https://www.youtube.com/watch?v=2wTHxUl9WdQ) by TV on the Radio | 2008 per [Wikipedia](https://en.wikipedia.org/wiki/Golden_Age_(song))
 Anushree Iyengar | [Knee Deep](https://www.youtube.com/watch?v=9n5G0qFBsHM) by Zac Brown Band | 2011 per [Wikipedia](https://en.wikipedia.org/wiki/Knee_Deep)
 Ben Kramer | [The Fisherman Song (We All Need Love)](https://www.youtube.com/watch?v=sZb_OWlTYps) by Mae | 2017 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Morning_(EP))
