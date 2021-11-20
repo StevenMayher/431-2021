@@ -8,9 +8,9 @@ Student | Favorite Song | Year of Release
 Megan Foradori | [Fields of Gold](https://www.youtube.com/watch?v=KLVq0IAzh1A) by Sting | 1993 per [Wikipedia](https://en.wikipedia.org/wiki/Fields_of_Gold)
 Katie Heinzinger | [Golden Age](https://www.youtube.com/watch?v=2wTHxUl9WdQ) by TV on the Radio | 2008 per [Wikipedia](https://en.wikipedia.org/wiki/Golden_Age_(song))
 Anushree Iyengar | [Knee Deep](https://www.youtube.com/watch?v=9n5G0qFBsHM) by Zac Brown Band | 2011 per [Wikipedia](https://en.wikipedia.org/wiki/Knee_Deep)
-Ben Kramer | [The Fisherman Song (We All Need Love)](https://www.youtube.com/watch?v=sZb_OWlTYps) by Mae | 2017
+Ben Kramer | [The Fisherman Song (We All Need Love)](https://www.youtube.com/watch?v=sZb_OWlTYps) by Mae | 2017 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Morning_(EP))
 Gen Li | [Killer Queen](https://www.youtube.com/watch?v=2ZBtPf7FOoM) by Queen | 1974 per [Wikipedia](https://en.wikipedia.org/wiki/Killer_Queen)
-Tyler Petrie | [The Moment I Knew](https://www.youtube.com/watch?v=LmXn6BU16e0) by Taylor Swift | 2013 [TaylorSwift Fandom Wiki](https://taylorswift.fandom.com/wiki/The_Moment_I_Knew)
+Tyler Petrie | [The Moment I Knew](https://www.youtube.com/watch?v=LmXn6BU16e0) by Taylor Swift | 2013 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Red_(Taylor_Swift_album))
 Thomas Raffay | [Black Dog](https://www.youtube.com/watch?v=6tlSx0jkuLM) by Led Zeppelin | 1971 per [Wikipedia](https://en.wikipedia.org/wiki/Black_Dog_(Led_Zeppelin_song))
 Carly Rose | [Long Live](https://www.youtube.com/watch?v=TI4g93b_5_s) by Taylor Swift | 2010 per [Wikipedia](https://en.wikipedia.org/wiki/Long_Live_(Taylor_Swift_song))
 Jacqueline Shaia | [Iris](https://www.youtube.com/watch?v=NdYWuo9OFAw) by Goo Goo Dolls | 1998 per [Wikipedia](https://en.wikipedia.org/wiki/Iris_(song))
