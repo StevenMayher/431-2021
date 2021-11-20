@@ -33,7 +33,12 @@ Now that you've completed [Project B registration](https://thomaselove.github.io
 ## Announcements
 
 1. Here's a list of [favorite songs of students in 431](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md).
-2. More to come.
+2. Today, we're discussing (among other things) multiple imputation in R using the `mice` package. You may be interested in some additional reading on this subject, especially since I don't have much to say about multiple imputation in the 431 Course Notes.
+    - [Getting Started with Multiple Imputation in R](https://data.library.virginia.edu/getting-started-with-multiple-imputation-in-r/) by Aycan Katitas at the University of Virginia from 2019 is a nice option, using `mice`.
+    - [mice: Multivariate Imputation by Chained Equations in R](https://www.jstatsoft.org/article/view/v045i03) by Stef van Buuren and Karin Groothuis-Oudshoorn in the *Journal of Statistical Software* is a key academic reference.
+    - [How Do I perform multiple imputation using predictive mean matching in R?](https://stats.idre.ucla.edu/r/faq/how-do-i-perform-multiple-imputation-using-predictive-mean-matching-in-r/) from the UCLA Statistical Consulting group is quite helpful.
+    - [Imputing missing data with R; MICE package](https://datascienceplus.com/imputing-missing-data-with-r-mice-package/) by Michy Alice in 2015, then updated in 2018 may also be helpful for you.
+    - A brief tutorial on [Handling missing data with MICE package; a simple approach](https://datascienceplus.com/handling-missing-data-with-mice-package-a-simple-approach/) from DataScience+ in 2017.
 
 ## One Last Thing
 
