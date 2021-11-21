@@ -6,7 +6,7 @@ Quiz | Instructions | Deadline | Results
 :---: | :---: | :---: | :----:
 Quiz 1 | [materials are here](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz1) | see [Course Calendar](https://thomaselove.github.io/431/calendar.html) | [PDF of Quiz 1 Results](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz1/quiz1_and_sketch.pdf)
 Quiz 2 | [materials are here](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz2) | see [Course Calendar](https://thomaselove.github.io/431/calendar.html) | [PDF of Quiz 2 Results](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz2/quiz2_sketch_with_results.pdf)
-Quiz 3 | to appear on 2021-11-19 | see [Course Calendar](https://thomaselove.github.io/431/calendar.html) | --
+Quiz 3 | [materials are here](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) | see [Course Calendar](https://thomaselove.github.io/431/calendar.html) | --
 
 The "Instructions" for each Quiz will include:
 

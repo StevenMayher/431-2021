@@ -9,13 +9,20 @@ Lab | Assignment | Answer Sketch/Grading Rubric | Feedback to [Grading Roster](h
 03 | [Lab 03 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab03) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab03/sketch/lab03_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab03/sketch/lab03_sketch.Rmd) | posted 2021-10-05
 04 | [Lab 04 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab04) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/sketch/lab04_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/sketch/lab04_sketch.Rmd) | posted 2021-10-18
 05 | [Lab 05 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab05/sketch/lab05_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab05/sketch/lab05_sketch.Rmd) | posted 2021-10-25
-06 | [Lab 06 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab06) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab06/sketch/lab06_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab06/sketch/lab06_sketch.Rmd) | to be posted 2021-11-16
-07 | [Lab 07 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab07) | To appear 2021-11-16 | to be posted 2021-11-23
-X | [Lab X Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) | 
+06 | [Lab 06 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab06) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab06/sketch/lab06_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab06/sketch/lab06_sketch.Rmd) | posted 2021-11-16
+07 | [Lab 07 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab07) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab07/sketch/lab07_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab07/sketch/lab07_sketch.Rmd) | to be posted 2021-11-23
+
+## Bonus Assignments (optional)
+
+Lab | Instructions | Deadline
+---: | ----------- | ---------
+X | [Lab X Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) | optional: due 2021-12-10 at noon
+Y | [Lab Y Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) | optional: due 2021-12-10 at noon
+Z | [Lab Z Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) | optional: due 2021-12-10 at noon
 
 ## Grading
 
-All labs are graded by the TAs and then reviewed by Dr. Love. Your grades will be available approximately one week after the deadline for each Lab. 
+Labs 1-7 are graded by the TAs and then reviewed by Dr. Love. Your grades will be available approximately one week after the deadline for each Lab. 
 
 **Grades on Labs** (and our records about minute papers) will be found in the [Course Grading Roster](https://bit.ly/431-2021-grades) that will appear in September.
 
