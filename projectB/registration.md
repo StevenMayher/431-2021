@@ -10,7 +10,7 @@ Last Update **10:30 AM 2021-11-22**: **56/60 forms submitted**
 
 Code | Investigator | Data Source | *Outcome* | *Count*
 :----: | :------: | :-----: | :-----: | :-----:
-101 | Graham Akeson | NHANES 2017-18 | Median systolic blood pressure from the 4 readings taken | 1306
+101 | Graham Akeson | NHANES 2017-18 | Median SBP from the 4 readings taken | 1306
 107 | Allison Bode | NHANES 2017-18 | BMXWT - Weight (kg) | 1626
 110 | Michael Douglass | NHANES 2017-18 | Blood Lead Levels (LBXBPB) from `PBCD_J` data, in micrograms per dl | 4578
 112 | (Ava) Cong Fan | NHANES 2017-18 | LDL cholesterol using NIH Equation 2 (mg/dL) | 1858
