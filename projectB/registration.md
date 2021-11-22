@@ -8,28 +8,30 @@ Last Update **10:30 AM 2021-11-22**: **56/60 forms submitted**
 
 ## Individual Investigators from whom I've Received the Form
 
-Code | Investigator | Data Source
-:----: | :------: | :-----:
-101 | Graham Akeson | NHANES 2017-18
-107 | Allison Bode | NHANES 2017-18
-110 | Michael Douglass | NHANES 2017-18
-112 | (Ava) Cong Fan | NHANES 2017-18
-113 | Aaron Fletcher | NHANES 2017-18
-117 | Kyaw Oo Hla | NHANES 2017-18
-119 | Zahin Islam | NHANES 2017-18
-122 | Christopher Jones | NHANES 2017-18
-124 | Fumi Kong | NHANES 2017-18
-129 | Rock Lim | NHANES 2017-18
-143 | Alex Olejko | NHANES 2017-18
-145 | Thomas Raffay | [STOP-ROP](https://urresearch.rochester.edu/institutionalPublicationPublicView.action?institutionalItemId=2908)
-147 | Jacob Rich | [FBI Uniform Crime Reporting](https://www.openicpsr.org/openicpsr/project/102263/version/V11/view;jsessionid=8FD9161D75FD2833EC5F7B631753540D)
-149 | Himani Sancheti | NHANES 2017-18
-151 | Maryssa Shanteau-Jackson | NHANES 2017-18
-153 | Ria Tilve | NHANES 2017-18
-156 | Olivia Wilcox | NHANES 2017-18
-157 | Ying Xiong | NHANES 2017-18
-162 | Ziyin Zhao | NHANES 2017-18
-163 | Audrey Zhu | NHANES 2017-18
+Code | Investigator | Data Source | *Outcome* | *Count*
+:----: | :------: | :-----: | :-----: | :-----:
+101 | Graham Akeson | NHANES 2017-18 | Median systolic blood pressure from the 4 readings taken | 1306
+107 | Allison Bode | NHANES 2017-18 | BMXWT - Weight (kg) | 1626
+110 | Michael Douglass | NHANES 2017-18 | Blood Lead Levels (LBXBPB) from `PBCD_J` data, in micrograms per dl | 4578
+112 | (Ava) Cong Fan | NHANES 2017-18 | LDL cholesterol using NIH Equation 2 (mg/dL) | 1858
+113 | Aaron Fletcher | NHANES 2017-18 | Total cholesterol (mg/dL) | ?
+117 | Kyaw Oo Hla | NHANES 2017-18 | BMXWT - Weight (kg) | 4222
+119 | Zahin Islam | NHANES 2017-18 | ? | ?
+122 | Christopher Jones | NHANES 2017-18 | BMXWT - Weight (kg) | 5447
+124 | Fumi Kong | NHANES 2017-18 | BPD035 (Age told had hypertension) | 1858
+129 | Rock Lim | NHANES 2017-18 | Body mass index (BMXBMI) | 2810
+143 | Alex Olejko | NHANES 2017-18 | Body mass index (BMXBMI) | 4490
+145 | Thomas Raffay | [STOP-ROP](https://urresearch.rochester.edu/institutionalPublicationPublicView.action?institutionalItemId=2908) | ? | ?
+147 | Jacob Rich | [FBI Uniform Crime Reporting](https://www.openicpsr.org/openicpsr/project/102263/version/V11/view;jsessionid=8FD9161D75FD2833EC5F7B631753540D) | ? | ?
+149 | Himani Sancheti | NHANES 2017-18 | Total abdominal fat mass | 2306
+151 | Maryssa Shanteau-Jackson | NHANES 2017-18 | Total cholesterol (LBXTC) | 1684
+153 | Ria Tilve | NHANES 2017-18 | Cholesterol, refrigerated serum (mg/dL) (LBXSCH) | 1680
+156 | Olivia Wilcox | NHANES 2017-18 | Amount of caffeine consumed on average (mg) | 7034
+157 | Ying Xiong | NHANES 2017-18 | BMXWT - Weight (kg) | 3921
+162 | Ziyin Zhao | NHANES 2017-18 | LDL Cholesterol | 2808
+163 | Audrey Zhu | NHANES 2017-18 | BPXSY1 (First SBP reading) | 6240
+
+*Observations* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
 
 ## Teams of Two Investigators with Both Forms Received
 
@@ -54,4 +56,4 @@ Code | Investigator | Partner | Data Source
 248 | Carly Rose | Diya Yang | NHANES 2017-18
 252 | Neeti Shirke | Sneha Yamsani | NHANES 2017-18
 
-
+*
