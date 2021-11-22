@@ -2,11 +2,11 @@
 
 Last Update `1:15 PM 2021-11-22`: **59/60** forms submitted
 
-## People I've Yet To Receive the Form From
+## People Yet to Submit the Form
 
 - Drake McFaul
 
-## Revisions
+## Revisions: An Email will come to you by Tuesday mid-day if a revision to your project B registration is required
 
 - Those with names in **bold type** will need to revise the form before noon on Saturday to fix the issue(s) indicated by the question mark(s). Please wait until you receive an email request from Dr. Love specifying what you need to do before revising your form.
 
