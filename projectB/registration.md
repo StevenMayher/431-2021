@@ -1,14 +1,13 @@
 # Project B Registration
 
-Last Update `1:15 PM 2021-11-22`: **59/60** forms submitted
+Last Update `3:45 PM 2021-11-22`: **60/60** forms submitted
 
-## People Yet to Submit the Form
+## Revisions: An Email will come to you by Tuesday mid-day describing what revisions to your project B registration are required
 
-- Drake McFaul
+- Please wait until you receive an email request from Dr. Love specifying what you need to do before revising your form.
+- The revisions will be due on Saturday at noon.
 
-## Revisions: An Email will come to you by Tuesday mid-day if a revision to your project B registration is required
-
-- Those with names in **bold type** will need to revise the form before noon on Saturday to fix the issue(s) indicated by the question mark(s). Please wait until you receive an email request from Dr. Love specifying what you need to do before revising your form.
+# The rest of this page will be replaced by Tuesday mid-day.
 
 ## Individual Investigators NOT using NHANES 2017-18 data
 
