@@ -35,38 +35,39 @@ Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
 162 | **Ziyin Zhao** | NHANES 2017-18 | LDL Cholesterol | 2808 | ? liver ultrasound transient elastography exam status
 163 | Audrey Zhu | NHANES 2017-18 | BPXSY1 (First SBP reading) | 6240 | Body Weight (BMXWT)
 
-- *Outcome* = planned quantitative outcome for study 2
+- *Outcome* = What outcome do you plan to use in Study 2? 
 - *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
+- *Key Predictor* = What is the key predictor of your outcome that you plan to use in Study 2?
 
-## Teams of Two Investigators with Both Forms Received
+## Teams of Two Investigators with Both Forms Received using NHANES 2017-18 Data
 
-Code | Investigator | Partner | Data Source | *Outcome* | *Count*
-:----: | :------: | :-----: | :-----: | :----: | :----:
-202 | Paula Ambrose | Tyler Petrie | NHANES 2017-18 | ? | ?
-203 | Kiran Desai | Grace Armstrong | NHANES 2017-18 | Age you were told you have hypertension | ?
-204 | Abigail Basson | Alise Carlson | NHANES 2017-18 | Body mass index (BMXBMI) | 4811
-205 | Avantika Bhaduri | Anushree Iyangar | NHANES 2017-18 | Birth weight (ECD070A) | 3035
-206 | Cerag Oguztuzun | Abhishek Bhardwaj | NHANES 2017-18 | Age started smoking cigarettes regularly | 1458
-211 | Raunak Nair | Siddharth Dugar | NHANES 2017-18 | Liver stiffness (LUXSMED) | ?
-214 | Megan Foradori | Ryan McMaster | NHANES 2017-18 | Blood lead (LBDBPBSI) | 5441
-215 | Zi Jie (Jay) Wei | Scarlett He | NHANES 2017-18 | ? | ?
-218 | Erika Hutt | Alan Kiang | NHANES 2017-18 | ? | ? 
-220 | Jeeda Ismail | Makaela Mews | NHANES 2017-18 | Visceral adipose tissue mass (DXXVFATM) | 1224
-225 | Jacqueline Shaia | Benjamin Kramer | NHANES 2017-18 | Hemoglobin A1c (LBXGH) | 527
-227 | Kristi Lin-Rahardja | Nick Latina | NHANES 2017-18 | Hours of sleep, weekdays | 5480
-228 | Gen Li | Jiayue Yang | NHANES 2017-18 | ? | 707
-231 | Sarah Nock | Harrison Lindley | NHANES 2017-18 | ? | ?
-232 | Shruti Raghunathan | Norman Luc | NHANES 2017-18 | Segmented neutrophils percent | 2227
-233 | Anna Magoline | Steven Mayher | NHANES 2017-18 | ? | ?
-248 | Carly Rose | Diya Yang | NHANES 2017-18 | LDL Cholesterol (LBDLDL) by Friedewald equation | 2566
-252 | Neeti Shirke | Sneha Yamsani | NHANES 2017-18 | Hemoglobin A1c (LBXGH) | 1034
+Code | Investigator | Partner | Outcome* | *Count* | *Key Predictor*
+:----: | :------: | :-----: | :----: | :----: | :-----:
+202 | Paula Ambrose | Tyler Petrie | ? | ?
+203 | Kiran Desai | Grace Armstrong | Age you were told you have hypertension | ?
+204 | Abigail Basson | Alise Carlson | Body mass index (BMXBMI) | 4811
+205 | Avantika Bhaduri | Anushree Iyangar | Birth weight (ECD070A) | 3035
+206 | Cerag Oguztuzun | Abhishek Bhardwaj | Age started smoking cigarettes regularly | 1458
+211 | Raunak Nair | Siddharth Dugar | Liver stiffness (LUXSMED) | ?
+214 | Megan Foradori | Ryan McMaster | Blood lead (LBDBPBSI) | 5441
+215 | Zi Jie (Jay) Wei | Scarlett He | ? | ?
+218 | Erika Hutt | Alan Kiang | ? | ? 
+220 | Jeeda Ismail | Makaela Mews | Visceral adipose tissue mass (DXXVFATM) | 1224
+225 | Jacqueline Shaia | Benjamin Kramer | Hemoglobin A1c (LBXGH) | 527
+227 | Kristi Lin-Rahardja | Nick Latina | Hours of sleep, weekdays | 5480
+228 | Gen Li | Jiayue Yang | ? | 707
+231 | Sarah Nock | Harrison Lindley | ? | ?
+232 | Shruti Raghunathan | Norman Luc | Segmented neutrophils percent | 2227
+233 | Anna Magoline | Steven Mayher | ? | ?
+248 | Carly Rose | Diya Yang | LDL Cholesterol (LBDLDL) by Friedewald equation | 2566
+252 | Neeti Shirke | Sneha Yamsani | Hemoglobin A1c (LBXGH) | 1034
 
 ## Teams of Two Investigators with One Form Received
 
-Code | Investigator | Partner | Data Source | *Outcome* | *Count*
+Code | Investigator | Partner | *Outcome* | *Count* | *Key Predictor*
 :----: | :------: | :-----: | :-----: | :----: | :----:
-235 | Cyrus Nosrati | *Drake McFaul* | NHANES 2017-18 | Body mass index (BMXBMI) | 5093
+235 | Cyrus Nosrati | *Drake McFaul* | Body mass index (BMXBMI) | 5093
 
-- *Outcome* = planned quantitative outcome for study 2
+- *Outcome* = What outcome do you plan to use in Study 2? 
 - *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
-
+- *Key Predictor* = What is the key predictor of your outcome that you plan to use in Study 2?
