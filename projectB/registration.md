@@ -1,6 +1,6 @@
 # Project B Registration
 
-Last Update **10:30 AM 2021-11-22**: **56/60 forms submitted**
+Last Update `11:00 AM 2021-11-22`: **56/60 forms submitted**
 
 ## People I've Yet To Receive the Form From
 
@@ -31,12 +31,13 @@ Code | Investigator | Data Source | *Outcome* | *Count*
 162 | Ziyin Zhao | NHANES 2017-18 | LDL Cholesterol | 2808
 163 | Audrey Zhu | NHANES 2017-18 | BPXSY1 (First SBP reading) | 6240
 
-*Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
+- *Outcome* = planned quantitative outcome for study 2
+- *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
 
 ## Teams of Two Investigators with Both Forms Received
 
-Code | Investigator | Partner | Data Source
-:----: | :------: | :-----: | :-----: 
+Code | Investigator | Partner | Data Source | *Outcome* | *Count*
+:----: | :------: | :-----: | :-----: | :----: | :----:
 202 | Paula Ambrose | Tyler Petrie | NHANES 2017-18
 203 | Kiran Desai | Grace Armstrong | NHANES 2017-18
 204 | Abigail Basson | Alise Carlson | NHANES 2017-18
@@ -56,4 +57,6 @@ Code | Investigator | Partner | Data Source
 248 | Carly Rose | Diya Yang | NHANES 2017-18
 252 | Neeti Shirke | Sneha Yamsani | NHANES 2017-18
 
-*
+- *Outcome* = planned quantitative outcome for study 2
+- *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
+
