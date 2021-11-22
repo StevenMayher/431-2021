@@ -43,30 +43,30 @@ Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
 
 Code | Investigator | Partner | Outcome* | *Count* | *Key Predictor*
 :----: | :------: | :-----: | :----: | :----: | :-----:
-202 | Paula Ambrose | Tyler Petrie | ? | ?
-203 | Kiran Desai | Grace Armstrong | Age you were told you have hypertension | ?
-204 | Abigail Basson | Alise Carlson | Body mass index (BMXBMI) | 4811
-205 | Avantika Bhaduri | Anushree Iyangar | Birth weight (ECD070A) | 3035
-206 | Cerag Oguztuzun | Abhishek Bhardwaj | Age started smoking cigarettes regularly | 1458
-211 | Raunak Nair | Siddharth Dugar | Liver stiffness (LUXSMED) | ?
-214 | Megan Foradori | Ryan McMaster | Blood lead (LBDBPBSI) | 5441
-215 | Zi Jie (Jay) Wei | Scarlett He | ? | ?
-218 | Erika Hutt | Alan Kiang | ? | ? 
-220 | Jeeda Ismail | Makaela Mews | Visceral adipose tissue mass (DXXVFATM) | 1224
-225 | Jacqueline Shaia | Benjamin Kramer | Hemoglobin A1c (LBXGH) | 527
-227 | Kristi Lin-Rahardja | Nick Latina | Hours of sleep, weekdays | 5480
-228 | Gen Li | Jiayue Yang | ? | 707
-231 | Sarah Nock | Harrison Lindley | ? | ?
-232 | Shruti Raghunathan | Norman Luc | Segmented neutrophils percent | 2227
-233 | Anna Magoline | Steven Mayher | ? | ?
-248 | Carly Rose | Diya Yang | LDL Cholesterol (LBDLDL) by Friedewald equation | 2566
-252 | Neeti Shirke | Sneha Yamsani | Hemoglobin A1c (LBXGH) | 1034
+202 | **Paula Ambrose** | **Tyler Petrie** | ? | ? | ?
+203 | **Kiran Desai** | **Grace Armstrong** | Age you were told you have hypertension | ? | Income-to-poverty ratio (INDFMPIR)
+204 | Abigail Basson | Alise Carlson | Body mass index (BMXBMI) | 4811 | General Health (HSD010) 
+205 | **Avantika Bhaduri** | **Anushree Iyangar** | Birth weight (ECD070A) | 3035 | ? (Need non-binary key predictor)
+206 | **Cerag Oguztuzun** | **Abhishek Bhardwaj** | Age started smoking cigarettes regularly | 1458 | ? (Need non-binary key predictor)
+211 | **Raunak Nair** | **Siddharth Dugar** | Liver stiffness (LUXSMED) | ? | Frequency of alcohol consumption (ALQ121)
+214 | Megan Foradori | Ryan McMaster | Blood lead (LBDBPBSI) | 5441 | Annual Family Income (INDFMIN2)
+215 | **Zi Jie (Jay) Wei** | **Scarlett He** | ? | ? | Vitamin C level from Lab data
+218 | **Erika Hutt** | **Alan Kiang** | ? | ? | ? (Need non-binary key predictor)
+220 | Jeeda Ismail | Makaela Mews | Visceral adipose tissue mass (DXXVFATM) | 1224 | Minutes Sedentary Activity (PAD680)
+225 | **Jacqueline Shaia** | **Benjamin Kramer** | Hemoglobin A1c (LBXGH) | 527 | ?
+227 | **Kristi Lin-Rahardja** | **Nick Latina** | Hours of sleep, weekdays | 5480 | ? Worry about running out of food (from FSQ_J data set)
+228 | **Gen Li** | **Jiayue Yang** | ? | 707 | Annual Family Income (INDFMIN2)
+231 | **Sarah Nock** | **Harrison Lindley** | ? | ? | Hours Worked last week (OCQ180)
+232 | Shruti Raghunathan | Norman Luc | Segmented neutrophils percent | 2227 | Days of moderate exercise per week
+233 | **Anna Magoline** | **Steven Mayher** | ? | ? | ?
+248 | Carly Rose | Diya Yang | LDL Cholesterol (LBDLDL) by Friedewald equation | 2566 | Total Saturated Fats (DR1TSFAT)
+252 | Neeti Shirke | Sneha Yamsani | Hemoglobin A1c (LBXGH) | 1034 | Triglyceride measurement (mg/dl)
 
 ## Teams of Two Investigators with One Form Received
 
 Code | Investigator | Partner | *Outcome* | *Count* | *Key Predictor*
 :----: | :------: | :-----: | :-----: | :----: | :----:
-235 | Cyrus Nosrati | *Drake McFaul* | Body mass index (BMXBMI) | 5093
+235 | **Cyrus Nosrati** | **Drake McFaul** | Body mass index (BMXBMI) | 5093 | ? Days feeling down, depressed, or hopeless in the past two weeks broken into four categories.
 
 - *Outcome* = What outcome do you plan to use in Study 2? 
 - *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
