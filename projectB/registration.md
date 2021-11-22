@@ -23,7 +23,7 @@ Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
 
 ## Individual Investigators using NHANES 2017-18 data
 
-Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
+Code | Investigator | *Outcome* | *Count* | *Key Predictor*
 :----: | :------: | :-----: | :-----: | :-----: | :------:
 101 | **Graham Akeson** | ? | 1306 | Age at survey
 107 | Allison Bode | Body Weight (BMXWT) | 1626 | Arm Circumference (BMXARMC)
