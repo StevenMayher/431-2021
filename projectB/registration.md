@@ -31,7 +31,7 @@ Code | Investigator | Data Source | *Outcome* | *Count*
 162 | Ziyin Zhao | NHANES 2017-18 | LDL Cholesterol | 2808
 163 | Audrey Zhu | NHANES 2017-18 | BPXSY1 (First SBP reading) | 6240
 
-*Observations* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
+*Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
 
 ## Teams of Two Investigators with Both Forms Received
 
