@@ -19,7 +19,7 @@ Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
 
 - *Outcome* = What outcome do you plan to use in Study 2? 
 - *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
-- *Key Predictor* = What is the key predictor of your outcome that you plan to use in Study 2?
+- *Key Predictor* = What is the key predictor of your outcome that you plan to use in Study 2? Note that this must not be a **binary** predictor.
 
 ## Individual Investigators using NHANES 2017-18 data
 
@@ -48,7 +48,7 @@ Code | Investigator | *Outcome* | *Count* | *Key Predictor*
 
 - *Outcome* = What outcome do you plan to use in Study 2? 
 - *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
-- *Key Predictor* = What is the key predictor of your outcome that you plan to use in Study 2?
+- *Key Predictor* = What is the key predictor of your outcome that you plan to use in Study 2? Note that this must not be a **binary** predictor.
 
 ## Teams of Two Investigators (All are using NHANES 2017-18 data)
 
@@ -76,6 +76,6 @@ Code | Investigator | Partner | Outcome* | *Count* | *Key Predictor*
 248 | Carly Rose | Diya Yang | LDL Cholesterol (LBDLDL) by Friedewald equation | 2566 | Total Saturated Fats (DR1TSFAT)
 252 | Neeti Shirke | Sneha Yamsani | Hemoglobin A1c (LBXGH) | 1034 | Triglyceride measurement (mg/dl)
 
-- *Outcome* = What outcome do you plan to use in Study 2? 
-- *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
-- *Key Predictor* = What is the key predictor of your outcome that you plan to use in Study 2?
+- *Outcome* = What outcome do you plan to use in Study 2? Note that this must be a quantitative variable, with at least 15 unique values observed in your data, not including things like "Refused" or "Don't Know" (which should each be treated as NA) or "Missing" (also NA, of course).
+- *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2? Your response should provide the number of observations that have complete data on the complete set of **your Study 2 variables**, not a separate accounting for each variable.
+- *Key Predictor* = What is the key predictor of your outcome that you plan to use in Study 2? Note that this must not be a **binary** predictor.
