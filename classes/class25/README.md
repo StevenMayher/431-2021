@@ -19,7 +19,7 @@ Now that you've completed [Project B registration](https://thomaselove.github.io
 2. The Schedule for Project B oral presentations will be posted. **Details to come.** 
     - Please note the date and time of your presentation, and contact Dr. Love via email immediately if there are any issues.
     - See the [Project B Checklist](https://thomaselove.github.io/431-2021-projectB/checklist.html) for more on what to expect during your presentation.
-3. All other items are due at the same time: **NOON on Friday 2021-12-10**
+3. All other items for Dr. Love are due at the same time: **NOON on Friday 2021-12-10**
     - Final [Project B](https://thomaselove.github.io/431-2021-projectB/) materials.
         - This includes R Markdown and HTML files for Study 1 and for Study 2, submitted through [Canvas](https://canvas.case.edu/)
         - All students must also complete the [Self-Evaluation Form](https://thomaselove.github.io/431-2021-projectB/self_eval.html), which will be posted **in early December**.
@@ -29,11 +29,15 @@ Now that you've completed [Project B registration](https://thomaselove.github.io
     - Optional [Lab Y](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) (visualizing the [amplified (2021-10-16) favorite movies data set](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies#new-and-amplified-data-set) in a graph)
     - Optional [Lab Z](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) (building a table [with the gt package](https://gt.rstudio.com/) for the [movies data](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies#new-and-amplified-data-set))
     - Optional [Lab Regrade Request Form](https://bit.ly/431-2021-lab-regrade-requests) (see [details here](https://github.com/THOMASELOVE/431-2021/tree/main/labs#grading-errors-and-regrade-requests) and in [this section of the Syllabus](https://thomaselove.github.io/431-2021-syllabus/deliverables-assignments.html#appeal-policy---request-a-review-in-december))
+4. Your CWRU Course Evaluation for 431 is due by midnight on Wednesday December 15. Take it any time at https://webapps.case.edu/courseevals/, although I'd prefer that you wait to do this until **after** your project presentation.
 
 ## Announcements
 
-1. Here's a list of [favorite songs of students in 431](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md).
-2. Today, we're discussing (among other things) multiple imputation in R using the `mice` package. You may be interested in some additional reading on this subject, especially since I don't have much to say about multiple imputation in the 431 Course Notes.
+1. Grades and feedback on [Lab 7](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab07) are now available on the [Course Grading Roster](https://bit.ly/431-2021-grades). 
+    - See above for details on the [Lab Regrade Request Form](https://bit.ly/431-2021-lab-regrade-requests) for any of Labs 1-7.
+    - We posted four nice essays written in response to Question 8 on our Shared Drive in the 431 Lab 7 Examples document. I encourage you to read them.
+2. Here's a list of [favorite songs of students in 431](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md).
+3. Today, we're discussing (among other things) multiple imputation in R using the `mice` package. You may be interested in some additional reading on this subject, especially since I don't have much to say about multiple imputation in the 431 Course Notes.
     - [Getting Started with Multiple Imputation in R](https://data.library.virginia.edu/getting-started-with-multiple-imputation-in-r/) by Aycan Katitas at the University of Virginia from 2019 is a nice starting point.
     - [mice: Multivariate Imputation by Chained Equations in R](https://www.jstatsoft.org/article/view/v045i03) by Stef van Buuren and Karin Groothuis-Oudshoorn in the *Journal of Statistical Software* is a key academic reference.
     - [How Do I perform multiple imputation using predictive mean matching in R?](https://stats.idre.ucla.edu/r/faq/how-do-i-perform-multiple-imputation-using-predictive-mean-matching-in-r/) from the UCLA Statistical Consulting group is quite helpful.
