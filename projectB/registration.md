@@ -42,7 +42,7 @@ Code | Investigator | Partner | Form(s) Received | Form(s) Reviewed | Data Sourc
 206 | Cerag Oguztuzun | Abhishek Bhardwaj | Yes, from both | Not yet | NHANES 2017-18
 211 | Raunak Nair | Siddharth Dugar | Yes, from both | Not yet | NHANES 2017-18
 214 | Megan Foradori | Ryan McMaster | Yes, from both | Not yet | NHANES 2017-18
-215 | Jay Wei | Scarlett He | Yes, from both | Not yet | NHANES 2017-18
+215 | Zi Jie (Jay) Wei | Scarlett He | Yes, from both | Not yet | NHANES 2017-18
 218 | Erika Hutt | Alan Kiang | Yes, from both | Not yet | NHANES 2017-18
 220 | Jeeda Ismail | Makaela Mews | Yes, from both | Not yet | NHANES 2017-18
 225 | Jacqueline Shaia | Benjamin Kramer | Yes, from both | Not yet | NHANES 2017-18
