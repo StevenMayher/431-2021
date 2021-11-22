@@ -11,7 +11,7 @@ Last Update `1:15 PM 2021-11-22`: **59/60** forms submitted
 - Those with names in **bold type** need to revise the form before noon on Saturday to fix the issue(s) indicated by the question mark
 
 Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
-:----: | :------: | :-----: | :-----: | :-----:
+:----: | :------: | :-----: | :-----: | :-----: | :------:
 101 | **Graham Akeson** | NHANES 2017-18 | ? | 1306 | Age at survey
 107 | Allison Bode | NHANES 2017-18 | Body Weight (BMXWT) | 1626 | Arm Circumference (BMXARMC)
 110 | **Michael Douglass** | NHANES 2017-18 | Blood Lead Level (LBXBPB) | 4578 | Income-to-poverty ratio (INDFMPIR)
