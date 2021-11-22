@@ -6,9 +6,22 @@ Last Update `1:15 PM 2021-11-22`: **59/60** forms submitted
 
 - Drake McFaul
 
-## Individual Investigators from whom I've Received the Form
+## Revisions
 
-- Those with names in **bold type** need to revise the form before noon on Saturday to fix the issue(s) indicated by the question mark
+- Those with names in **bold type** will need to revise the form before noon on Saturday to fix the issue(s) indicated by the question mark(s). Please wait until you receive an email request from Dr. Love specifying what you need to do before revising your form.
+
+## Individual Investigators NOT using NHANES 2017-18 data
+
+Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
+:----: | :------: | :-----: | :-----: | :-----: | :------:
+145 | **Thomas Raffay** | [STOP-ROP](https://urresearch.rochester.edu/institutionalPublicationPublicView.action?institutionalItemId=2908) | ? | ? | Birth weight (g)
+147 | **Jacob Rich** | [FBI Uniform Crime Reporting](https://www.openicpsr.org/openicpsr/project/102263/version/V11/view;jsessionid=8FD9161D75FD2833EC5F7B631753540D) | ? | ? | ?
+
+- *Outcome* = What outcome do you plan to use in Study 2? 
+- *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
+- *Key Predictor* = What is the key predictor of your outcome that you plan to use in Study 2?
+
+## Individual Investigators using NHANES 2017-18 data
 
 Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
 :----: | :------: | :-----: | :-----: | :-----: | :------:
@@ -25,8 +38,6 @@ Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
 129 | **Rock Lim** | NHANES 2017-18 | Body mass index (BMXBMI) | 2810 | ? (Need non-binary key predictor)
 137 | Luis Mesias Flores | NHANES 2017-18 | BPXSY1 (First SBP reading) | 1620 | HDL cholesterol (LBDHDD)
 143 | Alex Olejko | NHANES 2017-18 | Body mass index (BMXBMI) | 4490 | Household Income (4 categories)
-145 | **Thomas Raffay** | [STOP-ROP](https://urresearch.rochester.edu/institutionalPublicationPublicView.action?institutionalItemId=2908) | ? | ? | Birth weight (g)
-147 | **Jacob Rich** | [FBI Uniform Crime Reporting](https://www.openicpsr.org/openicpsr/project/102263/version/V11/view;jsessionid=8FD9161D75FD2833EC5F7B631753540D) | ? | ? | ?
 149 | Himani Sancheti | NHANES 2017-18 | Total abdominal fat mass | 2306 | Depression Screen (DPQ020)
 151 | Maryssa Shanteau-Jackson | NHANES 2017-18 | Total cholesterol (LBXTC) | 1684 | Income-to-poverty ratio (INDFMPIR)
 153 | Ria Tilve | NHANES 2017-18 | Cholesterol, refrigerated serum (mg/dL) (LBXSCH) | 1680 | Total femur BMD (DXXOFBMD)
@@ -39,7 +50,9 @@ Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
 - *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
 - *Key Predictor* = What is the key predictor of your outcome that you plan to use in Study 2?
 
-## Teams of Two Investigators with Both Forms Received using NHANES 2017-18 Data
+## Teams of Two Investigators (All are using NHANES 2017-18 data)
+
+- Those with names in **bold type** will need to revise the form before noon on Saturday to fix the issue(s) indicated by the question mark(s). Please wait until you receive an email request from Dr. Love specifying what you need to do before revising your form.
 
 Code | Investigator | Partner | Outcome* | *Count* | *Key Predictor*
 :----: | :------: | :-----: | :----: | :----: | :-----:
@@ -59,14 +72,9 @@ Code | Investigator | Partner | Outcome* | *Count* | *Key Predictor*
 231 | **Sarah Nock** | **Harrison Lindley** | ? | ? | Hours Worked last week (OCQ180)
 232 | Shruti Raghunathan | Norman Luc | Segmented neutrophils percent | 2227 | Days of moderate exercise per week
 233 | **Anna Magoline** | **Steven Mayher** | ? | ? | ?
+235 | **Cyrus Nosrati** | **Drake McFaul** | Body mass index (BMXBMI) | 5093 | ? Days feeling down, depressed, or hopeless in the past two weeks broken into four categories.
 248 | Carly Rose | Diya Yang | LDL Cholesterol (LBDLDL) by Friedewald equation | 2566 | Total Saturated Fats (DR1TSFAT)
 252 | Neeti Shirke | Sneha Yamsani | Hemoglobin A1c (LBXGH) | 1034 | Triglyceride measurement (mg/dl)
-
-## Teams of Two Investigators with One Form Received
-
-Code | Investigator | Partner | *Outcome* | *Count* | *Key Predictor*
-:----: | :------: | :-----: | :-----: | :----: | :----:
-235 | **Cyrus Nosrati** | **Drake McFaul** | Body mass index (BMXBMI) | 5093 | ? Days feeling down, depressed, or hopeless in the past two weeks broken into four categories.
 
 - *Outcome* = What outcome do you plan to use in Study 2? 
 - *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
