@@ -6,7 +6,7 @@
 
 Code | Student | Favorite Song with YouTube link | Year of Release
 ---: | :-------: | :---------------------------------------: | :-----:
-10 | Michael Douglass | [Time Moves Slow](https://www.youtube.com/watch?v=UWIIPX_5rbM) by BADBADNOTGOOD featuring Samuel T. Herring | 2016 per [Wikipedia](https://en.wikipedia.org/wiki/Time_Moves_Slow)
+10 | Michael Douglass | [Time Moves Slow](https://www.youtube.com/watch?v=UWIIPX_5rbM) by BADBADNOTGOOD feat. Samuel T. Herring | 2016 per [Wikipedia](https://en.wikipedia.org/wiki/Time_Moves_Slow)
 14 | Megan Foradori | [Fields of Gold](https://www.youtube.com/watch?v=KLVq0IAzh1A) by Sting | 1993 per [Wikipedia](https://en.wikipedia.org/wiki/Fields_of_Gold)
 15 | Scarlett He | [Mood](https://www.youtube.com/watch?v=GrAchTdepsU) by 24KGoldn | 2020 per [Wikipedia](https://en.wikipedia.org/wiki/Mood_(song))
 16 | Katie Heinzinger | [Golden Age](https://www.youtube.com/watch?v=2wTHxUl9WdQ) by TV on the Radio | 2008 per [Wikipedia](https://en.wikipedia.org/wiki/Golden_Age_(song))
