@@ -25,26 +25,26 @@ Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
 
 Code | Investigator | Data Source | *Outcome* | *Count* | *Key Predictor*
 :----: | :------: | :-----: | :-----: | :-----: | :------:
-101 | **Graham Akeson** | NHANES 2017-18 | ? | 1306 | Age at survey
-107 | Allison Bode | NHANES 2017-18 | Body Weight (BMXWT) | 1626 | Arm Circumference (BMXARMC)
-110 | **Michael Douglass** | NHANES 2017-18 | Blood Lead Level (LBXBPB) | 4578 | Income-to-poverty ratio (INDFMPIR)
-112 | (Ava) Cong Fan | NHANES 2017-18 | LDL cholesterol using NIH Equation 2 (mg/dL) | 1858 | HDL Cholesterol
-113 | **Aaron Fletcher** | NHANES 2017-18 | Total cholesterol (mg/dL) | ? | Glycated hemoglobin
-116 | Katie Heinzinger | NHANES 2017-18 | Hemoglobin A1c | 4374 | Hours slept on weekdays
-117 | Kyaw Oo Hla | NHANES 2017-18 | Body Weight (BMXWT) | 4222 | Pulse rate
-119 | **Zahin Islam** | NHANES 2017-18 | ? | ? | ?
-122 | Christopher Jones | NHANES 2017-18 | Body Weight (BMXWT) | 5447 | Money spent in supermarket/grocery
-124 | Fumi Kong | NHANES 2017-18 | BPD035 (Age told had hypertension) | 1858 | Salt use in food prep. (DRQSPREP)
-129 | **Rock Lim** | NHANES 2017-18 | Body mass index (BMXBMI) | 2810 | ? (Need non-binary key predictor)
-137 | Luis Mesias Flores | NHANES 2017-18 | BPXSY1 (First SBP reading) | 1620 | HDL cholesterol (LBDHDD)
-143 | Alex Olejko | NHANES 2017-18 | Body mass index (BMXBMI) | 4490 | Household Income (4 categories)
-149 | Himani Sancheti | NHANES 2017-18 | Total abdominal fat mass | 2306 | Depression Screen (DPQ020)
-151 | Maryssa Shanteau-Jackson | NHANES 2017-18 | Total cholesterol (LBXTC) | 1684 | Income-to-poverty ratio (INDFMPIR)
-153 | Ria Tilve | NHANES 2017-18 | Cholesterol, refrigerated serum (mg/dL) (LBXSCH) | 1680 | Total femur BMD (DXXOFBMD)
-156 | Olivia Wilcox | NHANES 2017-18 | Amount of caffeine consumed on average (mg) | 7034 | Body mass index (BMXBMI)
-157 | Ying Xiong | NHANES 2017-18 | BMXWT - Weight (kg) | 3921 | HDL cholesterol (LBDHDD)
-162 | **Ziyin Zhao** | NHANES 2017-18 | LDL Cholesterol | 2808 | ? liver ultrasound transient elastography exam status
-163 | Audrey Zhu | NHANES 2017-18 | BPXSY1 (First SBP reading) | 6240 | Body Weight (BMXWT)
+101 | **Graham Akeson** | ? | 1306 | Age at survey
+107 | Allison Bode | Body Weight (BMXWT) | 1626 | Arm Circumference (BMXARMC)
+110 | **Michael Douglass** | Blood Lead Level (LBXBPB) | 4578 | Income-to-poverty ratio (INDFMPIR)
+112 | (Ava) Cong Fan | LDL cholesterol using NIH Equation 2 (mg/dL) | 1858 | HDL Cholesterol
+113 | **Aaron Fletcher** | Total cholesterol (mg/dL) | ? | Glycated hemoglobin
+116 | Katie Heinzinger | Hemoglobin A1c | 4374 | Hours slept on weekdays
+117 | Kyaw Oo Hla | Body Weight (BMXWT) | 4222 | Pulse rate
+119 | **Zahin Islam** | ? | ? | ?
+122 | Christopher Jones | Body Weight (BMXWT) | 5447 | Money spent in supermarket/grocery
+124 | Fumi Kong | BPD035 (Age told had hypertension) | 1858 | Salt use in food prep. (DRQSPREP)
+129 | **Rock Lim** | Body mass index (BMXBMI) | 2810 | ? (Need non-binary key predictor)
+137 | Luis Mesias Flores | BPXSY1 (First SBP reading) | 1620 | HDL cholesterol (LBDHDD)
+143 | Alex Olejko | Body mass index (BMXBMI) | 4490 | Household Income (4 categories)
+149 | Himani Sancheti | Total abdominal fat mass | 2306 | Depression Screen (DPQ020)
+151 | Maryssa Shanteau-Jackson | Total cholesterol (LBXTC) | 1684 | Income-to-poverty ratio (INDFMPIR)
+153 | Ria Tilve | Cholesterol, refrigerated serum (mg/dL) (LBXSCH) | 1680 | Total femur BMD (DXXOFBMD)
+156 | Olivia Wilcox | Amount of caffeine consumed on average (mg) | 7034 | Body mass index (BMXBMI)
+157 | Ying Xiong | BMXWT - Weight (kg) | 3921 | HDL cholesterol (LBDHDD)
+162 | **Ziyin Zhao** | LDL Cholesterol | 2808 | ? liver ultrasound transient elastography exam status
+163 | Audrey Zhu | BPXSY1 (First SBP reading) | 6240 | Body Weight (BMXWT)
 
 - *Outcome* = What outcome do you plan to use in Study 2? 
 - *Count* = How many subjects in your data have complete information on the outcome variable as well as all of the predictor variables you plan to study in Study 2?
