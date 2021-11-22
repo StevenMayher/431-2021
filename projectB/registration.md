@@ -2,6 +2,19 @@
 
 Last Update **8 PM 2021-11-21**: **31 forms**
 
+## Individual Investigators from whom I've Received the Form
+
+Code | Investigator | Form Received | Form Reviewed
+:----: | :------: | :-----: | :---------:
+107 | Allison Bode | Yes | Not yet
+110 | Michael Douglass | Yes | Not yet
+117 | Kyaw Oo Hla | Yes | Not yet
+119 | Zahin Islam | Yes | Not yet
+129 | Rock Lim | Yes | Not yet
+145 | Thomas Raffay | Yes | Not yet
+151 | Maryssa Shanteau-Jackson | Yes | Not yet
+157 | Ying Xiong | Yes | Not yet
+
 ## Teams of Two Investigators with Both Forms Received
 
 Code | Investigator | Partner | Form(s) Received | Form(s) Reviewed
@@ -16,19 +29,6 @@ Code | Investigator | Partner | Form(s) Received | Form(s) Reviewed
 227 | Kristi Lin-Rahardja | Nick Latina | Yes, from both | Not yet
 231 | Sarah Nock | Harrison Lindley | Yes, from both | Not yet
 248 | Carly Rose | Diya Yang | Yes, from both | Not yet
-
-## Individual Investigators where I've Received the Form
-
-Code | Investigator | Form Received | Form Reviewed
-:----: | :------: | :-----: | :---------:
-107 | Allison Bode | Yes | Not yet
-110 | Michael Douglass | Yes | Not yet
-117 | Kyaw Oo Hla | Yes | Not yet
-119 | Zahin Islam | Yes | Not yet
-129 | Rock Lim | Yes | Not yet
-145 | Thomas Raffay | Yes | Not yet
-151 | Maryssa Shanteau-Jackson | Yes | Not yet
-157 | Ying Xiong | Yes | Not yet
 
 ## Teams of Two Investigators with One Form Received
 
