@@ -16,7 +16,8 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 Now that you've completed [Project B registration](https://thomaselove.github.io/431-2021-projectB/register.html) and [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) over Thanksgiving Break, here's what's left.
 
 1. There is a Minute Paper after Class 25 due Wednesday 2021-12-01 at noon. **Details to come.**
-2. The Schedule for Project B oral presentations will be posted. **Details to come.** 
+    - Visit https://bit.ly/431-2021-projectB-confirmation and fill out the form there by noon on Wednesday 2021-12-01.
+2. The Schedule for Project B oral presentations has been posted to our Shared Google Drive.
     - Please note the date and time of your presentation, and contact Dr. Love via email immediately if there are any issues.
     - See the [Project B Checklist](https://thomaselove.github.io/431-2021-projectB/checklist.html) for more on what to expect during your presentation.
 3. All other items for Dr. Love are due at the same time: **NOON on Friday 2021-12-10**
