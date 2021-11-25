@@ -47,6 +47,5 @@ Now that you've completed [Project B registration](https://thomaselove.github.io
 
 ## One Last Thing
 
-To come.
-
+RStudio began a new four part series last week to help you on the path to R Markdown success. The first post is called [R Markdown Lesser-Known Tips & Tricks #1: Working in the RStudio ID](https://www.rstudio.com/blog/r-markdown-tips-tricks-1-rstudio-ide/) by Brendan Cullen, Alison Hill and Isabella Velasquez.
 
