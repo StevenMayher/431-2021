@@ -4,7 +4,7 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class25/images/Murray_2021-11-04.png) 
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class25/figures/Murray_2021-11-04.png) 
 [Link to read the pieces](https://twitter.com/EpiEllie/status/1456252662505218054)
 
 ## Today's Slides
