@@ -12,5 +12,6 @@ All deadlines for 431 work, including this Lab, are posted in the [Course Calend
 ## After the Lab
 
 - Answer Sketch and Grading Rubric are now available [in PDF](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab07/sketch/lab07_sketch.pdf) and [in R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab07/sketch/lab07_sketch.Rmd).
-- Grades on the Lab will be posted to the Course Grading Roster one week after the deadline for the Lab.
+- Grades on the Lab are posted to the [Course Grading Roster](https://bit.ly/431-2021-grades). 
+  - We posted four nice essays written in response to Question 8 on our Shared Drive in the 431 Lab 7 Examples document. I encourage you to read them.
 - Additional materials will be posted as necessary.

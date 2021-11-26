@@ -10,7 +10,7 @@ Lab | Assignment | Answer Sketch/Grading Rubric | Feedback to [Grading Roster](h
 04 | [Lab 04 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab04) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/sketch/lab04_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab04/sketch/lab04_sketch.Rmd) | posted 2021-10-18
 05 | [Lab 05 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab05) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab05/sketch/lab05_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab05/sketch/lab05_sketch.Rmd) | posted 2021-10-25
 06 | [Lab 06 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab06) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab06/sketch/lab06_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab06/sketch/lab06_sketch.Rmd) | posted 2021-11-16
-07 | [Lab 07 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab07) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab07/sketch/lab07_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab07/sketch/lab07_sketch.Rmd) | to be posted 2021-11-23
+07 | [Lab 07 Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab07) | [pdf](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab07/sketch/lab07_sketch.pdf) and [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/labs/lab07/sketch/lab07_sketch.Rmd) | posted 2021-11-22
 
 ## Bonus Assignments (optional)
 
