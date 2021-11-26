@@ -1,0 +1,71 @@
+---
+title: "Project B"
+author: "Steven Mayher"
+date: "11/21/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(nhanesA)
+```
+
+```{r}
+# pull in data from BPX_J from NHANES and save it
+
+bp_raw <- nhanes('BPX_J') %>% tibble()
+
+saveRDS(bp_raw, "data/BPX_J.Rds")
+
+# Now that data are saved, I can just read in the tibble
+
+bp_raw <- readRDS("data/BPX_J.Rds")
+
+```
+
+```{r}
+# pull in data from BPX_J from NHANES and save it
+
+WHQ_J_raw <- nhanes('WHQ_J') %>% tibble()
+
+saveRDS(WHQ_J_raw, "data/WHQ_J.Rds")
+
+# Now that data are saved, I can just read in the tibble
+
+WHQ_J_raw <- readRDS("data/WHQ_J.Rds")
+```
+```{r}
+WHQ_J_data = WHQ_J_raw %>% 
+  select(c(SEQN, WHD010, WHD020, WHQ030, WHD050, WHD110, WHD120)) %>%
+  filter(WHD010 != 9999) %>%
+  filter(WHD010 != ".") %>%
+  filter(WHD010 != 7777) %>%
+  filter(WHD020 != 9999) %>%
+  filter(WHD020 != ".") %>%
+  filter(WHD020 != 7777) %>%
+  filter(WHQ030 != 9) %>%
+  filter(WHQ030 != ".") %>%
+  filter(WHQ030 != 7) %>%
+  filter(WHD050 != 9999) %>%
+  filter(WHD050 != ".") %>%
+  filter(WHD050 != 7777) %>%
+  filter(WHD110 != 9999) %>%
+  filter(WHD110 != ".") %>%
+  filter(WHD110 != 7777) %>%
+  filter(WHD120 != 9999) %>%
+  filter(WHD120 != ".") %>%
+  filter(WHD120 != 7777) %>%
+  filter(complete.cases(SEQN, WHD010, WHD020, WHQ030, WHD050, WHD110, WHD120))
+  
+count(WHQ_J_data)
+
+miss_var_summary(WHQ_J_data)
+
+
+```
+
+   %>%
