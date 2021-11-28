@@ -13,6 +13,7 @@ Code | Student | Favorite Song with YouTube link | Year of Release
 21 | Anushree Iyengar | [Knee Deep](https://www.youtube.com/watch?v=9n5G0qFBsHM) by Zac Brown Band | 2011 per [Wikipedia](https://en.wikipedia.org/wiki/Knee_Deep)
 25 | Ben Kramer | [The Fisherman Song (We All Need Love)](https://www.youtube.com/watch?v=sZb_OWlTYps) by Mae | 2017 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Morning_(EP))
 28 | Gen Li | [Killer Queen](https://www.youtube.com/watch?v=2ZBtPf7FOoM) by Queen | 1974 per [Wikipedia](https://en.wikipedia.org/wiki/Killer_Queen)
+31 | Harrison Lindley | [Life During Wartime](https://www.youtube.com/watch?v=jLwZvg46jms) by Talking Heads | 1997 per [Wikipedia](https://en.wikipedia.org/wiki/Life_During_Wartime_(song))
 36 | Ryan McMaster | [Drown](https://www.youtube.com/watch?v=IpcB2xsXRv4) by Son Volt | 1995 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Trace_(Son_Volt_album))
 44 | Tyler Petrie | [The Moment I Knew](https://www.youtube.com/watch?v=LmXn6BU16e0) by Taylor Swift | 2013 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Red_(Taylor_Swift_album))
 45 | Thomas Raffay | [Black Dog](https://www.youtube.com/watch?v=6tlSx0jkuLM) by Led Zeppelin | 1971 per [Wikipedia](https://en.wikipedia.org/wiki/Black_Dog_(Led_Zeppelin_song))
