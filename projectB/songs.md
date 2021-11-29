@@ -6,6 +6,7 @@
 
 Code | Student | Favorite Song with YouTube link | Year of Release | Genre
 :---: | :-------: | :---------------------------------------: | :-----: | :----:
+5 | Avantika Bhaduri | [All Too Well](https://www.youtube.com/watch?v=sRxrwjOtIag) by Taylor Swift | 2012 per [Wikipedia](https://en.wikipedia.org/wiki/All_Too_Well) | Country Rock, Folk
 10 | Michael Douglass | [Time Moves Slow](https://www.youtube.com/watch?v=UWIIPX_5rbM) by BADBADNOTGOOD feat. Samuel T. Herring | 2016 per [Wikipedia](https://en.wikipedia.org/wiki/Time_Moves_Slow) | R&B, Soul
 14 | Megan Foradori | [Fields of Gold](https://www.youtube.com/watch?v=KLVq0IAzh1A) by Sting | 1993 per [Wikipedia](https://en.wikipedia.org/wiki/Fields_of_Gold) | Pop, Pop Rock
 15 | Scarlett He | [Mood](https://www.youtube.com/watch?v=GrAchTdepsU) by 24KGoldn | 2020 per [Wikipedia](https://en.wikipedia.org/wiki/Mood_(song)) | Pop Rap, Rap Rock
@@ -24,5 +25,5 @@ Code | Student | Favorite Song with YouTube link | Year of Release | Genre
 55 | Zi Jie (Jay) Wei | [Wake Up](https://www.youtube.com/watch?v=ABbJmDmA1Wc) by EDEN | 2015 per [Wikipedia (album)](https://en.wikipedia.org/wiki/End_Credits_(EP)) | Pop, Electronica
 58 | Sneha Yamsani | [Life Goes On](https://www.youtube.com/watch?v=-5q5mZbe3V8) by BTS | 2020 per [Wikipedia](https://en.wikipedia.org/wiki/Life_Goes_On_(BTS_song)) | Alternative Hip-Hop, Synth Pop
 59 | Diya Yang | [Viva la Vida](https://www.youtube.com/watch?v=dvgZkm1xWPE) by Coldplay | 2008 per [Wikipedia](https://en.wikipedia.org/wiki/Viva_la_Vida) | Baroque Pop
-
+60 | Jiayue Yang | [Mercy](https://www.youtube.com/watch?v=KkGVmN68ByU) by Sam Mendes | 2016 per [Wikipedia](https://en.wikipedia.org/wiki/Mercy_(Shawn_Mendes_song)) | Rock
 
