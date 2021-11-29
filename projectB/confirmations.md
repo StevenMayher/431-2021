@@ -1,6 +1,6 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Sunday 2021-11-28 at 10:15 PM`
+- Status Report as of `Monday 2021-11-29 at 11:30 AM`
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
@@ -37,7 +37,7 @@ Time | Investigator(s) | Confirmed?
 10:45 to 11:15 AM	| Zahin Islam | Not yet
 11:10 to 11:40 AM	| Ria Tilve | Not yet
 12:50 to 1:20 PM	|	**Himani Sancheti** | **Yes**
-1:15 to 1:45 PM	|	Maryssa Shanteau-Jackson | Not yet
+1:15 to 1:45 PM	|	**Maryssa Shanteau-Jackson** | **Yes**
 1:40 to 2:10 PM	|	Alex Olejko | Not yet
 2:05 to 2:35 PM	| Anna Magoline and Steven Mayher | Not yet
 2:45 to 3:15 PM	|	Olivia Wilcox | Not yet
