@@ -14,7 +14,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Remaining Deliverables for 431
 
-Now that you've completed [Project B registration](https://thomaselove.github.io/431-2021-projectB/register.html) and [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3) over Thanksgiving Break, here's what's left.
+Now that you've completed [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3), here's what's left.
 
 1. The regular Minute Paper after Class 25 due Wednesday 2021-12-01 at noon. **Details to come.**
 2. Project B news and requirements
