@@ -2,11 +2,11 @@
 
 - Status Report as of `Sunday 2021-11-28 at 10 PM`
 
-Confirmed? | Meaning
-:---: | :----:
-Not yet | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form.
-Pending | You've submitted the form but Dr. Love hasn't reviewed it yet.
-**Yes** | You're all set. Dr. Love has approved your submitted form.
+Confirmed? | Meaning | Count
+:---: | :----: | :----:
+Not yet | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 31
+Pending | You've submitted the form but Dr. Love hasn't reviewed it yet. | 7
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 3
 
 ## Monday December 6 Presentations
 
@@ -36,14 +36,14 @@ Time | Investigator(s) | Confirmed?
 10:20 to 10:50 AM	| Megan Foradori and Ryan McMaster | Not yet
 10:45 to 11:15 AM	| Zahin Islam | Not yet
 11:10 to 11:40 AM	| Ria Tilve | Not yet
-12:50 to 1:20 PM	|	Himani Sancheti | Pending
+12:50 to 1:20 PM	|	**Himani Sancheti** | **Yes**
 1:15 to 1:45 PM	|	Maryssa Shanteau-Jackson | Not yet
 1:40 to 2:10 PM	|	Alex Olejko | Not yet
 2:05 to 2:35 PM	| Anna Magoline and Steven Mayher | Not yet
 2:45 to 3:15 PM	|	Olivia Wilcox | Not yet
 3:10 to 3:40 PM	| Jacqueline Shaia and Benjamin Kramer | Not yet
 3:35 to 4:05 PM	|	Gen Li and Jiayue Yang | Not yet
-4:05 to 4:35 PM	|	Zi Jie (Jay) Wei and Scarlett He | Pending
+4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Yes**
 4:30 to 5:00 PM	|	Carly Rose and Diya Yang | Not yet
 
 ## Thursday December 9 Presentations
