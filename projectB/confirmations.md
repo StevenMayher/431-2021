@@ -51,7 +51,7 @@ Time | Investigator(s) | Confirmed?
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
 9:30 to 10:00 AM	| Rock Lim | Not yet
-9:55 to 10:25 AM	| *Ying Xiong* | *Pending*
+9:55 to 10:25 AM	| **Ying Xiong** | **Yes**
 10:20 to 10:50 AM	| *Sarah Nock and Harrison Lindley* | *Pending*
 10:45 to 11:15 AM	| Kiran Desai and Grace Armstrong | Not yet
 11:10 to 11:40 AM	| Jeeda Ismail and Makaela Mews | Not yet
