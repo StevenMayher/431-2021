@@ -1,6 +1,6 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Sunday 2021-11-28 at 10 PM`
+- Status Report as of `Sunday 2021-11-28 at 10:15 PM`
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
