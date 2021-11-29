@@ -12,7 +12,7 @@ Pending | You've submitted the form but Dr. Love hasn't reviewed it yet.
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
-9:30 to 10:00 AM | Allison Bode | **Yes**
+9:30 to 10:00 AM | **Allison Bode** | **Yes**
 9:55 to 10:25 AM | Michael Douglass | Not yet
 10:20 to 10:50 AM	| Catherine Heinzinger | Not yet
 10:45 to 11:15 AM	| Jacob Rich | Not yet
@@ -24,8 +24,8 @@ Time | Investigator(s) | Confirmed?
 3:10 to 3:40 PM	| Kyaw Oo Hla | Not yet
 3:35 to 4:05 PM	| Cyrus Nosrati and Drake McFaul | Not yet
 4:05 to 4:35 PM	| Raunak Nair and Siddarth Dugar | Not yet
-4:30 to 5:00 PM	| Thomas Raffay | **Yes**
-4:55 to 5:25 PM	| Erika Hutt and Alan Kiang | **Yes**
+4:30 to 5:00 PM	| **Thomas Raffay** | **Yes**
+4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Yes**
 
 ## Tuesday December 7 Presentations
 
