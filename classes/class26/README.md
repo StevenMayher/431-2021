@@ -4,13 +4,14 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-
-![]()[Link](https://twitter.com/f2harrell/status/1463514375411716100)
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/images/harrell_2021-11-24.png)[Link](https://twitter.com/f2harrell/status/1463514375411716100)
  
 ## Today's Slides
 
 - Dr. Love's slides **will appear** in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/431-class26-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/431-class26-slides.Rmd).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
+
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/images/cox1.png)
 
 ## Announcements
 
