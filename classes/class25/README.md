@@ -9,14 +9,14 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 ## Today's Slides
 
-- Dr. Love's slides will be available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class25/431-class25-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class25/431-class25-slides.Rmd).
+- Dr. Love's slides are available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class25/431-class25-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class25/431-class25-slides.Rmd).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
 ## The Five Remaining Deliverables for 431
 
 Now that you've completed [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3), here's what's left.
 
-1. The regular Minute Paper after Class 25 is due Wednesday 2021-12-01 at noon. Fill it out at https://bit.ly/431-2021-minute-25.
+1. The regular **Minute Paper after Class 25** is due Wednesday 2021-12-01 at noon. Fill it out at https://bit.ly/431-2021-minute-25.
 2. The Project B confirmation form (**not the same thing as the Minute Paper**) is also due Wednesday 2021-12-01 at noon. You (or your partner) must fill it out at https://bit.ly/431-2021-projectB-confirmation.
     -  [My reactions to submitted Confirmation Forms are here](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/confirmations.md). If you are listed with **Confirmed? = Yes**, then you're all set.
 3. Project B Presentations will be December 6, 7 and 9.
