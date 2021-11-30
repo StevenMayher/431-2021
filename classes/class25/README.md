@@ -28,7 +28,7 @@ Now that you've completed [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/
         - All students must also complete the [Self-Evaluation Form](https://thomaselove.github.io/431-2021-projectB/self_eval.html), which will be posted **in early December**.
         - If you are not using NHANES 2017-18 data, you will also need to submit your raw data through [Canvas](https://canvas.case.edu/)
         - If you built slides for your oral presentation, submit those through [Canvas](https://canvas.case.edu/) too.
-    - Optional [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) (your website; thanks to those who've already done this)
+    - Optional [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) (your website; thanks to the folks who've already done this)
     - Optional [Lab Y](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) (visualizing the [amplified (2021-10-16) favorite movies data set](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies#new-and-amplified-data-set) in a graph)
     - Optional [Lab Z](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) (building a table [with the gt package](https://gt.rstudio.com/) for the [movies data](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies#new-and-amplified-data-set))
     - Optional [Lab Regrade Request Form](https://bit.ly/431-2021-lab-regrade-requests) (see [details here](https://github.com/THOMASELOVE/431-2021/tree/main/labs#grading-errors-and-regrade-requests) and in [this section of the Syllabus](https://thomaselove.github.io/431-2021-syllabus/deliverables-assignments.html#appeal-policy---request-a-review-in-december))
