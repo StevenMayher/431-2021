@@ -12,17 +12,17 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 - Dr. Love's slides will be available in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class25/431-class25-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class25/431-class25-slides.Rmd).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
-## Remaining Deliverables for 431
+## The Five Remaining Deliverables for 431
 
 Now that you've completed [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/main/quizzes/quiz3), here's what's left.
 
-1. The regular Minute Paper after Class 25 due Wednesday 2021-12-01 at noon. **Details to come.**
-2. Project B news and requirements
-    - Confirmation Form: Please visit https://bit.ly/431-2021-projectB-confirmation and fill out the form there by noon on Wednesday 2021-12-01. If you have a project partner, exactly one of you need to submit this form. 
-        - [My reactions to your submitted Confirmation Forms are here](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/confirmations.md). If you are listed with **Confirmed? = Yes**, then you're all set.
-    - The Schedule for Project B oral presentations has been posted to our Shared Google Drive. Please note the date and time of your presentation, and contact Dr. Love via email immediately if there are any issues.
+1. The regular Minute Paper after Class 25 is due Wednesday 2021-12-01 at noon. Fill it out at https://bit.ly/431-2021-minute-25.
+2. The Project B confirmation form (**not the same thing as the Minute Paper**) is also due Wednesday 2021-12-01 at noon. You (or your partner) must fill it out at https://bit.ly/431-2021-projectB-confirmation.
+    -  [My reactions to submitted Confirmation Forms are here](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/confirmations.md). If you are listed with **Confirmed? = Yes**, then you're all set.
+3. Project B Presentations will be December 6, 7 and 9.
+    - The Schedule for Project B oral presentations is posted to our Shared Google Drive. Please contact Dr. Love via email immediately if there are any issues.
     - See the [Project B Checklist](https://thomaselove.github.io/431-2021-projectB/checklist.html) for more on what to expect during your presentation.
-3. All other items for Dr. Love are due at the same time: **NOON on Friday 2021-12-10**
+4. All other items for Dr. Love are due at the same time: **NOON on Friday 2021-12-10**
     - Final [Project B](https://thomaselove.github.io/431-2021-projectB/) materials.
         - This includes R Markdown and HTML files for Study 1 and for Study 2, submitted through [Canvas](https://canvas.case.edu/)
         - All students must also complete the [Self-Evaluation Form](https://thomaselove.github.io/431-2021-projectB/self_eval.html), which will be posted **in early December**.
@@ -32,7 +32,7 @@ Now that you've completed [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/
     - Optional [Lab Y](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) (visualizing the [amplified (2021-10-16) favorite movies data set](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies#new-and-amplified-data-set) in a graph)
     - Optional [Lab Z](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) (building a table [with the gt package](https://gt.rstudio.com/) for the [movies data](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies#new-and-amplified-data-set))
     - Optional [Lab Regrade Request Form](https://bit.ly/431-2021-lab-regrade-requests) (see [details here](https://github.com/THOMASELOVE/431-2021/tree/main/labs#grading-errors-and-regrade-requests) and in [this section of the Syllabus](https://thomaselove.github.io/431-2021-syllabus/deliverables-assignments.html#appeal-policy---request-a-review-in-december))
-4. Your CWRU Course Evaluation for 431 is due by midnight on Wednesday December 15. Take it any time at https://webapps.case.edu/courseevals/, although I'd prefer that you wait to do this until **after** your project presentation.
+5. Your CWRU Course Evaluation for 431 is due by midnight on Wednesday December 15. Take it any time at https://webapps.case.edu/courseevals/, although I'd prefer that you wait to do this until **after** your project presentation.
 
 ## Announcements
 
