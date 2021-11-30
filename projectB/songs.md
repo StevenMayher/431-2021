@@ -17,6 +17,7 @@ Code | Student | Favorite Song with YouTube link | Year of Release | Genre
 28 | Gen Li | [Killer Queen](https://www.youtube.com/watch?v=2ZBtPf7FOoM) by Queen | 1974 per [Wikipedia](https://en.wikipedia.org/wiki/Killer_Queen) | Art Pop, Glam Rock
 31 | Harrison Lindley | [Life During Wartime](https://www.youtube.com/watch?v=jLwZvg46jms) by Talking Heads | 1997 per [Wikipedia](https://en.wikipedia.org/wiki/Life_During_Wartime_(song)) | New Wave, Post-Punk
 36 | Ryan McMaster | [Drown](https://www.youtube.com/watch?v=IpcB2xsXRv4) by Son Volt | 1995 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Trace_(Son_Volt_album)) | Alternative Country
+38 | Makaela Mews | [Bad Habits](https://www.youtube.com/watch?v=orJSJGHjBLI) by Ed Sheeran | 2021 per [Wikipedia](https://en.wikipedia.org/wiki/Bad_Habits_(Ed_Sheeran_song)) | Dance-Pop, Synth-Pop
 44 | Tyler Petrie | [The Moment I Knew](https://www.youtube.com/watch?v=LmXn6BU16e0) by Taylor Swift | 2013 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Red_(Taylor_Swift_album)) | Pop, Country
 45 | Thomas Raffay | [Black Dog](https://www.youtube.com/watch?v=6tlSx0jkuLM) by Led Zeppelin | 1971 per [Wikipedia](https://en.wikipedia.org/wiki/Black_Dog_(Led_Zeppelin_song)) | Hard Rock, Blues Rock
 48 | Carly Rose | [Long Live](https://www.youtube.com/watch?v=TI4g93b_5_s) by Taylor Swift | 2010 per [Wikipedia](https://en.wikipedia.org/wiki/Long_Live_(Taylor_Swift_song)) | Heartland Rock
