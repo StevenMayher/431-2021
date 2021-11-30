@@ -4,7 +4,8 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-**Starter to come.**
+
+![]()[Link](https://twitter.com/f2harrell/status/1463514375411716100)
  
 ## Today's Slides
 
