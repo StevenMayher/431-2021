@@ -39,7 +39,7 @@ Now that you've completed [Quiz 3](https://github.com/THOMASELOVE/431-2021/tree/
 1. Grades and feedback on [Lab 7](https://github.com/THOMASELOVE/431-2021/tree/main/labs/lab07) are now available on the [Course Grading Roster](https://bit.ly/431-2021-grades). 
     - See above for details on the [Lab Regrade Request Form](https://bit.ly/431-2021-lab-regrade-requests) for any of Labs 1-7.
     - We posted four nice essays written in response to Question 8 on our Shared Drive in the 431 Lab 7 Examples document. I encourage you to read them.
-2. Here's a list of [favorite songs of students in 431](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md).
+2. Here's a list of [favorite songs of students in 431](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md). Take a look at the list, especially if you're not on it yet.
 3. Today, we're discussing (among other things) multiple imputation in R using the `mice` package. You may be interested in some additional reading on this subject, especially since I don't have much to say about multiple imputation in the 431 Course Notes.
     - [Getting Started with Multiple Imputation in R](https://data.library.virginia.edu/getting-started-with-multiple-imputation-in-r/) by Aycan Katitas at the University of Virginia from 2019 is a nice starting point.
     - [mice: Multivariate Imputation by Chained Equations in R](https://www.jstatsoft.org/article/view/v045i03) by Stef van Buuren and Karin Groothuis-Oudshoorn in the *Journal of Statistical Software* is a key academic reference.
