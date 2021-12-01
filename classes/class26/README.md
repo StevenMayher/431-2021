@@ -17,7 +17,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. Feedback on Quiz 3 **will appear** by class time.
 2. Feedback from the Minute Paper after Class 25 **will appear** by class time.
-3. [Here's a list of your favorite songs](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md) which was a little extra credit activity in the Project B instructions.
+3. [Here's a list of the favorite songs](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md) for the 37 of you who told me about yours. This was a little extra credit activity in the Project B instructions [buried in the "A Special Note" here](https://thomaselove.github.io/431-2021-projectB/checklist.html) so you needed to read the instructions carefully.
 
 ## Remaining Deliverables for 431
 
