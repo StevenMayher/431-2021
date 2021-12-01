@@ -5,7 +5,8 @@
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
 Not yet | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 18
-Pending | You've submitted the form but Dr. Love hasn't reviewed it yet. | 6
+Try again | You've submitted the form once but Dr. Love needs you to make additional changes, and has emailed you about it. | 1
+Pending | You've submitted the form but Dr. Love hasn't reviewed it yet. | 5
 **Yes** | You're all set. Dr. Love has approved your submitted form. | 17
 
 ## Monday December 6 Presentations (n = 14 projects)
@@ -34,7 +35,7 @@ Time | Investigator(s) | Confirmed?
 9:30 to 10:00 AM	| **Graham Akeson** | **Yes**
 9:55 to 10:25 AM	 | Kristi Lin-Rahardja and Nick Latina | Pending
 10:20 to 10:50 AM	| **Megan Foradori and Ryan McMaster** | **Yes**
-10:45 to 11:15 AM	| Zahin Islam | Pending
+10:45 to 11:15 AM	| Zahin Islam | Try again
 11:10 to 11:40 AM	| **Ria Tilve** | **Yes**
 12:50 to 1:20 PM	|	**Himani Sancheti** | **Yes**
 1:15 to 1:45 PM	|	**Maryssa Shanteau-Jackson** | **Yes**
