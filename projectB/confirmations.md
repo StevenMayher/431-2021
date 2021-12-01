@@ -1,13 +1,13 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Tuesday 2021-11-30 at 9:15 PM`
+- Status Report as of `Wednesday 2021-12-01 at 9:15 AM`
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
-*Not yet* | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 18
-*Try again* | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 1
-Pending | You've submitted the form but Dr. Love hasn't reviewed it yet. | 0
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 22
+*Not yet* | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 15
+*Try again* | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 0
+*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 3
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 23
 
 ## Monday December 6 Presentations (n = 14 projects; 5 confirmed)
 
@@ -24,22 +24,22 @@ Time | Investigator(s) | Confirmed?
 2:45 to 3:15 PM |	*Ziyin Zhao* | *Not yet*
 3:10 to 3:40 PM	| *Kyaw Oo Hla* | *Not yet*
 3:35 to 4:05 PM	| *Cyrus Nosrati and Drake McFaul* | *Not yet*
-4:05 to 4:35 PM	| *Raunak Nair and Siddarth Dugar* | *Not yet*
+4:05 to 4:35 PM	| *Raunak Nair and Siddarth Dugar* | *PENDING*
 4:30 to 5:00 PM	| **Thomas Raffay** | **Yes**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Yes**
 
-## Tuesday December 7 Presentations (n = 14 projects; 10 confirmed)
+## Tuesday December 7 Presentations (n = 14 projects; 11 confirmed)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
 9:30 to 10:00 AM	| **Graham Akeson** | **Yes**
 9:55 to 10:25 AM	 | **Kristi Lin-Rahardja and Nick Latina** | **Yes**
 10:20 to 10:50 AM	| **Megan Foradori and Ryan McMaster** | **Yes**
-10:45 to 11:15 AM	| *Zahin Islam* | *Try again*
+10:45 to 11:15 AM	| **Zahin Islam** | **Yes**
 11:10 to 11:40 AM	| **Ria Tilve** | **Yes**
 12:50 to 1:20 PM	|	**Himani Sancheti** | **Yes**
 1:15 to 1:45 PM	|	**Maryssa Shanteau-Jackson** | **Yes**
-1:40 to 2:10 PM	|	*Alex Olejko* | *Not yet*
+1:40 to 2:10 PM	|	*Alex Olejko* | *PENDING*
 2:05 to 2:35 PM	| *Anna Magoline and Steven Mayher* | *Not yet*
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Yes**
 3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **Yes**
@@ -60,7 +60,7 @@ Time | Investigator(s) | Confirmed?
 12:50 to 1:20 PM	| **Neeti Shirke and Sneha Yamsani** | **Yes**
 1:15 to 1:45 PM	| *Fumi Kong* | *Not yet*
 1:40 to 2:10 PM	| *Luis Mesias Flores* | *Not yet*
-2:05 to 2:35 PM	| *Avantika Bhaduri and Anushree Iyengar* | *Not yet*
+2:05 to 2:35 PM	| *Avantika Bhaduri and Anushree Iyengar* | *PENDING*
 2:45 to 3:15 PM	| *Aaron Fletcher* | *Not yet*
 3:10 to 3:40 PM	| **Ava Cong Fan** | **Yes**
 3:35 to 4:05 PM	| **Abigail Basson and Alise Carlson** | **Yes**
