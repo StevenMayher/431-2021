@@ -37,8 +37,8 @@ Code | Student | Favorite Song with YouTube link | Year of Release | Genre
 52 | Neeti Shirke | [One](https://www.youtube.com/watch?v=Ix9NXVIbm2A) by Ed Sheeran | 2014 per [Wikipedia](https://en.wikipedia.org/wiki/One_(Ed_Sheeran_song)) | Folk Pop
 53 | Ria Tilve | [All Too Well](https://www.youtube.com/watch?v=sRxrwjOtIag) by Taylor Swift | 2012 per [Wikipedia](https://en.wikipedia.org/wiki/All_Too_Well) | Country Rock, Folk
 55 | Zi Jie (Jay) Wei | [Wake Up](https://www.youtube.com/watch?v=ABbJmDmA1Wc) by EDEN | 2015 per [Wikipedia (album)](https://en.wikipedia.org/wiki/End_Credits_(EP)) | Pop, Electronica
-56 | Olivia Wilcox | [The 1](https://www.youtube.com/watch?v=KsZ6tROaVOQ) by Taylor Swift | - | -
-57 | Ying Xiong | [High on Life] by Martin Garrix feat. Bonn | 2020 per [Wikipedia](https://en.wikipedia.org/wiki/The_1) | Soft Rock 
+56 | Olivia Wilcox | [The 1](https://www.youtube.com/watch?v=KsZ6tROaVOQ) by Taylor Swift | 2020 per [Wikipedia](https://en.wikipedia.org/wiki/The_1) | Soft Rock 
+57 | Ying Xiong | [High on Life](https://www.youtube.com/watch?v=Lpjcm1F8tY8) by Martin Garrix feat. Bonn | 2018 per [Wikipedia](https://en.wikipedia.org/wiki/High_on_Life) | Progressive House
 58 | Sneha Yamsani | [Life Goes On](https://www.youtube.com/watch?v=-5q5mZbe3V8) by BTS | 2020 per [Wikipedia](https://en.wikipedia.org/wiki/Life_Goes_On_(BTS_song)) | Alternative Hip-Hop, Synth Pop
 59 | Diya Yang | [Viva la Vida](https://www.youtube.com/watch?v=dvgZkm1xWPE) by Coldplay | 2008 per [Wikipedia](https://en.wikipedia.org/wiki/Viva_la_Vida) | Baroque Pop
 60 | Jiayue Yang | [Mercy](https://www.youtube.com/watch?v=KkGVmN68ByU) by Sam Mendes | 2016 per [Wikipedia](https://en.wikipedia.org/wiki/Mercy_(Shawn_Mendes_song)) | Rock
