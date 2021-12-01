@@ -6,8 +6,8 @@ Confirmed? | Meaning | Count
 :---: | :----: | :----:
 *Not yet* | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 6
 *Try again* | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 2
-*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 3
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 30
+*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 2
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 31
 
 ## Monday December 6 Presentations (n = 14 projects; 7 confirmed)
 
@@ -51,7 +51,7 @@ Time | Investigator(s) | Confirmed?
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
-9:30 to 10:00 AM	| *Rock Lim* | *PENDING*
+9:30 to 10:00 AM	| **Rock Lim** | **Yes**
 9:55 to 10:25 AM	| **Ying Xiong** | **Yes**
 10:20 to 10:50 AM	| **Sarah Nock and Harrison Lindley** | **Yes**
 10:45 to 11:15 AM	| **Kiran Desai and Grace Armstrong** | **Yes**
