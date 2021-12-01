@@ -6,9 +6,8 @@
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 36
 *Try again* | Dr. Love emailed you requesting additional changes. | 5
-*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 1
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 35
 
 ## Monday December 6 Presentations (n = 14 projects; 11 confirmed)
 
@@ -48,7 +47,7 @@ Time | Investigator(s) | Confirmed?
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Yes**
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Yes**
 
-## Thursday December 9 Presentations (n = 13 projects; 11 confirmed)
+## Thursday December 9 Presentations (n = 13 projects; 12 confirmed)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
@@ -62,7 +61,7 @@ Time | Investigator(s) | Confirmed?
 1:15 to 1:45 PM	| *Fumi Kong* | *Try again*
 1:40 to 2:10 PM	| **Luis Mesias Flores** | **Yes**
 2:05 to 2:35 PM	| **Avantika Bhaduri and Anushree Iyengar** | **Yes**
-2:45 to 3:15 PM	| *Aaron Fletcher* | *Pending*
+2:45 to 3:15 PM	| **Aaron Fletcher** | **Yes**
 3:10 to 3:40 PM	| **Ava Cong Fan** | **Yes**
 3:35 to 4:05 PM	| **Abigail Basson and Alise Carlson** | **Yes**
 
