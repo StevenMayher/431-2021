@@ -1,15 +1,17 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Wednesday 2021-12-01 at 10:45 AM`
+- Status Report as of `Wednesday 2021-12-01 at 11:00 AM`
+
+**Note**: The *Copy of Project B Registration Concerns* Google Sheet in our Shared Drive (Project B folder) contains additional feedback.
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
 *Not yet* | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 6
 *Try again* | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 2
-*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 1
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 32
+*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 0
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 33
 
-## Monday December 6 Presentations (n = 14 projects; 7 confirmed)
+## Monday December 6 Presentations (n = 14 projects; 9 confirmed)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
@@ -28,7 +30,7 @@ Time | Investigator(s) | Confirmed?
 4:30 to 5:00 PM	| **Thomas Raffay** | **Yes**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Yes**
 
-## Tuesday December 7 Presentations (n = 14 projects; 12 confirmed)
+## Tuesday December 7 Presentations (n = 14 projects; 13 confirmed)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
@@ -47,7 +49,7 @@ Time | Investigator(s) | Confirmed?
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Yes**
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Yes**
 
-## Thursday December 9 Presentations (n = 13 projects; 8 confirmed)
+## Thursday December 9 Presentations (n = 13 projects; 10 confirmed)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
@@ -60,7 +62,7 @@ Time | Investigator(s) | Confirmed?
 12:50 to 1:20 PM	| **Neeti Shirke and Sneha Yamsani** | **Yes**
 1:15 to 1:45 PM	| *Fumi Kong* | *Not yet*
 1:40 to 2:10 PM	| **Luis Mesias Flores** | **Yes**
-2:05 to 2:35 PM	| *Avantika Bhaduri and Anushree Iyengar* | *PENDING*
+2:05 to 2:35 PM	| **Avantika Bhaduri and Anushree Iyengar** | **Yes**
 2:45 to 3:15 PM	| *Aaron Fletcher* | *Not yet*
 3:10 to 3:40 PM	| **Ava Cong Fan** | **Yes**
 3:35 to 4:05 PM	| **Abigail Basson and Alise Carlson** | **Yes**
