@@ -1,7 +1,9 @@
 # Favorite Songs of Students in 431
 
+Thanks to the 37 of you who completed this task.
+
 - If you prefer a different version of your song on YouTube, please send Dr. Love the URL, and he'll be happy to change it here.
-- If you're not sure why this is here, you might want to look at the [Project B instructions](https://thomaselove.github.io/431-2021-projectB/) more closely, especially if it's still November.
+- If you're not sure why this is here, I'd look at the [Project B instructions](https://thomaselove.github.io/431-2021-projectB/) more closely.
 - The [Stats for Spotify](https://www.statsforspotify.com/) website may be of interest to you, as well. (Thanks, Michael, for suggesting this.)
 
 Code | Student | Favorite Song with YouTube link | Year of Release | Genre
