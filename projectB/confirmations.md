@@ -49,7 +49,7 @@ Time | Investigator(s) | Confirmed?
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Yes**
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Yes**
 
-## Thursday December 9 Presentations (n = 13 projects; 10 confirmed)
+## Thursday December 9 Presentations (n = 13 projects; 11 confirmed)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
