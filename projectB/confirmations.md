@@ -4,8 +4,8 @@
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
-Not yet | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 18
-Try again | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 1
+*Not yet* | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 18
+*Try again* | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 1
 Pending | You've submitted the form but Dr. Love hasn't reviewed it yet. | 0
 **Yes** | You're all set. Dr. Love has approved your submitted form. | 22
 
