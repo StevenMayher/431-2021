@@ -2,16 +2,11 @@
 
 - You'll need to be logged into Google via CWRU to complete the Minute Papers, or to review the feedback.
 
-## Upcoming Minute Papers
-
-After Class | due at NOON on | Link to Minute Paper Form 
-----------: | ------: | :---------:
-25 (2021-11-30) | 2021-12-01 | https://bit.ly/431-2021-minute-25
-
 ## Completed Minute Papers
 
 After Class | due at NOON on | Link to Minute Paper Form | Link to Dr. Love's Feedback
 ----------: | ------: | :--------: | :----------:
+25 (2021-11-30) | 2021-12-01 | https://bit.ly/431-2021-minute-25 | https://bit.ly/431-2021-min25-feedback
 23 (2021-11-16) | 2021-11-17 | https://bit.ly/431-2021-minute-23 | https://bit.ly/431-2021-min23-feedback
 20 (2021-11-02) | 2021-11-03 | https://bit.ly/431-2021-minute-20 | https://bit.ly/431-2021-min20-feedback
 18 (2021-10-26) | 2021-10-27 | https://bit.ly/431-2021-minute-18 | https://bit.ly/431-2021-min18-feedback
