@@ -1,11 +1,11 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Tuesday 2021-11-30 at 3:30 PM`
+- Status Report as of `Tuesday 2021-11-30 at 8:30 PM`
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
-Not yet | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 24
-Pending | You've submitted the form but Dr. Love hasn't reviewed it yet. | 0
+Not yet | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 18
+Pending | You've submitted the form but Dr. Love hasn't reviewed it yet. | 6
 **Yes** | You're all set. Dr. Love has approved your submitted form. | 17
 
 ## Monday December 6 Presentations (n = 14 projects)
@@ -19,7 +19,7 @@ Time | Investigator(s) | Confirmed?
 11:10 to 11:40 AM	| Shruti Raghunathan and Norman Luc | Not yet
 12:50 to 1:20 PM	| Audrey Zhu | Not yet
 1:15 to 1:45 PM	| Christopher Jones | Not yet
-1:40 to 2:10 PM	| Cerag Oguztuzun and Abhishek Bhardwaj | Not yet
+1:40 to 2:10 PM	| Cerag Oguztuzun and Abhishek Bhardwaj | Pending
 2:45 to 3:15 PM |	Ziyin Zhao | Not yet
 3:10 to 3:40 PM	| Kyaw Oo Hla | Not yet
 3:35 to 4:05 PM	| Cyrus Nosrati and Drake McFaul | Not yet
@@ -32,19 +32,19 @@ Time | Investigator(s) | Confirmed?
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
 9:30 to 10:00 AM	| **Graham Akeson** | **Yes**
-9:55 to 10:25 AM	 | Kristi Lin-Rahardja and Nick Latina | Not yet
+9:55 to 10:25 AM	 | Kristi Lin-Rahardja and Nick Latina | Pending
 10:20 to 10:50 AM	| **Megan Foradori and Ryan McMaster** | **Yes**
-10:45 to 11:15 AM	| Zahin Islam | Not yet
+10:45 to 11:15 AM	| Zahin Islam | Pending
 11:10 to 11:40 AM	| **Ria Tilve** | **Yes**
 12:50 to 1:20 PM	|	**Himani Sancheti** | **Yes**
 1:15 to 1:45 PM	|	**Maryssa Shanteau-Jackson** | **Yes**
 1:40 to 2:10 PM	|	Alex Olejko | Not yet
 2:05 to 2:35 PM	| Anna Magoline and Steven Mayher | Not yet
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Yes**
-3:10 to 3:40 PM	| Jacqueline Shaia and Benjamin Kramer | Not yet
+3:10 to 3:40 PM	| Jacqueline Shaia and Benjamin Kramer | Pending
 3:35 to 4:05 PM	|	Gen Li and Jiayue Yang | Not yet
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Yes**
-4:30 to 5:00 PM	|	Carly Rose and Diya Yang | Not yet
+4:30 to 5:00 PM	|	Carly Rose and Diya Yang | Pending
 
 ## Thursday December 9 Presentations (n = 13 projects)
 
@@ -53,7 +53,7 @@ Time | Investigator(s) | Confirmed?
 9:30 to 10:00 AM	| Rock Lim | Not yet
 9:55 to 10:25 AM	| **Ying Xiong** | **Yes**
 10:20 to 10:50 AM	| **Sarah Nock and Harrison Lindley** | **Yes**
-10:45 to 11:15 AM	| Kiran Desai and Grace Armstrong | Not yet
+10:45 to 11:15 AM	| Kiran Desai and Grace Armstrong | Pending
 11:10 to 11:40 AM	| **Jeeda Ismail and Makaela Mews** | **Yes**
 11:35 to 12:05 PM	| Paula Ambrose and Tyler Petrie | Not yet
 12:50 to 1:20 PM	| **Neeti Shirke and Sneha Yamsani** | **Yes**
