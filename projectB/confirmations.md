@@ -6,9 +6,8 @@
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
-*Not yet* | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 1
 *Try again* | Dr. Love emailed you requesting additional changes. | 5
-*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 0
+*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 1
 **Yes** | You're all set. Dr. Love has approved your submitted form. | 35
 
 ## Monday December 6 Presentations (n = 14 projects; 11 confirmed)
@@ -63,7 +62,7 @@ Time | Investigator(s) | Confirmed?
 1:15 to 1:45 PM	| *Fumi Kong* | *Try again*
 1:40 to 2:10 PM	| **Luis Mesias Flores** | **Yes**
 2:05 to 2:35 PM	| **Avantika Bhaduri and Anushree Iyengar** | **Yes**
-2:45 to 3:15 PM	| *Aaron Fletcher* | *Not yet*
+2:45 to 3:15 PM	| *Aaron Fletcher* | *Pending*
 3:10 to 3:40 PM	| **Ava Cong Fan** | **Yes**
 3:35 to 4:05 PM	| **Abigail Basson and Alise Carlson** | **Yes**
 
