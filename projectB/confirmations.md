@@ -8,7 +8,7 @@ Confirmed? | Meaning | Count
 :---: | :----: | :----:
 *Not yet* | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 1
 *Try again* | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 2
-*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 5
+*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 4
 **Yes** | You're all set. Dr. Love has approved your submitted form. | 33
 
 ## Monday December 6 Presentations (n = 14 projects; 9 confirmed)
@@ -21,7 +21,7 @@ Time | Investigator(s) | Confirmed?
 10:45 to 11:15 AM	| *Jacob Rich* | *PENDING*
 11:10 to 11:40 AM	| **Shruti Raghunathan and Norman Luc** | **Yes**
 12:50 to 1:20 PM	| **Audrey Zhu** | **Yes**
-1:15 to 1:45 PM	| *Christopher Jones* | *PENDING*
+1:15 to 1:45 PM	| **Christopher Jones** | **Yes**
 1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Yes**
 2:45 to 3:15 PM |	*Ziyin Zhao* | *PENDING*
 3:10 to 3:40 PM	| *Kyaw Oo Hla* | *Try again*
