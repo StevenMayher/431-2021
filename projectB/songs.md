@@ -46,3 +46,11 @@ Code | Student | Favorite Song with YouTube link | Year of Release | Genre
 59 | Diya Yang | [Viva la Vida](https://www.youtube.com/watch?v=dvgZkm1xWPE) by Coldplay | 2008 per [Wikipedia](https://en.wikipedia.org/wiki/Viva_la_Vida) | Baroque Pop
 60 | Jiayue Yang | [Mercy](https://www.youtube.com/watch?v=KkGVmN68ByU) by Sam Mendes | 2016 per [Wikipedia](https://en.wikipedia.org/wiki/Mercy_(Shawn_Mendes_song)) | Rock
 63 | Audrey Zhu | [00:00 (Zero O'Clock)](https://www.youtube.com/watch?v=Nr3ot5gSvkM) by BTS | 2020 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Map_of_the_Soul:_7) | Hip-Hop, K-Pop
+
+## What is Dr. Love's favorite song?
+
+- I can’t claim to follow popular music. Most of the things I listen to are musicals (especially shows I’m currently doing), classical music, Gilbert & Sullivan, comedy, some soundtracks and a lot of spoken word podcasts.
+- The closest thing to a pop artist that I follow closely is Weird Al Yankovic. He’s the only artist whose concerts I’ve seen live more than twice, and I guess my favorite of his songs is probably [The Hamilton Polka](https://www.youtube.com/watch?v=3v0c6smpHSk) or [Word Crimes](https://www.youtube.com/watch?v=8Gv0H-vPoDc) or maybe one of the other polkas.
+- The songs I’ve played most often recently were either from A Gentlemen’s Guide to Love and Murder (the show I just finished) or from Something Rotten (the show I’ll be doing in Hudson this February.)
+- My favorite holiday song is [Another Christmas Song](https://www.youtube.com/watch?v=rGgSomvUXDk) by Stephen Colbert, closely followed by [Linus and Lucy](https://www.youtube.com/watch?v=x6zypc_LhnM) by the Vince Guaraldi Trio.
+
