@@ -1,6 +1,6 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Wednesday 2021-12-01 at 11:42 AM`
+- Status Report as of `Wednesday 2021-12-01 at 1:30 PM`
 
 **Note**: The *Copy of Project B Registration Concerns* Google Sheet in our Shared Drive (Project B folder) contains additional feedback.
 
@@ -28,7 +28,7 @@ Time | Investigator(s) | Confirmed?
 4:30 to 5:00 PM	| **Thomas Raffay** | **Yes**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Yes**
 
-## Tuesday December 7 Presentations (n = 14 projects; 13 confirmed)
+## Tuesday December 7 Presentations (n = 14 projects; all confirmed)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
