@@ -6,8 +6,8 @@
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 36
-*Try again* | Dr. Love emailed you requesting additional changes by 8 PM 2021-12-01. | 5
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 37
+*Try again* | Dr. Love emailed you requesting additional changes by 8 PM 2021-12-01. | 4
 
 ## Monday December 6 Presentations (n = 14 projects; 11 confirmed)
 
@@ -43,7 +43,7 @@ Time | Investigator(s) | Confirmed?
 2:05 to 2:35 PM	| **Anna Magoline and Steven Mayher** | **Yes**
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Yes**
 3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **Yes**
-3:35 to 4:05 PM	|	*Gen Li and Jiayue Yang* | *Try Again*
+3:35 to 4:05 PM	|	**Gen Li and Jiayue Yang** | **Yes**
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Yes**
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Yes**
 
