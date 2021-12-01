@@ -1,15 +1,15 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Wednesday 2021-12-01 at 1:30 PM`
+- Status Report as of `Wednesday 2021-12-01 at 4:19 PM`
 
 **Note**: The *Copy of Project B Registration Concerns* Google Sheet in our Shared Drive (Project B folder) contains additional feedback.
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 37
-*Try again* | Dr. Love emailed you requesting additional changes by 8 PM 2021-12-01. | 4
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 38
+*Try again* | Dr. Love emailed you requesting additional changes by 8 PM 2021-12-01. | 3
 
-## Monday December 6 Presentations (n = 14 projects; 11 confirmed)
+## Monday December 6 Presentations (n = 14 projects; 12 confirmed)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
@@ -21,7 +21,7 @@ Time | Investigator(s) | Confirmed?
 12:50 to 1:20 PM	| **Audrey Zhu** | **Yes**
 1:15 to 1:45 PM	| **Christopher Jones** | **Yes**
 1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Yes**
-2:45 to 3:15 PM |	*Ziyin Zhao* | *Try again*
+2:45 to 3:15 PM |	**Ziyin Zhao** | **Yes**
 3:10 to 3:40 PM	| *Kyaw Oo Hla* | *Try again*
 3:35 to 4:05 PM	| **Cyrus Nosrati and Drake McFaul** | **Yes**
 4:05 to 4:35 PM	| **Raunak Nair and Siddarth Dugar** | **Yes**
