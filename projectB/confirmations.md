@@ -7,7 +7,7 @@
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
 **Yes** | You're all set. Dr. Love has approved your submitted form. | 36
-*Try again* | Dr. Love emailed you requesting additional changes. | 5
+*Try again* | Dr. Love emailed you requesting additional changes by 8 PM 2021-12-01. | 5
 
 ## Monday December 6 Presentations (n = 14 projects; 11 confirmed)
 
