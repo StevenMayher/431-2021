@@ -1,6 +1,6 @@
 # Favorite Songs of Students in 431
 
-Thanks to the 38 of you who completed this task by the 5 PM deadline on 2021-12-01.
+Thanks to those of you listed below who completed this task by the 5 PM deadline on 2021-12-01.
 
 - If you prefer a different version of your song on YouTube, please send Dr. Love the URL, and he'll be happy to change it here.
 - If you're not sure why this is here, I'd look at the [Project B instructions](https://thomaselove.github.io/431-2021-projectB/) more closely.
@@ -32,6 +32,7 @@ Code | Student | Favorite Song with YouTube link | Year of Release | Genre
 38 | Makaela Mews | [Bad Habits](https://www.youtube.com/watch?v=orJSJGHjBLI) by Ed Sheeran | 2021 per [Wikipedia](https://en.wikipedia.org/wiki/Bad_Habits_(Ed_Sheeran_song)) | Dance-Pop, Synth-Pop
 40 | Sarah Nock | [Right Where You Left Me](https://www.youtube.com/watch?v=Ur_wAcYDnuA) by Taylor Swift | 2020 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Evermore_(Taylor_Swift_album)) | Indie Rock, Alternative Rock
 42 | Cerag Oguztuzun | [Locket](https://www.youtube.com/watch?v=BqnG_Ei35JE) by Crumb | 2017 per [Wikipedia (band)](https://en.wikipedia.org/wiki/Crumb_(band)) | Indie Rock, Alternative Rock
+43 | Alex Olejko | [Whiskey River](https://www.youtube.com/watch?v=0k9SjMpAxRM) by Willie Nelson | 1973 per [Wikipedia](https://en.wikipedia.org/wiki/Whiskey_River) | Country, Roots Country
 44 | Tyler Petrie | [The Moment I Knew](https://www.youtube.com/watch?v=LmXn6BU16e0) by Taylor Swift | 2013 per [Wikipedia (album)](https://en.wikipedia.org/wiki/Red_(Taylor_Swift_album)) | Pop, Country
 45 | Thomas Raffay | [Black Dog](https://www.youtube.com/watch?v=6tlSx0jkuLM) by Led Zeppelin | 1971 per [Wikipedia](https://en.wikipedia.org/wiki/Black_Dog_(Led_Zeppelin_song)) | Hard Rock, Blues Rock
 48 | Carly Rose | [Long Live](https://www.youtube.com/watch?v=TI4g93b_5_s) by Taylor Swift | 2010 per [Wikipedia](https://en.wikipedia.org/wiki/Long_Live_(Taylor_Swift_song)) | Heartland Rock
