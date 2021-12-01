@@ -1,28 +1,28 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Wednesday 2021-12-01 at 9:15 AM`
+- Status Report as of `Wednesday 2021-12-01 at 9:40 AM`
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
-*Not yet* | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 15
-*Try again* | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 0
-*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 3
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 23
+*Not yet* | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 6
+*Try again* | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 1
+*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 10
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 24
 
-## Monday December 6 Presentations (n = 14 projects; 5 confirmed)
+## Monday December 6 Presentations (n = 14 projects; 6 confirmed)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
 9:30 to 10:00 AM | **Allison Bode** | **Yes**
-9:55 to 10:25 AM | *Michael Douglass* | *Not yet*
+9:55 to 10:25 AM | **Michael Douglass** | **Yes**
 10:20 to 10:50 AM	| **Catherine Heinzinger** | **Yes**
 10:45 to 11:15 AM	| *Jacob Rich* | *Not yet*
-11:10 to 11:40 AM	| *Shruti Raghunathan and Norman Luc* | *Not yet*
-12:50 to 1:20 PM	| *Audrey Zhu* | *Not yet*
+11:10 to 11:40 AM	| *Shruti Raghunathan and Norman Luc* | *PENDING*
+12:50 to 1:20 PM	| *Audrey Zhu* | *PENDING*
 1:15 to 1:45 PM	| *Christopher Jones* | *Not yet*
 1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Yes**
 2:45 to 3:15 PM |	*Ziyin Zhao* | *Not yet*
-3:10 to 3:40 PM	| *Kyaw Oo Hla* | *Not yet*
+3:10 to 3:40 PM	| *Kyaw Oo Hla* | *PENDING*
 3:35 to 4:05 PM	| *Cyrus Nosrati and Drake McFaul* | *Not yet*
 4:05 to 4:35 PM	| *Raunak Nair and Siddarth Dugar* | *PENDING*
 4:30 to 5:00 PM	| **Thomas Raffay** | **Yes**
@@ -40,10 +40,10 @@ Time | Investigator(s) | Confirmed?
 12:50 to 1:20 PM	|	**Himani Sancheti** | **Yes**
 1:15 to 1:45 PM	|	**Maryssa Shanteau-Jackson** | **Yes**
 1:40 to 2:10 PM	|	*Alex Olejko* | *PENDING*
-2:05 to 2:35 PM	| *Anna Magoline and Steven Mayher* | *Not yet*
+2:05 to 2:35 PM	| *Anna Magoline and Steven Mayher* | *PENDING*
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Yes**
 3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **Yes**
-3:35 to 4:05 PM	|	*Gen Li and Jiayue Yang* | *Not yet*
+3:35 to 4:05 PM	|	*Gen Li and Jiayue Yang* | *Try Again*
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Yes**
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Yes**
 
@@ -51,15 +51,15 @@ Time | Investigator(s) | Confirmed?
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
-9:30 to 10:00 AM	| *Rock Lim* | *Not yet*
+9:30 to 10:00 AM	| *Rock Lim* | *PENDING*
 9:55 to 10:25 AM	| **Ying Xiong** | **Yes**
 10:20 to 10:50 AM	| **Sarah Nock and Harrison Lindley** | **Yes**
 10:45 to 11:15 AM	| **Kiran Desai and Grace Armstrong** | **Yes**
 11:10 to 11:40 AM	| **Jeeda Ismail and Makaela Mews** | **Yes**
-11:35 to 12:05 PM	| *Paula Ambrose and Tyler Petrie* | *Not yet*
+11:35 to 12:05 PM	| *Paula Ambrose and Tyler Petrie* | *PENDING*
 12:50 to 1:20 PM	| **Neeti Shirke and Sneha Yamsani** | **Yes**
 1:15 to 1:45 PM	| *Fumi Kong* | *Not yet*
-1:40 to 2:10 PM	| *Luis Mesias Flores* | *Not yet*
+1:40 to 2:10 PM	| *Luis Mesias Flores* | *PENDING*
 2:05 to 2:35 PM	| *Avantika Bhaduri and Anushree Iyengar* | *PENDING*
 2:45 to 3:15 PM	| *Aaron Fletcher* | *Not yet*
 3:10 to 3:40 PM	| **Ava Cong Fan** | **Yes**
