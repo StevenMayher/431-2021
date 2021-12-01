@@ -1,13 +1,13 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Tuesday 2021-11-30 at 8:30 PM`
+- Status Report as of `Tuesday 2021-11-30 at 9:15 PM`
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
 Not yet | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 18
 Try again | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 1
-Pending | You've submitted the form but Dr. Love hasn't reviewed it yet. | 5
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 17
+Pending | You've submitted the form but Dr. Love hasn't reviewed it yet. | 1
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 21
 
 ## Monday December 6 Presentations (n = 14 projects)
 
@@ -33,7 +33,7 @@ Time | Investigator(s) | Confirmed?
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
 9:30 to 10:00 AM	| **Graham Akeson** | **Yes**
-9:55 to 10:25 AM	 | Kristi Lin-Rahardja and Nick Latina | Pending
+9:55 to 10:25 AM	 | **Kristi Lin-Rahardja and Nick Latina** | **Yes**
 10:20 to 10:50 AM	| **Megan Foradori and Ryan McMaster** | **Yes**
 10:45 to 11:15 AM	| Zahin Islam | Try again
 11:10 to 11:40 AM	| **Ria Tilve** | **Yes**
@@ -42,10 +42,10 @@ Time | Investigator(s) | Confirmed?
 1:40 to 2:10 PM	|	Alex Olejko | Not yet
 2:05 to 2:35 PM	| Anna Magoline and Steven Mayher | Not yet
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Yes**
-3:10 to 3:40 PM	| Jacqueline Shaia and Benjamin Kramer | Pending
+3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **Yes**
 3:35 to 4:05 PM	|	Gen Li and Jiayue Yang | Not yet
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Yes**
-4:30 to 5:00 PM	|	Carly Rose and Diya Yang | Pending
+4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Yes**
 
 ## Thursday December 9 Presentations (n = 13 projects)
 
