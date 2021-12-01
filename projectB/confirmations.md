@@ -20,7 +20,7 @@ Time | Investigator(s) | Confirmed?
 11:10 to 11:40 AM	| Shruti Raghunathan and Norman Luc | Not yet
 12:50 to 1:20 PM	| Audrey Zhu | Not yet
 1:15 to 1:45 PM	| Christopher Jones | Not yet
-1:40 to 2:10 PM	| Cerag Oguztuzun and Abhishek Bhardwaj | Pending
+1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Yes**
 2:45 to 3:15 PM |	Ziyin Zhao | Not yet
 3:10 to 3:40 PM	| Kyaw Oo Hla | Not yet
 3:35 to 4:05 PM	| Cyrus Nosrati and Drake McFaul | Not yet
