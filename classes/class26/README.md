@@ -16,7 +16,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Announcements
 
 1. Feedback on Quiz 3 **will appear** by class time.
-2. Feedback from the Minute Paper after Class 25 **will appear** by class time.
+2. Feedback from the Minute Paper after Class 25 is [now available](https://bit.ly/431-2021-min25-feedback).
     - The [Course Grading Roster](https://bit.ly/431-2021-grades) now has all grades on Minute Papers, and each of the first seven Labs.
 3. Almost all project B work is now confirmed on my end. [Visit here for details](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/confirmations.md).
     - NHANES folks: To identify the ages of your subjects, include `RIDAGEYR` from `DEMO_J` in your tibble, even if you're not using Age as a predictor in your analyses. Values of 80 on `RIDAGEYR` indicate subjects with actual ages of 80 and higher, and so the average age of those folks listed as 80 is about 85. That's why we're encouraging you to exclude them from your work, and work only with people up to the age of 79. See Piazza for some additional thoughts on this.
