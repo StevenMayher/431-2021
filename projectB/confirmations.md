@@ -6,10 +6,10 @@
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 38
-*Try again* | Dr. Love emailed you requesting additional changes by 8 PM 2021-12-01. | 3
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 39
+*Try again* | Dr. Love emailed you requesting additional changes by 8 PM 2021-12-01. | 2
 
-## Monday December 6 Presentations (n = 14 projects; 12 confirmed)
+## Monday December 6 Presentations (n = 14 projects; 13 confirmed)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
@@ -22,7 +22,7 @@ Time | Investigator(s) | Confirmed?
 1:15 to 1:45 PM	| **Christopher Jones** | **Yes**
 1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Yes**
 2:45 to 3:15 PM |	**Ziyin Zhao** | **Yes**
-3:10 to 3:40 PM	| *Kyaw Oo Hla* | *Try again*
+3:10 to 3:40 PM	| **Kyaw Oo Hla** | **Yes**
 3:35 to 4:05 PM	| **Cyrus Nosrati and Drake McFaul** | **Yes**
 4:05 to 4:35 PM	| **Raunak Nair and Siddarth Dugar** | **Yes**
 4:30 to 5:00 PM	| **Thomas Raffay** | **Yes**
