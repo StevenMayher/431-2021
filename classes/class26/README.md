@@ -18,9 +18,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 1. Feedback on Quiz 3 **will appear** by class time.
 2. Feedback from the Minute Paper after Class 25 **will appear** by class time.
     - The [Course Grading Roster](https://bit.ly/431-2021-grades) now has all grades on Minute Papers, and each of the first seven Labs.
-4. Almost all project B work is now confirmed on my end. [Visit here for details](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/confirmations.md).
+3. Almost all project B work is now confirmed on my end. [Visit here for details](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/confirmations.md).
     - NHANES folks: To identify the ages of your subjects, include `RIDAGEYR` from `DEMO_J` in your tibble, even if you're not using Age as a predictor in your analyses. Values of 80 on `RIDAGEYR` indicate subjects with actual ages of 80 and higher, and so the average age of those folks listed as 80 is about 85. That's why we're encouraging you to exclude them from your work, and work only with people up to the age of 79. See Piazza for some additional thoughts on this.
-5. [Here's a list of the favorite songs](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md) for those of you who told me about yours. This was a little extra credit activity in the Project B instructions [buried in the "A Special Note" here](https://thomaselove.github.io/431-2021-projectB/checklist.html) so you needed to read the instructions carefully.
+4. [Here's a list of the favorite songs](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md) for those of you who told me about yours. This was a little extra credit activity in the Project B instructions [buried in the "A Special Note" here](https://thomaselove.github.io/431-2021-projectB/checklist.html) so you needed to read the instructions carefully.
 
 ## Remaining Deliverables for 431
 
@@ -39,6 +39,16 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - Optional [Lab Regrade Request Form](https://bit.ly/431-2021-lab-regrade-requests) (see [details here](https://github.com/THOMASELOVE/431-2021/tree/main/labs#grading-errors-and-regrade-requests) and in [this section of the Syllabus](https://thomaselove.github.io/431-2021-syllabus/deliverables-assignments.html#appeal-policy---request-a-review-in-december))
 3. Your CWRU Course Evaluation for 431 is due by midnight on Wednesday December 15. Take it any time at https://webapps.case.edu/courseevals/, although I'd prefer that you wait to do this until **after** your project presentation.
 
-## One Last Thing
+## Ten of the Most Important Ideas from 431
 
-**To come.**
+- You have to visualize and count data to understand it.
+- 90% of statistical work could be described as data management.
+- R Markdown and the tidyverse make it easier to do the right thing.
+- Statistical significance is not a helpful concept.
+- Point estimates and confidence intervals are useful ideas.
+- Most statistical procedures are in fact regression models.
+- All statistical methods involve assumptions worth checking.
+- The bootstrap is a very useful, and somewhat underused tool.
+- Prediction models need to predict well in new situations.
+- Statistical thinking is far too important to be left to statisticians.
+
