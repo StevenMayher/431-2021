@@ -43,9 +43,9 @@ Time | Investigator(s) | Confirmed?
 2:05 to 2:35 PM	| **Anna Magoline and Steven Mayher** | **Yes**
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Yes**
 3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **Yes**
-3:35 to 4:05 PM	|	**Gen Li and Jiayue Yang** | **Yes**
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Yes**
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Yes**
+4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Yes**
 
 ## Thursday December 9 Presentations (n = 13 projects; 12 confirmed)
 
