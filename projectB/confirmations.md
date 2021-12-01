@@ -1,13 +1,13 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Wednesday 2021-12-01 at 9:55 AM`
+- Status Report as of `Wednesday 2021-12-01 at 10:45 AM`
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
 *Not yet* | You've not yet submitted the [Revisions and Confirmation: Project B](https://bit.ly/431-2021-projectB-confirmation) form. | 6
 *Try again* | You've submitted the form once but Dr. Love emailed you requesting additional changes. | 2
-*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 5
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 28
+*PENDING* | You've submitted the form but Dr. Love hasn't reviewed it yet. | 3
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 30
 
 ## Monday December 6 Presentations (n = 14 projects; 7 confirmed)
 
@@ -24,7 +24,7 @@ Time | Investigator(s) | Confirmed?
 2:45 to 3:15 PM |	*Ziyin Zhao* | *Not yet*
 3:10 to 3:40 PM	| *Kyaw Oo Hla* | *Try again*
 3:35 to 4:05 PM	| *Cyrus Nosrati and Drake McFaul* | *Not yet*
-4:05 to 4:35 PM	| *Raunak Nair and Siddarth Dugar* | *PENDING*
+4:05 to 4:35 PM	| **Raunak Nair and Siddarth Dugar** | **Yes**
 4:30 to 5:00 PM	| **Thomas Raffay** | **Yes**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Yes**
 
@@ -40,7 +40,7 @@ Time | Investigator(s) | Confirmed?
 12:50 to 1:20 PM	|	**Himani Sancheti** | **Yes**
 1:15 to 1:45 PM	|	**Maryssa Shanteau-Jackson** | **Yes**
 1:40 to 2:10 PM	|	**Alex Olejko** | **Yes**
-2:05 to 2:35 PM	| *Anna Magoline and Steven Mayher* | *PENDING*
+2:05 to 2:35 PM	| **Anna Magoline and Steven Mayher** | **Yes**
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Yes**
 3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **Yes**
 3:35 to 4:05 PM	|	*Gen Li and Jiayue Yang* | *Try Again*
