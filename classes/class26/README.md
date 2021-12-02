@@ -15,16 +15,17 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Announcements
 
 1. Feedback on Quiz 3
-    - The Answer Sketch and Results document for Quiz 3 is now available.
-    - I am in the process of pulling together a spreadsheet for each of you containing my roster of your grades on everything so far, including the details of your grade on Quiz 3. I will get this to you as soon as possible, certainly by noon Friday.
-3. Feedback from the Minute Paper after Class 25 is [now available](https://bit.ly/431-2021-min25-feedback).
+    - The answer sketch (with class results) is [now available in PDF](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz3/quiz3_sketch_and_results.pdf).
+    - I sent you two emails late this morning called *431 Quiz 3 grade coming to you in a moment* and then *431 Quiz 3 Score* that provide your score on Quiz 3 and a little bit of context, as does the answer sketch.
+    - I am in the process of pulling together a spreadsheet for each of you containing my roster of your grades on everything so far, including the details of your grade on Quiz 3. I will get this to you before I go to bed on Friday 2021-12-03.
+2. Feedback from the Minute Paper after Class 25 is [now available](https://bit.ly/431-2021-min25-feedback).
     - The [Course Grading Roster](https://bit.ly/431-2021-grades) now has all grades on Minute Papers, and each of the first seven Labs.
-4. Almost all project B work is now confirmed on my end. [Visit here for details](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/confirmations.md).
+3. Almost all project B work is now confirmed on my end. [Visit here for details](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/confirmations.md). I'd like to talk with the two people whose projects aren't confirmed yet, after class.
     - NHANES folks: To identify the ages of your subjects, include `RIDAGEYR` from `DEMO_J` in your tibble, even if you're not using Age as a predictor in your analyses. Values of 80 on `RIDAGEYR` indicate subjects with actual ages of 80 and higher, and so the average age of those folks listed as 80 is about 85. That's why we're encouraging you to exclude them from your work, and work only with people up to the age of 79. See Piazza for some additional thoughts on this.
-5. [Here's a list of the favorite songs](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md) for those of you who told me about yours. This was a little extra credit activity in the Project B instructions [buried in the "A Special Note" here](https://thomaselove.github.io/431-2021-projectB/checklist.html) so you needed to read the instructions carefully.
-6. Karl Broman presents [The Top Ten Worst Graphs in the Scientific Literature](https://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/) as published in 1994-2012.
-7. Alison Hill on [How I Teach R Markdown](https://alison.rbind.io/post/2020-05-28-how-i-teach-r-markdown/) has some useful tips.
-8. [Interactive data tables in R with `reactable`](https://glin.github.io/reactable/index.html), as [highlighted by @Dataandme](https://twitter.com/dataandme/status/1196552930167599106?s=11). Check out the demos!
+4. [Here's a list of the favorite songs](https://github.com/THOMASELOVE/431-2021/blob/main/projectB/songs.md) for those of you who told me about yours. This was a little extra credit activity in the Project B instructions [buried in the "A Special Note" here](https://thomaselove.github.io/431-2021-projectB/checklist.html) so you needed to read the instructions carefully.
+5. Karl Broman presents [The Top Ten Worst Graphs in the Scientific Literature](https://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/) as published in 1994-2012.
+6. Alison Hill on [How I Teach R Markdown](https://alison.rbind.io/post/2020-05-28-how-i-teach-r-markdown/) has some useful tips.
+7. [Interactive data tables in R with `reactable`](https://glin.github.io/reactable/index.html), as [highlighted by @Dataandme](https://twitter.com/dataandme/status/1196552930167599106?s=11). Check out the demos!
 
 ![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/images/harrell_2021-11-24.png)[Link](https://twitter.com/f2harrell/status/1463514375411716100)
 
