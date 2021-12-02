@@ -52,6 +52,7 @@ Code | Student | Favorite Song with YouTube link | Year of Release | Genre
 ## What is Dr. Love's favorite song?
 
 - I can’t claim to follow popular music. Most of the things I listen to are musicals (especially shows I’m currently doing), classical music, Gilbert & Sullivan, comedy, some soundtracks and a lot of spoken word podcasts.
+- My favorite Broadway musical composer is the incredible Stephen Sondheim, most especially his [Sweeney Todd](https://www.youtube.com/watch?v=9Z-nIwAuh9g). I've been fortunate enough to do that show three times, once each as The Beadle, Judge Turpin, and Sweeney himself.
 - My favorite classical piece of music is probably Stravinsky's [The Rite of Spring](https://www.youtube.com/watch?v=EkwqPJZe8ms), which has everything, although I'm also really attached to lots of other pieces. (I played violin then viola through high school.)
 - The closest thing to a pop artist that I follow closely is Weird Al Yankovic. He’s the only artist whose concerts I’ve seen live more than twice, and I guess my favorite of his songs is probably [The Hamilton Polka](https://www.youtube.com/watch?v=3v0c6smpHSk) or [Word Crimes](https://www.youtube.com/watch?v=8Gv0H-vPoDc) or maybe one of the other polkas.
 - The songs I’ve played most often recently were either from A Gentlemen’s Guide to Love and Murder (the show I just finished) or from Something Rotten (the show I’ll be doing in Hudson this February.)
