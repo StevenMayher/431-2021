@@ -4,14 +4,13 @@
 :-----------: | :--------------: | :----------: | :---------: | :-------------: | :-----------: | :------------:
 for everything | for deadlines | expectations | from Dr. Love | ways to get help | labs & recordings | for downloads
 
-![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/images/harrell_2021-11-24.png)[Link](https://twitter.com/f2harrell/status/1463514375411716100)
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/images/taylor_2020.png)
  
 ## Today's Slides
 
 - Dr. Love's slides **will appear** in [PDF format](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/431-class26-slides.pdf), as well as in [R Markdown](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/431-class26-slides.Rmd).
 - The recording will be made available approximately 24 hours after class through our Shared Google Drive and via Modules and Echo 360 on [Canvas](https://canvas.case.edu).
 
-![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/images/cox1.png)
 
 ## Announcements
 
@@ -26,6 +25,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 6. Karl Broman presents [The Top Ten Worst Graphs in the Scientific Literature](https://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/) as published in 1994-2012.
 7. Alison Hill on [How I Teach R Markdown](https://alison.rbind.io/post/2020-05-28-how-i-teach-r-markdown/) has some useful tips.
 8. [Interactive data tables in R with `reactable`](https://glin.github.io/reactable/index.html), as [highlighted by @Dataandme](https://twitter.com/dataandme/status/1196552930167599106?s=11). Check out the demos!
+
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/images/harrell_2021-11-24.png)[Link](https://twitter.com/f2harrell/status/1463514375411716100)
+
 
 ## Remaining Deliverables for 431
 
@@ -80,3 +82,4 @@ In addition to 431, I teach two other semester-long courses, called **PQHS 432**
 - Prediction models need to predict well in new situations.
 - Statistical thinking is far too important to be left to statisticians.
 
+![](https://github.com/THOMASELOVE/431-2021/blob/main/classes/class26/images/cox1.png)
