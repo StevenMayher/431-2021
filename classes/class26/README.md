@@ -34,7 +34,9 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 ## Remaining Deliverables for 431
 
 1. Project B Presentations will be December 6, 7 and 9.
-    - The Schedule for Project B oral presentations is posted to our Shared Google Drive. Please contact Dr. Love via email immediately if there are any issues.
+    - The Schedule for Project B oral presentations is posted to our Shared Google Drive. Please contact Dr. Love via email immediately if there are any issues. 
+    - My office is Wood WG-82J on the ground floor of the Wood building in the School of Medicine.
+    - A determination about Zoom vs. in person for presentations will be made and announced tomorrow (Friday 2021-12-03).
     - See the [Project B Checklist](https://thomaselove.github.io/431-2021-projectB/checklist.html) for more on what to expect during your presentation.
 2. All other items for Dr. Love are due at the same time: **NOON on Friday 2021-12-10**
     - Final [Project B](https://thomaselove.github.io/431-2021-projectB/) materials.
