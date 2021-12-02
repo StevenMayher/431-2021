@@ -16,6 +16,7 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
 
 1. Feedback on Quiz 3
     - The answer sketch (with class results) is [now available in PDF](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz3/quiz3_sketch_and_results.pdf).
+    - During class today, I want to talk about Questions 3, 15 and 30.
     - I sent you two emails late this morning called *431 Quiz 3 grade coming to you in a moment* and then *431 Quiz 3 Score* that provide your score on Quiz 3 and a little bit of context, as does the answer sketch.
     - I am in the process of pulling together a spreadsheet for each of you containing my roster of your grades on everything so far, including the details of your grade on Quiz 3. I will get this to you before I go to bed on Friday 2021-12-03.
 2. Feedback from the Minute Paper after Class 25 is [now available](https://bit.ly/431-2021-min25-feedback).
