@@ -1,5 +1,11 @@
 ## Quiz 3 Instructions
 
+## Post-Quiz
+
+- The answer sketch (with class results) is [now available in PDF](https://github.com/THOMASELOVE/431-2021/blob/main/quizzes/quiz3/quiz3_sketch_and_results.pdf).
+- Dr. Love sent out two emails on 2021-12-02 called *431 Quiz 3 grade coming to you in a moment* and then *431 Quiz 3 Score* that provide your score and some context.
+- Further details will appear in another email coming your way on 2021-12-03.
+
 ## Details
 
 The files you will need to complete Quiz 3 include:
