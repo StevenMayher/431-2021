@@ -1,0 +1,26 @@
+Old Options:
+Predictors
+How do you consider your weight? Categorical
+Self-reported weight (1 year ago)? Quantitative
+Self-reported weight (10 years ago)? Quantitative
+Self-reported weight-age 25 (pounds)? Quantitative
+
+
+
+New Options:
+All Data Sets
+SEQN - Respondent Sequence Number
+
+Demographic Data
+RIDSTATR - Interview/Examination status									DEMO_J.xpt
+RIDAGEYR - Age in years at screening									DEMO_J.xpt
+
+BMXBMI - Body Mass Index (kg/m**2) 		Outcome			Quantitative	BMX_J.xpt
+
+LBXTC - Total Cholesterol (mg/dL)	Key Predictor		Quantitative	TCHOL_J.xpt
+
+
+LBXTR - Triglyceride (mg/dL)			Predictor		Quantitative	TRIGLY_J.xpt
+LBDHDD - Direct HDL-Cholesterol (mg/dL) Predictor		Quantitative	HDL_J.xpt
+BMXWAIST - Waist Circumference (cm)		Predictor		Quantitative	BMX_J.xpt
+DBQ700 - How healthy is the diet		Categorical		DBQ_J.xpt		DBQ_J.xpt

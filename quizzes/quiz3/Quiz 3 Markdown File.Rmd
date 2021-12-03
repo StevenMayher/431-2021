@@ -1,0 +1,204 @@
+---
+title: "Quiz 3"
+author: "Steven Mayher"
+date: "11/26/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+library(broom)
+library(car)
+library(Epi)
+library(equatiomatic)
+library(fivethirtyeight)
+library(GGally)
+library(ggrepel)
+library(glue)
+library(Hmisc)
+library(janitor)
+library(knitr)
+library(magrittr)
+library(modelsummary)
+library(naniar)
+library(patchwork)
+library(psych)
+library(pwr)
+library(sessioninfo)
+library(visdat)
+library(tidyverse)
+
+source("data/Love-boost.R")
+
+theme_set(theme_bw())
+```
+
+
+
+## Question 1
+
+```{r}
+wti_exam <- read_csv("data/wti_exam.csv",
+                     show_col_types = FALSE) %>%
+  clean_names()
+
+result01 <- anova(lm(exam2 ~ ta, data = wti_exam))
+
+tidy(result01) %>% kable(digits = 3)
+```
+
+
+```{r}
+wti_exam %$%
+  pairwise.t.test(exam2, ta, p.adjust.method = "bonferroni", alternative = "two.sided")
+```
+
+
+## Question 2
+
+```{r}
+par(mar = c(5,0,4,2) + c(0,7,0,0))
+wti_exam %$%
+  plot(TukeyHSD(aov(exam2 ~ ta), ordered = TRUE, conf.level = 0.95), las = 2)
+```
+
+```{r}
+tukey1 = wti_exam %$%
+  TukeyHSD(aov(exam2 ~ ta),
+           ordered = TRUE, conf.level = 0.95)
+
+tidy(tukey1) %>% kable(digits = 3)
+```
+
+```{r}
+wti_exam %$%
+  aov(exam2 ~ ta)
+```
+
+
+```{r}
+wti_exam %$%
+  TukeyHSD(aov(exam2 ~ ta), ordered = TRUE, conf.level = 0.95)
+```
+
+
+## Question 4
+
+
+```{r}
+data(Pottery)
+anova(lm(Na ~ Site, data = Pottery))
+```
+
+
+## Question 5
+
+```{r}
+p1 <- ggplot(Pottery, aes(sample = Fe)) +
+  geom_qq(col = "royalblue") +
+  geom_qq_line(col = "red") +
+  theme(aspect.ratio = 1) +
+  labs(title = "Normal Q-Q plot: Pottery - Iron")
+
+p2 <- ggplot(Pottery, aes(x = Fe)) +
+  geom_histogram(aes(y = stat(density)), bins = 18, fill = "royalblue", col = "gold") +
+  stat_function(fun = dnorm, args = list(mean = mean(Pottery$Fe), sd = sd(Pottery$Fe)), col = "red", lwd = 1.5) +
+  labs(title = "Density Function: Pottery - Iron")
+
+p3 <- ggplot(Pottery, aes(x = Fe, y = "")) +
+  geom_boxplot(fill = "royalblue", outlier.color = "royalblue") +
+  labs(title = "Boxplot: Pottery - Iron", y = "")
+
+p1 + (p2 / p3 + plot_layout(heights = c(4,1)))
+```
+
+
+```{r}
+p1 <- ggplot(Pottery, aes(sample = Mg)) +
+  geom_qq(col = "royalblue") +
+  geom_qq_line(col = "red") +
+  theme(aspect.ratio = 1) +
+  labs(title = "Normal Q-Q plot: Pottery - Magnesium")
+
+p2 <- ggplot(Pottery, aes(x = Mg)) +
+  geom_histogram(aes(y = stat(density)), bins = 18, fill = "royalblue", col = "gold") +
+  stat_function(fun = dnorm, args = list(mean = mean(Pottery$Mg), sd = sd(Pottery$Mg)), col = "red", lwd = 1.5) +
+  labs(title = "Density Function: Pottery - Magnesium")
+
+p3 <- ggplot(Pottery, aes(x = Mg, y = "")) +
+  geom_boxplot(fill = "royalblue", outlier.color = "royalblue") +
+  labs(title = "Boxplot: Pottery - Magnesium", y = "")
+
+p1 + (p2 / p3 + plot_layout(heights = c(4,1)))
+```
+
+
+```{r}
+p1 <- ggplot(Pottery, aes(sample = Ca)) +
+  geom_qq(col = "royalblue") +
+  geom_qq_line(col = "red") +
+  theme(aspect.ratio = 1) +
+  labs(title = "Normal Q-Q plot: Pottery - Calcium")
+
+p2 <- ggplot(Pottery, aes(x = Ca)) +
+  geom_histogram(aes(y = stat(density)), bins = 18, fill = "royalblue", col = "gold") +
+  stat_function(fun = dnorm, args = list(mean = mean(Pottery$Ca), sd = sd(Pottery$Ca)), col = "red", lwd = 1.5) +
+  labs(title = "Density Function: Pottery - Calcium")
+
+p3 <- ggplot(Pottery, aes(x = Ca, y = "")) +
+  geom_boxplot(fill = "royalblue", outlier.color = "royalblue") +
+  labs(title = "Boxplot: Pottery - Calcium", y = "")
+
+p1 + (p2 / p3 + plot_layout(heights = c(4,1)))
+```
+
+
+```{r}
+p1 <- ggplot(Pottery, aes(sample = Na)) +
+  geom_qq(col = "royalblue") +
+  geom_qq_line(col = "red") +
+  theme(aspect.ratio = 1) +
+  labs(title = "Normal Q-Q plot: Pottery - Sodium")
+
+p2 <- ggplot(Pottery, aes(x = Na)) +
+  geom_histogram(aes(y = stat(density)), bins = 18, fill = "royalblue", col = "gold") +
+  stat_function(fun = dnorm, args = list(mean = mean(Pottery$Na), sd = sd(Pottery$Na)), col = "red", lwd = 1.5) +
+  labs(title = "Density Function: Pottery - Sodium")
+
+p3 <- ggplot(Pottery, aes(x = Na, y = "")) +
+  geom_boxplot(fill = "royalblue", outlier.color = "royalblue") +
+  labs(title = "Boxplot: Pottery - Sodium", y = "")
+
+p1 + (p2 / p3 + plot_layout(heights = c(4,1)))
+```
+
+
+
+```{r}
+p1 <- ggplot(Pottery, aes(sample = Al)) +
+  geom_qq(col = "royalblue") +
+  geom_qq_line(col = "red") +
+  theme(aspect.ratio = 1) +
+  labs(title = "Normal Q-Q plot: Pottery - Aluminum")
+
+p2 <- ggplot(Pottery, aes(x = Al)) +
+  geom_histogram(aes(y = stat(density)), bins = 18, fill = "royalblue", col = "gold") +
+  stat_function(fun = dnorm, args = list(mean = mean(Pottery$Al), sd = sd(Pottery$Al)), col = "red", lwd = 1.5) +
+  labs(title = "Density Function: Pottery - Aluminum")
+
+p3 <- ggplot(Pottery, aes(x = Al, y = "")) +
+  geom_boxplot(fill = "royalblue", outlier.color = "royalblue") +
+  labs(title = "Boxplot: Pottery - Aluminum", y = "")
+
+p1 + (p2 / p3 + plot_layout(heights = c(4,1)))
+```
+
+
+
+
+
