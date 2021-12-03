@@ -1,0 +1,646 @@
+---
+title: "431 Class 25"
+author: "thomaselove.github.io/431"
+date: "2021-11-30"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    fonttheme: "structurebold"
+    colortheme: "whale"
+    fig_height: 5.5
+    fig_caption: false
+---
+
+## Today's Agenda
+
+1. What exactly is R doing if you ignore missing values when fitting models?
+    - What does `type.convert()` do?
+    - `na.omit` vs. `na.exclude` vs. `na.delete`
+2. Use multiple imputation to deal with missing data in fitting a linear regression with `lm` using the `mice` package. 
+
+(MICE = Multiple Imputation through Chained Equations)
+
+## My Setup
+
+My R project for Class 25 is located in the following folder...
+
+```
+"unique_stuff_to_me/2021-431/431-classes/class25"
+```
+
+```{r set-options, echo=FALSE, cache=FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(width = 60)
+```
+
+```{r}
+library(here)
+```
+
+
+```{r, message = FALSE}
+library(magrittr); library(knitr)
+library(janitor); library(naniar)
+
+library(mice) 
+  # mice = multiple imputation through chained equations
+
+library(broom)
+library(tidyverse)
+
+theme_set(theme_bw())
+```
+
+# What happens if you fit a regression model without doing anything at all about missing data?
+
+## What happens if you ignore NAs?
+
+Let's open a small, simulated data set with 100 subjects and some missing values.
+
+```{r, message = FALSE}
+sim1 <- read_csv(here("data", "c12_sim1.csv")) %>%
+    type.convert(as.is = FALSE, na.strings = "NA") 
+
+head(sim1)
+```
+
+## What does `type.convert()` actually do?
+
+Tries to convert each column (individually) to either logical, integer, numeric, complex or (if a character vector) to factor.
+
+- The first type (from that list) that can accept all non-missing values is chosen.
+- If all of the values are missing, the column is converted to logical.
+- Columns containing just `F`, `T`, `FALSE`, `TRUE` or `NA` values are made into logical.
+- Use the `na.strings` parameter to add missing strings (default = `"NA"`)
+- `as.is = FALSE` converts characters to factors. `as.is = TRUE` will become the default soon, so you should specify.
+
+## Our `sim1` data
+
+
+Variable | Description
+-------- | ------------------------------------------
+`subject` | Subject identifier
+`out_q`   | Quantitative outcome
+`out_b`   | Binary outcome with levels Yes, No
+`pred1`   | Predictor 1 (quantitative)
+`pred2`   | Predictor 2 (also quantitative)
+`pred3`   | Predictor 3 (categories are Low, Middle, High)
+
+- Clean up the factors?
+
+## Cleaning up `subject` and `pred3`
+
+```{r}
+sim1 <- sim1 %>%
+    mutate(subject = as.character(subject),
+           pred3 = fct_relevel(pred3, "Low", "Middle"))
+
+sim1 %>% tabyl(pred3, out_b)
+```
+
+## How much missingness do we have?
+
+```{r, fig.height = 5, warning = FALSE}
+gg_miss_var(sim1)
+```
+
+## How much missingness do we have?
+
+```{r}
+miss_var_summary(sim1)
+```
+
+```{r}
+n_miss(sim1)
+```
+
+
+## How much missingness do we have?
+
+```{r}
+prop_complete_case(sim1)
+```
+
+```{r}
+miss_case_table(sim1)
+```
+
+## Suppose we run a linear regression
+
+without dealing with the missing data, so that we run:
+
+```{r}
+mod1 <- lm(out_q ~ pred1 + pred2 + pred3, data = sim1)
+```
+
+How can we tell how many observations will be used?
+
+## What happens when we run a regression model?
+
+```{r}
+mod1 <- lm(out_q ~ pred1 + pred2 + pred3, data = sim1)
+
+anova(mod1)
+```
+
+- How many observations were used to fit this model?
+
+## Summary of our linear model
+
+```{r, echo = FALSE, fig.align = "center", out.height = '85%'}
+knitr::include_graphics(here("figures", "fig01.png"))
+```
+
+## Another way to see this
+
+```{r}
+glance(mod1) %>% select(1:6)
+```
+
+```{r}
+glance(mod1) %>% select(7:12)
+```
+
+## How could we have known this would be 70, in advance?
+
+```{r}
+sim1 %>% select(out_q, pred1, pred2, pred3) %>% 
+    miss_case_table()
+```
+
+
+## Which observations were not used?
+
+```{r}
+summary(mod1)$na.action
+```
+
+- A potentially more useful `na.action` setting in `lm` is `na.exclude` which pads out predicted values and residuals with NAs instead of omitting the 30 observations listed above.
+
+```
+lm(out_q ~ pred1 + pred2 + pred3, 
+      data = sim1, na.action = na.exclude)
+```
+
+## Predictions from `mod1` with `na.omit` and `na.exclude`
+
+```{r}
+mod1 <- lm(out_q ~ pred1 + pred2 + pred3, data = sim1)
+               ## note: by default na.action = na.omit here
+head(predict(mod1))
+```
+
+```{r}
+mod1_e <- lm(out_q ~ pred1 + pred2 + pred3, data = sim1,
+             na.action = na.exclude)
+head(predict(mod1_e))
+```
+
+# Multiple Imputation: Potential and Pitfalls
+
+## Sterne et al. 2009 *BMJ* 
+
+Multiple imputation for missing data in epidemiological and clinical research: potential and pitfalls
+
+> In this article, we review the reasons why missing data may lead to bias and loss of information in epidemiological and clinical research. We discuss the circumstances in which multiple imputation may help by reducing bias or increasing precision, as well as describing potential pitfalls in its application. Finally, we describe the recent use and reporting of analyses using multiple imputation in general medical journals, and suggest guidelines for the conduct and reporting of such analyses.
+
+- https://www.bmj.com/content/338/bmj.b2393
+
+**Note**: The next 7 slides are derived from Sterne et al.
+
+## An Example from Sterne et al.
+
+Consider, for example, a study investigating the association of systolic blood pressure with the risk of subsequent coronary heart disease, in which data on systolic blood pressure are missing for some people. 
+
+The probability that systolic blood pressure is missing is likely to:
+
+- decrease with age (doctors are more likely to measure it in older people), 
+- decrease with increasing body mass index, and 
+- decrease with history of smoking (doctors are more likely to measure it in people with heart disease risk factors or comorbidities). 
+
+If we assume that data are missing at random and that we have systolic blood pressure data on a representative sample of individuals within strata of age, smoking, body mass index, and coronary heart disease, then we can use multiple imputation to estimate the overall association between systolic blood pressure and coronary heart disease.
+
+## Missing Data Mechanisms
+
+- **Missing completely at random** There are no systematic differences between the missing values and the observed values. 
+    - For example, blood pressure measurements may be missing because of breakdown of an automatic sphygmomanometer.
+- **Missing at random** Any systematic difference between the missing and observed values can be explained by other observed data. 
+    - For example, missing BP measurements may be lower than measured BPs but only because younger people more often have a missing BP.
+- **Missing not at random** Even after the observed data are taken into account, systematic differences remain between the missing values and the observed values. 
+    - For example, people with high BP may be more likely to have headaches that cause them to miss clinic appointments.
+
+"Missing at random" is an **assumption** that justifies the analysis, and is not a property of the data.
+
+## Trouble: Data missing not at random
+
+Sometimes, it is impossible to account for systematic differences between missing and observed values using the available data.
+
+- In such (MNAR) cases, multiple imputation may give misleading results. 
+    - Those results can be either more or less misleading than a complete case analysis. 
+- For example, consider a study investigating predictors of depression. 
+    - If individuals are more likely to miss appointments because they are depressed on the day of the appointment, then it may be impossible to make the MAR assumption plausible, even if a large number of variables is included in the imputation model.
+
+Where complete cases and multiple imputation analyses give different results, the analyst should attempt to understand why, and this should be reported in publications.
+
+## What if the data are MCAR? 
+
+If we assume data are MAR, then unbiased and statistically more powerful analyses (compared with analyses based on complete cases) can generally be done by including individuals with incomplete data.
+
+There are circumstances in which analyses of **complete cases** will not lead to bias.
+
+- Missing data in predictor variables do not cause bias in analyses of complete cases if the reasons for the missing data are unrelated to the outcome. 
+    - In such cases, imputing missing data may lessen the loss of precision and power resulting from exclusion of individuals with incomplete predictor variables but are not required in order to avoid bias.
+
+## Stages of Multiple Imputation (1 of 2)
+
+> Multiple imputation ... aims to allow for the uncertainty about the missing data by creating several different plausible imputed data sets and appropriately combining results obtained from each of them.
+
+The first stage is to create multiple copies of the dataset, with the missing values replaced by imputed values. 
+
+- The imputation procedure must fully account for all uncertainty in predicting the missing values by injecting appropriate variability into the multiple imputed values; we can never know the true values of the missing data.
+
+Note that single Imputation of missing values usually causes standard errors to be too small, since it fails to account for the fact that we are uncertain about the missing values.
+
+
+## Stages of Multiple Imputation (2 of 2)
+
+The second stage is to use standard statistical methods to fit the model of interest to each of the imputed datasets. 
+
+- Estimated associations in each of the imputed datasets will differ because of the variation introduced in the imputation of the missing values, and they are only useful when averaged together to give overall estimated associations. 
+- Standard errors are calculated using Rubin's rules, which take account of the variability in results between the imputed datasets, reflecting the uncertainty associated with the missing values.
+- Valid inferences are obtained because we are averaging over the distribution of the missing data given the observed data.
+
+# Comparing Two Linear Models including Multiple Imputation
+
+## Framingham data
+
+```{r, message = FALSE}
+fram_raw <- read_csv(here("data/framingham.csv")) %>%
+    clean_names() 
+
+dim(fram_raw)
+n_miss(fram_raw)
+```
+
+- See https://www.framinghamheartstudy.org/ for more details.
+
+## fram_sub Tibble for Today
+
+```{r}
+fram_sub <- fram_raw %>%
+    mutate(educ = fct_recode(factor(education), 
+                          "Some HS" = "1",
+                          "HS grad" = "2",
+                          "Some Coll" = "3",
+                          "Coll grad" = "4")) %>%
+    mutate(obese = as.numeric(bmi >= 30)) %>%
+    rename(smoker = "current_smoker",
+           sbp = "sys_bp") %>%
+    mutate(subj_id = as.character(subj_id)) %>%
+    select(sbp, educ, smoker, obese, glucose, subj_id)
+```
+
+
+## Data Descriptions (variables we'll use today)
+
+The variables describe n = `r nrow(fram_sub)` adult subjects who were examined at baseline and then followed for ten years to see if they developed incident coronary heart disease during that time. 
+
+Variable | Description
+-------: | ------------------------------------------------
+`educ` | four-level factor: educational attainment
+`smoker` | 1 = current smoker at time of examination, else 0
+`sbp` | systolic blood pressure (mm Hg)
+`obese` | 1 if subject's `bmi` is 30 or higher, else 0
+`glucose` | blood glucose level in mg/dl
+
+### Today's Goal
+
+Use linear regression to predict `sbp` using two different models, in each case accounting for missingness via multiple imputation, where the predictors of interest are `glucose`, `obese`, `educ`,  and `smoker`.
+
+
+## Which variables are missing data?
+
+```{r, fig.height = 4, warning = FALSE}
+gg_miss_var(fram_sub)
+```
+
+## Track missingness with shadow
+
+```{r}
+fram_sub_sh <- bind_shadow(fram_sub)
+
+head(fram_sub_sh)
+```
+
+
+
+## Our Two Models
+
+Model 2: predict `sbp` using `glucose` and `obese`.
+
+Model 4: predict `sbp` using `glucose`, `obese`, `educ`,  and `smoker`.
+
+## Model 2 (CC): Two-predictor model for `sbp`
+
+Suppose we ignore the missingness and just run the model on the data with complete information on `sbp`, `glucose` and `obese`.
+
+```{r}
+m2_cc <- fram_sub_sh %$% lm(sbp ~ glucose + obese)
+
+tidy(m2_cc, conf.int = TRUE) %>% select(-statistic) %>%
+    kable(digits = 3)
+```
+
+## Edited Summary of Model 2 (CC)
+
+```{r, eval = FALSE}
+summary(m2_cc)   ## we'll just look at the bottom
+```
+
+```{r, echo = FALSE, fig.align = "center", out.width = '80%'}
+knitr::include_graphics(here("figures", "fig06.png"))
+```
+
+```{r}
+glance(m2_cc) %>%
+    select(nobs, r.squared, adj.r.squared, AIC, BIC) %>%
+    kable(digits = c(0, 4, 4, 0, 0))
+```
+
+## Model 4 (CC): Four-predictor model for `sbp`
+
+```{r}
+m4_cc <- fram_sub_sh %$% 
+    lm(sbp ~ glucose + obese + smoker + educ)
+
+tidy(m4_cc, conf.int = TRUE) %>% select(-statistic) %>%
+    kable(digits = 3)
+```
+
+## Edited Summary of Model 4 (CC)
+
+```{r, eval = FALSE}
+summary(m4_cc)          ## we'll just look at the bottom
+```
+
+```{r, echo = FALSE, fig.align = "center", out.width = '80%'}
+knitr::include_graphics(here("figures", "fig07.png"))
+```
+
+```{r}
+glance(m4_cc) %>%
+    select(nobs, r.squared, adj.r.squared, AIC, BIC) %>%
+    kable(digits = c(0, 4, 4, 0, 0))
+```
+
+## Variables used in our models 2 and 4
+
+```{r}
+miss_var_summary(fram_sub)
+```
+
+- Are we missing data on our outcome for these models?
+
+## Create multiple imputations for this subset
+
+How many subjects have complete / missing data that affect this model?
+
+```{r}
+pct_complete_case(fram_sub)
+
+pct_miss_case(fram_sub)
+```
+
+Let's create 15 imputed data sets.
+
+```{r}
+set.seed(431431)
+fram_mice24 <- mice(fram_sub, m = 15, printFlag = FALSE)
+```
+
+- Using `printFlag = FALSE` eliminates a lot of unnecessary (and not particularly informative) output here.
+
+## Summary Information about Imputation Process
+
+```{r}
+summary(fram_mice24)
+```
+
+- See Heymans and Eekhout sections 4.6-4.14 for more information.
+
+## Options within `mice` for imputation approaches
+
+Default methods include:
+
+- `pmm` predictive mean matching (default choice for quantitative variables)
+- `logreg` logistic regression (default for binary categorical variables)
+- `polyreg` polytomous logistic regression (for nominal multi-categorical variables)
+- `polr` proportional odds logistic regression (for ordinal categories)
+
+but there are `cart` methods and many others available, too.
+
+## What should we include in an imputation model?
+
+1. If things you are imputing are not Normally distributed, this can pose special challenges, and either a transformation or choosing an imputation method which is robust to these concerns is helpful.
+2. Include the outcome when imputing predictors. It causes you to conclude the relationship is weaker than it actually is, if you don't.
+3. The MAR assumption may only be reasonable when a certain variable is included in the model.
+    - As a result, it's usually a good idea to include as wide a range of variables in imputation models as possible. The concerns we'd have about parsimony in outcome models don't apply here.
+
+## Store one (or more) of the imputed data sets
+
+This will store the fifth imputed data set in `imp_5`.
+
+```{r}
+imp_5 <- complete(fram_mice24, 5) %>% tibble()
+
+dim(imp_5)
+n_miss(imp_5)
+```
+
+## Run Model 2 on each imputed data frame
+
+```{r}
+m2_mods <- with(fram_mice24, lm(sbp ~ glucose + obese))
+```
+
+```{r, echo = FALSE, fig.align = "center", out.height = '50%'}
+knitr::include_graphics(here("figures", "fig08.png"))
+```
+
+- 3 coefficients in each model, times 15 imputations = 45 rows.
+
+## More detailed regression results?
+
+Consider working with the analysis done on the 4th imputed data set (of the 15 created)...
+
+```{r}
+m2_a4 <- m2_mods$analyses[[4]]
+tidy(m2_a4) %>% kable(digits = 3)
+```
+
+## Pool Results across the 15 imputations
+
+```{r}
+m2_pool <- pool(m2_mods)
+summary(m2_pool, conf.int = TRUE, conf.level = 0.95)
+```
+
+## Model 2 (Complete Cases vs. Multiple Imputation)
+
+```{r}
+tidy(m2_cc, conf.int = TRUE) %>% kable(digits = 3)
+```
+
+```{r}
+summary(m2_pool, conf.int = TRUE, conf.level = 0.95) %>%
+    select(-df) %>% kable(digits = 2)
+```
+
+## More Details on Multiple Imputation Modeling
+
+```{r, eval = FALSE}
+m2_pool
+```
+
+```{r, echo = FALSE, fig.align = "center", out.width = '85%'}
+knitr::include_graphics(here("figures", "fig09.png"))
+```
+
+Definitions of all of these terms are available in the `mipo` help file.
+
+- `riv` = relative increase in variance attributable to nonresponse
+- `fmi` = fraction of missing information due to nonresponse
+
+## Model 4 run on each imputed data frame
+
+```{r}
+m4_mods <- with(fram_mice24, lm(sbp ~ glucose + 
+                              obese + smoker + educ))
+```
+
+```{r, echo = FALSE, fig.align = "center", out.height = '50%'}
+knitr::include_graphics(here("figures", "fig10.png"))
+```
+
+## Pool Results across the five imputations
+
+```{r}
+m4_pool <- pool(m4_mods)
+
+summary(m4_pool, conf.int = TRUE, conf.level = 0.95) %>%
+    select(-df) %>% kable(digits = 2)
+```
+
+## Complete Cases Result (Model 4)
+
+```{r}
+tidy(m4_cc, conf.int = TRUE) %>% select(-statistic) %>% 
+    kable(digits = 3)
+```
+
+## Multiple Imputation Result (Model 4)
+
+```{r}
+summary(m4_pool, conf.int = TRUE) %>% 
+  select(-statistic, -df) %>% kable(digits = 3)
+```
+
+## More Details on Multiple Imputation Modeling
+
+```{r, eval = FALSE}
+m4_pool
+```
+
+```{r, echo = FALSE, fig.align = "center", out.width = '85%'}
+knitr::include_graphics(here("figures", "fig11.png"))
+```
+
+## Estimate $R^2$ 
+
+```{r}
+pool.r.squared(m2_mods)
+
+pool.r.squared(m4_mods)
+```
+
+- Can also calculated adjusted $R^2$ by using `pool.r.squared(m2_mods, adjusted = TRUE)`. See next slide.
+
+## Estimates of adjusted $R^2$
+
+```{r}
+pool.r.squared(m2_mods, adjusted = TRUE)
+
+pool.r.squared(m4_mods, adjusted = TRUE)
+```
+
+
+## Tests of Nested Fits after imputation
+
+The models must be nested (same outcome, one set of predictors is a subset of the other) for this to be appropriate. 
+
+```{r}
+fit4 <- with(fram_mice24, 
+          expr = lm(sbp ~ glucose + obese + smoker + educ))
+fit2 <- with(fram_mice24, 
+          expr = lm(sbp ~ glucose + obese))
+```
+
+## Comparing Model 4 to Model 2 fits
+
+We'll use the Wald test after a linear regression fit.
+
+```{r}
+D1(fit4, fit2)
+```
+
+Could also use a likelihood ratio test.
+
+```{r}
+D3(fit4, fit2)
+```
+
+## Residual Plots for `mod4` with 6th imputed data set
+
+```{r, eval = FALSE}
+par(mfrow = c(2,2))
+plot(m4_mods$analyses[[6]])
+par(mfrow = c(1,1))
+```
+
+- See the next slide for the results.
+
+## Residual Plots for `mod4` using imputation 6
+
+```{r, echo = FALSE}
+par(mfrow = c(2,2))
+plot(m4_mods$analyses[[6]])
+par(mfrow = c(1,1))
+```
+
+## Residual Plots for `mod4` using imputation 7
+
+```{r, echo = FALSE}
+par(mfrow = c(2,2))
+plot(m4_mods$analyses[[7]])
+par(mfrow = c(1,1))
+```
+
+# Guidelines for Reporting
+
+## Guidelines for reporting, I (Sterne et al.)
+
+How should we report on analyses potentially affected by missing data?
+
+- Report the number of missing values for each variable of interest, or the number of cases with complete data for each important component of the analysis. Give reasons for missing values if possible, and indicate how many individuals were excluded because of missing data when reporting the flow of participants through the study. If possible, describe reasons for missing data in terms of other variables (rather than just reporting a universal reason such as treatment failure.)
+- Clarify whether there are important differences between individuals with complete and incomplete data, for example, by providing a table comparing the distributions of key exposure and outcome variables in these different groups
+- Describe the type of analysis used to account for missing data (eg, multiple imputation), and the assumptions that were made (eg, missing at random)
+
+## Guidelines for reporting, II (Sterne et al.)
+
+How should we report on analyses that involve multiple imputation?
+
+- Provide details of the imputation modeling (software used, key settings, number of imputed datasets, variables included in imputation procedure, etc.)
+- If a large fraction of the data is imputed, compare observed and imputed values.
+- Where possible, provide results from analyses restricted to complete cases, for comparison with results based on multiple imputation. If there are important differences between the results, suggest explanations.
+- It is also desirable to investigate the robustness of key inferences to possible departures from the missing at random assumption, by assuming a range of missing not at random mechanisms in sensitivity analyses. 
+

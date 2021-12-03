@@ -1,0 +1,665 @@
+---
+title: "431 Class 26"
+author: "thomaselove.github.io/431"
+date: "2021-12-02"
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    fonttheme: "structurebold"
+    colortheme: "whale"
+    fig_height: 5.5
+    fig_caption: FALSE
+---
+
+```{r set-options, include = FALSE}
+options(width = 55)
+```
+
+## Today's Agenda
+
+1. Graphical and Numerical Summaries of Data
+2. It's Just a Linear Model
+3. 432 preview: A `tidymodels` example with interaction
+4. Takeaways from 431
+
+## Today's R Setup
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# install datasauRus from CRAN as usual
+library(datasauRus)
+```
+
+```{r, message = FALSE, warning = FALSE}
+library(knitr)
+library(janitor)
+library(magrittr)
+library(mosaic)
+library(equatiomatic)
+library(patchwork)
+library(broom)
+library(tidyverse)
+
+opts_chunk$set(comment=NA)
+options(dplyr.summarise.inform = FALSE)
+theme_set(theme_bw())
+```
+
+and a couple of secrets, hidden for now.
+
+# Visualizing Data
+
+## New Data Set 1
+
+```{r, echo = FALSE, fig.height = 4}
+df <- datasaurus_dozen
+
+df <- df %>%
+  mutate(set = as.numeric(factor(dataset)))
+
+df %>% filter(set == 1) %$%
+  df_stats(~ y + x, data = .) %>%
+  select(response, n, missing, mean, sd) %>%
+  kable(dig = 2)
+
+df %>% filter(set == 1) %>%
+  ggplot(., aes(x = x, y = y)) +
+  geom_point() +
+  labs(title = "Data Set 1",
+       subtitle = "Pearson correlation = -0.06") +
+  theme(aspect.ratio = 1)
+```
+
+
+## 13 Data Sets (summarized) in the `df` tibble:
+
+```{r, echo = FALSE}
+df %>% group_by(set) %>%
+  summarize(n = n(), mean_x = mean(x), 
+            sd_x = sd(x), 
+            mean_y = mean(y), 
+            sd_y = sd(y), 
+            corr_xy = cor(x, y)) %>%
+   round_half_up(digits = 2)
+```
+
+## New Data: Model for Set 1
+
+```{r}
+set_1 <- lm(y ~ x, data = df %>% filter(set == 1))
+
+tidy(set_1, conf.int = T, conf.level = 0.9) %>% 
+  select(-statistic, -p.value) %>% kable(digits = 2)
+
+glance(set_1) %>%
+  select(r.squared, adj.r.squared, sigma, BIC, p.value) %>%
+  kable(digits = 3)
+```
+
+## All 13 Models, at a glance
+
+```{r, echo = FALSE}
+set_1 <- lm(y ~ x, data = df %>% filter(set == 1))
+set_2 <- lm(y ~ x, data = df %>% filter(set == 2))
+set_3 <- lm(y ~ x, data = df %>% filter(set == 3))
+set_4 <- lm(y ~ x, data = df %>% filter(set == 4))
+set_5 <- lm(y ~ x, data = df %>% filter(set == 5))
+set_6 <- lm(y ~ x, data = df %>% filter(set == 6))
+set_7 <- lm(y ~ x, data = df %>% filter(set == 7))
+set_8 <- lm(y ~ x, data = df %>% filter(set == 8))
+set_9 <- lm(y ~ x, data = df %>% filter(set == 9))
+set_10 <- lm(y ~ x, data = df %>% filter(set == 10))
+set_11 <- lm(y ~ x, data = df %>% filter(set == 11))
+set_12 <- lm(y ~ x, data = df %>% filter(set == 12))
+set_13 <- lm(y ~ x, data = df %>% filter(set == 13))
+
+a1 <- glance(set_1) %>% mutate(dataset = 1)
+a2 <- glance(set_2) %>% mutate(dataset = 2)
+a3 <- glance(set_3) %>% mutate(dataset = 3)
+a4 <- glance(set_4) %>% mutate(dataset = 4)
+a5 <- glance(set_5) %>% mutate(dataset = 5)
+a6 <- glance(set_6) %>% mutate(dataset = 6)
+a7 <- glance(set_7) %>% mutate(dataset = 7)
+a8 <- glance(set_8) %>% mutate(dataset = 8)
+a9 <- glance(set_9) %>% mutate(dataset = 9)
+a10 <- glance(set_10) %>% mutate(dataset = 10)
+a11 <- glance(set_11) %>% mutate(dataset = 11)
+a12 <- glance(set_12) %>% mutate(dataset = 12)
+a13 <- glance(set_13) %>% mutate(dataset = 13)
+
+a <- bind_rows(a1, a2, a3, a4, a5, a6, a7, a8, 
+               a9, a10, a11, a12, a13) %>%
+  select(dataset, r.squared, adj.r.squared, sigma, 
+         AIC, BIC) 
+
+a %>% kable(digits = c(0, 3, 3, 0, 0, 0))
+```
+
+## Plot for Data Set 1
+
+Does a linear model for y using x seem appropriate?
+
+```{r, echo = FALSE}
+df %>% 
+  filter(set == 1) %>%
+  ggplot(., aes(x = x, y = y)) +
+  geom_point() +
+  labs(title = "Data Set 1") +
+  theme(aspect.ratio = 1)
+```
+
+## https://xkcd.com/1725/
+
+![](images/linear_regression.png)
+
+## Plot for Set 1 (with linear model and loess smooth)
+
+```{r, echo = FALSE}
+p1 <- df %>% 
+  filter(set == 1) %>%
+  ggplot(., aes(x = x, y = y)) +
+    geom_point() +
+    geom_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") +
+    labs(title = "Data Set 1 with lm fit") +
+    theme(aspect.ratio = 1)
+
+p2 <- df %>% 
+  filter(set == 1) %>%
+  ggplot(., aes(x = x, y = y)) +
+    geom_point() +
+    geom_smooth(method = "loess", formula = y ~ x, se = FALSE) +
+    labs(title = "Data Set 1 with default loess smooth") +
+    theme(aspect.ratio = 1)
+
+p1 + p2 
+```
+
+### Model 1 (linear model for Set 1)
+
+```{r, echo = FALSE, results = 'asis'}
+extract_eq(set_1, use_coefs = TRUE)
+```
+
+
+## Residual Plots for Set 1 Model
+
+```{r, echo = FALSE, fig.height = 7}
+par(mfrow=c(2,2))
+plot(set_1)
+```
+
+## Models 2-13
+
+Models 2-13 all look about the same in terms of means, medians, correlations, regression models, but what happens if we plot the data?
+
+```{r, eval = FALSE}
+df %>%
+  filter(set != 1) %>%
+  ggplot(., aes(x = x, y = y, color = dataset)) +
+  geom_point(show.legend = FALSE) +
+  facet_wrap(~ set, labeller = "label_both")
+```
+
+## The Other 12 Data Sets
+
+```{r, fig.height = 6.8, echo = FALSE}
+df %>%
+  filter(set != 1) %>%
+  ggplot(., aes(x = x, y = y, color = dataset)) +
+  geom_point(show.legend = FALSE) +
+  facet_wrap(~ set, labeller = "label_both")
+```
+
+## Actually, each of these sets has a name
+
+```{r, fig.height = 6.8, echo = FALSE}
+df %>%
+  filter(set != 1) %>%
+  ggplot(., aes(x = x, y = y)) +
+  geom_point() +
+  facet_wrap(~ dataset, labeller = "label_both")
+```
+
+## And a linear model yields the same fit for each
+
+```{r, fig.height = 6.8, echo = FALSE}
+df %>%
+  filter(set != 1) %>%
+  ggplot(., aes(x = x, y = y)) +
+  geom_point() +
+  geom_smooth(method = "lm", col = "red", formula = y ~ x) +
+  facet_wrap(~ dataset, labeller = "label_both")
+```
+
+## How about a loess smooth with default `span`?
+
+```{r, fig.height = 6.8, echo = FALSE}
+df %>%
+  filter(set != 1) %>%
+  ggplot(., aes(x = x, y = y)) +
+  geom_point() +
+  geom_smooth(method = "loess", col = "blue", se = FALSE, formula = y ~ x) +
+  facet_wrap(~ dataset, labeller = "label_both", 
+             scales = "free_y")
+```
+
+
+## And the data come from
+
+These are the datasauRus dozen data sets, available in the `datasauRus` package, which you can install from CRAN, thanks to the work of Steph Locke.
+
+```
+library(datasauRus)
+df <- datasaurus_dozen
+```
+
+- You may recognize these data from their brief discussion in Spiegelhalter.
+- These were created by Alberto Cairo, who has some great books like *How Charts Lie*
+
+The moral of the story: **Never trust summary statistics alone, always visualize your data**
+
+## Two Cool Things, available online...
+
+1. We'll visit Tomas Westlake's work at \color{red}{https://r-mageddon.netlify.app/post/reanimating-the-datasaurus/}
+
+```{r, eval = FALSE}
+library(datasauRus)
+library(ggplot2)
+library(gganimate)
+
+ggplot(datasaurus_dozen, aes(x=x, y=y))+
+  geom_point()+
+  theme_minimal() +
+  transition_states(dataset, 3, 1)
+```
+
+
+## Two Cool Things, available online...
+
+2. Next, we'll visit \color{red}{https://www.autodesk.com/research/publications/same-stats-different-graphs}
+
+This is Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing by Justin Matejka and George Fitzmaurice.
+
+We'll look at a couple of the animated plots they generate there.
+
+---
+
+![](images/elephant.png)
+
+# It's Just a Linear Model
+
+## Common Statistical Tests are Linear Models
+
+Jonas Kristoffer Lindelov has built up a terrific resources to explain this at
+
+\color{red}{https://lindeloev.github.io/tests-as-linear/}
+
+\color{black} What's the point?
+
+---
+
+![](images/ijalm.png)
+
+## Consider Study 1 from Project B.
+
+- Analysis A. Compare two means/medians using paired samples
+  - This is a linear model. See Section 4.2 of [Lindelov](https://lindeloev.github.io/tests-as-linear/)
+  
+![](images/lind_A.png)
+  
+## Project B Study 1?
+
+- Analysis B. Compare two means/medians using independent samples
+  - This is a linear model, and not just for the t test. See Section 5 of [Lindelov](https://lindeloev.github.io/tests-as-linear/)
+- Analysis C. Compare 3-6 means/medians using independent samples
+  - ANOVA is obviously a linear model, but actually we can generate (essentially) the Kruskal-Wallis this way, too. See Section 6.1 of [Lindelov](https://lindeloev.github.io/tests-as-linear/)
+- Analysis D. Create and analyze a 2x2 table
+  - Yes, the chi-square test of independence can emerge from a linear model. See Section 7.2 of [Lindelov](https://lindeloev.github.io/tests-as-linear/)
+- Analysis E. Create and analyze a JxK table, where $2 \leq J \leq 5$ and $3 \leq K \leq 5$
+  - Linear model, as in the 2x2 case. See Section 7.2 of [Lindelov](https://lindeloev.github.io/tests-as-linear/)
+
+Analyses D-E are more commonly thought about in the context of generalized linear models, as we'll see in 432.
+
+---
+
+![](images/urchins.png)
+
+## Sea Urchins and Tidy Modeling (a taste of 432)
+
+Constable (1993) compared the inter-radial suture widths of urchins maintained on one of three food regimes 
+
+- Initial: no additional food supplied above what was in the initial sample
+- Low: food supplied periodically 
+- High: food supplied ad libitum (as often as desired)
+
+In an attempt to control for substantial variability in urchin sizes, the initial body volume of each urchin was measured as a covariate.
+
+- This example comes from https://www.tidymodels.org/start/models/
+- Another key source is https://www.flutterbys.com.au/stats/tut/tut7.5a.html
+- Data from Constable, A.J. The role of sutures in shrinking of the test in Heliocidaris erythrogramma (Echinoidea: Echinometridae). *Marine Biology* 117, 423-430 (1993). https://doi.org/10.1007/BF00349318
+
+## Package Load / Data ingest (Sea Urchins)
+
+```{r, message = FALSE, warning = FALSE}
+library(tidymodels)
+library(readr)
+library(broom.mixed)
+
+urchins <-
+  # Data were assembled for a tutorial 
+  # at https://www.flutterbys.com.au/stats/tut/tut7.5a.html
+  read_csv("https://tidymodels.org/start/models/urchins.csv") %>% 
+  # Change the names to be a little more verbose
+  setNames(c("food_regime", "initial_volume", "width")) %>% 
+  mutate(food_regime = 
+           factor(food_regime, 
+                  levels = c("Initial", "Low", "High")))
+```
+
+## The `urchins` data
+
+For each of 72 sea urchins, we know their
+
+- experimental feeding regime group (`food_regime`: either Initial, Low, or High),
+- size in milliliters at the start of the experiment (`initial_volume`), and
+- suture width at the end of the experiment (`width`).
+
+```{r}
+glimpse(urchins)
+```
+
+## Plot the Data
+
+```{r, echo = FALSE}
+ggplot(urchins,
+       aes(x = initial_volume, 
+           y = width, 
+           group = food_regime, 
+           col = food_regime)) + 
+  geom_point() + 
+  geom_smooth(method = lm, formula = y ~ x, se = FALSE) +
+  scale_color_viridis_d(option = "plasma", end = .7)
+```
+
+## How should we model the data?
+
+Since the slopes appear to be different for at least two of the feeding regimes, let's build a model that allows for two-way interactions. We'll use a linear model for width which allows each food regime to generate a different slope and intercept for the effect of initial volume.
+
+```{r}
+lm(width ~ initial_volume * food_regime, 
+   data = urchins) %>% tidy() %>% 
+  select(term, estimate) %>% kable(dig = 4)
+```
+
+## Setting up a linear regression with `tidymodels`
+
+```{r}
+lm_mod <-
+  linear_reg()  %>% 
+  set_engine("lm")
+
+lm_mod
+```
+
+It turns out that we'll have several options for engines here.
+
+## We can estimate or train the model with `fit()`
+
+```{r}
+lm_fit <- 
+  lm_mod %>%
+  fit(width ~ initial_volume * food_regime, data = urchins)
+```
+
+We'll look at the results on the next slide.
+
+## What's in `lm_fit`?
+
+```{r}
+tidy(lm_fit, conf.int = TRUE) %>% 
+  select(term, estimate, conf.low, conf.high) %>% 
+  kable(dig = 4)
+```
+
+## Make Predictions
+
+Suppose that, for a publication, it would be particularly interesting to make a plot of the mean body size for urchins that started the experiment with an initial volume of 20ml. To create such a graph, we start with some new example data that we will make predictions for.
+
+```{r}
+new_points <- expand.grid(
+  initial_volume = 20, 
+  food_regime = c("Initial", "Low", "High"))
+
+new_points
+```
+
+## Obtain Predicted Results for these `new_points`
+
+We'll develop mean predictions and uncertainty intervals.
+
+```{r}
+mean_pred <- predict(lm_fit, new_data = new_points)
+conf_int_pred <- predict(lm_fit, 
+                         new_data = new_points, 
+                         type = "conf_int")
+plot_data <- 
+  new_points %>% 
+  bind_cols(mean_pred) %>% 
+  bind_cols(conf_int_pred)
+```
+
+## Plot the `plot_data` results (code)
+
+```{r, eval = FALSE}
+ggplot(plot_data, aes(x = food_regime, y = .pred)) + 
+  geom_point() + 
+  geom_errorbar(aes(ymin = .pred_lower, 
+                    ymax = .pred_upper),
+                width = .2) + 
+  labs(y = "urchin size",
+       title = "Linear model fit using `lm`")
+```
+
+## Plot the `plot_data` results (result)
+
+```{r, echo = FALSE}
+ggplot(plot_data, aes(x = food_regime)) + 
+  geom_point(aes(y = .pred)) + 
+  geom_errorbar(aes(ymin = .pred_lower, 
+                    ymax = .pred_upper),
+                width = .2) + 
+  labs(y = "urchin size",
+       title = "Linear model fit using `lm`")
+```
+
+## But, I've just read something about Bayes?
+
+Would the results be different if we used a Bayesian approach?
+
+- Need to select a prior.
+- Let's use bell-shaped priors on the intercepts and slopes, using a Cauchy distribution (works out to be the same as a t distribution with one degree of freedom)
+- The `stan_glm()` function can be used, and this is available as an engine in `tidymodels`, where we need to specify `prior` and `prior_intercept` to fit a linear model.
+
+## Setting up a Bayesian Model
+
+```{r}
+prior_dist <- rstanarm::student_t(df = 1)
+
+set.seed(123)
+
+bayes_mod <-   
+  linear_reg() %>% 
+  set_engine("stan", 
+             prior_intercept = prior_dist, 
+             prior = prior_dist) 
+```
+
+## Training the Bayes Model
+
+```{r}
+bayes_fit <- 
+  bayes_mod %>% 
+  fit(width ~ initial_volume * food_regime, data = urchins)
+
+tidy(bayes_fit, conf.int = TRUE) %>% 
+  select(term, estimate, conf.low, conf.high) %>% 
+  kable(dig = 4)
+```
+
+## Building the plot for the Bayes model (code)
+
+```{r, eval = FALSE}
+bayes_plot_data <- 
+  new_points %>% 
+  bind_cols(predict(bayes_fit, new_data = new_points)) %>% 
+  bind_cols(predict(bayes_fit, new_data = new_points, 
+                    type = "conf_int"))
+
+ggplot(bayes_plot_data, aes(x = food_regime, y = .pred)) + 
+  geom_point() + 
+  geom_errorbar(aes(ymin = .pred_lower, ymax = .pred_upper), 
+                width = .2) + 
+  labs(y = "urchin size",
+       title = "Bayesian model with t(1) prior distribution")
+```
+
+## Plot for the Bayes model (result)
+
+```{r, echo = FALSE, message = FALSE}
+bayes_plot_data <- 
+  new_points %>% 
+  bind_cols(predict(bayes_fit, new_data = new_points)) %>% 
+  bind_cols(predict(bayes_fit, new_data = new_points, 
+                    type = "conf_int"))
+
+ggplot(bayes_plot_data, aes(x = food_regime, y = .pred)) + 
+  geom_point() + 
+  geom_errorbar(aes(ymin = .pred_lower, ymax = .pred_upper), 
+                width = .2) + 
+  labs(y = "urchin size",
+       title = "Bayesian model with t(1) prior distribution")
+```
+
+## Comparing the Models
+
+```{r, echo = FALSE}
+p1 <- ggplot(plot_data, aes(x = food_regime, y = .pred)) + 
+  geom_point() + 
+  geom_errorbar(aes(ymin = .pred_lower, 
+                    ymax = .pred_upper),
+                width = .2) + 
+  geom_label(aes(label = round_half_up(.pred,3)), fill = "white") +
+  labs(y = "urchin size",
+       title = "Linear model fit using `lm`")
+
+p2 <- ggplot(bayes_plot_data, aes(x = food_regime, y = .pred)) + 
+  geom_point() + 
+  geom_errorbar(aes(ymin = .pred_lower, ymax = .pred_upper), width = .2) + 
+  geom_label(aes(label = round_half_up(.pred,3)), fill = "white") +
+  labs(y = "urchin size",
+       title = "Bayesian model with t(1) prior")
+
+p1 + p2 + 
+  plot_annotation(title = "Comparing linear models for urchins data")
+```
+
+## Note that the models aren't actually the same
+
+```{r, echo = FALSE}
+p1 <- ggplot(plot_data, aes(x = food_regime, y = .pred)) + 
+  geom_point() + 
+  geom_errorbar(aes(ymin = .pred_lower, 
+                    ymax = .pred_upper),
+                width = .2) + 
+  geom_label(aes(label = round_half_up(.pred,5)), fill = "white") +
+  labs(y = "urchin size",
+       title = "Linear model fit using `lm`")
+
+p2 <- ggplot(bayes_plot_data, aes(x = food_regime, y = .pred)) + 
+  geom_point() + 
+  geom_errorbar(aes(ymin = .pred_lower, ymax = .pred_upper), width = .2) + 
+  geom_label(aes(label = round_half_up(.pred,5)), fill = "white") +
+  labs(y = "urchin size",
+       title = "Bayesian model with t(1) prior")
+
+p1 + p2 + 
+  plot_annotation(title = "Comparing linear models for urchins data")
+```
+
+## What are we plotting, actually?
+
+```{r}
+plot_data %>% kable(dig = 4)
+bayes_plot_data %>% kable(dig = 4)
+```
+
+
+# What do we take away from 431 at the end of the day?
+
+## Ten Simple Rules for Effective Statistical Practice
+
+From *PLoS Comput Biol* [$\textcolor{blue}{link}$](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004961)
+
+1. Statistical Methods Should Enable Data to Answer Scientific Questions
+2. Signals Always Come with Noise
+3. Plan Ahead, Really Ahead
+4. Worry About Data Quality
+5. Statistical Analysis Is More Than a Set of Computations
+6. Keep it Simple
+7. Provide Assessments of Variability
+8. Check Your Assumptions
+9. When Possible, Replicate!
+10. Make Your Analysis Reproducible
+
+## A Tip from David Robinson
+
+![](images/gradschool.png)
+
+## Build Tidy Data Sets
+
+- Each variable you measure should be in one column.
+- Each different observation of that variable should be in a different row.
+- There should be one table for each "kind" of variable.
+- If you have multiple tables, they should include a column in the table that allows them to be linked.
+- Include a row at the top of each data table that contains real row names. `Age_at_Diagnosis` is a much much better name than `ADx`.
+- Build useful codebooks.
+
+Jeff Leek: "How to share data with a statistician" [$\textcolor{blue}{link}$](https://github.com/jtleek/datasharing)
+
+## The Impact of Study Design (Gelman)
+
+Applied statistics is hard. 
+
+- Doing a statistical analysis is like playing basketball, or knitting a sweater. You can get better with practice.
+- Incompetent statistics does not necessarily doom a research paper: some findings are solid enough that they show up even when there are mistakes in the data collection and data analyses. But we've also seen many examples where incompetent statistics led to conclusions that made no sense but still received publication and publicity.
+- We should be thinking not just about data analysis, but also data quality.
+
+> To consult the statistician after an experiment is finished is often merely to ask him to conduct a post mortem examination. He can perhaps say what the experiment died of. (R. A. Fisher)
+
+---
+
+![](images/bear.jpg)
+
+
+## What does sad p-value bear lead to?
+
+So you collected data and analyzed the results. Now you want to do an after data gathering (post hoc) power analysis.
+
+1. What will you use as your "true" effect size? 
+    - Often, point estimate from data - yuck - results very misleading - power is generally seriously overestimated when computed on the basis of statistically significant results.
+    - Much better (but rarer) to identify plausible effect sizes based on external information rather than on your sparkling new result.
+2. What are you trying to do? (too often)
+    - get researcher off the hook (I didn't get p < 0.05 because I had low power - an alibi to explain away non-significant findings) or
+    - encourage overconfidence in the finding.
+    
+None of this is particularly smart.
+
+## The Course So Far
+
+1. Statistics is too important to be left to statisticians.
+2. Models and visualization are the big takeaways, but don't forget about methods for making statistical inferences.
+3. Reproducible research is the current wave. 
+4. Things are changing quickly. We live in interesting times.
+
+---
+
+![](images/allfolks.png)

@@ -13,4 +13,6 @@ We will post a list of student websites here as we receive them.
 - [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd)
 - [Kristi Lin-Rahardja](https://kristilinr.netlify.app/)
 - [Jacqueline Shaia](https://www.jacquelensphd.com/)
+- [Neeti Shirke](https://neetishirke.wordpress.com/)
 - [Olivia Wilcox](https://www.olivia-wilcox.com/)
+- [Sneha Yamsani](https://sneha-yamsani.owlstown.net/)
