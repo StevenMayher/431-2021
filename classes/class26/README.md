@@ -38,17 +38,18 @@ for everything | for deadlines | expectations | from Dr. Love | ways to get help
     - My office is Wood WG-82J on the ground floor of the Wood building in the School of Medicine.
     - A determination about Zoom vs. in person for presentations will be made and announced tomorrow (Friday 2021-12-03).
     - See the [Project B Checklist](https://thomaselove.github.io/431-2021-projectB/checklist.html) for more on what to expect during your presentation.
-2. All other items for Dr. Love are due at the same time: **NOON on Friday 2021-12-10**
+2. Most other items for Dr. Love are due at the same time: **NOON on Friday 2021-12-10**
     - Final [Project B](https://thomaselove.github.io/431-2021-projectB/) materials.
         - This includes R Markdown and HTML files for Study 1 and for Study 2, submitted through [Canvas](https://canvas.case.edu/)
         - All students must also complete the [Self-Evaluation Form](https://thomaselove.github.io/431-2021-projectB/self_eval.html), which will be posted **in early December**.
         - If you are not using NHANES 2017-18 data, you will also need to submit your raw data through [Canvas](https://canvas.case.edu/)
         - If you built slides for your oral presentation, submit those through [Canvas](https://canvas.case.edu/) too.
+    - Optional [Lab Regrade Request Form](https://bit.ly/431-2021-lab-regrade-requests) (see [details here](https://github.com/THOMASELOVE/431-2021/tree/main/labs#grading-errors-and-regrade-requests) and in [this section of the Syllabus](https://thomaselove.github.io/431-2021-syllabus/deliverables-assignments.html#appeal-policy---request-a-review-in-december))
+3. The three optional Labs are now due at **NOON on Monday 2021-12-13**
     - Optional [Lab X](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) (your website; thanks to the folks who've already done this)
     - Optional [Lab Y](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) (visualizing the [amplified (2021-10-16) favorite movies data set](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies#new-and-amplified-data-set) in a graph)
     - Optional [Lab Z](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) (building a table [with the gt package](https://gt.rstudio.com/) for the [movies data](https://github.com/THOMASELOVE/431-2021/tree/main/classes/movies#new-and-amplified-data-set))
-    - Optional [Lab Regrade Request Form](https://bit.ly/431-2021-lab-regrade-requests) (see [details here](https://github.com/THOMASELOVE/431-2021/tree/main/labs#grading-errors-and-regrade-requests) and in [this section of the Syllabus](https://thomaselove.github.io/431-2021-syllabus/deliverables-assignments.html#appeal-policy---request-a-review-in-december))
-3. Your CWRU Course Evaluation for 431 is due by midnight on Wednesday December 15. Take it any time at https://webapps.case.edu/courseevals/, although I'd prefer that you wait to do this until **after** your project presentation.
+4. Your CWRU Course Evaluation for 431 is due by midnight on Wednesday December 15. Take it any time at https://webapps.case.edu/courseevals/, although I'd prefer that you wait to do this until **after** your project presentation.
 
 ## Taking Other Courses (like 432) With Me
 
