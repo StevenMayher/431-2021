@@ -16,9 +16,9 @@ Lab | Assignment | Answer Sketch/Grading Rubric | Feedback to [Grading Roster](h
 
 Lab | Instructions | Deadline
 ---: | ----------- | ---------
-X | [Lab X Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) | optional: due 2021-12-10 at noon
-Y | [Lab Y Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) | optional: due 2021-12-10 at noon
-Z | [Lab Z Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) | optional: due 2021-12-10 at noon
+X | [Lab X Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labX) | optional: due 2021-12-13 at noon
+Y | [Lab Y Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labY) | optional: due 2021-12-13 at noon
+Z | [Lab Z Instructions](https://github.com/THOMASELOVE/431-2021/tree/main/labs/labZ) | optional: due 2021-12-13 at noon
 
 ## Grading
 
