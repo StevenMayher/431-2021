@@ -1,13 +1,13 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Wednesday 2021-12-01 at 4:19 PM`
+- Status Report as of `Friday 2021-12-03 at 10:20 AM`
 
 **Note**: The *Copy of Project B Registration Concerns* Google Sheet in our Shared Drive (Project B folder) contains additional feedback.
 
 Confirmed? | Meaning | Count
 :---: | :----: | :----:
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 39
-*Try again* | Dr. Love emailed you requesting additional changes by 8 PM 2021-12-01. | 2
+**Yes** | You're all set. Dr. Love has approved your submitted form. | 40
+*Try again* | Dr. Love emailed you requesting additional changes by 8 PM 2021-12-01. | 1
 
 ## Monday December 6 Presentations (n = 14 projects; 13 confirmed)
 
@@ -16,7 +16,7 @@ Time | Investigator(s) | Confirmed?
 9:30 to 10:00 AM | **Allison Bode** | **Yes**
 9:55 to 10:25 AM | **Michael Douglass** | **Yes**
 10:20 to 10:50 AM	| **Catherine Heinzinger** | **Yes**
-10:45 to 11:15 AM	| *Jacob Rich* | *Try again*
+10:45 to 11:15 AM	| **Jacob Rich** | **Yes**
 11:10 to 11:40 AM	| **Shruti Raghunathan and Norman Luc** | **Yes**
 12:50 to 1:20 PM	| **Audrey Zhu** | **Yes**
 1:15 to 1:45 PM	| **Christopher Jones** | **Yes**
