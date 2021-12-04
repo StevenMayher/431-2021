@@ -1,15 +1,8 @@
 # Project B Confirmation Status 
 
-- Status Report as of `Friday 2021-12-03 at 10:20 AM`
-
 **Note**: The *Copy of Project B Registration Concerns* Google Sheet in our Shared Drive (Project B folder) contains additional feedback.
 
-Confirmed? | Meaning | Count
-:---: | :----: | :----:
-**Yes** | You're all set. Dr. Love has approved your submitted form. | 40
-*Try again* | Dr. Love emailed you requesting additional changes by 8 PM 2021-12-01. | 1
-
-## Monday December 6 Presentations (n = 14 projects; 13 confirmed)
+## Monday December 6 Presentations (n = 14 projects)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
@@ -28,7 +21,7 @@ Time | Investigator(s) | Confirmed?
 4:30 to 5:00 PM	| **Thomas Raffay** | **Yes**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Yes**
 
-## Tuesday December 7 Presentations (n = 14 projects; all confirmed)
+## Tuesday December 7 Presentations (n = 14 projects)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
@@ -47,7 +40,7 @@ Time | Investigator(s) | Confirmed?
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Yes**
 4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Yes**
 
-## Thursday December 9 Presentations (n = 13 projects; 12 confirmed)
+## Thursday December 9 Presentations (n = 13 projects)
 
 Time | Investigator(s) | Confirmed?
 :-------: | :---: | :---:
@@ -58,7 +51,7 @@ Time | Investigator(s) | Confirmed?
 11:10 to 11:40 AM	| **Jeeda Ismail and Makaela Mews** | **Yes**
 11:35 to 12:05 PM	| **Paula Ambrose and Tyler Petrie** | **Yes**
 12:50 to 1:20 PM	| **Neeti Shirke and Sneha Yamsani** | **Yes**
-1:15 to 1:45 PM	| *Fumi Kong* | *Try again*
+1:15 to 1:45 PM	| **Fumi Kong** | **Yes**
 1:40 to 2:10 PM	| **Luis Mesias Flores** | **Yes**
 2:05 to 2:35 PM	| **Avantika Bhaduri and Anushree Iyengar** | **Yes**
 2:45 to 3:15 PM	| **Aaron Fletcher** | **Yes**
