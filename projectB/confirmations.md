@@ -45,8 +45,8 @@ Time | Investigator(s) | Method
 
 ## Thursday December 9 Presentations (n = 13 projects)
 
-Time | Investigator(s) | Confirmed? | Method
-:-------: | :---: | :---: | :---:
+Time | Investigator(s) | Method
+:-------: | :---: | :----:
 9:30 to 10:00 AM	| *Rock Lim** | **In Person**
 9:55 to 10:25 AM	| *Ying Xiong* | ?
 10:20 to 10:50 AM	| *Sarah Nock and Harrison Lindley* | ?
