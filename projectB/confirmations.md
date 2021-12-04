@@ -26,8 +26,8 @@ Time | Investigator(s) | Method
 
 ## Tuesday December 7 Presentations (n = 14 projects)
 
-Time | Investigator(s) | Confirmed? | Method
-:-------: | :---: | :---: | :---:
+Time | Investigator(s) | Method
+:-------: | :---: | :----:
 9:30 to 10:00 AM	| *Graham Akeson* | ?
 9:55 to 10:25 AM	 | **Kristi Lin-Rahardja and Nick Latina** | **Zoom**
 10:20 to 10:50 AM	| **Megan Foradori and Ryan McMaster** | **In Person**
