@@ -5,7 +5,7 @@
 - Students have confirmed all 41 project presentations. 
 - To confirm your method, please visit https://bit.ly/431-2021-projectB-zoom-or-in-person. The deadline is 7 AM on your presentation day.
 
-## Monday December 6 Presentations (n = 14 projects)
+## Monday December 6 Presentations (n = 14 projects, method confirmed for 11)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
@@ -24,7 +24,7 @@ Time | Investigator(s) | Method
 4:30 to 5:00 PM	| **Thomas Raffay** | **In Person**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **In Person**
 
-## Tuesday December 7 Presentations (n = 14 projects)
+## Tuesday December 7 Presentations (n = 14 projects, method confirmed for 8)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
@@ -43,12 +43,12 @@ Time | Investigator(s) | Method
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Zoom**
 4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Zoom**
 
-## Thursday December 9 Presentations (n = 13 projects)
+## Thursday December 9 Presentations (n = 13 projects, method confirmed for 8)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
-9:30 to 10:00 AM	| *Rock Lim** | **In Person**
-9:55 to 10:25 AM	| *Ying Xiong* | ?
+9:30 to 10:00 AM	| **Rock Lim** | **In Person**
+9:55 to 10:25 AM	| **Ying Xiong** | **In Person**
 10:20 to 10:50 AM	| **Sarah Nock and Harrison Lindley** | **In Person**
 10:45 to 11:15 AM	| *Kiran Desai and Grace Armstrong* | ?
 11:10 to 11:40 AM	| **Jeeda Ismail and Makaela Mews** | **In Person**
