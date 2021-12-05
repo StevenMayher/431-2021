@@ -33,7 +33,7 @@ Time | Investigator(s) | Method
 10:20 to 10:50 AM	| **Megan Foradori and Ryan McMaster** | **In Person**
 10:45 to 11:15 AM	| *Zahin Islam* | ?
 11:10 to 11:40 AM	| *Ria Tilve* | ?
-12:50 to 1:20 PM	|	*Himani Sancheti* | ?
+12:50 to 1:20 PM	|	**Himani Sancheti** | **Zoom**
 1:15 to 1:45 PM	|	*Maryssa Shanteau-Jackson* | ?
 1:40 to 2:10 PM	|	**Alex Olejko** | **In Person**
 2:05 to 2:35 PM	| *Anna Magoline and Steven Mayher* | ?
