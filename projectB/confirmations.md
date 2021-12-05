@@ -5,7 +5,7 @@
 - Students have confirmed all 41 project presentations. 
 - To confirm your method, please visit https://bit.ly/431-2021-projectB-zoom-or-in-person. The deadline is 7 AM on your presentation day.
 
-## Monday December 6 Presentations (n = 14 projects, method confirmed for 11)
+## Monday December 6 Presentations (n = 14 projects, method confirmed for 12)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
@@ -13,7 +13,7 @@ Time | Investigator(s) | Method
 9:55 to 10:25 AM | **Michael Douglass** | **In Person**
 10:20 to 10:50 AM	| **Catherine Heinzinger** | **In Person**
 10:45 to 11:15 AM	| **Jacob Rich** | **In Person**
-11:10 to 11:40 AM	| *Shruti Raghunathan and Norman Luc* | ?
+11:10 to 11:40 AM	| **Shruti Raghunathan and Norman Luc** | **In Person**
 12:50 to 1:20 PM	| **Audrey Zhu** | **In Person**
 1:15 to 1:45 PM	| **Christopher Jones** | **Zoom**
 1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Zoom**
