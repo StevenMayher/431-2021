@@ -1,4 +1,4 @@
-# Project B Status Updates
+# Project B Presentation Status Updates
 
 **Note**: The *Copy of Project B Registration Concerns* Google Sheet in our Shared Drive (Project B folder) contains additional feedback.
 
