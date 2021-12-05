@@ -24,11 +24,11 @@ Time | Investigator(s) | Method
 4:30 to 5:00 PM	| **Thomas Raffay** | **In Person**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **In Person**
 
-## Tuesday December 7 Presentations (n = 14 projects, method confirmed for 8)
+## Tuesday December 7 Presentations (n = 14 projects, method confirmed for 9)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
-9:30 to 10:00 AM	| *Graham Akeson* | ?
+9:30 to 10:00 AM	| **Graham Akeson** | **In Person**
 9:55 to 10:25 AM	 | **Kristi Lin-Rahardja and Nick Latina** | **Zoom**
 10:20 to 10:50 AM	| **Megan Foradori and Ryan McMaster** | **In Person**
 10:45 to 11:15 AM	| *Zahin Islam* | ?
