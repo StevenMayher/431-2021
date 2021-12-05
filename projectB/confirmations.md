@@ -15,7 +15,7 @@ Time | Investigator(s) | Method
 10:45 to 11:15 AM	| **Jacob Rich** | **In Person**
 11:10 to 11:40 AM	| *Shruti Raghunathan and Norman Luc* | ?
 12:50 to 1:20 PM	| **Audrey Zhu** | **In Person**
-1:15 to 1:45 PM	| *Christopher Jones* | ?
+1:15 to 1:45 PM	| **Christopher Jones** | **Zoom**
 1:40 to 2:10 PM	| *Cerag Oguztuzun and Abhishek Bhardwaj* | ?
 2:45 to 3:15 PM |	*Ziyin Zhao* | ?
 3:10 to 3:40 PM	| **Kyaw Oo Hla** | **In Person**
@@ -35,11 +35,11 @@ Time | Investigator(s) | Method
 11:10 to 11:40 AM	| *Ria Tilve* | ?
 12:50 to 1:20 PM	|	*Himani Sancheti* | ?
 1:15 to 1:45 PM	|	*Maryssa Shanteau-Jackson* | ?
-1:40 to 2:10 PM	|	*Alex Olejko* | ?
+1:40 to 2:10 PM	|	**Alex Olejko** | **In Person**
 2:05 to 2:35 PM	| *Anna Magoline and Steven Mayher* | ?
 2:45 to 3:15 PM	|	*Olivia Wilcox* | ?
 3:10 to 3:40 PM	| *Jacqueline Shaia and Benjamin Kramer* | ?
-4:05 to 4:35 PM	|	*Zi Jie (Jay) Wei and Scarlett He* | ?
+4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Zoom**
 4:30 to 5:00 PM	|	*Carly Rose and Diya Yang* | ?
 4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Zoom**
 
@@ -51,7 +51,7 @@ Time | Investigator(s) | Method
 9:55 to 10:25 AM	| *Ying Xiong* | ?
 10:20 to 10:50 AM	| *Sarah Nock and Harrison Lindley* | ?
 10:45 to 11:15 AM	| *Kiran Desai and Grace Armstrong* | ?
-11:10 to 11:40 AM	| *Jeeda Ismail and Makaela Mews* | ?
+11:10 to 11:40 AM	| **Jeeda Ismail and Makaela Mews** | **In Person**
 11:35 to 12:05 PM	| *Paula Ambrose and Tyler Petrie* | ?
 12:50 to 1:20 PM	| **Neeti Shirke and Sneha Yamsani** | **Zoom**
 1:15 to 1:45 PM	| *Fumi Kong* | ?
