@@ -21,7 +21,7 @@ Time | Investigator(s) | Method
 3:10 to 3:40 PM	| **Kyaw Oo Hla** | **Completed**
 4:05 to 4:35 PM	| **Raunak Nair and Siddarth Dugar** | **Completed**
 4:30 to 5:00 PM	| **Thomas Raffay** | **Completed**
-4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **In Person**
+4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Completed**
 
 ## Tuesday December 7 Presentations (n = 15 projects)
 
