@@ -5,7 +5,7 @@
 - Students have confirmed all 41 project presentations. 
 - To confirm your method, please visit https://bit.ly/431-2021-projectB-zoom-or-in-person. The deadline is 7 AM on your presentation day.
 
-## Monday December 6 Presentations (n = 14 projects)
+## Monday December 6 Presentations (n = 13 projects)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
@@ -19,12 +19,11 @@ Time | Investigator(s) | Method
 1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Zoom**
 2:45 to 3:15 PM |	**Ziyin Zhao** | **In Person**
 3:10 to 3:40 PM	| **Kyaw Oo Hla** | **In Person**
-3:35 to 4:05 PM	| **Cyrus Nosrati and Drake McFaul** | **Zoom**
 4:05 to 4:35 PM	| **Raunak Nair and Siddarth Dugar** | **Zoom**
 4:30 to 5:00 PM	| **Thomas Raffay** | **In Person**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **In Person**
 
-## Tuesday December 7 Presentations (n = 14 projects, method confirmed for 13)
+## Tuesday December 7 Presentations (n = 15 projects, method confirmed for 14)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
@@ -39,6 +38,7 @@ Time | Investigator(s) | Method
 2:05 to 2:35 PM	| *Anna Magoline and Steven Mayher* | ?
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Zoom**
 3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **In Person**
+3:35 to 4:05 PM	| **Cyrus Nosrati and Drake McFaul** | **Zoom**
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Zoom**
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Zoom**
 4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Zoom**
