@@ -17,8 +17,8 @@ Time | Investigator(s) | Method
 12:50 to 1:20 PM	| **Audrey Zhu** | **Completed**
 1:15 to 1:45 PM	| **Christopher Jones** | **Completed**
 1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Completed**
-2:45 to 3:15 PM |	**Ziyin Zhao** | **In Person**
-3:10 to 3:40 PM	| **Kyaw Oo Hla** | **In Person**
+2:45 to 3:15 PM |	**Ziyin Zhao** | **Completed**
+3:10 to 3:40 PM	| **Kyaw Oo Hla** | **Completed**
 4:05 to 4:35 PM	| **Raunak Nair and Siddarth Dugar** | **Zoom**
 4:30 to 5:00 PM	| **Thomas Raffay** | **In Person**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **In Person**
