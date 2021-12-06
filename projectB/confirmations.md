@@ -14,9 +14,9 @@ Time | Investigator(s) | Method
 10:20 to 10:50 AM	| **Catherine Heinzinger** | **Completed**
 10:45 to 11:15 AM	| **Jacob Rich** | **Completed**
 11:10 to 11:40 AM	| **Shruti Raghunathan and Norman Luc** | **Completed**
-12:50 to 1:20 PM	| **Audrey Zhu** | **In Person**
-1:15 to 1:45 PM	| **Christopher Jones** | **Zoom**
-1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Zoom**
+12:50 to 1:20 PM	| **Audrey Zhu** | **Completed**
+1:15 to 1:45 PM	| **Christopher Jones** | **Completed**
+1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Completed**
 2:45 to 3:15 PM |	**Ziyin Zhao** | **In Person**
 3:10 to 3:40 PM	| **Kyaw Oo Hla** | **In Person**
 4:05 to 4:35 PM	| **Raunak Nair and Siddarth Dugar** | **Zoom**
