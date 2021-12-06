@@ -9,11 +9,11 @@
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
-9:30 to 10:00 AM | **Allison Bode** | **Zoom**
-9:55 to 10:25 AM | **Michael Douglass** | **In Person**
-10:20 to 10:50 AM	| **Catherine Heinzinger** | **In Person**
-10:45 to 11:15 AM	| **Jacob Rich** | **In Person**
-11:10 to 11:40 AM	| **Shruti Raghunathan and Norman Luc** | **In Person**
+9:30 to 10:00 AM | **Allison Bode** | **Completed**
+9:55 to 10:25 AM | **Michael Douglass** | **Completed**
+10:20 to 10:50 AM	| **Catherine Heinzinger** | **Completed**
+10:45 to 11:15 AM	| **Jacob Rich** | **Completed**
+11:10 to 11:40 AM	| **Shruti Raghunathan and Norman Luc** | **Completed**
 12:50 to 1:20 PM	| **Audrey Zhu** | **In Person**
 1:15 to 1:45 PM	| **Christopher Jones** | **Zoom**
 1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Zoom**
