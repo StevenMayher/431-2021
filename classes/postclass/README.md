@@ -17,7 +17,7 @@
 2. Due at NOON on Friday 2021-12-10
     - Final [Project B](https://thomaselove.github.io/431-2021-projectB/) materials.
         - This includes R Markdown and HTML files for Study 1 and for Study 2, submitted through [Canvas](https://canvas.case.edu/)
-        - All students must also complete the [Self-Evaluation Form](https://thomaselove.github.io/431-2021-projectB/self_eval.html), which will be posted to that link before Monday 2021-12-06.
+        - All students must also complete the [Self-Evaluation Form](https://thomaselove.github.io/431-2021-projectB/self_eval.html), which is now available at https://bit.ly/431-2021-projectB-self-evaluation.
         - If you are not using NHANES 2017-18 data, you will also need to submit your raw data through [Canvas](https://canvas.case.edu/)
         - If you built slides for your oral presentation, submit those through [Canvas](https://canvas.case.edu/) too.
     - Optional [Lab Regrade Request Form](https://bit.ly/431-2021-lab-regrade-requests) (see [details here](https://github.com/THOMASELOVE/431-2021/tree/main/labs#grading-errors-and-regrade-requests) and in [this section of the Syllabus](https://thomaselove.github.io/431-2021-syllabus/deliverables-assignments.html#appeal-policy---request-a-review-in-december))
