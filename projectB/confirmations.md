@@ -43,7 +43,7 @@ Time | Investigator(s) | Method
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Zoom**
 4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Zoom**
 
-## Thursday December 9 Presentations (n = 13 projects, method confirmed for 10)
+## Thursday December 9 Presentations (n = 13 projects, method confirmed for 11)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
