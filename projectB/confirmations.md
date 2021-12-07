@@ -1,6 +1,11 @@
 # Project B Presentation Status Updates
 
-## Tuesday December 7 Presentations (n = 14 projects)
+## To Be Rescheduled (Contact Dr. Love via email)
+
+- Maryssa Shanteau-Jackson
+- Anna Magoline and Steven Mayher
+
+## Tuesday December 7 Presentations (n = 13 projects)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
@@ -11,7 +16,6 @@ Time | Investigator(s) | Method
 11:10 to 11:40 AM	| **Ria Tilve** | **Zoom**
 12:50 to 1:20 PM	|	**Himani Sancheti** | **Zoom**
 1:40 to 2:10 PM	|	**Alex Olejko** | **Zoom**
-2:05 to 2:35 PM	| **Anna Magoline and Steven Mayher** | **Zoom**
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Zoom**
 3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **In Person**
 3:35 to 4:05 PM	| **Cyrus Nosrati and Drake McFaul** | **Zoom**
@@ -37,9 +41,7 @@ Time | Investigator(s) | Method
 3:10 to 3:40 PM	| **Ava Cong Fan** | **In Person**
 3:35 to 4:05 PM	| **Abigail Basson and Alise Carlson** | **Zoom**
 
-## To Be Scheduled
 
-- Maryssa Shanteau-Jackson
 
 ## Monday December 6 Presentations (n = 13 projects)
 
