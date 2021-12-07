@@ -17,8 +17,8 @@ Time | Investigator(s) | Method
 1:40 to 2:10 PM	|	**Alex Olejko** | **Completed**
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Completed**
 3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **Completed**
-3:35 to 4:05 PM	| **Cyrus Nosrati and Drake McFaul** | **Zoom**
-4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Zoom**
+3:35 to 4:05 PM	| **Cyrus Nosrati and Drake McFaul** | **Completed**
+4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Completed**
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Zoom**
 4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Zoom**
 
