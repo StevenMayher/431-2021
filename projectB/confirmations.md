@@ -10,7 +10,7 @@ Time | Investigator(s) | Method
 10:45 to 11:15 AM	| **Zahin Islam** | **In Person**
 11:10 to 11:40 AM	| **Ria Tilve** | **Zoom**
 12:50 to 1:20 PM	|	**Himani Sancheti** | **Zoom**
-1:40 to 2:10 PM	|	**Alex Olejko** | **In Person**
+1:40 to 2:10 PM	|	**Alex Olejko** | **Zoom**
 2:05 to 2:35 PM	| **Anna Magoline and Steven Mayher** | **Zoom**
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Zoom**
 3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **In Person**
