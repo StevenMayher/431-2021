@@ -5,24 +5,6 @@
 - Students have confirmed all 41 project presentations. 
 - To confirm your method, please visit https://bit.ly/431-2021-projectB-zoom-or-in-person. The deadline is 7 AM on your presentation day.
 
-## Monday December 6 Presentations (n = 13 projects)
-
-Time | Investigator(s) | Method
-:-------: | :---: | :----:
-9:30 to 10:00 AM | **Allison Bode** | **Completed**
-9:55 to 10:25 AM | **Michael Douglass** | **Completed**
-10:20 to 10:50 AM	| **Catherine Heinzinger** | **Completed**
-10:45 to 11:15 AM	| **Jacob Rich** | **Completed**
-11:10 to 11:40 AM	| **Shruti Raghunathan and Norman Luc** | **Completed**
-12:50 to 1:20 PM	| **Audrey Zhu** | **Completed**
-1:15 to 1:45 PM	| **Christopher Jones** | **Completed**
-1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Completed**
-2:45 to 3:15 PM |	**Ziyin Zhao** | **Completed**
-3:10 to 3:40 PM	| **Kyaw Oo Hla** | **Completed**
-4:05 to 4:35 PM	| **Raunak Nair and Siddarth Dugar** | **Completed**
-4:30 to 5:00 PM	| **Thomas Raffay** | **Completed**
-4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Completed**
-
 ## Tuesday December 7 Presentations (n = 14 projects)
 
 Time | Investigator(s) | Method
@@ -63,3 +45,21 @@ Time | Investigator(s) | Method
 ## To Be Scheduled
 
 - Maryssa Shanteau-Jackson
+
+## Monday December 6 Presentations (n = 13 projects)
+
+Time | Investigator(s) | Method
+:-------: | :---: | :----:
+9:30 to 10:00 AM | **Allison Bode** | **Completed**
+9:55 to 10:25 AM | **Michael Douglass** | **Completed**
+10:20 to 10:50 AM	| **Catherine Heinzinger** | **Completed**
+10:45 to 11:15 AM	| **Jacob Rich** | **Completed**
+11:10 to 11:40 AM	| **Shruti Raghunathan and Norman Luc** | **Completed**
+12:50 to 1:20 PM	| **Audrey Zhu** | **Completed**
+1:15 to 1:45 PM	| **Christopher Jones** | **Completed**
+1:40 to 2:10 PM	| **Cerag Oguztuzun and Abhishek Bhardwaj** | **Completed**
+2:45 to 3:15 PM |	**Ziyin Zhao** | **Completed**
+3:10 to 3:40 PM	| **Kyaw Oo Hla** | **Completed**
+4:05 to 4:35 PM	| **Raunak Nair and Siddarth Dugar** | **Completed**
+4:30 to 5:00 PM	| **Thomas Raffay** | **Completed**
+4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Completed**
