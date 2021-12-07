@@ -1,32 +1,11 @@
 # Project B Presentation Status Updates
 
-## To Be Rescheduled (Contact Dr. Love via email)
-
-- Anna Magoline and Steven Mayher
-
-## Tuesday December 7 Presentations (n = 13 projects)
-
-Time | Investigator(s) | Method
-:-------: | :---: | :----:
-9:30 to 10:00 AM	| **Graham Akeson** | **Completed**
-9:55 to 10:25 AM	 | **Kristi Lin-Rahardja and Nick Latina** | **Completed**
-10:20 to 10:50 AM	| **Megan Foradori and Ryan McMaster** | **Completed**
-10:45 to 11:15 AM	| **Zahin Islam** | **Completed**
-11:10 to 11:40 AM	| **Ria Tilve** | **Completed**
-12:50 to 1:20 PM	|	**Himani Sancheti** | **Completed**
-1:40 to 2:10 PM	|	**Alex Olejko** | **Completed**
-2:45 to 3:15 PM	|	**Olivia Wilcox** | **Completed**
-3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **Completed**
-3:35 to 4:05 PM	| **Cyrus Nosrati and Drake McFaul** | **Completed**
-4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Completed**
-4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Zoom**
-4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Zoom**
-
-## Wednesday December 8 Presentations (n = 1 project)
+## Wednesday December 8 Presentations (n = 2 projects)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
 12:15 to 12:45 PM | **Maryssa Shanteau-Jackson** | **Zoom**
+Afternoon *TBD* | **Anna Magoline and Steven Mayher** | **Zoom**
 
 ## Thursday December 9 Presentations (n = 13 projects)
 
@@ -46,9 +25,9 @@ Time | Investigator(s) | Method
 3:10 to 3:40 PM	| **Ava Cong Fan** | **In Person**
 3:35 to 4:05 PM	| **Abigail Basson and Alise Carlson** | **Zoom**
 
+## Completed Project Presentations (n = 26 projects)
 
-
-## Monday December 6 Presentations (n = 13 projects)
+### Monday 2021-12-06
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
@@ -65,3 +44,21 @@ Time | Investigator(s) | Method
 4:05 to 4:35 PM	| **Raunak Nair and Siddarth Dugar** | **Completed**
 4:30 to 5:00 PM	| **Thomas Raffay** | **Completed**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Completed**
+
+### Tuesday 2021-12-07
+
+Time | Investigator(s) | Method
+:-------: | :---: | :----:
+9:30 to 10:00 AM	| **Graham Akeson** | **Completed**
+9:55 to 10:25 AM	 | **Kristi Lin-Rahardja and Nick Latina** | **Completed**
+10:20 to 10:50 AM	| **Megan Foradori and Ryan McMaster** | **Completed**
+10:45 to 11:15 AM	| **Zahin Islam** | **Completed**
+11:10 to 11:40 AM	| **Ria Tilve** | **Completed**
+12:50 to 1:20 PM	|	**Himani Sancheti** | **Completed**
+1:40 to 2:10 PM	|	**Alex Olejko** | **Completed**
+2:45 to 3:15 PM	|	**Olivia Wilcox** | **Completed**
+3:10 to 3:40 PM	| **Jacqueline Shaia and Benjamin Kramer** | **Completed**
+3:35 to 4:05 PM	| **Cyrus Nosrati and Drake McFaul** | **Completed**
+4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Completed**
+4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Completed**
+4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Completed**
