@@ -2,7 +2,6 @@
 
 ## To Be Rescheduled (Contact Dr. Love via email)
 
-- Maryssa Shanteau-Jackson
 - Anna Magoline and Steven Mayher
 
 ## Tuesday December 7 Presentations (n = 13 projects)
@@ -22,6 +21,12 @@ Time | Investigator(s) | Method
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Zoom**
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Zoom**
 4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Zoom**
+
+## Wednesday December 8 Presentations (n = 1 project)
+
+Time | Investigator(s) | Method
+:-------: | :---: | :----:
+12:15 to 12:45 PM | **Maryssa Shanteau-Jackson** | **Zoom**
 
 ## Thursday December 9 Presentations (n = 13 projects)
 
