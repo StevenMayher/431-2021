@@ -1,10 +1,5 @@
 # Project B Presentation Status Updates
 
-**Note**: The *Copy of Project B Registration Concerns* Google Sheet in our Shared Drive (Project B folder) contains additional feedback.
-
-- Students have confirmed all 41 project presentations. 
-- To confirm your method, please visit https://bit.ly/431-2021-projectB-zoom-or-in-person. The deadline is 7 AM on your presentation day.
-
 ## Tuesday December 7 Presentations (n = 14 projects)
 
 Time | Investigator(s) | Method
