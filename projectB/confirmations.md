@@ -23,7 +23,7 @@ Time | Investigator(s) | Method
 4:30 to 5:00 PM	| **Thomas Raffay** | **Completed**
 4:55 to 5:25 PM	| **Erika Hutt and Alan Kiang** | **Completed**
 
-## Tuesday December 7 Presentations (n = 15 projects)
+## Tuesday December 7 Presentations (n = 14 projects)
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
@@ -33,7 +33,6 @@ Time | Investigator(s) | Method
 10:45 to 11:15 AM	| **Zahin Islam** | **In Person**
 11:10 to 11:40 AM	| **Ria Tilve** | **Zoom**
 12:50 to 1:20 PM	|	**Himani Sancheti** | **Zoom**
-1:15 to 1:45 PM	|	**Maryssa Shanteau-Jackson** | **Zoom**
 1:40 to 2:10 PM	|	**Alex Olejko** | **In Person**
 2:05 to 2:35 PM	| **Anna Magoline and Steven Mayher** | **Zoom**
 2:45 to 3:15 PM	|	**Olivia Wilcox** | **Zoom**
@@ -61,3 +60,6 @@ Time | Investigator(s) | Method
 3:10 to 3:40 PM	| **Ava Cong Fan** | **In Person**
 3:35 to 4:05 PM	| **Abigail Basson and Alise Carlson** | **Zoom**
 
+## To Be Scheduled
+
+- Maryssa Shanteau-Jackson
