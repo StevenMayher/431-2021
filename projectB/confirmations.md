@@ -1,12 +1,5 @@
 # Project B Presentation Status Updates
 
-## Wednesday December 8 Presentations (n = 2 projects)
-
-Time | Investigator(s) | Method
-:-------: | :---: | :----:
-12:15 to 12:45 PM | **Maryssa Shanteau-Jackson** | **Completed**
-2:00 to 2:30 PM | **Anna Magoline and Steven Mayher** | **Zoom**
-
 ## Thursday December 9 Presentations (n = 13 projects)
 
 Time | Investigator(s) | Method
@@ -25,7 +18,7 @@ Time | Investigator(s) | Method
 3:10 to 3:40 PM	| **Ava Cong Fan** | **In Person**
 3:35 to 4:05 PM	| **Abigail Basson and Alise Carlson** | **Zoom**
 
-## Completed Project Presentations (n = 26 projects)
+## Completed Project Presentations (n = 28 projects)
 
 ### Monday 2021-12-06
 
@@ -62,3 +55,10 @@ Time | Investigator(s) | Method
 4:05 to 4:35 PM	|	**Zi Jie (Jay) Wei and Scarlett He** | **Completed**
 4:30 to 5:00 PM	|	**Carly Rose and Diya Yang** | **Completed**
 4:55 to 5:25 PM	|	**Gen Li and Jiayue Yang** | **Completed**
+
+## Wednesday December 8 Presentations (n = 2 projects)
+
+Time | Investigator(s) | Method
+:-------: | :---: | :----:
+12:15 to 12:45 PM | **Maryssa Shanteau-Jackson** | **Completed**
+2:00 to 2:30 PM | **Anna Magoline and Steven Mayher** | **Completed**
