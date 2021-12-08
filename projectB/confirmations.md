@@ -4,7 +4,7 @@
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
-12:15 to 12:45 PM | **Maryssa Shanteau-Jackson** | **Zoom**
+12:15 to 12:45 PM | **Maryssa Shanteau-Jackson** | **Completed**
 2:00 to 2:30 PM | **Anna Magoline and Steven Mayher** | **Zoom**
 
 ## Thursday December 9 Presentations (n = 13 projects)
