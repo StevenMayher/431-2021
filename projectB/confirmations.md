@@ -13,7 +13,7 @@ Time | Investigator(s) | Method
 12:50 to 1:20 PM	| **Neeti Shirke and Sneha Yamsani** | **Completed**
 1:15 to 1:45 PM	| **Fumi Kong** | **Completed**
 1:40 to 2:10 PM	| **Luis Mesias Flores** | **Completed**
-2:05 to 2:35 PM	| **Avantika Bhaduri and Anushree Iyengar** | **In Person**
+2:05 to 2:35 PM	| **Avantika Bhaduri and Anushree Iyengar** | **Completed**
 2:45 to 3:15 PM	| **Aaron Fletcher** | **In Person**
 3:10 to 3:40 PM	| **Ava Cong Fan** | **In Person**
 3:35 to 4:05 PM	| **Abigail Basson and Alise Carlson** | **Zoom**
