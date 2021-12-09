@@ -4,11 +4,11 @@
 
 Time | Investigator(s) | Method
 :-------: | :---: | :----:
-9:30 to 10:00 AM	| **Rock Lim** | **In Person**
-9:55 to 10:25 AM	| **Ying Xiong** | **In Person**
-10:20 to 10:50 AM	| **Sarah Nock and Harrison Lindley** | **In Person**
-10:45 to 11:15 AM	| **Kiran Desai and Grace Armstrong** | **In Person**
-11:10 to 11:40 AM	| **Jeeda Ismail and Makaela Mews** | **In Person**
+9:30 to 10:00 AM	| **Rock Lim** | **Completed**
+9:55 to 10:25 AM	| **Ying Xiong** | **Completed**
+10:20 to 10:50 AM	| **Sarah Nock and Harrison Lindley** | **Completed**
+10:45 to 11:15 AM	| **Kiran Desai and Grace Armstrong** | **Completed**
+11:10 to 11:40 AM	| **Jeeda Ismail and Makaela Mews** | **Completed**
 11:35 to 12:05 PM	| **Paula Ambrose and Tyler Petrie** | **Zoom**
 12:50 to 1:20 PM	| **Neeti Shirke and Sneha Yamsani** | **Zoom**
 1:15 to 1:45 PM	| **Fumi Kong** | **Zoom**
