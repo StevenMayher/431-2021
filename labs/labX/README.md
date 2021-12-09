@@ -11,6 +11,7 @@ We will post a list of student websites here as we receive them.
 - [Wyatt Bensken](https://wyattbensken.com/)
 - [Abigail Basson](https://www.abigailbasson.me/)
 - [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd)
+- [Megan Foradori](https://sites.google.com/case.edu/foradorima/home)
 - [Kristi Lin-Rahardja](https://kristilinr.netlify.app/)
 - [Jacqueline Shaia](https://www.jacquelensphd.com/)
 - [Neeti Shirke](https://neetishirke.wordpress.com/)
