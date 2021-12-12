@@ -9,11 +9,57 @@ Self-reported weight-age 25 (pounds)? Quantitative
 
 New Options:
 All Data Sets
-SEQN - Respondent Sequence Number
+SEQN - Respondent Sequence Number						Respondent ID
 
 Demographic Data
-RIDSTATR - Interview/Examination status									DEMO_J.xpt
-RIDAGEYR - Age in years at screening									DEMO_J.xpt
+RIDSTATR - Interview/Examination status				Binary Categorical	DEMO_J.xpt
+RIDAGEYR - Age in years at screening					Quantitative	DEMO_J.xpt
+
+
+Study 1 Datasets
+
+
+Analysis A
+
+BMXWT - Weight (kg)										Quantitative	BMX_J.xpt
+WHD050 - Self-reported weight - 1 yr ago (pounds)		Quantitative	WHQ_J.xpt
+WHQ070 - Tried to lose weight in past year		Categorical Predictor	WHQ_J.xpt
+WHD080Q - Ate more fruits, vegetables, salads	Categorical Predictor	WHQ_J.xpt
+
+
+Analysis B
+
+PAQ650 - Vigorous recreational activities			Binary Categorical	PAQ_J.xpt
+BMXWT - Weight (kg)										Quantitative	BMX_J.xpt
+
+
+Analysis C
+
+SLQ120 - How often feel overly sleepy during day?	Multi-Categorical	SLQ_J.xpt
+BMXWT - Weight (kg)										Quantitative	BMX_J.xpt
+
+
+Analysis D
+
+WHQ070 - Weight change intentional					Binary Categorical	WHQ_J.xpt
+RXDUSE - Taken prescription medicine, past month	Binary Categorical	RXQ_RX_J.xpt
+
+
+Unique Variables
+SEQN - Respondent Sequence Number						Respondent ID
+RIDSTATR - Interview/Examination status				Binary Categorical	DEMO_J.xpt
+RIDAGEYR - Age in years at screening					Quantitative	DEMO_J.xpt
+BMXWT - Weight (kg)										Quantitative	BMX_J.xpt
+WHD050 - Self-reported weight - 1 yr ago (pounds)		Quantitative	WHQ_J.xpt
+WHQ070 - Tried to lose weight in past year			Binary Categorical	WHQ_J.xpt
+WHD080Q - Ate more fruits, vegetables, salads	Categorical Predictor	WHQ_J.xpt
+PAQ650 - Vigorous recreational activities			Binary Categorical	PAQ_J.xpt
+SLQ120 - How often feel overly sleepy during day?	Multi-Categorical	SLQ_J.xpt
+RXDUSE - Taken prescription medicine, past month	Binary Categorical	RXQ_RX_J.xpt
+
+
+
+Study 2 Datasets
 
 BMXBMI - Body Mass Index (kg/m**2) 		Outcome			Quantitative	BMX_J.xpt
 
@@ -23,4 +69,4 @@ LBXTC - Total Cholesterol (mg/dL)	Key Predictor		Quantitative	TCHOL_J.xpt
 LBXTR - Triglyceride (mg/dL)			Predictor		Quantitative	TRIGLY_J.xpt
 LBDHDD - Direct HDL-Cholesterol (mg/dL) Predictor		Quantitative	HDL_J.xpt
 BMXWAIST - Waist Circumference (cm)		Predictor		Quantitative	BMX_J.xpt
-DBQ700 - How healthy is the diet		Categorical		DBQ_J.xpt		DBQ_J.xpt
+DBQ700 - How healthy is the diet		Predictor	  Multi-Categorical	DBQ_J.xpt

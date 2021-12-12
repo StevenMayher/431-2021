@@ -1,0 +1,13 @@
+Variable      | Type  | Description / Levels
+--------- | :---: | --------------------------------------------
+`seqn`        | ID    | Respondent sequence number, used for subject identification across data sets.
+`ridageyr`    | Quant | Respondent age in years at time of screening.
+`whd020`      | Quant | Respondent's current self-reported weight (originally pounds, converted to kilograms).
+`whd050`      | Quant | Respondent-reported weight for 1 yr ago (originally pounds, converted to kilograms).
+`bmxwt`       | Quant | Respondent's current weight at time of screening, as determined during examination (kilograms).
+`ridstatr`    | Cat-2 | 1, 2: Interview/Examination status, used to identify whether a participant was both interviewed at home and examined in the mobile examination center (MEC) or was only interviewed in the home but never went through the examination. Selected only for participants who were interviewed *and* examined, designated with a 2.
+`whq065`      | Cat-2 | Yes, No: During the past 12 months, did the respondent try to lose weight? **Variable Compiled from answers to `whq060` and `whq070`**
+`paq650`      | Cat-2 | Yes, No: In a typical week, did the respondent do any vigorous-intensity sports, fitness, or recreational activities that caused large increases in breathing or heart rate like running or basketball for at least 10 minutes continuously?
+`whd080q`     | Cat-2 | 43, **NA**: Did the respondent try to loose weight by eating more fruits, vegetables, and / or salads? 
+`rxduse`      | Cat-2 | Yes, No: Individual, Partner, Group: In your graduate and undergraduate educational experience, which of the following types of assignments have you received the HIGHEST grades for? [**1 NA**]
+`slq120`      | Cat-5 | Never, Rarely, Sometimes, Often, Almost always: In the past month, how often did respondent feel excessively or overly sleepy during the day?

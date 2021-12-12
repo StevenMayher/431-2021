@@ -1,0 +1,822 @@
+---
+title: "An Examination of the Effects of Diet, Exercise, and Sleep on Weight"
+author: "Steven Mayher & Anna Magoline"
+date: "`r Sys.Date()`"
+linkcolor: blue
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    number_sections: true
+    code_folding: show
+    df_print: paged
+---
+
+# Setup and Data Ingest
+
+The following section covers the loading of the `libraries`, scripts and data necessary to complete this study.
+
+
+## Initial Setup and Package Loads 
+
+This section loads the packages and global setup options necessary for this analysis with the code below:
+
+
+```{r initial_setup, cache=FALSE, message = FALSE, warning = FALSE}
+library(knitr); library(rmdformats)
+
+library(janitor); library(magrittr); library(naniar)
+library(broom); library(patchwork)
+
+library(nhanesA)
+library(measurements)
+library(readxl)
+library(Epi)
+library(Hmisc)
+library(tidyverse)
+
+## Load Love-boost 
+source("data/Love-boost.R")
+
+## Global options
+opts_chunk$set(comment=NA)
+opts_knit$set(width=75)
+
+theme_set(theme_bw())
+```
+
+
+## Loading the Raw Data into R 
+
+The `nhanesA` package was used to load all of the necessary NHANES data directly into R as tibbles, which were then saved to the `data` sub directory using the `saveRDS` function. While it's technically unnecessary to save local copies of these files outside of R, it is good practice to do so, as it keeps R from needing to download the files every time these raw files are queried. These local copies were then read back into R as raw files for further data processing:
+
+
+```{r data_load, message = FALSE}
+# pull in data from BPX_J from NHANES and save it
+
+DEMO_J_raw <- nhanes('DEMO_J') %>% tibble()
+BMX_J_raw <- nhanes('BMX_J') %>% tibble()
+WHQ_J_raw <- nhanes('WHQ_J') %>% tibble()
+PAQ_J_raw <- nhanes('PAQ_J') %>% tibble()
+RXQ_RX_J_raw <- nhanes('RXQ_RX_J') %>% tibble()
+SLQ_J_raw <- nhanes('SLQ_J') %>% tibble()
+
+saveRDS(DEMO_J_raw, "data/DEMO_J.Rds")
+saveRDS(BMX_J_raw, "data/BMX_J.Rds")
+saveRDS(WHQ_J_raw, "data/WHQ_J.Rds")
+saveRDS(PAQ_J_raw, "data/PAQ_J.Rds")
+saveRDS(RXQ_RX_J_raw, "data/RXQ_RX_J.Rds")
+saveRDS(SLQ_J_raw, "data/SLQ_J.Rds")
+
+# Now that data are saved, I can just read in the tibble
+
+DEMO_J_raw <- readRDS("data/DEMO_J.Rds")
+BMX_J_raw <- readRDS("data/BMX_J.Rds")
+WHQ_J_raw <- readRDS("data/WHQ_J.Rds")
+PAQ_J_raw <- readRDS("data/PAQ_J.Rds")
+RXQ_RX_J_raw <- readRDS("data/RXQ_RX_J.Rds")
+SLQ_J_raw <- readRDS("data/SLQ_J.Rds")
+```
+
+
+# Cleaning the Data
+
+
+## Selecting & Filtering for Relevant Data
+
+
+Before merging the necessary tibbles to create the analysis data sets, the raw data files should be filtered and cleaned to ensure only the relevant data from each raw file is retained and is properly formatted. The filtered versions of the raw tibbles were created below to filter out incomplete data and select the appropriate variables that will be used in each analysis, using the keys for each data set as provided on the NHANES website to filter out missing and / or unwanted data. While each variable will be clarified in detail later in the Codebook section, the following is worth noting about the keys from the NHANES website:
+
+  - 7, 7777, and 77777 all represent instances where the respondent refused to respond to the question                              (verify)
+  - 9, 9999, and 99999 all represent instances where the respondent reported that they didn't know the answer to the question       (verify)
+  - "." designate entries with missing entries
+
+Additionally, a new variable was created that combines the results from `WHQ060` and `WHQ070` in the code below, however the reason for this will be explained in detail later in the cleaning section. The filtering code is as follows:
+
+```{r}
+DEMO_J_data = DEMO_J_raw %>% 
+  select(c(SEQN, RIDSTATR, RIDAGEYR)) %>%
+  filter(RIDSTATR == 2) %>%
+  filter(RIDAGEYR != ".") %>%
+  filter(RIDAGEYR <= 79) %>%
+  filter(RIDAGEYR >= 19)
+
+BMX_J_data = BMX_J_raw %>% 
+  select(c(SEQN, BMXWT)) %>%
+  filter(BMXWT != ".")
+
+PAQ_J_data = PAQ_J_raw %>%
+  select(c(SEQN, PAQ650)) %>%
+  filter(PAQ650!= ".") %>%
+  filter(PAQ650 != 7) %>%
+  filter(PAQ650 != 9)
+
+SLQ_J_data = SLQ_J_raw %>%
+  select(c(SEQN, SLQ120)) %>%
+  filter(SLQ120 != ".") %>%
+  filter(SLQ120 != 7) %>%
+  filter(SLQ120 != 9)
+
+RXQ_RX_J_data1 = RXQ_RX_J_raw %>% 
+  select(c(SEQN, RXDUSE, RXDDAYS)) %>%
+  filter(RXDUSE != ".") %>%
+  filter(RXDUSE != 7) %>%
+  filter(RXDUSE != 9) %>%
+  filter(RXDDAYS != ".") %>%
+  filter(RXDDAYS != 77777) %>%
+  filter(RXDDAYS != 99999) %>%
+  filter(RXDDAYS == 365) %>%
+  select(c(SEQN, RXDUSE)) %>%
+  distinct(data = , SEQN, .keep_all = TRUE)
+
+RXQ_RX_J_data2 = RXQ_RX_J_raw %>% 
+  select(c(SEQN, RXDUSE, RXDDAYS)) %>%
+  filter(RXDUSE == 2) %>%
+  select(c(SEQN, RXDUSE)) %>%
+  distinct(data = , SEQN, .keep_all = TRUE)
+
+RXQ_RX_J_data = full_join(RXQ_RX_J_data1, RXQ_RX_J_data2)
+
+WHQ_J_data1 = WHQ_J_raw %>%
+  select(c(SEQN, WHQ060)) %>%
+  filter(WHQ060 != ".") %>%
+  filter(WHQ060 != 7) %>%
+  filter(WHQ060 != 9) %>%
+  mutate(WHQ065 = fct_recode(as.factor(WHQ060),
+                             "Yes" = "1",
+                             "No" = "2")) %>%
+  select(c(SEQN, WHQ065))
+
+WHQ_J_data_1a = WHQ_J_data1 %>%
+  filter(WHQ065 == "Yes")
+
+WHQ_J_data_1b = WHQ_J_data1 %>%
+  filter(WHQ065 == "No")
+
+WHQ_J_data2 = WHQ_J_raw %>% 
+  select(c(SEQN, WHQ070)) %>%
+  filter(WHQ070 != ".") %>%
+  filter(WHQ070 != 7) %>%
+  filter(WHQ070 != 9) %>%
+  mutate(WHQ065 = fct_recode(as.factor(WHQ070),
+                              "Yes" = "1",
+                              "No" = "2")) %>%
+  select(c(SEQN, WHQ065))
+
+WHQ_J_data_2a = WHQ_J_data2 %>%
+  filter(WHQ065 == "Yes")
+
+WHQ_J_data_2b = WHQ_J_data2 %>%
+  filter(WHQ065 == "No")
+
+
+WHQ_J_data_3a = full_join(WHQ_J_data_1a, WHQ_J_data_2a, by = c("SEQN", "WHQ065"))
+
+WHQ_J_data_3b = full_join(WHQ_J_data_1b, WHQ_J_data_2b, by = c("SEQN", "WHQ065"))
+
+WHQ_J_data_3c = anti_join(WHQ_J_data_3b, WHQ_J_data_3a, by = "SEQN")
+
+WHQ_J_data3 = full_join(WHQ_J_data_3a, WHQ_J_data_3c, by = c("SEQN", "WHQ065"))
+
+
+WHQ_J_data4 = WHQ_J_raw %>%
+  select(c(SEQN, WHD020, WHD050)) %>%
+  filter(WHD020 != ".") %>%
+  filter(WHD020 != 7777) %>%
+  filter(WHD020 != 9999) %>%
+  filter(WHD050 != ".") %>%
+  filter(WHD050 != 7777) %>%
+  filter(WHD050 != 9999)
+
+
+WHQ_J_data5 = WHQ_J_raw %>% 
+  select(c(SEQN, WHD080Q)) %>%
+  filter(WHD080Q != ".")
+
+WHQ_J_data = left_join(inner_join(WHQ_J_data3, WHQ_J_data4, by = "SEQN"), WHQ_J_data5, by = "SEQN")
+
+count(WHQ_J_data)
+count(RXQ_RX_J_data)
+```
+
+
+## Formatting Each Variable
+
+
+To ensure that all variables are in the correct format, each one of the analyses variables, listed below by type, have been formatted / relabeled as described below:
+
+
+### Quantitative Variables
+
+
+`BMXWT`, `WHD020`, and `WHD050` are all quantitative variables, and they describe the respondent's current weight as determined by examination, their current self-reported weight, and their self-reported weight for their approximate weight 1 year ago respectively. As such, they have all been converted to numeric format with the `as.numeric()` function and rounded to 1 decimal place with the `round()` function. Additionally, `BMXWT` was reported in kilograms, but `WHD020` and `WHD050` were reported in pounds, so the latter two were converted to kilograms using the `conv_unit()` function from the `measurements` package:
+
+
+```{r}
+BMX_J_data = BMX_J_data %>%
+  mutate(BMXWT = round(as.numeric(BMXWT), digits = 1))
+
+WHQ_J_data = WHQ_J_data %>%
+  mutate(WHD020 = as.numeric(round(conv_unit(WHD020, "lbs", "kg"), 1)))
+
+WHQ_J_data = WHQ_J_data %>%
+  mutate(WHD050 = as.numeric(round(conv_unit(WHD050, "lbs", "kg"), 1)))
+```
+
+
+### Binary Variables
+
+
+`PAQ650`, `RXDUSE`, and `WHQ065`are all the binary categorical variables that are used in this analysis. `PAQ650`, `RXDUSE` were recorded such that *1* designated a "Yes" response, and *2* designated a "No" response to the following questions:
+
+
+
+  - `PAQ650`: In a typical week, did the respondent do any vigorous-intensity sports, fitness, or recreational activities that cause large increases in breathing or heart rate like running or basketball for at least 10 minutes continuously?
+  
+  
+  - `RXDUSE`: In the past 30 days, has the respondent used or taken medication for which a prescription was needed?
+
+
+
+With the above in mind for each of these variables, the code below was used to ensure that these three variables are indeed defined as factor variables, and while the factor levels may be redefined again later in the analyses, for now the factors themselves have been redefined from *1* and *2* to the more appropriate "Yes" and "No":
+
+
+```{r}
+PAQ_J_data = PAQ_J_data %>%
+  mutate(PAQ650 = fct_recode(as.factor(PAQ650),
+                             "Yes" = "1",
+                             "No" = "2"))
+
+RXQ_RX_J_data = RXQ_RX_J_data %>%
+  mutate(RXDUSE = fct_recode(as.factor(RXDUSE),
+                             "Yes" = "1",
+                             "No" = "2"))
+```
+
+
+`WHQ065` differs from the first two in that it is a variable that was created for the purposes of this study by combining the answers to `WHQ060` and `WHQ070`, which was performed in the *Selecting & Filtering for Relevant Data* sub-section above. This was done because `WHQ060` and `WHQ070` both ask respondents  same question, however respondents that lost 10 or more pounds were directed to answer `WHQ060` first, which asked if this level of change in weight was intentional, after which these respondents, along with the rest that didn't loose 10 or more pounds, were directed to answer `WHQ070`, which asks if the respondent attempted to loose weight, regardless of how much or little their weight actually changed. As such, `WHQ065` was created to produce a variable that combines the answers from `WHQ060` and `WHQ070` into one variable that answers the question of both, regardless of whether or not the respondent lost weight.
+
+
+### Multi-Categorical Variables
+
+
+The only multi-categorical variable in this study is `SLQ120`, which asked the following:
+
+  - `SLQ120`: In the past month, how often did the respondent feel excessively or overly sleepy during the day?
+  
+  
+```{r}
+SLQ_J_data = SLQ_J_data %>%
+  mutate(SLQ120 = fct_recode(as.factor(SLQ120),
+                             "Never" = "0",
+                             "Rarely" = "1",
+                             "Sometimes" = "2",
+                             "Often" = "3",
+                             "Almost always" = "4"))
+```
+
+
+## Creating our Analytic Tibble
+
+The analytic tibble `analysis_data` was created below with the filtered and cleaned datasets from above, with should contains only the twelve variables that appear in our code book.
+
+```{r create_sur15}
+analysis_data = inner_join(inner_join(inner_join(inner_join(inner_join(DEMO_J_data, BMX_J_data, by = "SEQN"), PAQ_J_data, by = "SEQN"), SLQ_J_data, by = "SEQN"), RXQ_RX_J_data, by = "SEQN"), WHQ_J_data, by = "SEQN") %>%
+  clean_names()
+```
+
+### List of Missing Values
+
+We can count the number of missing observations in each variable, with
+
+```{r na_pattern_in_sur15}
+miss_var_summary(analysis_data)
+```
+
+We can see that missing values have been reported for `whd080q`, however some of these are not actually missing values, but a quirk of the study's design. Whether or not a participant was asked this question depended on whether or not they answered yes to `whq060` or `whq070`. If they answered "Yes" to either question, they were prompted to check all methods listed that they used as an attempt to loose weight. As such, while it's possible that some of the missing answers are actually missing data, there's no way to know for certain because of the survey's design, as all `whd080` sub-questions only asked if the participant *did* use the selected method, and didn't ask them to verify if they *did not* use this method if they did try or outright did loose weight. This will be accounted for as best as possible by only taking all of the "Yes" answers from `whq065`, which is a newly generated variable for this study that combines `whq060` and `whq070` into one varaible when  and the "Yes" answers from `whq070` to create a subset tibble for analysis A in particular later in this study. Also, due to the survey's design, all partisipants who answered "Yes" to `whq060` were prompted to skip question `whq070` and proceed to question `whd080` This also results in some missingness in `whq070`, however this is expected, and will have to be adjusted for during the analysis steps later in the study.
+
+
+# Codebook and Data Description
+
+## Codebook
+
+Executing the above sections produces the analytic tibble necessary data to perform this study's analyses, specifically narrowing our data selection to 2626 adults between the ages of 19 and 79 from the NHANES 2017-2018 survey that have complete entries for all the necessary variables used in this study. It's worth noting that age 19 was selected as a cutoff instead of age 18 to ensure that the weight estimates from respondents for the previous year were limited only to participants who were at least 18 at that time. In this new tibble, called `analysis_data`, there are 11 unique variables, each of which have been explained in detail below:
+
+
+Variable      | Type  | Description / Levels
+--------- | :---: | --------------------------------------------
+`seqn`        | ID    | Respondent sequence number, used for subject identification across data sets.
+`ridageyr`    | Quant | Respondent age in years at time of screening.
+`whd020`      | Quant | Respondent's current self-reported weight (originally pounds, converted to kilograms).
+`whd050`      | Quant | Respondent-reported weight for 1 yr ago (originally pounds, converted to kilograms).
+`bmxwt`       | Quant | Respondent's current weight at time of screening, as determined during examination (kilograms).
+`ridstatr`    | Cat-2 | 1, 2: Interview/Examination status, used to identify whether a participant was both interviewed at home and examined in the mobile examination center (MEC) or was only interviewed in the home but never went through the examination. Selected only for participants who were interviewed *and* examined, designated with a 2.
+`whq065`      | Cat-2 | Yes, No: During the past 12 months, did the respondent try to lose weight? **Variable Compiled from answers to `whq060` and `whq070`**
+`paq650`      | Cat-2 | Yes, No: In a typical week, did the respondent do any vigorous-intensity sports, fitness, or recreational activities that caused large increases in breathing or heart rate like running or basketball for at least 10 minutes continuously?
+`whd080q`     | Cat-2 | 43, **NA**: Did the respondent try to loose weight by eating more fruits, vegetables, and / or salads? 
+`rxduse`      | Cat-2 | Yes, No: In the past 30 days, has the respondent used or taken medication for which a prescription is needed?
+`slq120`      | Cat-5 | Never, Rarely, Sometimes, Often, Almost always: In the past month, how often did respondent feel excessively or overly sleepy during the day?
+
+
+## Analytic Tibble
+
+The following code is meant to illustrate that `analysis_data` is in fact a tibble by printing it below:
+
+```{r}
+analysis_data
+```
+
+## Data Summary
+
+A summary of the `analysis_data` tibble has been provided below:
+
+```{r}
+describe(analysis_data)
+```
+
+
+# Analysis A: Compare 2 Population Means using Paired Samples
+
+## The Question
+
+In this first analysis, we'll compare the current self-reported weight of the respondents, `whd020`, to their current self-reported approximates of how much they weighted last year, `whd050`, for subjects that chose to eat more fruit, vegetables, and / or salads to loose weight. These measurements were initially reported in pounds, however they were converted to kilograms in the cleaning steps above for this analysis. The respondents are paired by subject, specifically by subjects that attempted to loose weight by eating more fruits, vegetables, and / or salads as previously mentioned. As such, the research question for this analysis is as follows:
+
+What is the typical change in weight (in kilograms) for NHANES subjects that were attempting to loose weight by eating more fruits, vegetables, and / or salads for a year?
+
+## Describing the Data
+
+### Compute and summarize the paired differences
+
+The natural first step is to compute paired differences between the `r_now` and `r_pre` samples, and then use graphical and numerical summaries to assess whether the sample (of differences) can be assumed to follow a Normal distribution. First, we'll calculate the paired differences.
+
+```{r}
+analysis_A_data = analysis_data %>%
+  filter(whd080q == 43)
+```
+
+
+```{r compute_paired_differences, message = FALSE}
+analysis_A_data <- analysis_A_data %>%
+    mutate(weight_diff = round(as.numeric(whd050 - whd020), digits = 1))
+
+mosaic::favstats(~ weight_diff, data = analysis_A_data)
+```
+
+OK. It appears that we have successfully subtracted the PRE data from the NOW data, and everyone has a difference of at least zero. But we have a lot of people (8) who have a value of 0. Now, we'll assess whether or not a Normal distribution might be a reasonable model for the data.
+
+### Graphical Summaries to Assess Normality
+
+We should start by looking at the distribution of these 664 values of `weight_diff`.  As we've seen, there's a floor effect at zero.
+
+A histogram with 53 values won't give us a lot of information. Perhaps we should focus instead on a Normal Q-Q plot and boxplot with violin? We'll draw all three here.
+
+```{r fig.height=6, fig.width=8}
+p1 <- ggplot(analysis_A_data, aes(x = weight_diff)) +
+    geom_histogram(aes(y = stat(density)), fill = "slateblue", col = "white", bins = nclass.scott(analysis_A_data$weight_diff)) + 
+    stat_function(fun = dnorm, args = list(mean = mean(analysis_A_data$weight_diff), sd = sd(analysis_A_data$weight_diff)), col = "red", lwd = 1) +
+    labs(title = "Density Function: weight_diff", x = "Weight Difference (kg)", y = "") +
+    theme_bw()
+
+p2 <- ggplot(analysis_A_data, aes(sample = weight_diff)) +
+    geom_qq(col = "slateblue") + geom_qq_line(col = "red") + 
+    labs(title = "Normal Q-Q plot: weight_diff", x = "", y = "Weight Difference (kg)") +
+    theme_bw()
+
+p3 <- ggplot(analysis_A_data, aes(x = "n = 664", y = weight_diff)) +
+    geom_violin(fill = "slateblue", alpha = 0.3) + 
+    geom_boxplot(fill = "slateblue", width = 0.3, notch = TRUE) + 
+    labs(y = "Weight Difference (kg)", x = "", title = "Violin Boxplot: weight_diff") +
+    theme_bw() + 
+    coord_flip()
+
+(p2 + p1) / p3 +
+  plot_layout(ncol = 1, height = c(5, 2)) +
+  plot_annotation(title = "Weight Difference in Respondents After 1 Year", subtitle = "Method of loosing Weight included Eating More Fruits, Vegetables, and / or Salads", caption = "weight_diff pulled from analysis_A_data dataset")
+```
+
+The 664 observations above seem to suggest that a Wilcoxon signed rank approach would be the optimal choice here instead of a Normal model for the paired differences, as there definitely appears to be a substantial number of outliers in the paired differences, and the outliers appear to be uniformly distributed as opposed to being skewed in either direction in particular, as shown by both the graphs above and the near 0 level of skew~1~ as calculated below:
+
+```{r}
+analysis_A_data %>%
+  summarise(skew1 = (mean(weight_diff) - median(weight_diff))/sd(weight_diff)) %>%
+  kable(digits = 3)
+```
+
+That said, a bootstrap approach here would also be appropriate, and the Project B instructions strongly recommended against using a Wilcoxon signed rank approach for this project - as such the bootstrap approach will be used to find the 90% confidence interval and point estimate for this analysis.
+
+
+### Did Pairing Help Reduce Nuisance Variation?
+
+We would expect a strong correlation between the `whd020` and `whd050` weights in this repeated measures analysis where each subject is assessing their weight from last year and comparing it to their current weight for subjects that are actively trying to loose weight. To examine whether this pairing helped reduce nuisance variation though, the following scatterplot of the `whd020` and `whd050` scores was generated, supplemented by a Pearson correlation coefficient. The larger the correlation, the more that pairing will help reduce the impact of differences between subjects on the `whd020` score on the comparison we're trying to make. 
+
+```{r scatterplot_for_paired_diffs}
+ggplot(analysis_A_data, aes(x = whd020, y = whd050)) +
+    geom_jitter(col = "slateblue") +
+    geom_smooth(formula = y ~ x, method = "lm", col = "red") +
+    theme_bw() +
+    labs(title = "Jittered Scatterplot shows moderately strong relationship",
+         subtitle = "Especially for the lower values, however it appears to decrease as both weights increase", x = "Self-Reported Current Weight (whd020)", y = "Self-Reported Weight for Last Year (whd050)")
+```
+
+We see a pretty strong linear relationship between `whd020` and `whd050` at lower weights, however as both weights increase the strength of the correlation appears to decrease. The Pearson correlation coefficient is shown below:
+
+```{r correlation_paired_diffs}
+analysis_A_data %>% select(whd020, whd050) %>% cor(.) %>% 
+    round(digits = 3) %>% kable()
+```
+
+The Pearson correlation is incredibly strong at `r round(cor(analysis_A_data$whd050, analysis_A_data$whd050), 3)` so that a linear model using the `whd020` weight accounts for a reasonably large fraction (`r round(100*(cor(analysis_A_data$whd020, analysis_A_data$whd050)^2),1)`%) of the variation in `whd050` weights.
+
+
+## Main Analysis
+
+As concluded from the initial results above, we'll build a 90% confidence interval for the population mean of the `whd050 - whd020` differences using the bootstrap approach as shown below: 
+
+
+### The Bootstrap approach for the mean from paired samples
+
+Here is a 90% confidence interval for the population mean of the paired `whd050 - whd020` differences, as estimated by a bootstrap approach using a random seed of `431`. (*Note*: when you set a seed for this or other analyses in the project, pick something other than `431`.)
+
+```{r bootstrap_for_paired_samples}
+set.seed(431)
+smean.cl.boot(analysis_A_data$weight_diff, conf.int = 0.90)
+```
+
+- The point estimate for the population mean of the differences is -1.03, indicating that the average respondent's weight actually increased by approximately 1 kilogram, despite attempting to weight by eating more fruits, vegetables, and / or salads over the course of a year.
+
+- Our 90% confidence interval for the population mean of the differences is (-1.67, -0.37)
+
+- While 0 is technically not included in the interval, we could conclude, at the 10% significance level, that there is a statistically detectable difference between the `whd020` and `whd050` weights, however the upper limit is very close to zero at -0.37 kilograms. As such I'd be hesitant to make the above claim for the interval in *kilograms*.
+
+- This bootstrap procedure operates based off of the following assumptions:
+    1.) The matched differences are independent of each other
+    2.) The matched differences represent a random sample of the population of possible matched differences 
+
+## Conclusions
+
+Respondents of the 2017-2018 NHANES survey that attempted to loose weight by eating more fruits, vegetables, and / or salads actually appear to gain an average of 1.03 kilograms of weight instead, with a 90% confidence interval for that average increase in weight of (-1.67, -0.37) kilograms. This conclusion is motivated by a bootstrap estimate to compare paired responses from respondents, specifically for their weight before and after spending 1 year attempting this method of loosing weight, and I feel this is the most justified approach based on my assessment of Normality in the data from these 664 respondents. 
+
+A natural next step would be to look at values of something like this over multiple years, or perhaps comparing respondents weights at more than just two stages. It would also be better to compare data across NHANES survey years to obtain examination weights as opposed to asking respondents to provide self-reported weights for both the present and 1 year ago.
+
+
+# Analysis B: Compare 2 Population Means using Independent Samples
+
+## The Question
+
+For this second analysis, we'll compare respondent's `bmxwt` by , `paq650`, in this analysis using independent samples. We're comparing the mean examination weight `bmxwt` of the population represented by respondents who speak English best to the mean `bmxwt` of the population represented by whether or not they complete 10 minutes of continuous vigorous recreational exercise a week. With this in mind, our research question is as follows:
+
+Did respondents who participate in 10 minutes of continuous vigorous exercise a week have meaningfully different average body weight in kilograms than respondents who don't participate in 10 minutes of continuous vigorous exercise a week?
+
+## Describing the Data
+
+The range of the `bmxwt` data within each `paq650` group is shown below:
+
+```{r paq650_by_bmxwt, message = FALSE}
+mosaic::favstats(bmxwt ~ paq650, data = analysis_data) %>%
+  kable(digits = 2)
+```
+
+Next, we'll use graphical and numerical summaries to assess whether the samples (of Yes and No respondents, separately) can *each* be modeled appropriately by a Normal distribution. 
+
+### Graphical Summaries
+
+The first graphical summary for this analysis is the violin boxplot, produced by the code below:
+
+```{r boxplot_for_b, message = FALSE}
+ggplot(analysis_data, aes(x = paq650, y = bmxwt, fill = paq650)) + 
+  geom_violin(alpha = 0.3) +
+  geom_boxplot(width = 0.3, notch = TRUE) +
+  guides(fill = "none") +
+  labs(title = "MEC Recorded Weight data by Vigorous Recreational Exercise Group (10 min cont)",
+       subtitle = "Each Group: Contains Detectable Outliers & Some Right-Skew", caption = "n = 2626 Respondents from the 2017-2018 NHANES Survey",
+       x = "10 minutes of vigorous recreational exercise a week", y = "MEC Recorded Weight (Kilograms)") +
+  theme_bw()
+```
+
+There appear to be several candidate outliers in each group on the high end, suggesting possible potential for meaningful skew. 
+
+The Normal Q-Q plots below also demonstrate significant right skew in this data:
+
+```{r qqplots_for_b}
+ggplot(analysis_data, aes(sample = bmxwt, col = paq650)) +
+  geom_qq() + geom_qq_line() +
+  facet_wrap(~ paq650, labeller = "label_both") +
+  guides(col = "none") +
+  theme_bw() +
+  labs(y = "Examination Weight Values",
+       title = "Examination Weight isn't well fit by a Normal model in either group")
+```
+
+The right skew as indicated in both of these plots suggests that a test that requires Normal distributions in the populations wouldn't be a good choice for this analysis.
+
+### Numerical Summaries
+
+As shown from the summary below, there are 810 "Yes" and 1816 "No" respondents to the vigorous recreational exercise question for respondents that have recorded examination weight `bmxwt` values.
+
+```{r numerical_summaries_B, message = FALSE}
+mosaic::favstats(bmxwt ~ paq650, data = analysis_data) %>% 
+  kable()
+```
+
+The skew~1~ values for these summary statistics are shown below:
+
+```{r calculating_skew1_forB}
+analysis_data %>% group_by(paq650) %>%
+  summarise(skew1 = round((mean(bmxwt) - median(bmxwt))/sd(bmxwt), 3))
+```
+
+For this data set, while the skew~1~ for neither the "Yes" group nor the "No" group for vigorous recreational exercise break the 0.2 cutoff for "fairly substantial" right skew, it still looks like the right skew is large enough in both categories for vigorous recreational exercise to warrant avoiding tests that require Normality. As such it would appear that a Wilcoxon-Mann-Whitney rank sum test approach or a bootstrap approach would be ideal for determining a confidence interval and point estimate for this data. Again, as with the first analysis for this study, the Wilcoxon rank sum approach is not recommended for this project, so a bootstrap approach will be executed in the *Main Analysis* section below.
+
+## Main Analysis
+
+As stated at the end of *Describing the Data* section above, the samples for this data set aren't well described by Normal models or even symmetric ones, due to the amount of right skew and outliers. As such, a bootstrap approach will be used below to build a 90% confidence interval for the population mean, comparing `bmxwt` for people who answered "Yes" and "No" to the exercise question regarding whether they complete 10 continuous minutes of vigorous recreational exercise in a typical week.
+
+
+### The Bootstrap for comparing means from two independent samples
+
+As mentioned above, the bootstrap approach was selected over the other approachs available because the data for this analysis are comprised of independent samples that aren't normally distributed, and as such the bootstrap approach is the most appropriate method for estimating the difference in population means. The approach used below utilizes the `bootdif` function to accomplish this, which was loaded in from the `Love-boost.R` file, calculating a 90% confidence interval for the difference between the `paq650` "Yes" and `paq650` "No" population `bmxwt` distributions based on the bootstrap using a seed of `4312021`:
+
+
+```{r bootdif_for_B}
+set.seed(4312021) 
+analysis_data %$% 
+  bootdif(bmxwt, paq650, conf.level = 0.90)
+```
+
+Results above have been summarized below:
+
+
+- The population mean weight (kilograms) that was collected during the examination portion of the 2017-2018 NHANES survey in those who answered "Yes" is estimated to be about 1.93 points higher than the population mean weight for those who said "No", based the samples in this study. As such, the mean differences' point estimate is 1.93.
+
+- The 90% confidence interval for the difference (Yes - No) of the population means is (0.40, 3.48).
+
+- For this bootstrap a two-sided confidence interval procedure was assumed, and from this resultant confidence interval, we can conclude that there may be a statistically detectable difference at the 10% significance level between the true means of the vigorous recreationally exercising and the non vigorous recreationally exercising `bmxwt` levels, as the confidence interval doesn't actually contain 0.
+
+- This bootstrap procedure assumes that the samples in each group are drawn independently of each other, and also that the samples in each group represent a random sample of the respondent population from the 2017-2018 NHANES survery. 
+
+Lastly, to reiterate, the bootstrap procedure would be most appropriate here for estimating the differences in the population means because of the lack of Normality in the samples.
+
+
+## Conclusions
+
+At the 10% significance level, there is a statistically detectable difference between the population mean weight (kilograms) as measured and recorded for the 2017-2018 NHANES examination survey data for those who typically partake in vigorous recreational exercise for at least 10 continuous minutes a week and those who don't typically partake in vigorous recreational exercise for at least 10 continuous minutes a week, based on our sample of respondents with complete data on `bmxwt`. This conclusion is motivated by a bootstrap estimate to compare the two `paq650` groups with complete data on survey examination weight `bmxwt`. I think that the notable right skew in data when grouped by `paq650`, along with the statistically detectable number of outliers seen in the violin boxplot suggests that the bootstrap approach is the best option for this analysis.
+
+One potential step that could logically be taken next for this analysis would be to increase the respondent population by including participants from previous years of the NHANES survey, as only using the 2017-2018 NHANES data is a significant limitation of this study. Another potential step that could be taken could be to attempt to correct for the skew by transforming `bmxwt`.
+
+
+# Analysis C: Comparing 3+ Population Means via ANOVA
+
+## The Question
+
+This analysis will compare `bmxwt` by `slq120`, using the analysis of variance, along with other related tools as well. The purpose of this analysis is to compare the mean `bmxwt` MEC recorded weight (kilograms) of the population represented by the respondents based on how often they felt overly sleepy during the day - Never, Rarely (1 time a month), Sometimes (2-4 times a month), Often (5-15 times a month), and Almost always (16-30 times a month). As with the previous analysis, there is no link between the respondents across the five `slq120` groups, so these samples are also independent. Additionally, as the *Describing the Data* section below will demonstrate, there are different numbers of subjects in all five `slq120` groups, so as a result it is impossible to match their `bmxwt` values. With all of this in mind, our research question for this analysis is as follows:
+
+Is there a statistically detectable difference between the confidence intervals for `bmxwt` by `slq120` category, and are any of the `bmxwt` confidence intervals for each `slq120` category dectably different from each other?
+
+
+## Describing the Data
+
+To begin with, let's look at the range of the `bmxwt` data within each `slq120` group, as shown below:
+
+```{r describe_comfort431_by_slq120, message = FALSE}
+mosaic::favstats(bmxwt ~ slq120, data = analysis_data)
+```
+
+The category with the smallest number of respondents, the *Almost always* group, has 202 total respondents, while the next two categories with the smallest number of respondents are *Often* with 408, and *Never* with 460. While the number of respondents in each of these three categories is less than the minimum number of required subjects for this study as a whole (i.e. 500 respondents), each of these categories, as well as the other remaining two, *Rarely* and *Sometimes*, contains enough respondents in them that we should nevertheless be able to conclude something about the distributions of `bmxwt` in these `slq120` populations.
+
+ 
+### Graphical Summaries
+
+One effective way of exploring the distributions of multiple independent samples is to examine a comparison boxplot - as such, one has been produced below with the following code:
+
+```{r comparison_boxplot_analysis_2}
+ggplot(analysis_data, aes(x = slq120, y = bmxwt, fill = slq120)) +
+  geom_violin(alpha = 0.3) +
+  geom_boxplot(width = 0.3, notch = TRUE) +
+  coord_flip() +
+  guides(fill = "none") +
+  theme_bw() +
+  labs(title = "MEC Recorded Weight (kg) by Monthly Daytime Sleepiness Frequency",
+       subtitle = "`bmxwt` by `slq120` Group",
+       y = "MEC Recorded Weight (kg)",
+       x = "")
+```
+
+- Notice that each level of daytime sleepiness frequency `slq120` demonstrates a potential issue with skew (i.e. right-skew) in the distribution of the `bmxwt` weights, a potential issue with outliers, or possibly some combination of both.
+
+
+Histograms represent another simple and effective way to examine the distribution of `bmxwt` across each category of `slq120`. The code below creates a comparison histogram to this end:
+
+```{r comparison_histograms_analysis_2}
+ggplot(analysis_data, aes(x = bmxwt)) +
+  geom_histogram(aes(fill = slq120), bins = 20, col = "white") +
+  theme_bw() +
+  facet_wrap(~ slq120, labeller = "label_both") +
+  guides(fill = "none") +
+  labs(title = "MEC Recorded Weight (kg) by Monthly Daytime Sleepiness Frequency slq120",
+       subtitle = "`bmxwt` by `slq120` Group",
+       y = "",
+       x = "MEC Recorded Weight (kg)")
+```
+
+- Again, just as seen in the comparison boxplot above, the histograms for each `slq120` shown above demonstrates a potential issue with skew (i.e. right-skew) in the distribution of the `bmxwt` weights, a potential issue with outliers, or possibly some combination of both.
+
+- With these tiny sample sizes (less than 10 observations) these plots don't really help much. All of the values in each group are within the stated response levels (0-100) but otherwise, there's not a lot to go on. ANOVA is quite robust, so we'll run it, but I expect that a Kruskal-Wallis approach may also be useful here.
+
+### Numerical Summaries
+
+Although this numeric summary for the `slq120` categories were already generated earlier in the *Describe the Data* section for this analysis, they have been provided again below:
+
+```{r num_summaries_analysis2, message = FALSE}
+mosaic::favstats(bmxwt ~ slq120, data = analysis_data) %>%
+  kable()
+```
+
+The conclusion I draw from all of this is that we need to run both ANOVA and Kruskal-Wallis approaches, but that we probably can't trust either of them too much, with such small sample sizes in the non-Individual `slq120` levels. Anything below 10 subjects is just too small, and, practically, I'd consider collapsing the groups to `Individual` vs. `All Other`. But for this demonstration, I'll press on.
+
+## Main Analysis
+
+As you'll recall, we have at least two available methods for building statistical inferences when comparing more than two independent samples.
+
+- Analysis of Variance
+- The Kruskal-Wallis Test
+
+There is also a bootstrap approach but we'll defer discussion of that until 432.
+
+Let's run both methods here just so you have the code, even though we don't have large enough data samples in the `Partner` and `Group` levels to justify statistical inference at all. In each case, we'll build hypothesis tests, and compare the distributions of `bmxwt` across levels of `slq120` using a 90% confidence level.
+
+### Kruskal-Wallis Test
+
+I'll start with the Kruskal-Wallis test, which at least doesn't require me to assume Normality in the three populations. The null hypothesis here is that there is no location shift in the distributions of comfort in 431 across the three levels of `slq120`. Put another way, the location parameters of the distributions are the same across the three `slq120` levels. The Kruskal-Wallis test is the extension of the Wilcoxon-Mann-Whitney rank sum test to studies involving more than two independent samples.
+
+```{r kruskal-wallis_test_for_2}
+analysis_data %$% 
+  kruskal.test(bmxwt ~ slq120)
+```
+
+- Here, we'd conclude that there is a statistically detectable difference (at least at the 10% significance level we're using, since *p* = 0.03 < 0.10) between the `bmxwt` scores for the three `slq120` categories. 
+- The assumptions of the Kruskal-Wallis test are the same as those of the Wilcoxon-Mann-Whitney rank sum test, specifically that 
+    + that the samples in each category are drawn independently of each other, 
+    + *and* that the samples in each category represent a random sample of the population of interest, 
+
+The main problem here is that the sample size is so small that we can't tell whether this result is truly more or less reasonable than an ANOVA approach. We really need a minimum of 15 observations (and ideally more like 30) in each group to let our histograms and boxplots have any chance to be informative on these points. So let's look at the ANOVA results.
+
+### Analysis of Variance
+
+The Analysis of Variance compares the means of `bmxwt` in the three `slq120` populations. We can run the analysis using either of two approaches, each of which we'll show in what follows.
+
+```{r anova_analysis_2_via_lm}
+analysis_data %$%
+  lm(bmxwt ~ slq120) %>%
+  anova()
+```
+
+- Here, we'd conclude that there is a statistically detectable difference (at least at the 10% significance level we're using, since *p* = 0.004 < 0.10) between the population mean `bmxwt` scores for the three `slq120` categories. 
+- The `slq120` account for $\eta^2 = \frac{3504.1}{3504.1 + 14004.7} = 0.2$ or 20% of the variation in `bmxwt` scores in our sample.
+- The natural next question is to try to identify which pairs of `slq120` categories are different, and we'll tackle that in a moment with Bonferroni and Tukey HSD approaches.
+- ANOVA is the natural extension of the pooled t test for two independent samples, and so it has the same set of assumptions when we compare population means across multiple categories (here, the three `slq120` categories)...
+    + that the samples in each category are drawn independently of each other, 
+    + that the samples in each category represent a random sample of the population of interest,
+    + the samples in each category are drawn from a Normally distributed population, 
+    + *and* that either the sample sizes or the population variances are equal across the categories.
+
+The main problem here is that the sample size is so small that we can't tell whether this result is truly reasonable or not. We really need a minimum of 15 observations (and ideally more like 30) in each group to let our histograms and boxplots have any chance to be informative on these points. We'll move on to looking at the pairwise comparisons, though, in this demonstration.
+
+### Holm approach to Pairwise Comparisons of Means
+
+We have two approaches available for dealing with multiple comparisons. If we had not pre-planned the full set of pairwise comparisons of `bmxwt` across the `slq120` categories, or if we wanted to use a fairly conservative approach, we could apply a Holm correction to our comparisons. This works reasonably well even with an unbalanced design, such as we have here. 
+
+```{r holm_pairwise_comparisons_analysis2}
+analysis_data %$%
+  pairwise.t.test(bmxwt, slq120, p.adjust = "holm")
+```
+
+- With an overall significance level of 10%, it appears that we can detect differences between the mean of the Partner category and the means of the other two categories, but there is no detectable difference between Individual and Group means.
+- The assumptions here include the ANOVA assumptions, which are no more or less justified than they were before. We do not, however, require that our pairwise comparisons be pre-planned.
+- You can learn more about the Holm method [on its Wikipedia page](https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method).
+
+### Tukey's Honestly Significant Differences approach to Pairwise Comparisons of Means
+
+The Tukey HSD approach requires us to use the `aov` approach to specifying the ANOVA model, as opposed to the `anova with lm` approach we took above. The results for `aov` are identical, as you can see below.
+
+```{r show_aov_analysis2}
+analysis_data %$% aov(bmxwt ~ slq120) %>% summary()
+```
+
+Now, we run the Tukey HSD comparisons, both in a plot and table of results. As specified previously, we'll use a 90% confidence level across the set of comparisons.
+
+```{r tukey_HSD_analysis2}
+TukeyHSD(aov(analysis_data$bmxwt ~ analysis_data$slq120), conf.level = 0.90)
+```
+
+The confidence intervals suggest that the mean Partner scores are detectably different (in fact, lower) than both the mean Individual and Group scores, while the Group and Individual scores show differences not large enough to be detectable. 
+
+Note that in the plot below, we see these results a bit more clearly after we adjust the margins of the plot and use the `las = 1` bit at the end of the plotting call to get the x and y axis labels to be horizontal.
+
+```{r plot_Tukey_HSD_analysis2}
+mar.default <- c(5,6,4,2) + 0.1
+par(mar = mar.default + c(0, 4, 0, 0))
+plot(TukeyHSD(aov(analysis_data$bmxwt ~ analysis_data$slq120),
+              conf.level = 0.90), las = 1)
+par(mar = mar.default)
+```
+
+## Conclusions
+
+Our conclusions are:
+
+- that the sample size is just too small in the non-Individual `slq120` categories to draw very firm conclusions, but
+- despite this, there appears to be evidence of a statistically detectable difference in `bmxwt` across the three `slq120` categories, according to either an ANOVA or Kruskal-Wallis approach, at the 90% confidence level, and
+- specifically, it appears at the 10% significance level that the population means of the Group and Individual comfort levels are comparable and both are higher than the population mean of the Partner comfort levels.
+
+Note that I've made no effort here to write these conclusions in the format we're looking for in your Study 1 work.
+
+# Analysis D: Two-Way (2 x 2) Contingency Table
+
+## The Question
+
+We'll look at the association of `r_before` with `english` in this analysis. The `r_before` variable and the `english` variable each have two levels, and suppose we are interested in whether `english` has an impact on `r_before`, so we'll build a contingency table with `english` in the rows and `r_before` in the columns. **Note that we'll use a 90% confidence level and the add 2 successes and 2 failures Bayesian augmentation, and I encourage you to do this in your actual Project B Study 1 work, as well.** I'll remind you that in your Project B, we're requiring you to have a minimum number of observations within each cell of the table that I cannot meet here with this tiny sample size.
+
+If this were an actual Study 1, rather than a demonstration, I'd build a research question here, but I have decided to leave that work to you.
+
+## Describing the Data
+
+Let's look at the 2x2 table we get. 
+
+```{r english_vs_priorr}
+table(analysis_data$whq065, analysis_data$rxduse)
+```
+
+Those names could use some work, I think.
+
+- The row names, in order, should be something like "English" (where "Yes" is now) and "Not English" with "English" first
+- The column names, respectively, should be "Prior R user" and "No Prior R", with "Prior R User" first.
+
+```{r}
+analysis_D_data <- analysis_data %>%
+  mutate(weight_change = fct_recode(factor(whq065),
+                                "Intentional" = "Yes",
+                                "Un-intentional" = "No"),
+         weight_change = fct_relevel(weight_change, "Intentional"),
+         prescription_use = fct_recode(factor(rxduse),
+                                 "Used Prescriptions" = "Yes",
+                                 "No Prescriptions" = "No"),
+         prescription_use = fct_relevel(prescription_use, "Used Prescriptions"))
+```
+
+```{r}
+analysis_D_data %>% tabyl(weight_change, prescription_use) 
+```
+
+## Main Analysis
+
+I **strongly encourage** you to use the Bayesian augmentation where we add two successes and add two failures, as recommended in Agresti and Coull\footnote{Agresti A Coull BA 1988 Approximate is Better than "Exact" for Interval Estimation of Binomial Proportions. The American Statistician 52(2), 119-126. http://www.jstor.org/stable/2685469}, and to use 90% confidence levels. To accomplish this I'll use the `twoby2` function in the `Epi` package.
+
+```{r twoby2_analysis4}
+t1 <- analysis_D_data %$% table(weight_change, prescription_use)
+
+twoby2(t1 + 2, conf.level = 0.90) # uses Bayesian augmentation, 90% confidence level
+```
+
+Note what I did to add two observations to each cell of the table. We can draw conclusions now about:
+
+- The individual probabilities of being a prior R user in the English and non-English groups, and 90% confidence intervals for each at the top of the output, so that, for instance, we estimate the probability of prior R usage among subjects for whom English is not their best language at 0.45, with 90% confidence interval (0.29, 0.63).
+- The relative risk of Prior R use given English vs. Prior R use given non-English, which is estimated to be 1.07, and based on its 90% confidence interval is clearly not detectably different from 1 at $\alpha = 0.10$.
+- The odds ratio describing the odds of Prior R use given English vs. Non-English, which is estimated to be 1.14, and is clearly not detectably different from 1 at $\alpha = 0.10$.
+- The difference in probability of Prior R use for English vs. non-English subjects, which is estimated to be 0.033, with a 90% confidence interval of (-0.18, 0.24) and is not detectably different from 0 at $\alpha = 0.10$.
+- The chi-square test of independence, which assesses the null hypothesis of no association between language preference and prior R usage, using either Fisher's exact test\footnote{I use Fisher's exact test with small-ish 2x2 tables where R will run it, if you have to choose between the methods.} or the Pearson chi-square test (labeled asymptotic here.) Clearly, with a *p* value much greater than 0.1, we must retain the null hypothesis in this case, and we see no detectable association between the rows and the columns at a 10% significance level.
+
+### Checking Assumptions
+
+Since each cell in our (non-augmented) 2x2 table is at least 5, R throws no warning messages. We should be reasonably comfortable with the chi-square test of independence here. If every cell was 10 or more, we'd be even more comfortable.
+
+### What If We Wanted to Type in the Table Ourselves?
+
+With the `twobytwo` function available in the `Love-boost.R` script, we can directly obtain 90% confidence intervals. For example, suppose we had the following data, pulled from our 2016 survey:
+
+2016 Survey    | Drank Tea Recently | Didn't Drink Tea
+-------------: | -----------------: | ---------------:
+Not Born in US | 21 | 10
+US Born        | 20 | 18
+
+Suppose we wanted to use `twobytwo` and the +2/+4 Bayesian augmentation (adding 2 to the count in each cell of our 2x2 table) and a 90% confidence interval for this comparison, to see whether the population proportions who drank tea recently differ between those born in and out of the US.
+
+```{r twobytwo for new example}
+twobytwo(21+2, 10+2, 20+2, 18+2,
+         "Not US Born", "US Born", "Drank Tea", "No Tea",
+         conf.level = 0.90)
+```
+
+## Conclusions
+
+Our primary conclusions about the study we've done here in Analysis D should be motivated by the fact that the 90% confidence intervals for the RR and the OR cross 1, and that the probability difference isn't detectably different from 0, either, with 90% confidence.
+
+Then we'd write more about limitations and opportunities for further work, were this an actual Study 1, instead of just a demonstration. 
+
+
+# Session Information
+
+End your report with the session information, in its own section. This will be Section 8 for you, but it's Section 9 for me because I did all five analyses, whereas you will only do four.
+
+```{r}
+sessionInfo()
+```
+

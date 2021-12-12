@@ -1,0 +1,746 @@
+---
+title: "Examination of the Effectiveness of BMI as a Health Metric"
+author: "Steven Mayher & Anna Magoline"
+date: "`r Sys.Date()`"
+linkcolor: blue
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    number_sections: true
+    code_folding: show
+    df_print: paged
+---
+
+# Setup and Data Ingest
+
+The following section covers the loading of the `libraries`, scripts and data necessary to complete this study.
+
+## Initial Setup and Package Loads in R
+
+The `libraries` and scripts necessary to complete this analysis are loaded using the code below:
+
+```{r initial_setup, message = FALSE, warning = FALSE}
+library(knitr)
+library(rmdformats)
+library(rmarkdown)
+library(GGally)
+library(patchwork)
+library(car)
+library(equatiomatic)
+library(janitor)
+library(magrittr)
+library(mosaic)
+library(naniar)
+library(simputation)
+library(broom)
+library(nhanesA)
+library(tidyverse) 
+
+## Global options
+
+opts_chunk$set(comment=NA)
+opts_knit$set(width=75)
+
+theme_set(theme_bw())
+options(dplyr.summarise.inform = FALSE)
+```
+
+## Loading the Raw Data into R
+
+The following code downloads the relevant 2017-2018 NHANES datasets, saves them locally to the `data` sub directory, and then loads these local copies into RStudio for use in this study:
+
+```{r}
+DEMO_J_raw <- nhanes('DEMO_J') %>% tibble()
+BMX_J_raw <- nhanes('BMX_J') %>% tibble()
+TCHOL_J_raw <- nhanes('TCHOL_J') %>% tibble()
+TRIGLY_J_raw <- nhanes('TRIGLY_J') %>% tibble()
+HDL_J_raw <- nhanes('HDL_J') %>% tibble()
+DBQ_J_raw <- nhanes('DBQ_J') %>% tibble()
+
+
+saveRDS(DEMO_J_raw, "data/DEMO_J.Rds")
+saveRDS(BMX_J_raw, "data/BMX_J.Rds")
+saveRDS(TCHOL_J_raw, "data/TCHOL_J.Rds")
+saveRDS(TRIGLY_J_raw, "data/TRIGLY_J.Rds")
+saveRDS(HDL_J_raw, "data/HDL_J.Rds")
+saveRDS(DBQ_J_raw, "data/DBQ_J.Rds")
+
+
+DEMO_J_raw <- readRDS("data/DEMO_J.Rds")
+BMX_J_raw <- readRDS("data/BMX_J.Rds")
+TCHOL_J_raw <- readRDS("data/TCHOL_J.Rds")
+TRIGLY_J_raw <- readRDS("data/TRIGLY_J.Rds")
+HDL_J_raw <- readRDS("data/HDL_J.Rds")
+DBQ_J_raw <- readRDS("data/DBQ_J.Rds")
+```
+
+# Cleaning the Data
+
+The following code creates new data sets by selecting for and filtering the necessary variables for the completion of Study 2 from the imported data sets above:
+
+```{r}
+DEMO_J_data = DEMO_J_raw %>% 
+  select(c(SEQN, RIDSTATR, RIDAGEYR)) %>%
+  filter(RIDSTATR == 2) %>%
+  filter(RIDAGEYR != ".") %>%
+  filter(RIDAGEYR <= 79) %>%
+  filter(RIDAGEYR >= 18) %>%
+  mutate(SEQN = as.numeric(SEQN)) %>%
+  mutate(RIDAGEYR = as.numeric(RIDAGEYR))
+  
+BMX_J_data = BMX_J_raw %>% 
+  select(c(SEQN, BMXBMI, BMXWAIST)) %>%
+  filter(BMXBMI != ".") %>%
+  filter(BMXWAIST != ".") %>%
+  mutate(SEQN = as.numeric(SEQN)) %>%
+  mutate(BMXBMI = round(as.numeric(BMXBMI), digits = 1)) %>%
+  mutate(BMXWAIST = round(as.numeric(BMXWAIST), digits = 1))
+
+TCHOL_J_data = TCHOL_J_raw %>% 
+  select(c(SEQN, LBXTC)) %>%
+  filter(LBXTC != ".") %>%
+  mutate(SEQN = as.numeric(SEQN)) %>%
+  mutate(LBXTC = round(as.numeric(LBXTC), digits = 0))
+
+TRIGLY_J_data = TRIGLY_J_raw %>% 
+  select(c(SEQN, LBXTR)) %>%
+  filter(LBXTR != ".") %>%
+  mutate(SEQN = as.numeric(SEQN)) %>%
+  mutate(LBXTR = round(as.numeric(LBXTR), digits = 0))
+
+HDL_J_data = HDL_J_raw %>% 
+  select(c(SEQN, LBDHDD)) %>%
+  filter(LBDHDD != ".") %>%
+  mutate(SEQN = as.numeric(SEQN)) %>%
+  mutate(LBDHDD = round(as.numeric(LBDHDD), digits = 0))
+
+DBQ_J_data = DBQ_J_raw %>% 
+  select(c(SEQN, DBQ700)) %>%
+  filter(DBQ700 != ".") %>%
+  filter(DBQ700 != 7) %>%
+  filter(DBQ700 != 9) %>%
+  mutate(SEQN = as.numeric(SEQN)) %>%
+  mutate(DBQ700 = fct_recode(as.factor(DBQ700),
+                             "Excellent" = "1",
+                             "Very Good" = "2",
+                             "Good" = "3",
+                             "Fair" = "4",
+                             "Poor" = "5"))
+```
+
+Additionally, the code above also converts all the selected and filtered variables to their appropriate format, rounding to the appropriate number of decimal places and defining the factor levels for the variables included in this study.
+
+## Merging the Data
+
+The following code merges the altered data sets above to create the complete case dataset that will be used for this study:
+
+```{r}
+study_2 = inner_join(inner_join(inner_join(inner_join(inner_join(DEMO_J_data, BMX_J_data, by = "SEQN"), TCHOL_J_data, by = "SEQN"), TRIGLY_J_data, by = "SEQN"), HDL_J_data, by = "SEQN"), DBQ_J_data, by = "SEQN") %>%
+  clean_names()
+```
+
+## The Raw Data
+
+In this data set compiled for this study, called `study_2`, complete data on 9 variables across 2215 adult subjects was gathered, and have been briefly explained below:
+
+-   The subjects sequence number (`seqn`)
+-   baseline information on their age (`ridageyr`),
+-   their interview/examination status (`ridstatr`),
+-   their body-mass index (kg/m\^\*\*) (`bmxbmi`)
+-   their waist circumference (cm) (`bmxwaist`),
+-   their total cholesterol (mg/dL) (`lbxtc`),
+-   Triglyceride (mg/dL) (`lbxtr`),
+-   their direct HDL-Cholesterol (mg/dL) (`lbdhdd`), and
+-   how healthy is their diet (`dbq700`)
+
+```{r hbp_study_data_in_the_raw}
+glimpse(study_2)
+```
+
+Using the `glimpse()` function above shows a bit of our tibble, and each of our nine variables will be used as follows:
+
+-   the numeric variable called `seqn` not to be used in our model except for identification of subjects,
+-   our outcome variable will be `bmxbmi`, which as mentioned above describes body-mass index (kg/m^2^)
+-   our key predictor `lbxtc`, which describes participant total cholesterol level in mg/dL
+-   our three quantitative candidate predictors, specifically `lbxtr`, `lbdhdd` and `bmxwaist`, which describe triglyceride in mg/dL, direct HDL in mg/dL, and waist size in cm of the participants respectively
+-   our lone categorical candidate predictor, specifically `dbq700`, which describes the how the participants rated their diet's health, and has been formatted into factor variable with appropriate levels in the first code chunk of this data cleaning section above
+
+## Which variables should be included in the tidy data set?
+
+As we've already established, we will only be fitting the five predictors mentioned above - `lbxtc`, `lbxtr`, `lbdhdd`, `bmxwaist` and `dbq700` - to model our outcome `bmxbmi`. Seeing as we already filtered for complete cases and formatted our variables to the correct format above, the tidy data set `study_2` that we built earlier should be sufficient for our analysis.
+
+## Checking our Outcome and Key Predictor
+
+The code below will first check the status of our outcome `bmxbmi` and our key predictor `lbxtc`:
+
+```{r}
+df_stats(~ bmxbmi + lbxtc, data = study_2)
+```
+
+The output above shows that we have 2215 samples, and that we have no missing values in either variable, so we should be good to go with them.
+
+## Checking the Quantitative Predictors
+
+Besides `lbxtc` we have three other quantitative predictor candidates: `lbxtr`, `lbdhdd`. and `bmxwaist`
+
+```{r}
+df_stats(~ lbxtr + lbdhdd + bmxwaist, data = study_2)
+```
+
+## Checking the Categorical Variables
+
+For categorical variables, it's always worth it to check to see whether the existing orders of the factor levels match the inherent order of the information, as well as whether there are any levels which we might want to collapse due to insufficient data, and whether there are any missing values.
+
+### `dbq700`: How healthy is the diet
+
+```{r levels_of_dbq700}
+study_2 %>% tabyl(dbq700)
+```
+
+-   The order of `nses`, instead of the alphabetical ("High", "Low", "Middle", "Very Low"), should go from "Very Low" to "Low" to "Middle" to "High", or perhaps its reverse.
+-   Let's fix that using the `fct_relevel` function from the `forcats` package, which is part of the `tidyverse`. While we're at it, we'll rename the variable `nbhd_ses` which is more helpful to me.
+-   Then we'll see how many subjects fall in each category.
+
+```{r relevel_dbq700}
+study_2 <- study_2 %>%
+  mutate(dbq700 = fct_relevel(dbq700, "Poor", "Fair", 
+                            "Good", "Very Good", "Excellent"))
+study_2 %>% tabyl(dbq700)
+```
+
+### What about the subjects?
+
+It is important to make sure that we have a unique (distinct) code (here, `seqn`) for each row in the raw data set.
+
+```{r}
+nrow(study_2)
+n_distinct(study_2 %>% select(seqn))
+```
+
+## Dealing with Missingness
+
+The method used above for creating the `study_2` dataset already filtered out all missing data, so we already have the complete case data set necessary to perform this study. This will be demonstrated below by running the `miss_var_summary()` and `miss_case_summary()` functions on the `study_2` tibble in the *Dealing with Missingness* study sub-sections below.
+
+### Identifying Missing Data
+
+As previously mentioned above, the `study_2` data has already been filtered for complete cases only, and has been demonstrated below:
+
+```{r}
+miss_var_summary(study_2)
+```
+
+No subject is missing more than one variable, as we can tell from the table below, sorted by `n_miss`.
+
+```{r}
+miss_case_summary(study_2)
+```
+
+As demonstrated above, there are no missing variables from the `study_2` dataset, so we may proceed to the next step of the study.
+
+# Codebook and Data Description
+
+## The Codebook
+
+The 12 variables in the `hbp_cc` tidy data set for this demonstration are as follows.
+
+|   Variable | Type  | Description / Levels                                                                                              |
+|-----------:|:-----:|-------------------------------------------------------------------------------------------------------------------|
+|     `seqn` |  ID   | Respondent sequence number, used for subject identification across data sets.                                     |
+|   `bmxbmi` | Quant | **outcome** variable, BMI of respondent, in kg/m\^2                                                               |
+|    `lbxtc` | Quant | **key predictor**, total cholesterol of respondent, in mg/dL                                                      |
+|    `lbxtr` | Quant | predictor, triglyceride levels, in mg/dL                                                                          |
+| `bmxwaist` | Quant | predictor, waist circumference of the respondent, in cm                                                           |
+|   `lbdhdd` | Quant | predictor, direct HDL-Cholesterol, in mg/dL                                                                       |
+|   `dbq700` | Cat-5 | predictor asking in general, how healthy is the respondent's overall diet: Poor, Fair, Good, Very good, Excellent |
+
+## Analytic Tibble
+
+While technically unnecessary, we will create a new tibble called `study_2_analytic` for us to use to being our analysis process. The code below both creates and confirms the creation of the tibble printing it out afterwards:
+
+```{r}
+study_2_analytic <- study_2 %>%
+  select(seqn, bmxbmi, lbxtc, lbxtr, lbdhdd, bmxwaist, dbq700) 
+
+study_2_analytic
+```
+
+Also, since we used the `df_print: paged` function in the YAML for this markdown file, we need to perform the following additional step to completely demonstrate that we do in-fact have a tibble:
+
+```{r}
+is_tibble(study_2_analytic)
+```
+
+The TRUE response to the `is_tibble()` function above confirms that `study_2_analytic` is, in-fact, a tibble.
+
+## Numerical Data Description
+
+The following code can be used to perform one final check to ensure that we have no missing variables, and also confirms that our categorical variables are properly formatted and leveled as factor variables.
+
+```{r}
+study_2_analytic %>% 
+  select(-seqn) %$%
+  Hmisc::describe(.)
+```
+
+As we can see, there's no missing variables in this data set, and our categorical variable `dbq700` is properly formatted as a factor, and the categories have been logically leveled.
+
+# My Research Question
+
+The data for this study was obtained from the 2017-2018 National Health and Nutrition Examination Survey (NHANES), which was and still is conducted by the Center for Disease Control (CDC). The variable `bmxbmi`, which is a measure of the body mass index (kg/m\^2) that was calculated in the NHANES survey by using the height and weight data recorded for the participants in the CDC's Mobile Examination Center (MEC), was designated to be the **outcome** variable for this study. It was selected for this role in particular to examine and highlight its limitations as a health metric, as while it's often used as a method for determining body fatness and is often selected as a variable to calculate obesity, its not actually a direct measure of either, and is often misunderstood. We both concluded that it would make for an interesting **outcome** variable to examine as a result. With this in mind, we then proceeded to select `lbxtc`, `lbxtr`, `lbdhdd` and `bmxwaist` as quantitative predictor variables, and `dbq700` as a multi-categorical predictor variable to ask the following research question:
+
+> How effectively can we predict body mass index with total cholesterol level, and is the quality of this prediction meaningfully improved when we adjust for four other predictors (triglycerides, direct HDL-cholesterol, waist size and diet health level) in the `study_2` data?
+
+# Partitioning the Data
+
+Before we can create our linear model we need to partition our `study_2_analytic` data into a training and testing sample, so we can both create our model and test it's ability to predict BMI. We will create our training sample first, called `study_2_training`, by randomly selecting 70% of the `study_2_analytic` data, and designating the remaining 30% as a test sample called `study_2_test`, labeling both properly and using `set.seed` to set a specific random seed to use to ensure that we can reproduce our results later.
+
+```{r splitting_samples}
+set.seed(4312021)
+
+study_2_training <- study_2_analytic %>% 
+  slice_sample(., prop = .70)
+study_2_test <- anti_join(study_2_analytic, study_2_training, by = "seqn")
+
+dim(study_2_analytic)
+dim(study_2_training)
+dim(study_2_test)
+```
+
+As a quick check of our code, we can see that our training set has 1550 subjects, and our test sample has 665 subjects. 1550 + 665 = 2215, which is our total amount of subjects in our data set, so this checks out.
+
+# Transforming the Outcome
+
+## Visualizing the Outcome Distribution
+
+For our first step in this analysis, we should determine whether or not we should consider transforming our outcome variable `bmxbmi`, the the three best graphical ways of testing this are through a the use of a histogram with an superimposed density plot to illustrate the shape of a Normal distribution, a violin boxplot to illustrate the shape of the distribution as honestly as possible, and a Normal Q-Q plot to assess Normality. We have created a figure below that contains all three of these for our outcome variable `bmxbmi` by using only the **training** sample data.
+
+```{r fig.height=6, fig.width=8}
+viz1 <- ggplot(study_2_training, aes(x = "", y = bmxbmi)) +
+  geom_violin(fill = "dodgerblue", alpha = 0.3) +
+  geom_boxplot(width = 0.25, fill = "dodgerblue", notch = TRUE) +
+  coord_flip() +
+  labs(title = "Violin Boxplot: BMI", x = "", y = "Body Mass Index (kg/m^2)")
+
+viz2 <- ggplot(study_2_training, aes(x = bmxbmi)) +
+  geom_histogram(aes(y = stat(density)), bins = nclass.scott(study_2_training$bmxbmi), col = "white", fill = "dodgerblue") +
+  stat_function(fun = dnorm, args = list(mean = mean(study_2_training$bmxbmi), sd = sd(study_2_training$bmxbmi)), col = "red", lwd = 1) +
+  labs(title = "Density Function: BMI", x = "Body Mass Index (kg/m^2)")
+
+viz3 <- ggplot(study_2_training, aes(sample = bmxbmi)) +
+  geom_qq(col = "dodgerblue") +
+  geom_qq_line(col = "red") +
+  labs(title = "Normal Q-Q plot: BMI", x = "", y = "Body Mass Index (kg/m^2)")
+
+(viz3 + viz2) / viz1 + 
+  plot_layout(heights = c(5,2)) +
+  plot_annotation(title = "Body Mass Index (kg/m^2)",
+                  subtitle = "Outcome variable for Study 2 as pulled from the `study_2_training` dataset",
+                  caption = "Body Mass Index (kg/m^2) data pulled from the `bmxbmi` variable in the Body Measures (BMX_J) 2017-2018 NHANES dataset")
+```
+
+These results clearly indicate the presence of some right-skew, so we will examine some possible transformations of the outcome `bmxbmi` for this study.
+
+Later, we'll augment this initial look at the outcome data with a Box-Cox plot to suggest a potential transformation. Should you decide to make such a transformation, remember to return here to plot the results for your new and transformed outcome.
+
+## Numerical Summary of the Outcome
+
+To assess the distribution of our outcome `bmxbmi` numerically, we will use the `favstats` function from the `mosaic` package as shown in the code below:
+
+```{r}
+favstats(~ bmxbmi, data = study_2_training)
+```
+
+As with our graphical summaries above, the numerical summary here also suggests some right-skew, as the median of the outcome is slightly smaller than the mean, albeit not by much, so a transformation of the outcome may or may not be necessary. We will create a boxCox plot after assessing the numerical summaries for the predictors below.
+
+## Numerical Summaries of the Predictors
+
+To numerically assess the distributions of the predictor variables for this study, we will utilize the `inspect` function, as it provides an easy way to obtain the same stats the `favstats` function for all of variables in our data frame. The code below accomplishes this, and also omits the `seq` and `bmxbmi` variables, as we don't need to see a summary for the IDs, and we already have our summary for the outcome variable above:
+
+```{r}
+study_2_training %>% select(-seqn, -bmxbmi) %>% 
+  mosaic::inspect()
+```
+
+## `boxCox` function to assess need for transformation of our outcome
+
+We can only use a `boxCox` approach here if the distribution of our outcome variable `bmxbmi` only includes strictly positive values. We can see from our numerical summary earlier that the minimum `bmxbmi` in our `study_2_training` sample is 15.5, so this has been confirmed. As such, the code below will generate an appropriate boxCox plot with the `boxCox` function for us to assess outcome transformations, and we will also confirm our plot's results with the use of the `powerTransform` function, both of which are from the `car` package. In both cases, we will only use our outcome variable and our five predictor variables for generating the model:
+
+```{r boxCox_plot}
+model_temp <- lm(bmxbmi ~ lbxtc + lbxtr + lbdhdd + bmxwaist + dbq700,
+                 data = study_2_training)
+
+boxCox(model_temp)
+
+powerTransform(model_temp)
+```
+
+As the estimated power transformation is about 0.07, a natural logarithm transformation of `bmxbmi` looks as if it would be useful in this study. As such, we're going to use the natural logarithm transformation for our outcome, and we will back-transform any predictions we make at the end of the study to ensure that the prediction error results are understandable. Additionally, we will add this transformation of `bmxbmi` to both our `study_2_training` and `study_2_test` tibbles, naming it `log_bmxbmi` for use in the rest of this analysis using the following code below:
+
+```{r}
+study_2_training = study_2_training %>%
+  mutate(log_bmxbmi = log(bmxbmi))
+
+study_2_test = study_2_test %>%
+  mutate(log_bmxbmi = log(bmxbmi))
+```
+
+Lastly, before creating our Scatterplot Matrix below, we will create new graphical representations below to illustrate the distribution of our transformed outcome:
+
+```{r fig.height=6, fig.width=8}
+viz1 <- ggplot(study_2_training, aes(x = "", y = log_bmxbmi)) +
+  geom_violin(fill = "dodgerblue", alpha = 0.3) +
+  geom_boxplot(width = 0.25, fill = "dodgerblue", notch = TRUE) +
+  coord_flip() +
+  labs(title = "Violin Boxplot: Log of BMI", x = "", y = "Log of Body Mass Index (kg/m^2)")
+
+viz2 <- ggplot(study_2_training, aes(x = log_bmxbmi)) +
+  geom_histogram(aes(y = stat(density)), bins = nclass.scott(study_2_training$bmxbmi), col = "white", fill = "dodgerblue") +
+  stat_function(fun = dnorm, args = list(mean = mean(study_2_training$log_bmxbmi), sd = sd(study_2_training$log_bmxbmi)), col = "red", lwd = 1) +
+  labs(title = "Density Function: Log of BMI", x = "Log of Body Mass Index (kg/m^2)")
+
+viz3 <- ggplot(study_2_training, aes(sample = log_bmxbmi)) +
+  geom_qq(col = "dodgerblue") +
+  geom_qq_line(col = "red") +
+  labs(title = "Normal Q-Q plot: Log of BMI", x = "", y = "Log of Body Mass Index (kg/m^2)")
+
+(viz3 + viz2) / viz1 + 
+  plot_layout(heights = c(5,2)) +
+  plot_annotation(title = "Natural Logarithm of Body Mass Index (kg/m^2)",
+                  subtitle = "Transformation of outcome variable for Study 2 as pulled from the `study_2_training` dataset",
+                  caption = "Log of Body Mass Index (kg/m^2) data pulled from the natural log transformation of the `bmxbmi` variable, generated for this study")
+```
+
+## Scatterplot Matrix
+
+In this section, we will build a scatterplot matrix that will allow us to illustrate the relationship between the natural logarithm transformation of our outcome variable `bmxbmi` and our predictor variables for this study. We will accomplish this by using the of the `ggpairs` function from the `GGally` package:
+
+```{r fig.height=12, fig.width=12, message=FALSE}
+study_2_training %>% 
+  select(lbdhdd, lbxtr, bmxwaist, dbq700, lbxtc, log_bmxbmi) %>% 
+  ggpairs(., title = "Scatterplot Matrix",
+          lower = list(combo = wrap("facethist", bins = 20)))
+```
+
+The results of the scatteplot matrix above demonstrate that the log transformation of our outcome variable has weak correlations with our key predictor `lbxtc`, and two of our other predictors, `lbxtr` and `lbdhdd`, with correlations of -0.031, 0.169, and -0.310 each respectively. Conversely, the log of our outcome variable appears to correlate rather strongly with our last quantitative predictor, `bmxwaist`, with a correlation of 0.919.
+
+Additionally, the distribution of the natural log of our outcome variable `log_bmxbmi` appears to follow a Normal distribution rather well, and the potential predictor `bmxwaist` also shows strong Normality, however the distributions for our other three quantitative predictors - `lbdhdd`, `lbxtr`, and our key predictor `lbxtc` do appear some detectable non-Normality.
+
+Lastly, all of our quantitative predictors, as well as our transformed outcome, all seem to produce mostly decent normal distributions with our categorical variable `dbq700`, with Our three cholesterol variables, with `lbxtr` perhaps exhibiting the worst correlation with our categorical variable, which is also substantiated by examining the means vs medians for each categorical group of `dbq700` for `lbxtr` seen in the numerical summaries below, which include the numerical summaries produced using the `favstats` function for each variables as well as our transformed outcome variable for all the categories of `dbq700`.
+
+```{r}
+mosaic::favstats(log_bmxbmi ~ dbq700, data = study_2_training)
+mosaic::favstats(lbxtc ~ dbq700, data = study_2_training)
+mosaic::favstats(lbxtr ~ dbq700, data = study_2_training)
+mosaic::favstats(lbdhdd ~ dbq700, data = study_2_training)
+mosaic::favstats(bmxwaist ~ dbq700, data = study_2_training)
+```
+
+## Collinearity Checking
+
+Before proceeding to creating our linear models below, we'll take a brief look at potential collinearity. We already mentioned above that each of our quantitative variables also correlates with `dbq700` with varying success, which isn't good for collinearity. That said, it doesn't appear that any of the other predictors correlate very strongly with each other, however it is worth noting that the following combinations of predictors do appear to correlate more strongly with each other than they do with the outcome variable:
+
+-   `lbxtc` and `lbxtr` (both), `lbxtc` and `bmxwaist` (stronger than `lbxtc` and outcome), `lbxtr` and `bmiwaist` (stronger than `lbxtr` and outcome), and `lbdhdd` with both `bmxwaist` and `lbxtr` (correlation stronger for `lbdhdd` with `bmxwaist`, and the correlation for `lbdhdd` and `lbxtr` is stronger than both of those variables' respective correlations the transformed outcome variable `log_bmxbmi`).
+
+The correlations in all of the cases specified above though are still rather small overall though, so we will proceed with this analysis, although in the future we may wish to consider different predictors that correlate more strongly with this outcome. To be on the safe side, we will perform a generalized VIF after fitting our "kitchen sink" model (i.e. the big model) below to be on the safe side regarding collinearity.
+
+# The Big Model
+
+The following section will specify the parameters and necessary code for generating a "kitchen sink" linear regression model that describes the relationship between our natural log transformed outcome `log_bmxbmi` and the main effects of each of our predictors. Specifically, we will:
+
+-   We'll assess the overall effectiveness of this model within our training sample for our model by specifying and interpreting the R^2^, adjusted R^2^, the residual standard error, and the ANOVA F test.
+-   We'll need to specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.
+-   Finally, we'll assess whether collinearity in the kitchen sink model has a meaningful impact, and describe how we know that.
+
+## Fitting/Summarizing the Kitchen Sink model
+
+For complete clarification, the "kitchen sink" or "big" model will predict the natural logarithm of `bmxbmi` by utilizing the predictors `lbxtc`, `lbxtr`, `lbdhdd`, `bmxwaist` and `dbq700`, and has been created and summarized with the code below:
+
+```{r kitchen_sink}
+model_big <- lm(log(bmxbmi) ~ lbxtc + lbxtr + lbdhdd + bmxwaist + dbq700, 
+                data = study_2_training)
+```
+
+```{r}
+summary(model_big)
+```
+
+## Effect Sizes: Coefficient Estimates
+
+Now that we have defined our big model above with the code for `model_big` shown above, we can use the code below to generate a tidy that specifies the size and magnitude of all the "kitchen sink" model's coefficients that also provides the estimated effect sizes with 90% confidence intervals:
+
+```{r}
+tidy(model_big, conf.int = TRUE, conf.level = 0.90) %>% 
+  select(term, estimate, std.error, conf.low, conf.high, p.value) %>% 
+  kable(dig = 6)
+```
+
+It's worth noting that the reason we specified 6 digits for output here was in order to ensure we got at least two significant figures in our coefficient and standard error estimates for all of the predictors in this model, and in order to do this we needed to go out to 6 decimal places.
+
+## Describing the Equation
+
+Next, we will present the model as an equation by using the `extract_eq()` function from the `equatiomatic` package:
+
+```{r, results = 'asis'}
+extract_eq(model_big, use_coefs = TRUE, coef_digits = 6,
+           terms_per_line = 3, wrap = TRUE, ital_vars = TRUE)
+```
+
+# The Smaller Model
+
+Next, we will generate a second linear regression model via the utilization of a subset of our "kitchen sink" model predictors. To generate this model, we will perform a backwards stepwise elimination regression, although this is generally not a recommended chosen to maximize predictive value within our training sample. Before doing so though, it is worth noting that while the backwards stepwise elimination approach looks visually attractive as a method for creating a smaller model, it's not exactly a great method. The results of the method, and our conclusions based off of them, are both shown below:
+
+## Backwards Stepwise Elimination
+
+```{r stepwise_bw_model}
+step(model_big)
+```
+
+The backwards stepwise elimination approach suggests a model with `bmxwaist` and `dbq700`, but not `lbdhdd` or `lbxtr`, or our key predictor `lbxtc`. Since throwing out our key predictor would not make sense, we will use this last model that the backwards stepwise elimination approach suggests, but we will add our key predictor back into it.
+
+## Fitting the "small" model
+
+Working from our conclusion from the backwards stepwise elimination above, we fit our new "small" model below with the following code:
+
+```{r fit_mod_small}
+model_small <- lm(log(bmxbmi) ~ lbxtc + bmxwaist + dbq700, data = study_2_training)
+
+summary(model_small)
+```
+
+## Effect Sizes: Coefficient Estimates
+
+The size and magnitude of all of the coefficients will be specified with the code below, and an estimated effect size with 90% confidence intervals will also be provided:
+
+```{r}
+tidy(model_small, conf.int = TRUE, conf.level = 0.90) %>% 
+  select(term, estimate, std.error, conf.low, conf.high, p.value) %>% 
+  kable(dig = 4)
+```
+
+## Small Model Regression Equation
+
+As with the big model, we have once again used the `extract_eq()` function from the `equatiomatic` to visualize the equation for our small model below:
+
+```{r, results = 'asis'}
+extract_eq(model_small, use_coefs = TRUE, coef_digits = 4,
+           terms_per_line = 3, wrap = TRUE, ital_vars = TRUE)
+```
+
+# In-Sample Comparison
+
+## Quality of Fit
+
+Now that we have our two models, we will utilize adjusted R^2^, the residual standard error, AIC and BIC to assess both of these models using in our training sample by using the following code:
+
+```{r}
+temp_a <- glance(model_big) %>% 
+  select(-logLik, -deviance) %>%
+  round(digits = 3) %>%
+  mutate(modelname = "big")
+
+temp_b <- glance(model_small) %>%
+  select(-logLik, -deviance) %>%
+  round(digits = 3) %>%
+  mutate(modelname = "small")
+
+training_comp <- bind_rows(temp_a, temp_b) %>%
+  select(modelname, nobs, df, AIC, BIC, everything())
+```
+
+```{r}
+training_comp
+```
+
+From the results above, it appears that the big "kitchen sink" model with all of the predictors performs better than the smaller model with the 3 predictors `lbxtc`, `bmxwaist` and `dbq700` in the training sample. In particular:
+
+-   The AIC, BIC, and R^2^ values for the larger model are each a little better in the larger model, with the AIC and BIC values both being a little smaller in the larger model than they are in the smaller model, and the R^2^ value being just slightly larger in the larger model than it is in the smaller model.
+-   The adjusted R^2^ and residual standard deviation (`sigma`) is essentially identical in the two models.
+
+So since the best model would be the model with the lowest AIC, BIC and sigma value, as well as the largest adjusted R^2^ value (the un-adjusted R^2^ value is also a good metric, but will often favor larger models by design, which is why it's generally better to examine the adjusted R^2^ value, AIC, BIC, and sigma values instead), the larger "kitchen skin" model would be the better of the two models.
+
+## Assessing Assumptions
+
+In the following section, we will run a set of residual plots for both of our models:
+
+### Residual Plots for the Big Model
+
+```{r}
+par(mfrow = c(2,2)); plot(model_big); par(mfrow = c(1,1))
+```
+
+The most notable concern we have about these residuals is a potential issue with Normality, as our Normal Q-Q plot seems to have some rather high standardized residuals, with the most outlying point (171) appearing to be above 4 standardized residuals. To see if this is a problem, we will use the `outlierTest` function from the `car` package to test the most outlying point to see if it is indeed a concern:
+
+```{r}
+outlierTest(model_big)
+```
+
+From the results above, we would conclude that from the Bonferroni p value that there is evidence to support the belief that we could have a serious problem with Normality, for a studentized residual of 5.08 is out of the range of what we might reasonably expect to see given a Normal distribution of errors and 2215 observations.
+
+It's worth mentioning that despite this Normality problem, we see no serious problems with the assumptions of linearity, we do not see any highly influential points in our big model in our Residuals vs Leverage plot, and there doesn't appear to be an issue with constant variance either.
+
+### Residual Plots for the Small Model
+
+```{r}
+par(mfrow = c(2,2)); plot(model_small); par(mfrow = c(1,1))
+```
+
+Once again, the most notable concern we have about these residuals is a potential issue with Normality, as our Normal Q-Q plot appears to be quite similar to that of our big model, and seems to have some rather high standardized residuals, with the most outlying point (171) appearing to be above 4 standardized residuals again. Just as last time, we will see if this is a problem by using the `outlierTest` function from the `car` package to test the most outlying point to see if it is indeed a concern:
+
+```{r}
+outlierTest(model_small)
+```
+
+From the results above, we would conclude that from the Bonferroni p value that there is evidence to support the belief that we could once again have a serious problem with Normality, for a studentized residual of 5.11 is out of the range of what we might reasonably expect to see given a Normal distribution of errors and 2215 observations.
+
+It's worth mentioning that despite this Normality problem, we once again see no serious problems with the assumptions of linearity, we do not see any highly influential points in our small model in our Residuals vs Leverage plot, and there doesn't appear to be an issue with constant variance either.
+
+### Does collinearity have a meaningful impact?
+
+Whenever an analysis is performed that fits a model or models with multiple predictors, it is usually wise to assess those models for any potential impact of collinearity. This can be accomplished by using the `vif` function from the `car` package, which as been done with the code below:
+
+```{r}
+car::vif(model_big)
+```
+
+For any meaningful collinearity to be of concern to us, we would need to see a generalized variance inflation factor above 5 for a variable in a given model, and none of the generalized variance inflation factors for any of the variables in our big model even break a value of 2, so we shouldn't be concerned about collinearity with our big model. Although our small model also has multiple predictors, we already know from the results above that it cannot be an issue either, as it is simply a subset of our big model, which we just established didn't have any meaningful collinearity, so we know the small model should be fine as well.
+
+## Comparing the Models
+
+Based on the training sample, my conclusions so far is to support the smaller model. It has (slightly) better performance on the fit quality measures, and each model shows no serious problems with regression assumptions.
+
+# Model Validation
+
+Now, we will use our two regression models to predict the value of our outcome using the predictor values in the test sample. As mentioned when we determined our transformation for our outcome data, we will need to back-transform the predictions to the original units, in this case by using the `exp()` function, and we'll need to compare our models to out of sample predictions to see which is better at predicting these out of sample values.
+
+## Calculating Prediction Errors
+
+### Big Model: Back-Transformation and Calculating Fits/Residuals
+
+We'll use the `augment` function from the `broom` package to help us here, and create `bmxbmi_fit` to hold the fitted values on the original `bmxbmi` scale after back-transformation (by using the `exp()` function to reverse the natural log transformation) and then `bmxbmi_res` to hold the residuals (prediction errors) we observe using the big model on the `study_2_test` data.
+
+```{r}
+aug_big <- augment(model_big, newdata = study_2_test) %>% 
+  mutate(mod_name = "big",
+         bmxbmi_fit = exp(.fitted),
+         bmxbmi_res = bmxbmi - bmxbmi_fit) %>%
+  select(seqn, mod_name, bmxbmi, bmxbmi_fit, bmxbmi_res, everything())
+
+head(aug_big,3)
+```
+
+### Small Model: Back-Transformation and Calculating Fits/Residuals
+
+We'll do the same thing, but using the small model in the `study_2_test` data.
+
+```{r}
+aug_small <- augment(model_small, newdata = study_2_test) %>% 
+  mutate(mod_name = "small",
+         bmxbmi_fit = exp(.fitted),
+         bmxbmi_res = bmxbmi - bmxbmi_fit) %>%
+  select(seqn, mod_name, bmxbmi, bmxbmi_fit, bmxbmi_res, everything())
+
+head(aug_small,3)
+```
+
+### Combining the Results
+
+```{r}
+test_comp <- union(aug_big, aug_small) %>%
+  arrange(seqn, mod_name)
+
+test_comp %>% head()
+```
+
+Given this `test_comp` tibble, including predictions and residuals from the kitchen sink model on our test data, we can now visualize the prediction errors from each model, proceed to summarize those errors across each model, and then identify the "worst fitting" subject for each model in the test sample.
+
+We will perform all of these in the next few sections.
+
+## Visualizing the Predictions
+
+```{r}
+ggplot(test_comp, aes(x = bmxbmi_fit, y = bmxbmi)) +
+  geom_point() +
+  geom_abline(slope = 1, intercept = 0, lty = "dashed") + 
+  geom_smooth(method = "loess", col = "blue", se = FALSE, formula = y ~ x) +
+  facet_wrap( ~ mod_name, labeller = "label_both") +
+  labs(x = "Predicted bmxbmi",
+       y = "Observed bmxbmi",
+       title = "Observed vs. Predicted bmxbmi",
+       subtitle = "Comparing Big to Small Model in Test Sample",
+       caption = "Dashed line is where Observed = Predicted")
+```
+
+The models seem to be making fairly similar errors to each other, as we really aren't seeing much difference between the two models in terms of adherence of the points to the regression line.
+
+## Summarizing the Errors
+
+The following code will allow us to calculate the mean absolute prediction error (MAPE), the root mean squared prediction error (RMSPE) and the maximum absolute error across the predictions made by each model:
+
+```{r}
+test_comp %>%
+  group_by(mod_name) %>%
+  summarise(n = n(),
+            MAPE = mean(abs(bmxbmi_res)), 
+            RMSPE = sqrt(mean(bmxbmi_res^2)),
+            max_error = max(abs(bmxbmi_res)))
+```
+
+The small model appears to give us the best result for MAPE, however the big model gives us the best result for RMSPE and max error.
+
+### Identify the largest errors
+
+The following code allows us to identify the subject(s) where that maximum prediction error was made by each model, and the observed and model-fitted values of `bmxbmi_diff` for that subject in each case.
+
+```{r}
+temp1 <- aug_big %>%
+  filter(abs(bmxbmi_res) == max(abs(bmxbmi_res)))
+
+temp2 <- aug_small %>%
+  filter(abs(bmxbmi_res) == max(abs(bmxbmi_res)))
+
+bind_rows(temp1, temp2)
+```
+
+### Validated R-square values
+
+Here's the squared correlation between our predicted `bmxbmi` and our actual `bmxbmi` in the test sample, using the big model.
+
+```{r}
+aug_big %$% cor(bmxbmi, bmxbmi_fit)^2
+```
+
+and here's the R-square we obtained within the test sample for the small model.
+
+```{r}
+aug_small %$% cor(bmxbmi, bmxbmi_fit)^2
+```
+
+There really isn't much of a difference. Note that either of these results suggest our training sample $R^2$ (and even adjusted $R^2$ values) were a little more generous than the results from our test samples shown here.
+
+## Comparing the Models
+
+I would select the larger model here, on the basis of the similar performance in terms of the visualization of errors, and the small improvements in RMSPE and maximum prediction error, as well as validated $R^2$. It's worth noting that neither model here was particularly exceptionally better than the other, however the big model performed ever so slightly better than the smaller model, so it would be the one I would go with in this scenario.
+
+# Discussion
+
+## Chosen Model
+
+We chose the "kitchen sink" big model as the best model from this study, as it performed the best in both the training sample, as seen when comparing the AIC, BIC, and to a lesser extent the R^2^ values for the two models (the adjusted R^2^ and sigma values were both identical), and it performed better when fit to our test sample data as well, as it produced better RMSPE and max error values than the smaller model in this case as well.
+
+## Answering My Question
+
+After completing this study, I would conclude that we are not able to very effectively predict body mass index with total cholesterol level as the key predictor, but the quality of this prediction most meaningfully improved when we adjusted for participant waist size `bmxwaist` and from diet quality `dbq700`. The total cholesterol, direct HDL, and triglycerides did not make for effective predictor variables though in the `study_2` data.
+
+## Next Steps
+
+## Reflection
+
+Now that we've completed study 2, there are several things that I would change when attempting this study again. Most notably though, as alluded to when we answered our research question, we would consider creating a new model for this outcome by picking several new predictors that would more effectively predict for BMI, however I would likely keep the waist measurement data and potentially the diet health categorical data for use in a new model.
+
+# Session Information
+
+should be included at the end of your report.
+
+```{r}
+sessionInfo()
+```

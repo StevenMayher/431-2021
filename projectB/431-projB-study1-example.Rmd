@@ -10,29 +10,29 @@ output:
     code_folding: show
 ---
 
-# Important Reminders from Dr. Love {-}
+# Important Reminders from Dr. Love {.unnumbered}
 
-1. Remember that each subsection should include at least one complete sentence explaining what you are doing, specifying the variables you are using and how you are using them, and then conclude with at least one complete sentence of discussion of the key conclusions you draw from the current step, and a discussion of any limitations you can describe that apply to the results.
+1.  Remember that each subsection should include at least one complete sentence explaining what you are doing, specifying the variables you are using and how you are using them, and then conclude with at least one complete sentence of discussion of the key conclusions you draw from the current step, and a discussion of any limitations you can describe that apply to the results.
 
-2. For heaven's sake, DO NOT use my words included in this example report in your project. Rewrite everything to make it relevant to your situation. Do not repeat my instructions back to me. 
+2.  For heaven's sake, DO NOT use my words included in this example report in your project. Rewrite everything to make it relevant to your situation. Do not repeat my instructions back to me.
 
 # Setup and Data Ingest
 
-## Initial Setup and Package Loads 
+## Initial Setup and Package Loads
 
 ```{r initial_setup, cache=FALSE, message = FALSE, warning = FALSE}
 library(knitr); library(rmdformats)
 
 library(janitor); library(magrittr); library(naniar)
-library(broom); library(patchwork)
+library(broom); library(patchwork); library(magrittr)
 
 library(readxl)
 library(Epi)
 library(Hmisc)
-library(tidyverse) 
+library(tidyverse)
 
 ## Load Love-boost 
-#source("data/Love-boost.R")
+source("data/Love-boost.R")
 
 ## Global options
 opts_chunk$set(comment=NA)
@@ -41,18 +41,18 @@ opts_knit$set(width=75)
 theme_set(theme_bw())
 ```
 
-## Loading the Raw Data into R 
+## Loading the Raw Data into R
 
 This document demonstrates a variety of things required in your Project B Study 1. We will demonstrate ideas using data from a 2015 class survey, gathered in three data files available in the Project B folder on the [431-data website](https://github.com/THOMASELOVE/431-data/tree/main/projectB/data). The files are called:
 
-- `projectB-study1-demo-survey-2015a.xlsx`
-- `projectB-study1-demo-survey-2015b.csv`
-- `projectB-study1-demo-survey-2015c.csv`
+-   `projectB-study1-demo-survey-2015a.xlsx`
+-   `projectB-study1-demo-survey-2015b.csv`
+-   `projectB-study1-demo-survey-2015c.csv`
 
-After merging, the complete data set should include data on 21 variables for 53 subjects. 
+After merging, the complete data set should include data on 21 variables for 53 subjects.
 
-- I'm going to go ahead and use `clean_names()` before I do the merging. It would also be OK to do this after the merge is complete.
-- I'm also going to tell R to interpret both a blank "" and an "NA" in a cell of the Excel sheet as indicating a missing value, since that's what I need, and since that's what `read_csv` already does, by default.
+-   I'm going to go ahead and use `clean_names()` before I do the merging. It would also be OK to do this after the merge is complete.
+-   I'm also going to tell R to interpret both a blank "" and an "NA" in a cell of the Excel sheet as indicating a missing value, since that's what I need, and since that's what `read_csv` already does, by default.
 
 ```{r data_load, message = FALSE}
 sur15_raw_a <- read_excel("data/projectB-study1-demo-survey-2015a.xlsx", 
@@ -70,19 +70,19 @@ sur15_raw_c <- read_csv("data/projectB-study1-demo-survey-2015c.csv") %>%
 
 We have three tibbles now, which (once we have merged them together) will contain complete data on all 53 subjects for all 21 variables.
 
-- `sur15_raw_a` contains data on all 21 variables for the first 20 subjects.
+-   `sur15_raw_a` contains data on all 21 variables for the first 20 subjects.
 
 ```{r}
 dim(sur15_raw_a)
 ```
 
-- `sur15_raw_b` contains data on 9 of the variables (including the subject ID code: `s.id`) for the other 33 subjects.
+-   `sur15_raw_b` contains data on 9 of the variables (including the subject ID code: `s.id`) for the other 33 subjects.
 
 ```{r}
 dim(sur15_raw_b)
 ```
 
-- `sur15_raw_c` contains data on 13 of the variables (also including the subject ID code: `s.id`) for the same 33 subjects that are in `sur15_raw_b`.
+-   `sur15_raw_c` contains data on 13 of the variables (also including the subject ID code: `s.id`) for the same 33 subjects that are in `sur15_raw_b`.
 
 ```{r}
 dim(sur15_raw_c)
@@ -90,7 +90,7 @@ dim(sur15_raw_c)
 
 ## Two Merging Steps
 
-1. Join the columns in `sur15_raw_b` and in `sur15_raw_c` to obtain a new tibble, which I'll call `sur15_last33`, holding information on all 21 variables for the last 33 subjects.
+1.  Join the columns in `sur15_raw_b` and in `sur15_raw_c` to obtain a new tibble, which I'll call `sur15_last33`, holding information on all 21 variables for the last 33 subjects.
 
 ```{r merge_step1}
 sur15_last33 <- inner_join(sur15_raw_b, sur15_raw_c, by = "s_id")
@@ -98,7 +98,7 @@ sur15_last33 <- inner_join(sur15_raw_b, sur15_raw_c, by = "s_id")
 dim(sur15_last33)
 ```
 
-2. Combine the rows together from `sur15_raw_a` (which has the first 20 subjects) and `sur15_last33` (which has the other 33 subjects) to create a tibble called `sur15_merged` which has all 21 variables for all 53 subjects.
+2.  Combine the rows together from `sur15_raw_a` (which has the first 20 subjects) and `sur15_last33` (which has the other 33 subjects) to create a tibble called `sur15_merged` which has all 21 variables for all 53 subjects.
 
 ```{r merge_step2}
 sur15_merge <- bind_rows(sur15_raw_a, sur15_last33)
@@ -106,13 +106,13 @@ sur15_merge <- bind_rows(sur15_raw_a, sur15_last33)
 dim(sur15_merge)
 ```
 
-OK. We have 53 subjects and 21 variables, as expected. 
+OK. We have 53 subjects and 21 variables, as expected.
 
 ## Checking the Merge
 
 We need to perform two checks here.
 
-1. First, we should check to ensure that the number of distinct (unique) subject identification codes (shown below) matches the number of rows. Those two values should be identical. Are they?
+1.  First, we should check to ensure that the number of distinct (unique) subject identification codes (shown below) matches the number of rows. Those two values should be identical. Are they?
 
 ```{r}
 identical(sur15_merge %$% n_distinct(s_id), 
@@ -121,7 +121,7 @@ identical(sur15_merge %$% n_distinct(s_id),
 
 Excellent.
 
-2. Second, we should also check that we haven't added any new variables. The `sur15_raw_a` tibble included all of the variable names we should have in the final result. Do the names in `sur15_raw_a` match the names in our merged tibble exactly?
+2.  Second, we should also check that we haven't added any new variables. The `sur15_raw_a` tibble included all of the variable names we should have in the final result. Do the names in `sur15_raw_a` match the names in our merged tibble exactly?
 
 ```{r}
 identical(names(sur15_merge), 
@@ -145,39 +145,44 @@ sur15_m <- sur15_merge %>%
 
 ## Our Survey Items
 
-The 10 survey items that we will actually use in this demonstration are listed below. 
+The 10 survey items that we will actually use in this demonstration are listed below.
 
 ### Rating Variables
 
 For each of these, subjects gave a response between 0 and 100 indicating their agreement with the statement as presented. The scale was 0 = Strongly disagree, 100 = Strongly agree.
 
-1. `r_pre`: Prior to taking 431, I was totally confident and comfortable with using R. (0 = Strongly Disagree, 100 = Strongly Agree)
-2. `r_now`: Right now, I am totally confident and comfortable with using R. (0 = Strongly Disagree, 100 = Strongly Agree)
-3. `comfort_431`: I am very comfortable with my understanding of the material discussed so far in 431.
+1.  `r_pre`: Prior to taking 431, I was totally confident and comfortable with using R. (0 = Strongly Disagree, 100 = Strongly Agree)
+2.  `r_now`: Right now, I am totally confident and comfortable with using R. (0 = Strongly Disagree, 100 = Strongly Agree)
+3.  `comfort_431`: I am very comfortable with my understanding of the material discussed so far in 431.
 
 ### Other Quantitative Variables
 
-4. `height`: What is your height, in inches?
-5. `weight`: What is your weight, in pounds?
+4.  `height`: What is your height, in inches?
+5.  `weight`: What is your weight, in pounds?
 
 ### Binary Variables
 
-6. `r_before`: Before taking 431, had you ever used R before? (Yes, No)
-7. `english`: Is English the language you speak better than any other? (Yes, No)
+6.  `r_before`: Before taking 431, had you ever used R before? (Yes, No)
+7.  `english`: Is English the language you speak better than any other? (Yes, No)
 
 ### Multi-Categorical Variables
 
-8. `grades`: In your graduate and undergraduate educational experience, which of the following types of assignments have you received the HIGHEST grades for?
-    - Available responses were "A. Individual Assignments", "B. Partner Assignments (you and 1 other student)", and "C. Group Assignments (you and 2 or more others)".
-9. `medium`: Which medium do you use most to get your fictional stories (containing plot)?
-    - Available Responses: "A. Movies", "B. Television", "C. Print (including books, comics, etc.)", and "D. Other".
+8.  `grades`: In your graduate and undergraduate educational experience, which of the following types of assignments have you received the HIGHEST grades for?
+
+    -   Available responses were "A. Individual Assignments", "B. Partner Assignments (you and 1 other student)", and "C. Group Assignments (you and 2 or more others)".
+
+9.  `medium`: Which medium do you use most to get your fictional stories (containing plot)?
+
+    -   Available Responses: "A. Movies", "B. Television", "C. Print (including books, comics, etc.)", and "D. Other".
+
 10. `fiction`: Which type of fictional stories do you consume most?
-    - Available Responses: "A. Comedy", "B. Drama", "C. Action", "D. Horror / Thriller", and "E. Fantasy / Science Fiction".
 
-Our analytic tibble will be called `sur15` for this demonstration. 
+    -   Available Responses: "A. Comedy", "B. Drama", "C. Action", "D. Horror / Thriller", and "E. Fantasy / Science Fiction".
 
-- This tibble will need to contain information developed from the variables listed above, plus the subject identifying code `s_id`.
-- As we add variables to the analytic tibble, we'll also check to see that all of the values fall in a reasonable range (with no results that fall outside of the parameters of how we are measuring the results) and we'll identify whether there are any missing values. 
+Our analytic tibble will be called `sur15` for this demonstration.
+
+-   This tibble will need to contain information developed from the variables listed above, plus the subject identifying code `s_id`.
+-   As we add variables to the analytic tibble, we'll also check to see that all of the values fall in a reasonable range (with no results that fall outside of the parameters of how we are measuring the results) and we'll identify whether there are any missing values.
 
 Note that we've already checked our subject identification codes to ensure that we have no missing values there and that we have a unique identifier for each row in the data back when we did the merge.
 
@@ -191,14 +196,14 @@ sur15_m %>%
   mosaic::inspect()
 ```
 
-- For the three rating variables, all values are in the range [0, 100], as they must be.
-- However, the `height` range doesn't seem reasonable. With `height` measured in inches, do we really think there should be a height as small as 22.83 inches?
-- The `weight` minimum is also a problem. Is 1 pound a reasonable value?
-- We also want to create a body mass index from the `height` and `weight` data
+-   For the three rating variables, all values are in the range \[0, 100\], as they must be.
+-   However, the `height` range doesn't seem reasonable. With `height` measured in inches, do we really think there should be a height as small as 22.83 inches?
+-   The `weight` minimum is also a problem. Is 1 pound a reasonable value?
+-   We also want to create a body mass index from the `height` and `weight` data
 
 ### Combining `height` and `weight` into `bmi` and Specifying `NA` for Implausible Values
 
-We will calculate `bmi` (body-mass index) from the available `height` (inches) and `weight` (pounds) data. The BMI formula for inches and pounds is available at http://www.bmi-calculator.net/bmi-formula.php. A reasonable range for BMI values is probably about 15 to 50.
+We will calculate `bmi` (body-mass index) from the available `height` (inches) and `weight` (pounds) data. The BMI formula for inches and pounds is available at <http://www.bmi-calculator.net/bmi-formula.php>. A reasonable range for BMI values is probably about 15 to 50.
 
 ```{r creating_bmi}
 sur15_m <- sur15_m %>%
@@ -207,7 +212,7 @@ sur15_m <- sur15_m %>%
 describe(~ bmi, data = sur15_m)
 ```
 
-Those two smallest calculated `bmi` values seem impossibly low, and the highest `bmi` seems impossibly high. Let's look at the heights and weights involved. 
+Those two smallest calculated `bmi` values seem impossibly low, and the highest `bmi` seems impossibly high. Let's look at the heights and weights involved.
 
 ```{r describing_height_weight}
 sur15_m %>%
@@ -217,8 +222,8 @@ sur15_m %>%
 
 The subjects with heights of 22.83 inches and 217 inches are implausible, and the subject with weight 1 pound is also not reasonable. We want to focus on actually plausible results.
 
-- A reasonable guess is that no one in the class was less than about 122 centimeters, or 4 feet tall (48 inches) nor were they greater than about 213 centimeters, or 7 feet tall (84 inches) so we're going to change any values outside that range to `NA`.
-- Similarly, it seems reasonable to assume that no one in the class was below 80 pounds (36.3 kg) or above 400 pounds (181.4 kg) so again, we'll regard any values we see outside that range is implausible and change them to `NA`.
+-   A reasonable guess is that no one in the class was less than about 122 centimeters, or 4 feet tall (48 inches) nor were they greater than about 213 centimeters, or 7 feet tall (84 inches) so we're going to change any values outside that range to `NA`.
+-   Similarly, it seems reasonable to assume that no one in the class was below 80 pounds (36.3 kg) or above 400 pounds (181.4 kg) so again, we'll regard any values we see outside that range is implausible and change them to `NA`.
 
 I'll do this by creating new variables `height_r` and `weight_r` where the `_r` (meaning "revised") indicates to me that I've revised the original variable in some way without adding a lot of characters to its name.
 
@@ -232,7 +237,7 @@ sur15_m %>% select(height_r, weight_r, bmi) %>%
   mosaic::inspect()
 ```
 
-So now, we have 2 missing values of `height_r`, 1 missing value of `weight_r` and we have calculated BMI results, with 3 missing values, and our ranges (minimum and maximum) for each of these variables now look OK. 
+So now, we have 2 missing values of `height_r`, 1 missing value of `weight_r` and we have calculated BMI results, with 3 missing values, and our ranges (minimum and maximum) for each of these variables now look OK.
 
 ## Checking our Binary Variables
 
@@ -242,7 +247,7 @@ We have two binary variables.
 sur15_m %>% select(english, r_before) %>% glimpse()
 ```
 
-I'd like those to be factors in R, rather than characters. 
+I'd like those to be factors in R, rather than characters.
 
 ```{r change_order_no-yes_variables}
 sur15_m <- sur15_m %>%
@@ -278,9 +283,9 @@ sur15_m <- sur15_m %>%
 sur15_m %>% count(grades, grades_r)
 ```
 
-- That looks like we've correctly renamed the values.
-- For this demonstration, we'll allow counts as low as 5 for individual levels of a categorical variable, because of the small sample size, so I won't collapse the levels at all. 
-- We have a missing value here, so we'll need to deal with that later.
+-   That looks like we've correctly renamed the values.
+-   For this demonstration, we'll allow counts as low as 5 for individual levels of a categorical variable, because of the small sample size, so I won't collapse the levels at all.
+-   We have a missing value here, so we'll need to deal with that later.
 
 ### The `medium` variable
 
@@ -289,8 +294,8 @@ sur15_m %>%
   tabyl(medium)
 ```
 
-- We have no missing values, so that's good.
-- In this demonstration, we will require that each category have at least 5 responses, so while this just barely meets that standard, I think I will go ahead and collapse the variable down to just three categories.
+-   We have no missing values, so that's good.
+-   In this demonstration, we will require that each category have at least 5 responses, so while this just barely meets that standard, I think I will go ahead and collapse the variable down to just three categories.
 
 For the `medium` variable, we want to collapse the Print and Other levels to form a three category variable (with levels Movies, TV and Other) called `medium_r`.
 
@@ -314,8 +319,8 @@ sur15_m %>%
   tabyl(fiction)
 ```
 
-- No signs of missing values, so that's good.
-- With only one value in category D and only 5 in category C, we will need to do some collapsing to use this variable later.
+-   No signs of missing values, so that's good.
+-   With only one value in category D and only 5 in category C, we will need to do some collapsing to use this variable later.
 
 ### Collapsing and recoding levels of `fiction`
 
@@ -341,7 +346,6 @@ sur15_m <- sur15_m %>%
                                    "Comedy", "Drama",
                                    "Fantasy/SF", "Other"))
 ```
-
 
 OK. Let's see what we have now...
 
@@ -386,10 +390,10 @@ sur15 %>% filter(!complete.cases(.)) %>%
 
 In our sample of respondents, we have:
 
-- 49 subjects with no missing values, 
-- 1 subject (`s_id` = 516) who is missing `grades_r`, 
-- 2 subjects (`s_id` = 504 and 529) who are missing `height_r` and `bmi`, and 
-- 1 subject (`s_id` = 550) who is missing `weight_r` and `bmi`. 
+-   49 subjects with no missing values,
+-   1 subject (`s_id` = 516) who is missing `grades_r`,
+-   2 subjects (`s_id` = 504 and 529) who are missing `height_r` and `bmi`, and
+-   1 subject (`s_id` = 550) who is missing `weight_r` and `bmi`.
 
 So we'll have to keep that missingness in mind when we do work with `bmi` or `grades_r` in the analyses that follow.
 
@@ -399,20 +403,20 @@ So we'll have to keep that missingness in mind when we do work with `bmi` or `gr
 
 The 12 variables in our tidy data set `sur15` for this demonstration are as follows. The Type column indicates the number of levels in each categorical (factor) variable. Recall that we have missing data in `height_r`, `weight_r`, `bmi` and `grades_r` and I've indicated this in the codebook table below. As for the Type information, I'm using Quant to indicate quantitative variables, and Cat-x indicates a categorical variable (factor) with x levels.
 
-Variable      | Type  | Description / Levels
---------- | :---: | --------------------------------------------
-`s_id`        | ID    | subject code (501-533)
-`r_pre`       | Quant | 0 (SD) - 100 (SA) with Prior to taking 431, I was totally confident and comfortable with using R.
-`r_now`       | Quant | 0 (SD) - 100 (SA) with Right now, I am totally confident and comfortable with using R.
-`comfort_431` | Quant | 0 (SD) - 100 (SA) with I am very comfortable with my understanding of the material discussed so far in 431.
-`height_r`    | Quant | What is your height, in inches [**2 NA**]
-`weight_r`    | Quant | What is your weight, in pounds [**1 NA**]
-`bmi`         | Quant | 703 x `weight`/(`height` squared) [**3 NA**]
-`r_before`     | Cat-2 | yes, no: Before taking 431, had you ever used R before?
-`english`     | Cat-2 | yes, no: Is English the language you speak better than any other?
-`grades_r`  | Cat-3 | Individual, Partner, Group: In your graduate and undergraduate educational experience, which of the following types of assignments have you received the HIGHEST grades for? [**1 NA**]
-`medium_r`   | Cat-3 | Movies, TV, Other: Which medium do you use most to get your fictional stories (containing plot)?
-`fiction_r`  | Cat-4 | Comedy, Drama, Fantasy/SF, Other: Which type of fictional stories do you consume most?
+| Variable      | Type  | Description / Levels                                                                                                                                                                      |
+|---------------|:-----:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `s_id`        |  ID   | subject code (501-533)                                                                                                                                                                    |
+| `r_pre`       | Quant | 0 (SD) - 100 (SA) with Prior to taking 431, I was totally confident and comfortable with using R.                                                                                         |
+| `r_now`       | Quant | 0 (SD) - 100 (SA) with Right now, I am totally confident and comfortable with using R.                                                                                                    |
+| `comfort_431` | Quant | 0 (SD) - 100 (SA) with I am very comfortable with my understanding of the material discussed so far in 431.                                                                               |
+| `height_r`    | Quant | What is your height, in inches \[**2 NA**\]                                                                                                                                               |
+| `weight_r`    | Quant | What is your weight, in pounds \[**1 NA**\]                                                                                                                                               |
+| `bmi`         | Quant | 703 x `weight`/(`height` squared) \[**3 NA**\]                                                                                                                                            |
+| `r_before`    | Cat-2 | yes, no: Before taking 431, had you ever used R before?                                                                                                                                   |
+| `english`     | Cat-2 | yes, no: Is English the language you speak better than any other?                                                                                                                         |
+| `grades_r`    | Cat-3 | Individual, Partner, Group: In your graduate and undergraduate educational experience, which of the following types of assignments have you received the HIGHEST grades for? \[**1 NA**\] |
+| `medium_r`    | Cat-3 | Movies, TV, Other: Which medium do you use most to get your fictional stories (containing plot)?                                                                                          |
+| `fiction_r`   | Cat-4 | Comedy, Drama, Fantasy/SF, Other: Which type of fictional stories do you consume most?                                                                                                    |
 
 ## Analytic Tibble
 
@@ -429,7 +433,6 @@ Here's a summary of the `sur15` tibble.
 ```{r}
 describe(sur15)
 ```
-
 
 # Analysis A: Compare 2 Population Means using Paired Samples
 
@@ -452,13 +455,16 @@ sur15 <- sur15 %>%
     mutate(r_diff = r_now - r_pre)
 
 mosaic::favstats(~ r_diff, data = sur15)
+
+sur15 %>%
+  summarise(skew1 = (mean(r_diff) - median(r_diff))/sd(r_diff))
 ```
 
 OK. It appears that we have successfully subtracted the PRE data from the NOW data, and everyone has a difference of at least zero. But we have a lot of people (8) who have a value of 0. Now, we'll assess whether or not a Normal distribution might be a reasonable model for the data.
 
 ### Graphical Summaries to Assess Normality
 
-We should start by looking at the distribution of these 53 values of `r_diff`.  As we've seen, there's a floor effect at zero.
+We should start by looking at the distribution of these 53 values of `r_diff`. As we've seen, there's a floor effect at zero.
 
 A histogram with 53 values won't give us a lot of information. Perhaps we should focus instead on a Normal Q-Q plot and boxplot with violin? We'll draw all three here.
 
@@ -491,7 +497,7 @@ With just 53 observations, it will be a little difficult to get a clear picture 
 
 ### Did Pairing Help Reduce Nuisance Variation?
 
-We would expect a strong correlation between the `r_pre` and `r_now` scores in this repeated measures analysis where each subject is assessing both their confidence before the class and then again during the class. To assess whether pairing helped reduce nuisance variation, I'll build a scatterplot of the `r_pre` and `r_now` scores, supplemented by a Pearson correlation coefficient. Since we have so many ties in the data, with two or more points in the same place, I'll use `geom_jitter` rather than `geom_point` to plot the points. The larger the correlation, the more that pairing will help reduce the impact of differences between subjects on the `r_pre` score on the comparison we're trying to make. 
+We would expect a strong correlation between the `r_pre` and `r_now` scores in this repeated measures analysis where each subject is assessing both their confidence before the class and then again during the class. To assess whether pairing helped reduce nuisance variation, I'll build a scatterplot of the `r_pre` and `r_now` scores, supplemented by a Pearson correlation coefficient. Since we have so many ties in the data, with two or more points in the same place, I'll use `geom_jitter` rather than `geom_point` to plot the points. The larger the correlation, the more that pairing will help reduce the impact of differences between subjects on the `r_pre` score on the comparison we're trying to make.
 
 ```{r scatterplot_for_paired_diffs}
 ggplot(sur15, aes(x = r_pre, y = r_now)) +
@@ -511,16 +517,16 @@ sur15 %>% select(r_pre, r_now) %>% cor(.) %>%
 
 The Pearson correlation is quite strong at `r round(cor(sur15$r_pre, sur15$r_now), 3)` so that a linear model using the `r_pre` score accounts for a reasonably large fraction (`r round(100*(cor(sur15$r_pre, sur15$r_now)^2),1)`%) of the variation in `r_now` scores.
 
-- If the Pearson correlation had been small but still positive (perhaps less than 0.2), we might conclude that pairing wouldn't be exceptionally helpful, but if the samples are meant to be paired, we should still do a paired samples analysis, but such a small correlation would imply that an independent samples comparison would come to about the same conclusion.
+-   If the Pearson correlation had been small but still positive (perhaps less than 0.2), we might conclude that pairing wouldn't be exceptionally helpful, but if the samples are meant to be paired, we should still do a paired samples analysis, but such a small correlation would imply that an independent samples comparison would come to about the same conclusion.
 
 ## Main Analysis
 
 As you'll recall, we have two main methods for building confidence intervals in a paired samples analysis:
 
-- The Paired t test
-- The Bootstrap, using `smean.cl.boot`
+-   The Paired t test
+-   The Bootstrap, using `smean.cl.boot`
 
-Let's run each in this demonstration just so you have the code, even though, as mentioned, I'd be most interested in what the bootstrap approach suggests, owing to the modest non-Normality we see in the sample of differences. I'll even throw in a Wilcoxon signed rank test approach here, even though I wouldn't recommend you include that in Project B. In each case, we'll build a 90% confidence interval for the population mean (or pseudo-median, in the case of the signed rank test) of the `r_now - r_pre` differences. 
+Let's run each in this demonstration just so you have the code, even though, as mentioned, I'd be most interested in what the bootstrap approach suggests, owing to the modest non-Normality we see in the sample of differences. I'll even throw in a Wilcoxon signed rank test approach here, even though I wouldn't recommend you include that in Project B. In each case, we'll build a 90% confidence interval for the population mean (or pseudo-median, in the case of the signed rank test) of the `r_now - r_pre` differences.
 
 ### The Paired t test approach
 
@@ -532,13 +538,17 @@ t.test(sur15$r_diff, conf.level = .90) %>%
   select(estimate, conf.low, conf.high)
 ```
 
-- The point estimate for the population mean of the differences is 35.45, indicating that the average subject rated agreement with the statement about confidence in R 35 points higher now than when they started the class.
-- Our 90% confidence interval for the population mean of the differences is (28.9, 42.1)
-- Here, I've assumed a two-sided confidence interval procedure\footnote{In this case, a one-sided test might also have been a good choice, since we don't anticipate people will actually admit to being less confident about R after taking the course.}. We conclude from the confidence interval (which does not contain zero) that there is a statistically detectable difference between the `r_pre` and `r_now` scores.
-- The assumptions of the paired t procedure are 
-    + that the matched differences are independent of each other, 
-    + that the matched differences represent a random sample of the population of possible matched differences, 
-    + and that the matched differences are drawn from a Normally distributed population. - The last of these assumptions is hard to justify given these data.
+-   The point estimate for the population mean of the differences is 35.45, indicating that the average subject rated agreement with the statement about confidence in R 35 points higher now than when they started the class.
+
+-   Our 90% confidence interval for the population mean of the differences is (28.9, 42.1)
+
+-   Here, I've assumed a two-sided confidence interval procedure\footnote{In this case, a one-sided test might also have been a good choice, since we don't anticipate people will actually admit to being less confident about R after taking the course.}. We conclude from the confidence interval (which does not contain zero) that there is a statistically detectable difference between the `r_pre` and `r_now` scores.
+
+-   The assumptions of the paired t procedure are
+
+    -   that the matched differences are independent of each other,
+    -   that the matched differences represent a random sample of the population of possible matched differences,
+    -   and that the matched differences are drawn from a Normally distributed population. - The last of these assumptions is hard to justify given these data.
 
 ### The Wilcoxon signed rank test approach
 
@@ -550,15 +560,19 @@ wilcox.test(sur15$r_diff, conf.level = .90, conf.int = TRUE, exact = FALSE) %>%
   select(estimate, conf.low, conf.high)
 ```
 
-- The point estimate for the population pseudo-median of the differences is 40, indicating that the average subject rated agreement with the statement about confidence in R 40 points higher now than when they started the class. Note that this is meaningfully different from the sample median difference, which was 30, and that's because there was some skew in the sample data. The interpretation of the Wilcoxon approach is easiest for data that are light-tailed or heavy-tailed, but still generally symmetric.
-- Our 90% confidence interval for the population pseudo-median of the differences is (35, 47.5)
-- Here, I've assumed a two-sided confidence interval and testing procedure. We conclude from the confidence interval (which does not contain zero) that there is a statistically detectable difference between `r_pre` and `r_now` scores.
-- The assumptions of the Wilcoxon signed rank procedure are 
-    + that the matched differences are independent of each other, 
-    + that the matched differences represent a random sample of the population of possible matched differences, 
-    + and that the matched differences are drawn from a population that is symmetric, but potentially light-tailed, or even outlier-prone 
-    + The last of these assumptions is hard to justify given these data.
-    
+-   The point estimate for the population pseudo-median of the differences is 40, indicating that the average subject rated agreement with the statement about confidence in R 40 points higher now than when they started the class. Note that this is meaningfully different from the sample median difference, which was 30, and that's because there was some skew in the sample data. The interpretation of the Wilcoxon approach is easiest for data that are light-tailed or heavy-tailed, but still generally symmetric.
+
+-   Our 90% confidence interval for the population pseudo-median of the differences is (35, 47.5)
+
+-   Here, I've assumed a two-sided confidence interval and testing procedure. We conclude from the confidence interval (which does not contain zero) that there is a statistically detectable difference between `r_pre` and `r_now` scores.
+
+-   The assumptions of the Wilcoxon signed rank procedure are
+
+    -   that the matched differences are independent of each other,
+    -   that the matched differences represent a random sample of the population of possible matched differences,
+    -   and that the matched differences are drawn from a population that is symmetric, but potentially light-tailed, or even outlier-prone
+    -   The last of these assumptions is hard to justify given these data.
+
 ### The Bootstrap approach for the mean from paired samples
 
 Here is a 90% confidence interval for the population mean of the paired `r_now - r_pre` differences, as estimated by a bootstrap approach using a random seed of `431`. (*Note*: when you set a seed for this or other analyses in the project, pick something other than `431`.)
@@ -568,16 +582,20 @@ set.seed(431)
 smean.cl.boot(sur15$r_diff, conf.int = 0.90)
 ```
 
-- The point estimate for the population mean of the differences is 35.45, indicating that the average subject rated agreement with the statement about confidence in R 35 points higher now than when they started the class.
-- Our 90% confidence interval for the population mean of the differences is fairly close to what we got from the paired t test, as it turns out.
-- Here, I've assumed a two-sided confidence interval procedure. Again, since 0 is not included in the interval, we conclude, at the 10% significance level, that there is a statistically detectable difference between the `r_pre` and `r_now` scores.
-- The assumptions of this bootstrap procedure are 
-    + that the matched differences are independent of each other, and
-    + that the matched differences represent a random sample of the population of possible matched differences, 
+-   The point estimate for the population mean of the differences is 35.45, indicating that the average subject rated agreement with the statement about confidence in R 35 points higher now than when they started the class.
+
+-   Our 90% confidence interval for the population mean of the differences is fairly close to what we got from the paired t test, as it turns out.
+
+-   Here, I've assumed a two-sided confidence interval procedure. Again, since 0 is not included in the interval, we conclude, at the 10% significance level, that there is a statistically detectable difference between the `r_pre` and `r_now` scores.
+
+-   The assumptions of this bootstrap procedure are
+
+    -   that the matched differences are independent of each other, and
+    -   that the matched differences represent a random sample of the population of possible matched differences,
 
 ## Conclusions
 
-Subjects appear to improve in their comfort with R an average of 35.45 points on the 0-100 scale, with a 90% confidence interval for that average improvement of (28.9, 42.1) points. This conclusion is motivated by a bootstrap estimate to compare paired responses from students before and after the first couple of months of the course, and I feel this is the most justified approach based on my assessment of Normality in the data from these 53 students. 
+Subjects appear to improve in their comfort with R an average of 35.45 points on the 0-100 scale, with a 90% confidence interval for that average improvement of (28.9, 42.1) points. This conclusion is motivated by a bootstrap estimate to compare paired responses from students before and after the first couple of months of the course, and I feel this is the most justified approach based on my assessment of Normality in the data from these 53 students.
 
 A natural next step would be to look at values of something like this over multiple years, or perhaps comparing students at more than just two stages. It would also be appealing to measure comfort with R at the earlier time, and then return to the students later, rather than asking them to remember where they were at the start a couple of months later. There are several other possible next steps here, too, depending on what population you might decide to target.
 
@@ -615,7 +633,7 @@ mosaic::favstats(bmi ~ english, data = sur15_B) %>%
   kable()
 ```
 
-Next, we'll use graphical and numerical summaries to assess whether the samples (of Yes and No respondents, separately) can *each* be modeled appropriately by a Normal distribution. 
+Next, we'll use graphical and numerical summaries to assess whether the samples (of Yes and No respondents, separately) can *each* be modeled appropriately by a Normal distribution.
 
 ### Graphical Summaries
 
@@ -632,7 +650,7 @@ ggplot(sur15_B, aes(x = english, y = bmi, fill = english)) +
   theme_bw()
 ```
 
-There are at least a couple of candidate outliers in each group on the high end, which suggest some potential for meaningful skew. 
+There are at least a couple of candidate outliers in each group on the high end, which suggest some potential for meaningful skew.
 
 We could also build a pair of Normal Q-Q plots.
 
@@ -661,7 +679,7 @@ The skew~1~ values can be calculated from these summary statistics, as follows..
 
 ```{r calculating_skew1_forB}
 sur15_B %>% group_by(english) %>%
-  summarize(skew1 = round((mean(bmi) - median(bmi))/sd(bmi), 3))
+  summarise(skew1 = round((mean(bmi) - median(bmi))/sd(bmi), 3))
 ```
 
 It looks like the right skew is large enough, at least in the Yes (speaks English best) group to warrant avoiding tests that require Normality. So again it looks like it's not reasonable to assume Normality here, or even symmetry.
@@ -670,19 +688,19 @@ It looks like the right skew is large enough, at least in the Yes (speaks Englis
 
 As you'll recall, we have three main methods for building confidence intervals in an independent samples analysis:
 
-- Welch's t test (t test without assuming equal variances)
-- The Pooled t test (t test with equal variances assumed)
-- The Bootstrap, using `bootdif`
+-   Welch's t test (t test without assuming equal variances)
+-   The Pooled t test (t test with equal variances assumed)
+-   The Bootstrap, using `bootdif`
 
-Let's run each here just so you have the code, even though, as mentioned, I'd be most interested in what the bootstrap approach suggests, owing to the fact that the samples aren't well described by Normal models or even symmetric ones.  I'll even throw in a Wilcoxon Rank Sum approach here, even though I wouldn't recommend you include that in Project B.In each case, we'll build a 90% confidence interval for the population mean (or another measure of central tendency, in the case of the Rank Sum test) comparing `bmi` for people who answered Yes and No to the question about English being the language they speak best.
+Let's run each here just so you have the code, even though, as mentioned, I'd be most interested in what the bootstrap approach suggests, owing to the fact that the samples aren't well described by Normal models or even symmetric ones. I'll even throw in a Wilcoxon Rank Sum approach here, even though I wouldn't recommend you include that in Project B.In each case, we'll build a 90% confidence interval for the population mean (or another measure of central tendency, in the case of the Rank Sum test) comparing `bmi` for people who answered Yes and No to the question about English being the language they speak best.
 
 ### The Welch's t test approach
 
-With a somewhat unbalanced design (16 No and 34 Yes), the assumption of equal population variances will probably require us to look at the sample variances. 
+With a somewhat unbalanced design (16 No and 34 Yes), the assumption of equal population variances will probably require us to look at the sample variances.
 
 ```{r variances_for_B}
 sur15_B %>% group_by(english) %>%
-  summarize(n = n(), mean = mean(bmi), variance = var(bmi))
+  summarise(n = n(), mean = mean(bmi), variance = var(bmi))
 ```
 
 That's a pretty substantial difference in variance with the Yes group a good deal more than 50% larger than the No group, so we might expect the Welch t test and pooled t test to look fairly different, and that would motivate me to focus on the Welch approach over the pooled t test. Of course, neither is a great choice here, due to the samples showing some non-Normality. Regardless, here is a 90% confidence interval for the difference between the "No" group and the "Yes" group population mean `bmi` based on Welch's test.
@@ -693,14 +711,19 @@ t.test(bmi ~ english, data = sur15_B, conf.level = 0.90) %>%
   select(estimate, conf.low, conf.high)
 ```
 
-- The point estimates for the two population `bmi` means are 23.52 for No and 24.14 for Yes, so the average student who speaks English best has a BMI estimated to be about 0.62 points higher than the average for a student who speaks another language better than English, based on our samples. 
-- Our 90% confidence interval for the difference (English - non-English) of the population means is (-1.2, 2.4).
-- Here, I've assumed a two-sided confidence interval procedure. We conclude from the confidence interval (which contains zero) that we cannot declare a statistically detectable difference between the true means of the English and non-English `bmi` levels.
-- The assumptions of the Welch's t test are 
-    + that the samples in each group are drawn independently of each other, 
-    + that the samples in each group represent a random sample of the population of interest, 
-    + and that the samples in each group are drawn from a Normally distributed population. 
-- The last of these assumptions is hard to justify given these data.
+-   The point estimates for the two population `bmi` means are 23.52 for No and 24.14 for Yes, so the average student who speaks English best has a BMI estimated to be about 0.62 points higher than the average for a student who speaks another language better than English, based on our samples.
+
+-   Our 90% confidence interval for the difference (English - non-English) of the population means is (-1.2, 2.4).
+
+-   Here, I've assumed a two-sided confidence interval procedure. We conclude from the confidence interval (which contains zero) that we cannot declare a statistically detectable difference between the true means of the English and non-English `bmi` levels.
+
+-   The assumptions of the Welch's t test are
+
+    -   that the samples in each group are drawn independently of each other,
+    -   that the samples in each group represent a random sample of the population of interest,
+    -   and that the samples in each group are drawn from a Normally distributed population.
+
+-   The last of these assumptions is hard to justify given these data.
 
 ### The Pooled t test (t test with equal variances)
 
@@ -713,15 +736,20 @@ t.test(bmi ~ english, data = sur15_B, conf.level = .90, var.equal = TRUE) %>%
   select(estimate, conf.low, conf.high)
 ```
 
-- The point estimates for the two population `bmi` means are still 23.52 for No and 24.14 for Yes, so the average student who speaks English best has a BMI estimated to be about 0.62 points higher than the average for a student who speaks another language better than English, based on our samples. 
-- Our 90% confidence interval for the difference (English - non-English) of the population means is now (-1.5, 2.7) based on the pooled t procedure.
-- Here, I've assumed a two-sided confidence interval procedure. We conclude again that there is no statistically detectable difference between the true means of the English and non-English `bmi` levels.
-- The assumptions of the pooled t test are 
-    + that the samples in each group are drawn independently of each other, 
-    + that the samples in each group represent a random sample of the population of interest, 
-    + the samples in each group are drawn from a Normally distributed population, 
-    + *and* that either the sample sizes or the population variances are equal.
-- The Normality assumption remains hard to justify given these data, so we should look at alternatives.
+-   The point estimates for the two population `bmi` means are still 23.52 for No and 24.14 for Yes, so the average student who speaks English best has a BMI estimated to be about 0.62 points higher than the average for a student who speaks another language better than English, based on our samples.
+
+-   Our 90% confidence interval for the difference (English - non-English) of the population means is now (-1.5, 2.7) based on the pooled t procedure.
+
+-   Here, I've assumed a two-sided confidence interval procedure. We conclude again that there is no statistically detectable difference between the true means of the English and non-English `bmi` levels.
+
+-   The assumptions of the pooled t test are
+
+    -   that the samples in each group are drawn independently of each other,
+    -   that the samples in each group represent a random sample of the population of interest,
+    -   the samples in each group are drawn from a Normally distributed population,
+    -   *and* that either the sample sizes or the population variances are equal.
+
+-   The Normality assumption remains hard to justify given these data, so we should look at alternatives.
 
 ### The Wilcoxon-Mann-Whitney rank sum test
 
@@ -735,13 +763,17 @@ sur15_B %$% wilcox.test(bmi ~ english,
   select(estimate, conf.low, conf.high)
 ```
 
-- The estimated location shift in population `bmi` across the two language groups is 0.13.
-- Our 90% confidence interval for the location shift (English - non-English) of the populations is (-1.4, 1.9).
-- Here, I've assumed a two-sided confidence interval procedure. We conclude from the confidence interval (which contains zero) that there is no statistically detectable difference between the true locations of the English and non-English `bmi` levels at the 10% significance level.
-- The assumptions of the rank sum test are 
-    + that the samples in each group are drawn independently of each other, 
-    + *and* that the samples in each group represent a random sample of the population of interest, 
-    + and that the data in each population (English and non-English) are symmetric.
+-   The estimated location shift in population `bmi` across the two language groups is 0.13.
+
+-   Our 90% confidence interval for the location shift (English - non-English) of the populations is (-1.4, 1.9).
+
+-   Here, I've assumed a two-sided confidence interval procedure. We conclude from the confidence interval (which contains zero) that there is no statistically detectable difference between the true locations of the English and non-English `bmi` levels at the 10% significance level.
+
+-   The assumptions of the rank sum test are
+
+    -   that the samples in each group are drawn independently of each other,
+    -   *and* that the samples in each group represent a random sample of the population of interest,
+    -   and that the data in each population (English and non-English) are symmetric.
 
 That last assumption is difficult to justify.
 
@@ -755,18 +787,22 @@ sur15_B %$%
   bootdif(bmi, english, conf.level = 0.90)
 ```
 
-- The population mean BMI in those who said Yes is estimated to be about 0.62 points higher than the population mean BMI for those who said No, based on our samples. So the mean differences' point estimate is 0.62
-- Our 90% confidence interval for the difference (Yes - No) of the population means is (-1.12, 2.34).
-- Here, I've assumed a two-sided confidence interval procedure. We conclude from the confidence interval (which contains zero) that there is no statistically detectable difference (at the 10% significance level, since we have a 90% confidence interval) between the true means of the English and non-English `bmi` levels.
-- The assumptions of this bootstrap procedure are:
-    + that the samples in each group are drawn independently of each other, 
-    + *and* that the samples in each group represent a random sample of the population of interest. 
+-   The population mean BMI in those who said Yes is estimated to be about 0.62 points higher than the population mean BMI for those who said No, based on our samples. So the mean differences' point estimate is 0.62
 
-So, I think the bootstrap procedure would be most appropriate here, due to the non-Normality (and in particular the asymmetry) in the samples. 
+-   Our 90% confidence interval for the difference (Yes - No) of the population means is (-1.12, 2.34).
+
+-   Here, I've assumed a two-sided confidence interval procedure. We conclude from the confidence interval (which contains zero) that there is no statistically detectable difference (at the 10% significance level, since we have a 90% confidence interval) between the true means of the English and non-English `bmi` levels.
+
+-   The assumptions of this bootstrap procedure are:
+
+    -   that the samples in each group are drawn independently of each other,
+    -   *and* that the samples in each group represent a random sample of the population of interest.
+
+So, I think the bootstrap procedure would be most appropriate here, due to the non-Normality (and in particular the asymmetry) in the samples.
 
 ## Conclusions
 
-At the 10% significance level, there is no statistically detectable difference between the population mean BMI for those who speak English best and those who speak another language best, based on our sample of respondents with complete data on BMI. This conclusion is motivated by a bootstrap estimate to compare the two groups (English and non-English) with complete data on BMI. I feel this is the most justified approach based on the apparent skew in the data (particularly among those who speak English best) in these students. 
+At the 10% significance level, there is no statistically detectable difference between the population mean BMI for those who speak English best and those who speak another language best, based on our sample of respondents with complete data on BMI. This conclusion is motivated by a bootstrap estimate to compare the two groups (English and non-English) with complete data on BMI. I feel this is the most justified approach based on the apparent skew in the data (particularly among those who speak English best) in these students.
 
 Then, if this were an actual Project B Study 1, I'd discuss the other issues that go into a conclusion, including limitations of this study and suggestions about logical next steps. But I'll be lazy and skip that for now.
 
@@ -818,7 +854,7 @@ ggplot(sur15_C, aes(x = grades_r, y = comfort_431, fill = grades_r)) +
        x = "")
 ```
 
-- Notice that the boxplot notches would have been messy (they extend outside the levels of the boxes) in this case due to the small numbers of subjects in the Partner and Group `grades_r` groups. 
+-   Notice that the boxplot notches would have been messy (they extend outside the levels of the boxes) in this case due to the small numbers of subjects in the Partner and Group `grades_r` groups.
 
 The sample sizes are so small that histograms for those two levels of the `grades_r` factor (Partner and Group) tell us nothing of substantial value.
 
@@ -833,19 +869,19 @@ ggplot(sur15_C, aes(x = comfort_431)) +
        x = "")
 ```
 
-- In addition, the Individual data look as though they may be either skewed to the left a bit or at least have one potential outlier. 
-- With these tiny sample sizes (less than 10 observations) these plots don't really help much. All of the values in each group are within the stated response levels (0-100) but otherwise, there's not a lot to go on. ANOVA is quite robust, so we'll run it, but I expect that a Kruskal-Wallis approach may also be useful here.
+-   In addition, the Individual data look as though they may be either skewed to the left a bit or at least have one potential outlier.
+-   With these tiny sample sizes (less than 10 observations) these plots don't really help much. All of the values in each group are within the stated response levels (0-100) but otherwise, there's not a lot to go on. ANOVA is quite robust, so we'll run it, but I expect that a Kruskal-Wallis approach may also be useful here.
 
 ### Numerical Summaries
 
-With just six observations in the Partner and Group `grades_r` levels, there's not much to see in numerical summaries, either. 
+With just six observations in the Partner and Group `grades_r` levels, there's not much to see in numerical summaries, either.
 
 ```{r num_summaries_analysis2, message = FALSE}
 mosaic::favstats(comfort_431 ~ grades_r, data = sur15_C) %>%
   kable()
 ```
 
-We have 40 Individual, 6 Partner and 6 Group subjects with known comfort levels. 
+We have 40 Individual, 6 Partner and 6 Group subjects with known comfort levels.
 
 The conclusion I draw from all of this is that we need to run both ANOVA and Kruskal-Wallis approaches, but that we probably can't trust either of them too much, with such small sample sizes in the non-Individual `grades_r` levels. Anything below 10 subjects is just too small, and, practically, I'd consider collapsing the groups to `Individual` vs. `All Other`. But for this demonstration, I'll press on.
 
@@ -853,8 +889,8 @@ The conclusion I draw from all of this is that we need to run both ANOVA and Kru
 
 As you'll recall, we have at least two available methods for building statistical inferences when comparing more than two independent samples.
 
-- Analysis of Variance
-- The Kruskal-Wallis Test
+-   Analysis of Variance
+-   The Kruskal-Wallis Test
 
 There is also a bootstrap approach but we'll defer discussion of that until 432.
 
@@ -869,10 +905,12 @@ sur15_C %$%
   kruskal.test(comfort_431 ~ grades_r)
 ```
 
-- Here, we'd conclude that there is a statistically detectable difference (at least at the 10% significance level we're using, since *p* = 0.03 < 0.10) between the `comfort_431` scores for the three `grades_r` categories. 
-- The assumptions of the Kruskal-Wallis test are the same as those of the Wilcoxon-Mann-Whitney rank sum test, specifically that 
-    + that the samples in each category are drawn independently of each other, 
-    + *and* that the samples in each category represent a random sample of the population of interest, 
+-   Here, we'd conclude that there is a statistically detectable difference (at least at the 10% significance level we're using, since *p* = 0.03 \< 0.10) between the `comfort_431` scores for the three `grades_r` categories.
+
+-   The assumptions of the Kruskal-Wallis test are the same as those of the Wilcoxon-Mann-Whitney rank sum test, specifically that
+
+    -   that the samples in each category are drawn independently of each other,
+    -   *and* that the samples in each category represent a random sample of the population of interest,
 
 The main problem here is that the sample size is so small that we can't tell whether this result is truly more or less reasonable than an ANOVA approach. We really need a minimum of 15 observations (and ideally more like 30) in each group to let our histograms and boxplots have any chance to be informative on these points. So let's look at the ANOVA results.
 
@@ -886,29 +924,33 @@ sur15_C %$%
   anova()
 ```
 
-- Here, we'd conclude that there is a statistically detectable difference (at least at the 10% significance level we're using, since *p* = 0.004 < 0.10) between the population mean `comfort_431` scores for the three `grades_r` categories. 
-- The `grades_r` account for $\eta^2 = \frac{3504.1}{3504.1 + 14004.7} = 0.2$ or 20% of the variation in `comfort_431` scores in our sample.
-- The natural next question is to try to identify which pairs of `grades_r` categories are different, and we'll tackle that in a moment with Bonferroni and Tukey HSD approaches.
-- ANOVA is the natural extension of the pooled t test for two independent samples, and so it has the same set of assumptions when we compare population means across multiple categories (here, the three `grades_r` categories)...
-    + that the samples in each category are drawn independently of each other, 
-    + that the samples in each category represent a random sample of the population of interest,
-    + the samples in each category are drawn from a Normally distributed population, 
-    + *and* that either the sample sizes or the population variances are equal across the categories.
+-   Here, we'd conclude that there is a statistically detectable difference (at least at the 10% significance level we're using, since *p* = 0.004 \< 0.10) between the population mean `comfort_431` scores for the three `grades_r` categories.
+
+-   The `grades_r` account for $\eta^2 = \frac{3504.1}{3504.1 + 14004.7} = 0.2$ or 20% of the variation in `comfort_431` scores in our sample.
+
+-   The natural next question is to try to identify which pairs of `grades_r` categories are different, and we'll tackle that in a moment with Bonferroni and Tukey HSD approaches.
+
+-   ANOVA is the natural extension of the pooled t test for two independent samples, and so it has the same set of assumptions when we compare population means across multiple categories (here, the three `grades_r` categories)...
+
+    -   that the samples in each category are drawn independently of each other,
+    -   that the samples in each category represent a random sample of the population of interest,
+    -   the samples in each category are drawn from a Normally distributed population,
+    -   *and* that either the sample sizes or the population variances are equal across the categories.
 
 The main problem here is that the sample size is so small that we can't tell whether this result is truly reasonable or not. We really need a minimum of 15 observations (and ideally more like 30) in each group to let our histograms and boxplots have any chance to be informative on these points. We'll move on to looking at the pairwise comparisons, though, in this demonstration.
 
 ### Holm approach to Pairwise Comparisons of Means
 
-We have two approaches available for dealing with multiple comparisons. If we had not pre-planned the full set of pairwise comparisons of `comfort_431` across the `grades_r` categories, or if we wanted to use a fairly conservative approach, we could apply a Holm correction to our comparisons. This works reasonably well even with an unbalanced design, such as we have here. 
+We have two approaches available for dealing with multiple comparisons. If we had not pre-planned the full set of pairwise comparisons of `comfort_431` across the `grades_r` categories, or if we wanted to use a fairly conservative approach, we could apply a Holm correction to our comparisons. This works reasonably well even with an unbalanced design, such as we have here.
 
 ```{r holm_pairwise_comparisons_analysis2}
 sur15_C %$%
   pairwise.t.test(comfort_431, grades_r, p.adjust = "holm")
 ```
 
-- With an overall significance level of 10%, it appears that we can detect differences between the mean of the Partner category and the means of the other two categories, but there is no detectable difference between Individual and Group means.
-- The assumptions here include the ANOVA assumptions, which are no more or less justified than they were before. We do not, however, require that our pairwise comparisons be pre-planned.
-- You can learn more about the Holm method [on its Wikipedia page](https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method).
+-   With an overall significance level of 10%, it appears that we can detect differences between the mean of the Partner category and the means of the other two categories, but there is no detectable difference between Individual and Group means.
+-   The assumptions here include the ANOVA assumptions, which are no more or less justified than they were before. We do not, however, require that our pairwise comparisons be pre-planned.
+-   You can learn more about the Holm method [on its Wikipedia page](https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method).
 
 ### Tukey's Honestly Significant Differences approach to Pairwise Comparisons of Means
 
@@ -924,7 +966,7 @@ Now, we run the Tukey HSD comparisons, both in a plot and table of results. As s
 TukeyHSD(aov(sur15_C$comfort_431 ~ sur15_C$grades_r), conf.level = 0.90)
 ```
 
-The confidence intervals suggest that the mean Partner scores are detectably different (in fact, lower) than both the mean Individual and Group scores, while the Group and Individual scores show differences not large enough to be detectable. 
+The confidence intervals suggest that the mean Partner scores are detectably different (in fact, lower) than both the mean Individual and Group scores, while the Group and Individual scores show differences not large enough to be detectable.
 
 Note that in the plot below, we see these results a bit more clearly after we adjust the margins of the plot and use the `las = 1` bit at the end of the plotting call to get the x and y axis labels to be horizontal.
 
@@ -940,9 +982,9 @@ par(mar = mar.default)
 
 Our conclusions are:
 
-- that the sample size is just too small in the non-Individual `grades_r` categories to draw very firm conclusions, but
-- despite this, there appears to be evidence of a statistically detectable difference in `comfort_431` across the three `grades_r` categories, according to either an ANOVA or Kruskal-Wallis approach, at the 90% confidence level, and
-- specifically, it appears at the 10% significance level that the population means of the Group and Individual comfort levels are comparable and both are higher than the population mean of the Partner comfort levels.
+-   that the sample size is just too small in the non-Individual `grades_r` categories to draw very firm conclusions, but
+-   despite this, there appears to be evidence of a statistically detectable difference in `comfort_431` across the three `grades_r` categories, according to either an ANOVA or Kruskal-Wallis approach, at the 90% confidence level, and
+-   specifically, it appears at the 10% significance level that the population means of the Group and Individual comfort levels are comparable and both are higher than the population mean of the Partner comfort levels.
 
 Note that I've made no effort here to write these conclusions in the format we're looking for in your Study 1 work.
 
@@ -956,7 +998,7 @@ If this were an actual Study 1, rather than a demonstration, I'd build a researc
 
 ## Describing the Data
 
-Let's look at the 2x2 table we get. 
+Let's look at the 2x2 table we get.
 
 ```{r english_vs_priorr}
 table(sur15$english, sur15$r_before)
@@ -964,8 +1006,8 @@ table(sur15$english, sur15$r_before)
 
 Those names could use some work, I think.
 
-- The row names, in order, should be something like "English" (where "Yes" is now) and "Not English" with "English" first
-- The column names, respectively, should be "Prior R user" and "No Prior R", with "Prior R User" first.
+-   The row names, in order, should be something like "English" (where "Yes" is now) and "Not English" with "English" first
+-   The column names, respectively, should be "Prior R user" and "No Prior R", with "Prior R User" first.
 
 ```{r}
 sur15_D <- sur15 %>%
@@ -996,11 +1038,11 @@ twoby2(t1 + 2, conf.level = 0.90) # uses Bayesian augmentation, 90% confidence l
 
 Note what I did to add two observations to each cell of the table. We can draw conclusions now about:
 
-- The individual probabilities of being a prior R user in the English and non-English groups, and 90% confidence intervals for each at the top of the output, so that, for instance, we estimate the probability of prior R usage among subjects for whom English is not their best language at 0.45, with 90% confidence interval (0.29, 0.63).
-- The relative risk of Prior R use given English vs. Prior R use given non-English, which is estimated to be 1.07, and based on its 90% confidence interval is clearly not detectably different from 1 at $\alpha = 0.10$.
-- The odds ratio describing the odds of Prior R use given English vs. Non-English, which is estimated to be 1.14, and is clearly not detectably different from 1 at $\alpha = 0.10$.
-- The difference in probability of Prior R use for English vs. non-English subjects, which is estimated to be 0.033, with a 90% confidence interval of (-0.18, 0.24) and is not detectably different from 0 at $\alpha = 0.10$.
-- The chi-square test of independence, which assesses the null hypothesis of no association between language preference and prior R usage, using either Fisher's exact test\footnote{I use Fisher's exact test with small-ish 2x2 tables where R will run it, if you have to choose between the methods.} or the Pearson chi-square test (labeled asymptotic here.) Clearly, with a *p* value much greater than 0.1, we must retain the null hypothesis in this case, and we see no detectable association between the rows and the columns at a 10% significance level.
+-   The individual probabilities of being a prior R user in the English and non-English groups, and 90% confidence intervals for each at the top of the output, so that, for instance, we estimate the probability of prior R usage among subjects for whom English is not their best language at 0.45, with 90% confidence interval (0.29, 0.63).
+-   The relative risk of Prior R use given English vs. Prior R use given non-English, which is estimated to be 1.07, and based on its 90% confidence interval is clearly not detectably different from 1 at $\alpha = 0.10$.
+-   The odds ratio describing the odds of Prior R use given English vs. Non-English, which is estimated to be 1.14, and is clearly not detectably different from 1 at $\alpha = 0.10$.
+-   The difference in probability of Prior R use for English vs. non-English subjects, which is estimated to be 0.033, with a 90% confidence interval of (-0.18, 0.24) and is not detectably different from 0 at $\alpha = 0.10$.
+-   The chi-square test of independence, which assesses the null hypothesis of no association between language preference and prior R usage, using either Fisher's exact test\footnote{I use Fisher's exact test with small-ish 2x2 tables where R will run it, if you have to choose between the methods.} or the Pearson chi-square test (labeled asymptotic here.) Clearly, with a *p* value much greater than 0.1, we must retain the null hypothesis in this case, and we see no detectable association between the rows and the columns at a 10% significance level.
 
 ### Checking Assumptions
 
@@ -1010,10 +1052,10 @@ Since each cell in our (non-augmented) 2x2 table is at least 5, R throws no warn
 
 With the `twobytwo` function available in the `Love-boost.R` script, we can directly obtain 90% confidence intervals. For example, suppose we had the following data, pulled from our 2016 survey:
 
-2016 Survey    | Drank Tea Recently | Didn't Drink Tea
--------------: | -----------------: | ---------------:
-Not Born in US | 21 | 10
-US Born        | 20 | 18
+|    2016 Survey | Drank Tea Recently | Didn't Drink Tea |
+|---------------:|-------------------:|-----------------:|
+| Not Born in US |                 21 |               10 |
+|        US Born |                 20 |               18 |
 
 Suppose we wanted to use `twobytwo` and the +2/+4 Bayesian augmentation (adding 2 to the count in each cell of our 2x2 table) and a 90% confidence interval for this comparison, to see whether the population proportions who drank tea recently differ between those born in and out of the US.
 
@@ -1027,7 +1069,7 @@ twobytwo(21+2, 10+2, 20+2, 18+2,
 
 Our primary conclusions about the study we've done here in Analysis D should be motivated by the fact that the 90% confidence intervals for the RR and the OR cross 1, and that the probability difference isn't detectably different from 0, either, with 90% confidence.
 
-Then we'd write more about limitations and opportunities for further work, were this an actual Study 1, instead of just a demonstration. 
+Then we'd write more about limitations and opportunities for further work, were this an actual Study 1, instead of just a demonstration.
 
 # Analysis E: Two-Way (3 x 4) Contingency Table
 
@@ -1039,7 +1081,7 @@ If this were an actual Study 1, rather than a demonstration, I'd build a researc
 
 ## Describing the Data
 
-Let's store this initial table of interest as `table_E1` 
+Let's store this initial table of interest as `table_E1`
 
 ```{r}
 table_E1 <- sur15 %$% table(medium_r, fiction_r)
@@ -1055,7 +1097,7 @@ sur15 %>%
   adorn_totals(where = c("row", "col"))
 ```
 
-Note that we don't meet the Cochran conditions here. In particular, we still have a 0 cell, and that might motivate us to consider collapsing or removing the "Other" category from the `fiction_r` variable. 
+Note that we don't meet the Cochran conditions here. In particular, we still have a 0 cell, and that might motivate us to consider collapsing or removing the "Other" category from the `fiction_r` variable.
 
 **NOTE**: In doing your project B, I would only proceed once I'd identified variables (after whatever collapsing you decide to do) that meet the Cochran conditions (described below.)
 
@@ -1085,16 +1127,16 @@ fisher.test(table_E1)
 
 Based on the Fisher test, we would just barely declare the association statistically detectable at the 90% confidence level, since the *p* value is just below 0.10. If we used the Pearson test, we'd have to declare the association not to be statistically detectable. But...
 
-a. The difference between statistically detectable and not statistically detectable is small here.
-b. Neither test is really appropriate, since we have very small cell counts, including a zero.
+a.  The difference between statistically detectable and not statistically detectable is small here.
+b.  Neither test is really appropriate, since we have very small cell counts, including a zero.
 
 ### Checking Assumptions - The Cochran Conditions
 
 The "Cochran conditions", which require that we have:
 
-- no cells with 0 counts
-- at least 80% of the cells in our table with counts of 5 or higher
-- expected counts in each cell of the table should be 5 or more
+-   no cells with 0 counts
+-   at least 80% of the cells in our table with counts of 5 or higher
+-   expected counts in each cell of the table should be 5 or more
 
 We don't meet those Cochran conditions here. In addition, since each cell in our 3x4 table is NOT at least 5, R throws a warning message when we run the Pearson $\chi^2$ test, and since we don't meet the Cochran conditions, the `fisher.test` results are questionable, as well. We should consider whether collapsing or deleting some of the rows or columns might be more reasonable. And we'll do this next.
 
@@ -1131,8 +1173,7 @@ sur15 <- sur15 %>%
   mutate(fiction_3 = fct_lump(fiction_r, 2))
 ```
 
-
-Let's call the collapsed table `table_E2`. 
+Let's call the collapsed table `table_E2`.
 
 ```{r table_E2}
 table_E2 <- sur15 %$%
@@ -1152,7 +1193,7 @@ chisq.test(table_E2)
 fisher.test(table_E2)
 ```
 
-For the project, once all of the cells have at least 5 observations, I recommend the use of the Pearson approach, unless the table is square (# of rows = # of columns), in which case the Fisher test is also a reasonable choice. Generally, the Fisher test is more appropriate when the sample sizes are small. In this case, of course, it doesn't matter much after collapsing cells and forming this 2x3 table. We'll close with the association plot for this smaller table, which suggests that the independence model inverts its errors for Comedy as compared to the other two categories. 
+For the project, once all of the cells have at least 5 observations, I recommend the use of the Pearson approach, unless the table is square (# of rows = \# of columns), in which case the Fisher test is also a reasonable choice. Generally, the Fisher test is more appropriate when the sample sizes are small. In this case, of course, it doesn't matter much after collapsing cells and forming this 2x3 table. We'll close with the association plot for this smaller table, which suggests that the independence model inverts its errors for Comedy as compared to the other two categories.
 
 ```{r table_E2_assocplot, fig.height = 4}
 assocplot(table_E2)
@@ -1171,4 +1212,3 @@ End your report with the session information, in its own section. This will be S
 ```{r}
 sessionInfo()
 ```
-

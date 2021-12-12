@@ -20,86 +20,28 @@ library(janitor)
 # pull in data from BPX_J from NHANES and save it
 
 DEMO_J_raw <- nhanes('DEMO_J') %>% tibble()
+BMX_J_raw <- nhanes('BMX_J') %>% tibble()
+TCHOL_J_raw <- nhanes('TCHOL_J') %>% tibble()
+TRIGLY_J_raw <- nhanes('TRIGLY_J') %>% tibble()
+HDL_J_raw <- nhanes('HDL_J') %>% tibble()
+DBQ_J_raw <- nhanes('DBQ_J') %>% tibble()
+
 
 saveRDS(DEMO_J_raw, "data/DEMO_J.Rds")
+saveRDS(BMX_J_raw, "data/BMX_J.Rds")
+saveRDS(TCHOL_J_raw, "data/TCHOL_J.Rds")
+saveRDS(TRIGLY_J_raw, "data/TRIGLY_J.Rds")
+saveRDS(HDL_J_raw, "data/HDL_J.Rds")
+saveRDS(DBQ_J_raw, "data/DBQ_J.Rds")
+
 
 # Now that data are saved, I can just read in the tibble
 
 DEMO_J_raw <- readRDS("data/DEMO_J.Rds")
-```
-
-
-
-
-```{r}
-# pull in data from BPX_J from NHANES and save it
-
-BMX_J_raw <- nhanes('BMX_J') %>% tibble()
-
-saveRDS(BMX_J_raw, "data/BMX_J.Rds")
-
-# Now that data are saved, I can just read in the tibble
-
 BMX_J_raw <- readRDS("data/BMX_J.Rds")
-```
-
-
-
-
-```{r}
-# pull in data from BPX_J from NHANES and save it
-
-TCHOL_J_raw <- nhanes('TCHOL_J') %>% tibble()
-
-saveRDS(TCHOL_J_raw, "data/TCHOL_J.Rds")
-
-# Now that data are saved, I can just read in the tibble
-
 TCHOL_J_raw <- readRDS("data/TCHOL_J.Rds")
-```
-
-
-
-
-```{r}
-# pull in data from BPX_J from NHANES and save it
-
-TRIGLY_J_raw <- nhanes('TRIGLY_J') %>% tibble()
-
-saveRDS(TRIGLY_J_raw, "data/TRIGLY_J.Rds")
-
-# Now that data are saved, I can just read in the tibble
-
 TRIGLY_J_raw <- readRDS("data/TRIGLY_J.Rds")
-```
-
-
-
-
-```{r}
-# pull in data from BPX_J from NHANES and save it
-
-HDL_J_raw <- nhanes('HDL_J') %>% tibble()
-
-saveRDS(HDL_J_raw, "data/HDL_J.Rds")
-
-# Now that data are saved, I can just read in the tibble
-
 HDL_J_raw <- readRDS("data/HDL_J.Rds")
-```
-
-
-
-
-```{r}
-# pull in data from BPX_J from NHANES and save it
-
-DBQ_J_raw <- nhanes('DBQ_J') %>% tibble()
-
-saveRDS(DBQ_J_raw, "data/DBQ_J.Rds")
-
-# Now that data are saved, I can just read in the tibble
-
 DBQ_J_raw <- readRDS("data/DBQ_J.Rds")
 ```
 
@@ -113,87 +55,34 @@ DEMO_J_data = DEMO_J_raw %>%
   filter(RIDAGEYR >= 18) %>%
   mutate(SEQN = as.numeric(SEQN))
   
-count(DEMO_J_data)
-
-miss_var_summary(DEMO_J_data)
-
-head(DEMO_J_data)
-```
-
-
-
-
-```{r}
 BMX_J_data = BMX_J_raw %>% 
   select(c(SEQN, BMXBMI, BMXWAIST)) %>%
   filter(BMXBMI != ".") %>%
   filter(BMXWAIST != ".") %>%
   mutate(SEQN = as.numeric(SEQN))
-  
-count(BMX_J_data)
 
-miss_var_summary(BMX_J_data)
-
-head(BMX_J_data)
-```
-
-
-
-
-```{r}
 TCHOL_J_data = TCHOL_J_raw %>% 
   select(c(SEQN, LBXTC)) %>%
   filter(LBXTC != ".") %>%
   mutate(SEQN = as.numeric(SEQN))
 
-count(TCHOL_J_data)
-
-miss_var_summary(TCHOL_J_data)
-```
-
-
-
-```{r}
 TRIGLY_J_data = TRIGLY_J_raw %>% 
   select(c(SEQN, LBXTR)) %>%
   filter(LBXTR != ".") %>%
   mutate(SEQN = as.numeric(SEQN))
 
-count(TRIGLY_J_data)
-
-miss_var_summary(TRIGLY_J_data)
-```
-
-
-
-```{r}
 HDL_J_data = HDL_J_raw %>% 
   select(c(SEQN, LBDHDD)) %>%
   filter(LBDHDD != ".") %>%
   mutate(SEQN = as.numeric(SEQN))
-  
-count(HDL_J_data)
 
-miss_var_summary(HDL_J_data)
-```
-
-
-
-```{r}
 DBQ_J_data = DBQ_J_raw %>% 
   select(c(SEQN, DBQ700)) %>%
   filter(DBQ700 != ".") %>%
   filter(DBQ700 != 7) %>%
   filter(DBQ700 != 9) %>%
   mutate(SEQN = as.numeric(SEQN))
-  
-count(DBQ_J_data)
-
-miss_var_summary(DBQ_J_data)
 ```
-
-
-
 
 
 
@@ -215,33 +104,3 @@ miss_var_summary(study_2_data)
 
 
 
-
-
-
-```{r}
-WHQ_J_data = WHQ_J_raw %>% 
-  select(c(SEQN, WHD010, WHD020, WHQ030, WHD050, WHD110, WHD120)) %>%
-  filter(WHD010 != 9999) %>%
-  filter(WHD010 != ".") %>%
-  filter(WHD010 != 7777) %>%
-  filter(WHD020 != 9999) %>%
-  filter(WHD020 != ".") %>%
-  filter(WHD020 != 7777) %>%
-  filter(WHQ030 != 9) %>%
-  filter(WHQ030 != ".") %>%
-  filter(WHQ030 != 7) %>%
-  filter(WHD050 != 9999) %>%
-  filter(WHD050 != ".") %>%
-  filter(WHD050 != 7777) %>%
-  filter(WHD110 != 9999) %>%
-  filter(WHD110 != ".") %>%
-  filter(WHD110 != 7777) %>%
-  filter(WHD120 != 9999) %>%
-  filter(WHD120 != ".") %>%
-  filter(WHD120 != 7777) %>%
-  filter(complete.cases(SEQN, WHD010, WHD020, WHQ030, WHD050, WHD110, WHD120))
-  
-count(WHQ_J_data)
-
-miss_var_summary(WHQ_J_data)
-```

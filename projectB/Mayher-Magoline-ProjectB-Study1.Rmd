@@ -1,0 +1,720 @@
+---
+title: "An Examination of the Effects of Diet, Exercise, and Sleep on Weight"
+author: "Steven Mayher & Anna Magoline"
+date: "`r Sys.Date()`"
+linkcolor: blue
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    number_sections: true
+    code_folding: show
+    df_print: paged
+---
+
+# Setup and Data Ingest
+
+The following section covers the loading of the `libraries`, scripts and data necessary to complete this study.
+
+## Initial Setup and Package Loads
+
+This section loads the packages and global setup options necessary for this analysis with the code below:
+
+```{r initial_setup, cache=FALSE, message = FALSE, warning = FALSE}
+library(knitr)
+library(rmdformats)
+library(janitor)
+library(magrittr)
+library(naniar)
+library(broom)
+library(patchwork)
+library(nhanesA)
+library(measurements)
+library(readxl)
+library(Epi)
+library(Hmisc)
+library(pander)
+library(tidyverse)
+source("data/Love-boost.R")
+
+opts_chunk$set(comment=NA)
+opts_knit$set(width=75)
+
+theme_set(theme_bw())
+```
+
+## Loading the Raw Data into R
+
+The `nhanesA` package was used to load all of the necessary NHANES data directly into R as tibbles, which were then saved to the `data` sub directory using the `saveRDS` function. While it's technically unnecessary to save local copies of these files outside of R, it is good practice to do so, as it keeps R from needing to download the files every time these raw files are queried. These local copies were then read back into R as raw files for further data processing:
+
+```{r data_load, message = FALSE}
+DEMO_J_raw <- nhanes('DEMO_J') %>% tibble()
+BMX_J_raw <- nhanes('BMX_J') %>% tibble()
+WHQ_J_raw <- nhanes('WHQ_J') %>% tibble()
+PAQ_J_raw <- nhanes('PAQ_J') %>% tibble()
+RXQ_RX_J_raw <- nhanes('RXQ_RX_J') %>% tibble()
+SLQ_J_raw <- nhanes('SLQ_J') %>% tibble()
+
+saveRDS(DEMO_J_raw, "data/DEMO_J.Rds")
+saveRDS(BMX_J_raw, "data/BMX_J.Rds")
+saveRDS(WHQ_J_raw, "data/WHQ_J.Rds")
+saveRDS(PAQ_J_raw, "data/PAQ_J.Rds")
+saveRDS(RXQ_RX_J_raw, "data/RXQ_RX_J.Rds")
+saveRDS(SLQ_J_raw, "data/SLQ_J.Rds")
+
+DEMO_J_raw <- readRDS("data/DEMO_J.Rds")
+BMX_J_raw <- readRDS("data/BMX_J.Rds")
+WHQ_J_raw <- readRDS("data/WHQ_J.Rds")
+PAQ_J_raw <- readRDS("data/PAQ_J.Rds")
+RXQ_RX_J_raw <- readRDS("data/RXQ_RX_J.Rds")
+SLQ_J_raw <- readRDS("data/SLQ_J.Rds")
+```
+
+# Cleaning the Data
+
+## Selecting & Filtering for Relevant Data
+
+Before merging the necessary tibbles to create the analysis data sets, the raw data files should be filtered and cleaned to ensure only the relevant data from each raw file is retained and is properly formatted. The filtered versions of the raw tibbles were created below to filter out incomplete data and select the appropriate variables that will be used in each analysis, using the keys for each data set as provided on the NHANES website to filter out missing and / or unwanted data. While each variable will be clarified in detail later in the Codebook section, the following is worth noting about the keys from the NHANES website:
+
+-   7, 7777, and 77777 all represent instances where the respondent refused to respond to the question
+
+-   9, 9999, and 99999 all represent instances where the respondent reported that they didn't know the answer to the question
+
+-   "." designate entries with missing entries
+
+Additionally, a new variable, called `weight_change` was created that combines the results from `WHQ060` and `WHQ070` in the code below, however the reason for this will be explained in detail later in the cleaning section. The filtering code is as follows:
+
+```{r}
+DEMO_J_data = DEMO_J_raw %>% 
+  select(c(SEQN, RIDSTATR, RIDAGEYR)) %>%
+  filter(RIDSTATR == 2) %>%
+  filter(RIDAGEYR != ".") %>%
+  filter(RIDAGEYR <= 79) %>%
+  filter(RIDAGEYR >= 19)
+
+BMX_J_data = BMX_J_raw %>% 
+  select(c(SEQN, BMXWT)) %>%
+  filter(BMXWT != ".")
+
+PAQ_J_data = PAQ_J_raw %>%
+  select(c(SEQN, PAQ650)) %>%
+  filter(PAQ650!= ".") %>%
+  filter(PAQ650 != 7) %>%
+  filter(PAQ650 != 9)
+
+SLQ_J_data = SLQ_J_raw %>%
+  select(c(SEQN, SLQ120)) %>%
+  filter(SLQ120 != ".") %>%
+  filter(SLQ120 != 7) %>%
+  filter(SLQ120 != 9)
+
+RXQ_RX_J_data1 = RXQ_RX_J_raw %>% 
+  select(c(SEQN, RXDUSE, RXDDAYS)) %>%
+  filter(RXDUSE != ".") %>%
+  filter(RXDUSE != 7) %>%
+  filter(RXDUSE != 9) %>%
+  filter(RXDDAYS != ".") %>%
+  filter(RXDDAYS != 77777) %>%
+  filter(RXDDAYS != 99999) %>%
+  filter(RXDDAYS == 365) %>%
+  select(c(SEQN, RXDUSE)) %>%
+  distinct(data = , SEQN, .keep_all = TRUE)
+
+RXQ_RX_J_data2 = RXQ_RX_J_raw %>% 
+  select(c(SEQN, RXDUSE, RXDDAYS)) %>%
+  filter(RXDUSE == 2) %>%
+  select(c(SEQN, RXDUSE)) %>%
+  distinct(data = , SEQN, .keep_all = TRUE)
+
+RXQ_RX_J_data = full_join(RXQ_RX_J_data1, RXQ_RX_J_data2)
+
+WHQ_J_data1 = WHQ_J_raw %>%
+  select(c(SEQN, WHQ060)) %>%
+  filter(WHQ060 != ".") %>%
+  filter(WHQ060 != 7) %>%
+  filter(WHQ060 != 9) %>%
+  mutate(weight_change = fct_recode(as.factor(WHQ060),
+                             "Intentional" = "1",
+                             "Unintentional" = "2")) %>%
+  select(c(SEQN, weight_change))
+
+WHQ_J_data_1a = WHQ_J_data1 %>%
+  filter(weight_change == "Intentional")
+
+WHQ_J_data_1b = WHQ_J_data1 %>%
+  filter(weight_change == "Unintentional")
+
+WHQ_J_data2 = WHQ_J_raw %>% 
+  select(c(SEQN, WHQ070)) %>%
+  filter(WHQ070 != ".") %>%
+  filter(WHQ070 != 7) %>%
+  filter(WHQ070 != 9) %>%
+  mutate(weight_change = fct_recode(as.factor(WHQ070),
+                              "Intentional" = "1",
+                              "Unintentional" = "2")) %>%
+  select(c(SEQN, weight_change))
+
+WHQ_J_data_2a = WHQ_J_data2 %>%
+  filter(weight_change == "Intentional")
+
+WHQ_J_data_2b = WHQ_J_data2 %>%
+  filter(weight_change == "Unintentional")
+
+
+WHQ_J_data_3a = full_join(WHQ_J_data_1a, WHQ_J_data_2a, by = c("SEQN", "weight_change"))
+
+WHQ_J_data_3b = full_join(WHQ_J_data_1b, WHQ_J_data_2b, by = c("SEQN", "weight_change"))
+
+WHQ_J_data_3c = anti_join(WHQ_J_data_3b, WHQ_J_data_3a, by = "SEQN")
+
+WHQ_J_data3 = full_join(WHQ_J_data_3a, WHQ_J_data_3c, by = c("SEQN", "weight_change"))
+
+
+WHQ_J_data4 = WHQ_J_raw %>%
+  select(c(SEQN, WHD020, WHD050)) %>%
+  filter(WHD020 != ".") %>%
+  filter(WHD020 != 7777) %>%
+  filter(WHD020 != 9999) %>%
+  filter(WHD050 != ".") %>%
+  filter(WHD050 != 7777) %>%
+  filter(WHD050 != 9999)
+
+
+WHQ_J_data5 = WHQ_J_raw %>% 
+  select(c(SEQN, WHD080Q)) %>%
+  filter(WHD080Q != ".")
+
+WHQ_J_data = left_join(inner_join(WHQ_J_data3, WHQ_J_data4, by = "SEQN"), WHQ_J_data5, by = "SEQN")
+```
+
+## Formatting Each Analysis Variable
+
+To ensure that all variables are in the correct format, each one of the analyses variables, listed below by type, have been formatted / relabeled as described below:
+
+### Quantitative Variables
+
+`BMXWT`, `WHD020`, and `WHD050` are all quantitative variables, and they describe the respondent's current weight as determined by examination, their current self-reported weight, and their self-reported weight for their approximate weight 1 year ago respectively. As such, they have all been converted to numeric format with the `as.numeric()` function and rounded to 1 decimal place with the `round()` function with the code below. Additionally, `BMXWT` was reported in kilograms, but `WHD020` and `WHD050` were reported in pounds, so the latter two were converted to kilograms using the `conv_unit()` function from the `measurements` package, and all three variables were renamed with more appropriate names:
+
+```{r}
+BMX_J_data = BMX_J_data %>%
+  mutate(BMXWT = round(as.numeric(BMXWT), digits = 1)) %>%
+  rename(actual_weight = BMXWT)
+
+WHQ_J_data = WHQ_J_data %>%
+  mutate(WHD020 = as.numeric(round(conv_unit(WHD020, "lbs", "kg"), 1))) %>%
+  rename(reported_weight = WHD020)
+
+WHQ_J_data = WHQ_J_data %>%
+  mutate(WHD050 = as.numeric(round(conv_unit(WHD050, "lbs", "kg"), 1))) %>%
+  rename(reported_weight_prev_year = WHD050)
+```
+
+### Binary Variables
+
+`PAQ650`, `RXDUSE`, and `weight_change` are all the binary categorical variables that are used in this analysis. `PAQ650`, `RXDUSE` were recorded such that *1* designated a "Yes" response, and *2* designated a "No" response to the following questions:
+
+-   `PAQ650`: In a typical week, did the respondent do any vigorous-intensity sports, fitness, or recreational activities that cause large increases in breathing or heart rate like running or basketball for at least 10 minutes continuously?
+
+-   `RXDUSE`: In the past 30 days, has the respondent used or taken medication for which a prescription was needed?
+
+For the purposes of our study, we were interested not simply in people who had taken prescription medicine in the past month, but who had been taking prescription medicine for the entire past year. To accomplish this, when filtering the data in the previous section, the survey answers for `RXDUSE` were used in conjunction with another variable in the survey that requested respondents to report how many days they had been taking the medicines that they listed they were currently taking, which was called `RXDAYS` in the survey, to filter specifically for participants who had been taking prescription medication for exactly one year. As such, for the purposes of our study, `RXDUSE` can be redefined as the following:
+
+> `RXDUSE`: In the past 30 days, has the respondent reported that they have been taking a prescription medication for exactly 1 year?
+
+With the above in mind for each of these variables, the code below was used to ensure that these three variables are indeed defined as factor variables, and while the factor levels may be redefined again later in the analyses, for now the factors themselves have been redefined from *1* and *2* to the more appropriate "Yes" and "No", and both variables have been renamed with more appropriate names:
+
+```{r}
+PAQ_J_data = PAQ_J_data %>%
+  mutate(PAQ650 = fct_recode(as.factor(PAQ650),
+                             "Yes" = "1",
+                             "No" = "2")) %>%
+  rename(vig_rec_exercise = PAQ650)
+
+RXQ_RX_J_data = RXQ_RX_J_data %>%
+  mutate(RXDUSE = fct_recode(as.factor(RXDUSE),
+                             "Yes" = "1",
+                             "No" = "2")) %>%
+  rename(prescript_meds_1_year = RXDUSE)
+```
+
+Lastly, a new binary variable, which we called `weight_change`,was created for the purposes of this study by combining the answers to `WHQ060` and `WHQ070`, which was performed in the *Selecting & Filtering for Relevant Data* sub-section above. This was done because `WHQ060` and `WHQ070` both ask respondents same question, however respondents that lost 10 or more pounds were directed to answer `WHQ060` first, which asked if this level of change in weight was intentional, after which these respondents, along with the rest that didn't lose 10 or more pounds, were directed to answer `WHQ070`, which asks if the respondent attempted to lose weight, regardless of how much or little their weight actually changed. As such, `weight_change` was created to produce a variable that combines the answers from `WHQ060` and `WHQ070` into one variable that answers the question of both, regardless of whether or not the respondent lost weight.
+
+### Multi-Categorical Variables
+
+The only multi-categorical variable in this study is `SLQ120`, which represents survey participants' answer to the following question:
+
+`SLQ120`: In the past month, how often did the respondent feel excessively or overly sleepy during the day?
+
+The available answers to this question were "Never", "Rarely - 1 time a month", "Sometimes - 2-4 times a month", "Often - 5-15 times a month", and "Almost always - 16-30 times a month", and were recorded numerically using the numbers 0, 1, 2, 3, and 4 for each option respectively. With this information in mind, `SLQ120` was reformatted as a factor variable and both the factor levels and the variable name itself were renamed appropriately with the code below:
+
+```{r}
+SLQ_J_data = SLQ_J_data %>%
+  mutate(SLQ120 = fct_recode(as.factor(SLQ120),
+                             "Never" = "0",
+                             "Rarely" = "1",
+                             "Sometimes" = "2",
+                             "Often" = "3",
+                             "Almost always" = "4")) %>%
+  rename(daytime_sleepiness_freq = SLQ120)
+```
+
+## Creating our Analytic Tibble
+
+The analytic tibble for this analysis, which we called `analysis_data`, was created below with the filtered and cleaned data from above that contains only the twelve variables that appear in our code book:
+
+```{r create_sur15}
+analysis_data = inner_join(inner_join(inner_join(inner_join(inner_join(DEMO_J_data, BMX_J_data, by = "SEQN"), PAQ_J_data, by = "SEQN"), SLQ_J_data, by = "SEQN"), RXQ_RX_J_data, by = "SEQN"), WHQ_J_data, by = "SEQN") %>%
+  clean_names()
+```
+
+### List of Missing Values
+
+The methods used above to create our analytic data tibble `analysis_data` should have selected for respondents that meet our study's criteria and also have complete information for all our variables EXCEPT for `whd080q`, and the following code allows us to verify this:
+
+```{r na_pattern_in_sur15}
+miss_var_summary(analysis_data)
+```
+
+The above shows that only `whd080q` has missing data, which is what we'd expect, as the survey's design only prompted participants to select this answer if they did try to lose weight by eating more fruits, vegetables, and / or salads, and not to enter anything if they didn't, so there's no way to properly filter the variable for missingness. This shouldn't cause any issues for our study though, so we should be good to proceed with the analysis.
+
+# Codebook and Data Description
+
+## Codebook
+
+Executing the above sections produces the analytic tibble necessary data to perform this study's analyses, specifically narrowing our data selection to 2626 adults between the ages of 19 and 79 from the NHANES 2017-2018 survey that have complete entries for all the necessary variables used in this study. It's worth noting that age 19 was selected as a cutoff instead of age 18 to ensure that the weight estimates from respondents for the previous year were limited only to participants who were at least 18 at that time. In this new tibble, called `analysis_data`, there are 11 unique variables, each of which have been explained in detail below:
+
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Variable                    | Type  | Description / Levels                                                                                                                                                                                                                                                                                                             |
++=============================+:=====:+==================================================================================================================================================================================================================================================================================================================================+
+| `seqn`                      | ID    | Respondent sequence number, used for subject identification across data sets.                                                                                                                                                                                                                                                    |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `ridageyr`                  | Quant | Respondent age in years at time of screening.                                                                                                                                                                                                                                                                                    |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `reported_weight`           | Quant | Respondent's current self-reported weight (originally pounds, converted to kilograms).                                                                                                                                                                                                                                           |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `reported_weight_prev_year` | Quant | Respondent-reported weight for 1 yr ago (originally pounds, converted to kilograms).                                                                                                                                                                                                                                             |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `actual_weight`             | Quant | Respondent's current weight at time of screening, as determined during examination (kilograms).                                                                                                                                                                                                                                  |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `ridstatr`                  | Cat-2 | 1, 2: Interview/Examination status, used to identify whether a participant was both interviewed at home and examined in the mobile examination center (MEC) or was only interviewed in the home but never went through the examination. Selected only for participants who were interviewed *and* examined, designated with a 2. |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `weight_change`             | Cat-2 | Yes, No: During the past 12 months, did the respondent try to lose weight? **Variable Compiled from answers to `whq060` and `whq070`**                                                                                                                                                                                           |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `vig_rec_exercise`          | Cat-2 | Yes, No: In a typical week, did the respondent do any vigorous-intensity sports, fitness, or recreational activities that caused large increases in breathing or heart rate like running or basketball for at least 10 minutes continuously?                                                                                     |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `whd080q`                   | Cat-2 | 43, **NA**: Did the respondent try to lose weight by eating more fruits, vegetables, and / or salads?                                                                                                                                                                                                                            |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `prescript_meds_1_year`     | Cat-2 | Yes, No: In the past 30 days, has the respondent used or taken medication for which a prescription is needed?                                                                                                                                                                                                                    |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `daytime_sleepiness_freq`   | Cat-5 | Never, Rarely, Sometimes, Often, Almost always: In the past month, how often did respondent feel excessively or overly sleepy during the day?                                                                                                                                                                                    |
++-----------------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Analytic Tibble
+
+The following code is meant to illustrate that `analysis_data` is in fact a tibble by printing it below:
+
+```{r}
+analysis_data
+```
+
+## Data Summary
+
+A summary of the `analysis_data` tibble has been provided below:
+
+```{r}
+describe(analysis_data)
+```
+
+# Analysis A: Compare 2 Population Means using Paired Samples
+
+## The Question
+
+In this first analysis, we'll compare the current self-reported weight of the respondents, `reported_weight`, to their current self-reported approximates of how much they weighted last year, `reported_weight_prev_year`, for subjects that chose to eat more fruit, vegetables, and / or salads to lose weight. These measurements were initially reported in pounds, however they were converted to kilograms in the cleaning steps above for this analysis. The respondents are paired by subject, specifically by subjects that attempted to lose weight by eating more fruits, vegetables, and / or salads as previously mentioned. As such, the research question for this analysis is as follows:
+
+> What is the typical change in weight (in kilograms) for NHANES subjects that were attempting to lose weight by eating more fruits, vegetables, and / or salads for a year?
+
+## Describing the Data
+
+### Compute and summarize the paired differences
+
+To start with, for this particular analysis, we need to create a new tibble based off of the `analysis_data` tibble that filters only for respondents that were actively trying to lose weight by eating more fruits, vegetables, and / or salads. This was accomplished with the code below, producing the new tibble `analysis_A_data` that we'll use exclusively for this paired differences analysis:
+
+```{r}
+analysis_A_data = analysis_data %>%
+  filter(whd080q == 43)
+```
+
+Now that we have our dataset, we need to calculate the paired weight differences between respondent's `reported_weight` and `reported_weight_prev_year` so we can perform our analysis on it. To that end, the code below calculates this difference and assigns it to a variable, which we have called `weight_diff`, and the `favstats` function is then used to verify that this was accomplished:
+
+```{r compute_paired_differences, message = FALSE}
+analysis_A_data <- analysis_A_data %>%
+    mutate(weight_diff = round(as.numeric(reported_weight_prev_year - reported_weight), digits = 1))
+
+mosaic::favstats(~ weight_diff, data = analysis_A_data)
+```
+
+The `favstats` results above demonstrates that we have successfully created `weight_diff`, which was created by subtracting the participant's currently self-reported weight `reportetd_weight` from their self-reported weight of themselves from one year prior, `reported_weight_prev_year`. With this accomplished, we can now assess whether it follows a Normal distribution both graphically and numerically so we can determine which method would be most appropriate for calculating our confidence interval and point estimate in our main analysis.
+
+### Graphical Summaries to Assess Normality
+
+To assess the normality of the `weight_diff` distribution graphically, we technically have three options we can use - a histogram, a violin boxplot, and Normal Q-Q plot. As such, we have generated all three with the code below:
+
+```{r fig.height=6, fig.width=8}
+p1 <- ggplot(analysis_A_data, aes(x = weight_diff)) +
+    geom_histogram(aes(y = stat(density)), fill = "slateblue", col = "white", bins = nclass.scott(analysis_A_data$weight_diff)) + 
+    stat_function(fun = dnorm, args = list(mean = mean(analysis_A_data$weight_diff), sd = sd(analysis_A_data$weight_diff)), col = "red", lwd = 1) +
+    labs(title = "Density Function: weight_diff", x = "Weight Difference (kg)", y = "") +
+    theme_bw()
+
+p2 <- ggplot(analysis_A_data, aes(sample = weight_diff)) +
+    geom_qq(col = "slateblue") + geom_qq_line(col = "red") + 
+    labs(title = "Normal Q-Q plot: weight_diff", x = "", y = "Weight Difference (kg)") +
+    theme_bw()
+
+p3 <- ggplot(analysis_A_data, aes(x = "n = 664", y = weight_diff)) +
+    geom_violin(fill = "slateblue", alpha = 0.3) + 
+    geom_boxplot(fill = "slateblue", width = 0.3, notch = TRUE) + 
+    labs(y = "Weight Difference (kg)", x = "", title = "Violin Boxplot: weight_diff") +
+    theme_bw() + 
+    coord_flip()
+
+(p2 + p1) / p3 +
+  plot_layout(ncol = 1, height = c(5, 2)) +
+  plot_annotation(title = "Weight Difference in Respondents After 1 Year", subtitle = "Method of loosing Weight included Eating More Fruits, Vegetables, and / or Salads", caption = "weight_diff pulled from analysis_A_data dataset")
+```
+
+The 664 observations above seem to suggest that a Wilcoxon signed rank approach would be the optimal choice here instead of a Normal model for the paired differences, as there definitely appears to be a substantial number of outliers in the paired differences, and the outliers appear to be uniformly distributed as opposed to being skewed in either direction in particular. However, since the Wilcoxon signed rank approach finds the confidence interval and point estimate for the pseudo-median of the data, we'll use a bootstrap approach instead to find the 90% confidence interval and point estimate for this analysis.
+
+### Did Pairing Help Reduce Nuisance Variation?
+
+For subject that are actively trying to lose weight by eating healthier (in this case, by eating more fruits, vegetables, and / or salads), a strong correlation between their current self-reported weight `reported_weight` and their self-reported weight for last year `reported_weight_prev_year`. That said, we should still examine if pairing these variables makes sense by assessing for nuisance variation. We can assess this visually by creating a scatterplot that compares the two metrics and assessing the linear fit of their relationship, or we could simply calculate the Pearson correlation coefficient outright. The key take away is that the larger the correlation between the two variables is, the more paring the two variables will help with mitigating the impact of the differences between the two subjects. To that end, both have been generated below:
+
+```{r scatterplot_for_paired_diffs}
+ggplot(analysis_A_data, aes(x = reported_weight, y = reported_weight_prev_year)) +
+    geom_jitter(col = "slateblue") +
+    geom_smooth(formula = y ~ x, method = "lm", col = "red") +
+    theme_bw() +
+    labs(title = "Jittered Scatterplot shows moderately strong relationship",
+         subtitle = "Especially for the lower values, however it appears to decrease as both weights increase", x = "Self-Reported Current Weight \n (reported_weight)", y = "Self-Reported Weight for Last Year \n (reported_weight_prev_year)")
+```
+
+We see a pretty strong linear relationship between `reported_weight` and `reported_weight_prev_year` at lower weights, however it is worth noting that as both weights increase, the strength of the correlation appears to decrease, so we likely have a problem with Non-Constant Variance. The Pearson correlation coefficient is shown below:
+
+```{r correlation_paired_diffs}
+analysis_A_data %>% select(reported_weight, reported_weight_prev_year) %>% cor(.) %>% 
+    round(digits = 3) %>% kable()
+```
+
+As we'd expect by observing the scatterplot, the Pearson correlation for these two variables is incredibly strong at `r round(cor(analysis_A_data$reported_weight_prev_year, analysis_A_data$reported_weight), 3)`, we can conclude that a linear model using the `reported_weight` weight does actually account for a detectable great fraction (`r round(100*(cor(analysis_A_data$reported_weight, analysis_A_data$reported_weight_prev_year)^2),1)`%) of the variation between the two weights.
+
+## Main Analysis
+
+As concluded from the initial results above, we'll build a 90% confidence interval for the population mean of the `reported_weight_prev_year - reported_weight` differences using the bootstrap approach as shown below:
+
+### The Bootstrap approach for the mean from paired samples
+
+Here is a 90% confidence interval for the population mean of the paired `reported_weight_prev_year - reported_weight` differences, as estimated by a bootstrap approach using a random seed of `4312021`:
+
+```{r bootstrap_for_paired_samples}
+set.seed(4312021)
+smean.cl.boot(analysis_A_data$weight_diff, conf.int = 0.90)
+```
+
+Before discussing the results, it is worth noting that the bootstrap procedure in general assumes that the matched differences of the paired variables are indeed independent of each other, and also assumes that the matched differences being examined also represent a random sample of the population of possible matched differences.
+
+Regarding the results of the bootstrap, the point estimate for the population mean of the differences is 0.40, which indicates that the respondent's average self-reported weight actually increased by approximately 0.40 kilograms, despite attempting to *lose* weight by eating more fruits, vegetables, and / or salads over the course of a year. Additionally, the 90% confidence interval for the population mean of the differences in these weights calculated by this bootstrap is (-0.19, 1.05), and since this interval includes 0, we cannot claim that a statistically detectable difference exists between the two weights examined, `reported_weight_prev_year` and `reported_weight`, at the 10% significance level.
+
+## Conclusions
+
+Respondents of the 2017-2018 NHANES survey that attempted to lose weight by eating more fruits, vegetables, and / or salads actually appear to gain an average of 0.40 kilograms of weight instead, however we cannot claim that this is a statistically detectable difference with a 10% significance, as the 90% confidence interval for that average increase in weight contains 0, with the exact interval, rounded to two decimal places being (-0.19, 1.05) kilograms. The bootstrap approach was used to create these estimates from the comparison of the respondents' current self-reported weights with their self-reported weights for themselves at one year ago, and given our assessment of Normality of the data for these 664 respondents, this is the most appropriate and well-justified approach to use to assess this data.
+
+Given what we've learned here, a natural next step would be to look at values of something like this over multiple years, or perhaps comparing respondents weights at more than just two stages. It would also be better to compare the actual weight data for each respondent as actually examined, collected, and reported in the examination portion of the NHANES survey instead of using the self-reported weights that were obtained by asking respondents to provide weights for both the present and 1 year ago, as this would remove any potential bias and reduce the chance for human error from the respondents about their weight.
+
+# Analysis B: Compare 2 Population Means using Independent Samples
+
+## The Question
+
+For this second analysis, which will be an independent sample analysis, we will be comparing the survey respondent's `actual_weight` by `vig_rec_exercise`. For complete clarification, `actual_weight`, as the variable name suggests, is the actual weight of the respondents/participants, obtained by the NHANES survey administers by physically weighing participants and recording their weight, and this analysis will compare the 2017-2018 NHANES population's mean for this data by this population's `vig_rec_exercise` group, which designates whether or not the respondent/participant partook in 10 continuous minutes of vigorous recreational exercise a week. Our two sample groups in this analysis, determined by `vig_rec_exercise` group, are completely separate from each other, as there's nothing in the NHANES study design to suggest that they are matched or paired in any way, so it makes sense to examine these samples separately in this manner. With this in mind, our research question is as follows:
+
+> Did respondents who participate in 10 minutes of continuous vigorous exercise a week have meaningfully different average body weight in kilograms than respondents who don't participate in 10 minutes of continuous vigorous exercise a week?
+
+## Describing the Data
+
+The range of the `actual_weight` data within each `vig_rec_exercise` group is shown below:
+
+```{r vig_rec_exercise_by_actual_weight, message = FALSE}
+mosaic::favstats(actual_weight ~ vig_rec_exercise, data = analysis_data) %>%
+  kable(digits = 2)
+```
+
+The results above, aside from providing some insight on the distributions of the two groups, also verifies that we are not missing any data from either group. Thus we can proceed to our next step in the analysis by generating graphical and numerical summaries to assess the Normality of each group's distribution.
+
+### Graphical Summaries
+
+The first graphical summary for this analysis is the violin boxplot, produced by the code below:
+
+```{r boxplot_for_b, message = FALSE}
+ggplot(analysis_data, aes(x = vig_rec_exercise, y = actual_weight, fill = vig_rec_exercise)) + 
+  geom_violin(alpha = 0.3) +
+  geom_boxplot(width = 0.3, notch = TRUE) +
+  guides(fill = "none") +
+  labs(title = "MEC Recorded Weight data by Vigorous Recreational Exercise Group (10 min cont)",
+       subtitle = "Each Group: Contains Detectable Outliers & Some Right-Skew", caption = "n = 2626 Respondents from the 2017-2018 NHANES Survey",
+       x = "10 minutes of vigorous recreational exercise a week", y = "MEC Recorded Weight (Kilograms)") +
+  theme_bw()
+```
+
+There appear to be a substantial number of outliers in each group on the high end, suggesting that their is likely some meaningful right-skew present in both groups. This corroborates the findings of the Normal Q-Q plots below, which also demonstrate significant right-skew in this data:
+
+```{r qqplots_for_b}
+ggplot(analysis_data, aes(sample = actual_weight, col = vig_rec_exercise)) +
+  geom_qq() + geom_qq_line() +
+  facet_wrap(~ vig_rec_exercise, labeller = "label_both") +
+  guides(col = "none") +
+  theme_bw() +
+  labs(y = "Examination Weight Values",
+       title = "Examination Weight isn't well fit by a Normal model in either group")
+```
+
+The right-skew as indicated in both of these plots suggests that using a test that requires Normal distributions in the populations wouldn't be a good choice for this analysis, so we'll likely end up using a bootstrap approach again like we did in analysis A. We'll perform some additional numerical summaries below though to see if those results corroborate these findings to confirm this selection.
+
+### Numerical Summaries
+
+As shown from the summary below, the subset of 2017-2018 NHANES data that we are using for this analysis has 810 "Yes" and 1816 "No" respondents to the vigorous recreational exercise question that also have recorded `actual_weight` values. We'll examine the mean's placement as compared to the median for both groups, and we'll also generate the skew~1~ values for both groups as well:
+
+```{r numerical_summaries_B, message = FALSE}
+mosaic::favstats(actual_weight ~ vig_rec_exercise, data = analysis_data) %>% 
+  kable()
+```
+
+The skew~1~ values for these summary statistics are shown below:
+
+```{r calculating_skew1_forB}
+analysis_data %>% group_by(vig_rec_exercise) %>%
+  summarise(skew1 = round((mean(actual_weight) - median(actual_weight))/sd(actual_weight), 3))
+```
+
+For this data set, the means for both groups are higher than their respective groups medians, which like the graphical summaries in the previous section, also suggest the presence of right-skew. That said, the skew~1~ for neither the "Yes" group nor the "No" group for vigorous recreational exercise actually breaks the 0.2 cutoff for "fairly substantial" right skew, however given that the results for both groups respectively are 0.166 and 0.170, when taken with the results of the graphical summaries, we concluded that there is still enough right-skew present in both categories for vigorous recreational exercise to warrant avoiding tests that require Normality. As such it would appear that a Wilcoxon-Mann-Whitney rank sum test approach or a bootstrap approach would be ideal for determining a confidence interval and point estimate for this data, and again since we are interested in finding a point estimate and confidence interval for the population means, not the pseudo-medians, we will again proceed with a bootstrap approach for this analysis.
+
+## Main Analysis
+
+As mentioned above, the bootstrap approach was selected over the other approaches available because the data for this analysis are comprised of independent samples that aren't normally distributed, containing a number of outliers and a worrisome amount of right-skew, and we are interested in analyzing the confidence interval and point estimate for the difference in the population means, not the difference in their pseudo-medians. As such, a bootstrap approach is the most appropriate method to use, and will be used below to build a 90% confidence interval for the difference in the population means, comparing `actual_weight` for people who answered "Yes" and "No" to the exercise question regarding whether they complete 10 continuous minutes of vigorous recreational exercise in a typical week.
+
+### The Bootstrap for comparing means from two independent samples
+
+The approach for calculating the 90% confidence interval and point estimate for the difference between the `vig_rec_exercise` populations' `actual_weight` distributions below utilizes the `bootdif` function to accomplish this, which was loaded in from the `Love-boost.R` file, and used the seed `4312021`:
+
+```{r bootdif_for_B}
+set.seed(4312021) 
+analysis_data %$% 
+  bootdif(actual_weight, vig_rec_exercise, conf.level = 0.90)
+```
+
+Again, it is worth noting that the assumptions of the bootstrap procedure in general for independent sample analyses, which assumes that the samples in each group are indeed taken independent of each other, and also that the samples for each group being examined also represent a random sample of the population of both groups being compared / analyzed, and both assumptions hold true for these data, so we are safe to proceed with our analysis of the results.
+
+The results above indicate that the point estimate for the difference in population means between the estimated population mean weights in kilograms for individuals in the 2017-2018 NHANES survey population that answered "Yes" to completing at least 10 minutes of vigorous recreational exercise a week were about 1.93 kilograms higher than the population mean weight for those who said "No". Additionally, the 90% confidence interval for the difference between the means of the two population groups is (0.40, 3.48). As we didn't mention it previously, it is important to note that a two-sided confidence interval procedure was assumed for this bootstrap, and from this resultant confidence interval, we can conclude that there may be a statistically detectable difference at the 10% significance level between the true means of the vigorous recreational exercising population's `actual_weight` and the non vigorous recreational exercising population's `actual_weight` levels, as the confidence interval doesn't here doesn't actually contain 0.
+
+## Conclusions
+
+At the 10% significance level, there is a statistically detectable difference between the population mean weight (kilograms) as measured and recorded for the 2017-2018 NHANES examination survey data for those who typically partake in vigorous recreational exercise for at least 10 continuous minutes a week and those who don't typically partake in vigorous recreational exercise for at least 10 continuous minutes a week, based on our sample of respondents with complete data on `actual_weight`. This conclusion is motivated by a bootstrap estimate to compare the two `vig_rec_exercise` groups with complete data on survey examination weight `actual_weight`. I think that the notable right skew in data when grouped by `vig_rec_exercise`, along with the statistically detectable number of outliers seen in the violin boxplot suggests that the bootstrap approach is the best option for this analysis.
+
+One potential step that could logically be taken next for this analysis would be to increase the respondent population by including participants from previous years of the NHANES survey, as only using the 2017-2018 NHANES data is a significant limitation of this study. Another potential step that could be taken could be to attempt to correct for the skew by transforming `actual_weight`.
+
+# Analysis C: Comparing 3+ Population Means via ANOVA
+
+## The Question
+
+This analysis will compare `actual_weight` by `daytime_sleepiness_freq`, and this will be accomplished through the use of an ANOVA (i.e. analysis of variance), along with several other related methods as well. The purpose of this analysis is to compare the mean `actual_weight` MEC recorded weight (kilograms) of the population represented by the respondents based on how often they felt overly sleepy during the day - Never, Rarely (1 time a month), Sometimes (2-4 times a month), Often (5-15 times a month), and Almost always (16-30 times a month). As with the previous analysis, the respondents are not linked in any way across the five `daytime_sleepiness_freq` groups, so we will once again be dealing with independent samples. With all of this in mind, our research question for this analysis is as follows:
+
+> Is there a statistically detectable difference between the confidence intervals for `actual_weight` by `daytime_sleepiness_freq` category, and are any of the `actual_weight` confidence intervals for each `daytime_sleepiness_freq` category dectably different from each other?
+
+## Describing the Data
+
+To begin with, let's look at the range of the `actual_weight` data within each `daytime_sleepiness_freq` group, as shown below:
+
+```{r describe_comfort431_by_daytime_sleepiness_freq, message = FALSE}
+mosaic::favstats(actual_weight ~ daytime_sleepiness_freq, data = analysis_data)
+```
+
+The category with the smallest number of respondents, the *Almost always* group, has 202 total respondents, while the next two categories with the smallest number of respondents are *Often* with 408, and *Never* with 460. While the number of respondents in each of these three categories is less than the minimum number of required subjects for this study as a whole (i.e. 500 respondents), each of these categories, as well as the other remaining two, *Rarely* and *Sometimes*, contains enough respondents in them that we should nevertheless be able to conclude something about the distributions of `actual_weight` in these `daytime_sleepiness_freq` populations. As such, we will proceed to produce both graphical and numerical summaries of these distributions below to determine which tools we should use for this analysis.
+
+### Graphical Summaries
+
+Since we are examining an outcome (in our case `actual_weight`, i.e. the actual recorded weight of the participants at the time of the 2017-2018 NHANES survey), a comparison boxplot is an effective way of exploring the distributions of the multiple independent sample groups - as such, one has been produced below with the following code:
+
+```{r comparison_boxplot_analysis_2}
+ggplot(analysis_data, aes(x = daytime_sleepiness_freq, y = actual_weight, fill = daytime_sleepiness_freq)) +
+  geom_violin(alpha = 0.3) +
+  geom_boxplot(width = 0.3, notch = TRUE) +
+  coord_flip() +
+  guides(fill = "none") +
+  theme_bw() +
+  labs(title = "MEC Recorded Weight (kg) by Monthly Daytime Sleepiness Frequency",
+       subtitle = "`actual_weight` by `daytime_sleepiness_freq` Group",
+       y = "MEC Recorded Weight (kg)",
+       x = "")
+```
+
+These results indicate that each level of daytime sleepiness frequency `daytime_sleepiness_freq` likely has a potential issue with right-skew in the distribution of the `actual_weight` weights, as well as a potential issue with outliers, or possibly some combination of both.
+
+Another simple yet effective type of graphical summary we can make to assess the `actual_weight` distribution data across each category of `daytime_sleepiness_freq` is through the use of histograms. As such, we have created a comparison histogram to examine this :
+
+```{r comparison_histograms_analysis_2}
+ggplot(analysis_data, aes(x = actual_weight)) +
+  geom_histogram(aes(fill = daytime_sleepiness_freq), bins = 20, col = "white") +
+  theme_bw() +
+  facet_wrap(~ daytime_sleepiness_freq, labeller = "label_both") +
+  guides(fill = "none") +
+  labs(title = "MEC Recorded Weight (kg) by Monthly Daytime Sleepiness Frequency daytime_sleepiness_freq",
+       subtitle = "`actual_weight` by `daytime_sleepiness_freq` Group",
+       y = "",
+       x = "MEC Recorded Weight (kg)")
+```
+
+Just as seen in the comparison boxplot, the histograms for each `daytime_sleepiness_freq` category shown above demonstrate a potential issues with right-skew in the distributions of the `actual_weight` weights across each group, a potential issue with outliers, or possibly some combination of both.
+
+These results do suggest some issues with Normality, so a bootstrap approach would probably be more ideal here. However, since we are comparing more than two groups, and we haven't really learned the ANOVA is and more importantly, since we haven't discussed the bootstrap ANOVA analog in detail in the course (there is a link for exploring the running of bootstrap equivalents of the ANOVA in the course notes, but it appears to be broken), and the ANOVA very robust anyways, we'll likely run the ANOVA for this analysis, and will probably run the Kruskal-Wallis test as well, but we'll make our final decision after examining some numerical summaries as well.
+
+### Numerical Summaries
+
+Although this numeric summary for the `daytime_sleepiness_freq` categories were already generated earlier in the *Describe the Data* section for this analysis, they have been provided again below:
+
+```{r num_summaries_analysis2, message = FALSE}
+mosaic::favstats(actual_weight ~ daytime_sleepiness_freq, data = analysis_data) %>%
+  kable()
+```
+
+These results confirm what we concluded from the interpretation of our graphical summaries, and as such we will run both ANOVA and Kruskal-Wallis approaches, but given the amount of right-skew present in each group we will have some reservations about their results.
+
+## Main Analysis
+
+Again, as concluded above, since we will be analyzing the distribution of `actual_weight` across the five categories of `daytime_sleepiness_freq`, which boils down to us needing to compare several independent samples, we'll need to perform an Analysis of Variance (ANOVA), and due to our concerns with Normality, we will also run the Kruskal-Wallis Test as well. Ideally we would run a bootstrap approach here, however as we will not learn this method formally in class until 432, we will skip this approach in this analysis. Both approaches will consist of us initially building appropriate hypothesis tests and then comparing the distributions of `actual_weight` across levels of `daytime_sleepiness_freq` using a 90% confidence level to test these hypotheses.
+
+### Kruskal-Wallis Test
+
+While the order we perform these analyses doesn't matter, we have chosen to begin with the Kruskal-Wallis test since it doesn't require us to assume Normality in our five `daytime_sleepiness_freq` populations. The null hypothesis for this Kruskal-Wallis test that we will use here is that there is no location shift in the distributions of `actual_weight` in our 2017-2018 NHANES population over our five different categories of `daytime_sleepiness_freq`. As an extension of the Wilcoxon-Mann-Whitney rank sum test to studies involving more than two independent samples, the Kruskal-Wallis test also tests for differences in the medians of the independent sample populations as opposed to the differences in the means, which will be analyzed by the ANOVA in the next step. The Kruskal-Wallis test is performed
+
+```{r kruskal-wallis_test_for_2}
+analysis_data %$% 
+  kruskal.test(actual_weight ~ daytime_sleepiness_freq)
+```
+
+As with the previous analyses, we should discuss the assumptions of the Kruskal-Wallis test before interpreting the results above. In short, since the Kruskal-Wallis test is an extension of the Wilcoxon-Mann-Whitney rank rank sum test to studies involving more than two independent samples, the Kruskal-Wallis test is subject to the same assumptions, namely that all of our samples for each category / group were taken independently of each other, and that the samples were chosen randomly from the population we are studying. Our study's design establishes both of these for this subset of our analysis data, so we can proceed with the interpretation of our results.
+
+Given that our results returned a p--value of *p* = 2.61\*10^-8^, which is much smaller than our necessary p-value necessary for detecting a statistically detectable difference at the 10% significance level (i.e. *p* \< 0.10), we can conclude that there is a statistically detectable difference between the medians of the `actual_weight` weights for the five `daytime_sleepiness_freq` categories we are examining. We'll proceed to performing our ANOVA analysis to see if we find similar results when comparing the population means instead.
+
+### Analysis of Variance
+
+As alluded to in the Kruskal-Wallis test section above, the Analysis of Variance compares the means of population distributions across multiple categories, and we will be performing it to asses the population means of the `actual_weight` weights distributions across the five categories of the `daytime_sleepiness_freq` populations that are being examined in this analysis. The analysis was performed using the code below:
+
+```{r anova_analysis_2_via_lm}
+analysis_data %$%
+  lm(actual_weight ~ daytime_sleepiness_freq) %>%
+  anova()
+```
+
+Once again, before assessing the results of the ANOVA, the assumptions of this approach should be considered. Just as the Kruskal-Wallis test was an extension of the Wilcoxon-Mann-Whitney rank rank sum test, the ANOVA is also a natural extension of another approach - specifically the pooled t test for two independent samples - and as such the ANOVA approach is subject to the same assumptions. In short, this means that when comparing population means across multiple categories such as in our analysis here with the five categories of `daytime_sleepiness_freq`, the approach assumes that all the samples for each category were gathered independently of each other, that the samples were gathered randomly from the population of interest, that the population that the data samples were drawn from were Normally distributed, and that the sample sizes or population variances are equal across all of the categories of our data. While we do have some concerns about the Normality of our data as mentioned above, we concluded to still perform the ANOVA, as we will not learn about the bootstrap variants of this analysis until 432.
+
+The results above indicate that our resultant p-value is much smaller than our 10% significance level (*p* = 6.74\*10^-8^\< -0.10), so we will conclude that there is a statistically detectable difference between the population mean `actual_weight` weights of the respondents in this study for the five `daytime_sleepiness_freq` categories being examined.
+
+In addition, we can conclude from this analysis that the `daytime_sleepiness_freq` categories account for $\eta^2 = \frac{20746.8}{20746.8 + 1381981.25} = 0.015$ or 1.5% of the variation in `actual_weight` weights of our respondents in our data set. This indicates that we should not expect to see much variation between our pairs of `daytime_sleepiness_freq` categories, however we will still perform an analysis below to verify and illustrate this, and since we did pre-plan our full set of pairwise comparisons, we will accomplish this through the use of Tukey's honestly significant differences approach to pairwise comparisons of means.
+
+### Tukey's Honestly Significant Differences approach to Pairwise Comparisons of Means
+
+In order to perform the Tukey HSD approach, we will need to use a different method of generating an ANOVA, specifically by using the `aov` approach to specifying the ANOVA model instead of using the `anova with lm` utilized in the previous section. The results for `aov` are identical, albeit just rounded up more, illustrated with the code below:
+
+```{r show_aov_analysis2}
+analysis_data %$% aov(actual_weight ~ daytime_sleepiness_freq) %>% summary()
+```
+
+With this demonstrated, let's use this code for specifying the ANOVA model below to generate our Tukey HSD comparisons, creating results in a table and plot format, and naturally, we will continue to utilize a 90% confidence level across the set of comparisons:
+
+```{r tukey_HSD_analysis2}
+TukeyHSD(aov(analysis_data$actual_weight ~ analysis_data$daytime_sleepiness_freq), conf.level = 0.90)
+```
+
+The confidence intervals in the table above suggest that only three group pairings are not detectably different from each other at a 10% significance level, all three of which were pairs involving the "Almost always". These groups specifically were "Almost always & Rarely", "Almost always & Sometimes", and "Almost always & Often". The rest of the group pairings were statistically detectably different, however none of these detectably different groups were detectably different from each other, all of which is both demonstrated numerically in the table above and visually in the plot below. One final notable observation is that although none of the statistically detectably different pairings were detectably different from each other, the "Often & Never" and the "Almost always & Never" pairings were both detectably different from one non-detectably different pairing - the "Sometimes & Rarely" pairing.
+
+```{r plot_Tukey_HSD_analysis2}
+mar.default <- c(5,6,4,2) + 0.1
+par(mar = mar.default + c(0, 4, 0, 0))
+plot(TukeyHSD(aov(analysis_data$actual_weight ~ analysis_data$daytime_sleepiness_freq),
+              conf.level = 0.90), las = 1)
+par(mar = mar.default)
+```
+
+## Conclusions
+
+While we do have some potential Normality concerns, the above analyses tentatively demonstrate that, at the 10% significance level, there appears to be evidence of statistically detectable differences in `actual_weight` across most of the pairings of the five `daytime_sleepiness_freq` categories, reported by both the ANOVA and the Kruskal-Wallis approach. Specifically, all but three of the groups were statistically detectably different, with the "Almost always & Rarely", "Almost always & Sometimes", and "Almost always & Often" being the group pairings that were not statistically detectably different at a 10% significance level.
+
+As mentioned above, the biggest concern we have is about the Normality of this data, and we'll learn how to perform the bootstrap equivalent of this analysis in 432, which will let us address this. Another logical step we could take beyond assessing a bootstrap approach would be to increase our data sample size to include more samples, perhaps from other years that the NHANES survey was conducted.
+
+# Analysis D: Two-Way (2 x 2) Contingency Table
+
+## The Question
+
+For our last analysis of this study, we will examine the association between `weight_change`, which again is a variable for whether or not the survey participant weight change was intentional, with `prescript_meds_1_year`, which assesses whether or not the study participant had been taking prescription medication for no more or less than the entire last year. As both the `weight_change` variable and the `prescript_meds_1_year` variable consist of two levels, we will assess if taking prescription medication for 1 year can impact a person's weight, and to that end we will design a contingency table by using `prescript_meds_1_year` in the rows and `weight_change` in the columns. As with the rest of the analyses in this experiment, we'll use a 90% confidence level when calculating our point estimate and confidence interval from this data. We will also utilize a Bayesian augmentation on our data, and with all of this in mind, our research question for this experiment is as follows:
+
+> Did survey respondents that had taken prescription medication for the past year have statistically detectably different weight loss/gain intent from survey respondents who didn't take prescription medication over the past year?
+
+## Describing the Data
+
+Creating a 2x2 table with our `weight_change` and `prescript_meds_1_year` variables as they are now generates the following result:
+
+```{r english_vs_priorr}
+table(analysis_data$prescript_meds_1_year, analysis_data$weight_change)
+```
+
+While we can technically interpret this data as is, we should consider redefining our factor levels for `prescript_meds_1_year` to make it more intuitive and easier to interpret, so we will redefine the factor levels for it below, and will ensure our factors for both variables are leveled as necessary for this analysis with the following code:
+
+```{r}
+analysis_data <- analysis_data %>%
+  mutate(weight_change = fct_relevel(weight_change, "Intentional"),
+         prescript_meds_1_year = fct_recode(factor(prescript_meds_1_year),
+                                 "Used Prescriptions" = "Yes",
+                                 "No Prescriptions" = "No"),
+         prescript_meds_1_year = fct_relevel(prescript_meds_1_year, "Used Prescriptions"))
+```
+
+```{r}
+analysis_data %>% tabyl(prescript_meds_1_year, weight_change) 
+```
+
+This looks much better. With this done, we can proceed to our main analysis.
+
+## Main Analysis
+
+As was discussed in the **Research Question** section of this analysis, we will utilize the Bayesian augmentation for this analysis. This means that we will add two successes and add two failures to our data, as this will generate a better (i.e. more approximate) results from our data, which is recommended in Agresti and Coull. Again, as mentioned at the beginning of this analysis as well, we will again use 90% confidence levels, and to facilitate this analysis we will utilize the `Epi` package's `twoby2` function:
+
+```{r twoby2_analysis4}
+t1 <- analysis_data %$% table(prescript_meds_1_year, weight_change)
+
+twoby2(t1 + 2, conf.level = 0.90) # uses Bayesian augmentation, 90% confidence level
+```
+
+From the results above, we can see that the probabilities of being an individual intentionally changing their weight in the prescription-taking and non-prescription-taking groups, and we also see the 90% confidence intervals for both of these groups at the top of the output so that, for instance, we estimate the probability of intentional weight loss or gain for subjects that were taking prescription mediation for 1 solid year to be 0.45, with 90% confidence interval (0.43, 0.47).
+
+The relative risk of being an intentional weight loss/gain individual for a given individual using prescription medications for 1 year vs. the relative risk of being an intentional weight loss/gain individual for a given non-prescription-using individual was estimated to be 1.21, and from the results of the 90% confidence interval is most definitely detectably different from 1 at $\alpha = 0.10$.
+
+The odds ratio shown above, which describes the odds of intentional weight loss/gain based for individual that been using prescription medication for the past year vs individuals who hadn't been taking prescription medication for the past year was estimated to approximately be 1.48, and was also detectably different from 1 at $\alpha = 0.10$.
+
+The difference in probability of intentional weight loss/gain for prescription-using vs. non-prescription-using subjects was estimated to be approximately 0.097, and has a 90% confidence interval of (0.058, 0.14), which is also technically detectably different from 0 at $\alpha = 0.10$, however this certainly wasn't by a wide margin, so I would be hesitant to strongly conclude this.
+
+Lastly, the chi-square test of independence, which assesses the null hypothesis of this analysis, namely that there is no association between prescription use and intentional weight loss/gain, using the Pearson chi-square test from the results above, which is labeled as `Asymptotic P-value` in these results, reports a *p* value 0, so we should reject the null hypothesis in this case, and we conclude that we do see detectable association between the rows and the columns at a 10% significance level.
+
+### Checking Assumptions
+
+Each of the cells in our non-augmented 2x2 table above have at least 5 values R doesn't have any issues running the code, and moreover we have over at least 250 observations in each cell, so we should be comfortable with the chi-square test of independence here.
+
+## Conclusions
+
+From the results of our 2x2 table analysis above, we can conclude that the 90% confidence intervals for both the relative risk and sample odds ratio do not include/cross 1, and that the probability difference is detectably different from 0 at a 90% confidence interval as well.
+
+As mentioned in the analysis of these results though, while the probability difference is technically detectably different from 0 with a 10% significance level, the point estimate of 0.097 and the lower end of the confidence interval of (0.058, 0.14) are still very close to 0, so I would be hesitant to stick to this conclusion from this analysis as is. The next step I would take in an attempt to logically improve these results would be to once again increase my sample size by considering the use of NHANES data collected from other years as well. I would also see if these results change if the prescription use vs non prescription use was measured for longer time periods as well, for if the NHANES survey has been conducted in the same manner the past several years, this may be a feasible analysis to design.
+
+# Session Information
+
+End your report with the session information, in its own section. This will be Section 8 for you, but it's Section 9 for me because I did all five analyses, whereas you will only do four.
+
+```{r}
+sessionInfo()
+```

@@ -1,0 +1,109 @@
+---
+title: "ProjectB_Study1_draft"
+author: "Steven Mayher"
+date: "12/3/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r initial_setup, cache=FALSE, message = FALSE, warning = FALSE}
+library(knitr); library(rmdformats)
+
+library(janitor); library(magrittr); library(naniar)
+library(broom); library(patchwork)
+
+library(measurements)
+library(readxl)
+library(Epi)
+library(Hmisc)
+library(nhanesA)
+library(tidyverse)
+
+## Load Love-boost 
+source("data/Love-boost.R")
+
+## Global options
+opts_chunk$set(comment=NA)
+opts_knit$set(width=75)
+
+theme_set(theme_bw())
+```
+
+
+
+
+
+```{r}
+# pull in data from BPX_J from NHANES and save it
+
+DEMO_J_raw <- nhanes('DEMO_J') %>% tibble()
+BMX_J_raw <- nhanes('BMX_J') %>% tibble()
+WHQ_J_raw <- nhanes('WHQ_J') %>% tibble()
+
+saveRDS(DEMO_J_raw, "data/DEMO_J.Rds")
+saveRDS(BMX_J_raw, "data/BMX_J.Rds")
+saveRDS(WHQ_J_raw, "data/WHQ_J.Rds")
+
+# Now that data are saved, I can just read in the tibble
+
+DEMO_J_raw <- readRDS("data/DEMO_J.Rds")
+BMX_J_raw <- readRDS("data/BMX_J.Rds")
+WHQ_J_raw <- readRDS("data/WHQ_J.Rds")
+```
+
+```{r}
+DEMO_J_data = DEMO_J_raw %>% 
+  select(c(SEQN, RIDSTATR, RIDAGEYR)) %>%
+  filter(RIDSTATR == 2) %>%
+  filter(RIDAGEYR != ".") %>%
+  filter(RIDAGEYR <= 79) %>%
+  filter(RIDAGEYR >= 18) %>%
+  mutate(SEQN = as.numeric(SEQN))
+
+WHQ_J_data = WHQ_J_raw %>% 
+  select(c(SEQN,WHD020, WHD050, WHQ070, WHD080Q)) %>%
+  filter(WHD020 != 9999) %>%
+  filter(WHD020 != ".") %>%
+  filter(WHD020 != 7777) %>%
+  filter(WHD050 != 9999) %>%
+  filter(WHD050 != ".") %>%
+  filter(WHD050 != 7777) %>%
+  filter(WHQ070 == 1) %>%
+  filter(WHD080Q != ".") %>%
+  mutate(WHD020 = round(conv_unit(WHD020, "lbs", "kg"), 1)) %>%
+  mutate(WHD050 = round(conv_unit(WHD050, "lbs", "kg"), 1)) %>%
+  mutate(SEQN = as.numeric(SEQN))
+```
+
+
+```{r}
+study_1_analysis_A_data = inner_join(DEMO_J_data, WHQ_J_data, by = "SEQN") %>%
+  clean_names()
+
+count(study_1_analysis_A_data)
+
+miss_var_summary(study_1_analysis_A_data)
+```
+
+
+```{r}
+study_1_analysis_A_data1 = inner_join(DEMO_J_data, WHQ_J_data1, by = "SEQN")
+
+count(study_1_analysis_A_data1)
+
+miss_var_summary(study_1_analysis_A_data1)
+```
+
+
+```{r}
+BMX_J_data = BMX_J_raw %>% 
+  select(c(SEQN, BMXWT)) %>%
+  filter(BMXWT != ".") %>%
+  mutate(SEQN = as.numeric(SEQN))
+```
+
+
+
