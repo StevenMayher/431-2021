@@ -20,3 +20,4 @@ We will post a list of student websites here as we receive them.
 - [Neeti Shirke](https://neetishirke.wordpress.com/)
 - [Olivia Wilcox](https://www.olivia-wilcox.com/)
 - [Sneha Yamsani](https://sneha-yamsani.owlstown.net/)
+- [Jiayue Yang](https://jerry-yang.netlify.app)
