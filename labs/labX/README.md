@@ -21,3 +21,4 @@ We will post a list of student websites here as we receive them.
 - [Olivia Wilcox](https://www.olivia-wilcox.com/)
 - [Sneha Yamsani](https://sneha-yamsani.owlstown.net/)
 - [Jiayue Yang](https://jerry-yang.netlify.app)
+- [Audrey Zhu](https://aaz25.netlify.app/)
