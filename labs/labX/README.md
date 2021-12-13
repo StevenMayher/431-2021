@@ -11,6 +11,7 @@ All deadlines for 431 work, including Lab X, are posted in the [Course Calendar]
 We will post a list of student websites here as we receive them.
 
 - [Abigail Basson](https://www.abigailbasson.me/)
+- [Avantika Bhaduri](https://axb978.wixsite.com/avantikabhaduri)
 - [Allison Bode](https://allisonrbode.wordpress.com/)
 - [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd)
 - [Aaron Fletcher](https://afletcher80.wixsite.com/website-1)
