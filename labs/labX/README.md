@@ -16,6 +16,7 @@ We will post a list of student websites here as we receive them.
 - [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd)
 - [Aaron Fletcher](https://afletcher80.wixsite.com/website-1)
 - [Megan Foradori](https://sites.google.com/case.edu/foradorima/home)
+- [Scarlett He](https://hsj957site.netlify.app/)
 - [Catherine Heinzinger](https://drheinzinger.com/)
 - [Zahin Islam](https://zahin-islam.netlify.app/)
 - [Fumi Kong](https://wenhuikong0116.wixsite.com/website)
