@@ -10,6 +10,7 @@ We will post a list of student websites here as we receive them.
 
 - [Wyatt Bensken](https://wyattbensken.com/)
 - [Abigail Basson](https://www.abigailbasson.me/)
+- [Allison Bode](https://allisonrbode.wordpress.com/)
 - [Alise Carlson](https://carlsoak.wixsite.com/alisecarlsonmd)
 - [Aaron Fletcher](https://afletcher80.wixsite.com/website-1)
 - [Megan Foradori](https://sites.google.com/case.edu/foradorima/home)
