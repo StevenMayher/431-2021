@@ -14,6 +14,7 @@ We will post a list of student websites here as we receive them.
 - [Aaron Fletcher](https://afletcher80.wixsite.com/website-1)
 - [Megan Foradori](https://sites.google.com/case.edu/foradorima/home)
 - [Catherine Heinzinger](https://drheinzinger.com/)
+- [Zahin Islam](https://zahin-islam.netlify.app/)
 - [Kristi Lin-Rahardja](https://kristilinr.netlify.app/)
 - [Cerag Oguztuzun](https://ceragoguztuzun.github.io/)
 - [Jacqueline Shaia](https://www.jacquelensphd.com/)
